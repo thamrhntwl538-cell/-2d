@@ -1,0 +1,185 @@
+{
+	"actual_input_route_ticks": 1265,
+	"camera": {
+		"bounds_valid": true,
+		"max_step_px": 15.360481262207,
+		"samples": 1265
+	},
+	"failures": [],
+	"godot": "4.6.3-stable (official)",
+	"isolated_probe": {
+		"closed_gate_stopped_x": 3329.998046875,
+		"purpose": "closed gate collider only; fresh scene afterwards",
+		"teleport_count": 1
+	},
+	"limitations": [
+		"Executed engine version is reported above; no claim of Godot 4.7 execution.",
+		"M14 tests the opening room only; remaining Stage 1 areas and approved enemies are deferred.",
+		"Camera coverage is checked geometrically; art composition also requires visual review of the captured engine images."
+	],
+	"mandatory_route_teleports": 0,
+	"mandatory_route_uses_dash": false,
+	"passed": true,
+	"physics_ticks": 1532,
+	"previews": [
+		"res://previews/m14/01_silent_entrance_spawn.png",
+		"res://previews/m14/02_upper_stair_route.png",
+		"res://previews/m14/03_gallery_terminal.png",
+		"res://previews/m14/04_access_restored.png",
+		"res://previews/m14/05_optional_reading_nook.png",
+		"res://previews/m14/06_open_programming_wing.png"
+	],
+	"renderer": "llvmpipe (LLVM 19.1.7, 256 bits)",
+	"route": [
+		{
+			"apex_y": 1114.25720214844,
+			"landing": [
+				754.300170898438,
+				1139.92529296875
+			],
+			"name": "first_ledge",
+			"passed": true,
+			"start": [
+				647.791748046875,
+				1259.92529296875
+			],
+			"target": [
+				800.0,
+				1140.0
+			],
+			"teleport": false,
+			"uses_real_input": true
+		},
+		{
+			"apex_y": 994.25732421875,
+			"landing": [
+				1031.25842285156,
+				1019.92517089844
+			],
+			"name": "second_ledge",
+			"passed": true,
+			"start": [
+				878.841613769531,
+				1139.92529296875
+			],
+			"target": [
+				1080.0,
+				1020.0
+			],
+			"teleport": false,
+			"uses_real_input": true
+		},
+		{
+			"apex_y": 874.25732421875,
+			"landing": [
+				1324.38354492188,
+				899.925170898438
+			],
+			"name": "third_ledge",
+			"passed": true,
+			"start": [
+				1171.966796875,
+				1019.92523193359
+			],
+			"target": [
+				1375.0,
+				900.0
+			],
+			"teleport": false,
+			"uses_real_input": true
+		},
+		{
+			"apex_y": 754.25732421875,
+			"landing": [
+				1611.34204101562,
+				779.925170898438
+			],
+			"name": "upper_stair",
+			"passed": true,
+			"start": [
+				1458.92529296875,
+				899.925231933594
+			],
+			"target": [
+				1665.0,
+				780.0
+			],
+			"teleport": false,
+			"uses_real_input": true
+		},
+		{
+			"apex_y": 634.25732421875,
+			"landing": [
+				2008.49487304688,
+				779.925109863281
+			],
+			"name": "gallery_gap",
+			"passed": true,
+			"start": [
+				1810.578125,
+				779.925231933594
+			],
+			"target": [
+				2010.0,
+				780.0
+			],
+			"teleport": false,
+			"uses_real_input": true
+		},
+		{
+			"apex_y": 634.25732421875,
+			"landing": [
+				2662.78735351562,
+				659.925170898438
+			],
+			"name": "optional_nook_step",
+			"passed": true,
+			"start": [
+				2518.4951171875,
+				779.925231933594
+			],
+			"target": [
+				2670.0,
+				660.0
+			],
+			"teleport": false,
+			"uses_real_input": true
+		},
+		{
+			"apex_y": 514.25732421875,
+			"landing": [
+				2486.64794921875,
+				549.925170898438
+			],
+			"name": "optional_reading_nook",
+			"passed": true,
+			"start": [
+				2644.06518554688,
+				659.925231933594
+			],
+			"target": [
+				2440.0,
+				550.0
+			],
+			"teleport": false,
+			"uses_real_input": true
+		}
+	],
+	"scene": "res://scenes/stage_01/silent_entrance.tscn",
+	"tested": [
+		"safe_spawn",
+		"original_M13_actor_scale_and_collider",
+		"closed_gate_collision",
+		"bench_save",
+		"pause_resume",
+		"mandatory_platform_traversal",
+		"gallery_terminal_input",
+		"gate_open_animation",
+		"optional_reading_nook",
+		"safe_return_route",
+		"opened_gate_crossing",
+		"east_boundary",
+		"camera_bounds_and_continuity",
+		"checkpoint_restore"
+	]
+}

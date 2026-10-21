@@ -17,6 +17,9 @@ const ART_FOOT_Y: float = 456.0
 const MotionLibrary = preload("res://scripts/warden_motion_m13.gd")
 
 var world_ref: Node = null
+# Rooms may supply a larger traversal envelope. Legacy campaign defaults remain.
+@export var movement_bounds: Vector2 = Vector2(18.0, 1780.0)
+@export var fall_limit: float = 850.0
 var facing: int = 1
 var max_hp: int = 6
 var hp: int = 6
@@ -204,8 +207,8 @@ func _physics_process(delta: float) -> void:
 		land_timer = 0.12
 		world_ref.emit_burst(global_position + Vector2(0, -2), Color("8499a6"), 6)
 	was_grounded = is_on_floor()
-	position.x = clampf(position.x, 18.0, 1780.0)
-	if position.y > 850.0:
+	position.x = clampf(position.x, movement_bounds.x, movement_bounds.y)
+	if position.y > fall_limit:
 		world_ref.player_fell()
 	_update_animation()
 	_update_sword_trail()

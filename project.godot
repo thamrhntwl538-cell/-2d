@@ -2,8 +2,8 @@
 config_version=5
 
 [application]
-config/name="LAST LECTURE — Lantern Warden M13 Motion Refinement"
-run/main_scene="res://scenes/main.tscn"
+config/name="LAST LECTURE — M14 The Silent Entrance"
+run/main_scene="res://scenes/stage_01/silent_entrance.tscn"
 config/features=PackedStringArray("4.6", "GL Compatibility")
 
 [display]

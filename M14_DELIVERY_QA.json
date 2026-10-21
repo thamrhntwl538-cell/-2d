@@ -1,0 +1,29 @@
+{
+  "milestone": "M14",
+  "scope": "Phase 1 and 2: playable Silent Entrance only",
+  "godot_tested": "4.6.3-stable (official)",
+  "godot_4_7_executed": false,
+  "environment_qa_passed": true,
+  "player_regression_passed": true,
+  "final_engine_logs_have_script_or_shutdown_errors": false,
+  "mandatory_route_teleports": 0,
+  "mandatory_route_uses_dash": false,
+  "hero_art_and_motion_sources_unchanged_from_M13": true,
+  "hero_original_atlas_sha256": "3c4bc4a2b285245dd8da763e02f629daef6b49d9024961750c63dbebfca858e6",
+  "raw_enemy_reference_sheets_bundled": false,
+  "new_enemy_implementation": false,
+  "art_status": "Generated game-ready first environment art pass; final human art approval pending",
+  "previews": [
+    "res://previews/m14/01_silent_entrance_spawn.png",
+    "res://previews/m14/02_upper_stair_route.png",
+    "res://previews/m14/03_gallery_terminal.png",
+    "res://previews/m14/04_access_restored.png",
+    "res://previews/m14/05_optional_reading_nook.png",
+    "res://previews/m14/06_open_programming_wing.png"
+  ],
+  "limitations": [
+    "Opening only; other nine planned areas and enemies deferred",
+    "Godot 4.7 and target Windows/GPU performance not executed in this environment",
+    "Offline software movie capture is not a real-time performance benchmark"
+  ]
+}
