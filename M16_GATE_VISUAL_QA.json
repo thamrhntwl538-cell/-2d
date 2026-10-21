@@ -1,0 +1,73 @@
+{
+  "activation": "Real gate.unlock() followed by the existing _process animation; isolated visual fixture, not gameplay traversal.",
+  "failures": [],
+  "fixture_camera_zoom": 1.4,
+  "fixture_hero_position": [
+    3240,
+    1260
+  ],
+  "fixture_room": 0,
+  "gate_collider_size": [
+    50.0,
+    286.0
+  ],
+  "gate_position_unchanged": true,
+  "godot": "4.6.3-stable (official)",
+  "manual_review": "Reviewed closed, half and open actual-engine images: the stone frame and fixed arch remain coherent, the bars rise, the unchanged hero fits the passage, and no opaque panel or halo crosses the open central passage.",
+  "open_passage_reference": {
+    "different_fraction": 0.0,
+    "different_pixels": 0,
+    "max_channel_difference": 0.0,
+    "reference": "Gate hidden for a single matching rendered frame; no art editing.",
+    "sample_local_rect": [
+      -35,
+      -150,
+      70,
+      130
+    ],
+    "sampled_pixels": 17654
+  },
+  "painted_opening_world_size": [
+    97.9199981689453,
+    161.589996337891
+  ],
+  "passed": true,
+  "physics_ticks": 183,
+  "records": [
+    {
+      "collider_disabled": false,
+      "file": "res://previews/m16/gate/closed.png",
+      "gate_position": [
+        3370.0,
+        1260.0
+      ],
+      "is_open": false,
+      "progress": 0.0,
+      "state": "closed"
+    },
+    {
+      "collider_disabled": false,
+      "file": "res://previews/m16/gate/half.png",
+      "gate_position": [
+        3370.0,
+        1260.0
+      ],
+      "is_open": false,
+      "progress": 0.499999999999999,
+      "state": "half"
+    },
+    {
+      "collider_disabled": true,
+      "file": "res://previews/m16/gate/open.png",
+      "gate_position": [
+        3370.0,
+        1260.0
+      ],
+      "is_open": true,
+      "progress": 0.962962962962964,
+      "state": "open"
+    }
+  ],
+  "renderer": "llvmpipe (LLVM 19.1.7, 256 bits)",
+  "unchanged_hero_art_scale": 0.4
+}

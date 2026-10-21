@@ -12,12 +12,16 @@ const Gate = preload("res://scripts/interactables/academic_gate.gd")
 const GateScene = preload("res://scenes/interactables/academic_gate.tscn")
 const ShelfScene = preload("res://scenes/interactables/m15/secret_shelf.tscn")
 const Visuals = preload("res://scripts/stage/m15_room_visuals.gd")
+const QuietVisuals = preload("res://scripts/stage/m16_room_visuals.gd")
+const SurfaceSkin = preload("res://scripts/stage/m16_surface_skin.gd")
+const LocalLighting = preload("res://scripts/stage/m16_lighting.gd")
 const KIT = preload("res://assets/environments/silent_entrance/academic_kit.png")
 const FONT = preload("res://assets/fonts/DejaVuSans.ttf")
 const SAVE_FILE := "user://forgotten_wing_m15.json"
 @export var environment_preview: bool = true
 @export var restore_saved_game: bool = true
 @export var transition_seconds: float = 0.22
+@export_range(15,16) var visual_revision: int = 16
 var current_room: int = 0
 var data: Dictionary = {}
 var gameplay_active: bool = false
@@ -28,6 +32,8 @@ var hero: LastLecturePlayer
 var camera: Camera2D
 var active_room: Node2D
 var visuals: Node2D
+var lighting: Node2D
+var surface_counts: Dictionary = {}
 var elevator: AnimatableBody2D
 var objects: Array[Dictionary] = []
 var gates: Array[Dictionary] = []
@@ -117,7 +123,7 @@ func _build_ui() -> void:
 	top.texture = shade
 	top.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	hud.add_child(top)
-	_label(hud,Vector2(32,15),Vector2(980,40),"LAST LECTURE / THE FORGOTTEN PROGRAMMING WING",21)
+	_label(hud,Vector2(32,15),Vector2(980,40),"LAST LECTURE" if visual_revision >= 16 else "LAST LECTURE / THE FORGOTTEN PROGRAMMING WING",18 if visual_revision >= 16 else 21)
 	_label(hud,Vector2(1000,22),Vector2(260,40),"08:00 — 08:10",15)
 	room_label = _label(hud,Vector2(34,58),Vector2(1150,38),"",17)
 	objective = _label(hud,Vector2(34,100),Vector2(1200,38),"",14)
@@ -127,6 +133,16 @@ func _build_ui() -> void:
 	toast = _label(hud,Vector2(60,620),Vector2(1160,48),"",16)
 	toast.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 	_label(hud,Vector2(32,681),Vector2(1200,30),"A/D  MOVE    SPACE  JUMP    E  INTERACT / DOOR    K  DASH    M  MAP    ESC  PAUSE",13)
+	if visual_revision >= 16:
+		room_label.position.y = 50
+		room_label.add_theme_font_size_override("font_size",15)
+		objective.position.y = 82
+		objective.add_theme_font_size_override("font_size",13)
+		objective.modulate.a = 0.72
+		sequence.position.y = 116
+		sequence.modulate.a = 0.8
+		for child in hud.get_children():
+			if child is Label and child.position.y == 681: child.modulate.a = 0.55
 	map_panel = _panel(layer,Vector2(245,160),Vector2(790,470))
 	map_label = _label(map_panel,Vector2.ZERO,Vector2(730,420),"",16)
 	pause_panel = _panel(layer,Vector2(405,240),Vector2(470,270))
@@ -179,6 +195,9 @@ func _load_room(index: int, spawn_name: String = "left", exact_position: Vector2
 	gates.clear()
 	reactions.clear()
 	elevator = null
+	lighting = null
+	surface_counts.clear()
+	hero.lantern_sprite.material = null
 	hero.position = data.spawns.get(spawn_name,data.spawn_left) if exact_position == Vector2.INF else exact_position
 	hero.velocity = Vector2.ZERO
 	hero.movement_bounds = Vector2(34,data.size.x-34)
@@ -190,7 +209,7 @@ func _load_room(index: int, spawn_name: String = "left", exact_position: Vector2
 	camera.limit_bottom = int(data.size.y)
 	camera.position = camera.bounded(hero.position+Vector2(130,-230))
 	camera.reset_smoothing()
-	visuals = Visuals.new()
+	visuals = QuietVisuals.new() if visual_revision >= 16 else Visuals.new()
 	active_room.add_child(visuals)
 	visuals.setup(self,data)
 	for definition in data.interactables: _add_object(definition)
@@ -215,6 +234,11 @@ func _load_room(index: int, spawn_name: String = "left", exact_position: Vector2
 	_build_elevator()
 	_build_reactions()
 	_build_portals()
+	if visual_revision >= 16:
+		surface_counts = SurfaceSkin.setup(self,data)
+		lighting = LocalLighting.new()
+		active_room.add_child(lighting)
+		lighting.setup(self,data)
 	_refresh_gates(true)
 	if not progress.visited.has(current_room): progress.visited.append(current_room)
 	room_label.text = "%02d / %s  ·  %s" % [current_room+1,data.title,data.arabic_title]
@@ -396,7 +420,7 @@ func _update_hud() -> void:
 	var action := nearest_action() if gameplay_active else {}
 	hint.text = "E  ·  "+str(action.label) if not action.is_empty() else ""
 	var status: String = "ENVIRONMENT TOUR / استكشاف البيئة" if environment_preview else "STAGE 01 / المرحلة الأولى"
-	objective.text = status+"   ·   "+("Restore the gallery relay / فعّل جهاز الشرفة" if current_room == 0 and not requirement_met("entrance_access") else "Explore the wing · M map / استكشف الجناح والخريطة بزر M")
+	objective.text = status+"   ·   "+("Restore the gallery relay / فعّل جهاز الشرفة" if current_room == 0 and not requirement_met("entrance_access") else ("M  MAP / الخريطة" if visual_revision >= 16 else "Explore the wing · M map / استكشف الجناح والخريطة بزر M"))
 	var steps: Array[String] = []
 	for key in ["input","process","output"]:
 		steps.append(("● " if requirement_met(key) else "○ ")+key.to_upper())
@@ -433,6 +457,7 @@ func _save() -> void:
 	FileAccess.open(SAVE_FILE,FileAccess.WRITE).store_string(JSON.stringify(save,"\t"))
 
 func _restore_save() -> void:
+	_migrate_m15_save()
 	if not FileAccess.file_exists(SAVE_FILE): return
 	var save: Variant = JSON.parse_string(FileAccess.get_file_as_string(SAVE_FILE))
 	if save is Dictionary and int(save.get("version",0)) == 15:
@@ -444,6 +469,22 @@ func _restore_save() -> void:
 			if not visited.has(room_id): visited.append(room_id)
 		progress.visited = visited
 		checkpoint = save.get("checkpoint",checkpoint)
+
+func _migrate_m15_save() -> void:
+	# Keep progress when moving from the milestone-specific M15 application name
+	# to the stable project name. Mark the attempt so Begin again stays a reset.
+	const MARKER := "user://m15_save_migration.done"
+	if FileAccess.file_exists(MARKER): return
+	if not FileAccess.file_exists(SAVE_FILE):
+		var previous := OS.get_user_data_dir().get_base_dir().path_join("LAST LECTURE — M15 The Forgotten Programming Wing").path_join("forgotten_wing_m15.json")
+		if FileAccess.file_exists(previous):
+			var contents := FileAccess.get_file_as_string(previous)
+			var parser := JSON.new()
+			var valid_json := parser.parse(contents) == OK
+			var saved: Variant = parser.data if valid_json else null
+			if saved is Dictionary and int(saved.get("version",0)) == 15:
+				FileAccess.open(SAVE_FILE,FileAccess.WRITE).store_string(contents)
+	FileAccess.open(MARKER,FileAccess.WRITE).store_string("M16 stable application name\n")
 
 func restart_stage() -> void:
 	if FileAccess.file_exists(SAVE_FILE): DirAccess.remove_absolute(SAVE_FILE)

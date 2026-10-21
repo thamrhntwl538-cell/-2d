@@ -10,6 +10,8 @@ extends StaticBody2D
 @export var one_way: bool = true
 @export var texture: Texture2D
 @export var source_rect := Rect2(0, 0, 512, 512)
+## Texture-only support skin; the legacy M14/M15 region remains the default.
+@export var support_source_rect := Rect2(104, 247, 482, 73)
 
 func _ready() -> void:
 	collision_layer = 1
@@ -34,7 +36,7 @@ func _draw() -> void:
 			var support_y := 10.0
 			while support_y < depth + support_height:
 				var row_height := minf(35, depth + support_height - support_y)
-				draw_texture_rect_region(texture, Rect2(0, support_y, width, row_height), Rect2(104, 247, 482, 73))
+				draw_texture_rect_region(texture, Rect2(0, support_y, width, row_height), support_source_rect)
 				support_y += row_height
 		# Preserve end caps, repeat the stone centre instead of stretching masonry.
 		var cap := minf(width / 3.0, 40.0)

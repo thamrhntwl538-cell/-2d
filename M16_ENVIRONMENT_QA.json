@@ -1,0 +1,651 @@
+{
+  "actual_input_tour_ticks": 8572,
+  "camera": {
+    "bounds_valid": true,
+    "max_step_px": 14.3416423797607,
+    "samples": 8558
+  },
+  "checkpoint_restore_passes": 2,
+  "combat_claims": {
+    "boss_fight_tested": false,
+    "boss_victory_awarded": false,
+    "compiler_seal_earned": false,
+    "encounter_clearance_tested": false,
+    "environment_preview_bypasses_are_explicit": true
+  },
+  "continuous_tour_complete": true,
+  "failures": [],
+  "godot": "4.6.3-stable (official)",
+  "headless": true,
+  "isolated_fixtures": [
+    {
+      "configured_room": 5,
+      "configured_spawn": true,
+      "passed": true,
+      "purpose": "out_of_order_process"
+    },
+    {
+      "configured_room": 6,
+      "configured_spawn": true,
+      "passed": true,
+      "purpose": "out_of_order_output"
+    },
+    {
+      "configured_room": 1,
+      "configured_spawn": true,
+      "passed": true,
+      "purpose": "production_gate_assignments",
+      "stopped_x": 2399.998046875
+    },
+    {
+      "configured_room": 7,
+      "configured_spawn": true,
+      "passed": true,
+      "purpose": "production_gate_compiler_seal",
+      "stopped_x": 2819.998046875
+    },
+    {
+      "configured_room": 8,
+      "configured_spawn": true,
+      "passed": true,
+      "purpose": "production_gate_boss_defeated",
+      "stopped_x": 3769.998046875
+    },
+    {
+      "configured_room": 0,
+      "configured_spawn": true,
+      "passed": true,
+      "purpose": "airborne_pause_game",
+      "uses_real_input": true,
+      "velocity_before_pause": [
+        0.0,
+        -482.499847412109
+      ],
+      "velocity_frozen": [
+        0.0,
+        -414.166534423828
+      ]
+    },
+    {
+      "configured_room": 0,
+      "configured_spawn": true,
+      "passed": true,
+      "purpose": "airborne_stage_map",
+      "uses_real_input": true,
+      "velocity_before_pause": [
+        0.0,
+        -482.499847412109
+      ],
+      "velocity_frozen": [
+        0.0,
+        -414.166534423828
+      ]
+    }
+  ],
+  "landings": [
+    {
+      "actual_input": true,
+      "apex_y": 1114.25732421875,
+      "landing": [
+        754.300170898438,
+        1139.92529296875
+      ],
+      "name": "entrance_first_ledge",
+      "passed": true,
+      "room": 0,
+      "start": [
+        647.208312988281,
+        1259.92529296875
+      ],
+      "target": [
+        800.0,
+        1140.0
+      ]
+    },
+    {
+      "actual_input": true,
+      "apex_y": 994.25732421875,
+      "landing": [
+        1031.25842285156,
+        1019.92517089844
+      ],
+      "name": "entrance_second_ledge",
+      "passed": true,
+      "room": 0,
+      "start": [
+        878.841613769531,
+        1139.92529296875
+      ],
+      "target": [
+        1080.0,
+        1020.0
+      ]
+    },
+    {
+      "actual_input": true,
+      "apex_y": 874.25732421875,
+      "landing": [
+        1324.38354492188,
+        899.925170898438
+      ],
+      "name": "entrance_third_ledge",
+      "passed": true,
+      "room": 0,
+      "start": [
+        1171.966796875,
+        1019.92523193359
+      ],
+      "target": [
+        1375.0,
+        900.0
+      ]
+    },
+    {
+      "actual_input": true,
+      "apex_y": 754.25732421875,
+      "landing": [
+        1611.34204101562,
+        779.925170898438
+      ],
+      "name": "entrance_upper_stair",
+      "passed": true,
+      "room": 0,
+      "start": [
+        1458.92529296875,
+        899.925231933594
+      ],
+      "target": [
+        1665.0,
+        780.0
+      ]
+    },
+    {
+      "actual_input": true,
+      "apex_y": 634.25732421875,
+      "landing": [
+        2008.49487304688,
+        779.925109863281
+      ],
+      "name": "entrance_gallery_gap",
+      "passed": true,
+      "room": 0,
+      "start": [
+        1810.578125,
+        779.925231933594
+      ],
+      "target": [
+        2010.0,
+        780.0
+      ]
+    },
+    {
+      "actual_input": true,
+      "apex_y": 1114.25708007812,
+      "landing": [
+        594.300170898438,
+        1139.92529296875
+      ],
+      "name": "assignments_pedestal",
+      "passed": true,
+      "room": 1,
+      "start": [
+        492.791687011719,
+        1259.92529296875
+      ],
+      "target": [
+        640.0,
+        1140.0
+      ]
+    },
+    {
+      "actual_input": true,
+      "apex_y": 1114.25708007812,
+      "landing": [
+        1014.30017089844,
+        1139.92529296875
+      ],
+      "name": "laboratory_west_pedestal",
+      "passed": true,
+      "room": 2,
+      "start": [
+        912.791625976562,
+        1259.92529296875
+      ],
+      "target": [
+        1060.0,
+        1140.0
+      ]
+    },
+    {
+      "actual_input": true,
+      "apex_y": 994.25732421875,
+      "landing": [
+        1311.25866699219,
+        1019.92517089844
+      ],
+      "name": "laboratory_suspended_bridge",
+      "passed": true,
+      "room": 2,
+      "start": [
+        1158.84191894531,
+        1139.92529296875
+      ],
+      "target": [
+        1380.0,
+        1020.0
+      ]
+    },
+    {
+      "actual_input": true,
+      "landing": [
+        1656.96704101562,
+        1139.92529296875
+      ],
+      "name": "laboratory_east_walk_off_landing",
+      "passed": true,
+      "room": 2,
+      "start": [
+        1461.96704101562,
+        1019.92523193359
+      ],
+      "target": [
+        1660,
+        1140
+      ],
+      "walk_off": true
+    },
+    {
+      "actual_input": true,
+      "apex_y": 1834.25732421875,
+      "landing": [
+        806.333190917969,
+        1979.92517089844
+      ],
+      "name": "archive_lower_west_balcony",
+      "passed": true,
+      "room": 3,
+      "start": [
+        1017.79168701172,
+        1979.92529296875
+      ],
+      "target": [
+        800.0,
+        1980.0
+      ]
+    },
+    {
+      "actual_input": true,
+      "apex_y": 1834.25732421875,
+      "landing": [
+        1010.86376953125,
+        1979.97973632812
+      ],
+      "name": "archive_return_to_called_lift",
+      "passed": true,
+      "room": 3,
+      "start": [
+        822.791442871094,
+        1979.92529296875
+      ],
+      "target": [
+        1010.0,
+        1980.0
+      ]
+    },
+    {
+      "actual_input": true,
+      "apex_y": 1114.25732421875,
+      "landing": [
+        1444.84985351562,
+        1259.92517089844
+      ],
+      "name": "archive_middle_east_balcony",
+      "passed": true,
+      "room": 3,
+      "start": [
+        1235.55810546875,
+        1259.92529296875
+      ],
+      "target": [
+        1450.0,
+        1260.0
+      ]
+    },
+    {
+      "actual_input": true,
+      "apex_y": 1114.25732421875,
+      "landing": [
+        1242.576171875,
+        1259.92517089844
+      ],
+      "name": "archive_return_from_shelf_passage",
+      "passed": true,
+      "room": 3,
+      "start": [
+        1437.78454589844,
+        1259.92529296875
+      ],
+      "target": [
+        1245.0,
+        1260.0
+      ]
+    },
+    {
+      "actual_input": true,
+      "apex_y": 514.25732421875,
+      "landing": [
+        1442.951171875,
+        659.925109863281
+      ],
+      "name": "archive_upper_east_balcony",
+      "passed": true,
+      "room": 3,
+      "start": [
+        1232.57604980469,
+        659.925231933594
+      ],
+      "target": [
+        1450.0,
+        660.0
+      ]
+    },
+    {
+      "actual_input": true,
+      "apex_y": 1114.25732421875,
+      "landing": [
+        305.69970703125,
+        1139.92529296875
+      ],
+      "name": "output_first_stair_from_east",
+      "passed": true,
+      "room": 6,
+      "start": [
+        412.792053222656,
+        1259.92529296875
+      ],
+      "target": [
+        260.0,
+        1140.0
+      ]
+    },
+    {
+      "actual_input": true,
+      "apex_y": 994.25732421875,
+      "landing": [
+        481.949859619141,
+        1019.92517089844
+      ],
+      "name": "output_upper_stair",
+      "passed": true,
+      "room": 6,
+      "start": [
+        329.533081054688,
+        1139.92529296875
+      ],
+      "target": [
+        550.0,
+        1020.0
+      ]
+    },
+    {
+      "actual_input": true,
+      "apex_y": 874.25732421875,
+      "landing": [
+        780.810852050781,
+        899.925170898438
+      ],
+      "name": "output_west_gallery",
+      "passed": true,
+      "room": 6,
+      "start": [
+        628.39404296875,
+        1019.92523193359
+      ],
+      "target": [
+        850.0,
+        900.0
+      ]
+    },
+    {
+      "actual_input": true,
+      "apex_y": 754.25732421875,
+      "landing": [
+        1238.36645507812,
+        899.925109863281
+      ],
+      "name": "output_gallery_link",
+      "passed": true,
+      "room": 6,
+      "start": [
+        1048.57470703125,
+        899.925231933594
+      ],
+      "target": [
+        1240.0,
+        900.0
+      ]
+    },
+    {
+      "actual_input": true,
+      "apex_y": 754.25732421875,
+      "landing": [
+        1587.36669921875,
+        899.925109863281
+      ],
+      "name": "output_shortcut_gallery",
+      "passed": true,
+      "room": 6,
+      "start": [
+        1388.36657714844,
+        899.925231933594
+      ],
+      "target": [
+        1590.0,
+        900.0
+      ]
+    },
+    {
+      "actual_input": true,
+      "apex_y": 1114.25720214844,
+      "landing": [
+        714.300170898438,
+        1139.92529296875
+      ],
+      "name": "approach_scholar_pedestal",
+      "passed": true,
+      "room": 7,
+      "start": [
+        607.791748046875,
+        1259.92529296875
+      ],
+      "target": [
+        760.0,
+        1140.0
+      ]
+    }
+  ],
+  "lift_rides": [
+    {
+      "actor_position_injected": false,
+      "end_y": 1979.98486328125,
+      "height_gain": 719.93896484375,
+      "maximum_rider_gap": 4.98486328125,
+      "passed": true,
+      "paused_midway": true,
+      "samples": 206,
+      "start_y": 2699.923828125,
+      "stop": 1,
+      "support_samples": 206
+    },
+    {
+      "actor_position_injected": false,
+      "end_y": 1259.92529296875,
+      "height_gain": 720.0,
+      "maximum_rider_gap": 4.92529296875,
+      "passed": true,
+      "paused_midway": false,
+      "samples": 213,
+      "start_y": 1979.92529296875,
+      "stop": 2,
+      "support_samples": 213
+    },
+    {
+      "actor_position_injected": false,
+      "end_y": 659.92529296875,
+      "height_gain": 600.0,
+      "maximum_rider_gap": 4.92529296875,
+      "passed": true,
+      "paused_midway": false,
+      "samples": 189,
+      "start_y": 1259.92529296875,
+      "stop": 3,
+      "support_samples": 189
+    }
+  ],
+  "limitations": [
+    "This test runs the native headless engine and does not produce rendered image evidence; room art is reviewed separately in a rendered Godot run.",
+    "Enemy and boss combat remain deferred. Explicit environment preview permits their future gates without awarding a seal, defeat, or victory.",
+    "Reported engine version is the actual executable used; no unexecuted Godot 4.7 validation is claimed."
+  ],
+  "mandatory_tour_progress_injections": 0,
+  "mandatory_tour_test_teleports": 0,
+  "passed": true,
+  "physics_ticks": 9614,
+  "renderer": "",
+  "room_order": [
+    0,
+    1,
+    2,
+    3,
+    1,
+    3,
+    4,
+    5,
+    6,
+    2,
+    6,
+    7,
+    8,
+    9
+  ],
+  "scene": "res://scenes/stage_01/forgotten_wing.tscn",
+  "transitions": [
+    {
+      "actual_interact_input": true,
+      "from": 0,
+      "passed": true,
+      "portal": "to_assignments",
+      "preview_bypass": false,
+      "to": 1
+    },
+    {
+      "actual_interact_input": true,
+      "from": 1,
+      "passed": true,
+      "portal": "to_laboratory",
+      "preview_bypass": true,
+      "to": 2
+    },
+    {
+      "actual_interact_input": true,
+      "from": 2,
+      "passed": true,
+      "portal": "to_archive",
+      "preview_bypass": false,
+      "to": 3
+    },
+    {
+      "actual_interact_input": true,
+      "from": 3,
+      "passed": true,
+      "portal": "assignment_shortcut",
+      "preview_bypass": false,
+      "to": 1
+    },
+    {
+      "actual_interact_input": true,
+      "from": 1,
+      "passed": true,
+      "portal": "archive_shortcut",
+      "preview_bypass": false,
+      "to": 3
+    },
+    {
+      "actual_interact_input": true,
+      "from": 3,
+      "passed": true,
+      "portal": "to_input",
+      "preview_bypass": false,
+      "to": 4
+    },
+    {
+      "actual_interact_input": true,
+      "from": 4,
+      "passed": true,
+      "portal": "to_process",
+      "preview_bypass": false,
+      "to": 5
+    },
+    {
+      "actual_interact_input": true,
+      "from": 5,
+      "passed": true,
+      "portal": "to_output",
+      "preview_bypass": false,
+      "to": 6
+    },
+    {
+      "actual_interact_input": true,
+      "from": 6,
+      "passed": true,
+      "portal": "laboratory_shortcut",
+      "preview_bypass": false,
+      "to": 2
+    },
+    {
+      "actual_interact_input": true,
+      "from": 2,
+      "passed": true,
+      "portal": "output_shortcut",
+      "preview_bypass": false,
+      "to": 6
+    },
+    {
+      "actual_interact_input": true,
+      "from": 6,
+      "passed": true,
+      "portal": "to_approach",
+      "preview_bypass": false,
+      "to": 7
+    },
+    {
+      "actual_interact_input": true,
+      "from": 7,
+      "passed": true,
+      "portal": "to_tribunal",
+      "preview_bypass": true,
+      "to": 8
+    },
+    {
+      "actual_interact_input": true,
+      "from": 8,
+      "passed": true,
+      "portal": "to_aftermath",
+      "preview_bypass": true,
+      "to": 9
+    },
+    {
+      "actual_interact_input": true,
+      "from": 9,
+      "passed": true,
+      "portal": "stage_02_threshold",
+      "preview_bypass": true,
+      "to": -1
+    }
+  ],
+  "uses_dash": false,
+  "milestone": "M16",
+  "visual_revision": 16,
+  "test_script": "res://tools/test_m15_world.gd",
+  "note_m16": "Unmodified M15 actual-input regression suite rerun against the M16 scene, skin and lighting."
+}

@@ -1,0 +1,2277 @@
+{
+	"capture_runs": [
+		{
+			"case_filter": "all",
+			"fixture_count": 19,
+			"physics_ticks": 2736.0,
+			"rendered_records": 38
+		},
+		{
+			"case_filter": "07_output",
+			"fixture_count": 1,
+			"physics_ticks": 144,
+			"rendered_records": 2
+		}
+	],
+	"failures": [],
+	"fixture_count_per_revision": 19,
+	"geometry_comparisons": [
+		{
+			"collision_and_exit_requirements_unchanged": true,
+			"id": "01_entrance_floor",
+			"room": 0.0
+		},
+		{
+			"collision_and_exit_requirements_unchanged": true,
+			"id": "01_entrance_gallery",
+			"room": 0.0
+		},
+		{
+			"collision_and_exit_requirements_unchanged": true,
+			"id": "02_corridor_balcony",
+			"room": 1.0
+		},
+		{
+			"collision_and_exit_requirements_unchanged": true,
+			"id": "02_corridor_floor",
+			"room": 1.0
+		},
+		{
+			"collision_and_exit_requirements_unchanged": true,
+			"id": "03_lab_maintenance",
+			"room": 2.0
+		},
+		{
+			"collision_and_exit_requirements_unchanged": true,
+			"id": "03_lab_service_gallery",
+			"room": 2.0
+		},
+		{
+			"collision_and_exit_requirements_unchanged": true,
+			"id": "03_lab_walkway",
+			"room": 2.0
+		},
+		{
+			"collision_and_exit_requirements_unchanged": true,
+			"id": "04_archive_bottom",
+			"room": 3.0
+		},
+		{
+			"collision_and_exit_requirements_unchanged": true,
+			"id": "04_archive_lower",
+			"room": 3.0
+		},
+		{
+			"collision_and_exit_requirements_unchanged": true,
+			"id": "04_archive_middle",
+			"room": 3.0
+		},
+		{
+			"collision_and_exit_requirements_unchanged": true,
+			"id": "04_archive_upper",
+			"room": 3.0
+		},
+		{
+			"collision_and_exit_requirements_unchanged": true,
+			"id": "05_input",
+			"room": 4.0
+		},
+		{
+			"collision_and_exit_requirements_unchanged": true,
+			"id": "06_process",
+			"room": 5.0
+		},
+		{
+			"collision_and_exit_requirements_unchanged": true,
+			"id": "07_output",
+			"room": 6
+		},
+		{
+			"collision_and_exit_requirements_unchanged": true,
+			"id": "08_approach_bench",
+			"room": 7.0
+		},
+		{
+			"collision_and_exit_requirements_unchanged": true,
+			"id": "08_approach_encounter",
+			"room": 7.0
+		},
+		{
+			"collision_and_exit_requirements_unchanged": true,
+			"id": "09_tribunal_centre",
+			"room": 8.0
+		},
+		{
+			"collision_and_exit_requirements_unchanged": true,
+			"id": "09_tribunal_west",
+			"room": 8.0
+		},
+		{
+			"collision_and_exit_requirements_unchanged": true,
+			"id": "10_aftermath",
+			"room": 9.0
+		}
+	],
+	"godot": "4.6.3-stable (official)",
+	"inspection_method": "Actual native Godot rendered checkpoint fixtures. These fixture placements are visual inspection, not traversal completion.",
+	"latest_run_physics_ticks": 144,
+	"limitations": [
+		"Advisory pixel statistics do not certify artistic quality, smoothness, or whole-body silhouette readability.",
+		"The independent M15 actual-input traversal test must be run after final integration.",
+		"No enemy or boss combat is implemented or validated by this visual review."
+	],
+	"manual_review_required": true,
+	"manual_review_status": "completed: all 19 M16 fixtures reviewed; OUTPUT recaptured after prop-only occlusion fix",
+	"passed": true,
+	"physics_ticks": 2880,
+	"records": [
+		{
+			"camera_covered": true,
+			"collision_shape_count": 11.0,
+			"feet_screen": [
+				440.0,
+				590.0
+			],
+			"file": "res://previews/m16/before/01_entrance_floor.png",
+			"fixture_spawn": [
+				440.0,
+				1260.0
+			],
+			"head_screen": [
+				446.4,
+				493.2
+			],
+			"id": "01_entrance_floor",
+			"lighting": {},
+			"metrics": {
+				"above_platform_mean_luma": 0.138457289434095,
+				"background_bright_fraction": 0.0820793433652531,
+				"background_edge_fraction": 0.413174149152261,
+				"gameplay_background_mean_luma": 0.151955306459423,
+				"lantern_local_background_luma": 0.193730985021475,
+				"lantern_peak_luma": 0.984406275439262,
+				"lantern_peak_minus_local_background": 0.790675290417788,
+				"note": "Image values are advisory sRGB luma proxies; manual review remains required.",
+				"platform_lip_mean_luma": 0.897670986491441
+			},
+			"observed_feet": [
+				440.0,
+				1260.0
+			],
+			"revision": 15.0,
+			"room": 0.0,
+			"surface_skin": {}
+		},
+		{
+			"camera_covered": true,
+			"collision_shape_count": 11.0,
+			"feet_screen": [
+				440.0,
+				590.0
+			],
+			"file": "res://previews/m16/after/01_entrance_floor.png",
+			"fixture_spawn": [
+				440.0,
+				1260.0
+			],
+			"head_screen": [
+				446.4,
+				493.2
+			],
+			"id": "01_entrance_floor",
+			"lighting": {
+				"active_pools": [
+					{
+						"energy": 7.19999980926514,
+						"id": "entrance_bench",
+						"position": [
+							350.0,
+							1188.0
+						]
+					},
+					{
+						"energy": 4.19999980926514,
+						"id": "first_landing",
+						"position": [
+							805.0,
+							1080.0
+						]
+					}
+				],
+				"ambient": [
+					0.379999995231628,
+					0.409999996423721,
+					0.449999988079071
+				],
+				"enabled": true,
+				"pool_nodes": 4.0,
+				"visible_light_cap_including_hero": 4.0,
+				"visible_light_count": 3.0,
+				"visible_pool_count": 2.0
+			},
+			"metrics": {
+				"above_platform_mean_luma": 0.0955460964076937,
+				"background_bright_fraction": 0.0304273929444928,
+				"background_edge_fraction": 0.114372175931683,
+				"gameplay_background_mean_luma": 0.120951222517465,
+				"lantern_local_background_luma": 0.131174488630961,
+				"lantern_peak_luma": 0.963944315874577,
+				"lantern_peak_minus_local_background": 0.832769827243616,
+				"note": "Image values are advisory sRGB luma proxies; manual review remains required.",
+				"platform_lip_mean_luma": 0.26829485139629
+			},
+			"observed_feet": [
+				440.0,
+				1260.0
+			],
+			"revision": 16.0,
+			"room": 0.0,
+			"surface_skin": {
+				"gates": 1.0,
+				"interactables": 2.0,
+				"lamps": 1.0,
+				"missing_assets": [],
+				"moving_surfaces": 0.0,
+				"platforms": 8.0,
+				"revision": 16.0,
+				"shelves": 0.0
+			}
+		},
+		{
+			"camera_covered": true,
+			"collision_shape_count": 11.0,
+			"feet_screen": [
+				510.0,
+				590.0
+			],
+			"file": "res://previews/m16/before/01_entrance_gallery.png",
+			"fixture_spawn": [
+				2475.0,
+				780.0
+			],
+			"head_screen": [
+				516.4,
+				493.2
+			],
+			"id": "01_entrance_gallery",
+			"lighting": {},
+			"metrics": {
+				"above_platform_mean_luma": 0.156497319276459,
+				"background_bright_fraction": 0.0616961248029209,
+				"background_edge_fraction": 0.39395070948469,
+				"gameplay_background_mean_luma": 0.141551107151531,
+				"lantern_local_background_luma": 0.176808117468818,
+				"lantern_peak_luma": 0.987494118392467,
+				"lantern_peak_minus_local_background": 0.810686000923649,
+				"note": "Image values are advisory sRGB luma proxies; manual review remains required.",
+				"platform_lip_mean_luma": 0.882006583201885
+			},
+			"observed_feet": [
+				2475.0,
+				780.0
+			],
+			"revision": 15.0,
+			"room": 0.0,
+			"surface_skin": {}
+		},
+		{
+			"camera_covered": true,
+			"collision_shape_count": 11.0,
+			"feet_screen": [
+				510.0,
+				590.0
+			],
+			"file": "res://previews/m16/after/01_entrance_gallery.png",
+			"fixture_spawn": [
+				2475.0,
+				780.0
+			],
+			"head_screen": [
+				516.4,
+				493.2
+			],
+			"id": "01_entrance_gallery",
+			"lighting": {
+				"active_pools": [
+					{
+						"energy": 4.80000019073486,
+						"id": "entrance_access",
+						"position": [
+							2475.0,
+							708.0
+						]
+					}
+				],
+				"ambient": [
+					0.379999995231628,
+					0.409999996423721,
+					0.449999988079071
+				],
+				"enabled": true,
+				"pool_nodes": 4.0,
+				"visible_light_cap_including_hero": 4.0,
+				"visible_light_count": 2.0,
+				"visible_pool_count": 1.0
+			},
+			"metrics": {
+				"above_platform_mean_luma": 0.110134512857892,
+				"background_bright_fraction": 0.00535225292506846,
+				"background_edge_fraction": 0.103103476889885,
+				"gameplay_background_mean_luma": 0.111377819150557,
+				"lantern_local_background_luma": 0.147578263060015,
+				"lantern_peak_luma": 0.967032158827782,
+				"lantern_peak_minus_local_background": 0.819453895767767,
+				"note": "Image values are advisory sRGB luma proxies; manual review remains required.",
+				"platform_lip_mean_luma": 0.317956873352023
+			},
+			"observed_feet": [
+				2475.0,
+				780.0
+			],
+			"revision": 16.0,
+			"room": 0.0,
+			"surface_skin": {
+				"gates": 1.0,
+				"interactables": 2.0,
+				"lamps": 1.0,
+				"missing_assets": [],
+				"moving_surfaces": 0.0,
+				"platforms": 8.0,
+				"revision": 16.0,
+				"shelves": 0.0
+			}
+		},
+		{
+			"camera_covered": true,
+			"collision_shape_count": 8.0,
+			"feet_screen": [
+				510.0,
+				590.0
+			],
+			"file": "res://previews/m16/before/02_corridor_balcony.png",
+			"fixture_spawn": [
+				1320.0,
+				900.0
+			],
+			"head_screen": [
+				516.4,
+				493.2
+			],
+			"id": "02_corridor_balcony",
+			"lighting": {},
+			"metrics": {
+				"above_platform_mean_luma": 0.12687605233926,
+				"background_bright_fraction": 0.0299560202472824,
+				"background_edge_fraction": 0.363289353580616,
+				"gameplay_background_mean_luma": 0.132816152550677,
+				"lantern_local_background_luma": 0.146755076928996,
+				"lantern_peak_luma": 0.984406275439262,
+				"lantern_peak_minus_local_background": 0.837651198510267,
+				"note": "Image values are advisory sRGB luma proxies; manual review remains required.",
+				"platform_lip_mean_luma": 0.896835782921314
+			},
+			"observed_feet": [
+				1320.0,
+				900.0
+			],
+			"revision": 15.0,
+			"room": 1.0,
+			"surface_skin": {}
+		},
+		{
+			"camera_covered": true,
+			"collision_shape_count": 8.0,
+			"feet_screen": [
+				510.0,
+				590.0
+			],
+			"file": "res://previews/m16/after/02_corridor_balcony.png",
+			"fixture_spawn": [
+				1320.0,
+				900.0
+			],
+			"head_screen": [
+				516.4,
+				493.2
+			],
+			"id": "02_corridor_balcony",
+			"lighting": {
+				"active_pools": [
+					{
+						"energy": 5.0,
+						"id": "portal_archive_shortcut",
+						"position": [
+							1510.0,
+							808.0
+						]
+					}
+				],
+				"ambient": [
+					0.379999995231628,
+					0.409999996423721,
+					0.449999988079071
+				],
+				"enabled": true,
+				"pool_nodes": 4.0,
+				"visible_light_cap_including_hero": 4.0,
+				"visible_light_count": 2.0,
+				"visible_pool_count": 1.0
+			},
+			"metrics": {
+				"above_platform_mean_luma": 0.115425765308766,
+				"background_bright_fraction": 0.0326114015434404,
+				"background_edge_fraction": 0.130487096506514,
+				"gameplay_background_mean_luma": 0.104845189860619,
+				"lantern_local_background_luma": 0.0909505048893087,
+				"lantern_peak_luma": 0.963944315874577,
+				"lantern_peak_minus_local_background": 0.872993810985268,
+				"note": "Image values are advisory sRGB luma proxies; manual review remains required.",
+				"platform_lip_mean_luma": 0.252940403714776
+			},
+			"observed_feet": [
+				1320.0,
+				900.0
+			],
+			"revision": 16.0,
+			"room": 1.0,
+			"surface_skin": {
+				"gates": 1.0,
+				"interactables": 0.0,
+				"lamps": 0.0,
+				"missing_assets": [],
+				"moving_surfaces": 0.0,
+				"platforms": 5.0,
+				"revision": 16.0,
+				"shelves": 0.0
+			}
+		},
+		{
+			"camera_covered": true,
+			"collision_shape_count": 8.0,
+			"feet_screen": [
+				510.0,
+				590.0
+			],
+			"file": "res://previews/m16/before/02_corridor_floor.png",
+			"fixture_spawn": [
+				1800.0,
+				1260.0
+			],
+			"head_screen": [
+				516.4,
+				493.2
+			],
+			"id": "02_corridor_floor",
+			"lighting": {},
+			"metrics": {
+				"above_platform_mean_luma": 0.114241088895643,
+				"background_bright_fraction": 0.0919425773794706,
+				"background_edge_fraction": 0.411625591237242,
+				"gameplay_background_mean_luma": 0.153166465344383,
+				"lantern_local_background_luma": 0.180451351869758,
+				"lantern_peak_luma": 0.988044706594944,
+				"lantern_peak_minus_local_background": 0.807593354725186,
+				"note": "Image values are advisory sRGB luma proxies; manual review remains required.",
+				"platform_lip_mean_luma": 0.909979884701967
+			},
+			"observed_feet": [
+				1800.0,
+				1260.0
+			],
+			"revision": 15.0,
+			"room": 1.0,
+			"surface_skin": {}
+		},
+		{
+			"camera_covered": true,
+			"collision_shape_count": 8.0,
+			"feet_screen": [
+				510.0,
+				590.0
+			],
+			"file": "res://previews/m16/after/02_corridor_floor.png",
+			"fixture_spawn": [
+				1800.0,
+				1260.0
+			],
+			"head_screen": [
+				516.4,
+				493.2
+			],
+			"id": "02_corridor_floor",
+			"lighting": {
+				"active_pools": [
+					{
+						"energy": 5.0,
+						"id": "portal_to_laboratory",
+						"position": [
+							2690.0,
+							1168.0
+						]
+					},
+					{
+						"energy": 5.0,
+						"id": "portal_archive_shortcut",
+						"position": [
+							1510.0,
+							808.0
+						]
+					}
+				],
+				"ambient": [
+					0.379999995231628,
+					0.409999996423721,
+					0.449999988079071
+				],
+				"enabled": true,
+				"pool_nodes": 4.0,
+				"visible_light_cap_including_hero": 4.0,
+				"visible_light_count": 3.0,
+				"visible_pool_count": 2.0
+			},
+			"metrics": {
+				"above_platform_mean_luma": 0.0566023850556033,
+				"background_bright_fraction": 0.0290847232594805,
+				"background_edge_fraction": 0.134470168450751,
+				"gameplay_background_mean_luma": 0.0985632476079661,
+				"lantern_local_background_luma": 0.118905910170129,
+				"lantern_peak_luma": 0.963944315874577,
+				"lantern_peak_minus_local_background": 0.845038405704447,
+				"note": "Image values are advisory sRGB luma proxies; manual review remains required.",
+				"platform_lip_mean_luma": 0.227490379450069
+			},
+			"observed_feet": [
+				1800.0,
+				1260.0
+			],
+			"revision": 16.0,
+			"room": 1.0,
+			"surface_skin": {
+				"gates": 1.0,
+				"interactables": 0.0,
+				"lamps": 0.0,
+				"missing_assets": [],
+				"moving_surfaces": 0.0,
+				"platforms": 5.0,
+				"revision": 16.0,
+				"shelves": 0.0
+			}
+		},
+		{
+			"camera_covered": true,
+			"collision_shape_count": 12.0,
+			"feet_screen": [
+				450.0,
+				590.0
+			],
+			"file": "res://previews/m16/before/03_lab_maintenance.png",
+			"fixture_spawn": [
+				450.0,
+				1620.0
+			],
+			"head_screen": [
+				456.4,
+				493.2
+			],
+			"id": "03_lab_maintenance",
+			"lighting": {},
+			"metrics": {
+				"above_platform_mean_luma": 0.0232019916667245,
+				"background_bright_fraction": 0.10621525184632,
+				"background_edge_fraction": 0.471828064061074,
+				"gameplay_background_mean_luma": 0.174248474010874,
+				"lantern_local_background_luma": 0.173316965321626,
+				"lantern_peak_luma": 0.988044706594944,
+				"lantern_peak_minus_local_background": 0.814727741273318,
+				"note": "Image values are advisory sRGB luma proxies; manual review remains required.",
+				"platform_lip_mean_luma": 0.90816000547409
+			},
+			"observed_feet": [
+				450.0,
+				1620.0
+			],
+			"revision": 15.0,
+			"room": 2.0,
+			"surface_skin": {}
+		},
+		{
+			"camera_covered": true,
+			"collision_shape_count": 12.0,
+			"feet_screen": [
+				450.0,
+				590.0
+			],
+			"file": "res://previews/m16/after/03_lab_maintenance.png",
+			"fixture_spawn": [
+				450.0,
+				1620.0
+			],
+			"head_screen": [
+				456.4,
+				493.2
+			],
+			"id": "03_lab_maintenance",
+			"lighting": {
+				"active_pools": [
+					{
+						"energy": 5.0,
+						"id": "portal_to_assignments",
+						"position": [
+							110.0,
+							1168.0
+						]
+					},
+					{
+						"energy": 4.19999980926514,
+						"id": "first_landing",
+						"position": [
+							1075.0,
+							1080.0
+						]
+					}
+				],
+				"ambient": [
+					0.349999994039536,
+					0.389999985694885,
+					0.430000007152557
+				],
+				"enabled": true,
+				"pool_nodes": 4.0,
+				"visible_light_cap_including_hero": 4.0,
+				"visible_light_count": 3.0,
+				"visible_pool_count": 2.0
+			},
+			"metrics": {
+				"above_platform_mean_luma": 0.0288553855287054,
+				"background_bright_fraction": 0.0212845407020164,
+				"background_edge_fraction": 0.134594639449008,
+				"gameplay_background_mean_luma": 0.117449792093007,
+				"lantern_local_background_luma": 0.125778275334334,
+				"lantern_peak_luma": 0.963944315874577,
+				"lantern_peak_minus_local_background": 0.838166040540242,
+				"note": "Image values are advisory sRGB luma proxies; manual review remains required.",
+				"platform_lip_mean_luma": 0.216177347994997
+			},
+			"observed_feet": [
+				450.0,
+				1620.0
+			],
+			"revision": 16.0,
+			"room": 2.0,
+			"surface_skin": {
+				"gates": 0.0,
+				"interactables": 0.0,
+				"lamps": 0.0,
+				"missing_assets": [],
+				"moving_surfaces": 0.0,
+				"platforms": 10.0,
+				"revision": 16.0,
+				"shelves": 0.0
+			}
+		},
+		{
+			"camera_covered": true,
+			"collision_shape_count": 12.0,
+			"feet_screen": [
+				510.0,
+				590.0
+			],
+			"file": "res://previews/m16/before/03_lab_service_gallery.png",
+			"fixture_spawn": [
+				2200.0,
+				900.0
+			],
+			"head_screen": [
+				516.4,
+				493.2
+			],
+			"id": "03_lab_service_gallery",
+			"lighting": {},
+			"metrics": {
+				"above_platform_mean_luma": 0.0937148139830965,
+				"background_bright_fraction": 0.0377562028047465,
+				"background_edge_fraction": 0.387768649904572,
+				"gameplay_background_mean_luma": 0.122187757956714,
+				"lantern_local_background_luma": 0.173393092080345,
+				"lantern_peak_luma": 0.984406275439262,
+				"lantern_peak_minus_local_background": 0.811013183358917,
+				"note": "Image values are advisory sRGB luma proxies; manual review remains required.",
+				"platform_lip_mean_luma": 0.876278861069679
+			},
+			"observed_feet": [
+				2200.0,
+				900.0
+			],
+			"revision": 15.0,
+			"room": 2.0,
+			"surface_skin": {}
+		},
+		{
+			"camera_covered": true,
+			"collision_shape_count": 12.0,
+			"feet_screen": [
+				510.0,
+				590.0
+			],
+			"file": "res://previews/m16/after/03_lab_service_gallery.png",
+			"fixture_spawn": [
+				2200.0,
+				900.0
+			],
+			"head_screen": [
+				516.4,
+				493.2
+			],
+			"id": "03_lab_service_gallery",
+			"lighting": {
+				"active_pools": [
+					{
+						"energy": 5.0,
+						"id": "portal_to_archive",
+						"position": [
+							3090.0,
+							1168.0
+						]
+					},
+					{
+						"energy": 5.0,
+						"id": "portal_output_shortcut",
+						"position": [
+							2470.0,
+							808.0
+						]
+					}
+				],
+				"ambient": [
+					0.349999994039536,
+					0.389999985694885,
+					0.430000007152557
+				],
+				"enabled": true,
+				"pool_nodes": 4.0,
+				"visible_light_cap_including_hero": 4.0,
+				"visible_light_count": 3.0,
+				"visible_pool_count": 2.0
+			},
+			"metrics": {
+				"above_platform_mean_luma": 0.0973445576280499,
+				"background_bright_fraction": 0.0193344950626504,
+				"background_edge_fraction": 0.114554808729566,
+				"gameplay_background_mean_luma": 0.102711066555052,
+				"lantern_local_background_luma": 0.171783300217282,
+				"lantern_peak_luma": 0.963944315874577,
+				"lantern_peak_minus_local_background": 0.792161015657295,
+				"note": "Image values are advisory sRGB luma proxies; manual review remains required.",
+				"platform_lip_mean_luma": 0.240367484026001
+			},
+			"observed_feet": [
+				2200.0,
+				900.0
+			],
+			"revision": 16.0,
+			"room": 2.0,
+			"surface_skin": {
+				"gates": 0.0,
+				"interactables": 0.0,
+				"lamps": 0.0,
+				"missing_assets": [],
+				"moving_surfaces": 0.0,
+				"platforms": 10.0,
+				"revision": 16.0,
+				"shelves": 0.0
+			}
+		},
+		{
+			"camera_covered": true,
+			"collision_shape_count": 12.0,
+			"feet_screen": [
+				510.0,
+				590.0
+			],
+			"file": "res://previews/m16/before/03_lab_walkway.png",
+			"fixture_spawn": [
+				1880.0,
+				1260.0
+			],
+			"head_screen": [
+				516.4,
+				493.2
+			],
+			"id": "03_lab_walkway",
+			"lighting": {},
+			"metrics": {
+				"above_platform_mean_luma": 0.0738454015241864,
+				"background_bright_fraction": 0.100157663264459,
+				"background_edge_fraction": 0.490789146128952,
+				"gameplay_background_mean_luma": 0.161446236437955,
+				"lantern_local_background_luma": 0.149187993593016,
+				"lantern_peak_luma": 0.984406275439262,
+				"lantern_peak_minus_local_background": 0.835218281846246,
+				"note": "Image values are advisory sRGB luma proxies; manual review remains required.",
+				"platform_lip_mean_luma": 0.9150244997859
+			},
+			"observed_feet": [
+				1880.0,
+				1260.0
+			],
+			"revision": 15.0,
+			"room": 2.0,
+			"surface_skin": {}
+		},
+		{
+			"camera_covered": true,
+			"collision_shape_count": 12.0,
+			"feet_screen": [
+				510.0,
+				590.0
+			],
+			"file": "res://previews/m16/after/03_lab_walkway.png",
+			"fixture_spawn": [
+				1880.0,
+				1260.0
+			],
+			"head_screen": [
+				516.4,
+				493.2
+			],
+			"id": "03_lab_walkway",
+			"lighting": {
+				"active_pools": [
+					{
+						"energy": 5.0,
+						"id": "portal_output_shortcut",
+						"position": [
+							2470.0,
+							808.0
+						]
+					}
+				],
+				"ambient": [
+					0.349999994039536,
+					0.389999985694885,
+					0.430000007152557
+				],
+				"enabled": true,
+				"pool_nodes": 4.0,
+				"visible_light_cap_including_hero": 4.0,
+				"visible_light_count": 2.0,
+				"visible_pool_count": 1.0
+			},
+			"metrics": {
+				"above_platform_mean_luma": 0.127624920104516,
+				"background_bright_fraction": 0.0153514231184134,
+				"background_edge_fraction": 0.120819848975189,
+				"gameplay_background_mean_luma": 0.107570025944885,
+				"lantern_local_background_luma": 0.160831437477504,
+				"lantern_peak_luma": 0.964778041315079,
+				"lantern_peak_minus_local_background": 0.803946603837574,
+				"note": "Image values are advisory sRGB luma proxies; manual review remains required.",
+				"platform_lip_mean_luma": 0.232630047360063
+			},
+			"observed_feet": [
+				1880.0,
+				1260.0
+			],
+			"revision": 16.0,
+			"room": 2.0,
+			"surface_skin": {
+				"gates": 0.0,
+				"interactables": 0.0,
+				"lamps": 0.0,
+				"missing_assets": [],
+				"moving_surfaces": 0.0,
+				"platforms": 10.0,
+				"revision": 16.0,
+				"shelves": 0.0
+			}
+		},
+		{
+			"camera_covered": true,
+			"collision_shape_count": 25.0,
+			"feet_screen": [
+				510.0,
+				590.0
+			],
+			"file": "res://previews/m16/before/04_archive_bottom.png",
+			"fixture_spawn": [
+				1125.0,
+				2700.0
+			],
+			"head_screen": [
+				516.4,
+				493.2
+			],
+			"id": "04_archive_bottom",
+			"lighting": {},
+			"metrics": {
+				"above_platform_mean_luma": 0.0770978298997936,
+				"background_bright_fraction": 0.116048460708655,
+				"background_edge_fraction": 0.35731474566426,
+				"gameplay_background_mean_luma": 0.15794197636188,
+				"lantern_local_background_luma": 0.153781461855106,
+				"lantern_peak_luma": 0.987494118392467,
+				"lantern_peak_minus_local_background": 0.833712656537362,
+				"note": "Image values are advisory sRGB luma proxies; manual review remains required.",
+				"platform_lip_mean_luma": 0.802302334558964
+			},
+			"observed_feet": [
+				1125.0,
+				2700.0
+			],
+			"revision": 15.0,
+			"room": 3.0,
+			"surface_skin": {}
+		},
+		{
+			"camera_covered": true,
+			"collision_shape_count": 25.0,
+			"feet_screen": [
+				510.0,
+				590.0
+			],
+			"file": "res://previews/m16/after/04_archive_bottom.png",
+			"fixture_spawn": [
+				1125.0,
+				2700.0
+			],
+			"head_screen": [
+				516.4,
+				493.2
+			],
+			"id": "04_archive_bottom",
+			"lighting": {
+				"active_pools": [
+					{
+						"energy": 6.19999980926514,
+						"id": "lift_call_0",
+						"position": [
+							1125.0,
+							2628.0
+						]
+					}
+				],
+				"ambient": [
+					0.360000014305115,
+					0.389999985694885,
+					0.430000007152557
+				],
+				"enabled": true,
+				"pool_nodes": 12.0,
+				"visible_light_cap_including_hero": 4.0,
+				"visible_light_count": 2.0,
+				"visible_pool_count": 1.0
+			},
+			"metrics": {
+				"above_platform_mean_luma": 0.0622581313274801,
+				"background_bright_fraction": 0.0772135092523442,
+				"background_edge_fraction": 0.123060326943822,
+				"gameplay_background_mean_luma": 0.121012162679266,
+				"lantern_local_background_luma": 0.141144745946262,
+				"lantern_peak_luma": 0.963944315874577,
+				"lantern_peak_minus_local_background": 0.822799569928314,
+				"note": "Image values are advisory sRGB luma proxies; manual review remains required.",
+				"platform_lip_mean_luma": 0.299832108461857
+			},
+			"observed_feet": [
+				1125.0,
+				2700.0
+			],
+			"revision": 16.0,
+			"room": 3.0,
+			"surface_skin": {
+				"gates": 0.0,
+				"interactables": 9.0,
+				"lamps": 0.0,
+				"missing_assets": [],
+				"moving_surfaces": 1.0,
+				"platforms": 21.0,
+				"revision": 16.0,
+				"shelves": 1.0
+			}
+		},
+		{
+			"camera_covered": true,
+			"collision_shape_count": 25.0,
+			"feet_screen": [
+				510.0,
+				590.0
+			],
+			"file": "res://previews/m16/before/04_archive_lower.png",
+			"fixture_spawn": [
+				720.0,
+				1980.0
+			],
+			"head_screen": [
+				516.4,
+				493.2
+			],
+			"id": "04_archive_lower",
+			"lighting": {},
+			"metrics": {
+				"above_platform_mean_luma": 0.111236834802851,
+				"background_bright_fraction": 0.113642021409012,
+				"background_edge_fraction": 0.401543440378392,
+				"gameplay_background_mean_luma": 0.162222231961255,
+				"lantern_local_background_luma": 0.172059207774582,
+				"lantern_peak_luma": 0.987494118392467,
+				"lantern_peak_minus_local_background": 0.815434910617885,
+				"note": "Image values are advisory sRGB luma proxies; manual review remains required.",
+				"platform_lip_mean_luma": 0.890690564584732
+			},
+			"observed_feet": [
+				720.0,
+				1980.0
+			],
+			"revision": 15.0,
+			"room": 3.0,
+			"surface_skin": {}
+		},
+		{
+			"camera_covered": true,
+			"collision_shape_count": 25.0,
+			"feet_screen": [
+				510.0,
+				590.0
+			],
+			"file": "res://previews/m16/after/04_archive_lower.png",
+			"fixture_spawn": [
+				720.0,
+				1980.0
+			],
+			"head_screen": [
+				516.4,
+				493.2
+			],
+			"id": "04_archive_lower",
+			"lighting": {
+				"active_pools": [
+					{
+						"energy": 6.19999980926514,
+						"id": "archive_shortcut",
+						"position": [
+							720.0,
+							1908.0
+						]
+					},
+					{
+						"energy": 6.19999980926514,
+						"id": "lift_call_1_right",
+						"position": [
+							1435.0,
+							1908.0
+						]
+					},
+					{
+						"energy": 5.0,
+						"id": "portal_assignment_shortcut",
+						"position": [
+							550.0,
+							1888.0
+						]
+					}
+				],
+				"ambient": [
+					0.360000014305115,
+					0.389999985694885,
+					0.430000007152557
+				],
+				"enabled": true,
+				"pool_nodes": 12.0,
+				"visible_light_cap_including_hero": 4.0,
+				"visible_light_count": 4.0,
+				"visible_pool_count": 3.0
+			},
+			"metrics": {
+				"above_platform_mean_luma": 0.0875373465570262,
+				"background_bright_fraction": 0.0797444195502448,
+				"background_edge_fraction": 0.142228860675463,
+				"gameplay_background_mean_luma": 0.128285839377896,
+				"lantern_local_background_luma": 0.135795676931442,
+				"lantern_peak_luma": 0.963944315874577,
+				"lantern_peak_minus_local_background": 0.828148638943135,
+				"note": "Image values are advisory sRGB luma proxies; manual review remains required.",
+				"platform_lip_mean_luma": 0.287021701985598
+			},
+			"observed_feet": [
+				720.0,
+				1980.0
+			],
+			"revision": 16.0,
+			"room": 3.0,
+			"surface_skin": {
+				"gates": 0.0,
+				"interactables": 9.0,
+				"lamps": 0.0,
+				"missing_assets": [],
+				"moving_surfaces": 1.0,
+				"platforms": 21.0,
+				"revision": 16.0,
+				"shelves": 1.0
+			}
+		},
+		{
+			"camera_covered": true,
+			"collision_shape_count": 25.0,
+			"feet_screen": [
+				740.0,
+				590.0
+			],
+			"file": "res://previews/m16/before/04_archive_middle.png",
+			"fixture_spawn": [
+				1700.0,
+				1260.0
+			],
+			"head_screen": [
+				746.4,
+				493.2
+			],
+			"id": "04_archive_middle",
+			"lighting": {},
+			"metrics": {
+				"above_platform_mean_luma": 0.113325976843845,
+				"background_bright_fraction": 0.0651660241263524,
+				"background_edge_fraction": 0.343240890436513,
+				"gameplay_background_mean_luma": 0.133075257691538,
+				"lantern_local_background_luma": 0.202654293481726,
+				"lantern_peak_luma": 0.984406275439262,
+				"lantern_peak_minus_local_background": 0.781751981957536,
+				"note": "Image values are advisory sRGB luma proxies; manual review remains required.",
+				"platform_lip_mean_luma": 0.88838794028759
+			},
+			"observed_feet": [
+				1700.0,
+				1260.0
+			],
+			"revision": 15.0,
+			"room": 3.0,
+			"surface_skin": {}
+		},
+		{
+			"camera_covered": true,
+			"collision_shape_count": 25.0,
+			"feet_screen": [
+				740.0,
+				590.0
+			],
+			"file": "res://previews/m16/after/04_archive_middle.png",
+			"fixture_spawn": [
+				1700.0,
+				1260.0
+			],
+			"head_screen": [
+				746.4,
+				493.2
+			],
+			"id": "04_archive_middle",
+			"lighting": {
+				"active_pools": [
+					{
+						"energy": 6.19999980926514,
+						"id": "archive_secret",
+						"position": [
+							1830.0,
+							1188.0
+						]
+					},
+					{
+						"energy": 6.19999980926514,
+						"id": "lift_call_2_left",
+						"position": [
+							820.0,
+							1188.0
+						]
+					},
+					{
+						"energy": 6.19999980926514,
+						"id": "lift_call_2_right",
+						"position": [
+							1435.0,
+							1188.0
+						]
+					}
+				],
+				"ambient": [
+					0.360000014305115,
+					0.389999985694885,
+					0.430000007152557
+				],
+				"enabled": true,
+				"pool_nodes": 12.0,
+				"visible_light_cap_including_hero": 4.0,
+				"visible_light_count": 4.0,
+				"visible_pool_count": 3.0
+			},
+			"metrics": {
+				"above_platform_mean_luma": 0.118788208065182,
+				"background_bright_fraction": 0.0671972806035734,
+				"background_edge_fraction": 0.154707125979356,
+				"gameplay_background_mean_luma": 0.11750249027577,
+				"lantern_local_background_luma": 0.200471193583449,
+				"lantern_peak_luma": 0.963944315874577,
+				"lantern_peak_minus_local_background": 0.763473122291127,
+				"note": "Image values are advisory sRGB luma proxies; manual review remains required.",
+				"platform_lip_mean_luma": 0.254385798851229
+			},
+			"observed_feet": [
+				1700.0,
+				1260.0
+			],
+			"revision": 16.0,
+			"room": 3.0,
+			"surface_skin": {
+				"gates": 0.0,
+				"interactables": 9.0,
+				"lamps": 0.0,
+				"missing_assets": [],
+				"moving_surfaces": 1.0,
+				"platforms": 21.0,
+				"revision": 16.0,
+				"shelves": 1.0
+			}
+		},
+		{
+			"camera_covered": true,
+			"collision_shape_count": 25.0,
+			"feet_screen": [
+				690.0,
+				590.0
+			],
+			"file": "res://previews/m16/before/04_archive_upper.png",
+			"fixture_spawn": [
+				1650.0,
+				660.0
+			],
+			"head_screen": [
+				696.4,
+				493.2
+			],
+			"id": "04_archive_upper",
+			"lighting": {},
+			"metrics": {
+				"above_platform_mean_luma": 0.125349384105865,
+				"background_bright_fraction": 0.0533150775869222,
+				"background_edge_fraction": 0.372458717118911,
+				"gameplay_background_mean_luma": 0.135545148956867,
+				"lantern_local_background_luma": 0.241562456567009,
+				"lantern_peak_luma": 0.984406275439262,
+				"lantern_peak_minus_local_background": 0.742843818872253,
+				"note": "Image values are advisory sRGB luma proxies; manual review remains required.",
+				"platform_lip_mean_luma": 0.890033219224215
+			},
+			"observed_feet": [
+				1650.0,
+				660.0
+			],
+			"revision": 15.0,
+			"room": 3.0,
+			"surface_skin": {}
+		},
+		{
+			"camera_covered": true,
+			"collision_shape_count": 25.0,
+			"feet_screen": [
+				690.0,
+				590.0
+			],
+			"file": "res://previews/m16/after/04_archive_upper.png",
+			"fixture_spawn": [
+				1650.0,
+				660.0
+			],
+			"head_screen": [
+				696.4,
+				493.2
+			],
+			"id": "04_archive_upper",
+			"lighting": {
+				"active_pools": [
+					{
+						"energy": 6.19999980926514,
+						"id": "lift_call_3_left",
+						"position": [
+							820.0,
+							588.0
+						]
+					},
+					{
+						"energy": 6.19999980926514,
+						"id": "lift_call_3_right",
+						"position": [
+							1435.0,
+							588.0
+						]
+					},
+					{
+						"energy": 5.0,
+						"id": "portal_to_input",
+						"position": [
+							2140.0,
+							568.0
+						]
+					}
+				],
+				"ambient": [
+					0.360000014305115,
+					0.389999985694885,
+					0.430000007152557
+				],
+				"enabled": true,
+				"pool_nodes": 12.0,
+				"visible_light_cap_including_hero": 4.0,
+				"visible_light_count": 4.0,
+				"visible_pool_count": 3.0
+			},
+			"metrics": {
+				"above_platform_mean_luma": 0.0762930940621461,
+				"background_bright_fraction": 0.0553066135590407,
+				"background_edge_fraction": 0.14890880424861,
+				"gameplay_background_mean_luma": 0.112355566107052,
+				"lantern_local_background_luma": 0.128748006222211,
+				"lantern_peak_luma": 0.963944315874577,
+				"lantern_peak_minus_local_background": 0.835196309652366,
+				"note": "Image values are advisory sRGB luma proxies; manual review remains required.",
+				"platform_lip_mean_luma": 0.240616111052265
+			},
+			"observed_feet": [
+				1650.0,
+				660.0
+			],
+			"revision": 16.0,
+			"room": 3.0,
+			"surface_skin": {
+				"gates": 0.0,
+				"interactables": 9.0,
+				"lamps": 0.0,
+				"missing_assets": [],
+				"moving_surfaces": 1.0,
+				"platforms": 21.0,
+				"revision": 16.0,
+				"shelves": 1.0
+			}
+		},
+		{
+			"camera_covered": true,
+			"collision_shape_count": 7.0,
+			"feet_screen": [
+				510.0,
+				590.0
+			],
+			"file": "res://previews/m16/before/05_input.png",
+			"fixture_spawn": [
+				780.0,
+				1260.0
+			],
+			"head_screen": [
+				516.4,
+				493.2
+			],
+			"id": "05_input",
+			"lighting": {},
+			"metrics": {
+				"above_platform_mean_luma": 0.140628721611388,
+				"background_bright_fraction": 0.0793295162227201,
+				"background_edge_fraction": 0.456435150609908,
+				"gameplay_background_mean_luma": 0.153391908775538,
+				"lantern_local_background_luma": 0.223737089248921,
+				"lantern_peak_luma": 0.987494118392467,
+				"lantern_peak_minus_local_background": 0.763757029143546,
+				"note": "Image values are advisory sRGB luma proxies; manual review remains required.",
+				"platform_lip_mean_luma": 0.906561815524101
+			},
+			"observed_feet": [
+				780.0,
+				1260.0
+			],
+			"revision": 15.0,
+			"room": 4.0,
+			"surface_skin": {}
+		},
+		{
+			"camera_covered": true,
+			"collision_shape_count": 7.0,
+			"feet_screen": [
+				510.0,
+				590.0
+			],
+			"file": "res://previews/m16/after/05_input.png",
+			"fixture_spawn": [
+				780.0,
+				1260.0
+			],
+			"head_screen": [
+				516.4,
+				493.2
+			],
+			"id": "05_input",
+			"lighting": {
+				"active_pools": [
+					{
+						"energy": 4.80000019073486,
+						"id": "input",
+						"position": [
+							780.0,
+							1188.0
+						]
+					},
+					{
+						"energy": 4.19999980926514,
+						"id": "first_landing",
+						"position": [
+							550.0,
+							960.0
+						]
+					}
+				],
+				"ambient": [
+					0.379999995231628,
+					0.409999996423721,
+					0.449999988079071
+				],
+				"enabled": true,
+				"pool_nodes": 4.0,
+				"visible_light_cap_including_hero": 4.0,
+				"visible_light_count": 3.0,
+				"visible_pool_count": 2.0
+			},
+			"metrics": {
+				"above_platform_mean_luma": 0.0551227462782883,
+				"background_bright_fraction": 0.00850551821425608,
+				"background_edge_fraction": 0.0731059663098498,
+				"gameplay_background_mean_luma": 0.0848953284291795,
+				"lantern_local_background_luma": 0.139326535232959,
+				"lantern_peak_luma": 0.967032158827782,
+				"lantern_peak_minus_local_background": 0.827705623594823,
+				"note": "Image values are advisory sRGB luma proxies; manual review remains required.",
+				"platform_lip_mean_luma": 0.28586160838902
+			},
+			"observed_feet": [
+				780.0,
+				1260.0
+			],
+			"revision": 16.0,
+			"room": 4.0,
+			"surface_skin": {
+				"gates": 1.0,
+				"interactables": 1.0,
+				"lamps": 0.0,
+				"missing_assets": [],
+				"moving_surfaces": 0.0,
+				"platforms": 4.0,
+				"revision": 16.0,
+				"shelves": 0.0
+			}
+		},
+		{
+			"camera_covered": true,
+			"collision_shape_count": 9.0,
+			"feet_screen": [
+				510.0,
+				590.0
+			],
+			"file": "res://previews/m16/before/06_process.png",
+			"fixture_spawn": [
+				1310.0,
+				1260.0
+			],
+			"head_screen": [
+				516.4,
+				493.2
+			],
+			"id": "06_process",
+			"lighting": {},
+			"metrics": {
+				"above_platform_mean_luma": 0.0957521894601675,
+				"background_bright_fraction": 0.0546427682350012,
+				"background_edge_fraction": 0.416355489171023,
+				"gameplay_background_mean_luma": 0.135742615301683,
+				"lantern_local_background_luma": 0.171779208160151,
+				"lantern_peak_luma": 0.987494118392467,
+				"lantern_peak_minus_local_background": 0.815714910232316,
+				"note": "Image values are advisory sRGB luma proxies; manual review remains required.",
+				"platform_lip_mean_luma": 0.910744228547811
+			},
+			"observed_feet": [
+				1310.0,
+				1260.0
+			],
+			"revision": 15.0,
+			"room": 5.0,
+			"surface_skin": {}
+		},
+		{
+			"camera_covered": true,
+			"collision_shape_count": 9.0,
+			"feet_screen": [
+				510.0,
+				590.0
+			],
+			"file": "res://previews/m16/after/06_process.png",
+			"fixture_spawn": [
+				1310.0,
+				1260.0
+			],
+			"head_screen": [
+				516.4,
+				493.2
+			],
+			"id": "06_process",
+			"lighting": {
+				"active_pools": [
+					{
+						"energy": 4.80000019073486,
+						"id": "process",
+						"position": [
+							1310.0,
+							1188.0
+						]
+					}
+				],
+				"ambient": [
+					0.349999994039536,
+					0.389999985694885,
+					0.430000007152557
+				],
+				"enabled": true,
+				"pool_nodes": 4.0,
+				"visible_light_cap_including_hero": 4.0,
+				"visible_light_count": 2.0,
+				"visible_pool_count": 1.0
+			},
+			"metrics": {
+				"above_platform_mean_luma": 0.0754887808161,
+				"background_bright_fraction": 0.00161812297734628,
+				"background_edge_fraction": 0.0850551821425608,
+				"gameplay_background_mean_luma": 0.0814743820789945,
+				"lantern_local_background_luma": 0.135875702130667,
+				"lantern_peak_luma": 0.964227453112602,
+				"lantern_peak_minus_local_background": 0.828351750981936,
+				"note": "Image values are advisory sRGB luma proxies; manual review remains required.",
+				"platform_lip_mean_luma": 0.274202996715903
+			},
+			"observed_feet": [
+				1310.0,
+				1260.0
+			],
+			"revision": 16.0,
+			"room": 5.0,
+			"surface_skin": {
+				"gates": 1.0,
+				"interactables": 1.0,
+				"lamps": 0.0,
+				"missing_assets": [],
+				"moving_surfaces": 1.0,
+				"platforms": 5.0,
+				"revision": 16.0,
+				"shelves": 0.0
+			}
+		},
+		{
+			"camera_covered": true,
+			"collision_shape_count": 9,
+			"feet_screen": [
+				510.0,
+				590.0
+			],
+			"file": "res://previews/m16/before/07_output.png",
+			"fixture_spawn": [
+				1210.0,
+				1260.0
+			],
+			"head_screen": [
+				516.4,
+				493.2
+			],
+			"id": "07_output",
+			"lighting": {},
+			"metrics": {
+				"above_platform_mean_luma": 0.128641329808476,
+				"background_bright_fraction": 0.114513318396814,
+				"background_edge_fraction": 0.553356567919675,
+				"gameplay_background_mean_luma": 0.169530141957102,
+				"lantern_local_background_luma": 0.188046021988371,
+				"lantern_peak_luma": 0.987494118392467,
+				"lantern_peak_minus_local_background": 0.799448096404097,
+				"note": "Image values are advisory sRGB luma proxies; manual review remains required.",
+				"platform_lip_mean_luma": 0.908483444368839
+			},
+			"observed_feet": [
+				1210.0,
+				1260.0
+			],
+			"revision": 15,
+			"room": 6,
+			"surface_skin": {}
+		},
+		{
+			"camera_covered": true,
+			"collision_shape_count": 9,
+			"feet_screen": [
+				510.0,
+				590.0
+			],
+			"file": "res://previews/m16/after/07_output.png",
+			"fixture_spawn": [
+				1210.0,
+				1260.0
+			],
+			"head_screen": [
+				516.4,
+				493.2
+			],
+			"id": "07_output",
+			"lighting": {
+				"active_pools": [
+					{
+						"energy": 4.80000019073486,
+						"id": "output",
+						"position": [
+							1210.0,
+							1188.0
+						]
+					},
+					{
+						"energy": 5.0,
+						"id": "portal_laboratory_shortcut",
+						"position": [
+							1870.0,
+							808.0
+						]
+					},
+					{
+						"energy": 4.19999980926514,
+						"id": "first_landing",
+						"position": [
+							550.0,
+							960.0
+						]
+					}
+				],
+				"ambient": [
+					0.379999995231628,
+					0.409999996423721,
+					0.449999988079071
+				],
+				"enabled": true,
+				"pool_nodes": 5,
+				"visible_light_cap_including_hero": 4,
+				"visible_light_count": 4,
+				"visible_pool_count": 3
+			},
+			"metrics": {
+				"above_platform_mean_luma": 0.079459851450731,
+				"background_bright_fraction": 0.0120736868309684,
+				"background_edge_fraction": 0.119990042320139,
+				"gameplay_background_mean_luma": 0.0996947456867409,
+				"lantern_local_background_luma": 0.149623080096557,
+				"lantern_peak_luma": 0.967032158827782,
+				"lantern_peak_minus_local_background": 0.817409078731225,
+				"note": "Image values are advisory sRGB luma proxies; manual review remains required.",
+				"platform_lip_mean_luma": 0.286240281066298
+			},
+			"observed_feet": [
+				1210.0,
+				1260.0
+			],
+			"revision": 16,
+			"room": 6,
+			"surface_skin": {
+				"gates": 1,
+				"interactables": 1,
+				"lamps": 0,
+				"missing_assets": [],
+				"moving_surfaces": 0,
+				"platforms": 6,
+				"revision": 16,
+				"shelves": 0
+			}
+		},
+		{
+			"camera_covered": true,
+			"collision_shape_count": 7.0,
+			"feet_screen": [
+				350.0,
+				590.0
+			],
+			"file": "res://previews/m16/before/08_approach_bench.png",
+			"fixture_spawn": [
+				350.0,
+				1260.0
+			],
+			"head_screen": [
+				356.4,
+				493.2
+			],
+			"id": "08_approach_bench",
+			"lighting": {},
+			"metrics": {
+				"above_platform_mean_luma": 0.131387696074952,
+				"background_bright_fraction": 0.0360136088291428,
+				"background_edge_fraction": 0.400796614388847,
+				"gameplay_background_mean_luma": 0.127201540029544,
+				"lantern_local_background_luma": 0.147402418265777,
+				"lantern_peak_luma": 0.984406275439262,
+				"lantern_peak_minus_local_background": 0.837003857173485,
+				"note": "Image values are advisory sRGB luma proxies; manual review remains required.",
+				"platform_lip_mean_luma": 0.912264861941337
+			},
+			"observed_feet": [
+				350.0,
+				1260.0
+			],
+			"revision": 15.0,
+			"room": 7.0,
+			"surface_skin": {}
+		},
+		{
+			"camera_covered": true,
+			"collision_shape_count": 7.0,
+			"feet_screen": [
+				350.0,
+				590.0
+			],
+			"file": "res://previews/m16/after/08_approach_bench.png",
+			"fixture_spawn": [
+				350.0,
+				1260.0
+			],
+			"head_screen": [
+				356.4,
+				493.2
+			],
+			"id": "08_approach_bench",
+			"lighting": {
+				"active_pools": [
+					{
+						"energy": 7.19999980926514,
+						"id": "approach_bench",
+						"position": [
+							350.0,
+							1188.0
+						]
+					},
+					{
+						"energy": 5.0,
+						"id": "portal_to_output",
+						"position": [
+							110.0,
+							1168.0
+						]
+					},
+					{
+						"energy": 4.19999980926514,
+						"id": "first_landing",
+						"position": [
+							765.0,
+							1080.0
+						]
+					}
+				],
+				"ambient": [
+					0.349999994039536,
+					0.379999995231628,
+					0.419999986886978
+				],
+				"enabled": true,
+				"pool_nodes": 5.0,
+				"visible_light_cap_including_hero": 4.0,
+				"visible_light_count": 4.0,
+				"visible_pool_count": 3.0
+			},
+			"metrics": {
+				"above_platform_mean_luma": 0.104583834035064,
+				"background_bright_fraction": 0.0182142560783337,
+				"background_edge_fraction": 0.0851381628080657,
+				"gameplay_background_mean_luma": 0.104961938998768,
+				"lantern_local_background_luma": 0.128725236637983,
+				"lantern_peak_luma": 0.967582747030258,
+				"lantern_peak_minus_local_background": 0.838857510392275,
+				"note": "Image values are advisory sRGB luma proxies; manual review remains required.",
+				"platform_lip_mean_luma": 0.276085594040155
+			},
+			"observed_feet": [
+				350.0,
+				1260.0
+			],
+			"revision": 16.0,
+			"room": 7.0,
+			"surface_skin": {
+				"gates": 1.0,
+				"interactables": 2.0,
+				"lamps": 1.0,
+				"missing_assets": [],
+				"moving_surfaces": 0.0,
+				"platforms": 4.0,
+				"revision": 16.0,
+				"shelves": 0.0
+			}
+		},
+		{
+			"camera_covered": true,
+			"collision_shape_count": 7.0,
+			"feet_screen": [
+				510.0,
+				590.0
+			],
+			"file": "res://previews/m16/before/08_approach_encounter.png",
+			"fixture_spawn": [
+				2000.0,
+				1260.0
+			],
+			"head_screen": [
+				516.4,
+				493.2
+			],
+			"id": "08_approach_encounter",
+			"lighting": {},
+			"metrics": {
+				"above_platform_mean_luma": 0.121170501499709,
+				"background_bright_fraction": 0.0342295245207867,
+				"background_edge_fraction": 0.402746660028213,
+				"gameplay_background_mean_luma": 0.122819589740911,
+				"lantern_local_background_luma": 0.172193374540936,
+				"lantern_peak_luma": 0.984406275439262,
+				"lantern_peak_minus_local_background": 0.812212900898326,
+				"note": "Image values are advisory sRGB luma proxies; manual review remains required.",
+				"platform_lip_mean_luma": 0.91868754632473
+			},
+			"observed_feet": [
+				2000.0,
+				1260.0
+			],
+			"revision": 15.0,
+			"room": 7.0,
+			"surface_skin": {}
+		},
+		{
+			"camera_covered": true,
+			"collision_shape_count": 7.0,
+			"feet_screen": [
+				510.0,
+				590.0
+			],
+			"file": "res://previews/m16/after/08_approach_encounter.png",
+			"fixture_spawn": [
+				2000.0,
+				1260.0
+			],
+			"head_screen": [
+				516.4,
+				493.2
+			],
+			"id": "08_approach_encounter",
+			"lighting": {
+				"active_pools": [
+					{
+						"energy": 6.19999980926514,
+						"id": "compiler_seal_socket",
+						"position": [
+							2850.0,
+							1188.0
+						]
+					}
+				],
+				"ambient": [
+					0.349999994039536,
+					0.379999995231628,
+					0.419999986886978
+				],
+				"enabled": true,
+				"pool_nodes": 5.0,
+				"visible_light_cap_including_hero": 4.0,
+				"visible_light_count": 2.0,
+				"visible_pool_count": 1.0
+			},
+			"metrics": {
+				"above_platform_mean_luma": 0.0864589164151595,
+				"background_bright_fraction": 0.0,
+				"background_edge_fraction": 0.0660941000746826,
+				"gameplay_background_mean_luma": 0.0950200069804261,
+				"lantern_local_background_luma": 0.138569807289762,
+				"lantern_peak_luma": 0.963944315874577,
+				"lantern_peak_minus_local_background": 0.825374508584814,
+				"note": "Image values are advisory sRGB luma proxies; manual review remains required.",
+				"platform_lip_mean_luma": 0.212268086837691
+			},
+			"observed_feet": [
+				2000.0,
+				1260.0
+			],
+			"revision": 16.0,
+			"room": 7.0,
+			"surface_skin": {
+				"gates": 1.0,
+				"interactables": 2.0,
+				"lamps": 1.0,
+				"missing_assets": [],
+				"moving_surfaces": 0.0,
+				"platforms": 4.0,
+				"revision": 16.0,
+				"shelves": 0.0
+			}
+		},
+		{
+			"camera_covered": true,
+			"collision_shape_count": 4.0,
+			"feet_screen": [
+				510.0,
+				590.0
+			],
+			"file": "res://previews/m16/before/09_tribunal_centre.png",
+			"fixture_spawn": [
+				2100.0,
+				1620.0
+			],
+			"head_screen": [
+				516.4,
+				493.2
+			],
+			"id": "09_tribunal_centre",
+			"lighting": {},
+			"metrics": {
+				"above_platform_mean_luma": 0.101279067401531,
+				"background_bright_fraction": 0.051613973944071,
+				"background_edge_fraction": 0.393826238486433,
+				"gameplay_background_mean_luma": 0.135367134048501,
+				"lantern_local_background_luma": 0.146626915596507,
+				"lantern_peak_luma": 0.987494118392467,
+				"lantern_peak_minus_local_background": 0.84086720279596,
+				"note": "Image values are advisory sRGB luma proxies; manual review remains required.",
+				"platform_lip_mean_luma": 0.887476929783821
+			},
+			"observed_feet": [
+				2100.0,
+				1620.0
+			],
+			"revision": 15.0,
+			"room": 8.0,
+			"surface_skin": {}
+		},
+		{
+			"camera_covered": true,
+			"collision_shape_count": 4.0,
+			"feet_screen": [
+				510.0,
+				590.0
+			],
+			"file": "res://previews/m16/after/09_tribunal_centre.png",
+			"fixture_spawn": [
+				2100.0,
+				1620.0
+			],
+			"head_screen": [
+				516.4,
+				493.2
+			],
+			"id": "09_tribunal_centre",
+			"lighting": {
+				"active_pools": [
+					{
+						"energy": 4.0,
+						"id": "tribunal_relay",
+						"position": [
+							2100.0,
+							1548.0
+						]
+					}
+				],
+				"ambient": [
+					0.349999994039536,
+					0.379999995231628,
+					0.419999986886978
+				],
+				"enabled": true,
+				"pool_nodes": 3.0,
+				"visible_light_cap_including_hero": 4.0,
+				"visible_light_count": 2.0,
+				"visible_pool_count": 1.0
+			},
+			"metrics": {
+				"above_platform_mean_luma": 0.0707806361327377,
+				"background_bright_fraction": 0.00228196830138578,
+				"background_edge_fraction": 0.131648825823583,
+				"gameplay_background_mean_luma": 0.102366517905357,
+				"lantern_local_background_luma": 0.138656719392585,
+				"lantern_peak_luma": 0.963944315874577,
+				"lantern_peak_minus_local_background": 0.825287596481992,
+				"note": "Image values are advisory sRGB luma proxies; manual review remains required.",
+				"platform_lip_mean_luma": 0.245718410735635
+			},
+			"observed_feet": [
+				2100.0,
+				1620.0
+			],
+			"revision": 16.0,
+			"room": 8.0,
+			"surface_skin": {
+				"gates": 1.0,
+				"interactables": 1.0,
+				"lamps": 0.0,
+				"missing_assets": [],
+				"moving_surfaces": 0.0,
+				"platforms": 1.0,
+				"revision": 16.0,
+				"shelves": 0.0
+			}
+		},
+		{
+			"camera_covered": true,
+			"collision_shape_count": 4.0,
+			"feet_screen": [
+				200.0,
+				590.0
+			],
+			"file": "res://previews/m16/before/09_tribunal_west.png",
+			"fixture_spawn": [
+				200.0,
+				1620.0
+			],
+			"head_screen": [
+				206.4,
+				493.2
+			],
+			"id": "09_tribunal_west",
+			"lighting": {},
+			"metrics": {
+				"above_platform_mean_luma": 0.0838265783523424,
+				"background_bright_fraction": 0.0481697964598101,
+				"background_edge_fraction": 0.391991045889815,
+				"gameplay_background_mean_luma": 0.131364093106321,
+				"lantern_local_background_luma": 0.11619302983681,
+				"lantern_peak_luma": 0.984406275439262,
+				"lantern_peak_minus_local_background": 0.868213245602452,
+				"note": "Image values are advisory sRGB luma proxies; manual review remains required.",
+				"platform_lip_mean_luma": 0.881710414290428
+			},
+			"observed_feet": [
+				200.0,
+				1620.0
+			],
+			"revision": 15.0,
+			"room": 8.0,
+			"surface_skin": {}
+		},
+		{
+			"camera_covered": true,
+			"collision_shape_count": 4.0,
+			"feet_screen": [
+				200.0,
+				590.0
+			],
+			"file": "res://previews/m16/after/09_tribunal_west.png",
+			"fixture_spawn": [
+				200.0,
+				1620.0
+			],
+			"head_screen": [
+				206.4,
+				493.2
+			],
+			"id": "09_tribunal_west",
+			"lighting": {
+				"active_pools": [
+					{
+						"energy": 5.0,
+						"id": "portal_to_approach",
+						"position": [
+							110.0,
+							1528.0
+						]
+					}
+				],
+				"ambient": [
+					0.349999994039536,
+					0.379999995231628,
+					0.419999986886978
+				],
+				"enabled": true,
+				"pool_nodes": 3.0,
+				"visible_light_cap_including_hero": 4.0,
+				"visible_light_count": 2.0,
+				"visible_pool_count": 1.0
+			},
+			"metrics": {
+				"above_platform_mean_luma": 0.0758279964428968,
+				"background_bright_fraction": 0.00364797081623347,
+				"background_edge_fraction": 0.140985781204659,
+				"gameplay_background_mean_luma": 0.0973305149986403,
+				"lantern_local_background_luma": 0.110718642756669,
+				"lantern_peak_luma": 0.963944315874577,
+				"lantern_peak_minus_local_background": 0.853225673117908,
+				"note": "Image values are advisory sRGB luma proxies; manual review remains required.",
+				"platform_lip_mean_luma": 0.210050017464161
+			},
+			"observed_feet": [
+				200.0,
+				1620.0
+			],
+			"revision": 16.0,
+			"room": 8.0,
+			"surface_skin": {
+				"gates": 1.0,
+				"interactables": 1.0,
+				"lamps": 0.0,
+				"missing_assets": [],
+				"moving_surfaces": 0.0,
+				"platforms": 1.0,
+				"revision": 16.0,
+				"shelves": 0.0
+			}
+		},
+		{
+			"camera_covered": true,
+			"collision_shape_count": 3.0,
+			"feet_screen": [
+				510.0,
+				590.0
+			],
+			"file": "res://previews/m16/before/10_aftermath.png",
+			"fixture_spawn": [
+				1100.0,
+				1260.0
+			],
+			"head_screen": [
+				516.4,
+				493.2
+			],
+			"id": "10_aftermath",
+			"lighting": {},
+			"metrics": {
+				"above_platform_mean_luma": 0.112459309038405,
+				"background_bright_fraction": 0.0899510414073521,
+				"background_edge_fraction": 0.464069371836362,
+				"gameplay_background_mean_luma": 0.1581099174302,
+				"lantern_local_background_luma": 0.160054771171603,
+				"lantern_peak_luma": 0.984406275439262,
+				"lantern_peak_minus_local_background": 0.824351504267659,
+				"note": "Image values are advisory sRGB luma proxies; manual review remains required.",
+				"platform_lip_mean_luma": 0.909791377925873
+			},
+			"observed_feet": [
+				1100.0,
+				1260.0
+			],
+			"revision": 15.0,
+			"room": 9.0,
+			"surface_skin": {}
+		},
+		{
+			"camera_covered": true,
+			"collision_shape_count": 3.0,
+			"feet_screen": [
+				510.0,
+				590.0
+			],
+			"file": "res://previews/m16/after/10_aftermath.png",
+			"fixture_spawn": [
+				1100.0,
+				1260.0
+			],
+			"head_screen": [
+				516.4,
+				493.2
+			],
+			"id": "10_aftermath",
+			"lighting": {
+				"active_pools": [],
+				"ambient": [
+					0.400000005960464,
+					0.430000007152557,
+					0.449999988079071
+				],
+				"enabled": true,
+				"pool_nodes": 2.0,
+				"visible_light_cap_including_hero": 4.0,
+				"visible_light_count": 1.0,
+				"visible_pool_count": 0.0
+			},
+			"metrics": {
+				"above_platform_mean_luma": 0.0543891724770315,
+				"background_bright_fraction": 0.0416148037507261,
+				"background_edge_fraction": 0.108580200813211,
+				"gameplay_background_mean_luma": 0.0986715244748514,
+				"lantern_local_background_luma": 0.107459893031024,
+				"lantern_peak_luma": 0.963944315874577,
+				"lantern_peak_minus_local_background": 0.856484422843553,
+				"note": "Image values are advisory sRGB luma proxies; manual review remains required.",
+				"platform_lip_mean_luma": 0.237620846869166
+			},
+			"observed_feet": [
+				1100.0,
+				1260.0
+			],
+			"revision": 16.0,
+			"room": 9.0,
+			"surface_skin": {
+				"gates": 0.0,
+				"interactables": 0.0,
+				"lamps": 0.0,
+				"missing_assets": [],
+				"moving_surfaces": 0.0,
+				"platforms": 1.0,
+				"revision": 16.0,
+				"shelves": 0.0
+			}
+		}
+	],
+	"rendered": true,
+	"renderer": "llvmpipe (LLVM 19.1.7, 256 bits)",
+	"revisions": [
+		15,
+		16
+	],
+	"manual_review_document": "res://M16_VISUAL_REVIEW.md",
+	"manual_review": {
+		"accepted_after_fixtures": [
+			"01_entrance_floor",
+			"01_entrance_gallery",
+			"02_corridor_balcony",
+			"02_corridor_floor",
+			"03_lab_maintenance",
+			"03_lab_service_gallery",
+			"03_lab_walkway",
+			"04_archive_bottom",
+			"04_archive_lower",
+			"04_archive_middle",
+			"04_archive_upper",
+			"05_input",
+			"06_process",
+			"07_output",
+			"08_approach_bench",
+			"08_approach_encounter",
+			"09_tribunal_centre",
+			"09_tribunal_west",
+			"10_aftermath"
+		],
+		"pending_after_fixtures": [],
+		"reviewed_room_ids": [
+			0,
+			1,
+			2,
+			3,
+			4,
+			5,
+			6,
+			7,
+			8,
+			9
+		],
+		"remaining_visual_blockers": [],
+		"findings": [
+			"Quieter silhouettes and negative spaces across all ten rooms.",
+			"Original M13 palette, lantern and platform lips remain readable at all inspected positions, including lab floor1620 and all four archive levels.",
+			"No empty camera margins, missing skins, large halo washout or hero-obscuring foreground objects observed.",
+			"Initial OUTPUT core occlusion resolved by a decorative-prop move; final OUTPUT pair recaptured and reviewed."
+		],
+		"scope": "Manual inspection of all19 M16 rendered checkpoint fixtures; matched M15 baseline images and geometry comparisons retained. Full traversal is the independent functional QA."
+	},
+	"advisory_summary": {
+		"before_mean_background_luma": 0.14524647659331036,
+		"after_mean_background_luma": 0.10563365166960488,
+		"before_mean_edge_fraction": 0.4150821366040926,
+		"after_mean_edge_fraction": 0.11746871548824199,
+		"minimum_after_lantern_local_contrast": 0.763473122291127,
+		"maximum_visible_pools": 3.0,
+		"maximum_visible_lights_including_hero": 4.0,
+		"note": "Advisory image statistics, not an artistic quality score."
+	}
+}
