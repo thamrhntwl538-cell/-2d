@@ -1,0 +1,1 @@
+M06 generated from assets/warden_m04_matched_idle, which uses same original painting as approved M02 Run 03. Position-only local silhouette pose correction; not new standalone frame-by-frame artwork. Both idle outputs share 512x512 atlas, y=456 foot anchor. Run frames unchanged.

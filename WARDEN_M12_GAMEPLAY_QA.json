@@ -1,0 +1,26 @@
+{
+	"collider": [
+		30,
+		58
+	],
+	"failures": [],
+	"godot": "4.6.3-stable (official)",
+	"passed": true,
+	"physics_ticks": 303,
+	"renderer": "llvmpipe (LLVM 19.1.7, 256 bits)",
+	"scale": 0.4,
+	"states": [
+		"unarmed_idle",
+		"unarmed_land",
+		"unarmed_run",
+		"unarmed_jump",
+		"unarmed_fall",
+		"unarmed_stop",
+		"armed_ready",
+		"armed_run",
+		"armed_jump",
+		"armed_fall",
+		"armed_land",
+		"armed_stop"
+	]
+}

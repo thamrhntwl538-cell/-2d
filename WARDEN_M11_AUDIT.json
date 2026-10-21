@@ -1,0 +1,323 @@
+{
+  "master_proportions": {
+    "status": "APPROVED_MASTER_SPEC; OLD FRAME ART NOT YET REPAINTED",
+    "source_canvas_px": [
+      512,
+      512
+    ],
+    "canonical_standing_full_height_px": 285,
+    "godot_art_scale": 0.4,
+    "canonical_standing_world_height": 114,
+    "canvas_center_x_px": 256,
+    "ground_baseline_y_px": 456,
+    "target_lantern_outer_width_px": 64,
+    "target_lantern_outer_height_px": 86,
+    "target_shoulder_width_px": 88,
+    "target_shoulder_to_hip_px": 94,
+    "target_hip_to_sole_px": 106,
+    "target_shoulder_to_wrist_px": 86,
+    "tolerance_lantern_px": 2,
+    "tolerance_limbs_px": 3,
+    "notes": "Targets for authoring NEW art. Outer cloak silhouette, total alpha bounding box and tucked feet can change by pose. Do not force-resize each animation to identical silhouette height."
+  },
+  "frames": [
+    {
+      "animation": "idle",
+      "filename": "sheathed_idle.png",
+      "canvas": [
+        512,
+        512
+      ],
+      "alpha_bbox_xyxy": [
+        145,
+        171,
+        302,
+        456
+      ],
+      "visible_h": 285,
+      "visible_w": 157,
+      "baseline_gap_px": 1,
+      "sha256": "d04f05e95af1a5e21db3bf4b80fd3955d3d34db0a7dfab13a4332409204ee6ef"
+    },
+    {
+      "animation": "idle",
+      "filename": "unarmed_idle.png",
+      "canvas": [
+        512,
+        512
+      ],
+      "alpha_bbox_xyxy": [
+        145,
+        171,
+        302,
+        456
+      ],
+      "visible_h": 285,
+      "visible_w": 157,
+      "baseline_gap_px": 1,
+      "sha256": "d04f05e95af1a5e21db3bf4b80fd3955d3d34db0a7dfab13a4332409204ee6ef"
+    },
+    {
+      "animation": "run",
+      "filename": "run_00.png",
+      "canvas": [
+        512,
+        512
+      ],
+      "alpha_bbox_xyxy": [
+        76,
+        172,
+        324,
+        456
+      ],
+      "visible_h": 284,
+      "visible_w": 248,
+      "baseline_gap_px": 1,
+      "sha256": "c4379e5fdfc8f753c0404a10d0eacb914e0024de97d09efda2721cee1d931a84"
+    },
+    {
+      "animation": "run",
+      "filename": "run_01.png",
+      "canvas": [
+        512,
+        512
+      ],
+      "alpha_bbox_xyxy": [
+        138,
+        172,
+        310,
+        456
+      ],
+      "visible_h": 284,
+      "visible_w": 172,
+      "baseline_gap_px": 1,
+      "sha256": "56aae2a60ae53a88c8d2997835ee59f4fe507a050bcfc222fb44f0e20327d345"
+    },
+    {
+      "animation": "run",
+      "filename": "run_02.png",
+      "canvas": [
+        512,
+        512
+      ],
+      "alpha_bbox_xyxy": [
+        135,
+        173,
+        311,
+        455
+      ],
+      "visible_h": 282,
+      "visible_w": 176,
+      "baseline_gap_px": 2,
+      "sha256": "7c9872785bee3a3a494cebdbbc62ccff4c54cd64d7bd08976bab01df88d91fe3"
+    },
+    {
+      "animation": "run",
+      "filename": "run_03.png",
+      "canvas": [
+        512,
+        512
+      ],
+      "alpha_bbox_xyxy": [
+        124,
+        171,
+        309,
+        456
+      ],
+      "visible_h": 285,
+      "visible_w": 185,
+      "baseline_gap_px": 1,
+      "sha256": "39c42f5d0c035fb287206886a053b3ebb72a8179a079cf415802f9a5d8581b22"
+    },
+    {
+      "animation": "run",
+      "filename": "run_04.png",
+      "canvas": [
+        512,
+        512
+      ],
+      "alpha_bbox_xyxy": [
+        153,
+        172,
+        307,
+        456
+      ],
+      "visible_h": 284,
+      "visible_w": 154,
+      "baseline_gap_px": 1,
+      "sha256": "78897cd438c0229a1143093d3a6ef2445503bdbd5cbf91cdb223d091e3f187dd"
+    },
+    {
+      "animation": "run",
+      "filename": "run_05.png",
+      "canvas": [
+        512,
+        512
+      ],
+      "alpha_bbox_xyxy": [
+        131,
+        172,
+        310,
+        455
+      ],
+      "visible_h": 283,
+      "visible_w": 179,
+      "baseline_gap_px": 2,
+      "sha256": "36e661b14c91a7ee80d6ab1a28c2b566298a60ab0c8f4e0e3bf1b195a0ad8421"
+    },
+    {
+      "animation": "jump",
+      "filename": "jump_00.png",
+      "canvas": [
+        512,
+        512
+      ],
+      "alpha_bbox_xyxy": [
+        109,
+        235,
+        314,
+        442
+      ],
+      "visible_h": 207,
+      "visible_w": 205,
+      "baseline_gap_px": 15,
+      "sha256": "9dc2488fc5f816cd55e4a1610a0dcbcde8df9a45a16220d003538da6e5d2a8d5"
+    },
+    {
+      "animation": "jump",
+      "filename": "jump_01.png",
+      "canvas": [
+        512,
+        512
+      ],
+      "alpha_bbox_xyxy": [
+        156,
+        202,
+        311,
+        451
+      ],
+      "visible_h": 249,
+      "visible_w": 155,
+      "baseline_gap_px": 6,
+      "sha256": "038a53982e6ec064adf0e25be76fa00ed4dca2092f6349edcd876196e13c6992"
+    },
+    {
+      "animation": "jump",
+      "filename": "jump_02.png",
+      "canvas": [
+        512,
+        512
+      ],
+      "alpha_bbox_xyxy": [
+        166,
+        180,
+        323,
+        448
+      ],
+      "visible_h": 268,
+      "visible_w": 157,
+      "baseline_gap_px": 9,
+      "sha256": "57eb8565fc0b91399a7587de8f22da75349e575923e6876c79f01165578970f6"
+    },
+    {
+      "animation": "jump",
+      "filename": "jump_03.png",
+      "canvas": [
+        512,
+        512
+      ],
+      "alpha_bbox_xyxy": [
+        151,
+        170,
+        315,
+        428
+      ],
+      "visible_h": 258,
+      "visible_w": 164,
+      "baseline_gap_px": 29,
+      "sha256": "e551a323807d9836361493e7ec0556e9b09238ed255536e57284ec22be8e122c"
+    },
+    {
+      "animation": "jump",
+      "filename": "jump_04.png",
+      "canvas": [
+        512,
+        512
+      ],
+      "alpha_bbox_xyxy": [
+        157,
+        170,
+        318,
+        407
+      ],
+      "visible_h": 237,
+      "visible_w": 161,
+      "baseline_gap_px": 50,
+      "sha256": "d511dca57ff312ec5ca0a7893543751f05c9d617c42cbe660b571ab5d845c94b"
+    },
+    {
+      "animation": "jump",
+      "filename": "jump_05.png",
+      "canvas": [
+        512,
+        512
+      ],
+      "alpha_bbox_xyxy": [
+        145,
+        180,
+        320,
+        416
+      ],
+      "visible_h": 236,
+      "visible_w": 175,
+      "baseline_gap_px": 41,
+      "sha256": "6a33127d4e11e53c87cf3905e6d645449229b49930b5e9b2031c0748c3d23659"
+    },
+    {
+      "animation": "jump",
+      "filename": "jump_06.png",
+      "canvas": [
+        512,
+        512
+      ],
+      "alpha_bbox_xyxy": [
+        138,
+        194,
+        312,
+        424
+      ],
+      "visible_h": 230,
+      "visible_w": 174,
+      "baseline_gap_px": 33,
+      "sha256": "beeea958589ca54e4b02761a5fccd17376dc2926c5b862d67e20f01ce68f7b20"
+    },
+    {
+      "animation": "jump",
+      "filename": "jump_07.png",
+      "canvas": [
+        512,
+        512
+      ],
+      "alpha_bbox_xyxy": [
+        117,
+        263,
+        316,
+        450
+      ],
+      "visible_h": 187,
+      "visible_w": 199,
+      "baseline_gap_px": 7,
+      "sha256": "1f1ba590bec60afeababb408e857200879e7895aac3c9d1d8a6e4a4643fc4c43"
+    }
+  ],
+  "verification": {
+    "all_frames_512": true,
+    "run_visible_height_range_px": [
+      282,
+      285
+    ],
+    "jump_height_variation_is_pose_dependent": true,
+    "artwork_anatomy_match": "REQUIRES_ART_REVIEW_NOT_PROVEN_BY_CANVAS_SIZE",
+    "godot_runtime_tested": false
+  }
+}

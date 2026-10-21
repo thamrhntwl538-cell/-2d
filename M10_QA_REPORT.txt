@@ -1,0 +1,6 @@
+M10 static checks — Generated sprite counts: 8 (5 ascend, 2 descend, 1 land).
+All frames RGBA 512x512, transparent corners, intact silhouette components.
+M09 idle frames and M02 run frames binary identical to original source ZIP.
+Player script maps falling/landing/ascending to M10 artwork, not V4.
+Dedicated review scene: res://scenes/warden_jump_review.tscn.
+Godot 4.7 runtime not available in this environment; live import/playtesting NOT verified.

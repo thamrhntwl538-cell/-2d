@@ -1,0 +1,7 @@
+# Godot regenerates these local caches and editor state.
+.godot/
+.DS_Store
+Thumbs.db
+desktop.ini
+*.tmp
+*.bak

@@ -1,0 +1,37 @@
+{
+  "sha256_run_unchanged": {
+    "run_00.png": true,
+    "run_01.png": true,
+    "run_02.png": true,
+    "run_03.png": true,
+    "run_04.png": true,
+    "run_05.png": true
+  },
+  "idle_frames": {
+    "unarmed_idle.png": {
+      "canvas": [
+        512,
+        512
+      ],
+      "bbox": [
+        114,
+        170,
+        294,
+        456
+      ]
+    },
+    "sheathed_idle.png": {
+      "canvas": [
+        512,
+        512
+      ],
+      "bbox": [
+        114,
+        170,
+        294,
+        456
+      ]
+    }
+  },
+  "godot_executable_available": false
+}

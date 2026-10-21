@@ -1,0 +1,15 @@
+{
+  "milestone": "M02 - Idle & Run",
+  "frames_validated": 14,
+  "frame_dimensions": "512x512",
+  "run_fps": 13,
+  "run_frames": 6,
+  "idle_preserved": true,
+  "sheath_logic_preserved": true,
+  "engine_executed": false,
+  "notes": [
+    "Run now uses M02 assets",
+    "Godot 4.7 binary unavailable in current execution environment",
+    "Attack and Jump remain V4 art temporarily"
+  ]
+}

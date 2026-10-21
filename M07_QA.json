@@ -1,0 +1,18 @@
+{
+  "source_image": "image(20261020-211336).png",
+  "approved_stand_canvas": [
+    512,
+    512
+  ],
+  "foot_baseline": 456,
+  "art_scale": 0.4,
+  "run_sha256": {
+    "run_00.png": "c4379e5fdfc8f753c0404a10d0eacb914e0024de97d09efda2721cee1d931a84",
+    "run_01.png": "56aae2a60ae53a88c8d2997835ee59f4fe507a050bcfc222fb44f0e20327d345",
+    "run_02.png": "7c9872785bee3a3a494cebdbbc62ccff4c54cd64d7bd08976bab01df88d91fe3",
+    "run_03.png": "39c42f5d0c035fb287206886a053b3ebb72a8179a079cf415802f9a5d8581b22",
+    "run_04.png": "78897cd438c0229a1143093d3a6ef2445503bdbd5cbf91cdb223d091e3f187dd",
+    "run_05.png": "36e661b14c91a7ee80d6ab1a28c2b566298a60ab0c8f4e0e3bf1b195a0ad8421"
+  },
+  "godot_executable_available": false
+}

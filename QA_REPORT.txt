@@ -1,0 +1,10 @@
+LAST LECTURE — THE LANTERN WARDEN V4
+Static/asset tests
+- 20 animations, 137 exported 512x512 RGBA frames
+- No frame crosses 512x512 bounds
+- All manifest animation frame counts match player and lab scripts
+- Has blade/no blade are separate assets
+- Sword swing contact on frame >=3 (23 fps), one rendered slash trail (no double-arc)
+- No full-character dash echoes spawned
+- Includes source generation script and SVG keyframe source files
+- Actual Godot 4.7 runtime test NOT performed: Godot binary is unavailable in this environment

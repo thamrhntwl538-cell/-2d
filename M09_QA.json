@@ -1,0 +1,31 @@
+{
+  "source_reference": "user-approved standing image",
+  "alpha_matting": "whole figure + closed center torso mask; independently checked on light/dark backgrounds",
+  "frame": {
+    "size": [
+      512,
+      512
+    ],
+    "top_y": 171,
+    "bottom_y": 456,
+    "alpha_bbox": [
+      145,
+      171,
+      157,
+      285
+    ]
+  },
+  "run_sha256": [
+    "c4379e5fdfc8f753c0404a10d0eacb914e0024de97d09efda2721cee1d931a84",
+    "56aae2a60ae53a88c8d2997835ee59f4fe507a050bcfc222fb44f0e20327d345",
+    "7c9872785bee3a3a494cebdbbc62ccff4c54cd64d7bd08976bab01df88d91fe3",
+    "39c42f5d0c035fb287206886a053b3ebb72a8179a079cf415802f9a5d8581b22",
+    "78897cd438c0229a1143093d3a6ef2445503bdbd5cbf91cdb223d091e3f187dd",
+    "36e661b14c91a7ee80d6ab1a28c2b566298a60ab0c8f4e0e3bf1b195a0ad8421"
+  ],
+  "run_originals_unchanged": true,
+  "body_center_min_alpha": 255,
+  "standing_states_same_figure": true,
+  "stop_no_composites": true,
+  "godot_runtime_tested": false
+}

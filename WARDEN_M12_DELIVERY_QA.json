@@ -1,0 +1,43 @@
+{
+  "passed": true,
+  "assets": {
+    "frames": 83,
+    "standing_height_px": 285,
+    "rig_segment_error_px": {
+      "torso": 1.1837881757514879e-05,
+      "shoulders": 1.9173232686853225e-05,
+      "arm": 1.836178314817971e-05,
+      "leg": 2.009152018445093e-05
+    }
+  },
+  "godot_gameplay": {
+    "collider": [
+      30,
+      58
+    ],
+    "failures": [],
+    "godot": "4.6.3-stable (official)",
+    "passed": true,
+    "physics_ticks": 303,
+    "renderer": "llvmpipe (LLVM 19.1.7, 256 bits)",
+    "scale": 0.4,
+    "states": [
+      "unarmed_idle",
+      "unarmed_land",
+      "unarmed_run",
+      "unarmed_jump",
+      "unarmed_fall",
+      "unarmed_stop",
+      "armed_ready",
+      "armed_run",
+      "armed_jump",
+      "armed_fall",
+      "armed_land",
+      "armed_stop"
+    ]
+  },
+  "legacy_combat_files_unchanged": 139,
+  "slash_art_updated": false,
+  "run_cycle_seconds": 0.46153846153846156,
+  "rendering": "Godot OpenGL Compatibility, llvmpipe; screenshots and preview are actual engine renders"
+}

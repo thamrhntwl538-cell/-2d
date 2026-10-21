@@ -1,0 +1,102 @@
+{
+  "unarmed_idle": {
+    "frames": 8,
+    "fps": 9,
+    "loop": true
+  },
+  "unarmed_run": {
+    "frames": 10,
+    "fps": 12,
+    "loop": true
+  },
+  "unarmed_jump": {
+    "frames": 5,
+    "fps": 15,
+    "loop": false
+  },
+  "unarmed_fall": {
+    "frames": 5,
+    "fps": 15,
+    "loop": false
+  },
+  "unarmed_land": {
+    "frames": 5,
+    "fps": 15,
+    "loop": false
+  },
+  "armed_idle": {
+    "frames": 8,
+    "fps": 9,
+    "loop": true
+  },
+  "armed_ready": {
+    "frames": 8,
+    "fps": 9,
+    "loop": true
+  },
+  "armed_run": {
+    "frames": 10,
+    "fps": 12,
+    "loop": true
+  },
+  "armed_jump": {
+    "frames": 5,
+    "fps": 15,
+    "loop": false
+  },
+  "armed_fall": {
+    "frames": 5,
+    "fps": 15,
+    "loop": false
+  },
+  "armed_land": {
+    "frames": 5,
+    "fps": 15,
+    "loop": false
+  },
+  "armed_dash": {
+    "frames": 6,
+    "fps": 18,
+    "loop": false
+  },
+  "armed_crouch": {
+    "frames": 5,
+    "fps": 15,
+    "loop": false
+  },
+  "slash": {
+    "frames": 8,
+    "fps": 23,
+    "loop": false
+  },
+  "slash_follow": {
+    "frames": 6,
+    "fps": 20,
+    "loop": false
+  },
+  "slash_up": {
+    "frames": 8,
+    "fps": 23,
+    "loop": false
+  },
+  "slash_down": {
+    "frames": 8,
+    "fps": 23,
+    "loop": false
+  },
+  "parry": {
+    "frames": 7,
+    "fps": 18,
+    "loop": false
+  },
+  "recoil": {
+    "frames": 6,
+    "fps": 15,
+    "loop": false
+  },
+  "death": {
+    "frames": 9,
+    "fps": 11,
+    "loop": false
+  }
+}
