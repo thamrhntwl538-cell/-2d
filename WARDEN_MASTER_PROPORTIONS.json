@@ -1,5 +1,5 @@
 {
-  "status": "M12_IMPLEMENTED_SHARED_ART_RIG_AND_GODOT_BAKED_LOCOMOTION",
+  "status": "M13_HEAD_ARM_AND_RUN_SUPPORT_REFINEMENT",
   "source_canvas_px": [
     512,
     512
@@ -17,5 +17,6 @@
   "target_shoulder_to_wrist_px": 86,
   "tolerance_lantern_px": 2,
   "tolerance_limbs_px": 3,
-  "notes": "M12 locomotion is rendered from one shared textured rig. Head 64x86; shoulders 88; torso 94; arm 44+42; leg 54+40+12 (ankle articulation keeps planted soles flat). Same 512 canvas and gameplay scale 0.40 for every pose. Airborne silhouette height varies naturally. Combat art remains the prior milestone."
+  "notes": "M13 reuses the unchanged M12 atlas and all rigid part dimensions; the head base advances 16 source pixels, run arms follow a compact continuous arc, and support-foot timing cancels steady player travel. M12 sources and combat art are retained.",
+  "head_forward_offset_px": 16
 }

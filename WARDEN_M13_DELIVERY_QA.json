@@ -1,0 +1,71 @@
+{
+  "passed": true,
+  "milestone": "M13",
+  "scope": "head attachment, compact arm motion and run support; original art and palette retained",
+  "source_atlas_unchanged": true,
+  "approved_atlas_sha256": "3c4bc4a2b285245dd8da763e02f629daef6b49d9024961750c63dbebfca858e6",
+  "legacy_combat_unchanged": true,
+  "m12_assets_retained": true,
+  "reference_recordings_bundled": false,
+  "m12_max_run_arm_step_degrees": 44.75002912038466,
+  "m13_max_run_arm_step_degrees": 1.3052744118645643,
+  "asset_validation": {
+    "passed": true,
+    "frame_count": 107,
+    "source_canvas": [
+      512,
+      512
+    ],
+    "idle_visible_height_px": 285,
+    "lantern_local_size_px": [
+      64,
+      86
+    ],
+    "head_forward_offset_px": 16,
+    "max_rig_segment_error_px": {
+      "torso": 1.2624304801533981e-05,
+      "shoulders": 1.9173232686853225e-05,
+      "arm": 2.0430185443842674e-05,
+      "leg": 2.009152018445093e-05,
+      "head_lead": 1.802501286451985e-05
+    },
+    "run_cycle_seconds": 0.46153846153846156,
+    "run_frames": 48,
+    "tested_support_pairs": 20,
+    "max_support_slip_world_units_per_exported_step": 8.451021770827793e-06,
+    "max_run_arm_angle_step_degrees": 1.3052744118645643,
+    "max_run_wrist_step_source_px": 1.5139181948792109,
+    "atlas_sha256": "3c4bc4a2b285245dd8da763e02f629daef6b49d9024961750c63dbebfca858e6",
+    "errors": [],
+    "note": "Support displacement checks steady 300-unit/s running. Displayed frames still have normal raster sampling."
+  },
+  "gameplay_validation": {
+    "collider": [
+      30,
+      58
+    ],
+    "failures": [],
+    "godot": "4.6.3-stable (official)",
+    "passed": true,
+    "physics_ticks": 303,
+    "renderer": "llvmpipe (LLVM 19.1.7, 256 bits)",
+    "run_cycle_seconds": 0.461538461538462,
+    "run_fps": 104.0,
+    "run_frames": 48,
+    "scale": 0.4,
+    "states": [
+      "unarmed_idle",
+      "unarmed_land",
+      "unarmed_run",
+      "unarmed_jump",
+      "unarmed_fall",
+      "unarmed_stop",
+      "armed_ready",
+      "armed_run",
+      "armed_jump",
+      "armed_fall",
+      "armed_land",
+      "armed_stop"
+    ]
+  }
+}

@@ -12,18 +12,20 @@ const LEGACY_COMBAT = {
 	"slash_down": [8, 23], "parry": [7, 18], "recoil": [6, 15], "death": [9, 11]
 }
 
-static func build() -> SpriteFrames:
+static func build(art_directory: String = "res://assets/warden_m12", run_subsamples: int = 4) -> SpriteFrames:
 	var library := SpriteFrames.new()
 	library.remove_animation("default")
+	var movement_settings: Dictionary = MOVEMENT.duplicate(true)
+	movement_settings["run"] = [6 * run_subsamples, 13.0 * float(run_subsamples), true]
 	for prefix in ["unarmed_", "armed_"]:
-		for movement in MOVEMENT:
+		for movement in movement_settings:
 			var name_value: String = prefix + movement
 			var source: String = "idle" if movement == "ready" else ("land" if movement == "crouch" else movement)
 			library.add_animation(name_value)
-			library.set_animation_speed(name_value, MOVEMENT[movement][1])
-			library.set_animation_loop(name_value, MOVEMENT[movement][2])
-			for i in range(MOVEMENT[movement][0]):
-				var path: String = "res://assets/warden_m12/%s_%02d.png" % [source, i]
+			library.set_animation_speed(name_value, movement_settings[movement][1])
+			library.set_animation_loop(name_value, movement_settings[movement][2])
+			for i in range(movement_settings[movement][0]):
+				var path: String = "%s/%s_%02d.png" % [art_directory, source, i]
 				var texture: Texture2D = load(path)
 				assert(texture != null, "M12 missing movement texture: " + path)
 				library.add_frame(name_value, texture)

@@ -1,7 +1,7 @@
 extends CharacterBody2D
 class_name LastLecturePlayer
 
-# LAST LECTURE — M12 unified locomotion model, Godot 4.x actor.
+# LAST LECTURE — M13 head, arm and planted-step refinement, Godot 4.x actor.
 # The player is *not* holding a sword until the Debug Blade is collected.
 # Single-model, clean-lined layered illustration; every frame uses the same feet baseline.
 # Keyframe animation is built from editable authored vector layers, not traced/game-ripped sprites.
@@ -14,7 +14,7 @@ const DASH_SPEED: float = 900.0
 const ART_SCALE: float = 0.40
 const ART_FOOT_Y: float = 456.0
 
-const MotionLibrary = preload("res://scripts/warden_motion_m12.gd")
+const MotionLibrary = preload("res://scripts/warden_motion_m13.gd")
 
 var world_ref: Node = null
 var facing: int = 1
@@ -54,9 +54,9 @@ var sword_trail_core: Line2D
 var art_anchors: Dictionary = {}
 
 func _ready() -> void:
-	var rig_data: Dictionary = JSON.parse_string(FileAccess.get_file_as_string("res://WARDEN_M12_RIG_AUDIT.json"))
+	var rig_data: Dictionary = JSON.parse_string(FileAccess.get_file_as_string("res://WARDEN_M13_RIG_AUDIT.json"))
 	for record in rig_data.get("frames", []):
-		art_anchors[str(record.file).get_file().get_basename()] = record.joints.torso[0]
+		art_anchors[str(record.file).get_file().get_basename()] = record.joints.head_axis[1]
 	collision_layer = 2
 	collision_mask = 1
 	var collider := CollisionShape2D.new()
@@ -68,7 +68,7 @@ func _ready() -> void:
 	add_child(collider)
 
 	lantern_sprite = AnimatedSprite2D.new()
-	lantern_sprite.name = "LanternWarden_M12_Unified"
+	lantern_sprite.name = "LanternWarden_M13_Refined"
 	lantern_sprite.centered = true
 	lantern_sprite.position = Vector2(0.0, (256.0 - ART_FOOT_Y) * ART_SCALE)
 	lantern_sprite.scale = Vector2.ONE * ART_SCALE
@@ -113,6 +113,7 @@ func _ready() -> void:
 	lantern_sprite.play("unarmed_idle")
 	current_pose = "unarmed_idle"
 	was_grounded = is_on_floor()
+	_update_lantern_anchor()
 
 func _physics_process(delta: float) -> void:
 	if world_ref == null:
@@ -246,7 +247,7 @@ func _update_lantern_anchor() -> void:
 	var key: String = texture.resource_path.get_file().get_basename()
 	if art_anchors.has(key):
 		var point: Array = art_anchors[key]
-		var local_point := Vector2(float(point[0]) - 256.0, float(point[1]) - 42.0 - ART_FOOT_Y) * ART_SCALE
+		var local_point := Vector2(float(point[0]) - 256.0, float(point[1]) - ART_FOOT_Y) * ART_SCALE
 		local_point.x *= float(facing)
 		lantern_light.position = local_point
 
@@ -326,11 +327,14 @@ func _update_animation() -> void:
 	elif stop_timer > 0.0:
 		pose = "armed_stop" if has_blade else "unarmed_stop"
 	lantern_sprite.flip_h = facing < 0
-	_update_lantern_anchor()
+	# Keep support-foot timing tied to distance while accelerating into the run.
+	lantern_sprite.speed_scale = clampf(absf(velocity.x) / SPEED, 0.10, 1.0) if pose.ends_with("_run") and dash_time <= 0.0 else 1.0
 	blade_light.visible = has_blade and (attack_time > 0.0 or parry_time > 0.0)
 	blade_light.position.x = float(facing) * 35.0
 	if pose != current_pose:
 		current_pose = pose
 		lantern_sprite.play(pose)
+	# Refresh after play(): a new pose may reuse frame index zero without a frame_changed signal.
+	_update_lantern_anchor()
 	# Keep texture scale and floor pivot fixed across all frames; only the alpha changes.
 	lantern_sprite.modulate = Color(1,1,1,0.58) if invulnerable > 0.0 and int(animation_age * 16.0) % 2 == 0 else Color.WHITE
