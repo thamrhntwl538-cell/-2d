@@ -2,13 +2,13 @@
 
 المشروع الكامل للعبة Godot، مع الرسومات والمصادر الفنية والمراحل السابقة وأدوات الاختبار. توحّدت نسب البطل وألوانه وتفاصيله بين الوقوف والجري والقفز، مع رسم أنعم والحفاظ على إيقاع الجري الأصلي.
 
-**[تحميل المشروع الكامل ZIP](https://github.com/thamrhntwl538-cell/-2d/releases/download/m12/LastLecture_Godot_Warden_M12_Unified.zip)** · **[صفحة إصدار M12](https://github.com/thamrhntwl538-cell/-2d/releases/tag/m12)**
+**[تحميل المشروع الكامل ZIP](https://github.com/thamrhntwl538-cell/-2d/archive/refs/heads/main.zip)** · **[صفحة إصدار M12](https://github.com/thamrhntwl538-cell/-2d/releases/tag/m12)**
 
 ![مقارنة الوقوف والجري والقفز داخل Godot](WARDEN_M12_GODOT_REVIEW.png)
 
 ## التشغيل
 
-1. نزّل ملف ZIP من إصدار M12 وفكّ الضغط.
+1. نزّل ملف ZIP من الرابط أعلاه وفكّ الضغط، أو اختر Code → Download ZIP من صفحة المستودع.
 2. افتح `project.godot` في **Godot 4.6 أو أحدث**.
 3. اضغط **F5** لتشغيل اللعبة. الحركة A/D، والقفز Space.
 4. للمقارنة: افتح `scenes/warden_m12_review.tscn` واضغط **F6**.
