@@ -1,0 +1,72 @@
+[gd_scene load_steps=4 format=3]
+
+[ext_resource type="PackedScene" path="res://scenes/environments/academic_platform.tscn" id="1"]
+[ext_resource type="Texture2D" path="res://assets/environments/silent_entrance/academic_kit.png" id="2"]
+
+[sub_resource type="RectangleShape2D" id="Boundary"]
+size = Vector2(30, 1440)
+
+[node name="Corridor" type="Node2D"]
+texture_filter = 4
+metadata/room_id = 1
+
+[node name="Architecture" type="Node2D" parent="."]
+
+[node name="Ground" parent="Architecture" instance=ExtResource("1")]
+position = Vector2(0, 1260)
+width = 2800.0
+depth = 100.0
+support_height = 0.0
+one_way = false
+texture = ExtResource("2")
+source_rect = Rect2(34, 204, 634, 173)
+
+[node name="NoticeboardStep" parent="Architecture" instance=ExtResource("1")]
+position = Vector2(530, 1140)
+width = 230.0
+depth = 63.0
+support_height = 57.0
+one_way = false
+texture = ExtResource("2")
+source_rect = Rect2(34, 204, 634, 173)
+
+[node name="AssignmentBalconyStep" parent="Architecture" instance=ExtResource("1")]
+position = Vector2(810, 1020)
+width = 250.0
+depth = 63.0
+support_height = 0.0
+one_way = true
+texture = ExtResource("2")
+source_rect = Rect2(34, 204, 634, 173)
+
+[node name="ArchiveShortcutBalcony" parent="Architecture" instance=ExtResource("1")]
+position = Vector2(1120, 900)
+width = 520.0
+depth = 70.0
+support_height = 0.0
+one_way = true
+texture = ExtResource("2")
+source_rect = Rect2(34, 204, 634, 173)
+
+[node name="HighNoticeLedge" parent="Architecture" instance=ExtResource("1")]
+position = Vector2(1700, 780)
+width = 240.0
+depth = 60.0
+support_height = 0.0
+one_way = true
+texture = ExtResource("2")
+source_rect = Rect2(34, 204, 634, 173)
+
+[node name="WestBoundary" type="StaticBody2D" parent="Architecture"]
+collision_layer = 1
+collision_mask = 0
+[node name="Collision" type="CollisionShape2D" parent="Architecture/WestBoundary"]
+position = Vector2(0, 720.0)
+shape = SubResource("Boundary")
+
+[node name="EastBoundary" type="StaticBody2D" parent="Architecture"]
+collision_layer = 1
+collision_mask = 0
+[node name="Collision" type="CollisionShape2D" parent="Architecture/EastBoundary"]
+position = Vector2(2800, 720.0)
+shape = SubResource("Boundary")
