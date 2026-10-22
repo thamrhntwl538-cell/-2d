@@ -1,0 +1,438 @@
+{
+	"checks": 170,
+	"engine": "4.7.2-stable (official)",
+	"failures": [],
+	"opening_route_complete": true,
+	"opening_route_jumps": 5,
+	"physics_ticks": 3392,
+	"samples": [
+		{
+			"actual_input": true,
+			"kind": "continuous_route_jump",
+			"landing": [
+				1989.34191894531,
+				1139.97106933594
+			],
+			"passed": true,
+			"phase": "continuous opening route by actual Input",
+			"physics_tick": 457,
+			"start": [
+				1933.40295410156,
+				1259.92529296875
+			],
+			"target": [
+				1992.0,
+				1140.0
+			]
+		},
+		{
+			"actual_input": true,
+			"kind": "continuous_route_jump",
+			"landing": [
+				2283.59252929688,
+				1019.97143554688
+			],
+			"passed": true,
+			"phase": "continuous opening route by actual Input",
+			"physics_tick": 537,
+			"start": [
+				2179.34204101562,
+				1139.92529296875
+			],
+			"target": [
+				2282.0,
+				1020.0
+			]
+		},
+		{
+			"active": true,
+			"attack_time": 0.0,
+			"enemy_hp": 3,
+			"enemy_position": [
+				1258.20007324219,
+				1259.92529296875
+			],
+			"hero_facing": 1,
+			"hero_position": [
+				180.0,
+				1260.0
+			],
+			"kind": "fight_trace",
+			"phase": "continuous opening route by actual Input",
+			"physics_tick": 631,
+			"pose": "armed_stop",
+			"strike_serial": 0
+		},
+		{
+			"active": true,
+			"attack_time": 0.0,
+			"enemy_hp": 3,
+			"enemy_position": [
+				1204.19860839844,
+				1259.92529296875
+			],
+			"hero_facing": 1,
+			"hero_position": [
+				465.458343505859,
+				1259.92529296875
+			],
+			"kind": "fight_trace",
+			"phase": "continuous opening route by actual Input",
+			"physics_tick": 691,
+			"pose": "armed_run",
+			"strike_serial": 0
+		},
+		{
+			"active": true,
+			"attack_time": 0.0,
+			"enemy_hp": 3,
+			"enemy_position": [
+				1150.19714355469,
+				1259.92529296875
+			],
+			"hero_facing": 1,
+			"hero_position": [
+				765.458374023438,
+				1259.92529296875
+			],
+			"kind": "fight_trace",
+			"phase": "continuous opening route by actual Input",
+			"physics_tick": 751,
+			"pose": "armed_run",
+			"strike_serial": 0
+		},
+		{
+			"active": true,
+			"attack_time": 0.0,
+			"enemy_hp": 3,
+			"enemy_position": [
+				1126.39685058594,
+				1259.92529296875
+			],
+			"hero_facing": 1,
+			"hero_position": [
+				1030.00012207031,
+				1259.92529296875
+			],
+			"kind": "fight_trace",
+			"phase": "continuous opening route by actual Input",
+			"physics_tick": 811,
+			"pose": "armed_stop",
+			"strike_serial": 0
+		},
+		{
+			"actual_input": true,
+			"enemy_frozen": false,
+			"frames": 229,
+			"health_after": 6,
+			"health_before": 6,
+			"kind": "continuous_native_fight",
+			"phase": "continuous opening route by actual Input",
+			"physics_tick": 860,
+			"states_seen": [
+				"crawl",
+				"windup",
+				"lunge",
+				"recover"
+			],
+			"teleported": false,
+			"won": true
+		},
+		{
+			"actual_input": true,
+			"kind": "continuous_route_jump",
+			"landing": [
+				1529.34191894531,
+				1139.97131347656
+			],
+			"passed": true,
+			"phase": "continuous opening route by actual Input",
+			"physics_tick": 1032,
+			"start": [
+				1477.81958007812,
+				1259.92529296875
+			],
+			"target": [
+				1532.0,
+				1140.0
+			]
+		},
+		{
+			"actual_input": true,
+			"kind": "continuous_route_jump",
+			"landing": [
+				1823.59204101562,
+				1019.97143554688
+			],
+			"passed": true,
+			"phase": "continuous opening route by actual Input",
+			"physics_tick": 1112,
+			"start": [
+				1719.34191894531,
+				1139.92529296875
+			],
+			"target": [
+				1822.0,
+				1020.0
+			]
+		},
+		{
+			"actual_input": true,
+			"kind": "continuous_route_jump",
+			"landing": [
+				2114.30053710938,
+				899.971435546875
+			],
+			"passed": true,
+			"phase": "continuous opening route by actual Input",
+			"physics_tick": 1191,
+			"start": [
+				2008.59216308594,
+				1019.92523193359
+			],
+			"target": [
+				2112.0,
+				900.0
+			]
+		},
+		{
+			"hero_position": [
+				1200.0,
+				1260.0
+			],
+			"kind": "configured_fixture",
+			"phase": "shared energy and focus via Input",
+			"physics_tick": 1484,
+			"room": 1
+		},
+		{
+			"hero_position": [
+				1250.0,
+				1260.0
+			],
+			"kind": "configured_fixture",
+			"phase": "jump slash and dash input overlap",
+			"physics_tick": 2083,
+			"room": 1
+		},
+		{
+			"airborne": true,
+			"attack_remaining": 0.188333333333333,
+			"kind": "actual_jump_attack",
+			"phase": "jump slash and dash input overlap",
+			"physics_tick": 2092,
+			"pose": "slash"
+		},
+		{
+			"hero_position": [
+				800.0,
+				1260.0
+			],
+			"kind": "configured_fixture",
+			"phase": "directional sword hits and reward uniqueness",
+			"physics_tick": 2547,
+			"room": 2
+		},
+		{
+			"enemy_position": [
+				1150.0,
+				1260.0
+			],
+			"kind": "configured_stationary_target",
+			"phase": "directional sword hits and reward uniqueness",
+			"physics_tick": 2547,
+			"scope": "target placement only; sword and collision run normally"
+		},
+		{
+			"enemy_position": [
+				1150.0,
+				1260.0
+			],
+			"kind": "configured_stationary_target",
+			"phase": "directional sword hits and reward uniqueness",
+			"physics_tick": 2600,
+			"scope": "target placement only; sword and collision run normally"
+		},
+		{
+			"enemy_position": [
+				1150.0,
+				1135.0
+			],
+			"kind": "configured_stationary_target",
+			"phase": "directional sword hits and reward uniqueness",
+			"physics_tick": 2622,
+			"scope": "target placement only; sword and collision run normally"
+		},
+		{
+			"enemy_position": [
+				1150.0,
+				1260.0
+			],
+			"kind": "configured_stationary_target",
+			"phase": "directional sword hits and reward uniqueness",
+			"physics_tick": 2647,
+			"scope": "target placement only; sword and collision run normally"
+		},
+		{
+			"hero_position": [
+				800.0,
+				1260.0
+			],
+			"kind": "configured_fixture",
+			"phase": "active jaw contact and sword clash",
+			"physics_tick": 2689,
+			"room": 2
+		},
+		{
+			"enemy_position": [
+				1150.0,
+				1260.0
+			],
+			"kind": "configured_stationary_target",
+			"phase": "active jaw contact and sword clash",
+			"physics_tick": 2689,
+			"scope": "target placement only; sword and collision run normally"
+		},
+		{
+			"enemy_position": [
+				1150.0,
+				1260.0
+			],
+			"kind": "configured_stationary_target",
+			"phase": "active jaw contact and sword clash",
+			"physics_tick": 2715,
+			"scope": "target placement only; sword and collision run normally"
+		},
+		{
+			"hero_position": [
+				800.0,
+				1260.0
+			],
+			"kind": "configured_fixture",
+			"phase": "native larva telegraph and pursuit",
+			"physics_tick": 2742,
+			"room": 2
+		},
+		{
+			"direction": 1,
+			"kind": "native_enemy_cycle",
+			"lunged": true,
+			"phase": "native larva telegraph and pursuit",
+			"physics_tick": 2845,
+			"recovered": true,
+			"warning_ticks": 28
+		},
+		{
+			"hero_position": [
+				1200.0,
+				1260.0
+			],
+			"kind": "configured_fixture",
+			"phase": "bench-only native loadout and pickups",
+			"physics_tick": 2915,
+			"room": 1
+		},
+		{
+			"hero_position": [
+				790.0,
+				1260.0
+			],
+			"kind": "configured_fixture",
+			"phase": "bench-only native loadout and pickups",
+			"physics_tick": 2953,
+			"room": 3
+		},
+		{
+			"hero_position": [
+				790.0,
+				1260.0
+			],
+			"kind": "configured_fixture",
+			"phase": "bench-only native loadout and pickups",
+			"physics_tick": 2962,
+			"room": 3
+		},
+		{
+			"hero_position": [
+				800.0,
+				1260.0
+			],
+			"kind": "configured_fixture",
+			"phase": "bench-only native loadout and pickups",
+			"physics_tick": 2974,
+			"room": 2
+		},
+		{
+			"hero_position": [
+				800.0,
+				1260.0
+			],
+			"kind": "configured_fixture",
+			"phase": "real defeat and idempotent rewards",
+			"physics_tick": 2979,
+			"room": 2
+		},
+		{
+			"enemy_position": [
+				1150.0,
+				1260.0
+			],
+			"kind": "configured_stationary_target",
+			"phase": "real defeat and idempotent rewards",
+			"physics_tick": 2979,
+			"scope": "target placement only; sword and collision run normally"
+		},
+		{
+			"hero_position": [
+				330.0,
+				1260.0
+			],
+			"kind": "configured_fixture",
+			"phase": "death drops and permanent progress",
+			"physics_tick": 3011,
+			"room": 1
+		},
+		{
+			"hero_position": [
+				800.0,
+				1260.0
+			],
+			"kind": "configured_fixture",
+			"phase": "death drops and permanent progress",
+			"physics_tick": 3023,
+			"room": 2
+		},
+		{
+			"hero_position": [
+				1000.0,
+				1260.0
+			],
+			"kind": "configured_fixture",
+			"phase": "death drops and permanent progress",
+			"physics_tick": 3188,
+			"room": 1
+		},
+		{
+			"hero_position": [
+				1250.0,
+				1260.0
+			],
+			"kind": "configured_fixture",
+			"phase": "native controller events",
+			"physics_tick": 3246,
+			"room": 1
+		},
+		{
+			"hero_position": [
+				1250.0,
+				1260.0
+			],
+			"kind": "configured_fixture",
+			"phase": "persisted per-device controls",
+			"physics_tick": 3343,
+			"room": 1
+		}
+	],
+	"save_restored": true,
+	"scope": "continuous input-driven opening route from area01 through real larva victory and technique pickup to area03, plus separately declared isolated combat fixtures; no claim of a continuous15-area combat traversal"
+}

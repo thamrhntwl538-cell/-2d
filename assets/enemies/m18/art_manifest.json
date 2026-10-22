@@ -1,0 +1,75 @@
+{
+  "asset": "glitch_larva.png",
+  "enemy_id": "glitch_larva",
+  "generation_date": "2026-10-22",
+  "generation_tool": "image_gen.imagegen",
+  "purpose": "Original right-facing production cutout for the user-approved first enemy; drawing only, animation and collisions are native Godot.",
+  "reference": {
+    "filename": "WhatsApp Image 2026-10-21 at 6.36.09 PM.jpeg",
+    "sha256": "30ddcb400547059252ccc8803ac7857c0b0411e968e641c5ad5f08255a21f7d7",
+    "origin": "User-uploaded approved Bug Crawler — Proposal 2 / Glitch Larva concept sheet",
+    "use": "Creature identity reference; not an extracted game sprite"
+  },
+  "asset_sha256": "5d6ddbf871f26eba137294c0dea47e7dda207cd82e8cbdab2b1c8145f8616c52",
+  "canvas": {
+    "width": 1774,
+    "height": 887,
+    "mode": "RGBA",
+    "alpha_extrema": [
+      0,
+      255
+    ],
+    "alpha_bbox_any": [
+      0,
+      71,
+      1759,
+      855
+    ],
+    "alpha_bbox_threshold_32": [
+      44,
+      225,
+      1757,
+      790
+    ]
+  },
+  "rendering": {
+    "facing": "right",
+    "suggested_region_px": [
+      40,
+      215,
+      1720,
+      585
+    ],
+    "suggested_visible_width_world_px": 140,
+    "suggested_height_world_px": 48,
+    "note": "The source is unedited. Use a native AtlasTexture or draw_texture_rect_region to fit the visible body to the gameplay feet origin without the transparent top margin. Preserve aspect ratio where possible."
+  },
+  "source_passes": [
+    {
+      "path": "source/glitch_larva_concept_pass.png",
+      "sha256": "f6ee1d1c446faf64fb1b40a877a74cd420ec96b83ca3bda9975f0e5bcde0f741",
+      "purpose": "Original detailed concept-to-sprite pass retained unmodified"
+    },
+    {
+      "path": "glitch_larva.png",
+      "sha256": "5d6ddbf871f26eba137294c0dea47e7dda207cd82e8cbdab2b1c8145f8616c52",
+      "purpose": "Second pass: smooth broad game-readable shapes, retained unmodified from generator"
+    }
+  ],
+  "identity": {
+    "body": "Low wide crawling segmented charcoal-black ink larva",
+    "paper": "Warm torn ivory academic paper scraps with restrained abstract marks",
+    "core": "Cyan-blue flame inside front hood, dark oval heart",
+    "legs": "Short hooked dark legs with negative spaces",
+    "effects": "Small close cyan code flecks; native death scatter and windup effects are implemented separately"
+  },
+  "licensing_note": "Original generated art based on user-supplied concept; no existing videogame sprites, animations, sounds, or backgrounds extracted.",
+  "prompt_summary": [
+    "Pass1: Single original right-facing side-view low ink larva cutout, cyan core, torn ivory academic paper, restrained code flecks, transparent RGBA, no poster/text/background.",
+    "Pass2: Preserve identity while simplifying grain, cracks, chains and tiny details into broad smooth dark contours, 4 main segments, 4 paper strips and clean small legs, for readability at about140px wide."
+  ],
+  "original_generation_paths": [
+    "/workspace/generated_images/exec-e75f6402-6395-4bf8-930a-795fc79acd31.png",
+    "/workspace/generated_images/exec-c58239dc-f8e0-40fb-8bcc-7fc4f4fb03c0.png"
+  ]
+}

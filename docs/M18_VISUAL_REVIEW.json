@@ -1,0 +1,57 @@
+{
+	"captures": [
+		{
+			"configured_fixture": true,
+			"height": 720,
+			"note": "Configured encounter composition; native actor, original art and live six-heart/shared-energy HUD.",
+			"path": "res://previews/m18/01_first_larva.jpg",
+			"room": 2,
+			"width": 1280
+		},
+		{
+			"configured_fixture": true,
+			"height": 720,
+			"note": "Configured target; actual attack Input produces the native sword contact pose and hit response.",
+			"path": "res://previews/m18/02_sword_contact.jpg",
+			"room": 2,
+			"width": 1280
+		},
+		{
+			"configured_fixture": true,
+			"height": 720,
+			"note": "Configured airborne start; real downward attack Input, native damage acceptance and pogo response.",
+			"path": "res://previews/m18/03_downward_pogo.jpg",
+			"room": 2,
+			"width": 1280
+		},
+		{
+			"configured_fixture": true,
+			"height": 720,
+			"note": "Configured owned inventory, then ordinary bench interaction and native loadout UI; Arabic.",
+			"path": "res://previews/m18/05_fitils_ar.jpg",
+			"room": 1,
+			"width": 1280
+		},
+		{
+			"configured_fixture": true,
+			"height": 720,
+			"note": "Same native loadout panel and state after actual language action; English.",
+			"path": "res://previews/m18/06_fitils_en.jpg",
+			"room": 1,
+			"width": 1280
+		},
+		{
+			"configured_fixture": true,
+			"height": 720,
+			"note": "Native controls/remapping panel; keyboard and gamepad both bind to the same gameplay actions.",
+			"path": "res://previews/m18/07_controls.jpg",
+			"room": 1,
+			"width": 1280
+		}
+	],
+	"engine": "4.7.2-stable (official)",
+	"failures": [],
+	"rendered": true,
+	"save_restored": true,
+	"scope": "configured visual fixtures only; input-driven mechanics are separately checked by test_m18_combat.gd"
+}
