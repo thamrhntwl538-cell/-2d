@@ -1,7 +1,7 @@
 {
   "schema_version": "world1-folding-library-15-1.0",
   "title_ar": "العالم الأول — المكتبة المتحوّلة",
-  "status": "design_proposal_not_godot_implementation",
+  "status": "approved_design_not_godot_implementation",
   "selected_visual_direction": "D — The Folding Library",
   "scope_ar": "خريطة البيئة والمسارات والألغاز ومواقع مواجهات مستقبلية؛ لا تتضمن تنفيذ اللعبة أو تصاميم نهائية للشخصيات.",
   "coordinate_note": "Map rectangles and polylines use schematic units on a 2500×1900 canvas, not world-pixel geometry.",
@@ -1570,5 +1570,14 @@
     "future_main_progression_depends_on_missable_world1_secret": false,
     "all_required_world1_information_on_main_route": true,
     "optional_secrets_can_remain_uncollected_on_departure": true
+  },
+  "approval": {
+    "approved_by": "user",
+    "date": "2026-10-22",
+    "user_statement_ar": "ممتاز اعتمدها",
+    "approved_package_commit": "02c2b2a21ce0eecc820522febff12e6c088ae171",
+    "record": "APPROVAL_AR.md",
+    "implementation_status": "not_implemented",
+    "physical_dimensions_subject_to_godot_validation": true
   }
 }
