@@ -1,0 +1,502 @@
+{
+  "canvas": [
+    2500,
+    1900
+  ],
+  "coordinate_units": "schematic_not_world_pixels",
+  "rooms": {
+    "1": {
+      "x": 90,
+      "y": 1450,
+      "width": 340,
+      "height": 180,
+      "name_ar": "بهو الصفحة الأولى"
+    },
+    "2": {
+      "x": 510,
+      "y": 1450,
+      "width": 340,
+      "height": 180,
+      "name_ar": "ممر الواجبات"
+    },
+    "3": {
+      "x": 930,
+      "y": 1450,
+      "width": 340,
+      "height": 180,
+      "name_ar": "مختبر المخطوطات"
+    },
+    "4": {
+      "x": 1350,
+      "y": 1450,
+      "width": 340,
+      "height": 180,
+      "name_ar": "ركن الشعلة السوداء"
+    },
+    "5": {
+      "x": 1740,
+      "y": 1210,
+      "width": 250,
+      "height": 180,
+      "name_ar": "الهوامش المحذوفة"
+    },
+    "6": {
+      "x": 1350,
+      "y": 930,
+      "width": 340,
+      "height": 340,
+      "name_ar": "الأرشيف المطوي"
+    },
+    "7": {
+      "x": 930,
+      "y": 1010,
+      "width": 340,
+      "height": 180,
+      "name_ar": "غرفة الإدخال"
+    },
+    "8": {
+      "x": 510,
+      "y": 1010,
+      "width": 340,
+      "height": 180,
+      "name_ar": "قاعة الترتيب"
+    },
+    "9": {
+      "x": 90,
+      "y": 1010,
+      "width": 340,
+      "height": 180,
+      "name_ar": "جسر الإخراج"
+    },
+    "10": {
+      "x": 90,
+      "y": 560,
+      "width": 340,
+      "height": 220,
+      "name_ar": "قاعة الأثقال"
+    },
+    "11": {
+      "x": 510,
+      "y": 560,
+      "width": 340,
+      "height": 220,
+      "name_ar": "المدرجات الصامتة"
+    },
+    "12": {
+      "x": 930,
+      "y": 560,
+      "width": 340,
+      "height": 220,
+      "name_ar": "مشغل التجليد"
+    },
+    "13": {
+      "x": 1350,
+      "y": 560,
+      "width": 340,
+      "height": 220,
+      "name_ar": "رواق المصحّح"
+    },
+    "14": {
+      "x": 1350,
+      "y": 230,
+      "width": 340,
+      "height": 180,
+      "name_ar": "قاعة المحاكمة"
+    },
+    "15": {
+      "x": 930,
+      "y": 230,
+      "width": 340,
+      "height": 180,
+      "name_ar": "الصفحة التالية"
+    }
+  },
+  "main_route": [
+    1,
+    2,
+    3,
+    4,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15
+  ],
+  "optional_branch": [
+    4,
+    5,
+    6
+  ],
+  "world_exit": {
+    "from_room": 15,
+    "to_world": 2,
+    "requires_explicit_confirmation": true,
+    "return_to_world1": false
+  },
+  "connections": [
+    {
+      "from": 1,
+      "to": 2,
+      "type": "main",
+      "polyline": [
+        [
+          430,
+          1540
+        ],
+        [
+          510,
+          1540
+        ]
+      ]
+    },
+    {
+      "from": 2,
+      "to": 3,
+      "type": "main",
+      "polyline": [
+        [
+          850,
+          1540
+        ],
+        [
+          930,
+          1540
+        ]
+      ]
+    },
+    {
+      "from": 3,
+      "to": 4,
+      "type": "main",
+      "polyline": [
+        [
+          1270,
+          1540
+        ],
+        [
+          1350,
+          1540
+        ]
+      ]
+    },
+    {
+      "from": 4,
+      "to": 6,
+      "type": "main",
+      "polyline": [
+        [
+          1520,
+          1450
+        ],
+        [
+          1520,
+          1270
+        ]
+      ]
+    },
+    {
+      "from": 6,
+      "to": 7,
+      "type": "main",
+      "polyline": [
+        [
+          1350,
+          1058
+        ],
+        [
+          1310,
+          1058
+        ],
+        [
+          1310,
+          1100
+        ],
+        [
+          1270,
+          1100
+        ]
+      ]
+    },
+    {
+      "from": 7,
+      "to": 8,
+      "type": "main",
+      "polyline": [
+        [
+          930,
+          1100
+        ],
+        [
+          850,
+          1100
+        ]
+      ]
+    },
+    {
+      "from": 8,
+      "to": 9,
+      "type": "main",
+      "polyline": [
+        [
+          510,
+          1100
+        ],
+        [
+          430,
+          1100
+        ]
+      ]
+    },
+    {
+      "from": 9,
+      "to": 10,
+      "type": "main",
+      "polyline": [
+        [
+          260,
+          1010
+        ],
+        [
+          260,
+          780
+        ]
+      ]
+    },
+    {
+      "from": 10,
+      "to": 11,
+      "type": "main",
+      "polyline": [
+        [
+          430,
+          670
+        ],
+        [
+          510,
+          670
+        ]
+      ]
+    },
+    {
+      "from": 11,
+      "to": 12,
+      "type": "main",
+      "polyline": [
+        [
+          850,
+          670
+        ],
+        [
+          930,
+          670
+        ]
+      ]
+    },
+    {
+      "from": 12,
+      "to": 13,
+      "type": "main",
+      "polyline": [
+        [
+          1270,
+          670
+        ],
+        [
+          1350,
+          670
+        ]
+      ]
+    },
+    {
+      "from": 13,
+      "to": 14,
+      "type": "main",
+      "polyline": [
+        [
+          1520,
+          560
+        ],
+        [
+          1520,
+          410
+        ]
+      ]
+    },
+    {
+      "from": 14,
+      "to": 15,
+      "type": "main",
+      "polyline": [
+        [
+          1350,
+          320
+        ],
+        [
+          1270,
+          320
+        ]
+      ]
+    },
+    {
+      "from": 4,
+      "to": 5,
+      "type": "optional",
+      "bidirectional": true,
+      "polyline": [
+        [
+          1690,
+          1540
+        ],
+        [
+          1865,
+          1540
+        ],
+        [
+          1865,
+          1390
+        ]
+      ]
+    },
+    {
+      "from": 5,
+      "to": 6,
+      "type": "optional",
+      "bidirectional": true,
+      "polyline": [
+        [
+          1865,
+          1210
+        ],
+        [
+          1865,
+          1100
+        ],
+        [
+          1690,
+          1100
+        ]
+      ]
+    },
+    {
+      "id": "S1",
+      "from": 6,
+      "to": 2,
+      "type": "shortcut",
+      "bidirectional": true,
+      "requires": "archive_latch",
+      "polyline": [
+        [
+          1350,
+          1166
+        ],
+        [
+          1310,
+          1166
+        ],
+        [
+          1310,
+          1360
+        ],
+        [
+          680,
+          1360
+        ],
+        [
+          680,
+          1450
+        ]
+      ],
+      "from_anchor": "area"
+    },
+    {
+      "id": "S2",
+      "from": 9,
+      "to": 3,
+      "type": "shortcut",
+      "bidirectional": true,
+      "requires": "output_complete",
+      "polyline": [
+        [
+          90,
+          1100
+        ],
+        [
+          50,
+          1100
+        ],
+        [
+          50,
+          1700
+        ],
+        [
+          1100,
+          1700
+        ],
+        [
+          1100,
+          1630
+        ]
+      ],
+      "from_anchor": "area"
+    },
+    {
+      "id": "S3",
+      "from": 12,
+      "to": 6,
+      "type": "shortcut",
+      "bidirectional": true,
+      "requires": "workshop_latch",
+      "polyline": [
+        [
+          1100,
+          780
+        ],
+        [
+          1100,
+          860
+        ],
+        [
+          1520,
+          860
+        ],
+        [
+          1520,
+          930
+        ]
+      ],
+      "from_anchor": "area"
+    },
+    {
+      "id": "S4",
+      "from": 13,
+      "to": 10,
+      "type": "shortcut",
+      "bidirectional": true,
+      "requires": "guard_approach_latch",
+      "polyline": [
+        [
+          1390,
+          560
+        ],
+        [
+          1390,
+          475
+        ],
+        [
+          260,
+          475
+        ],
+        [
+          260,
+          560
+        ]
+      ],
+      "from_anchor": "pre_guard_entrance"
+    }
+  ]
+}
