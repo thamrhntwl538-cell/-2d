@@ -1,0 +1,226 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2500" height="1900" viewBox="0 0 2500 1900">
+<defs>
+<marker id="main" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10Z" fill="#e8ddbf"/></marker>
+<marker id="return" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10Z" fill="#6dbbdf"/></marker>
+<marker id="optional" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10Z" fill="#ba99d6"/></marker>
+</defs>
+<rect x="0" y="0" width="2500" height="1900" rx="0" fill="#0b1420" stroke="#0b1420" stroke-width="0"/>
+<rect x="25" y="25" width="2450" height="1850" rx="0" fill="#0b1420" stroke="#42505a" stroke-width="1"/>
+<text x="1250" y="88" font-family="DejaVu Sans,Arial,sans-serif" font-size="48" fill="#e8ddbf" text-anchor="middle" direction="rtl" font-weight="bold">العالم الأول — المكتبة المتحوّلة</text>
+<text x="1250" y="138" font-family="DejaVu Sans,Arial,sans-serif" font-size="27" fill="#adbec9" text-anchor="middle" direction="rtl" font-weight="normal">15 منطقة · المسارات والألغاز والاستراحات · اتجاه D</text>
+<text x="1250" y="177" font-family="DejaVu Sans,Arial,sans-serif" font-size="20" fill="#8ea4b2" text-anchor="middle" direction="rtl" font-weight="normal">خريطة وصلات مقترحة؛ أحجام البطاقات لا تمثل المقاسات داخل اللعبة</text>
+<path d="M430 1540 L510 1540" fill="none" stroke="#e8ddbf" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#main)"/>
+<path d="M850 1540 L930 1540" fill="none" stroke="#e8ddbf" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#main)"/>
+<path d="M1270 1540 L1350 1540" fill="none" stroke="#e8ddbf" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#main)"/>
+<path d="M1520 1450 L1520 1270" fill="none" stroke="#e8ddbf" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#main)"/>
+<path d="M1350 1058 L1310 1058 L1310 1100 L1270 1100" fill="none" stroke="#e8ddbf" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#main)"/>
+<path d="M930 1100 L850 1100" fill="none" stroke="#e8ddbf" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#main)"/>
+<path d="M510 1100 L430 1100" fill="none" stroke="#e8ddbf" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#main)"/>
+<path d="M260 1010 L260 780" fill="none" stroke="#e8ddbf" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#main)"/>
+<path d="M430 670 L510 670" fill="none" stroke="#e8ddbf" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#main)"/>
+<path d="M850 670 L930 670" fill="none" stroke="#e8ddbf" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#main)"/>
+<path d="M1270 670 L1350 670" fill="none" stroke="#e8ddbf" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#main)"/>
+<path d="M1520 560 L1520 410" fill="none" stroke="#e8ddbf" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#main)"/>
+<path d="M1350 320 L1270 320" fill="none" stroke="#e8ddbf" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#main)"/>
+<path d="M1690 1540 L1865 1540 L1865 1390" fill="none" stroke="#ba99d6" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="5 8" marker-end="url(#optional)" marker-start="url(#optional)"/>
+<path d="M1865 1210 L1865 1100 L1690 1100" fill="none" stroke="#ba99d6" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="5 8" marker-end="url(#optional)" marker-start="url(#optional)"/>
+<path d="M1350 1166 L1310 1166 L1310 1360 L680 1360 L680 1450" fill="none" stroke="#6dbbdf" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="12 9" marker-end="url(#return)" marker-start="url(#return)"/>
+<path d="M90 1100 L50 1100 L50 1700 L1100 1700 L1100 1630" fill="none" stroke="#6dbbdf" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="12 9" marker-end="url(#return)" marker-start="url(#return)"/>
+<path d="M1100 780 L1100 860 L1520 860 L1520 930" fill="none" stroke="#6dbbdf" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="12 9" marker-end="url(#return)" marker-start="url(#return)"/>
+<path d="M1390 560 L1390 475 L260 475 L260 560" fill="none" stroke="#6dbbdf" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="12 9" marker-end="url(#return)" marker-start="url(#return)"/>
+<path d="M930 320 L800 320" fill="none" stroke="#e8ddbf" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#main)"/>
+<rect x="470.0" y="304" width="360" height="34" rx="7" fill="#0b1420" stroke="#d2b36e" stroke-width="1.5"/>
+<text x="650" y="327" font-family="DejaVu Sans,Arial,sans-serif" font-size="16" fill="#d2b36e" text-anchor="middle" direction="rtl" font-weight="normal">عبور نهائي إلى العالم الثاني</text>
+<rect x="145.0" y="869" width="230" height="34" rx="7" fill="#0b1420" stroke="#d2b36e" stroke-width="1.5"/>
+<text x="260" y="892" font-family="DejaVu Sans,Arial,sans-serif" font-size="16" fill="#d2b36e" text-anchor="middle" direction="rtl" font-weight="normal">بعد ثبات الصفحة</text>
+<rect x="1483.0" y="455" width="170" height="34" rx="7" fill="#0b1420" stroke="#d2b36e" stroke-width="1.5"/>
+<text x="1568" y="478" font-family="DejaVu Sans,Arial,sans-serif" font-size="16" fill="#d2b36e" text-anchor="middle" direction="rtl" font-weight="normal">بعد الختم</text>
+<rect x="90" y="1450" width="340" height="180" rx="12" fill="#172635" stroke="#d2b36e" stroke-width="2"/>
+<path d="M400 1450 V1480 H430Z" fill="#d2b36e" opacity=".42"/>
+<text x="118" y="1484" font-family="DejaVu Sans,Arial,sans-serif" font-size="22" fill="#d2b36e" text-anchor="middle" direction="ltr" font-weight="bold">01</text>
+<text x="260.0" y="1520" font-family="DejaVu Sans,Arial,sans-serif" font-size="25" fill="#e8ddbf" text-anchor="middle" direction="rtl" font-weight="bold">بهو الصفحة الأولى</text>
+<text x="260.0" y="1553" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#adbec9" text-anchor="middle" direction="rtl" font-weight="normal">سلاح وتدريب آمن</text>
+<text x="260.0" y="1579" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#adbec9" text-anchor="middle" direction="rtl" font-weight="normal">الدخول إلى الجناح المنسي</text>
+<rect x="169" y="1596" width="12" height="12" rx="1" fill="#d2b36e" stroke="#d2b36e" stroke-width="1"/>
+<text x="192" y="1608" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#d2b36e" text-anchor="end" direction="rtl" font-weight="normal">استراحة</text>
+<rect x="510" y="1450" width="340" height="180" rx="12" fill="#172635" stroke="#526474" stroke-width="2"/>
+<path d="M820 1450 V1480 H850Z" fill="#526474" opacity=".42"/>
+<text x="538" y="1484" font-family="DejaVu Sans,Arial,sans-serif" font-size="22" fill="#d2b36e" text-anchor="middle" direction="ltr" font-weight="bold">02</text>
+<text x="680.0" y="1520" font-family="DejaVu Sans,Arial,sans-serif" font-size="25" fill="#e8ddbf" text-anchor="middle" direction="rtl" font-weight="bold">ممر الواجبات</text>
+<text x="680.0" y="1553" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#adbec9" text-anchor="middle" direction="rtl" font-weight="normal">قتال أول على أرض واضحة</text>
+<text x="680.0" y="1579" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#adbec9" text-anchor="middle" direction="rtl" font-weight="normal">قفزات قصيرة ومسار تعلّم</text>
+<path d="M820 1593 L830 1603 L820 1613 L810 1603Z" fill="#86c4c5"/>
+<rect x="930" y="1450" width="340" height="180" rx="12" fill="#172635" stroke="#526474" stroke-width="2"/>
+<path d="M1240 1450 V1480 H1270Z" fill="#526474" opacity=".42"/>
+<text x="958" y="1484" font-family="DejaVu Sans,Arial,sans-serif" font-size="22" fill="#d2b36e" text-anchor="middle" direction="ltr" font-weight="bold">03</text>
+<text x="1100.0" y="1520" font-family="DejaVu Sans,Arial,sans-serif" font-size="25" fill="#e8ddbf" text-anchor="middle" direction="rtl" font-weight="bold">مختبر المخطوطات</text>
+<text x="1100.0" y="1553" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#adbec9" text-anchor="middle" direction="rtl" font-weight="normal">P1 · شبكة الحبر</text>
+<text x="1100.0" y="1579" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#adbec9" text-anchor="middle" direction="rtl" font-weight="normal">جهاز طي وممشى يتكوّن</text>
+<rect x="1350" y="1450" width="340" height="180" rx="12" fill="#172635" stroke="#526474" stroke-width="2"/>
+<path d="M1660 1450 V1480 H1690Z" fill="#526474" opacity=".42"/>
+<text x="1378" y="1484" font-family="DejaVu Sans,Arial,sans-serif" font-size="22" fill="#d2b36e" text-anchor="middle" direction="ltr" font-weight="bold">04</text>
+<text x="1520.0" y="1520" font-family="DejaVu Sans,Arial,sans-serif" font-size="25" fill="#e8ddbf" text-anchor="middle" direction="rtl" font-weight="bold">ركن الشعلة السوداء</text>
+<text x="1520.0" y="1553" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#adbec9" text-anchor="middle" direction="rtl" font-weight="normal">لقاء قصصي آمن</text>
+<text x="1520.0" y="1579" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#adbec9" text-anchor="middle" direction="rtl" font-weight="normal">النداء من زاوية الممر</text>
+<circle cx="1415" cy="1601" r="9" fill="#ba99d6"/>
+<text x="1434" y="1607" font-family="DejaVu Sans,Arial,sans-serif" font-size="16" fill="#ba99d6" text-anchor="end" direction="rtl" font-weight="normal">حوار آمن</text>
+<rect x="1740" y="1210" width="250" height="180" rx="12" fill="#172635" stroke="#ba99d6" stroke-width="2"/>
+<path d="M1960 1210 V1240 H1990Z" fill="#ba99d6" opacity=".42"/>
+<text x="1768" y="1244" font-family="DejaVu Sans,Arial,sans-serif" font-size="22" fill="#d2b36e" text-anchor="middle" direction="ltr" font-weight="bold">05</text>
+<text x="1865.0" y="1280" font-family="DejaVu Sans,Arial,sans-serif" font-size="22" fill="#e8ddbf" text-anchor="middle" direction="rtl" font-weight="bold">الهوامش المحذوفة</text>
+<text x="1865.0" y="1313" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#adbec9" text-anchor="middle" direction="rtl" font-weight="normal">فرع اختياري أصعب</text>
+<text x="1865.0" y="1339" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#adbec9" text-anchor="middle" direction="rtl" font-weight="normal">شهادة وأسماء ممحوة</text>
+<path d="M1960 1353 L1970 1363 L1960 1373 L1950 1363Z" fill="#86c4c5"/>
+<rect x="1800.0" y="1352" width="130" height="34" rx="7" fill="#0b1420" stroke="#ba99d6" stroke-width="1.5"/>
+<text x="1865.0" y="1375" font-family="DejaVu Sans,Arial,sans-serif" font-size="16" fill="#ba99d6" text-anchor="middle" direction="rtl" font-weight="normal">اختياري</text>
+<rect x="1350" y="930" width="340" height="340" rx="12" fill="#172635" stroke="#d2b36e" stroke-width="2"/>
+<path d="M1660 930 V960 H1690Z" fill="#d2b36e" opacity=".42"/>
+<text x="1378" y="964" font-family="DejaVu Sans,Arial,sans-serif" font-size="22" fill="#d2b36e" text-anchor="middle" direction="ltr" font-weight="bold">06</text>
+<text x="1520.0" y="1000" font-family="DejaVu Sans,Arial,sans-serif" font-size="25" fill="#e8ddbf" text-anchor="middle" direction="rtl" font-weight="bold">الأرشيف المطوي</text>
+<rect x="930" y="1010" width="340" height="180" rx="12" fill="#172635" stroke="#526474" stroke-width="2"/>
+<path d="M1240 1010 V1040 H1270Z" fill="#526474" opacity=".42"/>
+<text x="958" y="1044" font-family="DejaVu Sans,Arial,sans-serif" font-size="22" fill="#d2b36e" text-anchor="middle" direction="ltr" font-weight="bold">07</text>
+<text x="1100.0" y="1080" font-family="DejaVu Sans,Arial,sans-serif" font-size="25" fill="#e8ddbf" text-anchor="middle" direction="rtl" font-weight="bold">غرفة الإدخال</text>
+<text x="1100.0" y="1113" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#adbec9" text-anchor="middle" direction="rtl" font-weight="normal">INPUT · جمع الكتب كلها</text>
+<text x="1100.0" y="1139" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#adbec9" text-anchor="middle" direction="rtl" font-weight="normal">△   □   ○</text>
+<rect x="1015.0" y="1152" width="170" height="34" rx="7" fill="#0b1420" stroke="#d2b36e" stroke-width="1.5"/>
+<text x="1100.0" y="1175" font-family="DejaVu Sans,Arial,sans-serif" font-size="16" fill="#d2b36e" text-anchor="middle" direction="rtl" font-weight="normal">P2 · جمع</text>
+<rect x="510" y="1010" width="340" height="180" rx="12" fill="#172635" stroke="#526474" stroke-width="2"/>
+<path d="M820 1010 V1040 H850Z" fill="#526474" opacity=".42"/>
+<text x="538" y="1044" font-family="DejaVu Sans,Arial,sans-serif" font-size="22" fill="#d2b36e" text-anchor="middle" direction="ltr" font-weight="bold">08</text>
+<text x="680.0" y="1080" font-family="DejaVu Sans,Arial,sans-serif" font-size="25" fill="#e8ddbf" text-anchor="middle" direction="rtl" font-weight="bold">قاعة الترتيب</text>
+<text x="680.0" y="1113" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#adbec9" text-anchor="middle" direction="rtl" font-weight="normal">PROCESS · طاولة واحدة</text>
+<text x="680.0" y="1139" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#adbec9" text-anchor="middle" direction="rtl" font-weight="normal">دليل قريب ومحاولة بلا ضرر</text>
+<rect x="595.0" y="1152" width="170" height="34" rx="7" fill="#0b1420" stroke="#d2b36e" stroke-width="1.5"/>
+<text x="680.0" y="1175" font-family="DejaVu Sans,Arial,sans-serif" font-size="16" fill="#d2b36e" text-anchor="middle" direction="rtl" font-weight="normal">P2 · ترتيب</text>
+<rect x="90" y="1010" width="340" height="180" rx="12" fill="#172635" stroke="#526474" stroke-width="2"/>
+<path d="M400 1010 V1040 H430Z" fill="#526474" opacity=".42"/>
+<text x="118" y="1044" font-family="DejaVu Sans,Arial,sans-serif" font-size="22" fill="#d2b36e" text-anchor="middle" direction="ltr" font-weight="bold">09</text>
+<text x="260.0" y="1080" font-family="DejaVu Sans,Arial,sans-serif" font-size="25" fill="#e8ddbf" text-anchor="middle" direction="rtl" font-weight="bold">جسر الإخراج</text>
+<text x="260.0" y="1113" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#adbec9" text-anchor="middle" direction="rtl" font-weight="normal">OUTPUT · تفعيل الصفحة</text>
+<text x="260.0" y="1139" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#adbec9" text-anchor="middle" direction="rtl" font-weight="normal">درج دائم بعد الاستقرار</text>
+<path d="M400 1153 L410 1163 L400 1173 L390 1163Z" fill="#86c4c5"/>
+<rect x="175.0" y="1152" width="170" height="34" rx="7" fill="#0b1420" stroke="#d2b36e" stroke-width="1.5"/>
+<text x="260.0" y="1175" font-family="DejaVu Sans,Arial,sans-serif" font-size="16" fill="#d2b36e" text-anchor="middle" direction="rtl" font-weight="normal">P2 · إخراج</text>
+<rect x="90" y="560" width="340" height="220" rx="12" fill="#172635" stroke="#d2b36e" stroke-width="2"/>
+<path d="M400 560 V590 H430Z" fill="#d2b36e" opacity=".42"/>
+<text x="118" y="594" font-family="DejaVu Sans,Arial,sans-serif" font-size="22" fill="#d2b36e" text-anchor="middle" direction="ltr" font-weight="bold">10</text>
+<text x="260.0" y="630" font-family="DejaVu Sans,Arial,sans-serif" font-size="25" fill="#e8ddbf" text-anchor="middle" direction="rtl" font-weight="bold">قاعة الأثقال</text>
+<text x="260.0" y="663" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#adbec9" text-anchor="middle" direction="rtl" font-weight="normal">P3 · موازنة الجسر</text>
+<text x="260.0" y="689" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#adbec9" text-anchor="middle" direction="rtl" font-weight="normal">أثقال ونتيجة مرئية</text>
+<rect x="169" y="746" width="12" height="12" rx="1" fill="#d2b36e" stroke="#d2b36e" stroke-width="1"/>
+<text x="192" y="758" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#d2b36e" text-anchor="end" direction="rtl" font-weight="normal">استراحة</text>
+<rect x="510" y="560" width="340" height="220" rx="12" fill="#172635" stroke="#526474" stroke-width="2"/>
+<path d="M820 560 V590 H850Z" fill="#526474" opacity=".42"/>
+<text x="538" y="594" font-family="DejaVu Sans,Arial,sans-serif" font-size="22" fill="#d2b36e" text-anchor="middle" direction="ltr" font-weight="bold">11</text>
+<text x="680.0" y="630" font-family="DejaVu Sans,Arial,sans-serif" font-size="25" fill="#e8ddbf" text-anchor="middle" direction="rtl" font-weight="bold">المدرجات الصامتة</text>
+<text x="680.0" y="663" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#adbec9" text-anchor="middle" direction="rtl" font-weight="normal">مسار علوي وآخر سفلي</text>
+<text x="680.0" y="689" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#adbec9" text-anchor="middle" direction="rtl" font-weight="normal">مواجهات وتوقيت عبور</text>
+<path d="M820 743 L830 753 L820 763 L810 753Z" fill="#86c4c5"/>
+<rect x="930" y="560" width="340" height="220" rx="12" fill="#172635" stroke="#526474" stroke-width="2"/>
+<path d="M1240 560 V590 H1270Z" fill="#526474" opacity=".42"/>
+<text x="958" y="594" font-family="DejaVu Sans,Arial,sans-serif" font-size="22" fill="#d2b36e" text-anchor="middle" direction="ltr" font-weight="bold">12</text>
+<text x="1100.0" y="630" font-family="DejaVu Sans,Arial,sans-serif" font-size="25" fill="#e8ddbf" text-anchor="middle" direction="rtl" font-weight="bold">مشغل التجليد</text>
+<text x="1100.0" y="663" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#adbec9" text-anchor="middle" direction="rtl" font-weight="normal">مكابس بطيئة وجيوب انتظار</text>
+<text x="1100.0" y="689" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#adbec9" text-anchor="middle" direction="rtl" font-weight="normal">اختصار ولغز طي اختياري</text>
+<path d="M1240 743 L1250 753 L1240 763 L1230 753Z" fill="#86c4c5"/>
+<rect x="1350" y="560" width="340" height="220" rx="12" fill="#172635" stroke="#d2b36e" stroke-width="2"/>
+<path d="M1660 560 V590 H1690Z" fill="#d2b36e" opacity=".42"/>
+<text x="1378" y="594" font-family="DejaVu Sans,Arial,sans-serif" font-size="22" fill="#d2b36e" text-anchor="middle" direction="ltr" font-weight="bold">13</text>
+<text x="1520.0" y="630" font-family="DejaVu Sans,Arial,sans-serif" font-size="25" fill="#e8ddbf" text-anchor="middle" direction="rtl" font-weight="bold">رواق المصحّح</text>
+<rect x="1350" y="230" width="340" height="180" rx="12" fill="#172635" stroke="#d2b36e" stroke-width="2"/>
+<path d="M1660 230 V260 H1690Z" fill="#d2b36e" opacity=".42"/>
+<text x="1378" y="264" font-family="DejaVu Sans,Arial,sans-serif" font-size="22" fill="#d2b36e" text-anchor="middle" direction="ltr" font-weight="bold">14</text>
+<text x="1520.0" y="300" font-family="DejaVu Sans,Arial,sans-serif" font-size="25" fill="#e8ddbf" text-anchor="middle" direction="rtl" font-weight="bold">قاعة المحاكمة</text>
+<text x="1520.0" y="333" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#adbec9" text-anchor="middle" direction="rtl" font-weight="normal">Dr. Compiler</text>
+<text x="1520.0" y="359" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#adbec9" text-anchor="middle" direction="rtl" font-weight="normal">الزعيم · ساحة ثابتة</text>
+<rect x="930" y="230" width="340" height="180" rx="12" fill="#172635" stroke="#526474" stroke-width="2"/>
+<path d="M1240 230 V260 H1270Z" fill="#526474" opacity=".42"/>
+<text x="958" y="264" font-family="DejaVu Sans,Arial,sans-serif" font-size="22" fill="#d2b36e" text-anchor="middle" direction="ltr" font-weight="bold">15</text>
+<text x="1100.0" y="300" font-family="DejaVu Sans,Arial,sans-serif" font-size="25" fill="#e8ddbf" text-anchor="middle" direction="rtl" font-weight="bold">الصفحة التالية</text>
+<text x="1100.0" y="333" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#adbec9" text-anchor="middle" direction="rtl" font-weight="normal">المغادرة بعد اختيار صريح</text>
+<text x="1100.0" y="359" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#adbec9" text-anchor="middle" direction="rtl" font-weight="normal">يغلق العالم الأول بعد العبور</text>
+<path d="M1370 1058 L1490 1058" fill="none" stroke="#e8ddbf" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M1540 1058 L1670 1058" fill="none" stroke="#e8ddbf" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="1650" y="1046" font-family="DejaVu Sans,Arial,sans-serif" font-size="14" fill="#adbec9" text-anchor="start" direction="rtl" font-weight="normal">الطابق الرابع</text>
+<path d="M1370 1112 L1490 1112" fill="none" stroke="#e8ddbf" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M1540 1112 L1670 1112" fill="none" stroke="#e8ddbf" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="1650" y="1100" font-family="DejaVu Sans,Arial,sans-serif" font-size="14" fill="#adbec9" text-anchor="start" direction="rtl" font-weight="normal">الطابق الثالث</text>
+<path d="M1370 1166 L1490 1166" fill="none" stroke="#e8ddbf" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M1540 1166 L1670 1166" fill="none" stroke="#e8ddbf" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="1650" y="1154" font-family="DejaVu Sans,Arial,sans-serif" font-size="14" fill="#adbec9" text-anchor="start" direction="rtl" font-weight="normal">الطابق الثاني</text>
+<path d="M1370 1220 L1490 1220" fill="none" stroke="#e8ddbf" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M1540 1220 L1670 1220" fill="none" stroke="#e8ddbf" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="1650" y="1208" font-family="DejaVu Sans,Arial,sans-serif" font-size="14" fill="#adbec9" text-anchor="start" direction="rtl" font-weight="normal">الطابق الأول</text>
+<path d="M1515 1235 L1515 1042" fill="none" stroke="#e8ddbf" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#main)"/>
+<path d="M1485 1200 L1515 1200 L1515 1175 L1540 1175 L1540 1150 L1515 1150 L1515 1125 L1485 1125 L1485 1100 L1515 1100 L1515 1075" fill="none" stroke="#e8ddbf" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="1389" y="1140" width="12" height="12" rx="1" fill="#d2b36e" stroke="#d2b36e" stroke-width="1"/>
+<text x="1415" y="1154" font-family="DejaVu Sans,Arial,sans-serif" font-size="14" fill="#d2b36e" text-anchor="end" direction="rtl" font-weight="normal">مقعد</text>
+<path d="M1394 1084 L1404 1094 L1394 1104 L1384 1094Z" fill="#86c4c5"/>
+<text x="1520" y="1250" font-family="DejaVu Sans,Arial,sans-serif" font-size="14" fill="#adbec9" text-anchor="middle" direction="rtl" font-weight="normal">صعود وعودة بالجري والقفز العادي</text>
+<text x="1520" y="652" font-family="DejaVu Sans,Arial,sans-serif" font-size="16" fill="#6dbbdf" text-anchor="middle" direction="rtl" font-weight="normal">مدخل S4 قبل الحارس فقط</text>
+<rect x="1368" y="696" width="91" height="48" rx="5" fill="#0b1420" stroke="#cf8c71" stroke-width="1.5"/>
+<text x="1413.5" y="726" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#cf8c71" text-anchor="middle" direction="rtl" font-weight="normal">الحارس</text>
+<rect x="1474" y="696" width="76" height="48" rx="5" fill="#0b1420" stroke="#d2b36e" stroke-width="1.5"/>
+<text x="1512.0" y="726" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#d2b36e" text-anchor="middle" direction="rtl" font-weight="normal">الختم</text>
+<rect x="1566" y="696" width="104" height="48" rx="5" fill="#0b1420" stroke="#d2b36e" stroke-width="1.5"/>
+<text x="1618.0" y="726" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#d2b36e" text-anchor="middle" direction="rtl" font-weight="normal">مقعد</text>
+<path d="M1461 720 L1470 720" fill="none" stroke="#e8ddbf" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#main)"/>
+<path d="M1553 720 L1563 720" fill="none" stroke="#e8ddbf" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#main)"/>
+<text x="1520" y="766" font-family="DejaVu Sans,Arial,sans-serif" font-size="14" fill="#adbec9" text-anchor="middle" direction="rtl" font-weight="normal">الختم محفوظ عند إعادة المحاولة</text>
+<rect x="830.0" y="1337" width="240" height="34" rx="7" fill="#0b1420" stroke="#6dbbdf" stroke-width="1.5"/>
+<text x="950" y="1360" font-family="DejaVu Sans,Arial,sans-serif" font-size="16" fill="#6dbbdf" text-anchor="middle" direction="rtl" font-weight="normal">S1 · 06 ↔ 02</text>
+<rect x="630.0" y="1677" width="240" height="34" rx="7" fill="#0b1420" stroke="#6dbbdf" stroke-width="1.5"/>
+<text x="750" y="1700" font-family="DejaVu Sans,Arial,sans-serif" font-size="16" fill="#6dbbdf" text-anchor="middle" direction="rtl" font-weight="normal">S2 · 09 ↔ 03</text>
+<rect x="1220.0" y="837" width="240" height="34" rx="7" fill="#0b1420" stroke="#6dbbdf" stroke-width="1.5"/>
+<text x="1340" y="860" font-family="DejaVu Sans,Arial,sans-serif" font-size="16" fill="#6dbbdf" text-anchor="middle" direction="rtl" font-weight="normal">S3 · 12 ↔ 06</text>
+<rect x="700.0" y="452" width="240" height="34" rx="7" fill="#0b1420" stroke="#6dbbdf" stroke-width="1.5"/>
+<text x="820" y="475" font-family="DejaVu Sans,Arial,sans-serif" font-size="16" fill="#6dbbdf" text-anchor="middle" direction="rtl" font-weight="normal">S4 · 13 ↔ 10</text>
+<text x="1870" y="1460" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#ba99d6" text-anchor="middle" direction="rtl" font-weight="normal">طريق جانبي</text>
+<rect x="2050" y="230" width="400" height="1470" rx="12" fill="#101f2d" stroke="#455d6d" stroke-width="2"/>
+<text x="2250" y="278" font-family="DejaVu Sans,Arial,sans-serif" font-size="28" fill="#e8ddbf" text-anchor="middle" direction="rtl" font-weight="bold">مفتاح الخريطة</text>
+<path d="M2080 322 L2160 322" fill="none" stroke="#e8ddbf" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#main)"/>
+<text x="2420" y="329" font-family="DejaVu Sans,Arial,sans-serif" font-size="19" fill="#e8ddbf" text-anchor="start" direction="rtl" font-weight="normal">اتجاه التقدم</text>
+<path d="M2080 365 L2160 365" fill="none" stroke="#6dbbdf" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="12 9" marker-end="url(#return)" marker-start="url(#return)"/>
+<text x="2420" y="372" font-family="DejaVu Sans,Arial,sans-serif" font-size="19" fill="#6dbbdf" text-anchor="start" direction="rtl" font-weight="normal">اختصار دائم</text>
+<path d="M2080 408 L2160 408" fill="none" stroke="#ba99d6" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="5 8" marker-end="url(#optional)" marker-start="url(#optional)"/>
+<text x="2420" y="415" font-family="DejaVu Sans,Arial,sans-serif" font-size="19" fill="#ba99d6" text-anchor="start" direction="rtl" font-weight="normal">فرع اختياري</text>
+<rect x="2087" y="441" width="12" height="12" rx="1" fill="#d2b36e" stroke="#d2b36e" stroke-width="1"/>
+<text x="2420" y="458" font-family="DejaVu Sans,Arial,sans-serif" font-size="19" fill="#d2b36e" text-anchor="start" direction="rtl" font-weight="normal">استراحة وحفظ</text>
+<path d="M2093 484 L2103 494 L2093 504 L2083 494Z" fill="#86c4c5"/>
+<text x="2420" y="501" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" fill="#86c4c5" text-anchor="start" direction="rtl" font-weight="normal">سر ومكافأة اختيارية</text>
+<circle cx="2093" cy="537" r="9" fill="#ba99d6"/>
+<text x="2420" y="544" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#ba99d6" text-anchor="start" direction="rtl" font-weight="normal">لقاء صاحب الشعلة السوداء</text>
+<rect x="2080" y="575" width="340" height="1" rx="0" fill="#344959" stroke="#344959" stroke-width="0"/>
+<text x="2250" y="617" font-family="DejaVu Sans,Arial,sans-serif" font-size="24" fill="#e8ddbf" text-anchor="middle" direction="rtl" font-weight="bold">ثلاثة ألغاز رئيسية</text>
+<text x="2420" y="665" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" fill="#d2b36e" text-anchor="start" direction="rtl" font-weight="normal">P1 · شبكة الحبر — 03</text>
+<text x="2420" y="694" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#adbec9" text-anchor="start" direction="rtl" font-weight="normal">وصل التدفق لتكوين ممشى</text>
+<text x="2420" y="743" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" fill="#d2b36e" text-anchor="start" direction="rtl" font-weight="normal">P2 · الكتب — 07 / 08 / 09</text>
+<text x="2420" y="772" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#adbec9" text-anchor="start" direction="rtl" font-weight="normal">جمع ثم ترتيب ثم نشر درج دائم</text>
+<text x="2420" y="821" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" fill="#d2b36e" text-anchor="start" direction="rtl" font-weight="normal">P3 · الموازنة — 10</text>
+<text x="2420" y="850" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#adbec9" text-anchor="start" direction="rtl" font-weight="normal">انقل الأثقال حتى يستقر الجسر</text>
+<rect x="2080" y="877" width="340" height="1" rx="0" fill="#344959" stroke="#344959" stroke-width="0"/>
+<text x="2250" y="919" font-family="DejaVu Sans,Arial,sans-serif" font-size="24" fill="#e8ddbf" text-anchor="middle" direction="rtl" font-weight="bold">شروط فتح الاختصارات</text>
+<text x="2420" y="967" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" fill="#6dbbdf" text-anchor="start" direction="rtl" font-weight="normal">S1 · من الأرشيف 06</text>
+<text x="2420" y="996" font-family="DejaVu Sans,Arial,sans-serif" font-size="16" fill="#adbec9" text-anchor="start" direction="rtl" font-weight="normal">مزلاج يُفتح من الداخل</text>
+<text x="2420" y="1040" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" fill="#6dbbdf" text-anchor="start" direction="rtl" font-weight="normal">S2 · بعد OUTPUT 09</text>
+<text x="2420" y="1069" font-family="DejaVu Sans,Arial,sans-serif" font-size="16" fill="#adbec9" text-anchor="start" direction="rtl" font-weight="normal">مغلق من الجهتين قبل اكتماله</text>
+<text x="2420" y="1113" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" fill="#6dbbdf" text-anchor="start" direction="rtl" font-weight="normal">S3 · من المشغل 12</text>
+<text x="2420" y="1142" font-family="DejaVu Sans,Arial,sans-serif" font-size="16" fill="#adbec9" text-anchor="start" direction="rtl" font-weight="normal">بعد اجتياز آلات التجليد</text>
+<text x="2420" y="1186" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" fill="#6dbbdf" text-anchor="start" direction="rtl" font-weight="normal">S4 · مدخل الرواق 13</text>
+<text x="2420" y="1215" font-family="DejaVu Sans,Arial,sans-serif" font-size="16" fill="#adbec9" text-anchor="start" direction="rtl" font-weight="normal">يختصر العودة؛ لا يتجاوز الحارس</text>
+<rect x="2080" y="1244" width="340" height="1" rx="0" fill="#344959" stroke="#344959" stroke-width="0"/>
+<text x="2250" y="1287" font-family="DejaVu Sans,Arial,sans-serif" font-size="24" fill="#e8ddbf" text-anchor="middle" direction="rtl" font-weight="bold">إيقاع الاستكشاف</text>
+<text x="2420" y="1330" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#adbec9" text-anchor="start" direction="rtl" font-weight="normal">استراحات: 01، 06، 10، 13</text>
+<text x="2420" y="1368" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#adbec9" text-anchor="start" direction="rtl" font-weight="normal">مقعد 13 بعد الحارس والختم</text>
+<text x="2420" y="1406" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#adbec9" text-anchor="start" direction="rtl" font-weight="normal">لغزان اختياريان: 06 و12</text>
+<text x="2420" y="1444" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#adbec9" text-anchor="start" direction="rtl" font-weight="normal">الأسرار لا تحمل أغراضًا إلزامية</text>
+<text x="2420" y="1482" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#adbec9" text-anchor="start" direction="rtl" font-weight="normal">الحوار والقراءة في مواضع آمنة</text>
+<text x="2420" y="1520" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#adbec9" text-anchor="start" direction="rtl" font-weight="normal">لا قفزة مزدوجة مطلوبة</text>
+<text x="2420" y="1558" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#adbec9" text-anchor="start" direction="rtl" font-weight="normal">الحلول والاختصارات تبقى محفوظة</text>
+<text x="2420" y="1596" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#adbec9" text-anchor="start" direction="rtl" font-weight="normal">الأعداء تُضاف بعد نجاح البيئة</text>
+<text x="2250" y="1660" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#d2b36e" text-anchor="middle" direction="rtl" font-weight="normal">بعد 15: عبور نهائي بلا عودة</text>
+<text x="1240" y="1780" font-family="DejaVu Sans,Arial,sans-serif" font-size="23" fill="#adbec9" text-anchor="middle" direction="rtl" font-weight="normal">المسار الرئيسي يمر بجميع الألغاز؛ الهوامش المحذوفة فرع اختياري بين 04 و06</text>
+<text x="1240" y="1822" font-family="DejaVu Sans,Arial,sans-serif" font-size="20" fill="#91a7b5" text-anchor="middle" direction="rtl" font-weight="normal">كل منطقة تضم عدة شاشات · اتصال الغرف لا يعني وجود انتقال آني داخل الأرشيف</text>
+<text x="1240" y="1860" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" fill="#788e9e" text-anchor="middle" direction="rtl" font-weight="normal">تصميم مقترح قبل التنفيذ والاختبار في Godot</text>
+</svg>

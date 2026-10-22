@@ -1,0 +1,1589 @@
+{
+	"checks": 480,
+	"combat_implemented": false,
+	"continuous_route_complete": true,
+	"engine": "4.6.3-stable (official)",
+	"failures": [],
+	"isolated_fixtures": [
+		{
+			"configured_spawn": true,
+			"kind": "left_spawn",
+			"passed": true,
+			"room": 1
+		},
+		{
+			"configured_spawn": true,
+			"kind": "left_spawn",
+			"passed": true,
+			"room": 2
+		},
+		{
+			"configured_spawn": true,
+			"kind": "left_spawn",
+			"passed": true,
+			"room": 3
+		},
+		{
+			"configured_spawn": true,
+			"kind": "left_spawn",
+			"passed": true,
+			"room": 4
+		},
+		{
+			"configured_spawn": true,
+			"kind": "left_spawn",
+			"passed": true,
+			"room": 5
+		},
+		{
+			"configured_spawn": true,
+			"kind": "left_spawn",
+			"passed": true,
+			"room": 6
+		},
+		{
+			"configured_spawn": true,
+			"kind": "left_spawn",
+			"passed": true,
+			"room": 7
+		},
+		{
+			"configured_spawn": true,
+			"kind": "left_spawn",
+			"passed": true,
+			"room": 8
+		},
+		{
+			"configured_spawn": true,
+			"kind": "left_spawn",
+			"passed": true,
+			"room": 9
+		},
+		{
+			"configured_spawn": true,
+			"kind": "left_spawn",
+			"passed": true,
+			"room": 10
+		},
+		{
+			"configured_spawn": true,
+			"kind": "left_spawn",
+			"passed": true,
+			"room": 11
+		},
+		{
+			"configured_spawn": true,
+			"kind": "left_spawn",
+			"passed": true,
+			"room": 12
+		},
+		{
+			"configured_spawn": true,
+			"kind": "left_spawn",
+			"passed": true,
+			"room": 13
+		},
+		{
+			"configured_spawn": true,
+			"kind": "left_spawn",
+			"passed": true,
+			"room": 14
+		},
+		{
+			"configured_spawn": true,
+			"kind": "left_spawn",
+			"passed": true,
+			"room": 15
+		},
+		{
+			"checkpoint_room": 13,
+			"kind": "actual_tour_save_reload",
+			"passed": true
+		},
+		{
+			"actual_portal_inputs": true,
+			"configured_start": true,
+			"from": 6,
+			"kind": "earned_shortcut_round_trip",
+			"passed": true,
+			"to": 2
+		},
+		{
+			"actual_portal_inputs": true,
+			"configured_start": true,
+			"from": 9,
+			"kind": "earned_shortcut_round_trip",
+			"passed": true,
+			"to": 3
+		},
+		{
+			"actual_portal_inputs": true,
+			"configured_start": true,
+			"from": 12,
+			"kind": "earned_shortcut_round_trip",
+			"passed": true,
+			"to": 6
+		},
+		{
+			"actual_portal_inputs": true,
+			"configured_start": true,
+			"from": 13,
+			"kind": "earned_shortcut_round_trip",
+			"passed": true,
+			"to": 10
+		},
+		{
+			"actual_movement_and_ui": true,
+			"configured_start": true,
+			"kind": "optional_route",
+			"passed": true,
+			"room": 6
+		},
+		{
+			"actual_movement_and_ui": true,
+			"configured_start": true,
+			"kind": "optional_route",
+			"passed": true,
+			"room": 9
+		},
+		{
+			"actual_movement_and_ui": true,
+			"configured_start": true,
+			"kind": "optional_route",
+			"passed": true,
+			"room": 11
+		},
+		{
+			"actual_movement_and_ui": true,
+			"configured_start": true,
+			"kind": "optional_route",
+			"passed": true,
+			"room": 12
+		},
+		{
+			"kind": "newer_language_setting_precedence",
+			"passed": true
+		},
+		{
+			"configured_actor_fixture": true,
+			"kind": "fold_clearance_commit_reload",
+			"passed": true
+		}
+	],
+	"landings": [
+		{
+			"actual_input": true,
+			"apex_y": 1114.25695800781,
+			"landed": [
+				1989.34191894531,
+				1139.97106933594
+			],
+			"passed": true,
+			"room": 1,
+			"start": [
+				1933.40283203125,
+				1259.92529296875
+			],
+			"target": [
+				1992.0,
+				1140.0
+			]
+		},
+		{
+			"actual_input": true,
+			"apex_y": 994.25732421875,
+			"landed": [
+				2283.59252929688,
+				1019.97143554688
+			],
+			"passed": true,
+			"room": 1,
+			"start": [
+				2179.34204101562,
+				1139.92529296875
+			],
+			"target": [
+				2282.0,
+				1020.0
+			]
+		},
+		{
+			"actual_input": true,
+			"apex_y": 1114.25708007812,
+			"landed": [
+				1529.34191894531,
+				1139.97119140625
+			],
+			"passed": true,
+			"room": 2,
+			"start": [
+				1472.79162597656,
+				1259.92529296875
+			],
+			"target": [
+				1532.0,
+				1140.0
+			]
+		},
+		{
+			"actual_input": true,
+			"apex_y": 994.25732421875,
+			"landed": [
+				1823.59216308594,
+				1019.97143554688
+			],
+			"passed": true,
+			"room": 2,
+			"start": [
+				1719.34204101562,
+				1139.92529296875
+			],
+			"target": [
+				1822.0,
+				1020.0
+			]
+		},
+		{
+			"actual_input": true,
+			"apex_y": 874.25732421875,
+			"landed": [
+				2114.30053710938,
+				899.971435546875
+			],
+			"passed": true,
+			"room": 2,
+			"start": [
+				2008.59228515625,
+				1019.92523193359
+			],
+			"target": [
+				2112.0,
+				900.0
+			]
+		},
+		{
+			"actual_input": true,
+			"apex_y": 1114.25695800781,
+			"landed": [
+				329.341949462891,
+				1139.97106933594
+			],
+			"passed": true,
+			"room": 3,
+			"start": [
+				275.0,
+				1259.92529296875
+			],
+			"target": [
+				332.0,
+				1140.0
+			]
+		},
+		{
+			"actual_input": true,
+			"apex_y": 1114.25720214844,
+			"landed": [
+				1229.34191894531,
+				1139.97131347656
+			],
+			"passed": true,
+			"room": 3,
+			"start": [
+				1177.98034667969,
+				1259.92529296875
+			],
+			"target": [
+				1232.0,
+				1140.0
+			]
+		},
+		{
+			"actual_input": true,
+			"apex_y": 994.25732421875,
+			"landed": [
+				1523.59204101562,
+				1019.97143554688
+			],
+			"passed": true,
+			"room": 3,
+			"start": [
+				1419.34191894531,
+				1139.92529296875
+			],
+			"target": [
+				1522.0,
+				1020.0
+			]
+		},
+		{
+			"actual_input": true,
+			"apex_y": 874.25732421875,
+			"landed": [
+				1814.30065917969,
+				899.971435546875
+			],
+			"passed": true,
+			"room": 3,
+			"start": [
+				1708.59216308594,
+				1019.92523193359
+			],
+			"target": [
+				1812.0,
+				900.0
+			]
+		},
+		{
+			"actual_input": true,
+			"apex_y": 754.25732421875,
+			"landed": [
+				2104.63427734375,
+				779.971435546875
+			],
+			"passed": true,
+			"room": 3,
+			"start": [
+				1999.30078125,
+				899.925231933594
+			],
+			"target": [
+				2102.0,
+				780.0
+			]
+		},
+		{
+			"actual_input": true,
+			"apex_y": 1114.25695800781,
+			"landed": [
+				529.341979980469,
+				1139.97106933594
+			],
+			"passed": true,
+			"room": 5,
+			"start": [
+				475.0,
+				1259.92529296875
+			],
+			"target": [
+				532.0,
+				1140.0
+			]
+		},
+		{
+			"actual_input": true,
+			"apex_y": 994.25732421875,
+			"landed": [
+				803.591918945312,
+				1019.97143554688
+			],
+			"passed": true,
+			"room": 5,
+			"start": [
+				699.341796875,
+				1139.92529296875
+			],
+			"target": [
+				802.0,
+				1020.0
+			]
+		},
+		{
+			"actual_input": true,
+			"apex_y": 874.25732421875,
+			"landed": [
+				1074.30029296875,
+				899.971435546875
+			],
+			"passed": true,
+			"room": 5,
+			"start": [
+				968.591735839844,
+				1019.92523193359
+			],
+			"target": [
+				1072.0,
+				900.0
+			]
+		},
+		{
+			"actual_input": true,
+			"apex_y": 754.25732421875,
+			"landed": [
+				1344.6337890625,
+				779.971435546875
+			],
+			"passed": true,
+			"room": 5,
+			"start": [
+				1239.30041503906,
+				899.925231933594
+			],
+			"target": [
+				1342.0,
+				780.0
+			]
+		},
+		{
+			"actual_input": true,
+			"apex_y": 2554.25854492188,
+			"landed": [
+				329.341949462891,
+				2579.97265625
+			],
+			"passed": true,
+			"room": 6,
+			"start": [
+				275.0,
+				2699.92529296875
+			],
+			"target": [
+				332.0,
+				2580.0
+			]
+		},
+		{
+			"actual_input": true,
+			"apex_y": 2434.25756835938,
+			"landed": [
+				603.592041015625,
+				2459.9716796875
+			],
+			"passed": true,
+			"room": 6,
+			"start": [
+				499.341918945312,
+				2579.92529296875
+			],
+			"target": [
+				602.0,
+				2460.0
+			]
+		},
+		{
+			"actual_input": true,
+			"apex_y": 2314.25756835938,
+			"landed": [
+				874.30029296875,
+				2339.9716796875
+			],
+			"passed": true,
+			"room": 6,
+			"start": [
+				768.591857910156,
+				2459.92529296875
+			],
+			"target": [
+				872.0,
+				2340.0
+			]
+		},
+		{
+			"actual_input": true,
+			"apex_y": 2194.25756835938,
+			"landed": [
+				1144.63366699219,
+				2219.9716796875
+			],
+			"passed": true,
+			"room": 6,
+			"start": [
+				1039.30029296875,
+				2339.92529296875
+			],
+			"target": [
+				1142.0,
+				2220.0
+			]
+		},
+		{
+			"actual_input": true,
+			"apex_y": 2074.25756835938,
+			"landed": [
+				1410.74487304688,
+				2099.9716796875
+			],
+			"passed": true,
+			"room": 6,
+			"start": [
+				1312.703125,
+				2219.92529296875
+			],
+			"target": [
+				1412.0,
+				2100.0
+			]
+		},
+		{
+			"actual_input": true,
+			"apex_y": 1954.25744628906,
+			"landed": [
+				1680.50891113281,
+				1979.97155761719
+			],
+			"passed": true,
+			"room": 6,
+			"start": [
+				1580.59216308594,
+				2099.92529296875
+			],
+			"target": [
+				1682.0,
+				1980.0
+			]
+		},
+		{
+			"actual_input": true,
+			"apex_y": 1834.25720214844,
+			"landed": [
+				2409.34204101562,
+				1859.97131347656
+			],
+			"passed": true,
+			"room": 6,
+			"start": [
+				2356.67602539062,
+				1979.92529296875
+			],
+			"target": [
+				2412.0,
+				1860.0
+			]
+		},
+		{
+			"actual_input": true,
+			"apex_y": 1714.25732421875,
+			"landed": [
+				2299.67456054688,
+				1739.97143554688
+			],
+			"passed": true,
+			"room": 6,
+			"start": [
+				2402.716796875,
+				1859.92529296875
+			],
+			"target": [
+				2298.0,
+				1740.0
+			]
+		},
+		{
+			"actual_input": true,
+			"apex_y": 1594.25732421875,
+			"landed": [
+				2030.31298828125,
+				1619.97143554688
+			],
+			"passed": true,
+			"room": 6,
+			"start": [
+				2128.35522460938,
+				1739.92529296875
+			],
+			"target": [
+				2028.0,
+				1620.0
+			]
+		},
+		{
+			"actual_input": true,
+			"apex_y": 1474.25732421875,
+			"landed": [
+				1759.20178222656,
+				1499.97143554688
+			],
+			"passed": true,
+			"room": 6,
+			"start": [
+				1857.24353027344,
+				1619.92529296875
+			],
+			"target": [
+				1758.0,
+				1500.0
+			]
+		},
+		{
+			"actual_input": true,
+			"apex_y": 1354.25732421875,
+			"landed": [
+				1489.43774414062,
+				1379.97143554688
+			],
+			"passed": true,
+			"room": 6,
+			"start": [
+				1589.3544921875,
+				1499.92529296875
+			],
+			"target": [
+				1488.0,
+				1380.0
+			]
+		},
+		{
+			"actual_input": true,
+			"apex_y": 1234.25732421875,
+			"landed": [
+				1220.07641601562,
+				1259.97143554688
+			],
+			"passed": true,
+			"room": 6,
+			"start": [
+				1318.1181640625,
+				1379.92529296875
+			],
+			"target": [
+				1218.0,
+				1260.0
+			]
+		},
+		{
+			"actual_input": true,
+			"apex_y": 1114.25695800781,
+			"landed": [
+				490.658172607422,
+				1139.97106933594
+			],
+			"passed": true,
+			"room": 6,
+			"start": [
+				547.007141113281,
+				1259.92529296875
+			],
+			"target": [
+				488.0,
+				1140.0
+			]
+		},
+		{
+			"actual_input": true,
+			"apex_y": 994.25732421875,
+			"landed": [
+				600.325073242188,
+				1019.97143554688
+			],
+			"passed": true,
+			"room": 6,
+			"start": [
+				497.283264160156,
+				1139.92529296875
+			],
+			"target": [
+				602.0,
+				1020.0
+			]
+		},
+		{
+			"actual_input": true,
+			"apex_y": 874.25732421875,
+			"landed": [
+				869.686096191406,
+				899.971435546875
+			],
+			"passed": true,
+			"room": 6,
+			"start": [
+				771.644287109375,
+				1019.92523193359
+			],
+			"target": [
+				872.0,
+				900.0
+			]
+		},
+		{
+			"actual_input": true,
+			"apex_y": 754.25732421875,
+			"landed": [
+				1140.79711914062,
+				779.971435546875
+			],
+			"passed": true,
+			"room": 6,
+			"start": [
+				1042.75537109375,
+				899.925231933594
+			],
+			"target": [
+				1142.0,
+				780.0
+			]
+		},
+		{
+			"actual_input": true,
+			"apex_y": 634.25732421875,
+			"landed": [
+				1410.56115722656,
+				659.971435546875
+			],
+			"passed": true,
+			"room": 6,
+			"start": [
+				1310.64440917969,
+				779.925231933594
+			],
+			"target": [
+				1412.0,
+				660.0
+			]
+		},
+		{
+			"actual_input": true,
+			"apex_y": 514.25732421875,
+			"landed": [
+				1679.92248535156,
+				539.971435546875
+			],
+			"passed": true,
+			"room": 6,
+			"start": [
+				1581.88073730469,
+				659.925231933594
+			],
+			"target": [
+				1682.0,
+				540.0
+			]
+		},
+		{
+			"actual_input": true,
+			"apex_y": 1114.25708007812,
+			"landed": [
+				979.341857910156,
+				1139.97119140625
+			],
+			"passed": true,
+			"room": 7,
+			"start": [
+				922.791442871094,
+				1259.92529296875
+			],
+			"target": [
+				982.0,
+				1140.0
+			]
+		},
+		{
+			"actual_input": true,
+			"apex_y": 994.25732421875,
+			"landed": [
+				1273.59191894531,
+				1019.97143554688
+			],
+			"passed": true,
+			"room": 7,
+			"start": [
+				1169.341796875,
+				1139.92529296875
+			],
+			"target": [
+				1272.0,
+				1020.0
+			]
+		},
+		{
+			"actual_input": true,
+			"apex_y": 874.25732421875,
+			"landed": [
+				1920.00854492188,
+				899.971435546875
+			],
+			"passed": true,
+			"room": 7,
+			"start": [
+				1816.966796875,
+				1019.92523193359
+			],
+			"target": [
+				1922.0,
+				900.0
+			]
+		},
+		{
+			"actual_input": true,
+			"apex_y": 1114.25708007812,
+			"landed": [
+				1869.34191894531,
+				1139.97119140625
+			],
+			"passed": true,
+			"room": 8,
+			"start": [
+				1812.79162597656,
+				1259.92529296875
+			],
+			"target": [
+				1872.0,
+				1140.0
+			]
+		},
+		{
+			"actual_input": true,
+			"apex_y": 1114.25708007812,
+			"landed": [
+				1129.34191894531,
+				1139.97119140625
+			],
+			"passed": true,
+			"room": 9,
+			"start": [
+				1072.79162597656,
+				1259.92529296875
+			],
+			"target": [
+				1132.0,
+				1140.0
+			]
+		},
+		{
+			"actual_input": true,
+			"apex_y": 994.25732421875,
+			"landed": [
+				1423.59216308594,
+				1019.97143554688
+			],
+			"passed": true,
+			"room": 9,
+			"start": [
+				1319.34204101562,
+				1139.92529296875
+			],
+			"target": [
+				1422.0,
+				1020.0
+			]
+		},
+		{
+			"actual_input": true,
+			"apex_y": 874.25732421875,
+			"landed": [
+				1714.30078125,
+				899.971435546875
+			],
+			"passed": true,
+			"room": 9,
+			"start": [
+				1608.59228515625,
+				1019.92523193359
+			],
+			"target": [
+				1712.0,
+				900.0
+			]
+		},
+		{
+			"actual_input": true,
+			"apex_y": 754.25732421875,
+			"landed": [
+				2004.63427734375,
+				779.971435546875
+			],
+			"passed": true,
+			"room": 9,
+			"start": [
+				1899.30090332031,
+				899.925231933594
+			],
+			"target": [
+				2002.0,
+				780.0
+			]
+		},
+		{
+			"actual_input": true,
+			"apex_y": 1114.25708007812,
+			"landed": [
+				1369.34191894531,
+				1139.97119140625
+			],
+			"passed": true,
+			"room": 10,
+			"start": [
+				1312.79150390625,
+				1259.92529296875
+			],
+			"target": [
+				1372.0,
+				1140.0
+			]
+		},
+		{
+			"actual_input": true,
+			"apex_y": 994.25732421875,
+			"landed": [
+				1663.59216308594,
+				1019.97143554688
+			],
+			"passed": true,
+			"room": 10,
+			"start": [
+				1559.34204101562,
+				1139.92529296875
+			],
+			"target": [
+				1662.0,
+				1020.0
+			]
+		},
+		{
+			"actual_input": true,
+			"apex_y": 874.25732421875,
+			"landed": [
+				1954.30078125,
+				899.971435546875
+			],
+			"passed": true,
+			"room": 10,
+			"start": [
+				1848.59228515625,
+				1019.92523193359
+			],
+			"target": [
+				1952.0,
+				900.0
+			]
+		},
+		{
+			"actual_input": true,
+			"apex_y": 1114.25695800781,
+			"landed": [
+				629.341857910156,
+				1139.97106933594
+			],
+			"passed": true,
+			"room": 11,
+			"start": [
+				575.0,
+				1259.92529296875
+			],
+			"target": [
+				632.0,
+				1140.0
+			]
+		},
+		{
+			"actual_input": true,
+			"apex_y": 994.25732421875,
+			"landed": [
+				923.591796875,
+				1019.97143554688
+			],
+			"passed": true,
+			"room": 11,
+			"start": [
+				819.341674804688,
+				1139.92529296875
+			],
+			"target": [
+				922.0,
+				1020.0
+			]
+		},
+		{
+			"actual_input": true,
+			"apex_y": 874.25732421875,
+			"landed": [
+				1214.30029296875,
+				899.971435546875
+			],
+			"passed": true,
+			"room": 11,
+			"start": [
+				1108.591796875,
+				1019.92523193359
+			],
+			"target": [
+				1212.0,
+				900.0
+			]
+		},
+		{
+			"actual_input": true,
+			"apex_y": 754.257446289062,
+			"landed": [
+				1989.34191894531,
+				779.971557617188
+			],
+			"passed": true,
+			"room": 11,
+			"start": [
+				1934.30017089844,
+				899.925231933594
+			],
+			"target": [
+				1992.0,
+				780.0
+			]
+		},
+		{
+			"actual_input": true,
+			"apex_y": 2554.25854492188,
+			"landed": [
+				329.341949462891,
+				2579.97265625
+			],
+			"passed": true,
+			"room": 6,
+			"start": [
+				275.0,
+				2699.92529296875
+			],
+			"target": [
+				332.0,
+				2580.0
+			]
+		},
+		{
+			"actual_input": true,
+			"apex_y": 2434.25756835938,
+			"landed": [
+				603.592041015625,
+				2459.9716796875
+			],
+			"passed": true,
+			"room": 6,
+			"start": [
+				499.341918945312,
+				2579.92529296875
+			],
+			"target": [
+				602.0,
+				2460.0
+			]
+		},
+		{
+			"actual_input": true,
+			"apex_y": 2314.25756835938,
+			"landed": [
+				874.30029296875,
+				2339.9716796875
+			],
+			"passed": true,
+			"room": 6,
+			"start": [
+				768.591857910156,
+				2459.92529296875
+			],
+			"target": [
+				872.0,
+				2340.0
+			]
+		},
+		{
+			"actual_input": true,
+			"apex_y": 2194.25756835938,
+			"landed": [
+				1144.63366699219,
+				2219.9716796875
+			],
+			"passed": true,
+			"room": 6,
+			"start": [
+				1039.30029296875,
+				2339.92529296875
+			],
+			"target": [
+				1142.0,
+				2220.0
+			]
+		},
+		{
+			"actual_input": true,
+			"apex_y": 2074.25756835938,
+			"landed": [
+				1410.74487304688,
+				2099.9716796875
+			],
+			"passed": true,
+			"room": 6,
+			"start": [
+				1312.703125,
+				2219.92529296875
+			],
+			"target": [
+				1412.0,
+				2100.0
+			]
+		},
+		{
+			"actual_input": true,
+			"apex_y": 1954.25744628906,
+			"landed": [
+				1680.50891113281,
+				1979.97155761719
+			],
+			"passed": true,
+			"room": 6,
+			"start": [
+				1580.59216308594,
+				2099.92529296875
+			],
+			"target": [
+				1682.0,
+				1980.0
+			]
+		},
+		{
+			"actual_input": true,
+			"apex_y": 1834.25720214844,
+			"landed": [
+				2409.34204101562,
+				1859.97131347656
+			],
+			"passed": true,
+			"room": 6,
+			"start": [
+				2356.67578125,
+				1979.92529296875
+			],
+			"target": [
+				2412.0,
+				1860.0
+			]
+		},
+		{
+			"actual_input": true,
+			"apex_y": 1714.25732421875,
+			"landed": [
+				2299.67456054688,
+				1739.97143554688
+			],
+			"passed": true,
+			"room": 6,
+			"start": [
+				2402.716796875,
+				1859.92529296875
+			],
+			"target": [
+				2298.0,
+				1740.0
+			]
+		},
+		{
+			"actual_input": true,
+			"apex_y": 1594.25732421875,
+			"landed": [
+				2030.31298828125,
+				1619.97143554688
+			],
+			"passed": true,
+			"room": 6,
+			"start": [
+				2128.35522460938,
+				1739.92529296875
+			],
+			"target": [
+				2028.0,
+				1620.0
+			]
+		},
+		{
+			"actual_input": true,
+			"apex_y": 1474.25732421875,
+			"landed": [
+				1759.20178222656,
+				1499.97143554688
+			],
+			"passed": true,
+			"room": 6,
+			"start": [
+				1857.24353027344,
+				1619.92529296875
+			],
+			"target": [
+				1758.0,
+				1500.0
+			]
+		},
+		{
+			"actual_input": true,
+			"apex_y": 1354.25732421875,
+			"landed": [
+				1489.43774414062,
+				1379.97143554688
+			],
+			"passed": true,
+			"room": 6,
+			"start": [
+				1589.3544921875,
+				1499.92529296875
+			],
+			"target": [
+				1488.0,
+				1380.0
+			]
+		},
+		{
+			"actual_input": true,
+			"apex_y": 1234.25732421875,
+			"landed": [
+				1220.07641601562,
+				1259.97143554688
+			],
+			"passed": true,
+			"room": 6,
+			"start": [
+				1318.1181640625,
+				1379.92529296875
+			],
+			"target": [
+				1218.0,
+				1260.0
+			]
+		},
+		{
+			"actual_input": true,
+			"apex_y": 1227.94848632812,
+			"landed": [
+				1579.74328613281,
+				1259.97692871094
+			],
+			"passed": true,
+			"room": 6,
+			"start": [
+				1501.70153808594,
+				1379.92529296875
+			],
+			"target": [
+				1582.0,
+				1260.0
+			]
+		},
+		{
+			"actual_input": true,
+			"apex_y": 1114.25695800781,
+			"landed": [
+				2449.34204101562,
+				1139.97106933594
+			],
+			"passed": true,
+			"room": 6,
+			"start": [
+				2392.81298828125,
+				1259.92529296875
+			],
+			"target": [
+				2452.0,
+				1140.0
+			]
+		},
+		{
+			"actual_input": true,
+			"apex_y": 994.25732421875,
+			"landed": [
+				2723.59228515625,
+				1019.97143554688
+			],
+			"passed": true,
+			"room": 6,
+			"start": [
+				2619.341796875,
+				1139.92529296875
+			],
+			"target": [
+				2722.0,
+				1020.0
+			]
+		},
+		{
+			"actual_input": true,
+			"apex_y": 1234.25732421875,
+			"landed": [
+				1219.96801757812,
+				1259.97143554688
+			],
+			"passed": true,
+			"room": 6,
+			"start": [
+				1317.05139160156,
+				1379.92529296875
+			],
+			"target": [
+				1220.0,
+				1260.0
+			]
+		},
+		{
+			"actual_input": true,
+			"apex_y": 1114.25708007812,
+			"landed": [
+				1129.34191894531,
+				1139.97119140625
+			],
+			"passed": true,
+			"room": 9,
+			"start": [
+				1072.79162597656,
+				1259.92529296875
+			],
+			"target": [
+				1132.0,
+				1140.0
+			]
+		},
+		{
+			"actual_input": true,
+			"apex_y": 1114.25695800781,
+			"landed": [
+				629.341857910156,
+				1139.97106933594
+			],
+			"passed": true,
+			"room": 11,
+			"start": [
+				575.0,
+				1259.92529296875
+			],
+			"target": [
+				632.0,
+				1140.0
+			]
+		},
+		{
+			"actual_input": true,
+			"apex_y": 994.25732421875,
+			"landed": [
+				923.591796875,
+				1019.97143554688
+			],
+			"passed": true,
+			"room": 11,
+			"start": [
+				819.341674804688,
+				1139.92529296875
+			],
+			"target": [
+				922.0,
+				1020.0
+			]
+		},
+		{
+			"actual_input": true,
+			"apex_y": 874.25732421875,
+			"landed": [
+				1214.30029296875,
+				899.971435546875
+			],
+			"passed": true,
+			"room": 11,
+			"start": [
+				1108.591796875,
+				1019.92523193359
+			],
+			"target": [
+				1212.0,
+				900.0
+			]
+		},
+		{
+			"actual_input": true,
+			"apex_y": 754.257446289062,
+			"landed": [
+				1989.34191894531,
+				779.971557617188
+			],
+			"passed": true,
+			"room": 11,
+			"start": [
+				1934.30017089844,
+				899.925231933594
+			],
+			"target": [
+				1992.0,
+				780.0
+			]
+		},
+		{
+			"actual_input": true,
+			"apex_y": 634.25732421875,
+			"landed": [
+				2283.59252929688,
+				659.971435546875
+			],
+			"passed": true,
+			"room": 11,
+			"start": [
+				2179.34204101562,
+				779.925231933594
+			],
+			"target": [
+				2282.0,
+				660.0
+			]
+		},
+		{
+			"actual_input": true,
+			"apex_y": 514.25732421875,
+			"landed": [
+				2574.30102539062,
+				539.971435546875
+			],
+			"passed": true,
+			"room": 11,
+			"start": [
+				2468.59228515625,
+				659.925231933594
+			],
+			"target": [
+				2572.0,
+				540.0
+			]
+		}
+	],
+	"physics_ticks": 20575,
+	"puzzle_input": "native UI action signals; movement/portals via Input actions",
+	"rooms_walked": [
+		1,
+		2,
+		3,
+		4,
+		5,
+		6,
+		7,
+		8,
+		9,
+		10,
+		11,
+		12,
+		13,
+		14,
+		15
+	],
+	"save_restored": true,
+	"transitions": [
+		{
+			"actual_interact": true,
+			"from": 1,
+			"passed": true,
+			"to": 2
+		},
+		{
+			"actual_interact": true,
+			"from": 2,
+			"passed": true,
+			"to": 3
+		},
+		{
+			"actual_interact": true,
+			"from": 3,
+			"passed": true,
+			"to": 4
+		},
+		{
+			"actual_interact": true,
+			"from": 4,
+			"passed": true,
+			"to": 5
+		},
+		{
+			"actual_interact": true,
+			"from": 5,
+			"passed": true,
+			"to": 6
+		},
+		{
+			"actual_interact": true,
+			"from": 6,
+			"passed": true,
+			"to": 7
+		},
+		{
+			"actual_interact": true,
+			"from": 7,
+			"passed": true,
+			"to": 8
+		},
+		{
+			"actual_interact": true,
+			"from": 8,
+			"passed": true,
+			"to": 9
+		},
+		{
+			"actual_interact": true,
+			"from": 9,
+			"passed": true,
+			"to": 10
+		},
+		{
+			"actual_interact": true,
+			"from": 10,
+			"passed": true,
+			"to": 11
+		},
+		{
+			"actual_interact": true,
+			"from": 11,
+			"passed": true,
+			"to": 12
+		},
+		{
+			"actual_interact": true,
+			"from": 12,
+			"passed": true,
+			"to": 13
+		},
+		{
+			"actual_interact": true,
+			"from": 13,
+			"passed": true,
+			"to": 14
+		},
+		{
+			"actual_interact": true,
+			"from": 14,
+			"passed": true,
+			"to": 15
+		},
+		{
+			"actual_interact": true,
+			"from": 6,
+			"passed": true,
+			"to": 2
+		},
+		{
+			"actual_interact": true,
+			"from": 2,
+			"passed": true,
+			"to": 6
+		},
+		{
+			"actual_interact": true,
+			"from": 9,
+			"passed": true,
+			"to": 3
+		},
+		{
+			"actual_interact": true,
+			"from": 3,
+			"passed": true,
+			"to": 9
+		},
+		{
+			"actual_interact": true,
+			"from": 12,
+			"passed": true,
+			"to": 6
+		},
+		{
+			"actual_interact": true,
+			"from": 6,
+			"passed": true,
+			"to": 12
+		},
+		{
+			"actual_interact": true,
+			"from": 13,
+			"passed": true,
+			"to": 10
+		},
+		{
+			"actual_interact": true,
+			"from": 10,
+			"passed": true,
+			"to": 13
+		}
+	]
+}

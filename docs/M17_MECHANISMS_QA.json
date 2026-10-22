@@ -1,0 +1,7 @@
+{
+	"checks": 36,
+	"engine": "4.6.3-stable (official)",
+	"failures": [],
+	"passed": true,
+	"scope": "Pure interaction-state and visual-node load tests. Actor clearance and collision folding are integration tests owned by the stage."
+}

@@ -1,0 +1,6 @@
+[gd_scene format=3]
+
+[node name="M17Room13" type="Node2D"]
+metadata/room_id = 13
+metadata/layout_source = "res://scripts/stage/m17_layouts.gd"
+metadata/collision_policy = "Controller instantiates editable native paper-platform bodies from layout data."

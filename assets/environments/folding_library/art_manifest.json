@@ -1,0 +1,196 @@
+{
+  "version": 1,
+  "created_utc": "2026-10-22",
+  "project": "LAST LECTURE — M17 Folding Library",
+  "purpose": "Original background plates, transparent foreground architecture and distant portal vista, alongside native Godot collision geometry; not final character art or a playable World 02",
+  "generator": "OpenAI image_gen",
+  "derivative_source": "Project-authored/AI-generated approved D concept boards",
+  "assets": [
+    {
+      "name": "library",
+      "file": "library.png",
+      "bytes": 2230769,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "sha256": "85dbd878942dd0e60ceaffba08c8ff07cae9f6b53909a1f7aafb3357035d8257",
+      "reference": "ART_01_03.png",
+      "generated_source": "exec-3385e779-20b0-43a7-9ed9-6a14af65943f.png",
+      "prompt": "Create ONE original production-ready BACKGROUND PLATE for a hand-painted 2D side-scrolling game, LAST LECTURE — THE FOLDING LIBRARY. The provided image is STYLE REFERENCE only. Output a single very wide landscape composition (aim 1536x1024 or wider), NOT a concept presentation board, no panels, no framing. Absolutely NO text, numbers, labels, UI, hero, characters, monsters, symbols intended as puzzle instructions, collectible books, foreground platforms, bridge, foreground ground, or walkable floor. This texture will be placed BEHIND independently authored playable platforms and props in Godot. The lowest 35 percent must be calm deep navy atmospheric negative space, with only distant faint silhouettes. No large foreground columns cutting the middle or lower play band. Strong architectural depth in the upper two-thirds, subtle distant supports, soft painterly shading, restrained clean edges, gently simplified surfaces rather than noisy tiny marks. Ivory parchment and thick book-page architecture, dark navy ink shadows and dark brown leather binding, sparse burgundy bookmark ribbons, a few restrained warm amber lamps and cyan CRT glows. Grand abandoned computer-science university, melancholy and wondrous. Smooth illustrated 2D art, NOT photorealistic, NOT a 3D render, NOT pixel art, NOT flat paper collage, no game-ripped assets. Make most background values muted, avoid bright white filling the player band. The illustration is a useful quiet far/mid-background, not a screenshot of finished playable scenery.  LOCATION: the immense first-page university library hall. A giant OPEN BOOK forms a high arch above a distant doorway, rows of leather book spines along side walls, a few warm reading niches deep in the background, distant pointed windows with cool blue light. Let the huge high paper arch be the landmark and keep the lower band empty atmospheric ink-blue. No foreground floor, stairs or playable ledges.",
+      "visual_review": "Passed: no characters, UI labels or foreground floor; calm navy lower play band."
+    },
+    {
+      "name": "archive",
+      "file": "archive.png",
+      "bytes": 2123161,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "sha256": "02427b19109242b0c135e5d82aa6f079c6d77749ed310596e7dec3a18db3d0c3",
+      "reference": "ART_04_06.png",
+      "generated_source": "exec-5d6363eb-8041-414b-9173-b83fe0bbc013.png",
+      "prompt": "Create ONE original production-ready BACKGROUND PLATE for a hand-painted 2D side-scrolling game, LAST LECTURE — THE FOLDING LIBRARY. The provided image is STYLE REFERENCE only. Output a single very wide landscape composition (aim 1536x1024 or wider), NOT a concept presentation board, no panels, no framing. Absolutely NO text, numbers, labels, UI, hero, characters, monsters, symbols intended as puzzle instructions, collectible books, foreground platforms, bridge, foreground ground, or walkable floor. This texture will be placed BEHIND independently authored playable platforms and props in Godot. The lowest 35 percent must be calm deep navy atmospheric negative space, with only distant faint silhouettes. No large foreground columns cutting the middle or lower play band. Strong architectural depth in the upper two-thirds, subtle distant supports, soft painterly shading, restrained clean edges, gently simplified surfaces rather than noisy tiny marks. Ivory parchment and thick book-page architecture, dark navy ink shadows and dark brown leather binding, sparse burgundy bookmark ribbons, a few restrained warm amber lamps and cyan CRT glows. Grand abandoned computer-science university, melancholy and wondrous. Smooth illustrated 2D art, NOT photorealistic, NOT a 3D render, NOT pixel art, NOT flat paper collage, no game-ripped assets. Make most background values muted, avoid bright white filling the player band. The illustration is a useful quiet far/mid-background, not a screenshot of finished playable scenery.  LOCATION: a towering FOLDED ARCHIVE vault with four visually distinct tiers of distant ivory book balconies and shelves around a large central void. These are background tiers only, faint and far behind the player, NOT foreground walkable routes; no large stairs in front. One long burgundy ribbon hangs in upper central distance. Four levels read as architecture in the upper two thirds, lowest third opens into dark blue shadow. High vaulted windows and vast depth, quiet dim warm points.",
+      "visual_review": "Passed: no characters, UI labels or foreground floor; calm navy lower play band."
+    },
+    {
+      "name": "lab",
+      "file": "lab.png",
+      "bytes": 2212814,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "sha256": "ff93004aa5783af0e82d8e2f4fe3eb95dc8bcb240341a0cb2d6d8685f12c74a1",
+      "reference": "ART_01_03.png",
+      "generated_source": "exec-0f589a08-b56a-467d-b1a4-55f7bb738ab3.png",
+      "prompt": "Create ONE original production-ready BACKGROUND PLATE for a hand-painted 2D side-scrolling game, LAST LECTURE — THE FOLDING LIBRARY. The provided image is STYLE REFERENCE only. Output a single very wide landscape composition (aim 1536x1024 or wider), NOT a concept presentation board, no panels, no framing. Absolutely NO text, numbers, labels, UI, hero, characters, monsters, symbols intended as puzzle instructions, collectible books, foreground platforms, bridge, foreground ground, or walkable floor. This texture will be placed BEHIND independently authored playable platforms and props in Godot. The lowest 35 percent must be calm deep navy atmospheric negative space, with only distant faint silhouettes. No large foreground columns cutting the middle or lower play band. Strong architectural depth in the upper two-thirds, subtle distant supports, soft painterly shading, restrained clean edges, gently simplified surfaces rather than noisy tiny marks. Ivory parchment and thick book-page architecture, dark navy ink shadows and dark brown leather binding, sparse burgundy bookmark ribbons, a few restrained warm amber lamps and cyan CRT glows. Grand abandoned computer-science university, melancholy and wondrous. Smooth illustrated 2D art, NOT photorealistic, NOT a 3D render, NOT pixel art, NOT flat paper collage, no game-ripped assets. Make most background values muted, avoid bright white filling the player band. The illustration is a useful quiet far/mid-background, not a screenshot of finished playable scenery.  LOCATION: a forgotten university INK AND COMPUTER LAB hidden among enormous leather book spines. Old CRT monitors and thin cyan ink tubes sit in distant upper-wall work alcoves; show modest nonspecific schematic glows without letters or readable diagrams. Broad muted paper-backed wall areas and suspended sheets in upper corners, dark calm lower band. The working controls and actual channels will be separate game objects, so do not paint a prominent foreground puzzle or any triangle/square/circle book set.",
+      "visual_review": "Passed: no characters, UI labels or foreground floor; calm navy lower play band."
+    },
+    {
+      "name": "bindery",
+      "file": "bindery.png",
+      "bytes": 2210120,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "sha256": "4723dd8393c91f4311276be52064b92e72f4d39ef8e092a32a9938a459f0a214",
+      "reference": "ART_10_12.png",
+      "generated_source": "exec-2743754c-4067-4719-9afe-f935bac83b1e.png",
+      "prompt": "Create ONE original production-ready BACKGROUND PLATE for a hand-painted 2D side-scrolling game, LAST LECTURE — THE FOLDING LIBRARY. The provided image is STYLE REFERENCE only. Output a single very wide landscape composition (aim 1536x1024 or wider), NOT a concept presentation board, no panels, no framing. Absolutely NO text, numbers, labels, UI, hero, characters, monsters, symbols intended as puzzle instructions, collectible books, foreground platforms, bridge, foreground ground, or walkable floor. This texture will be placed BEHIND independently authored playable platforms and props in Godot. The lowest 35 percent must be calm deep navy atmospheric negative space, with only distant faint silhouettes. No large foreground columns cutting the middle or lower play band. Strong architectural depth in the upper two-thirds, subtle distant supports, soft painterly shading, restrained clean edges, gently simplified surfaces rather than noisy tiny marks. Ivory parchment and thick book-page architecture, dark navy ink shadows and dark brown leather binding, sparse burgundy bookmark ribbons, a few restrained warm amber lamps and cyan CRT glows. Grand abandoned computer-science university, melancholy and wondrous. Smooth illustrated 2D art, NOT photorealistic, NOT a 3D render, NOT pixel art, NOT flat paper collage, no game-ripped assets. Make most background values muted, avoid bright white filling the player band. The illustration is a useful quiet far/mid-background, not a screenshot of finished playable scenery.  LOCATION: a huge old BOOKBINDING WORKSHOP. Distant leather rollers, brass press silhouettes, suspended paper rolls and ink-dark structural book spines in upper background, long thin burgundy ribbons stretched above. Keep massive mechanisms softly silhouetted behind the gameplay, NOT a crushing platform or obstacle in the foreground. Sparse amber working lamps and quiet cyan power tube accents. Bottom 35 percent clear muted navy negative space; no floor, no walkable machinery.",
+      "visual_review": "Passed: no characters, UI labels or foreground floor; calm navy lower play band."
+    },
+    {
+      "name": "tribunal",
+      "file": "tribunal.png",
+      "bytes": 2170884,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "sha256": "8507362bd485daf784507d0d674c9e9c0f763b9f3ad82b5411f49b1d2d225890",
+      "reference": "ART_13_15.png",
+      "generated_source": "exec-f6280d95-5299-4d82-9760-f565da7f5246.png",
+      "prompt": "Create ONE original production-ready BACKGROUND PLATE for a hand-painted 2D side-scrolling game, LAST LECTURE — THE FOLDING LIBRARY. The provided image is STYLE REFERENCE only. Output a single very wide landscape composition (aim 1536x1024 or wider), NOT a concept presentation board, no panels, no framing. Absolutely NO text, numbers, labels, UI, hero, characters, monsters, symbols intended as puzzle instructions, collectible books, foreground platforms, bridge, foreground ground, or walkable floor. This texture will be placed BEHIND independently authored playable platforms and props in Godot. The lowest 35 percent must be calm deep navy atmospheric negative space, with only distant faint silhouettes. No large foreground columns cutting the middle or lower play band. Strong architectural depth in the upper two-thirds, subtle distant supports, soft painterly shading, restrained clean edges, gently simplified surfaces rather than noisy tiny marks. Ivory parchment and thick book-page architecture, dark navy ink shadows and dark brown leather binding, sparse burgundy bookmark ribbons, a few restrained warm amber lamps and cyan CRT glows. Grand abandoned computer-science university, melancholy and wondrous. Smooth illustrated 2D art, NOT photorealistic, NOT a 3D render, NOT pixel art, NOT flat paper collage, no game-ripped assets. Make most background values muted, avoid bright white filling the player band. The illustration is a useful quiet far/mid-background, not a screenshot of finished playable scenery.  LOCATION: the solemn COMPILER TRIBUNAL lecture court. An enormous OPEN BOOK LECTERN far in the middle distance, large dim cyan rectangular projection behind it WITHOUT text, high dark bookbinding columns near outer edges only, draped sparse red ribbons and a distant upper arch containing the faintest pale-violet sky hint. This is a background arena plate, not a boss screenshot. No boss, statues shaped like characters, no battle props, no foreground dais or walkable floor. Leave the lower play band quiet navy and the main silhouette space open.",
+      "visual_review": "Passed: no characters, UI labels or foreground floor; calm navy lower play band."
+    },
+    {
+      "name": "open_book_arch",
+      "file": "open_book_arch.png",
+      "bytes": 2113746,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGBA",
+      "sha256": "cc64d344616656ddfbff79abf0d3f07aee21f21e26314855cc30455fed5c9428",
+      "alpha_extrema": [
+        0,
+        254
+      ],
+      "used_rect_by_alpha_threshold": {
+        "8": [
+          1,
+          7,
+          1534,
+          981
+        ],
+        "16": [
+          2,
+          7,
+          1532,
+          980
+        ],
+        "128": [
+          3,
+          9,
+          1530,
+          977
+        ]
+      },
+      "reference": "ART_01_03.png; D_folding_library.png",
+      "generated_source": "exec-cda8fcd8-1437-484c-87f8-d83ac1f84b4f.png",
+      "prompt": "Create ONE production-quality TRANSPARENT GAME ENVIRONMENT CUTOUT for LAST LECTURE — THE FOLDING LIBRARY. Use the attached approved concept only as the painted world style reference, do not reproduce the concept board. The asset is a giant OPEN BOOK transformed into a broad pointed entrance ARCH, seen straight-on in a clean 2D side-view game elevation. Two thick ivory page legs stand on the same flat bottom baseline, pages curve inward and meet at a high pointed open-book arch overhead. A generous fully OPEN doorway in the middle, at least half total width, readable open silhouette. Paper must look thick, folded and heavy, with layered page edges, smooth softly painted gradients, warm ivory lit edges, rich deep navy shading inside the folds, slightly broken hand-ink outlines, dark leather binding only on outside edges, one restrained burgundy bookmark ribbon following the fold. Painterly dimensional game illustration matching the refs, NOT flat beige rectangles, NOT a stone arch, NOT pixel art, NOT photorealistic or 3D render. No written text, letters, diagrams, symbols, labels, lamps, ground, shelves, scene background, sky, other props, character or enemy. Whole object fully visible with a small clear margin above and below, no cropping at top or feet. CRITICAL: real transparent alpha both outside the silhouette AND throughout the entire central doorway opening; do not fill the doorway with white, black or colored pixels. Transparent_background true. Square or slightly wide canvas, coherent frontal architecture, feet aligned to bottom. The cutout will overlay independent native Godot terrain and a separate background, so the central passage must remain truly transparent.",
+      "role": "Transparent foreground architectural cutout",
+      "visual_review": "Passed: alpha-zero external corners and central opening; complete book arch; no characters, ground or UI.",
+      "integration": {
+        "foot_baseline_y": 987,
+        "nominal_alpha_threshold": 16
+      }
+    },
+    {
+      "name": "paper_platform",
+      "file": "paper_platform.png",
+      "bytes": 851516,
+      "dimensions": [
+        2172,
+        724
+      ],
+      "mode": "RGBA",
+      "sha256": "3d5b0cfe9b1f36b06df5ad0968521474fc9d82092cb89b0695095b06a5e5bd29",
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "used_rect_by_alpha_threshold": {
+        "8": [
+          17,
+          262,
+          2138,
+          207
+        ],
+        "16": [
+          17,
+          264,
+          2138,
+          205
+        ],
+        "128": [
+          18,
+          265,
+          2136,
+          204
+        ]
+      },
+      "reference": "D_folding_library.png",
+      "generated_source": "exec-f09867cf-0e26-48ab-974c-77c8ef28d225.png",
+      "prompt": "Create ONE production game texture cutout on REAL TRANSPARENT ALPHA for LAST LECTURE — THE FOLDING LIBRARY, using attached image only as painted style reference. The asset is a single long HORIZONTAL BOOK-SIDE PLATFORM STRIP in exact FRONT SIDE ELEVATION, orthographic 2D, not perspective. Width-to-height ratio of the OBJECT about 6:1; wide landscape canvas. Absolutely straight level horizontal walkable TOP edge, thickness about 180-220 pixels at 1400 pixels object width. Rich dimensional layered ivory page edges underneath, a few delicately irregular paper seams and soft painterly brush gradients, subtle warm highlight on top, thin hand-ink outlines, deep navy shadow and dark leather binding along the BOTTOM. Two rounded/beveled closed book END CAPS, one at either end; long visually simple center portion that can be repeated horizontally in a 2D game. Fine warm paper striations and shade variation must make it hand-painted, not flat beige polygons or a plain rectangle. The upper surface must remain perfectly flat and straight for player collision, no waves or slopes. Whole object is fully visible and horizontally aligned, leave a small transparent margin around it, do not crop the end caps. NO lettering, book-cover title, diagrams, glyphs, characters, background, ground beneath, labels, UI, other objects, ornate gold symbols, hanging ribbons, overhanging ornaments or dangling strips. Only this one platform strip, alpha transparent everywhere outside. Elegant soft painterly 2D architecture matching the selected reference, not pixel art, not 3D render, not photo.",
+      "role": "Transparent horizontal platform surface texture with separate end caps",
+      "visual_review": "Passed: calm repeated center and intact leather end caps; transparent outside; no hanging ornaments or text. Low-alpha stray pixels require a thresholded source region.",
+      "integration": {
+        "nominal_center_top_y": 275,
+        "nominal_center_bottom_y": 464,
+        "suggested_center_region": [
+          200,
+          275,
+          1750,
+          190
+        ],
+        "nominal_alpha_threshold": 16
+      }
+    },
+    {
+      "name": "portal_beyond",
+      "file": "portal_beyond.png",
+      "bytes": 1984012,
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "mode": "RGB",
+      "sha256": "68ed28994bff4634d9f1178de1228ce553e2d9fd503244998d7e569696f13f5a",
+      "reference": "ART_13_15.png, bottom scene 15 only",
+      "generated_source": "exec-ca009746-b3ef-4529-8706-d1283d9ecb7f.png",
+      "prompt": "Create ONE original production-quality PORTRAIT 2:3 background image, a view of the distant world BEYOND a portal in LAST LECTURE. The reference board has three scenes; use ONLY the distant pale violet other-world vista seen through the doorway in its BOTTOM scene as direction. Do not recreate the board or any doorway, library, book or figure. The WHOLE image is the new distant vista, edge to edge, a single composition without borders or panels.\n\nAn immense luminous mathematics/proofs dimension under a pearlescent lavender and warm pale-pink sky: layered impossible stone terraces, elegant suspended bridges and thin geometric towers receding far into soft atmospheric mist. A few massive floating cubic architectural blocks hang at great distance, not a repeated pattern of flat icons. Their stone surfaces have convincing subtle painted volume and fine stepped edges, softened by distance. Include graceful monumental bridge spans and tiny far-away stair terraces linking parts of the skyline. Depth has several clear atmospheric layers, near-muted violet silhouettes at the outer edges, softer luminous distant forms near center, airy clouds below. The view feels vast, unknown and quietly wondrous, visibly different from the dark book library.\n\nSoft polished hand-painted 2D game environment illustration with nuanced gradients, delicate edges, dimensional architecture and restrained detail; not a flat solid lavender rectangle, not basic vector blocks, not pixel art, not photorealistic, not a 3D render, no glossy sci-fi machinery. Keep center and lower quarter spacious and softly luminous so the game's small dark lantern hero will remain legible when rendered over the separate scene. The image is a scenic background plate to be drawn inside a separately created portal opening. NO hero, characters, enemies, text, lettering, numbers, labels, UI, symbols, outer doorframe, book pages, library, foreground ground or floor. No black vignette or painted arch around the picture. Fill all four image edges with the vista and sky.",
+      "role": "Distant vista rendered inside the separately drawn World 01 exit portal",
+      "visual_review": "Passed: pearlescent violet sky, dimensional floating geometry and bridges, no frame, foreground floor, character, enemy or UI. Matches approved scene-15 direction; not World 02 gameplay."
+    }
+  ]
+}
