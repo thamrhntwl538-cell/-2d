@@ -1,0 +1,1823 @@
+{
+  "schema_version": "folding-library-design-1.0",
+  "title": "LAST LECTURE — Stage 01: The Folding Library",
+  "title_ar": "المحاضرة الأخيرة — المرحلة الأولى: المكتبة المطوية",
+  "status": "design_only_not_implemented",
+  "scope": {
+    "deliverable": "Detailed layout and progression design, not Godot implementation.",
+    "no_project_changes": true,
+    "no_enemy_implementation": true,
+    "no_slash_work": true
+  },
+  "coordinate_systems": {
+    "local_physics": "World pixels, each room origin at top-left; +x right, +y down. Object pos defaults to foot/contact-surface anchor unless anchor overrides it.",
+    "map_schematic": "Map units, independent of world-pixel scale. map_rect is [x,y,width,height]; map_polyline points are exact for a readable overview, not a physical seamless world.",
+    "room_ids": "User-facing IDs 1 through 10; no 0-based room IDs in this package.",
+    "rects": "[x,y,width,height]",
+    "positions": "[x,y]",
+    "map_canvas_size": [1800, 1260],
+    "map_schematic_source": "diagram_layout.json and D_LIBRARY_MAP.svg; schematic positions match the selected-D overview.",
+    "route_waypoints": "Navigation landmarks, not direct centre-to-centre jump commands. Walk to each ledge edge before jumping; use takeoff/landing points about 35 px inside the edges."
+  },
+  "identity": {
+    "chosen_proposal": "D",
+    "name": "The Folding Library",
+    "visual_direction_ar": "مكتبة سريالية من ورق عاجي وكتب مطوية، رسوم حبر واضحة، ألسنة قماش ملونة، وفراغات مضيئة بين الرفوف؛ بعيدة بصرياً عن الحجر الداكن السابق.",
+    "navigation_landmarks_ar": ["غرفة 1: كتاب مفتوح عند المدخل", "غرفة 4: برج ذو أربع طبقات مميزة", "غرفة 5: ثلاثة كتب برموز كبيرة", "غرفة 7: صفحة تتحول إلى درج ثابت", "غرفة 9: منصة المحاضر الدائرية"],
+    "readability_rules": [
+      "Platforms have continuous inked edges and stable light-value contrast.",
+      "Background paper never crosses the hero or hides enemy telegraphs.",
+      "Book identity uses shape/glyph as well as color.",
+      "No visual-only doorway is mistaken for a traversable shortcut."
+    ]
+  },
+  "movement_envelope": {
+    "hero_speed": 300,
+    "jump_impulse_magnitude": 790,
+    "gravity": 2050,
+    "theoretical_jump_apex": 152.2,
+    "reference_visible_hero_height": 114,
+    "reference_collider_size": [30, 58],
+    "mandatory_movement": ["run", "ordinary_jump"],
+    "future_abilities_required": false,
+    "safe_ledge_rise_range": [100, 120],
+    "mandatory_max_rise": 120,
+    "absolute_horizontal_gap_cap": 140,
+    "high_rise_jump_gap_cap": 80,
+    "designed_high_rise_gap": 50,
+    "near_level_gap_cap": 140,
+    "landing_width_min": 220,
+    "head_clearance_under_overhang_min": 140,
+    "design_policy": "Do not combine the separate maximum gap and rise. All mandatory 120-rise jumps here use 50-pixel edge gaps. First 120-high ledge above a continuous walking floor is a solid pedestal, not a low one-way ceiling.",
+    "validation_status": "Conservative proposed bounds only; not tested in Godot in this design package."
+  },
+  "main_route": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+  "rooms": [
+    {
+      "id": 1,
+      "code": "E",
+      "name": "Threshold of Unwritten Pages",
+      "title_ar": "بهو الصفحة الأولى",
+      "type": "entrance_weapon_training",
+      "map_rect": [70, 880, 250, 140],
+      "physical_bounds": {
+        "origin": [0, 0],
+        "size": [2400, 1440],
+        "lowest_safe_floor_y": 1260
+      },
+      "spawns": {
+        "start": [180, 1260],
+        "from_2": [2190, 1260]
+      },
+      "surfaces": [
+        {
+          "id": "r1_floor",
+          "kind": "fixed",
+          "top_left": [0, 1260],
+          "width": 2400,
+          "depth": 180,
+          "one_way": false,
+          "solid_height": 180
+        }
+      ],
+      "objects": [
+        {
+          "id": "bench_1",
+          "type": "bench",
+          "pos": [300, 1260],
+          "label_ar": "مقعد العتبة",
+          "protected": true
+        },
+        {
+          "id": "weapon_pickup",
+          "type": "reserved_weapon_pickup",
+          "pos": [600, 1260],
+          "label_ar": "أداة الحارس",
+          "grants": "weapon_owned",
+          "future_implementation_only": true
+        },
+        {
+          "id": "training_station",
+          "type": "non_hostile_training",
+          "pos": [1120, 1260],
+          "label_ar": "مساحة التدريب",
+          "bounds": [850, 1060, 650, 200],
+          "mandatory_path": true,
+          "combat_required": false
+        },
+        {
+          "id": "weapon_check_gate",
+          "type": "progress_gate",
+          "pos": [1820, 1260],
+          "label_ar": "ختم الاستعداد",
+          "requires": ["weapon_owned"],
+          "cannot_jump_around": true
+        },
+        {
+          "id": "exit_to_2",
+          "type": "main_exit",
+          "pos": [2290, 1260],
+          "label_ar": "إلى رواق الهوامش"
+        }
+      ],
+      "main_route_waypoints": [
+        [180, 1260],
+        [600, 1260],
+        [1120, 1260],
+        [2290, 1260]
+      ],
+      "design_notes_ar": ["مساحة مضيئة وهادئة من ورق عاجي؛ لا أعداء ولا مخاطر.", "الأداة في المسار الإجباري، ثم تدريب آمن قبل أول قتال إلزامي في الغرفة 2. التدريب لا يطلب تطوير Slash في هذه الحزمة."]
+    },
+    {
+      "id": 2,
+      "code": "H",
+      "name": "Marginalia Hall",
+      "title_ar": "ممر الواجبات",
+      "type": "assignments_first_combat",
+      "map_rect": [360, 880, 250, 140],
+      "physical_bounds": {
+        "origin": [0, 0],
+        "size": [2800, 1440],
+        "lowest_safe_floor_y": 1260
+      },
+      "spawns": {
+        "from_1": [180, 1260],
+        "from_3": [2540, 1260],
+        "shortcut_from_4": [1900, 900]
+      },
+      "surfaces": [
+        {
+          "id": "r2_floor",
+          "kind": "fixed",
+          "top_left": [0, 1260],
+          "width": 2800,
+          "depth": 180,
+          "one_way": false,
+          "solid_height": 180
+        },
+        {
+          "id": "r2_step_1",
+          "kind": "fixed",
+          "top_left": [1220, 1140],
+          "width": 220,
+          "depth": 24,
+          "one_way": false,
+          "solid_height": 120
+        },
+        {
+          "id": "r2_step_2",
+          "kind": "fixed",
+          "top_left": [1490, 1020],
+          "width": 220,
+          "depth": 24,
+          "one_way": true
+        },
+        {
+          "id": "r2_shortcut_gallery",
+          "kind": "fixed",
+          "top_left": [1760, 900],
+          "width": 420,
+          "depth": 24,
+          "one_way": true
+        }
+      ],
+      "objects": [
+        {
+          "id": "first_combat_teach",
+          "type": "future_encounter_marker",
+          "pos": [1060, 1260],
+          "label_ar": "تجربة يرقة الخلل",
+          "encounter_id": "encounter:assignments"
+        },
+        {
+          "id": "shortcut_to_4",
+          "type": "shortcut_door",
+          "pos": [1940, 900],
+          "label_ar": "ممر الفهرس",
+          "requires": ["archive_shortcut_open"]
+        },
+        {
+          "id": "assignments_gate",
+          "type": "future_combat_gate",
+          "pos": [2610, 1260],
+          "label_ar": "ختم الهوامش",
+          "requires": ["encounter:assignments"],
+          "cannot_jump_around": true
+        },
+        {
+          "id": "exit_to_3",
+          "type": "main_exit",
+          "pos": [2690, 1260],
+          "label_ar": "إلى مرسم الأوراق"
+        }
+      ],
+      "main_route_waypoints": [
+        [180, 1260],
+        [1060, 1260],
+        [2690, 1260]
+      ],
+      "design_notes_ar": [
+        "الأرض الرئيسية مستوية. أول عدو منفرد داخل منطقة واضحة، بلا مقذوفات أو منصات أو خطر بيئي متزامن.",
+        "باب الاختصار مرئي من البداية لكنه لا يفتح من هذا الجانب؛ السلم الجانبي اختياري ولا يتجاوز ختم القتال."
+      ]
+    },
+    {
+      "id": 3,
+      "code": "L",
+      "name": "Scriptorium of Loose Leaves",
+      "title_ar": "مختبر المخطوطات",
+      "type": "laboratory_optional_upper_route",
+      "map_rect": [650, 880, 250, 140],
+      "physical_bounds": {
+        "origin": [0, 0],
+        "size": [3000, 1440],
+        "lowest_safe_floor_y": 1260
+      },
+      "spawns": {
+        "from_2": [180, 1260],
+        "from_4": [2720, 1260],
+        "shortcut_from_7": [2600, 900]
+      },
+      "surfaces": [
+        {
+          "id": "r3_floor",
+          "kind": "fixed",
+          "top_left": [0, 1260],
+          "width": 3000,
+          "depth": 180,
+          "one_way": false,
+          "solid_height": 180
+        },
+        {
+          "id": "r3_step_1",
+          "kind": "fixed",
+          "top_left": [820, 1140],
+          "width": 220,
+          "depth": 24,
+          "one_way": false,
+          "solid_height": 120
+        },
+        {
+          "id": "r3_step_2",
+          "kind": "fixed",
+          "top_left": [1090, 1020],
+          "width": 220,
+          "depth": 24,
+          "one_way": true
+        },
+        {
+          "id": "r3_upper_gallery",
+          "kind": "fixed",
+          "top_left": [1360, 900],
+          "width": 650,
+          "depth": 24,
+          "one_way": true
+        },
+        {
+          "id": "r3_secret_gallery",
+          "kind": "fixed",
+          "top_left": [2070, 900],
+          "width": 730,
+          "depth": 24,
+          "one_way": true
+        }
+      ],
+      "objects": [
+        {
+          "id": "upper_wraith_teach",
+          "type": "future_encounter_marker",
+          "pos": [1680, 900],
+          "label_ar": "شبح النافذة في الشرفة",
+          "encounter_id": "r3_wraith_optional"
+        },
+        {
+          "id": "secret_3_trigger",
+          "type": "stationary_fold_latch",
+          "pos": [2130, 900],
+          "label_ar": "لسان طية جانبية",
+          "safe_trigger_rect": [2080, 760, 120, 150],
+          "fold_id": "secret_3_fold",
+          "mount_plane": "rear_alcove_back_panel",
+          "hero_collision": false,
+          "does_not_obstruct_through_gallery": true
+        },
+        {
+          "id": "secret_3_reward",
+          "type": "optional_secret_reward",
+          "pos": [2400, 900],
+          "label_ar": "رسم طالب مجهول",
+          "secret_id": "secret_3",
+          "hidden_until": "secret_3_fold_open"
+        },
+        {
+          "id": "shortcut_to_7",
+          "type": "shortcut_door",
+          "pos": [2670, 900],
+          "label_ar": "ممر ظهر الكتاب",
+          "requires": ["output_complete"]
+        },
+        {
+          "id": "exit_to_4",
+          "type": "main_exit",
+          "pos": [2890, 1260],
+          "label_ar": "إلى برج الرفوف"
+        }
+      ],
+      "main_route_waypoints": [
+        [180, 1260],
+        [2890, 1260]
+      ],
+      "design_notes_ar": ["المسار الأرضي الآمن يصل إلى الأرشيف؛ الشرفة العليا قراءة اختيارية للعدو وموضع السر الأول.", "الأوراق المتطايرة عناصر خلفية خارج مسار القفز، ولا تحجب حافة المنصة أو مثلث العدو."]
+    },
+    {
+      "id": 4,
+      "code": "A",
+      "name": "Tower of Folded Stacks",
+      "title_ar": "الأرشيف المطوي",
+      "type": "archive_four_real_floors",
+      "map_rect": [990, 490, 240, 500],
+      "physical_bounds": {
+        "origin": [0, 0],
+        "size": [2800, 2880],
+        "lowest_safe_floor_y": 2700
+      },
+      "spawns": {
+        "from_3": [220, 2700],
+        "from_5": [2440, 540],
+        "shortcut_from_2": [2520, 1980]
+      },
+      "surfaces": [
+        {
+          "id": "r4_floor_1",
+          "kind": "fixed",
+          "top_left": [0, 2700],
+          "width": 2800,
+          "depth": 180,
+          "one_way": false,
+          "solid_height": 180
+        },
+        {
+          "id": "r4_floor_2_right",
+          "kind": "fixed",
+          "top_left": [2070, 1980],
+          "width": 670,
+          "depth": 24,
+          "one_way": true
+        },
+        {
+          "id": "r4_floor_3_left",
+          "kind": "fixed",
+          "top_left": [80, 1260],
+          "width": 590,
+          "depth": 24,
+          "one_way": true
+        },
+        {
+          "id": "r4_floor_4_right",
+          "kind": "fixed",
+          "top_left": [2070, 540],
+          "width": 670,
+          "depth": 24,
+          "one_way": true
+        },
+        {
+          "id": "r4_flight_1_step_1",
+          "kind": "fixed",
+          "top_left": [720, 2580],
+          "width": 220,
+          "depth": 24,
+          "one_way": false,
+          "solid_height": 120
+        },
+        {
+          "id": "r4_flight_1_step_2",
+          "kind": "fixed",
+          "top_left": [990, 2460],
+          "width": 220,
+          "depth": 24,
+          "one_way": true
+        },
+        {
+          "id": "r4_flight_1_step_3",
+          "kind": "fixed",
+          "top_left": [1260, 2340],
+          "width": 220,
+          "depth": 24,
+          "one_way": true
+        },
+        {
+          "id": "r4_flight_1_step_4",
+          "kind": "fixed",
+          "top_left": [1530, 2220],
+          "width": 220,
+          "depth": 24,
+          "one_way": true
+        },
+        {
+          "id": "r4_flight_1_step_5",
+          "kind": "fixed",
+          "top_left": [1800, 2100],
+          "width": 220,
+          "depth": 24,
+          "one_way": true
+        },
+        {
+          "id": "r4_flight_2_step_1",
+          "kind": "fixed",
+          "top_left": [1800, 1860],
+          "width": 220,
+          "depth": 24,
+          "one_way": true
+        },
+        {
+          "id": "r4_flight_2_step_2",
+          "kind": "fixed",
+          "top_left": [1530, 1740],
+          "width": 220,
+          "depth": 24,
+          "one_way": true
+        },
+        {
+          "id": "r4_flight_2_step_3",
+          "kind": "fixed",
+          "top_left": [1260, 1620],
+          "width": 220,
+          "depth": 24,
+          "one_way": true
+        },
+        {
+          "id": "r4_flight_2_step_4",
+          "kind": "fixed",
+          "top_left": [990, 1500],
+          "width": 220,
+          "depth": 24,
+          "one_way": true
+        },
+        {
+          "id": "r4_flight_2_step_5",
+          "kind": "fixed",
+          "top_left": [720, 1380],
+          "width": 220,
+          "depth": 24,
+          "one_way": true
+        },
+        {
+          "id": "r4_flight_3_step_1",
+          "kind": "fixed",
+          "top_left": [720, 1140],
+          "width": 220,
+          "depth": 24,
+          "one_way": true
+        },
+        {
+          "id": "r4_flight_3_step_2",
+          "kind": "fixed",
+          "top_left": [990, 1020],
+          "width": 220,
+          "depth": 24,
+          "one_way": true
+        },
+        {
+          "id": "r4_flight_3_step_3",
+          "kind": "fixed",
+          "top_left": [1260, 900],
+          "width": 220,
+          "depth": 24,
+          "one_way": true
+        },
+        {
+          "id": "r4_flight_3_step_4",
+          "kind": "fixed",
+          "top_left": [1530, 780],
+          "width": 220,
+          "depth": 24,
+          "one_way": true
+        },
+        {
+          "id": "r4_flight_3_step_5",
+          "kind": "fixed",
+          "top_left": [1800, 660],
+          "width": 220,
+          "depth": 24,
+          "one_way": true
+        }
+      ],
+      "objects": [
+        {
+          "id": "bench_4",
+          "type": "bench",
+          "pos": [2290, 1980],
+          "label_ar": "مقعد الفهرس",
+          "protected": true,
+          "floor": 2
+        },
+        {
+          "id": "archive_shortcut_latch",
+          "type": "one_sided_shortcut_latch",
+          "pos": [2500, 1980],
+          "label_ar": "مزلاج الممر إلى رواق الهوامش",
+          "grants": "archive_shortcut_open",
+          "activation_side": "room_4_only"
+        },
+        {
+          "id": "shortcut_to_2",
+          "type": "shortcut_door",
+          "pos": [2630, 1980],
+          "label_ar": "العودة إلى رواق الهوامش",
+          "requires": ["archive_shortcut_open"]
+        },
+        {
+          "id": "secret_4_trigger",
+          "type": "stationary_fold_latch",
+          "pos": [480, 1260],
+          "label_ar": "لسان رف مطوي",
+          "fold_id": "secret_4_fold",
+          "floor": 3,
+          "safe_trigger_rect": [420, 1120, 150, 150]
+        },
+        {
+          "id": "secret_4_reward",
+          "type": "optional_secret_reward",
+          "pos": [180, 1260],
+          "label_ar": "فهرس الطلاب المحذوفين",
+          "secret_id": "secret_4",
+          "floor": 3
+        },
+        {
+          "id": "archive_floor_4_landmark",
+          "type": "landmark",
+          "pos": [2360, 540],
+          "label_ar": "الكتاب المفتوح العظيم",
+          "floor": 4
+        },
+        {
+          "id": "exit_to_5",
+          "type": "main_exit",
+          "pos": [2640, 540],
+          "label_ar": "إلى فهرس الإدخال",
+          "floor": 4
+        }
+      ],
+      "main_route_waypoints": [
+        [220, 2700],
+        [650, 2700],
+        [830, 2580],
+        [1100, 2460],
+        [1370, 2340],
+        [1640, 2220],
+        [1910, 2100],
+        [2180, 1980],
+        [1910, 1860],
+        [1640, 1740],
+        [1370, 1620],
+        [1100, 1500],
+        [830, 1380],
+        [560, 1260],
+        [830, 1140],
+        [1100, 1020],
+        [1370, 900],
+        [1640, 780],
+        [1910, 660],
+        [2180, 540],
+        [2640, 540]
+      ],
+      "design_notes_ar": [
+        "أربع طبقات فعلية على ارتفاعات 2700، 1980، 1260، 540؛ لا انتقال آني بين الطوابق.",
+        "ثلاث رحلات متعرجة من كتب ثابتة، لكل رحلة ست قفزات؛ فرق كل قفزة 120 والفجوة 50.",
+        "الطابق الثاني: مقعد واختصار 4↔2. الثالث: سر خلف رف. الرابع: مخرج INPUT.",
+        "لا عدو إلزامي أو مقذوفات أو منصات متحركة في الصعود؛ كل نقطة توقف لها أرض ثابتة وحافة مقروءة."
+      ],
+      "floors": [
+        {
+          "floor": 1,
+          "surface_y": 2700,
+          "side": "full_width",
+          "map_y": 898,
+          "function": "arrival"
+        },
+        {
+          "floor": 2,
+          "surface_y": 1980,
+          "side": "right",
+          "map_y": 807,
+          "function": "bench_and_shortcut"
+        },
+        {
+          "floor": 3,
+          "surface_y": 1260,
+          "side": "left",
+          "map_y": 716,
+          "function": "optional_secret"
+        },
+        {
+          "floor": 4,
+          "surface_y": 540,
+          "side": "right",
+          "map_y": 625,
+          "function": "input_exit"
+        }
+      ],
+      "ascent_flights": [
+        {
+          "id": "archive_flight_1",
+          "from_floor": 1,
+          "to_floor": 2,
+          "direction": "right",
+          "step_surface_ids": ["r4_flight_1_step_1", "r4_flight_1_step_2", "r4_flight_1_step_3", "r4_flight_1_step_4", "r4_flight_1_step_5"],
+          "landing_surface_id": "r4_floor_2_right",
+          "jumps": 6,
+          "rise_each": 120,
+          "gap_between_successive_steps": 50,
+          "landing_gap": 50,
+          "ordinary_jump_only": true
+        },
+        {
+          "id": "archive_flight_2",
+          "from_floor": 2,
+          "to_floor": 3,
+          "direction": "left",
+          "step_surface_ids": ["r4_flight_2_step_1", "r4_flight_2_step_2", "r4_flight_2_step_3", "r4_flight_2_step_4", "r4_flight_2_step_5"],
+          "landing_surface_id": "r4_floor_3_left",
+          "jumps": 6,
+          "rise_each": 120,
+          "gap_between_successive_steps": 50,
+          "landing_gap": 50,
+          "ordinary_jump_only": true
+        },
+        {
+          "id": "archive_flight_3",
+          "from_floor": 3,
+          "to_floor": 4,
+          "direction": "right",
+          "step_surface_ids": ["r4_flight_3_step_1", "r4_flight_3_step_2", "r4_flight_3_step_3", "r4_flight_3_step_4", "r4_flight_3_step_5"],
+          "landing_surface_id": "r4_floor_4_right",
+          "jumps": 6,
+          "rise_each": 120,
+          "gap_between_successive_steps": 50,
+          "landing_gap": 50,
+          "ordinary_jump_only": true
+        }
+      ],
+      "main_ascent_jump_count": 18,
+      "lift_required": false
+    },
+    {
+      "id": 5,
+      "code": "I",
+      "name": "The Input Index",
+      "title_ar": "غرفة الإدخال — INPUT",
+      "type": "puzzle_input_collect_visible_books",
+      "map_rect": [990, 220, 240, 140],
+      "physical_bounds": {
+        "origin": [0, 0],
+        "size": [2400, 1440],
+        "lowest_safe_floor_y": 1260
+      },
+      "spawns": {
+        "from_4": [180, 1260],
+        "from_6": [2140, 1260]
+      },
+      "surfaces": [
+        {
+          "id": "r5_floor",
+          "kind": "fixed",
+          "top_left": [0, 1260],
+          "width": 2400,
+          "depth": 180,
+          "one_way": false,
+          "solid_height": 180
+        }
+      ],
+      "objects": [
+        {
+          "id": "book_triangle",
+          "type": "puzzle_book",
+          "pos": [740, 1260],
+          "label_ar": "كتاب المثلث",
+          "symbol": "TRIANGLE",
+          "glyph_ar": "مثلث",
+          "mandatory": true,
+          "visible": true,
+          "hidden": false
+        },
+        {
+          "id": "book_square",
+          "type": "puzzle_book",
+          "pos": [1140, 1260],
+          "label_ar": "كتاب المربع",
+          "symbol": "SQUARE",
+          "glyph_ar": "مربع",
+          "mandatory": true,
+          "visible": true,
+          "hidden": false
+        },
+        {
+          "id": "book_circle",
+          "type": "puzzle_book",
+          "pos": [1540, 1260],
+          "label_ar": "كتاب الدائرة",
+          "symbol": "CIRCLE",
+          "glyph_ar": "دائرة",
+          "mandatory": true,
+          "visible": true,
+          "hidden": false
+        },
+        {
+          "id": "input_receiving_desk",
+          "type": "puzzle_input",
+          "pos": [1880, 1260],
+          "label_ar": "منضدة الإدخال",
+          "requires_books": ["TRIANGLE", "SQUARE", "CIRCLE"],
+          "grants": "input_complete"
+        },
+        {
+          "id": "input_gate",
+          "type": "progress_gate",
+          "pos": [2220, 1260],
+          "label_ar": "ختم الإدخال",
+          "requires": ["input_complete"],
+          "cannot_jump_around": true
+        },
+        {
+          "id": "exit_to_6",
+          "type": "main_exit",
+          "pos": [2290, 1260],
+          "label_ar": "إلى قاعة الترتيب"
+        }
+      ],
+      "main_route_waypoints": [
+        [180, 1260],
+        [740, 1260],
+        [1140, 1260],
+        [1540, 1260],
+        [1880, 1260],
+        [2290, 1260]
+      ],
+      "design_notes_ar": [
+        "الكتب الثلاثة △ □ ○ مكشوفة على رفوف منخفضة في المسار الرئيسي؛ يمكن جمعها بأي ترتيب.",
+        "لا قتال أو خطر أو قفزة دقيقة، ولا كتاب إلزامي داخل الأسرار. تميز الكتب بالرمز والشكل دون الاعتماد على اللون وحده."
+      ]
+    },
+    {
+      "id": 6,
+      "code": "P",
+      "name": "The Ordering Hall",
+      "title_ar": "قاعة الترتيب — PROCESS",
+      "type": "puzzle_process_order_and_optional_turret",
+      "map_rect": [670, 220, 250, 140],
+      "physical_bounds": {
+        "origin": [0, 0],
+        "size": [3200, 1440],
+        "lowest_safe_floor_y": 1260
+      },
+      "spawns": {
+        "from_5": [180, 1260],
+        "from_7": [2940, 1260]
+      },
+      "surfaces": [
+        {
+          "id": "r6_floor",
+          "kind": "fixed",
+          "top_left": [0, 1260],
+          "width": 3200,
+          "depth": 180,
+          "one_way": false,
+          "solid_height": 180
+        },
+        {
+          "id": "r6_gallery_step_1",
+          "kind": "fixed",
+          "top_left": [1760, 1140],
+          "width": 220,
+          "depth": 24,
+          "one_way": false,
+          "solid_height": 120
+        },
+        {
+          "id": "r6_gallery_step_2",
+          "kind": "fixed",
+          "top_left": [2030, 1020],
+          "width": 220,
+          "depth": 24,
+          "one_way": true
+        },
+        {
+          "id": "r6_turret_gallery",
+          "kind": "fixed",
+          "top_left": [2300, 900],
+          "width": 640,
+          "depth": 24,
+          "one_way": true
+        }
+      ],
+      "objects": [
+        {
+          "id": "nearby_order_clue",
+          "type": "glyph_clue",
+          "pos": [1280, 1030],
+          "label_ar": "1: △ | 2: □ | 3: ○",
+          "anchor": "center",
+          "display_order_left_to_right": ["TRIANGLE", "SQUARE", "CIRCLE"],
+          "always_visible_from_controls": true,
+          "display_direction": "left_to_right"
+        },
+        {
+          "id": "process_slot_1",
+          "type": "book_slot",
+          "pos": [1080, 1260],
+          "label_ar": "الخانة الأولى",
+          "slot": 1
+        },
+        {
+          "id": "process_slot_2",
+          "type": "book_slot",
+          "pos": [1300, 1260],
+          "label_ar": "الخانة الثانية",
+          "slot": 2
+        },
+        {
+          "id": "process_slot_3",
+          "type": "book_slot",
+          "pos": [1520, 1260],
+          "label_ar": "الخانة الثالثة",
+          "slot": 3
+        },
+        {
+          "id": "process_confirm",
+          "type": "puzzle_process",
+          "pos": [1300, 1260],
+          "label_ar": "تثبيت الترتيب",
+          "requires": ["input_complete"],
+          "grants_on_correct": "process_verified",
+          "wrong_order": "harmless_feedback_and_retry",
+          "order_left_to_right": ["TRIANGLE", "SQUARE", "CIRCLE"]
+        },
+        {
+          "id": "gallery_cover_1",
+          "type": "future_projectile_cover",
+          "pos": [2400, 900],
+          "label_ar": "غلاف ساتر أول",
+          "width": 60,
+          "height": 100,
+          "hero_collision": true
+        },
+        {
+          "id": "gallery_cover_2",
+          "type": "future_projectile_cover",
+          "pos": [2590, 900],
+          "label_ar": "غلاف ساتر ثان",
+          "width": 60,
+          "height": 100,
+          "hero_collision": true
+        },
+        {
+          "id": "turret_side_gallery",
+          "type": "future_encounter_marker",
+          "pos": [2810, 900],
+          "label_ar": "برج الصياغة",
+          "encounter_id": "r6_turret_optional"
+        },
+        {
+          "id": "process_gate",
+          "type": "progress_gate",
+          "pos": [3040, 1260],
+          "label_ar": "ختم المعالجة",
+          "requires": ["process_verified"],
+          "cannot_jump_around": true
+        },
+        {
+          "id": "exit_to_7",
+          "type": "main_exit",
+          "pos": [3090, 1260],
+          "label_ar": "إلى خزانة الانفتاح"
+        }
+      ],
+      "main_route_waypoints": [
+        [180, 1260],
+        [1300, 1260],
+        [3090, 1260]
+      ],
+      "design_notes_ar": [
+        "الدليل بجوار الخانات داخل إطار رؤية واحد؛ الصحيح من اليسار إلى اليمين: مثلث △، مربع □، دائرة ○.",
+        "الخطأ يعيد العرض دون ضرر أو استدعاء أعداء أو حذف الكتب. يحتفظ اللاعب بكل الكتب ويعيد المحاولة فوراً.",
+        "برج الصياغة في شرفة جانبية اختيارية، بمصدات واضحة ولا خط نار نحو الدليل أو الخانات أو الممر الرئيسي."
+      ]
+    },
+    {
+      "id": 7,
+      "code": "O",
+      "name": "The Unfolding Vault",
+      "title_ar": "جسر الإخراج — OUTPUT",
+      "type": "puzzle_output_permanent_page_stair",
+      "map_rect": [350, 220, 240, 140],
+      "physical_bounds": {
+        "origin": [0, 0],
+        "size": [3000, 1440],
+        "lowest_safe_floor_y": 1260
+      },
+      "spawns": {
+        "from_6": [180, 1260],
+        "from_8": [2730, 780],
+        "shortcut_from_3": [2420, 780]
+      },
+      "surfaces": [
+        {
+          "id": "r7_lower_floor",
+          "kind": "fixed",
+          "top_left": [0, 1260],
+          "width": 3000,
+          "depth": 180,
+          "one_way": false,
+          "solid_height": 180
+        },
+        {
+          "id": "r7_page_step_1",
+          "kind": "folded_page_locked_open",
+          "top_left": [1120, 1140],
+          "width": 220,
+          "depth": 24,
+          "one_way": false,
+          "solid_height": 120
+        },
+        {
+          "id": "r7_page_step_2",
+          "kind": "folded_page_locked_open",
+          "top_left": [1390, 1020],
+          "width": 220,
+          "depth": 24,
+          "one_way": true
+        },
+        {
+          "id": "r7_page_step_3",
+          "kind": "folded_page_locked_open",
+          "top_left": [1660, 900],
+          "width": 220,
+          "depth": 24,
+          "one_way": true
+        },
+        {
+          "id": "r7_page_step_4",
+          "kind": "folded_page_locked_open",
+          "top_left": [1930, 780],
+          "width": 220,
+          "depth": 24,
+          "one_way": true
+        },
+        {
+          "id": "r7_upper_landing",
+          "kind": "fixed",
+          "top_left": [2200, 780],
+          "width": 800,
+          "depth": 24,
+          "one_way": true
+        }
+      ],
+      "objects": [
+        {
+          "id": "output_safe_trigger",
+          "type": "puzzle_output",
+          "pos": [760, 1260],
+          "label_ar": "افتح الصفحة",
+          "requires": ["process_verified"],
+          "fold_id": "output_page_stair",
+          "safe_trigger_rect": [620, 1090, 300, 190]
+        },
+        {
+          "id": "fold_interlock_rail",
+          "type": "visible_interlock",
+          "pos": [980, 1260],
+          "label_ar": "انتظر تثبيت الطية",
+          "stays_closed_until": "output_complete"
+        },
+        {
+          "id": "shortcut_to_3",
+          "type": "shortcut_door",
+          "pos": [2470, 780],
+          "label_ar": "العودة إلى مرسم الأوراق",
+          "requires": ["output_complete"]
+        },
+        {
+          "id": "secret_7_cover",
+          "type": "optional_secret_gate",
+          "pos": [2400, 1260],
+          "label_ar": "تجويف تحت الغلاف",
+          "requires": ["output_complete"]
+        },
+        {
+          "id": "secret_7_reward",
+          "type": "optional_secret_reward",
+          "pos": [2640, 1260],
+          "label_ar": "رسالة بين الصفحات",
+          "secret_id": "secret_7"
+        },
+        {
+          "id": "exit_to_8",
+          "type": "main_exit",
+          "pos": [2890, 780],
+          "label_ar": "إلى ساحة الاختبار",
+          "requires": ["output_complete"]
+        }
+      ],
+      "main_route_waypoints": [
+        [180, 1260],
+        [760, 1260],
+        [1050, 1260],
+        [1230, 1140],
+        [1500, 1020],
+        [1770, 900],
+        [2040, 780],
+        [2310, 780],
+        [2890, 780]
+      ],
+      "design_notes_ar": [
+        "المشغل على أرض ثابتة خارج الحجم الذي تجتاحه الصفحة. حاجز واضح يمنع دخول منطقة الطي أثناء الحركة.",
+        "بعد الاستقرار تصبح الصفحة أربع درجات ثابتة إلى الشرفة العليا؛ أول درجة قاعدة صلبة كي لا يدخل رأس البطل تحتها.",
+        "تُحفظ الطية مفتوحة دائماً؛ ومنها يفتح اختصار 7↔3. السر الثالث تحت الشرفة ولا يحتوي مفتاح تقدم."
+      ]
+    },
+    {
+      "id": 8,
+      "code": "C",
+      "name": "The Examination Court",
+      "title_ar": "رواق المصحّح",
+      "type": "mandatory_seal_guard_then_protected_bench",
+      "map_rect": [350, 490, 240, 170],
+      "physical_bounds": {
+        "origin": [0, 0],
+        "size": [3400, 1440],
+        "lowest_safe_floor_y": 1260
+      },
+      "spawns": {
+        "from_7": [180, 1260],
+        "from_9": [3200, 1260],
+        "bench_respawn": [2860, 1260]
+      },
+      "surfaces": [
+        {
+          "id": "r8_floor",
+          "kind": "fixed",
+          "top_left": [0, 1260],
+          "width": 3400,
+          "depth": 180,
+          "one_way": false,
+          "solid_height": 180
+        }
+      ],
+      "objects": [
+        {
+          "id": "guard_entry_barrier",
+          "type": "future_arena_gate",
+          "pos": [790, 1260],
+          "label_ar": "بداية الاختبار",
+          "closes_only_after_safe_entry": true,
+          "reopens_after_victory": true,
+          "resets_open_after_death": true
+        },
+        {
+          "id": "broken_ta_guard",
+          "type": "future_encounter_marker",
+          "pos": [1640, 1260],
+          "label_ar": "المعيد المكسور — حارس الختم",
+          "encounter_id": "r8_seal_guard"
+        },
+        {
+          "id": "earned_seal_reward",
+          "type": "future_combat_reward",
+          "pos": [2230, 1260],
+          "label_ar": "ختم المترجم",
+          "requires": ["guard_clear"],
+          "grants": "compiler_seal_owned",
+          "requires_actual_combat_victory": true
+        },
+        {
+          "id": "guard_exit_barrier",
+          "type": "future_combat_gate",
+          "pos": [2530, 1260],
+          "label_ar": "نهاية الاختبار",
+          "requires": ["guard_clear", "compiler_seal_owned"],
+          "cannot_jump_around": true
+        },
+        {
+          "id": "bench_safety_partition",
+          "type": "projectile_only_paper_screen",
+          "pos": [2660, 1260],
+          "label_ar": "ستارة ورقية واقية",
+          "height": 260,
+          "hero_collision": false,
+          "projectile_collision": true,
+          "actor_passage_width": 180,
+          "passage_policy": "The hero walks through the screen; it has no hero-solid collider. It blocks incoming enemy projectiles only."
+        },
+        {
+          "id": "bench_8",
+          "type": "bench",
+          "pos": [2860, 1260],
+          "label_ar": "مقعد ما بعد الاختبار",
+          "protected": true,
+          "requires": ["guard_clear", "compiler_seal_owned"],
+          "after_guard": true
+        },
+        {
+          "id": "seal_socket",
+          "type": "seal_socket",
+          "pos": [3170, 1260],
+          "label_ar": "مقبس ختم المترجم",
+          "requires": ["guard_clear", "compiler_seal_owned"],
+          "grants": "seal_registered",
+          "consumes_seal": false
+        },
+        {
+          "id": "exit_to_9",
+          "type": "boss_approach_door",
+          "pos": [3290, 1260],
+          "label_ar": "إلى د. كومبايلر",
+          "requires": ["output_complete", "guard_clear", "compiler_seal_owned", "seal_registered"]
+        }
+      ],
+      "main_route_waypoints": [
+        [180, 1260],
+        [1050, 1260],
+        [1640, 1260],
+        [2230, 1260],
+        [2530, 1260],
+        [2860, 1260],
+        [3170, 1260],
+        [3290, 1260]
+      ],
+      "design_notes_ar": [
+        "اختبار المعيد المكسور على أرض عريضة خالية من المخاطر والأعداء الآخرين؛ توجد مساحة تراجع ورؤية للهجمات.",
+        "ختم المترجم مكافأة فوز حقيقي بالقتال مستقبلاً، ولا تعطيه البيئة أو المقعد أو المقبس.",
+        "المقعد الثالث بعد الحارس والختم فعلياً، خلف حاجز يحجب المقذوفات. لا يمكن تفعيله قبل النصر.",
+        "عند الموت أمام الزعيم تبقى نتيجة الحارس والختم والطية محفوظة؛ لا يعاد قتال الحارس. الستارة الواقية تسمح بمرور البطل وتحجب المقذوفات فقط، ولا تسد الطريق إلى المقعد."
+      ]
+    },
+    {
+      "id": 9,
+      "code": "T",
+      "name": "Dr. Compiler's Tribunal",
+      "title_ar": "قاعة المحاكمة — د. كومبايلر",
+      "type": "reserved_boss_arena",
+      "map_rect": [70, 490, 240, 170],
+      "physical_bounds": {
+        "origin": [0, 0],
+        "size": [4000, 1800],
+        "lowest_safe_floor_y": 1620
+      },
+      "spawns": {
+        "from_8": [220, 1620],
+        "from_10": [3720, 1620]
+      },
+      "surfaces": [
+        {
+          "id": "r9_arena_floor",
+          "kind": "fixed",
+          "top_left": [0, 1620],
+          "width": 4000,
+          "depth": 180,
+          "one_way": false,
+          "solid_height": 180
+        }
+      ],
+      "objects": [
+        {
+          "id": "boss_entry_barrier",
+          "type": "future_boss_gate",
+          "pos": [760, 1620],
+          "label_ar": "حدود المحاكمة",
+          "closes_only_after_safe_entry": true,
+          "reopens_after_victory": true,
+          "resets_open_after_death": true
+        },
+        {
+          "id": "dr_compiler_anchor",
+          "type": "future_boss_marker",
+          "pos": [2040, 1620],
+          "label_ar": "د. كومبايلر",
+          "boss_id": "dr_compiler",
+          "implementation_in_this_package": false
+        },
+        {
+          "id": "boss_exit_barrier",
+          "type": "future_boss_gate",
+          "pos": [3700, 1620],
+          "label_ar": "ختم النهاية",
+          "requires": ["boss_defeated"]
+        },
+        {
+          "id": "exit_to_10",
+          "type": "main_exit",
+          "pos": [3890, 1620],
+          "label_ar": "إلى الهامش الأخير",
+          "requires": ["boss_defeated"]
+        }
+      ],
+      "main_route_waypoints": [
+        [220, 1620],
+        [980, 1620],
+        [2040, 1620],
+        [3890, 1620]
+      ],
+      "design_notes_ar": [
+        "حجز تخطيطي لساحة الزعيم فقط؛ لا برمجة قتال أو أعداء في هذه الحزمة.",
+        "الأرض الأساسية واسعة ومستوية، ومداخل الأمان لا تطلق القتال قبل أن يدخل البطل كاملاً.",
+        "باب العودة إلى مقعد الغرفة 8 متاح قبل بدء المحاولة، وباب الغرفة 10 لا يفتح إلا بفوز حقيقي مستقبلاً."
+      ]
+    },
+    {
+      "id": 10,
+      "code": "F",
+      "name": "The Final Margin",
+      "title_ar": "الصفحة التالية",
+      "type": "aftermath_stage_end",
+      "map_rect": [70, 220, 240, 140],
+      "physical_bounds": {
+        "origin": [0, 0],
+        "size": [2200, 1440],
+        "lowest_safe_floor_y": 1260
+      },
+      "spawns": {
+        "from_9": [180, 1260]
+      },
+      "surfaces": [
+        {
+          "id": "r10_floor",
+          "kind": "fixed",
+          "top_left": [0, 1260],
+          "width": 2200,
+          "depth": 180,
+          "one_way": false,
+          "solid_height": 180
+        }
+      ],
+      "objects": [
+        {
+          "id": "aftermath_note",
+          "type": "lore_note",
+          "pos": [1060, 1260],
+          "label_ar": "سطر جديد في الفهرس"
+        },
+        {
+          "id": "stage_2_threshold",
+          "type": "future_stage_threshold",
+          "pos": [2090, 1260],
+          "label_ar": "إلى الجناح التالي",
+          "target_stage": 2,
+          "implemented": false
+        }
+      ],
+      "main_route_waypoints": [
+        [180, 1260],
+        [1060, 1260],
+        [2090, 1260]
+      ],
+      "design_notes_ar": ["تنفس بصري قصير بعد الزعيم: الورق مستقر والصفحات مفتوحة. لا قتال ولا لغز جديد.", "مخرج المرحلة التالية عتبة معلّمة للمستقبل؛ لا يعيد اللاعب إلى الغرفة 1 أو يزعم وجود مرحلة ثانية منفذة."]
+    }
+  ],
+  "connections": [
+    {
+      "id": "main_1_2",
+      "type": "main_route",
+      "from_room": 1,
+      "to_room": 2,
+      "bidirectional": true,
+      "from_pos": [2290, 1260],
+      "to_pos": [180, 1260],
+      "forward_requires_all": ["weapon_owned"],
+      "reverse_requires_all": [],
+      "map_polyline": [
+        [320, 950],
+        [360, 950]
+      ],
+      "crossing_is_room_transition": true
+    },
+    {
+      "id": "main_2_3",
+      "type": "main_route",
+      "from_room": 2,
+      "to_room": 3,
+      "bidirectional": true,
+      "from_pos": [2690, 1260],
+      "to_pos": [180, 1260],
+      "forward_requires_all": ["encounter:assignments"],
+      "reverse_requires_all": [],
+      "map_polyline": [
+        [610, 950],
+        [650, 950]
+      ],
+      "crossing_is_room_transition": true
+    },
+    {
+      "id": "main_3_4",
+      "type": "main_route",
+      "from_room": 3,
+      "to_room": 4,
+      "bidirectional": true,
+      "from_pos": [2890, 1260],
+      "to_pos": [220, 2700],
+      "forward_requires_all": [],
+      "reverse_requires_all": [],
+      "map_polyline": [
+        [900, 950],
+        [990, 950]
+      ],
+      "crossing_is_room_transition": true
+    },
+    {
+      "id": "main_4_5",
+      "type": "main_route",
+      "from_room": 4,
+      "to_room": 5,
+      "bidirectional": true,
+      "from_pos": [2640, 540],
+      "to_pos": [180, 1260],
+      "forward_requires_all": [],
+      "reverse_requires_all": [],
+      "map_polyline": [
+        [1110, 490],
+        [1110, 360]
+      ],
+      "crossing_is_room_transition": true
+    },
+    {
+      "id": "main_5_6",
+      "type": "main_route",
+      "from_room": 5,
+      "to_room": 6,
+      "bidirectional": true,
+      "from_pos": [2290, 1260],
+      "to_pos": [180, 1260],
+      "forward_requires_all": ["input_complete"],
+      "reverse_requires_all": [],
+      "map_polyline": [
+        [990, 290],
+        [920, 290]
+      ],
+      "crossing_is_room_transition": true
+    },
+    {
+      "id": "main_6_7",
+      "type": "main_route",
+      "from_room": 6,
+      "to_room": 7,
+      "bidirectional": true,
+      "from_pos": [3090, 1260],
+      "to_pos": [180, 1260],
+      "forward_requires_all": ["process_verified"],
+      "reverse_requires_all": [],
+      "map_polyline": [
+        [670, 290],
+        [590, 290]
+      ],
+      "crossing_is_room_transition": true
+    },
+    {
+      "id": "main_7_8",
+      "type": "main_route",
+      "from_room": 7,
+      "to_room": 8,
+      "bidirectional": true,
+      "from_pos": [2890, 780],
+      "to_pos": [180, 1260],
+      "forward_requires_all": ["output_complete"],
+      "reverse_requires_all": [],
+      "map_polyline": [
+        [470, 360],
+        [470, 490]
+      ],
+      "crossing_is_room_transition": true
+    },
+    {
+      "id": "main_8_9",
+      "type": "main_route",
+      "from_room": 8,
+      "to_room": 9,
+      "bidirectional": true,
+      "from_pos": [3290, 1260],
+      "to_pos": [220, 1620],
+      "forward_requires_all": ["output_complete", "guard_clear", "compiler_seal_owned", "seal_registered"],
+      "reverse_requires_all": ["seal_registered"],
+      "map_polyline": [
+        [350, 575],
+        [310, 575]
+      ],
+      "crossing_is_room_transition": true
+    },
+    {
+      "id": "main_9_10",
+      "type": "main_route",
+      "from_room": 9,
+      "to_room": 10,
+      "bidirectional": true,
+      "from_pos": [3890, 1620],
+      "to_pos": [180, 1260],
+      "forward_requires_all": ["boss_defeated"],
+      "reverse_requires_all": ["boss_defeated"],
+      "map_polyline": [
+        [190, 490],
+        [190, 360]
+      ],
+      "crossing_is_room_transition": true
+    },
+    {
+      "id": "shortcut_4_2",
+      "type": "return_shortcut",
+      "from_room": 4,
+      "to_room": 2,
+      "bidirectional": true,
+      "from_pos": [2630, 1980],
+      "to_pos": [1940, 900],
+      "forward_requires_all": ["archive_shortcut_open"],
+      "reverse_requires_all": ["archive_shortcut_open"],
+      "unlock_action": "archive_shortcut_latch",
+      "unlock_action_room": 4,
+      "unlock_side": "archive_only",
+      "map_polyline": [
+        [1230, 807],
+        [1300, 807],
+        [1300, 1080],
+        [485, 1080],
+        [485, 1020]
+      ],
+      "crossing_is_room_transition": true,
+      "bypass_analysis": "Returns to visited rooms only. Does not open the upper Archive exit or any puzzle/combat gate."
+    },
+    {
+      "id": "shortcut_7_3",
+      "type": "return_shortcut",
+      "from_room": 7,
+      "to_room": 3,
+      "bidirectional": true,
+      "from_pos": [2470, 780],
+      "to_pos": [2670, 900],
+      "forward_requires_all": ["output_complete"],
+      "reverse_requires_all": ["output_complete"],
+      "unlock_action": "output_page_stair_settled_and_locked",
+      "unlock_action_room": 7,
+      "unlock_side": "output_only",
+      "map_polyline": [
+        [550, 360],
+        [550, 420],
+        [800, 420],
+        [800, 810],
+        [775, 810],
+        [775, 880]
+      ],
+      "crossing_is_room_transition": true,
+      "bypass_analysis": "Both directions remain locked until INPUT collection, PROCESS verification and actual OUTPUT folding are complete."
+    }
+  ],
+  "progression_facts": {
+    "weapon_owned": {
+      "source": "weapon_pickup_room_1",
+      "persistent": true,
+      "mandatory_before": "encounter:assignments"
+    },
+    "encounter:assignments": {
+      "source": "actual_clear_of_future_room_2_larva_trial",
+      "persistent": true,
+      "combat_fact": true,
+      "may_be_granted_by_environment": false
+    },
+    "archive_shortcut_open": {
+      "source": "interact_archive_shortcut_latch_in_room_4",
+      "persistent": true
+    },
+    "book_triangle_owned": {
+      "source": "collect_visible_book_triangle_room_5",
+      "persistent": true
+    },
+    "book_square_owned": {
+      "source": "collect_visible_book_square_room_5",
+      "persistent": true
+    },
+    "book_circle_owned": {
+      "source": "collect_visible_book_circle_room_5",
+      "persistent": true
+    },
+    "input_complete": {
+      "source": "input_receiving_desk",
+      "requires_all": ["book_triangle_owned", "book_square_owned", "book_circle_owned"],
+      "persistent": true
+    },
+    "process_verified": {
+      "source": "correct_order_confirmed_in_room_6",
+      "requires_all": ["input_complete"],
+      "requires_order": ["TRIANGLE", "SQUARE", "CIRCLE"],
+      "persistent": true
+    },
+    "output_complete": {
+      "source": "room_7_page_animation_finished_and_geometry_locked",
+      "requires_all": ["process_verified"],
+      "requires_events": ["hero_clear_of_swept_volume", "page_settled", "page_locked_open"],
+      "persistent": true
+    },
+    "guard_clear": {
+      "source": "actual_victory_over_future_room_8_broken_ta_guard",
+      "requires_all": ["output_complete"],
+      "persistent": true,
+      "combat_fact": true,
+      "may_be_granted_by_environment": false
+    },
+    "compiler_seal_owned": {
+      "source": "earned_seal_reward_after_actual_guard_victory",
+      "requires_all": ["guard_clear"],
+      "persistent": true,
+      "may_be_granted_by_environment": false
+    },
+    "seal_registered": {
+      "source": "seal_socket_room_8",
+      "requires_all": ["guard_clear", "compiler_seal_owned"],
+      "persistent": true,
+      "consumes_seal": false
+    },
+    "boss_defeated": {
+      "source": "actual_victory_over_future_dr_compiler_boss",
+      "requires_all": ["seal_registered"],
+      "persistent": true,
+      "combat_fact": true,
+      "may_be_granted_by_environment": false
+    }
+  },
+  "book_puzzle": {
+    "id": "single_book_symbol_puzzle",
+    "input_room": 5,
+    "process_room": 6,
+    "output_room": 7,
+    "symbols": [
+      {
+        "id": "TRIANGLE",
+        "glyph": "△",
+        "label_ar": "مثلث",
+        "shape": "triangle"
+      },
+      {
+        "id": "SQUARE",
+        "glyph": "□",
+        "label_ar": "مربع",
+        "shape": "square"
+      },
+      {
+        "id": "CIRCLE",
+        "glyph": "○",
+        "label_ar": "دائرة",
+        "shape": "circle"
+      }
+    ],
+    "input": "Collect the three plainly visible △ □ ○ books in any order, then register them at the receiving desk.",
+    "process": "Place TRIANGLE, SQUARE, CIRCLE from left to right, following the nearby △ □ ○ clue; confirm once.",
+    "output": "Activate the stationary lever; the page unfolds into four steps and locks permanently.",
+    "wrong_order": {
+      "damage": 0,
+      "resource_loss": 0,
+      "book_loss": false,
+      "enemy_spawn": false,
+      "timeout": false,
+      "feedback": "Soft paper rustle, glyph mismatch indication and immediate retry."
+    },
+    "clue_accessibility": "Same-view clue; symbols plus slot numbers; no audio-only clue, text-language riddle, color-only distinction or external programming knowledge.",
+    "completion_chain": ["all_three_books_owned", "input_complete", "process_verified", "page_settled_and_locked", "output_complete"],
+    "cannot_complete_by": ["entering_room_7", "touching_output_trigger_without_process", "using_shortcut_from_room_3", "finding_an_optional_secret"]
+  },
+  "fold_safety": {
+    "output_fold_id": "output_page_stair",
+    "room_id": 7,
+    "safe_trigger_pos": [760, 1260],
+    "safe_trigger_rect": [620, 1090, 300, 190],
+    "conservative_swept_rect": [1000, 620, 1240, 660],
+    "interlock_pos": [980, 1260],
+    "page_surface_ids": ["r7_page_step_1", "r7_page_step_2", "r7_page_step_3", "r7_page_step_4"],
+    "pre_fold_geometry": "Four page-step surfaces are absent/inactive; lower floor and upper landing already exist.",
+    "start_conditions": ["process_verified", "hero_body_and_visible_art_clear_of_swept_rect", "no_actor_on_any_moving_page", "visible_interlock_closed_and_unoccupied"],
+    "during_motion": ["Keep the visible interlock closed; hero remains on stationary ground.", "No collision-enabled surface moves beneath the hero.", "No mandatory enemy can attack the trigger pad."],
+    "commit_conditions": ["animation_finished", "all_four_step_surfaces_at_final_positions", "page_locked_open"],
+    "on_commit": ["enable_static_page_step_collisions", "persist_page_open_state", "set_output_complete", "open_interlock", "unlock_shortcut_7_3"],
+    "save_load_policy": "Commit final geometry and output_complete atomically. Reload before commit returns to closed safe state; reload after commit restores locked-open stairs, never mid-motion.",
+    "can_close_after_completion": false,
+    "moving_page_riding_required": false,
+    "applies_to_optional_folds": "Optional folds also require the hero outside their swept volumes, remain open, and never carry mandatory puzzle books."
+  },
+  "benches": [
+    {
+      "id": "bench_1",
+      "room_id": 1,
+      "pos": [300, 1260],
+      "requires": [],
+      "protected": true,
+      "role": "Starting checkpoint before weapon and first combat."
+    },
+    {
+      "id": "bench_4",
+      "room_id": 4,
+      "floor": 2,
+      "pos": [2290, 1980],
+      "requires": [],
+      "protected": true,
+      "role": "Mid-stage checkpoint and safe orientation at Archive shortcut."
+    },
+    {
+      "id": "bench_8",
+      "room_id": 8,
+      "pos": [2860, 1260],
+      "requires": ["guard_clear", "compiler_seal_owned"],
+      "protected": true,
+      "after_guard": true,
+      "role": "Boss retry checkpoint beyond the seal encounter."
+    }
+  ],
+  "secrets": [
+    {
+      "id": "secret_3",
+      "room_id": 3,
+      "pos": [2400, 900],
+      "entry": "secret_3_trigger",
+      "optional": true,
+      "requires_progression": [],
+      "reward": ["student_sketch_lore", "small_currency_cache"],
+      "moving_geometry": {
+        "id": "secret_3_fold",
+        "swept_rect": [2240, 700, 330, 220],
+        "trigger_pos": [2130, 900],
+        "locks_open": true,
+        "mount_plane": "rear_alcove_back_panel",
+        "hero_collision": false,
+        "through_gallery_remains_passable": true
+      },
+      "return_route": "Reverse the upper gallery and two fixed 120-rise steps; no one-way drop or future ability."
+    },
+    {
+      "id": "secret_4",
+      "room_id": 4,
+      "floor": 3,
+      "pos": [180, 1260],
+      "entry": "secret_4_trigger",
+      "optional": true,
+      "requires_progression": [],
+      "reward": ["deleted_student_index_lore", "medium_currency_cache"],
+      "moving_geometry": {
+        "id": "secret_4_fold",
+        "swept_rect": [80, 1070, 280, 220],
+        "trigger_pos": [480, 1260],
+        "locks_open": true
+      },
+      "return_route": "Walk back onto floor 3; the opened shelf stays open and does not affect the ascent."
+    },
+    {
+      "id": "secret_7",
+      "room_id": 7,
+      "pos": [2640, 1260],
+      "entry": "secret_7_cover",
+      "optional": true,
+      "requires_progression": ["output_complete"],
+      "reward": ["between_pages_letter_lore", "small_resource_cache"],
+      "return_route": "Walk west along the intact lower floor, then climb the permanent page stairs again. No new ability."
+    }
+  ],
+  "future_combat_placements": [
+    {
+      "id": "encounter:assignments",
+      "room_id": 2,
+      "enemy_type": "Glitch Larva",
+      "display_ar": "يرقة الخلل",
+      "mandatory": true,
+      "zone_rect": [570, 1100, 600, 160],
+      "spawn_pos": [1060, 1260],
+      "count": 1,
+      "requires_before_start": ["weapon_owned"],
+      "floor_surface": "r2_floor",
+      "hazards": [],
+      "other_enemy_types": [],
+      "clear_grants": ["encounter:assignments"],
+      "fairness": "Single grounded enemy, flat visible approach, no ambush, no electric floor, no aerial pressure."
+    },
+    {
+      "id": "r3_wraith_optional",
+      "room_id": 3,
+      "enemy_type": "Popup Wraith",
+      "display_ar": "شبح النافذة",
+      "mandatory": false,
+      "zone_rect": [1390, 640, 560, 260],
+      "spawn_pos": [1680, 780],
+      "count": 1,
+      "floor_surface": "r3_upper_gallery",
+      "safe_observation_pos": [1430, 900],
+      "hazards": [],
+      "clear_grants": [],
+      "fairness": "Visible silhouette and warning before attack; upper gallery only; cannot target ground entrance or shortcut spawn."
+    },
+    {
+      "id": "r6_turret_optional",
+      "room_id": 6,
+      "enemy_type": "Syntax Turret",
+      "display_ar": "برج الصياغة",
+      "mandatory": false,
+      "zone_rect": [2300, 700, 640, 200],
+      "spawn_pos": [2810, 900],
+      "count": 1,
+      "floor_surface": "r6_turret_gallery",
+      "cover_positions": [
+        [2400, 900],
+        [2590, 900]
+      ],
+      "safe_landing_pos": [2330, 900],
+      "protected_control_rect": [880, 1000, 780, 280],
+      "hazards": [],
+      "clear_grants": [],
+      "fairness": "Horizontal bounded gallery fire, visible cover, no line of sight to book controls or lower main route; avoid firing during first landing telegraph.",
+      "cover_size": [60, 100]
+    },
+    {
+      "id": "r8_seal_guard",
+      "room_id": 8,
+      "enemy_type": "Broken TA",
+      "display_ar": "المعيد المكسور",
+      "mandatory": true,
+      "zone_rect": [900, 1000, 1450, 260],
+      "spawn_pos": [1640, 1260],
+      "count": 1,
+      "floor_surface": "r8_floor",
+      "requires_before_start": ["weapon_owned", "output_complete"],
+      "hazards": [],
+      "other_enemy_types": [],
+      "clear_grants": ["guard_clear"],
+      "earned_reward": "compiler_seal_owned",
+      "fairness": "Wide court and first solo introduction, no hidden adds or folding geometry. Gate closes only once hero is fully inside."
+    },
+    {
+      "id": "dr_compiler",
+      "room_id": 9,
+      "enemy_type": "Dr. Compiler",
+      "display_ar": "د. كومبايلر",
+      "mandatory": true,
+      "zone_rect": [900, 900, 2350, 720],
+      "spawn_pos": [2040, 1620],
+      "requires_before_start": ["seal_registered"],
+      "floor_surface": "r9_arena_floor",
+      "clear_grants": ["boss_defeated"],
+      "fairness": "Arena reservation only. Attack design, enemy assets and combat code are outside this package."
+    }
+  ],
+  "checkpoints_and_death": {
+    "bench_count": 3,
+    "optional_secret_count": 3,
+    "fast_travel": false,
+    "persistent_on_death": [
+      "weapon_owned",
+      "encounter:assignments",
+      "archive_shortcut_open",
+      "book_triangle_owned",
+      "book_square_owned",
+      "book_circle_owned",
+      "input_complete",
+      "process_verified",
+      "output_complete",
+      "guard_clear",
+      "compiler_seal_owned",
+      "seal_registered",
+      "boss_defeated",
+      "opened_optional_folds",
+      "claimed_secret_rewards"
+    ],
+    "respawn_geometry": "Restore persistent folded geometry before placing the hero on the saved stationary bench pad.",
+    "boss_retry": {
+      "checkpoint": "bench_8",
+      "bench_pos": [2860, 1260],
+      "entry_room_9_pos": [220, 1620],
+      "arena_entry_pos": [980, 1620],
+      "target_seconds": [5, 12],
+      "repeat_guard": false,
+      "repeat_puzzle": false,
+      "consume_seal_again": false,
+      "safe_route": "Room 8 bench alcove → registered seal door → clear Room 9 approach; no enemies or hazards on this retry corridor."
+    },
+    "boss_retry_reset": "Reset the current boss attempt only; preserve the earned seal, guard victory, shortcuts and page stairs.",
+    "arena_entry_gate_policy": "Entry gates reopen after victory and reset open after death. Persistent victory facts do not trap the respawning hero behind a closed arena barrier."
+  },
+  "pacing_target": {
+    "status": "Future finished-game estimate, not a measured result.",
+    "main_path_minutes": [20, 24],
+    "optional_secrets_add_minutes": [3, 5],
+    "expected_with_optional_minutes": [23, 29],
+    "boss_retries_excluded": true,
+    "room_budgets_minutes": {
+      "1": 1.5,
+      "2": 2.0,
+      "3": 2.0,
+      "4": 3.0,
+      "5": 1.5,
+      "6": 2.0,
+      "7": 2.0,
+      "8": 3.0,
+      "9": 4.0,
+      "10": 0.5
+    },
+    "main_budget_sum_minutes": 21.5
+  },
+  "logical_invariants": [
+    "Weapon precedes mandatory combat; Archive has four actual floors reachable with ordinary jumps.",
+    "Exactly two return shortcuts: 4↔2 opens from Archive only; 7↔3 requires completed OUTPUT in both directions.",
+    "INPUT collection → PROCESS correct order → OUTPUT safely settled and locked; wrong order is harmless.",
+    "Only actual guard victory grants the Compiler Seal; room 8 bench lies after the guard and persists safely through boss retries.",
+    "No secret or shortcut bypasses puzzle, earned seal or boss; no future movement ability is mandatory."
+  ],
+  "verification_status": "Design reviewed for progression and conservative movement bounds; not implemented or tested in Godot. Later implementation must verify actual hero jumps, fold interlocks, saves and boss retries."
+}

@@ -1,1 +1,0 @@
-Original character pose from the user-approved LAST LECTURE V3 asset; edge cleanup, stable silhouette, and a short sheathed sword overlay. Not a new frame-by-frame painting. One idle pose by design: no breathing sway or jitter.
