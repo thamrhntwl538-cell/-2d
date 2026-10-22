@@ -1,0 +1,120 @@
+{
+	"captures": [
+		{
+			"fixture": true,
+			"height": 720,
+			"path": "res://previews/m17/01_first_page.png",
+			"room": 1,
+			"width": 1280
+		},
+		{
+			"fixture": true,
+			"height": 720,
+			"path": "res://previews/m17/04_black_flame_alcove.png",
+			"room": 4,
+			"width": 1280
+		},
+		{
+			"fixture": true,
+			"height": 720,
+			"path": "res://previews/m17/06_folded_archive.png",
+			"room": 6,
+			"width": 1280
+		},
+		{
+			"fixture": true,
+			"height": 720,
+			"path": "res://previews/m17/09_output_stair.png",
+			"room": 9,
+			"width": 1280
+		},
+		{
+			"fixture": true,
+			"height": 720,
+			"path": "res://previews/m17/10_balance_hall.png",
+			"room": 10,
+			"width": 1280
+		},
+		{
+			"fixture": true,
+			"height": 720,
+			"path": "res://previews/m17/12_bindery.png",
+			"room": 12,
+			"width": 1280
+		},
+		{
+			"fixture": true,
+			"height": 720,
+			"path": "res://previews/m17/14_tribunal.png",
+			"room": 14,
+			"width": 1280
+		},
+		{
+			"fixture": true,
+			"height": 720,
+			"path": "res://previews/m17/15_next_page.png",
+			"room": 15,
+			"width": 1280
+		},
+		{
+			"fixture": true,
+			"height": 720,
+			"path": "res://previews/m17/06_archive_reading_tier.png",
+			"room": 6,
+			"width": 1280
+		},
+		{
+			"fixture": true,
+			"height": 720,
+			"path": "res://previews/m17/09_output_upper.png",
+			"room": 9,
+			"width": 1280
+		},
+		{
+			"fixture": true,
+			"height": 720,
+			"path": "res://previews/m17/04_dialogue_ar.png",
+			"room": 4,
+			"width": 1280
+		},
+		{
+			"fixture": true,
+			"height": 720,
+			"path": "res://previews/m17/04_dialogue_en.png",
+			"room": 4,
+			"width": 1280
+		},
+		{
+			"fixture": true,
+			"height": 720,
+			"path": "res://previews/m17/03_ink_puzzle_panel.png",
+			"room": 3,
+			"width": 1280
+		},
+		{
+			"fixture": true,
+			"height": 720,
+			"path": "res://previews/m17/03_world_map_panel.png",
+			"room": 3,
+			"width": 1280
+		},
+		{
+			"fixture": true,
+			"height": 720,
+			"path": "res://previews/m17/15_departure_confirmation.png",
+			"room": 15,
+			"width": 1280
+		},
+		{
+			"fixture": true,
+			"height": 720,
+			"path": "res://previews/m17/15_journal_panel.png",
+			"room": 15,
+			"width": 1280
+		}
+	],
+	"engine": "4.6.3-stable (official)",
+	"failures": [],
+	"rendered": true,
+	"scope": "configured visual fixtures; actual traversal is separate"
+}

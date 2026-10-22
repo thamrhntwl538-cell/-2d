@@ -1,0 +1,155 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2000" height="1830" viewBox="0 0 2000 1830">
+<defs><marker id="a" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10Z" fill="#75c5d3"/></marker></defs>
+<rect x="0" y="0" width="2000" height="1830" rx="0" fill="#0b1420" stroke="#0b1420" stroke-width="2"/>
+<rect x="20" y="20" width="1960" height="1790" rx="0" fill="#0b1420" stroke="#42505a" stroke-width="2"/>
+<text x="1000" y="75" text-anchor="middle" direction="rtl" font-family="DejaVu Sans,Arial,sans-serif" font-size="41" font-weight="bold" fill="#e8ddbf">كيف تتغيّر المكتبة عندما تحل ألغازها؟</text>
+<text x="1000" y="123" text-anchor="middle" direction="rtl" font-family="DejaVu Sans,Arial,sans-serif" font-size="25" font-weight="normal" fill="#adbec9">العالم الأول · دليل بصري للألغاز الرئيسية الثلاثة</text>
+<rect x="30" y="175" width="1940" height="465" rx="15" fill="#101f2d" stroke="#455d6d" stroke-width="2"/>
+<text x="1000" y="222" text-anchor="middle" direction="rtl" font-family="DejaVu Sans,Arial,sans-serif" font-size="31" font-weight="bold" fill="#e8ddbf">P1 — شبكة الحبر · المنطقة 03</text>
+<text x="1000" y="257" text-anchor="middle" direction="rtl" font-family="DejaVu Sans,Arial,sans-serif" font-size="19" font-weight="normal" fill="#adbec9">توجيه التدفق يشغّل آلة طي، فتظهر وصلة يمكن عبورها</text>
+<rect x="60" y="280" width="600" height="320" rx="8" fill="#172635" stroke="#344959" stroke-width="2"/>
+<text x="360" y="318" text-anchor="middle" direction="rtl" font-family="DejaVu Sans,Arial,sans-serif" font-size="24" font-weight="bold" fill="#d2b36e">النتيجة: ممشى جديد</text>
+<rect x="700" y="280" width="600" height="320" rx="8" fill="#172635" stroke="#344959" stroke-width="2"/>
+<text x="1000" y="318" text-anchor="middle" direction="rtl" font-family="DejaVu Sans,Arial,sans-serif" font-size="24" font-weight="bold" fill="#d2b36e">الإجراء: وصل القنوات</text>
+<rect x="1340" y="280" width="600" height="320" rx="8" fill="#172635" stroke="#344959" stroke-width="2"/>
+<text x="1640" y="318" text-anchor="middle" direction="rtl" font-family="DejaVu Sans,Arial,sans-serif" font-size="24" font-weight="bold" fill="#d2b36e">قبل: الطريق مقطوع</text>
+<path d="M1330 440 L1310 440" fill="none" stroke="#75c5d3" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a)"/>
+<path d="M690 440 L670 440" fill="none" stroke="#75c5d3" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a)"/>
+<circle cx="1860" cy="407" r="19" fill="#75c5d3"/>
+<text x="1858" y="451" text-anchor="middle" direction="rtl" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" font-weight="normal" fill="#adbec9">مصدر الحبر</text>
+<path d="M1785 397 L1730 397 L1730 442" fill="none" stroke="#6e8191" stroke-width="11" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M1655 450 L1600 450 L1600 495" fill="none" stroke="#6e8191" stroke-width="11" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M1530 410 L1475 410 L1475 455" fill="none" stroke="#6e8191" stroke-width="11" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="1380" y="475" width="85" height="62" rx="5" fill="#263b4c" stroke="#75c5d3" stroke-width="2"/>
+<text x="1422" y="513" text-anchor="middle" direction="rtl" font-family="DejaVu Sans,Arial,sans-serif" font-size="20" font-weight="normal" fill="#e8ddbf">آلة</text>
+<text x="1640" y="569" text-anchor="middle" direction="rtl" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" font-weight="normal" fill="#adbec9">وصلات غير متصلة؛ التدفق يعود للحوض</text>
+<path d="M1230 407 L1130 407 L1130 454 L1000 454 L1000 407 L870 407 L870 480 L792 480" fill="none" stroke="#75c5d3" stroke-width="10" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a)"/>
+<circle cx="1130" cy="407" r="20" fill="#8d292a"/>
+<text x="1130" y="415" text-anchor="middle" direction="ltr" font-family="DejaVu Sans,Arial,sans-serif" font-size="23" font-weight="bold" fill="#e8ddbf">1</text>
+<circle cx="1000" cy="454" r="20" fill="#8d292a"/>
+<text x="1000" y="462" text-anchor="middle" direction="ltr" font-family="DejaVu Sans,Arial,sans-serif" font-size="23" font-weight="bold" fill="#e8ddbf">2</text>
+<circle cx="870" cy="407" r="20" fill="#8d292a"/>
+<text x="870" y="415" text-anchor="middle" direction="ltr" font-family="DejaVu Sans,Arial,sans-serif" font-size="23" font-weight="bold" fill="#e8ddbf">3</text>
+<text x="1000" y="543" text-anchor="middle" direction="rtl" font-family="DejaVu Sans,Arial,sans-serif" font-size="20" font-weight="normal" fill="#e8ddbf">دوّر ثلاث قطع من موضع ثابت</text>
+<text x="1000" y="575" text-anchor="middle" direction="rtl" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" font-weight="normal" fill="#adbec9">المسار ظاهر ونتيجة كل تغيير واضحة</text>
+<path d="M100 527 L250 527" fill="none" stroke="#d6c399" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M320 527 L585 527" fill="none" stroke="#d6c399" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M250 527 L320 527" fill="none" stroke="#75c5d3" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="170" cy="478" r="12" fill="#d6c399"/>
+<path d="M170 490 L170 510 L161 522" fill="none" stroke="#d6c399" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M170 510 L180 522" fill="none" stroke="#d6c399" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="205" y="470" width="28" height="40" rx="4" fill="#263b4c" stroke="#75c5d3" stroke-width="2"/>
+<text x="363" y="432" text-anchor="middle" direction="rtl" font-family="DejaVu Sans,Arial,sans-serif" font-size="22" font-weight="normal" fill="#e8ddbf">آلة الطي تُثبت الجسر</text>
+<text x="360" y="575" text-anchor="middle" direction="rtl" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" font-weight="normal" fill="#adbec9">المشغل آمن؛ العبور بعد الاستقرار</text>
+<rect x="30" y="675" width="1940" height="465" rx="15" fill="#101f2d" stroke="#455d6d" stroke-width="2"/>
+<text x="1000" y="722" text-anchor="middle" direction="rtl" font-family="DejaVu Sans,Arial,sans-serif" font-size="31" font-weight="bold" fill="#e8ddbf">P2 — منظومة الكتب · ثلاث غرف مترابطة</text>
+<text x="1000" y="757" text-anchor="middle" direction="rtl" font-family="DejaVu Sans,Arial,sans-serif" font-size="19" font-weight="normal" fill="#adbec9">لغز واحد ممتد: اجمع الكتب كلها، ثم رتّبها، ثم انشر درج الصفحات</text>
+<rect x="60" y="780" width="600" height="320" rx="8" fill="#172635" stroke="#344959" stroke-width="2"/>
+<text x="360" y="818" text-anchor="middle" direction="rtl" font-family="DejaVu Sans,Arial,sans-serif" font-size="24" font-weight="bold" fill="#d2b36e">09 · درج دائم</text>
+<rect x="700" y="780" width="600" height="320" rx="8" fill="#172635" stroke="#344959" stroke-width="2"/>
+<text x="1000" y="818" text-anchor="middle" direction="rtl" font-family="DejaVu Sans,Arial,sans-serif" font-size="24" font-weight="bold" fill="#d2b36e">08 · طاولة الترتيب</text>
+<rect x="1340" y="780" width="600" height="320" rx="8" fill="#172635" stroke="#344959" stroke-width="2"/>
+<text x="1640" y="818" text-anchor="middle" direction="rtl" font-family="DejaVu Sans,Arial,sans-serif" font-size="24" font-weight="bold" fill="#d2b36e">07 · جمع الكتب الثلاثة</text>
+<path d="M1330 940 L1310 940" fill="none" stroke="#75c5d3" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a)"/>
+<path d="M690 940 L670 940" fill="none" stroke="#75c5d3" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a)"/>
+<rect x="1460" y="875" width="72" height="88" rx="4" fill="#d6c399" stroke="#8d6b45" stroke-width="2"/>
+<path d="M1469 879 L1469 959" fill="none" stroke="#8d6b45" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="1499.0" y="932.2" text-anchor="middle" direction="ltr" font-family="DejaVu Sans,Arial,sans-serif" font-size="37" font-weight="bold" fill="#172635">△</text>
+<rect x="1575" y="875" width="72" height="88" rx="4" fill="#d6c399" stroke="#8d6b45" stroke-width="2"/>
+<path d="M1584 879 L1584 959" fill="none" stroke="#8d6b45" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="1614.0" y="932.2" text-anchor="middle" direction="ltr" font-family="DejaVu Sans,Arial,sans-serif" font-size="37" font-weight="bold" fill="#172635">□</text>
+<rect x="1690" y="875" width="72" height="88" rx="4" fill="#d6c399" stroke="#8d6b45" stroke-width="2"/>
+<path d="M1699 879 L1699 959" fill="none" stroke="#8d6b45" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="1729.0" y="932.2" text-anchor="middle" direction="ltr" font-family="DejaVu Sans,Arial,sans-serif" font-size="37" font-weight="bold" fill="#172635">○</text>
+<text x="1640" y="1007" text-anchor="middle" direction="ltr" font-family="DejaVu Sans,Arial,sans-serif" font-size="29" font-weight="bold" fill="#75c5d3">3 / 3</text>
+<text x="1640" y="1075" text-anchor="middle" direction="rtl" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" font-weight="normal" fill="#adbec9">كل الكتب ظاهرة؛ لا كتاب داخل سر</text>
+<path d="M790 1000 L1210 1000" fill="none" stroke="#d6c399" stroke-width="11" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M820 1000 L820 1040" fill="none" stroke="#d6c399" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M1180 1000 L1180 1040" fill="none" stroke="#d6c399" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="850" y="898" width="72" height="88" rx="4" fill="#d6c399" stroke="#8d6b45" stroke-width="2"/>
+<path d="M859 902 L859 982" fill="none" stroke="#8d6b45" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="889.0" y="955.2" text-anchor="middle" direction="ltr" font-family="DejaVu Sans,Arial,sans-serif" font-size="37" font-weight="bold" fill="#172635">△</text>
+<text x="886" y="875" text-anchor="middle" direction="ltr" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" font-weight="normal" fill="#75c5d3">1</text>
+<rect x="965" y="898" width="72" height="88" rx="4" fill="#d6c399" stroke="#8d6b45" stroke-width="2"/>
+<path d="M974 902 L974 982" fill="none" stroke="#8d6b45" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="1004.0" y="955.2" text-anchor="middle" direction="ltr" font-family="DejaVu Sans,Arial,sans-serif" font-size="37" font-weight="bold" fill="#172635">□</text>
+<text x="1001" y="875" text-anchor="middle" direction="ltr" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" font-weight="normal" fill="#75c5d3">2</text>
+<rect x="1080" y="898" width="72" height="88" rx="4" fill="#d6c399" stroke="#8d6b45" stroke-width="2"/>
+<path d="M1089 902 L1089 982" fill="none" stroke="#8d6b45" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="1119.0" y="955.2" text-anchor="middle" direction="ltr" font-family="DejaVu Sans,Arial,sans-serif" font-size="37" font-weight="bold" fill="#172635">○</text>
+<text x="1116" y="875" text-anchor="middle" direction="ltr" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" font-weight="normal" fill="#75c5d3">3</text>
+<text x="1000" y="1075" text-anchor="middle" direction="ltr" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" font-weight="normal" fill="#adbec9">1: △   |   2: □   |   3: ○</text>
+<path d="M100 1020 L295 1020" fill="none" stroke="#d6c399" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="175" cy="971" r="12" fill="#d6c399"/>
+<path d="M175 983 L175 1003 L166 1015" fill="none" stroke="#d6c399" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M175 1003 L185 1015" fill="none" stroke="#d6c399" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="225" y="960" width="28" height="43" rx="4" fill="#263b4c" stroke="#75c5d3" stroke-width="2"/>
+<path d="M340 1020 L395 1020 L395 988 L450 988 L450 956 L505 956 L505 924 L600 924" fill="none" stroke="#d6c399" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M300 905 L300 1035" fill="none" stroke="#8d292a" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="6 6"/>
+<text x="195" y="1060" text-anchor="middle" direction="rtl" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" font-weight="normal" fill="#75c5d3">مشغل آمن</text>
+<text x="470" y="872" text-anchor="middle" direction="rtl" font-family="DejaVu Sans,Arial,sans-serif" font-size="20" font-weight="normal" fill="#e8ddbf">الكتب تبقى على الطاولة</text>
+<text x="370" y="1087" text-anchor="middle" direction="rtl" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" font-weight="normal" fill="#adbec9">الصفحة تُفتح ثم تستقر وتُحفظ</text>
+<rect x="30" y="1175" width="1940" height="465" rx="15" fill="#101f2d" stroke="#455d6d" stroke-width="2"/>
+<text x="1000" y="1222" text-anchor="middle" direction="rtl" font-family="DejaVu Sans,Arial,sans-serif" font-size="31" font-weight="bold" fill="#e8ddbf">P3 — ميزان التجليد · المنطقة 10</text>
+<text x="1000" y="1257" text-anchor="middle" direction="rtl" font-family="DejaVu Sans,Arial,sans-serif" font-size="19" font-weight="normal" fill="#adbec9">مثال توضيحي: حمل ثابت على اليسار، وثلاثة أثقال قابلة للنقل</text>
+<rect x="60" y="1280" width="600" height="320" rx="8" fill="#172635" stroke="#344959" stroke-width="2"/>
+<text x="360" y="1318" text-anchor="middle" direction="rtl" font-family="DejaVu Sans,Arial,sans-serif" font-size="24" font-weight="bold" fill="#d2b36e">النتيجة: جسر متعادل</text>
+<rect x="700" y="1280" width="600" height="320" rx="8" fill="#172635" stroke="#344959" stroke-width="2"/>
+<text x="1000" y="1318" text-anchor="middle" direction="rtl" font-family="DejaVu Sans,Arial,sans-serif" font-size="24" font-weight="bold" fill="#d2b36e">الإجراء: انقل ثقلًا صغيرًا</text>
+<rect x="1340" y="1280" width="600" height="320" rx="8" fill="#172635" stroke="#344959" stroke-width="2"/>
+<text x="1640" y="1318" text-anchor="middle" direction="rtl" font-family="DejaVu Sans,Arial,sans-serif" font-size="24" font-weight="bold" fill="#d2b36e">قبل: كفتان غير متعادلتين</text>
+<path d="M1330 1440 L1310 1440" fill="none" stroke="#75c5d3" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a)"/>
+<path d="M690 1440 L670 1440" fill="none" stroke="#75c5d3" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a)"/>
+<path d="M1640 1430 L1640 1515" fill="none" stroke="#adbec9" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M1480 1410 L1800 1450" fill="none" stroke="#d6c399" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M1480 1410 L1480 1518" fill="none" stroke="#adbec9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M1800 1450 L1800 1540" fill="none" stroke="#adbec9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M1415 1518 L1545 1518" fill="none" stroke="#d6c399" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M1710 1540 L1900 1540" fill="none" stroke="#d6c399" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="1445" y="1447" width="68" height="65" rx="4" fill="#746b5b" stroke="#d2b36e" stroke-width="2"/>
+<text x="1479.0" y="1487.5" text-anchor="middle" direction="ltr" font-family="DejaVu Sans,Arial,sans-serif" font-size="26" font-weight="bold" fill="#eee4ca">2</text>
+<text x="1479.0" y="1532" text-anchor="middle" direction="rtl" font-family="DejaVu Sans,Arial,sans-serif" font-size="14" font-weight="normal" fill="#adbec9">ثابت</text>
+<rect x="1720" y="1492" width="50" height="42" rx="4" fill="#d6c399" stroke="#d2b36e" stroke-width="2"/>
+<text x="1745.0" y="1521.0" text-anchor="middle" direction="ltr" font-family="DejaVu Sans,Arial,sans-serif" font-size="26" font-weight="bold" fill="#172635">1</text>
+<rect x="1778" y="1492" width="50" height="42" rx="4" fill="#d6c399" stroke="#d2b36e" stroke-width="2"/>
+<text x="1803.0" y="1521.0" text-anchor="middle" direction="ltr" font-family="DejaVu Sans,Arial,sans-serif" font-size="26" font-weight="bold" fill="#172635">1</text>
+<rect x="1837" y="1469" width="68" height="65" rx="4" fill="#d6c399" stroke="#d2b36e" stroke-width="2"/>
+<text x="1871.0" y="1509.5" text-anchor="middle" direction="ltr" font-family="DejaVu Sans,Arial,sans-serif" font-size="26" font-weight="bold" fill="#172635">2</text>
+<text x="1640" y="1590" text-anchor="middle" direction="ltr" font-family="DejaVu Sans,Arial,sans-serif" font-size="26" font-weight="bold" fill="#75c5d3">2 &lt; 4</text>
+<rect x="780" y="1445" width="68" height="65" rx="4" fill="#746b5b" stroke="#d2b36e" stroke-width="2"/>
+<text x="814.0" y="1485.5" text-anchor="middle" direction="ltr" font-family="DejaVu Sans,Arial,sans-serif" font-size="26" font-weight="bold" fill="#eee4ca">2</text>
+<text x="814.0" y="1530" text-anchor="middle" direction="rtl" font-family="DejaVu Sans,Arial,sans-serif" font-size="14" font-weight="normal" fill="#adbec9">ثابت</text>
+<rect x="882" y="1468" width="50" height="42" rx="4" fill="#d6c399" stroke="#d2b36e" stroke-width="2"/>
+<text x="907.0" y="1497.0" text-anchor="middle" direction="ltr" font-family="DejaVu Sans,Arial,sans-serif" font-size="26" font-weight="bold" fill="#172635">1</text>
+<rect x="1080" y="1445" width="68" height="65" rx="4" fill="#d6c399" stroke="#d2b36e" stroke-width="2"/>
+<text x="1114.0" y="1485.5" text-anchor="middle" direction="ltr" font-family="DejaVu Sans,Arial,sans-serif" font-size="26" font-weight="bold" fill="#172635">2</text>
+<rect x="1170" y="1468" width="50" height="42" rx="4" fill="#d6c399" stroke="#d2b36e" stroke-width="2"/>
+<text x="1195.0" y="1497.0" text-anchor="middle" direction="ltr" font-family="DejaVu Sans,Arial,sans-serif" font-size="26" font-weight="bold" fill="#172635">1</text>
+<path d="M1195 1400 L1195 1370 L907 1370 L907 1445" fill="none" stroke="#75c5d3" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a)"/>
+<text x="1000" y="1570" text-anchor="middle" direction="ltr" font-family="DejaVu Sans,Arial,sans-serif" font-size="21" font-weight="normal" fill="#75c5d3">2 + 1 = 2 + 1</text>
+<text x="1000" y="1600" text-anchor="middle" direction="rtl" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" font-weight="normal" fill="#adbec9">الحركة تشرح التوازن دون سؤال مكتوب</text>
+<path d="M360 1440 L360 1545" fill="none" stroke="#adbec9" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M160 1440 L560 1440" fill="none" stroke="#d6c399" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M180 1440 L180 1520" fill="none" stroke="#adbec9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M530 1440 L530 1520" fill="none" stroke="#adbec9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M102 1520 L258 1520" fill="none" stroke="#d6c399" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M452 1520 L608 1520" fill="none" stroke="#d6c399" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="111" y="1449" width="68" height="65" rx="4" fill="#746b5b" stroke="#d2b36e" stroke-width="2"/>
+<text x="145.0" y="1489.5" text-anchor="middle" direction="ltr" font-family="DejaVu Sans,Arial,sans-serif" font-size="26" font-weight="bold" fill="#eee4ca">2</text>
+<text x="145.0" y="1534" text-anchor="middle" direction="rtl" font-family="DejaVu Sans,Arial,sans-serif" font-size="14" font-weight="normal" fill="#adbec9">ثابت</text>
+<rect x="191" y="1472" width="50" height="42" rx="4" fill="#d6c399" stroke="#d2b36e" stroke-width="2"/>
+<text x="216.0" y="1501.0" text-anchor="middle" direction="ltr" font-family="DejaVu Sans,Arial,sans-serif" font-size="26" font-weight="bold" fill="#172635">1</text>
+<rect x="460" y="1449" width="68" height="65" rx="4" fill="#d6c399" stroke="#d2b36e" stroke-width="2"/>
+<text x="494.0" y="1489.5" text-anchor="middle" direction="ltr" font-family="DejaVu Sans,Arial,sans-serif" font-size="26" font-weight="bold" fill="#172635">2</text>
+<rect x="540" y="1472" width="50" height="42" rx="4" fill="#d6c399" stroke="#d2b36e" stroke-width="2"/>
+<text x="565.0" y="1501.0" text-anchor="middle" direction="ltr" font-family="DejaVu Sans,Arial,sans-serif" font-size="26" font-weight="bold" fill="#172635">1</text>
+<text x="360" y="1385" text-anchor="middle" direction="ltr" font-family="DejaVu Sans,Arial,sans-serif" font-size="31" font-weight="bold" fill="#75c5d3">3 = 3</text>
+<text x="360" y="1593" text-anchor="middle" direction="rtl" font-family="DejaVu Sans,Arial,sans-serif" font-size="20" font-weight="normal" fill="#adbec9">يُثبت الجسر ويظل مفتوحًا</text>
+<rect x="65" y="1680" width="580" height="62" rx="8" fill="#11202c" stroke="#d2b36e" stroke-width="2"/>
+<text x="355" y="1719" text-anchor="middle" direction="rtl" font-family="DejaVu Sans,Arial,sans-serif" font-size="21" font-weight="normal" fill="#d2b36e">خطأ بلا ضرر أو خسارة كتب</text>
+<rect x="710" y="1680" width="580" height="62" rx="8" fill="#11202c" stroke="#d2b36e" stroke-width="2"/>
+<text x="1000" y="1719" text-anchor="middle" direction="rtl" font-family="DejaVu Sans,Arial,sans-serif" font-size="21" font-weight="normal" fill="#d2b36e">تشغيل من أرض ثابتة خارج الحركة</text>
+<rect x="1355" y="1680" width="580" height="62" rx="8" fill="#11202c" stroke="#d2b36e" stroke-width="2"/>
+<text x="1645" y="1719" text-anchor="middle" direction="rtl" font-family="DejaVu Sans,Arial,sans-serif" font-size="21" font-weight="normal" fill="#d2b36e">حلول ثابتة ومحفوظة بعد الاكتمال</text>
+<text x="1000" y="1783" text-anchor="middle" direction="rtl" font-family="DejaVu Sans,Arial,sans-serif" font-size="20" font-weight="normal" fill="#91a7b5">مخططات توضيحية للتصميم؛ الهندسة والمقاسات وتوقيت الحركة تُختبر داخل Godot عند التنفيذ</text>
+</svg>

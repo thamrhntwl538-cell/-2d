@@ -1,0 +1,1583 @@
+{
+  "schema_version": "world1-folding-library-15-1.0",
+  "title_ar": "العالم الأول — المكتبة المتحوّلة",
+  "status": "approved_design_not_godot_implementation",
+  "selected_visual_direction": "D — The Folding Library",
+  "scope_ar": "خريطة البيئة والمسارات والألغاز ومواقع مواجهات مستقبلية؛ لا تتضمن تنفيذ اللعبة أو تصاميم نهائية للشخصيات.",
+  "coordinate_note": "Map rectangles and polylines use schematic units on a 2500×1900 canvas, not world-pixel geometry.",
+  "main_route": [
+    1,
+    2,
+    3,
+    4,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15
+  ],
+  "optional_route": [
+    4,
+    5,
+    6
+  ],
+  "areas": [
+    {
+      "id": 1,
+      "name_ar": "بهو الصفحة الأولى",
+      "playspaces_proposed": 2,
+      "optional_area": false,
+      "environment_ar": "كتاب جامعي مفتوح يصنع قوس الدخول، وأرضية عاجية عريضة ومصباح كهرماني.",
+      "challenge_ar": "تعلم الجري والقفز وأخذ الأداة والتدريب الآمن.",
+      "story_clue_ar": "إعلان يدعو إلى المحاضرة، وجدول توقفت عقاربه عند موعد واحد.",
+      "features": [
+        "run_jump_tutorial",
+        "weapon_pickup",
+        "safe_training"
+      ],
+      "adjacent_areas": [
+        2
+      ],
+      "map_rect": [
+        90,
+        1450,
+        340,
+        180
+      ],
+      "physical_geometry_status": "To be blocked out and tested using the existing hero; no physical coordinates claimed here.",
+      "map_label_ar": "بهو الصفحة الأولى"
+    },
+    {
+      "id": 2,
+      "name_ar": "ممر الواجبات",
+      "playspaces_proposed": 3,
+      "optional_area": false,
+      "environment_ar": "رزم واجبات وشرائط حمراء تربط شرفات قصيرة؛ خلفية كحلية هادئة خلف اللقاء الأول.",
+      "challenge_ar": "يرقة منفردة على أرض واسعة، ثم قفزات قصيرة ورفوف انتظار.",
+      "story_clue_ar": "دفتر طالب ينقطع قبل عبارة العودة إلى المنزل.",
+      "features": [
+        "first_ground_encounter",
+        "short_platform_chain"
+      ],
+      "adjacent_areas": [
+        1,
+        3,
+        6
+      ],
+      "map_rect": [
+        510,
+        1450,
+        340,
+        180
+      ],
+      "physical_geometry_status": "To be blocked out and tested using the existing hero; no physical coordinates claimed here.",
+      "map_label_ar": "ممر الواجبات"
+    },
+    {
+      "id": 3,
+      "name_ar": "مختبر المخطوطات",
+      "playspaces_proposed": 3,
+      "optional_area": false,
+      "environment_ar": "طرفيات CRT داخل ظهور كتب، وقنوات حبر مرئية تمتد نحو آلة طي.",
+      "challenge_ar": "تدوير قنوات الحبر لبناء الممشى؛ شرفة اختيارية للشبح.",
+      "story_clue_ar": "الشاشات تنفذ تعليمات قديمة رغم خلو المختبر.",
+      "features": [
+        "ink_network_main_puzzle",
+        "optional_upper_gallery"
+      ],
+      "adjacent_areas": [
+        2,
+        4,
+        9
+      ],
+      "map_rect": [
+        930,
+        1450,
+        340,
+        180
+      ],
+      "physical_geometry_status": "To be blocked out and tested using the existing hero; no physical coordinates claimed here.",
+      "map_label_ar": "مختبر المخطوطات"
+    },
+    {
+      "id": 4,
+      "name_ar": "ركن الشعلة السوداء",
+      "playspaces_proposed": 2,
+      "optional_area": false,
+      "environment_ar": "زاوية تحت رف عظيم، ضوء دافئ بعيد، وظل شخص جالس منهك. تؤجل ملامحه وملابسه وشكل رأسه النهائي؛ يظهر كهيئة ظل فقط في التصورات.",
+      "challenge_ar": "لقاء آمن على مسار التقدم؛ الحوار قابل للاستكمال عند العودة.",
+      "story_clue_ar": "التحذير الأول من ضعف الشعلة؛ إشارة إلى شهادات الأرشيف.",
+      "features": [
+        "safe_story_encounter",
+        "return_dialogue"
+      ],
+      "adjacent_areas": [
+        3,
+        5,
+        6
+      ],
+      "map_rect": [
+        1350,
+        1450,
+        340,
+        180
+      ],
+      "physical_geometry_status": "To be blocked out and tested using the existing hero; no physical coordinates claimed here.",
+      "map_label_ar": "ركن الشعلة السوداء"
+    },
+    {
+      "id": 5,
+      "name_ar": "الهوامش المحذوفة",
+      "playspaces_proposed": 2,
+      "optional_area": true,
+      "environment_ar": "هوامش كتاب عملاق بها أسماء مخدوشة وتجويفات بين الصفحات.",
+      "challenge_ar": "فرع اختياري يربط الركن بالأرشيف؛ مساران حول خيوط الناسج وقفزات أدق.",
+      "story_clue_ar": "شهادة غير مكتملة عن شخص بحث عن تجديد شعلته.",
+      "features": [
+        "optional_precision_route",
+        "weaver_two_lane_intro"
+      ],
+      "adjacent_areas": [
+        4,
+        6
+      ],
+      "map_rect": [
+        1740,
+        1210,
+        250,
+        180
+      ],
+      "physical_geometry_status": "To be blocked out and tested using the existing hero; no physical coordinates claimed here.",
+      "map_label_ar": "الهوامش المحذوفة"
+    },
+    {
+      "id": 6,
+      "name_ar": "الأرشيف المطوي",
+      "playspaces_proposed": 4,
+      "optional_area": false,
+      "environment_ar": "فراغ رأسي كبير حول تجليد مركزي، وأربعة طوابق حقيقية بعلامات شكلية مختلفة.",
+      "challenge_ar": "صعود بالجري والقفزة العادية مع رفوف واسعة؛ فروع قراءة واستراحة واختصارات.",
+      "story_clue_ar": "ثلاث شهادات ظاهرة تتعارض في وصف مكان الأثر؛ لا تكشف الحقيقة النهائية.",
+      "features": [
+        "four_floor_ascent",
+        "reading_hub",
+        "overlay_pages_optional_puzzle"
+      ],
+      "adjacent_areas": [
+        2,
+        4,
+        5,
+        7,
+        12
+      ],
+      "map_rect": [
+        1350,
+        930,
+        340,
+        340
+      ],
+      "physical_geometry_status": "To be blocked out and tested using the existing hero; no physical coordinates claimed here.",
+      "archive_floors": [
+        {
+          "floor": 1,
+          "role_ar": "الدخول وشرح مسار الصعود"
+        },
+        {
+          "floor": 2,
+          "role_ar": "استراحة ومزلاج الاختصار إلى المنطقة 2"
+        },
+        {
+          "floor": 3,
+          "role_ar": "قراءة وشرفة سر اختياري"
+        },
+        {
+          "floor": 4,
+          "role_ar": "مخرج INPUT وموضع اختصار المشغل بعد فتحه"
+        }
+      ],
+      "map_label_ar": "الأرشيف المطوي"
+    },
+    {
+      "id": 7,
+      "name_ar": "غرفة الإدخال — INPUT",
+      "playspaces_proposed": 2,
+      "optional_area": false,
+      "environment_ar": "رفوف منخفضة واضحة للكتب ذات الرموز △ □ ○، وحوامل تظل فارغة بعد الجمع.",
+      "challenge_ar": "جمع الكتب الثلاثة كلها داخل المنطقة؛ مسارات وصول قصيرة لا تعتمد على إخفاء الكتب.",
+      "story_clue_ar": "كتب جامعية أعيد استخدامها كأجزاء تشغيل لعمارة المكان.",
+      "features": [
+        "collect_all_three_books"
+      ],
+      "adjacent_areas": [
+        6,
+        8
+      ],
+      "map_rect": [
+        930,
+        1010,
+        340,
+        180
+      ],
+      "physical_geometry_status": "To be blocked out and tested using the existing hero; no physical coordinates claimed here.",
+      "map_label_ar": "غرفة الإدخال"
+    },
+    {
+      "id": 8,
+      "name_ar": "قاعة الترتيب — PROCESS",
+      "playspaces_proposed": 2,
+      "optional_area": false,
+      "environment_ar": "طاولة واحدة ثابتة وخانات مرقمة ودليل رموز قريب؛ معرض جانبي تحميه سواتر.",
+      "challenge_ar": "ترتيب الكتب كلها على الطاولة؛ البرج في معرض اختياري بعيد عن التحكم.",
+      "story_clue_ar": "النظام ينتظر أوامر صحيحة رغم غياب من صنعه.",
+      "features": [
+        "arrange_all_three_books",
+        "optional_turret_gallery"
+      ],
+      "adjacent_areas": [
+        7,
+        9
+      ],
+      "map_rect": [
+        510,
+        1010,
+        340,
+        180
+      ],
+      "physical_geometry_status": "To be blocked out and tested using the existing hero; no physical coordinates claimed here.",
+      "map_label_ar": "قاعة الترتيب"
+    },
+    {
+      "id": 9,
+      "name_ar": "جسر الإخراج — OUTPUT",
+      "playspaces_proposed": 3,
+      "optional_area": false,
+      "environment_ar": "صفحة ضخمة مطوية عند مفصل تجليد، ومرساها النهائي ظاهر من موضع التشغيل.",
+      "challenge_ar": "نشر درج ثابت من أرض آمنة، ثم عبوره وفتح طريق العودة للمختبر.",
+      "story_clue_ar": "أول تغير معماري كبير يصنعه اللاعب بنفسه.",
+      "features": [
+        "safe_permanent_page_fold",
+        "return_shortcut"
+      ],
+      "adjacent_areas": [
+        3,
+        8,
+        10
+      ],
+      "map_rect": [
+        90,
+        1010,
+        340,
+        180
+      ],
+      "physical_geometry_status": "To be blocked out and tested using the existing hero; no physical coordinates claimed here.",
+      "map_label_ar": "جسر الإخراج"
+    },
+    {
+      "id": 10,
+      "name_ar": "قاعة الأثقال",
+      "playspaces_proposed": 3,
+      "optional_area": false,
+      "environment_ar": "كفتان معلقتان بشرائط سميكة، وأثقال كتب متمايزة السمك وجسر عند علامة أفقية.",
+      "challenge_ar": "تحريك أثقال بين الكفتين حتى يستقر الجسر؛ مقعد آمن عند الدخول.",
+      "story_clue_ar": "سجل صيانة يلمح إلى أن تقوية شيء قد تستنزف شيئًا آخر.",
+      "features": [
+        "balance_bridge_main_puzzle",
+        "checkpoint"
+      ],
+      "adjacent_areas": [
+        9,
+        11,
+        13
+      ],
+      "map_rect": [
+        90,
+        560,
+        340,
+        220
+      ],
+      "physical_geometry_status": "To be blocked out and tested using the existing hero; no physical coordinates claimed here.",
+      "map_label_ar": "قاعة الأثقال"
+    },
+    {
+      "id": 11,
+      "name_ar": "مدرجات المحاضرة الصامتة",
+      "playspaces_proposed": 3,
+      "optional_area": false,
+      "environment_ar": "مدرج جامعي واسع؛ منبر خال وشاشة إسقاط وصوت قديم، مع مسارين علوي وسفلي.",
+      "challenge_ar": "قراءة نمط عداء الحلقة؛ مواجهات قليلة تجمع نوعين مألوفين ومسارات اختيارية.",
+      "story_clue_ar": "المحاضرة تستمر في غياب المحاضر والطلاب.",
+      "features": [
+        "loop_runner_intro",
+        "layered_route",
+        "familiar_enemy_combinations"
+      ],
+      "adjacent_areas": [
+        10,
+        12
+      ],
+      "map_rect": [
+        510,
+        560,
+        340,
+        220
+      ],
+      "physical_geometry_status": "To be blocked out and tested using the existing hero; no physical coordinates claimed here.",
+      "encounter_combination_policy": "Only combine types already introduced to this player; an unseen optional type receives a solo introduction first.",
+      "map_label_ar": "المدرجات الصامتة"
+    },
+    {
+      "id": 12,
+      "name_ar": "مشغل التجليد",
+      "playspaces_proposed": 3,
+      "optional_area": false,
+      "environment_ar": "مكابس كتب هائلة وآلات بطيئة، تظهر مناطق ضغطها وظلالها من بعيد.",
+      "challenge_ar": "عبور بتوقيت محسوب بين جيوب ثابتة؛ فتح ممشى خدمة واختصار؛ لغز مجسم كتاب اختياري.",
+      "story_clue_ar": "أدوات إصلاح حديثة وسط الخراب؛ شخص ما ما زال يصون المكان.",
+      "features": [
+        "visible_timing_gauntlet",
+        "service_route_unlock",
+        "popup_book_optional_puzzle"
+      ],
+      "adjacent_areas": [
+        6,
+        11,
+        13
+      ],
+      "map_rect": [
+        930,
+        560,
+        340,
+        220
+      ],
+      "physical_geometry_status": "To be blocked out and tested using the existing hero; no physical coordinates claimed here.",
+      "map_label_ar": "مشغل التجليد"
+    },
+    {
+      "id": 13,
+      "name_ar": "رواق المصحّح",
+      "playspaces_proposed": 3,
+      "optional_area": false,
+      "environment_ar": "دهليز آمن، ساحة تصحيح عريضة، ثم ستارة واقية وركن استراحة منفصل.",
+      "challenge_ar": "فتح عودة إلى قاعة الأثقال قبل القتال؛ هزيمة الحارس وكسب الختم ثم الوصول للمقعد.",
+      "story_clue_ar": "آخر إجراء قبل مقابلة د. كومبايلر؛ الختم مكافأة مواجهة حقيقية.",
+      "features": [
+        "pre_guard_return_unlock",
+        "seal_guard_encounter",
+        "post_guard_checkpoint"
+      ],
+      "adjacent_areas": [
+        10,
+        12,
+        14
+      ],
+      "map_rect": [
+        1350,
+        560,
+        340,
+        220
+      ],
+      "physical_geometry_status": "To be blocked out and tested using the existing hero; no physical coordinates claimed here.",
+      "internal_layout": {
+        "arrival_node": "approach_before_guard",
+        "shortcut_13_10_destination": "approach_before_guard",
+        "subareas": [
+          {
+            "id": "approach_before_guard",
+            "safe": true,
+            "role_ar": "الوصول من 12 وفتح باب العودة إلى 10 قبل القتال"
+          },
+          {
+            "id": "guard_court",
+            "role_ar": "مواجهة المعيد المكسور على أرض واسعة"
+          },
+          {
+            "id": "after_seal_alcove",
+            "requires_all": [
+              "guard_clear",
+              "compiler_seal_owned"
+            ],
+            "role_ar": "المقعد والمقبس بعد الختم؛ ستارة تحجب المقذوفات وتسمح بمرور البطل"
+          }
+        ],
+        "bench_node": "after_seal_alcove",
+        "exit_to_14_node": "after_seal_alcove"
+      },
+      "map_label_ar": "رواق المصحّح"
+    },
+    {
+      "id": 14,
+      "name_ar": "قاعة المحاكمة",
+      "playspaces_proposed": 3,
+      "optional_area": false,
+      "environment_ar": "قاعة محاضرات على كتاب ضخم، أرض رئيسية ثابتة وواضحة وصفحات متحركة على الأطراف.",
+      "challenge_ar": "د. كومبايلر؛ تعليمات مسموعة ومكتوبة تسبق الهجمات، ثم تعارض أوامر في الطور الأخير.",
+      "story_clue_ar": "تظهر أسماء محذوفة خلف منصة المحاضر؛ لا يفسر الزعيم سر العوالم كاملًا.",
+      "features": [
+        "dr_compiler_boss"
+      ],
+      "adjacent_areas": [
+        13,
+        15
+      ],
+      "map_rect": [
+        1350,
+        230,
+        340,
+        180
+      ],
+      "physical_geometry_status": "To be blocked out and tested using the existing hero; no physical coordinates claimed here.",
+      "map_label_ar": "قاعة المحاكمة"
+    },
+    {
+      "id": 15,
+      "name_ar": "الصفحة التالية",
+      "playspaces_proposed": 2,
+      "optional_area": false,
+      "environment_ar": "ممر هادئ تستقر فيه الأوراق، ثم عتبة تكشف سماء لا تشبه المكتبة.",
+      "challenge_ar": "هدوء بعد الفوز، وملخص قصة متاح للقراءة، ثم تفاعل صريح عند العتبة مع تحذير أن المغادرة نهائية وإمكان الإلغاء والعودة للاستكشاف.",
+      "story_clue_ar": "تم إثبات الحضور. يرجى الانتقال إلى المحاضرة التالية.",
+      "features": [
+        "aftermath_reveal",
+        "world2_threshold"
+      ],
+      "adjacent_areas": [
+        14
+      ],
+      "map_rect": [
+        930,
+        230,
+        340,
+        180
+      ],
+      "physical_geometry_status": "To be blocked out and tested using the existing hero; no physical coordinates claimed here.",
+      "map_label_ar": "الصفحة التالية"
+    }
+  ],
+  "connections": [
+    {
+      "id": "main_1_2",
+      "from_area": 1,
+      "to_area": 2,
+      "bidirectional": true,
+      "forward_requires_all": [
+        "weapon_owned"
+      ],
+      "reverse_requires_all": [],
+      "type": "main",
+      "map_polyline": [
+        [
+          430,
+          1540
+        ],
+        [
+          510,
+          1540
+        ]
+      ]
+    },
+    {
+      "id": "main_2_3",
+      "from_area": 2,
+      "to_area": 3,
+      "bidirectional": true,
+      "forward_requires_all": [
+        "encounter_assignments_cleared"
+      ],
+      "reverse_requires_all": [],
+      "type": "main",
+      "map_polyline": [
+        [
+          850,
+          1540
+        ],
+        [
+          930,
+          1540
+        ]
+      ]
+    },
+    {
+      "id": "main_3_4",
+      "from_area": 3,
+      "to_area": 4,
+      "bidirectional": true,
+      "forward_requires_all": [
+        "ink_route_solved"
+      ],
+      "reverse_requires_all": [],
+      "type": "main",
+      "map_polyline": [
+        [
+          1270,
+          1540
+        ],
+        [
+          1350,
+          1540
+        ]
+      ]
+    },
+    {
+      "id": "main_4_6",
+      "from_area": 4,
+      "to_area": 6,
+      "bidirectional": true,
+      "forward_requires_all": [],
+      "reverse_requires_all": [],
+      "type": "main",
+      "map_polyline": [
+        [
+          1520,
+          1450
+        ],
+        [
+          1520,
+          1270
+        ]
+      ]
+    },
+    {
+      "id": "main_6_7",
+      "from_area": 6,
+      "to_area": 7,
+      "bidirectional": true,
+      "forward_requires_all": [
+        "archive_upper_landing_reached"
+      ],
+      "reverse_requires_all": [],
+      "type": "main",
+      "map_polyline": [
+        [
+          1350,
+          1058
+        ],
+        [
+          1310,
+          1058
+        ],
+        [
+          1310,
+          1100
+        ],
+        [
+          1270,
+          1100
+        ]
+      ]
+    },
+    {
+      "id": "main_7_8",
+      "from_area": 7,
+      "to_area": 8,
+      "bidirectional": true,
+      "forward_requires_all": [
+        "books_collected"
+      ],
+      "reverse_requires_all": [],
+      "type": "main",
+      "map_polyline": [
+        [
+          930,
+          1100
+        ],
+        [
+          850,
+          1100
+        ]
+      ]
+    },
+    {
+      "id": "main_8_9",
+      "from_area": 8,
+      "to_area": 9,
+      "bidirectional": true,
+      "forward_requires_all": [
+        "book_order_verified"
+      ],
+      "reverse_requires_all": [],
+      "type": "main",
+      "map_polyline": [
+        [
+          510,
+          1100
+        ],
+        [
+          430,
+          1100
+        ]
+      ]
+    },
+    {
+      "id": "main_9_10",
+      "from_area": 9,
+      "to_area": 10,
+      "bidirectional": true,
+      "forward_requires_all": [
+        "output_open"
+      ],
+      "reverse_requires_all": [],
+      "type": "main",
+      "map_polyline": [
+        [
+          260,
+          1010
+        ],
+        [
+          260,
+          780
+        ]
+      ]
+    },
+    {
+      "id": "main_10_11",
+      "from_area": 10,
+      "to_area": 11,
+      "bidirectional": true,
+      "forward_requires_all": [
+        "balance_bridge_locked"
+      ],
+      "reverse_requires_all": [],
+      "type": "main",
+      "map_polyline": [
+        [
+          430,
+          670
+        ],
+        [
+          510,
+          670
+        ]
+      ]
+    },
+    {
+      "id": "main_11_12",
+      "from_area": 11,
+      "to_area": 12,
+      "bidirectional": true,
+      "forward_requires_all": [],
+      "reverse_requires_all": [],
+      "type": "main",
+      "map_polyline": [
+        [
+          850,
+          670
+        ],
+        [
+          930,
+          670
+        ]
+      ]
+    },
+    {
+      "id": "main_12_13",
+      "from_area": 12,
+      "to_area": 13,
+      "bidirectional": true,
+      "forward_requires_all": [
+        "workshop_main_passage_open"
+      ],
+      "reverse_requires_all": [],
+      "type": "main",
+      "map_polyline": [
+        [
+          1270,
+          670
+        ],
+        [
+          1350,
+          670
+        ]
+      ]
+    },
+    {
+      "id": "main_13_14",
+      "from_area": 13,
+      "to_area": 14,
+      "bidirectional": true,
+      "forward_requires_all": [
+        "guard_clear",
+        "compiler_seal_owned",
+        "seal_registered"
+      ],
+      "reverse_requires_all": [
+        "seal_registered"
+      ],
+      "type": "main",
+      "from_subarea": "after_seal_alcove",
+      "map_polyline": [
+        [
+          1520,
+          560
+        ],
+        [
+          1520,
+          410
+        ]
+      ]
+    },
+    {
+      "id": "main_14_15",
+      "from_area": 14,
+      "to_area": 15,
+      "bidirectional": true,
+      "forward_requires_all": [
+        "boss_defeated"
+      ],
+      "reverse_requires_all": [
+        "boss_defeated"
+      ],
+      "type": "main",
+      "map_polyline": [
+        [
+          1350,
+          320
+        ],
+        [
+          1270,
+          320
+        ]
+      ]
+    },
+    {
+      "id": "optional_branch_4_5",
+      "from_area": 4,
+      "to_area": 5,
+      "bidirectional": true,
+      "forward_requires_all": [],
+      "reverse_requires_all": [],
+      "type": "optional_branch",
+      "map_polyline": [
+        [
+          1690,
+          1540
+        ],
+        [
+          1865,
+          1540
+        ],
+        [
+          1865,
+          1390
+        ]
+      ]
+    },
+    {
+      "id": "optional_branch_5_6",
+      "from_area": 5,
+      "to_area": 6,
+      "bidirectional": true,
+      "forward_requires_all": [],
+      "reverse_requires_all": [],
+      "type": "optional_branch",
+      "map_polyline": [
+        [
+          1865,
+          1210
+        ],
+        [
+          1865,
+          1100
+        ],
+        [
+          1690,
+          1100
+        ]
+      ]
+    },
+    {
+      "id": "return_shortcut_6_2",
+      "from_area": 6,
+      "to_area": 2,
+      "bidirectional": true,
+      "forward_requires_all": [
+        "archive_return_open"
+      ],
+      "reverse_requires_all": [
+        "archive_return_open"
+      ],
+      "type": "return_shortcut",
+      "unlock_area": 6,
+      "map_polyline": [
+        [
+          1350,
+          1166
+        ],
+        [
+          1310,
+          1166
+        ],
+        [
+          1310,
+          1360
+        ],
+        [
+          680,
+          1360
+        ],
+        [
+          680,
+          1450
+        ]
+      ]
+    },
+    {
+      "id": "return_shortcut_9_3",
+      "from_area": 9,
+      "to_area": 3,
+      "bidirectional": true,
+      "forward_requires_all": [
+        "output_open"
+      ],
+      "reverse_requires_all": [
+        "output_open"
+      ],
+      "type": "return_shortcut",
+      "unlock_area": 9,
+      "map_polyline": [
+        [
+          90,
+          1100
+        ],
+        [
+          50,
+          1100
+        ],
+        [
+          50,
+          1700
+        ],
+        [
+          1100,
+          1700
+        ],
+        [
+          1100,
+          1630
+        ]
+      ]
+    },
+    {
+      "id": "return_shortcut_12_6",
+      "from_area": 12,
+      "to_area": 6,
+      "bidirectional": true,
+      "forward_requires_all": [
+        "workshop_archive_return_open"
+      ],
+      "reverse_requires_all": [
+        "workshop_archive_return_open"
+      ],
+      "type": "return_shortcut",
+      "unlock_area": 12,
+      "map_polyline": [
+        [
+          1100,
+          780
+        ],
+        [
+          1100,
+          860
+        ],
+        [
+          1520,
+          860
+        ],
+        [
+          1520,
+          930
+        ]
+      ]
+    },
+    {
+      "id": "return_shortcut_13_10",
+      "from_area": 13,
+      "to_area": 10,
+      "bidirectional": true,
+      "forward_requires_all": [
+        "guard_approach_return_open"
+      ],
+      "reverse_requires_all": [
+        "guard_approach_return_open"
+      ],
+      "type": "return_shortcut",
+      "unlock_area": 13,
+      "from_subarea": "approach_before_guard",
+      "cannot_reach_post_guard_bench_or_boss_without_guard": true,
+      "map_polyline": [
+        [
+          1390,
+          560
+        ],
+        [
+          1390,
+          475
+        ],
+        [
+          260,
+          475
+        ],
+        [
+          260,
+          560
+        ]
+      ]
+    }
+  ],
+  "progression_facts": {
+    "weapon_owned": {
+      "source": "weapon_pickup",
+      "source_area": 1,
+      "persistent": true,
+      "requires_all": []
+    },
+    "encounter_assignments_cleared": {
+      "source": "actual_larva_encounter_victory",
+      "source_area": 2,
+      "persistent": true,
+      "requires_all": [
+        "weapon_owned"
+      ],
+      "actual_combat_required": true,
+      "environment_may_grant": false
+    },
+    "ink_route_solved": {
+      "source": "ink_reaches_folder_and_walkway_locks",
+      "source_area": 3,
+      "persistent": true,
+      "requires_all": []
+    },
+    "black_flame_warning_seen": {
+      "source": "main_route_encounter_at_safe_alcove",
+      "source_area": 4,
+      "persistent": true,
+      "requires_all": [],
+      "story_only": true,
+      "blocks_extended_dialogue_skip": false
+    },
+    "archive_upper_landing_reached": {
+      "source": "physically_ascend_four_archive_floors",
+      "source_area": 6,
+      "persistent": true,
+      "requires_all": []
+    },
+    "archive_return_open": {
+      "source": "archive_side_latch_floor_2",
+      "source_area": 6,
+      "persistent": true,
+      "requires_all": [],
+      "activation_side": "area_6_only"
+    },
+    "book_triangle_owned": {
+      "source": "collect_visible_triangle_book",
+      "source_area": 7,
+      "persistent": true,
+      "requires_all": []
+    },
+    "book_square_owned": {
+      "source": "collect_visible_square_book",
+      "source_area": 7,
+      "persistent": true,
+      "requires_all": []
+    },
+    "book_circle_owned": {
+      "source": "collect_visible_circle_book",
+      "source_area": 7,
+      "persistent": true,
+      "requires_all": []
+    },
+    "books_collected": {
+      "source": "all_three_books_registered",
+      "source_area": 7,
+      "persistent": true,
+      "requires_all": [
+        "book_triangle_owned",
+        "book_square_owned",
+        "book_circle_owned"
+      ]
+    },
+    "book_order_verified": {
+      "source": "correct_order_on_single_table_confirmed",
+      "source_area": 8,
+      "persistent": true,
+      "requires_all": [
+        "books_collected"
+      ],
+      "requires_order": [
+        "TRIANGLE",
+        "SQUARE",
+        "CIRCLE"
+      ]
+    },
+    "output_open": {
+      "source": "page_fully_settled_and_static_geometry_locked",
+      "source_area": 9,
+      "persistent": true,
+      "requires_all": [
+        "book_order_verified"
+      ],
+      "requires_events": [
+        "hero_outside_swept_volume",
+        "page_settled",
+        "static_collisions_committed"
+      ]
+    },
+    "balance_bridge_locked": {
+      "source": "all_weights_placed_pans_balanced_bridge_locked",
+      "source_area": 10,
+      "persistent": true,
+      "requires_all": []
+    },
+    "workshop_main_passage_open": {
+      "source": "end_of_workshop_service_latch",
+      "source_area": 12,
+      "persistent": true,
+      "requires_all": []
+    },
+    "workshop_archive_return_open": {
+      "source": "workshop_side_latch_after_main_timing_route",
+      "source_area": 12,
+      "persistent": true,
+      "requires_all": [
+        "workshop_main_passage_open"
+      ],
+      "activation_side": "area_12_only"
+    },
+    "guard_approach_return_open": {
+      "source": "pre_guard_approach_latch",
+      "source_area": 13,
+      "persistent": true,
+      "requires_all": [],
+      "activation_side": "area_13_approach_only"
+    },
+    "guard_clear": {
+      "source": "actual_broken_ta_victory",
+      "source_area": 13,
+      "persistent": true,
+      "requires_all": [
+        "weapon_owned",
+        "output_open",
+        "balance_bridge_locked",
+        "workshop_main_passage_open"
+      ],
+      "actual_combat_required": true,
+      "environment_may_grant": false
+    },
+    "compiler_seal_owned": {
+      "source": "earned_reward_pickup_after_guard_victory",
+      "source_area": 13,
+      "persistent": true,
+      "requires_all": [
+        "guard_clear"
+      ],
+      "environment_may_grant": false
+    },
+    "seal_registered": {
+      "source": "post_guard_socket",
+      "source_area": 13,
+      "persistent": true,
+      "requires_all": [
+        "guard_clear",
+        "compiler_seal_owned"
+      ],
+      "consumes_seal": false
+    },
+    "boss_defeated": {
+      "source": "actual_dr_compiler_victory",
+      "source_area": 14,
+      "persistent": true,
+      "requires_all": [
+        "guard_clear",
+        "compiler_seal_owned",
+        "seal_registered"
+      ],
+      "actual_combat_required": true,
+      "environment_may_grant": false
+    },
+    "world1_departed": {
+      "source": "explicit_confirmed_world2_transition_committed",
+      "source_area": 15,
+      "persistent": true,
+      "irreversible": true,
+      "requires_all": [
+        "boss_defeated"
+      ],
+      "requires_events": [
+        "departure_warning_shown",
+        "player_selected_leave_explicitly",
+        "world2_safe_arrival_ready"
+      ],
+      "automatic_on_proximity": false
+    }
+  },
+  "puzzles": [
+    {
+      "id": "ink_network",
+      "main": true,
+      "areas": [
+        3
+      ],
+      "goal_ar": "إيصال الحبر إلى آلة تطوي ممشى ثابتًا",
+      "interaction_ar": "تدوير ثلاث قطع قناة؛ اتجاه الجريان والاتصال ظاهر من موضع التحكم",
+      "completion_fact": "ink_route_solved",
+      "wrong_answer": {
+        "damage": 0,
+        "resource_loss": 0,
+        "retry": "immediate"
+      },
+      "safe_geometry": "Hero stays at a fixed control pad; failed routing visibly returns ink to basin. Walkway opens only after the hero is clear and then locks permanently."
+    },
+    {
+      "id": "books_pipeline",
+      "main": true,
+      "areas": [
+        7,
+        8,
+        9
+      ],
+      "symbols": [
+        {
+          "id": "TRIANGLE",
+          "glyph": "△"
+        },
+        {
+          "id": "SQUARE",
+          "glyph": "□"
+        },
+        {
+          "id": "CIRCLE",
+          "glyph": "○"
+        }
+      ],
+      "collect": {
+        "area": 7,
+        "all_three_visible": true,
+        "mandatory_books_in_secrets": false
+      },
+      "arrange": {
+        "area": 8,
+        "one_table": true,
+        "order": [
+          "TRIANGLE",
+          "SQUARE",
+          "CIRCLE"
+        ],
+        "same_view_clue": true,
+        "books_remain_together_on_table": true
+      },
+      "deploy": {
+        "area": 9,
+        "requires": [
+          "book_order_verified"
+        ],
+        "completion_fact": "output_open",
+        "moving_page_riding": false
+      },
+      "wrong_answer": {
+        "damage": 0,
+        "book_loss": false,
+        "resource_loss": 0,
+        "enemy_spawn": false,
+        "retry": "immediate"
+      }
+    },
+    {
+      "id": "balance_bridge",
+      "main": true,
+      "areas": [
+        10
+      ],
+      "goal_ar": "موازنة الكفتين حتى يطابق الجسر العلامة الأفقية",
+      "interaction_ar": "نقل أثقال متمايزة السمك إلى مواضع ثابتة؛ كل نقل يظهر ميل الميزان فورًا",
+      "internal_weight_model": {
+        "fixed_left": 2,
+        "fixed_right": 0,
+        "movable": [
+          {
+            "id": "thin_a",
+            "units": 1
+          },
+          {
+            "id": "thin_b",
+            "units": 1
+          },
+          {
+            "id": "thick",
+            "units": 2
+          }
+        ],
+        "all_movable_must_be_placed": true,
+        "example_solution": {
+          "left": [
+            "thin_a"
+          ],
+          "right": [
+            "thin_b",
+            "thick"
+          ]
+        },
+        "player_needs_arithmetic_text": false
+      },
+      "completion_fact": "balance_bridge_locked",
+      "wrong_answer": {
+        "damage": 0,
+        "resource_loss": 0,
+        "retry": "immediate"
+      },
+      "safe_geometry": "Move weights from a stable pad; no actor rides the moving bridge. Stable final geometry locks and persists."
+    },
+    {
+      "id": "overlay_pages",
+      "main": false,
+      "areas": [
+        6
+      ],
+      "goal_ar": "مطابقة صفحتين شفافتين لإظهار موضع درج جانبي",
+      "reward_secret": "S03",
+      "essential_progression_reward": false,
+      "uses_glyphs_not_color_only": true
+    },
+    {
+      "id": "popup_book",
+      "main": false,
+      "areas": [
+        12
+      ],
+      "goal_ar": "ترتيب طيات كتاب مجسم لفتح حجرة جانبية",
+      "reward_secret": "S06",
+      "essential_progression_reward": false,
+      "exit_stays_open": true
+    }
+  ],
+  "benches": [
+    {
+      "id": "bench1",
+      "area": 1,
+      "requires_all": [],
+      "safe": true
+    },
+    {
+      "id": "bench6",
+      "area": 6,
+      "archive_floor": 2,
+      "requires_all": [],
+      "safe": true
+    },
+    {
+      "id": "bench10",
+      "area": 10,
+      "side": "arrival_before_balance_bridge",
+      "requires_all": [],
+      "safe": true
+    },
+    {
+      "id": "bench13",
+      "area": 13,
+      "subarea": "after_seal_alcove",
+      "requires_all": [
+        "guard_clear",
+        "compiler_seal_owned"
+      ],
+      "safe": true,
+      "after_guard": true
+    }
+  ],
+  "secrets": [
+    {
+      "id": "S01",
+      "area": 2,
+      "entry_ar": "رف سفلي جانبي بعد تجربة اليرقة",
+      "reward_ar": "موارد قليلة ورسم طالب",
+      "optional": true,
+      "return_ar": "درج ثابت يعود إلى الممر نفسه",
+      "grants_progression_facts": [],
+      "contains_mandatory_book_weapon_or_seal": false
+    },
+    {
+      "id": "S02",
+      "area": 5,
+      "entry_ar": "مسار الهوامش الأدق بين تجويفين آمنين",
+      "reward_ar": "شهادة مسافر تحمل اسمًا ممحوًا",
+      "optional": true,
+      "return_ar": "منحدر قصير يصل الفرع بطريقه قبل الخطر",
+      "grants_progression_facts": [],
+      "contains_mandatory_book_weapon_or_seal": false
+    },
+    {
+      "id": "S03",
+      "area": 6,
+      "archive_floor": 3,
+      "entry_ar": "حل الصفحتين الشفافتين",
+      "reward_ar": "شهادة تناقض وصف الأثر في كتاب ظاهر",
+      "optional": true,
+      "return_ar": "الطية تبقى مفتوحة إلى شرفة الطابق الثالث",
+      "grants_progression_facts": [],
+      "contains_mandatory_book_weapon_or_seal": false
+    },
+    {
+      "id": "S04",
+      "area": 9,
+      "requires_all": [
+        "output_open"
+      ],
+      "entry_ar": "تجويف أسفل درج الصفحات المستقر",
+      "reward_ar": "رسالة وموارد",
+      "optional": true,
+      "return_ar": "الأرض السفلية ثابتة ويعاد صعود الدرج الدائم",
+      "grants_progression_facts": [],
+      "contains_mandatory_book_weapon_or_seal": false
+    },
+    {
+      "id": "S05",
+      "area": 11,
+      "entry_ar": "شرفة جهاز العرض عبر طريق أعلى اختياري",
+      "reward_ar": "تسجيل قديم مع نص مكتوب ومورد تجميلي",
+      "optional": true,
+      "return_ar": "رفوف عريضة تنزل إلى المسار الأرضي دون قفزة عمياء",
+      "grants_progression_facts": [],
+      "contains_mandatory_book_weapon_or_seal": false
+    },
+    {
+      "id": "S06",
+      "area": 12,
+      "entry_ar": "حل الكتاب المجسم",
+      "reward_ar": "مذكرة مصلح وموارد",
+      "optional": true,
+      "return_ar": "باب الحجرة والطيات يبقيان مفتوحين",
+      "grants_progression_facts": [],
+      "contains_mandatory_book_weapon_or_seal": false
+    }
+  ],
+  "enemy_reservations": [
+    {
+      "id": "glitch_larva",
+      "name_ar": "يرقة الخلل",
+      "approved_existing_type": true,
+      "intro_area": 2,
+      "later_areas": [
+        5,
+        6
+      ],
+      "role_ar": "اندفاع أرضي قصير؛ انكماش واضح قبل الحركة"
+    },
+    {
+      "id": "popup_wraith",
+      "name_ar": "شبح النافذة",
+      "approved_existing_type": true,
+      "intro_area": 3,
+      "later_areas": [
+        6,
+        11
+      ],
+      "role_ar": "انقضاض على موضع سابق مع ظل هبوط ظاهر",
+      "fallback_first_encounter": {
+        "area": 11,
+        "if_optional_intro_skipped": "Present alone with a safe observation pad before any combination."
+      }
+    },
+    {
+      "id": "syntax_turret",
+      "name_ar": "برج الصياغة",
+      "approved_existing_type": true,
+      "intro_area": 8,
+      "later_areas": [
+        11
+      ],
+      "role_ar": "دفعات إطلاق وتلقيم؛ سواتر واضحة بعيدًا عن اللغز",
+      "fallback_first_encounter": {
+        "area": 11,
+        "if_optional_intro_skipped": "Present alone with a safe observation pad before any combination."
+      }
+    },
+    {
+      "id": "broken_ta",
+      "name_ar": "المعيد المكسور",
+      "approved_existing_type": true,
+      "intro_area": 13,
+      "later_areas": [],
+      "role_ar": "حارس الختم؛ ضربات ثقيلة وفترات إنهاك",
+      "mandatory": true
+    },
+    {
+      "id": "loop_runner",
+      "name_ar": "عدّاء الحلقة",
+      "proposed_new_type": true,
+      "intro_area": 11,
+      "later_areas": [
+        12
+      ],
+      "role_ar": "اندفاعان متكرران ثم عودة؛ قراءة نمط المسار"
+    },
+    {
+      "id": "margin_weaver",
+      "name_ar": "ناسج الهوامش",
+      "proposed_new_type": true,
+      "intro_area": 5,
+      "later_areas": [
+        11
+      ],
+      "role_ar": "يغلق أحد مسارين بخيط مؤقت؛ يظل طريق آمن مفتوحًا",
+      "optional_first_encounter": true,
+      "fallback_first_encounter": {
+        "area": 11,
+        "if_optional_intro_skipped": "Present alone with a safe observation pad before any combination."
+      }
+    },
+    {
+      "id": "reference_thief",
+      "name_ar": "سارق الإشارات",
+      "proposed_new_type": true,
+      "intro_area": 6,
+      "later_areas": [
+        12
+      ],
+      "role_ar": "مطاردة اختيارية لمورد يحمله؛ يدافع بمقذوف قصير",
+      "steals_existing_player_inventory": false,
+      "may_hold_mandatory_item": false
+    }
+  ],
+  "boss": {
+    "id": "dr_compiler",
+    "area": 14,
+    "separate_from_seven_enemy_types": true,
+    "arena_main_floor": "stationary",
+    "telegraphs": "Visible and audible instructions, with written equivalents.",
+    "execution_status": "not_implemented_here"
+  },
+  "save_and_death": {
+    "persistent_facts": "All progression_facts listed above.",
+    "persistent_geometry": [
+      "solved_ink_walkway",
+      "output_stairs_locked_open",
+      "balanced_bridge_locked",
+      "opened_return_shortcuts",
+      "workshop_service_path",
+      "opened_secret_folds"
+    ],
+    "guard_repeats_after_clear": false,
+    "seal_consumed": false,
+    "boss_resets_per_attempt_until_defeated": true,
+    "restore_geometry_before_respawn": true,
+    "fold_interruption": "Reload before geometry commit returns to closed safe state; reload after atomic commit restores final static geometry. Never spawn on a half-folded page.",
+    "after_world1_departure": "Persist world1_departed and the World2 checkpoint; subsequent death or loading cannot return to a World1 bench."
+  },
+  "safety_and_readability": [
+    "Existing hero proportions, palette and run/jump remain the reference.",
+    "Run and ordinary jump suffice; no dash, wall jump or double jump is required.",
+    "No enemy attack in dialogue, bench, main reading or puzzle-control zones.",
+    "Introduce every enemy and mechanism separately before combining known challenges.",
+    "No new enemy attack starts off screen; no attacks on room-transition spawn.",
+    "Visible warning, safe waiting pockets and a complete view of moving hazard before entry.",
+    "Failing a puzzle does not inflict damage or lose resources. Traversal hazards remain separately telegraphed challenges.",
+    "Folding begins only with hero and visible art outside the swept volume, from a fixed control platform.",
+    "All optional folds preserve a reversible exit and never hide mandatory progression items."
+  ],
+  "narrative_limits": {
+    "flame_decline": "Story milestone changes, not a real-time countdown while exploring.",
+    "world1_player_knowledge": "Danger of fading; black-flame witness; contradictory accounts; first hint that restoring has a cost.",
+    "do_not_reveal_in_world1": [
+      "true_energy_source",
+      "witness_past_role",
+      "final_world_truth"
+    ],
+    "main_story_understandable_without_collecting_all_secrets": true
+  },
+  "size_target": {
+    "proposed_playspaces_total": 40,
+    "first_exploration_minutes": [
+      60,
+      90
+    ],
+    "status": "Planning estimate only, not measured."
+  },
+  "validation_status": {
+    "godot_run": false,
+    "physical_jumps_tested": false,
+    "art_images": "Concepts only; not gameplay screenshots.",
+    "needed_later": [
+      "Blockout using the actual hero",
+      "All main and optional traversal returns",
+      "Fold collision and interruption save/reload",
+      "Enemy fairness after environment success",
+      "Checkpoint and guard/boss retry behavior"
+    ]
+  },
+  "map_canvas": [
+    2500,
+    1900
+  ],
+  "map_source": "map_layout.json",
+  "global_world1_access": {
+    "requires_none": [
+      "world1_departed"
+    ],
+    "applies_to": "All local connections, dialogue, benches and progression interactions. No world2 route returns to world1 after confirmed departure."
+  },
+  "world_exit": {
+    "from_area": 15,
+    "target_world": 2,
+    "requires_all": [
+      "boss_defeated"
+    ],
+    "automatic_on_proximity": false,
+    "requires_explicit_confirmation": true,
+    "confirmation_ar": "العبور إلى العالم الثاني نهائي. لن تستطيع العودة إلى المكتبة المتحوّلة بعد المغادرة. هل تريد العبور الآن؟",
+    "confirmation_en": "Entering World Two is permanent. You will not be able to return to the Folding Library after leaving. Cross now?",
+    "choices": [
+      {
+        "id": "stay",
+        "ar": "البقاء والاستكشاف",
+        "en": "Stay and explore",
+        "default": true
+      },
+      {
+        "id": "leave",
+        "ar": "العبور نهائيًا",
+        "en": "Leave permanently"
+      }
+    ],
+    "cancel_returns_to": "Same stationary World1 threshold; local backtracking remains available.",
+    "commit": "Atomically save world1_departed and a safe World2 checkpoint when transfer succeeds. Loading must not strand the hero behind the closed world.",
+    "return_to_world1": false
+  },
+  "localization": {
+    "languages": [
+      "ar",
+      "en"
+    ],
+    "runtime_language_switch": true,
+    "text_direction": {
+      "ar": "rtl",
+      "en": "ltr"
+    },
+    "journal_uses_stable_entry_ids": true,
+    "essential_clues_and_warnings_available_in_both_languages": true
+  },
+  "black_flame_character_visual": {
+    "status": "deferred_by_user",
+    "concept_image_representation": "silhouette_only",
+    "no_final_anatomy_costume_or_portrait_approved": true
+  },
+  "journal": {
+    "persists_read_entries_across_worlds": true,
+    "read_entries_available_after_departure": true,
+    "language_switch_preserves_progress": true,
+    "main_story_summary_before_departure": true,
+    "future_main_progression_depends_on_missable_world1_secret": false,
+    "all_required_world1_information_on_main_route": true,
+    "optional_secrets_can_remain_uncollected_on_departure": true
+  },
+  "approval": {
+    "approved_by": "user",
+    "date": "2026-10-22",
+    "user_statement_ar": "ممتاز اعتمدها",
+    "approved_package_commit": "02c2b2a21ce0eecc820522febff12e6c088ae171",
+    "record": "APPROVAL_AR.md",
+    "implementation_status": "not_implemented",
+    "physical_dimensions_subject_to_godot_validation": true
+  }
+}
