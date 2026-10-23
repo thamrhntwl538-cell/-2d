@@ -1,0 +1,50 @@
+{
+  "runtime_commit": "1738ddc87f833ddad25b94f9ec6aec2e8ee37158",
+  "runtime_tree": "24971d420facf2f7afaed509a46e0fbb9843930b",
+  "source": "GitHub branch archive downloaded after publication",
+  "archive": {
+    "zip_bytes": 245484353,
+    "zip_sha256": "08d07d0c269cc50ee3b0955e607c141e5065ab1459b37a5c0b7e6a0a736f7fe7",
+    "crc_all_members_pass": true,
+    "file_count": 1740,
+    "git_blob_hashes_all_match": true,
+    "missing_files": [],
+    "extra_files": [],
+    "wrong_hashes": [],
+    "approved_hero_sha256": "6eca7436c7a8c39451256aa56db465d664df0d6dbb42d8e7f24122592b34bb66"
+  },
+  "cold_import": {
+    "engine": "Godot4.7.2 Standard",
+    "fresh_import_cache": true,
+    "exit_code": 0,
+    "script_or_import_errors": false
+  },
+  "native_download_smoke": {
+    "actual_input": true,
+    "boss_state": "bolts_warning",
+    "checks": 15,
+    "engine": "4.7.2-stable (official)",
+    "event_counts": {
+      "compiler_bolts": 1,
+      "compiler_voice_attack_1": 1,
+      "compiler_voice_intro": 1,
+      "footstep_stone": 5,
+      "hero_attack": 1,
+      "swing": 1
+    },
+    "failures": [],
+    "main_scene": "res://scenes/bosses/compiler_trial_m23.tscn",
+    "scope": "Cold GitHub ZIP native import and startup/input smoke; full48HP combat is verified separately on identical source hashes."
+  },
+  "native_exit_code": 0,
+  "native_runtime_errors": false,
+  "native_resource_leak_warnings": false,
+  "expected_platform_warning": "Xvfb software OpenGL does not support V-Sync",
+  "earlier_harness_diagnostic": {
+    "checks": 14,
+    "harness_failures": 1,
+    "reason": "The first smoke test whitelisted only attack states and sampled the normal idle interval immediately after intro. Corrected by waiting for the first real AI pattern; no project source change."
+  },
+  "harness_sha256": "6441e9319abf66cdbf7039f5c90bd8100aad0d0a8f388b3e711881d279c96c71",
+  "scope": "All 1740 GitHub files matched their Git blob SHA. Fresh archive imported and ran native; actual movement/attack activated the encounter and loaded original sound. Complete 48 HP combat is covered separately by 96 final checks on identical runtime source. This report and its reproducible helper are a documentation/test-only followup."
+}

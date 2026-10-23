@@ -2,7 +2,7 @@
 
 مشروع **Godot 4.7.2 Standard** كامل. يبدأ F5 الآن أمام ساحة **د. كومبايلر** لتجربة معركة فعلية بطورين، مع موسيقى أصلية لكل طور وتحذيرات عربية وإنجليزية. تبقى المكتبة ذات المناطق الخمس عشرة واليوميات والألغاز وثلاثة الأعداء السابقين متاحة من قائمة الإيقاف.
 
-**[تحميل المشروع كاملًا — M23 ZIP](https://github.com/thamrhntwl538-cell/-2d/archive/refs/heads/m23-compiler-boss.zip)** · [تجربة القتال والتحقق](docs/M23_QA.md) · [الرسم](docs/M23_COMPILER_ART_AR.md) · [الموسيقى](docs/M23_MUSIC_AR.md)
+**[تحميل المشروع كاملًا — M23 ZIP](https://github.com/thamrhntwl538-cell/-2d/archive/refs/heads/m23-compiler-boss.zip)** · [تجربة القتال والتحقق](docs/M23_QA.md) · [فحص حزمة GitHub](docs/M23_GITHUB_DELIVERY_QA.md) · [الرسم](docs/M23_COMPILER_ART_AR.md) · [الموسيقى](docs/M23_MUSIC_AR.md)
 
 ![د. كومبايلر يواجه البطل داخل Godot](previews/m23/08_compiler_side_arena.jpg)
 
