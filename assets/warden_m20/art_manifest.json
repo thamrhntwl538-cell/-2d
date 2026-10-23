@@ -1,0 +1,253 @@
+{
+  "asset": "assets/warden_m20/warden_parts.png",
+  "milestone": "M20 smooth hero refinement",
+  "created_date": "2026-10-23",
+  "source": "Original image generation editing the approved M19 atlas and guided by the original user character sheet.",
+  "generator": "image_gen.imagegen",
+  "generation_edit_mode": "referenced_image_paths=[M19 atlas, original user sheet]; transparent_background=true",
+  "reference_assets": [
+    {
+      "description": "Approved M19 rig parts atlas",
+      "path": "assets/warden_m19/warden_parts.png",
+      "sha256": "8b3ed6a4dd11530956b44369b970ecb233657f9679a3ab46fbcbef43554aab3e"
+    },
+    {
+      "description": "Original user-provided lantern hero reference sheet",
+      "workspace_path": "/workspace/work/m20_reference.png",
+      "sha256": "c1d2217007a2ee0a9cfc3892eb3ddca8971649afd829391563eee94250bfa8b5"
+    }
+  ],
+  "original_output": "/workspace/generated_images/exec-5345aaf3-c574-4197-bf13-3a40d63b0a86.png",
+  "pixel_editing_performed": false,
+  "source_preserved": true,
+  "dimensions": [
+    1086,
+    1448
+  ],
+  "mode": "RGBA",
+  "byte_count": 1034370,
+  "sha256": "6eca7436c7a8c39451256aa56db465d664df0d6dbb42d8e7f24122592b34bb66",
+  "alpha_extrema": [
+    0,
+    255
+  ],
+  "corner_alpha": [
+    0,
+    0,
+    0,
+    0
+  ],
+  "visible_bounds_measurement": "Read-only connected alpha components threshold alpha>8. Regions add about3sourcepixels of padding; the cape region reaches the source right edge, whose last column contains no alpha>32. No source image pixels were edited.",
+  "pivot_measurement": "Reviewed anatomical landmarks registered from the M19 source onto corresponding M20 part silhouettes, rounded to source pixels. Head anchor remains at lower metal base; collar and shin have dedicated source crops.",
+  "changes": [
+    "Cleaner gently antialiased contours with simpler broad navy/plum shadow shapes.",
+    "Reduced scratch texture and noisy interior marks; crisp controlled cream and amber highlight shapes.",
+    "Preserved approved lantern silhouette, asymmetrical hook, hanging ornaments, scarf pattern, dark cloth body and short proportions.",
+    "Ivory palm has a broad readable silhouette and remains visibly separate from the dark forearm.",
+    "Assembled reference tile depicts two ivory hands for rig layering guidance."
+  ],
+  "regions": {
+    "head": {
+      "rect": [
+        24,
+        2,
+        403,
+        450
+      ],
+      "anchor": [
+        254,
+        436
+      ],
+      "anchor_kind": "lower lantern metal base / neck attachment",
+      "flame_center": [
+        257,
+        311
+      ],
+      "includes_hanging_charms": true
+    },
+    "torso": {
+      "rect": [
+        483,
+        134,
+        179,
+        311
+      ],
+      "anchor": [
+        81,
+        12
+      ],
+      "anchor_kind": "neck opening"
+    },
+    "cape": {
+      "rect": [
+        684,
+        73,
+        402,
+        420
+      ],
+      "anchor": [
+        313,
+        47
+      ],
+      "anchor_kind": "neck attachment inside upper collar"
+    },
+    "scarf": {
+      "rect": [
+        47,
+        484,
+        367,
+        286
+      ],
+      "anchor": [
+        255,
+        54
+      ],
+      "anchor_kind": "wrapped collar center; full source includes long tail"
+    },
+    "scarf_collar": {
+      "rect": [
+        47,
+        484,
+        367,
+        174
+      ],
+      "anchor": [
+        255,
+        54
+      ],
+      "anchor_kind": "collar-only runtime crop, omits long hanging tail below source y658"
+    },
+    "upper_arm": {
+      "rect": [
+        563,
+        513,
+        120,
+        112
+      ],
+      "anchor": [
+        45,
+        25
+      ],
+      "anchor_kind": "rounded shoulder; crop omits lower black fingers"
+    },
+    "upper_arm_full_source": {
+      "rect": [
+        563,
+        513,
+        120,
+        230
+      ],
+      "use": "source reference only; omit lower dark fingers when rendering the ivory forearm-hand"
+    },
+    "forearm_hand": {
+      "rect": [
+        889,
+        505,
+        131,
+        279
+      ],
+      "anchor": [
+        41,
+        15
+      ],
+      "anchor_kind": "elbow at upper dark sleeve; ivory palm and fingertips continue below"
+    },
+    "thigh": {
+      "rect": [
+        147,
+        797,
+        130,
+        204
+      ],
+      "anchor": [
+        57,
+        18
+      ],
+      "anchor_kind": "hip"
+    },
+    "shin": {
+      "rect": [
+        521,
+        799,
+        83,
+        207
+      ],
+      "anchor": [
+        38,
+        12
+      ],
+      "anchor_kind": "knee; full source includes the small bent ankle/foot"
+    },
+    "shin_only": {
+      "rect": [
+        521,
+        799,
+        83,
+        154
+      ],
+      "anchor": [
+        38,
+        12
+      ],
+      "anchor_kind": "knee; runtime crop omits existing source foot to allow one separate articulated foot"
+    },
+    "foot": {
+      "rect": [
+        844,
+        870,
+        150,
+        98
+      ],
+      "anchor": [
+        31,
+        18
+      ],
+      "anchor_kind": "ankle; toe points right"
+    },
+    "pendant": {
+      "rect": [
+        116,
+        1025,
+        89,
+        360
+      ],
+      "anchor": [
+        18,
+        10
+      ],
+      "anchor_kind": "top ribbon; optional because head already includes two hanging ornaments"
+    },
+    "scarf_tail": {
+      "rect": [
+        272,
+        1058,
+        380,
+        373
+      ],
+      "anchor": [
+        325,
+        31
+      ],
+      "anchor_kind": "upper-right cloth neck attachment"
+    },
+    "assembled_reference": {
+      "rect": [
+        678,
+        988,
+        369,
+        449
+      ],
+      "use": "visual design reference only, not rendered together with the articulated rig"
+    }
+  },
+  "runtime_notes": [
+    "Use the same atlas parts for every pose; no per-pose palette or model swap.",
+    "Use scarf_collar instead of full scarf if the cape already provides long cloth tails.",
+    "Use shin_only with a separate foot to avoid double footwear.",
+    "Use upper_arm cropped region with forearm_hand to avoid a second dark hand.",
+    "The head already includes two hanging ornaments; extra pendant rendering is optional, not automatic.",
+    "Both ivory hands must be kept readable through draw order or cape opening; the far hand should not be fully hidden behind the cape.",
+    "Keep the generated PNG unchanged. Native Godot AtlasTexture source regions perform runtime cropping.",
+    "The assembled reference tile is not a second on-screen character."
+  ]
+}

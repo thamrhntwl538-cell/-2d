@@ -18,3 +18,10 @@ assets/warden_m19/ was generated with image_gen from the user's new character
 reference. The native shared rig, amber lighting and review scene are authored
 for this project. Source details are in assets/warden_m19/art_manifest.json.
 The main M19 scene continues to use the existing synthesized gameplay audio.
+
+M20 Hero Polish (2026-10-23): assets/warden_m20/ contains an original image_gen
+revision of the M19 atlas, guided by the user's approved character reference.
+The clean contours, native expression poses and amber slash geometry are authored
+for this project. User videos informed motion study; no Hollow Knight graphics,
+animation frames, audio or game code are included in the new runtime assets.
+Generation provenance is recorded in assets/warden_m20/art_manifest.json.
