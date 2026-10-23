@@ -25,3 +25,10 @@ The clean contours, native expression poses and amber slash geometry are authore
 for this project. User videos informed motion study; no Hollow Knight graphics,
 animation frames, audio or game code are included in the new runtime assets.
 Generation provenance is recorded in assets/warden_m20/art_manifest.json.
+
+M21 Paper Shadows (2026-10-23): two original near library/archive backdrops in
+assets/environments/paper_shadows/ were generated with image_gen. The existing
+first larva art was simplified with image_gen in assets/enemies/m21/ while
+retaining its original contour. Both source manifests document provenance.
+The approved M20 hero atlas remains byte-for-byte unchanged; eyes, foreground
+paper silhouettes and localized lighting are authored native Godot additions.

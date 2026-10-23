@@ -1,0 +1,577 @@
+{
+  "captures": [
+    {
+      "airborne": false,
+      "attack_elapsed": 0.0,
+      "configured_fixture": true,
+      "contact_active": false,
+      "expression": "idle",
+      "height": 720.0,
+      "hero_pose": "armed_ready",
+      "note": "Configured native room01 start at actual gameplay scale; approved M20 art with native eyes, layered paper environment and localized light.",
+      "path": "res://previews/m21/01_first_page.jpg",
+      "room": 1.0,
+      "width": 1280.0,
+      "bytes": 150314,
+      "sha256": "67183713b315b582214471b40ada8f9fa880934acf1fcb47bffe54fc092154c4"
+    },
+    {
+      "airborne": false,
+      "attack_elapsed": 0.0,
+      "configured_fixture": true,
+      "contact_active": false,
+      "expression": "alert",
+      "height": 720.0,
+      "hero_pose": "armed_ready",
+      "note": "Configured room02 encounter composition at actual gameplay scale; clean original larva silhouette and native world light.",
+      "path": "res://previews/m21/02_first_enemy.jpg",
+      "room": 2.0,
+      "width": 1280.0,
+      "bytes": 149880,
+      "sha256": "d84df47e509a8f362fd1472c22a96eb8376f0357b7aa54edd008c7b073426d76"
+    },
+    {
+      "airborne": false,
+      "attack_elapsed": 0.0,
+      "camera_zoom": 1.0,
+      "configured_fixture": true,
+      "contact_active": false,
+      "expression": "idle",
+      "height": 720.0,
+      "hero_pose": "armed_ready",
+      "hero_supported": true,
+      "note": "Configured room tour near ink_console; real room art, foreground, native lamps and interaction context; not traversal proof.",
+      "path": "res://previews/m21/03_room_03.jpg",
+      "pixel_metrics": {
+        "dark_fraction_below_.12": 0.73134842519685,
+        "hud_top_and_bottom_excluded": true,
+        "lit_fraction_above_.28": 0.0689468503937008,
+        "sample_step": 4.0,
+        "world_mean_luma": 0.105115648364557
+      },
+      "room": 3.0,
+      "width": 1280.0,
+      "bytes": 164850,
+      "sha256": "9f81105ac7be462318cb9fd9dd89025cf8d52d6f32ff6215a969ebd1eece7aa4"
+    },
+    {
+      "airborne": false,
+      "attack_elapsed": 0.0,
+      "camera_zoom": 1.0,
+      "configured_fixture": true,
+      "contact_active": false,
+      "expression": "idle",
+      "height": 720.0,
+      "hero_pose": "armed_ready",
+      "hero_supported": true,
+      "note": "Configured room tour near black_flame; real room art, foreground, native lamps and interaction context; not traversal proof.",
+      "path": "res://previews/m21/04_room_04.jpg",
+      "pixel_metrics": {
+        "dark_fraction_below_.12": 0.782234251968504,
+        "hud_top_and_bottom_excluded": true,
+        "lit_fraction_above_.28": 0.0383366141732283,
+        "sample_step": 4.0,
+        "world_mean_luma": 0.0916646609161771
+      },
+      "room": 4.0,
+      "width": 1280.0,
+      "bytes": 143074,
+      "sha256": "6a1c19ce663f78bdb21b38ae020309f8741b21c2b87aa947fc8ca5095f081396"
+    },
+    {
+      "airborne": false,
+      "attack_elapsed": 0.0,
+      "camera_zoom": 1.0,
+      "configured_fixture": true,
+      "contact_active": false,
+      "expression": "idle",
+      "height": 720.0,
+      "hero_pose": "armed_ready",
+      "hero_supported": true,
+      "note": "Configured room tour near left spawn; real room art, foreground, native lamps and interaction context; not traversal proof.",
+      "path": "res://previews/m21/05_room_05.jpg",
+      "pixel_metrics": {
+        "dark_fraction_below_.12": 0.693159448818898,
+        "hud_top_and_bottom_excluded": true,
+        "lit_fraction_above_.28": 0.0349163385826772,
+        "sample_step": 4.0,
+        "world_mean_luma": 0.100766254055264
+      },
+      "room": 5.0,
+      "width": 1280.0,
+      "bytes": 148751,
+      "sha256": "b7984cc17701fdc98ef5ae2d7c16fde6bc9ed1762c9e5678bb7adb65f097a07e"
+    },
+    {
+      "airborne": false,
+      "attack_elapsed": 0.0,
+      "camera_zoom": 1.0,
+      "configured_fixture": true,
+      "contact_active": false,
+      "expression": "idle",
+      "height": 720.0,
+      "hero_pose": "armed_ready",
+      "hero_supported": true,
+      "note": "Configured room tour near left spawn; real room art, foreground, native lamps and interaction context; not traversal proof.",
+      "path": "res://previews/m21/06_room_06.jpg",
+      "pixel_metrics": {
+        "dark_fraction_below_.12": 0.748228346456693,
+        "hud_top_and_bottom_excluded": true,
+        "lit_fraction_above_.28": 0.0446358267716535,
+        "sample_step": 4.0,
+        "world_mean_luma": 0.0966750238404502
+      },
+      "room": 6.0,
+      "width": 1280.0,
+      "bytes": 162428,
+      "sha256": "792c856fee37cc90cebeb919abe0fbb6d98b146ce67f2ae54224435116ecc139"
+    },
+    {
+      "airborne": false,
+      "attack_elapsed": 0.0,
+      "camera_zoom": 1.0,
+      "configured_fixture": true,
+      "contact_active": false,
+      "expression": "idle",
+      "height": 720.0,
+      "hero_pose": "armed_ready",
+      "hero_supported": true,
+      "note": "Configured room tour near left spawn; real room art, foreground, native lamps and interaction context; not traversal proof.",
+      "path": "res://previews/m21/07_room_07.jpg",
+      "pixel_metrics": {
+        "dark_fraction_below_.12": 0.781176181102362,
+        "hud_top_and_bottom_excluded": true,
+        "lit_fraction_above_.28": 0.034375,
+        "sample_step": 4.0,
+        "world_mean_luma": 0.0899262080766175
+      },
+      "room": 7.0,
+      "width": 1280.0,
+      "bytes": 152205,
+      "sha256": "1836c5cecd9c168e884fbf459ac7e797e93c4e9a40622bf65082daefcf277881"
+    },
+    {
+      "airborne": false,
+      "attack_elapsed": 0.0,
+      "camera_zoom": 1.0,
+      "configured_fixture": true,
+      "contact_active": false,
+      "expression": "idle",
+      "height": 720.0,
+      "hero_pose": "armed_ready",
+      "hero_supported": true,
+      "note": "Configured room tour near process_table; real room art, foreground, native lamps and interaction context; not traversal proof.",
+      "path": "res://previews/m21/08_room_08.jpg",
+      "pixel_metrics": {
+        "dark_fraction_below_.12": 0.665625,
+        "hud_top_and_bottom_excluded": true,
+        "lit_fraction_above_.28": 0.063115157480315,
+        "sample_step": 4.0,
+        "world_mean_luma": 0.115463130544639
+      },
+      "room": 8.0,
+      "width": 1280.0,
+      "bytes": 146227,
+      "sha256": "de57a4dbbb54d34dfdc4dc6bc193cff6d798467cae9e5b5c051156107d04108b"
+    },
+    {
+      "airborne": false,
+      "attack_elapsed": 0.0,
+      "camera_zoom": 1.0,
+      "configured_fixture": true,
+      "contact_active": false,
+      "expression": "idle",
+      "height": 720.0,
+      "hero_pose": "armed_ready",
+      "hero_supported": true,
+      "note": "Configured room tour near output_console; real room art, foreground, native lamps and interaction context; not traversal proof.",
+      "path": "res://previews/m21/09_room_09.jpg",
+      "pixel_metrics": {
+        "dark_fraction_below_.12": 0.762278543307087,
+        "hud_top_and_bottom_excluded": true,
+        "lit_fraction_above_.28": 0.041117125984252,
+        "sample_step": 4.0,
+        "world_mean_luma": 0.0960277713904794
+      },
+      "room": 9.0,
+      "width": 1280.0,
+      "bytes": 149334,
+      "sha256": "c8ed588323916f62e4314e77bf8852a570d53d457575ddae56c8eae5ffe69a43"
+    },
+    {
+      "airborne": false,
+      "attack_elapsed": 0.0,
+      "camera_zoom": 1.0,
+      "configured_fixture": true,
+      "contact_active": false,
+      "expression": "idle",
+      "height": 720.0,
+      "hero_pose": "armed_ready",
+      "hero_supported": true,
+      "note": "Configured room tour near balance_console; real room art, foreground, native lamps and interaction context; not traversal proof.",
+      "path": "res://previews/m21/10_room_10.jpg",
+      "pixel_metrics": {
+        "dark_fraction_below_.12": 0.727386811023622,
+        "hud_top_and_bottom_excluded": true,
+        "lit_fraction_above_.28": 0.0460629921259843,
+        "sample_step": 4.0,
+        "world_mean_luma": 0.101287122424558
+      },
+      "room": 10.0,
+      "width": 1280.0,
+      "bytes": 158713,
+      "sha256": "8987beee7189c11f9b883a98a895b30ade3e664376d96d55c309318d3cf53e25"
+    },
+    {
+      "airborne": false,
+      "attack_elapsed": 0.0,
+      "camera_zoom": 1.0,
+      "configured_fixture": true,
+      "contact_active": false,
+      "expression": "idle",
+      "height": 720.0,
+      "hero_pose": "armed_ready",
+      "hero_supported": true,
+      "note": "Configured room tour near left spawn; real room art, foreground, native lamps and interaction context; not traversal proof.",
+      "path": "res://previews/m21/11_room_11.jpg",
+      "pixel_metrics": {
+        "dark_fraction_below_.12": 0.790920275590551,
+        "hud_top_and_bottom_excluded": true,
+        "lit_fraction_above_.28": 0.0312253937007874,
+        "sample_step": 4.0,
+        "world_mean_luma": 0.0872149716507106
+      },
+      "room": 11.0,
+      "width": 1280.0,
+      "bytes": 152785,
+      "sha256": "c5abc26e27b2282f5a958e070e8cdedbb2112caf79f799b02736710475421174"
+    },
+    {
+      "airborne": false,
+      "attack_elapsed": 0.0,
+      "camera_zoom": 1.0,
+      "configured_fixture": true,
+      "contact_active": false,
+      "expression": "idle",
+      "height": 720.0,
+      "hero_pose": "armed_ready",
+      "hero_supported": true,
+      "note": "Configured room tour near left spawn; real room art, foreground, native lamps and interaction context; not traversal proof.",
+      "path": "res://previews/m21/12_room_12.jpg",
+      "pixel_metrics": {
+        "dark_fraction_below_.12": 0.744365157480315,
+        "hud_top_and_bottom_excluded": true,
+        "lit_fraction_above_.28": 0.0316929133858268,
+        "sample_step": 4.0,
+        "world_mean_luma": 0.0936361142049282
+      },
+      "room": 12.0,
+      "width": 1280.0,
+      "bytes": 157247,
+      "sha256": "0f675d71629238b0b89f854154e9cdea59d1911dab4ef29a9b5eea0b0e32248d"
+    },
+    {
+      "airborne": false,
+      "attack_elapsed": 0.0,
+      "camera_zoom": 1.0,
+      "configured_fixture": true,
+      "contact_active": false,
+      "expression": "idle",
+      "height": 720.0,
+      "hero_pose": "armed_ready",
+      "hero_supported": true,
+      "note": "Configured room tour near left spawn; real room art, foreground, native lamps and interaction context; not traversal proof.",
+      "path": "res://previews/m21/13_room_13.jpg",
+      "pixel_metrics": {
+        "dark_fraction_below_.12": 0.756496062992126,
+        "hud_top_and_bottom_excluded": true,
+        "lit_fraction_above_.28": 0.0311023622047244,
+        "sample_step": 4.0,
+        "world_mean_luma": 0.0923850428364232
+      },
+      "room": 13.0,
+      "width": 1280.0,
+      "bytes": 157697,
+      "sha256": "bd6f65fc514f08b864c16049711a5834196c894979d8354178fbb7430e95f9f1"
+    },
+    {
+      "airborne": false,
+      "attack_elapsed": 0.0,
+      "camera_zoom": 1.0,
+      "configured_fixture": true,
+      "contact_active": false,
+      "expression": "idle",
+      "height": 720.0,
+      "hero_pose": "armed_ready",
+      "hero_supported": true,
+      "note": "Configured room tour near left spawn; real room art, foreground, native lamps and interaction context; not traversal proof.",
+      "path": "res://previews/m21/14_room_14.jpg",
+      "pixel_metrics": {
+        "dark_fraction_below_.12": 0.768110236220472,
+        "hud_top_and_bottom_excluded": true,
+        "lit_fraction_above_.28": 0.0302165354330709,
+        "sample_step": 4.0,
+        "world_mean_luma": 0.0907356253228743
+      },
+      "room": 14.0,
+      "width": 1280.0,
+      "bytes": 157034,
+      "sha256": "b43b4c79c128b78b8d6744fca75257526d4c358ffdf1ee4f9050c5e2da1497e1"
+    },
+    {
+      "airborne": false,
+      "attack_elapsed": 0.0,
+      "camera_zoom": 1.0,
+      "configured_fixture": true,
+      "contact_active": false,
+      "expression": "idle",
+      "height": 720.0,
+      "hero_pose": "armed_ready",
+      "hero_supported": true,
+      "note": "Configured room tour near left spawn; real room art, foreground, native lamps and interaction context; not traversal proof.",
+      "path": "res://previews/m21/15_room_15.jpg",
+      "pixel_metrics": {
+        "dark_fraction_below_.12": 0.753174212598425,
+        "hud_top_and_bottom_excluded": true,
+        "lit_fraction_above_.28": 0.0314222440944882,
+        "sample_step": 4.0,
+        "world_mean_luma": 0.0927040038345503
+      },
+      "room": 15.0,
+      "width": 1280.0,
+      "bytes": 156971,
+      "sha256": "dd01d5e51ed1a2b75b4408abb92218820c34cee3ca10efb50fc1614a86096b20"
+    },
+    {
+      "airborne": false,
+      "attack_elapsed": 0.0,
+      "camera_zoom": 1.0,
+      "configured_fixture": true,
+      "contact_active": false,
+      "expression": "idle",
+      "height": 720,
+      "hero_pose": "armed_ready",
+      "hero_supported": true,
+      "note": "Frozen room01 fixture, actual hero lantern ON; exact matching OFF composition in17.",
+      "path": "res://previews/m21/16_lantern_on.jpg",
+      "pixel_metrics": {
+        "dark_fraction_below_.12": 0.743061023622047,
+        "hud_top_and_bottom_excluded": true,
+        "lit_fraction_above_.28": 0.0448080708661417,
+        "sample_step": 4,
+        "world_mean_luma": 0.0982660273445305
+      },
+      "room": 1,
+      "width": 1280,
+      "bytes": 150307,
+      "sha256": "7135334e5f0fa7e407d3b18871312f0e617b81ca726718bb2a907c1786e5b046"
+    },
+    {
+      "airborne": false,
+      "attack_elapsed": 0.0,
+      "camera_zoom": 1.0,
+      "configured_fixture": true,
+      "contact_active": false,
+      "expression": "idle",
+      "height": 720,
+      "hero_pose": "armed_ready",
+      "hero_supported": true,
+      "note": "Same frozen actor/camera/world/HUD; only native hero lantern and its synchronized close-wall light are OFF.",
+      "path": "res://previews/m21/17_lantern_off.jpg",
+      "pixel_metrics": {
+        "dark_fraction_below_.12": 0.74498031496063,
+        "hud_top_and_bottom_excluded": true,
+        "lit_fraction_above_.28": 0.0311023622047244,
+        "sample_step": 4,
+        "world_mean_luma": 0.094303578743617
+      },
+      "room": 1,
+      "width": 1280,
+      "bytes": 148204,
+      "sha256": "b2f385b1bc04302814fdd3d2438cd0918177607a7e7aed80be09259dd8926abf"
+    },
+    {
+      "airborne": false,
+      "attack_elapsed": 0.0,
+      "configured_fixture": true,
+      "contact_active": false,
+      "expression": "alert",
+      "height": 720.0,
+      "hero_pose": "armed_ready",
+      "note": "Configured3×close camera for original M20 hero art with only native eyes added inside the unchanged flame/head.",
+      "path": "res://previews/m21/18_hero_eyes.jpg",
+      "room": 2.0,
+      "width": 1280.0,
+      "bytes": 149846,
+      "sha256": "b431ccf0d727ff92a1f1b4a61528f055ce907d95be10db9c27f69929031e320e"
+    },
+    {
+      "airborne": false,
+      "attack_elapsed": 0.0,
+      "camera_zoom": 2.40000009536743,
+      "configured_fixture": true,
+      "contact_active": false,
+      "expression": "alert",
+      "height": 720.0,
+      "hero_pose": "armed_ready",
+      "hero_supported": true,
+      "note": "Configured2.4×native first-enemy art inspection; same inherited M18 contour scale and combat.",
+      "path": "res://previews/m21/19_first_enemy_close.jpg",
+      "pixel_metrics": {
+        "dark_fraction_below_.12": 0.586097440944882,
+        "hud_top_and_bottom_excluded": true,
+        "lit_fraction_above_.28": 0.166904527559055,
+        "sample_step": 4.0,
+        "world_mean_luma": 0.143561651947435
+      },
+      "room": 2.0,
+      "width": 1280.0,
+      "bytes": 150495,
+      "sha256": "6078eb8c96993ebafd1c3def125f01305cf43c77b1a05d7bc9a7f2e100abb830"
+    },
+    {
+      "path": "res://previews/m21/20_hero_eyes.jpg",
+      "width": 1280,
+      "height": 720,
+      "configured_fixture": true,
+      "scene": "res://scenes/warden_m21_review.tscn",
+      "kind": "native expression gallery",
+      "note": "Four expression cards plus enlarged master; original M20 atlas with native eyes. Separate fitted study scales, no blink at captured1.75sec.",
+      "bytes": 118148,
+      "sha256": "09017b62d898af7f60044a410e7ab14a905efcf0f31c80c118258d81fc1b8c96"
+    },
+    {
+      "path": "res://previews/m21/21_hero_slashes.jpg",
+      "width": 1280,
+      "height": 720,
+      "configured_fixture": true,
+      "scene": "res://scenes/warden_m21_review.tscn",
+      "kind": "native directional slash gallery",
+      "note": "Fixed normalized phase.32 within contact; forward variant1; fitted study scales, not actual gameplay scale.",
+      "bytes": 131565,
+      "sha256": "6b0ee4601efec5a3b59995047b42cd23c3e407fcdb50d0d24f887882a122765d"
+    }
+  ],
+  "engine": "4.7.2-stable (official)",
+  "failures": [],
+  "hero_render_preservation": {
+    "eye_mask_padding_source_px": 3.0,
+    "inside_eye_changed_pixels": 215.0,
+    "m20_atlas_sha256": "6eca7436c7a8c39451256aa56db465d664df0d6dbb42d8e7f24122592b34bb66",
+    "native_neutral_viewports": true,
+    "outside_eye_changed_pixels": 0.0,
+    "outside_eye_max_rgba_difference": 0.0,
+    "pose": "idle.25 / idle expression",
+    "size": [
+      512.0,
+      512.0
+    ]
+  },
+  "lighting_pair": {
+    "actor_camera_frozen": true,
+    "far_min_radius": 340,
+    "far_world_mean_abs_luma_change": 0.0,
+    "hero_light_layers": [
+      0,
+      0
+    ],
+    "hero_pixels_excluded": true,
+    "hud_max_channel_change": 0.0,
+    "near_radius": 220,
+    "near_world_mean_luma_gain": 0.0209705668551326,
+    "off": "res://previews/m21/17_lantern_off.jpg",
+    "on": "res://previews/m21/16_lantern_on.jpg",
+    "wall_light_layers": [
+      -18,
+      -18
+    ],
+    "world_time_frozen": true
+  },
+  "lighting_pair_refreshed_after_world_only_layer_filter": true,
+  "rendered": true,
+  "save_restored": true,
+  "scope": "native configured15-room tour/closeups, frozen paired real lantern comparison and original M20-versus-eye neutral rendering; mechanics proof separately in test_m21_paper_shadows.gd",
+  "evidence_metadata": {
+    "capture_script": "res://tools/capture_m21.gd",
+    "renderer": "OpenGL Compatibility, Mesa llvmpipe, X11",
+    "jpg_count": 21,
+    "configured_tour_rooms": 15,
+    "manual_review": "Room01/02 actual scale, hero eyes and enemy closeups, key room03/06/12/15, paired localized light, all gallery pages; source images retained.",
+    "initial_images_preserved": [
+      "01_first_page.jpg",
+      "02_first_enemy.jpg",
+      "18_hero_eyes.jpg"
+    ],
+    "fixture_scope": "Photos and gallery are configured compositions; genuine continuous route proof is in engine report.",
+    "log_errors": 0,
+    "leak_warnings": 0,
+    "driver_warning": "Software driver cannot change VSync mode; native rendering completed."
+  },
+  "video": {
+    "path": "res://previews/m21/24_paper_shadows_demo.mp4",
+    "bytes": 2084149,
+    "sha256": "78287f12a5f1432401a7804b42681137065432a95911a64b1b29088ce0c240ab",
+    "duration_seconds": 12.433333,
+    "width": 1280,
+    "height": 720,
+    "codec": "h264",
+    "pixel_format": "yuv420p",
+    "color_range": "tv",
+    "frame_rate": "60/1",
+    "audio_codec": "aac",
+    "configured_fixture": true,
+    "native_capture": "Godot4.7.2 MovieWriter, 60FPS, Compatibility renderer",
+    "conversion": "H264/yuv420p with explicit full-range MJPEG to limited TV conversion, AAC audio, faststart; setup and cleanup trimmed only; AVI retained outside project.",
+    "frame_review": "Moving light/eyes, lampOFF/ON, native larva, supported Archive jump landing inspected from final encoded frames.",
+    "fixture_evidence": {
+      "actual_input": true,
+      "archive_jump_landed": true,
+      "configured_fixture": true,
+      "engine": "4.7.2-stable (official)",
+      "failures": [],
+      "motion_frames": 720,
+      "movie_end_frame": 812,
+      "movie_start_frame": 60,
+      "save_restored": true,
+      "scope": "native MovieWriter review with declared configured cuts room01/02/06, moving localized lantern, original M20 hero with eyes, active native larva and one input jump; not uninterrupted campaign traversal evidence",
+      "segments": [
+        {
+          "camera_offset": [
+            0.0,
+            -65.0
+          ],
+          "camera_zoom": 2.2,
+          "frame": 0,
+          "label": "ROOM01 / MOVING LANTERN / UNCHANGED M20 HERO + EYES"
+        },
+        {
+          "camera_offset": [
+            0.0,
+            -65.0
+          ],
+          "camera_zoom": 2.2,
+          "frame": 150,
+          "label": "ROOM01 / REAL WORLD LANTERN OFF THEN ON"
+        },
+        {
+          "camera_offset": [
+            110.0,
+            -70.0
+          ],
+          "camera_zoom": 2.0,
+          "frame": 240,
+          "label": "ROOM02 / NATIVE LARVA WARNING AND LUNGE"
+        },
+        {
+          "camera_offset": [
+            80.0,
+            -105.0
+          ],
+          "camera_zoom": 1.8,
+          "frame": 480,
+          "label": "ROOM06 / CLOSE PAPER DEPTH / ACTUAL HELD JUMP"
+        }
+      ]
+    }
+  }
+}

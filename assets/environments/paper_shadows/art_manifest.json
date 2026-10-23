@@ -1,0 +1,45 @@
+{
+  "milestone": "M21 Paper Shadows",
+  "created_date": "2026-10-23",
+  "generator": "image_gen.imagegen",
+  "source": "Original generated environment artwork for LAST LECTURE, directed by the user's requested dark, intimate paper/library atmosphere. Hollow Knight screenshot informed depth and readability only; no game artwork, code or audio copied.",
+  "style": [
+    "Close side-on enclosed library/bindery wall",
+    "Broad smooth navy and muted plum shadow groups",
+    "Contained amber reading lamps",
+    "Paper, books, folded packets and scrolls",
+    "No cathedral avenue or distant vanishing-point skyline"
+  ],
+  "assets": [
+    {
+      "asset": "assets/environments/paper_shadows/close_library.png",
+      "original_output": "/workspace/generated_images/exec-9e13fb0e-645d-4dfe-a2cc-39429da1f5c9.png",
+      "width": 1672,
+      "height": 941,
+      "mode": "RGB",
+      "bytes": 1654945,
+      "sha256": "712e01456a2dc6f331870d78fb57b784849b080bf3f07eee830be528792fea66",
+      "source_preserved": true,
+      "pixel_editing_performed": false,
+      "intended_layer": "Close painted backdrop; native Godot adds solid platforms, near dressing, foreground and local world lights.",
+      "baked_walkable_geometry": false,
+      "baked_characters_or_UI": false
+    },
+    {
+      "asset": "assets/environments/paper_shadows/close_archive.png",
+      "original_output": "/workspace/generated_images/exec-154dccf1-8a88-431c-8c2c-7e7fd0603847.png",
+      "width": 1672,
+      "height": 941,
+      "mode": "RGB",
+      "bytes": 1704401,
+      "sha256": "3224e52f7a61e97b9c68bd9c44417b39dd23a2e2ea7a82f06ae189a777fe343c",
+      "source_preserved": true,
+      "pixel_editing_performed": false,
+      "intended_layer": "Close painted backdrop; native Godot adds solid platforms, near dressing, foreground and local world lights.",
+      "baked_walkable_geometry": false,
+      "baked_characters_or_UI": false
+    }
+  ],
+  "second_generation_reference": "close_archive.png was generated with close_library.png as a local style reference, preserving the original output.",
+  "separate_native_layers": "Foreground silhouettes and nearby paper architecture are authored separately in Godot by the environment owner."
+}

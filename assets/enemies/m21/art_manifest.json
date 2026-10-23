@@ -1,0 +1,50 @@
+{
+  "asset": "assets/enemies/m21/glitch_larva.png",
+  "milestone": "M21 simplified first enemy",
+  "created_date": "2026-10-23",
+  "source": "Original image_gen edit of the existing project-owned M18 Glitch Larva sprite.",
+  "source_reference": "assets/enemies/m18/glitch_larva.png",
+  "generator": "image_gen.imagegen",
+  "generation_edit_mode": "referenced_image_paths; transparent_background=true",
+  "original_output": "/workspace/generated_images/exec-f3677057-de19-408b-84c4-3daa3d3dc203.png",
+  "pixel_editing_performed": false,
+  "source_preserved": true,
+  "dimensions": [
+    1774,
+    887
+  ],
+  "mode": "RGBA",
+  "byte_count": 815359,
+  "sha256": "79a942642ffbd2a8a0477babde8091bdcc5d1c5f1caf3f3cae31e54be767ff35",
+  "alpha_extrema": [
+    0,
+    255
+  ],
+  "visible_bounds_alpha_over_8": [
+    43,
+    216,
+    1762,
+    793
+  ],
+  "runtime_region_xywh": [
+    40,
+    213,
+    1724,
+    585
+  ],
+  "rendered_width_world_pixels": 140,
+  "rendered_height_world_pixels": 47.50580046403712,
+  "retained_identity": [
+    "Long low tapered ink crawler, same right-facing orientation and curling hooked plates.",
+    "Broad ivory paper bands, three pointed main legs, cyan flame face in a dark front opening."
+  ],
+  "removed_detail": [
+    "Runes and glyphs",
+    "Cyan code dots and bars on body",
+    "Scratches, mottled texture, fine hatching and tiny paper marks"
+  ],
+  "behavior_source": "scripts/enemies/m18_glitch_larva.gd",
+  "behavior_changes": false,
+  "presentation_script": "scripts/enemies/m21_glitch_larva.gd",
+  "notes": "Only texture and draw presentation are overridden. HP, state machine, timings, collision, jaw/clash target and rewards are inherited. Source image is unchanged after generation; alpha analysis only located the source crop."
+}
