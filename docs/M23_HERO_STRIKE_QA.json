@@ -1,0 +1,183 @@
+{
+  "attack_duration_seconds": 0.3,
+  "body_motion": "Rigid upper-body forward drive then recoil; original feet, movement and collisions retained.",
+  "bounds": [
+    {
+      "direction": "attack",
+      "facing": -1,
+      "held_blade_world_px": 19.240004234314,
+      "reach_multiplier": 1.0,
+      "relative_rect": [
+        -61.4200439453125,
+        -58.748779296875,
+        30.9718017578125,
+        37.13525390625
+      ]
+    },
+    {
+      "direction": "attack",
+      "facing": -1,
+      "held_blade_world_px": 22.1259997177124,
+      "reach_multiplier": 1.15,
+      "relative_rect": [
+        -70.1890869140625,
+        -62.228515625,
+        39.7408447265625,
+        44.091552734375
+      ]
+    },
+    {
+      "direction": "up",
+      "facing": -1,
+      "held_blade_world_px": 19.240002822876,
+      "reach_multiplier": 1.0,
+      "relative_rect": [
+        -22.8170166015625,
+        -133.199951171875,
+        46.0279541015625,
+        42.8316650390625
+      ]
+    },
+    {
+      "direction": "up",
+      "facing": -1,
+      "held_blade_world_px": 22.1260011291504,
+      "reach_multiplier": 1.15,
+      "relative_rect": [
+        -26.755615234375,
+        -143.18994140625,
+        53.8895263671875,
+        52.8216552734375
+      ]
+    },
+    {
+      "direction": "down",
+      "facing": -1,
+      "held_blade_world_px": 19.239997177124,
+      "reach_multiplier": 1.0,
+      "relative_rect": [
+        -24.053466796875,
+        4.81005859375,
+        48.1094970703125,
+        53.280029296875
+      ]
+    },
+    {
+      "direction": "down",
+      "facing": -1,
+      "held_blade_world_px": 22.1259940719604,
+      "reach_multiplier": 1.15,
+      "relative_rect": [
+        -27.7352294921875,
+        4.81005859375,
+        55.491455078125,
+        62.27099609375
+      ]
+    },
+    {
+      "direction": "attack",
+      "facing": 1,
+      "held_blade_world_px": 19.240004234314,
+      "reach_multiplier": 1.0,
+      "relative_rect": [
+        30.4482421875,
+        -58.748779296875,
+        30.9718017578125,
+        37.13525390625
+      ]
+    },
+    {
+      "direction": "attack",
+      "facing": 1,
+      "held_blade_world_px": 22.1259997177124,
+      "reach_multiplier": 1.15,
+      "relative_rect": [
+        30.4482421875,
+        -62.228515625,
+        39.7408447265625,
+        44.091552734375
+      ]
+    },
+    {
+      "direction": "up",
+      "facing": 1,
+      "held_blade_world_px": 19.240002822876,
+      "reach_multiplier": 1.0,
+      "relative_rect": [
+        -23.2109375,
+        -133.199951171875,
+        46.0279541015625,
+        42.8316650390625
+      ]
+    },
+    {
+      "direction": "up",
+      "facing": 1,
+      "held_blade_world_px": 22.1260011291504,
+      "reach_multiplier": 1.15,
+      "relative_rect": [
+        -27.1339111328125,
+        -143.18994140625,
+        53.8895263671875,
+        52.8216552734375
+      ]
+    },
+    {
+      "direction": "down",
+      "facing": 1,
+      "held_blade_world_px": 19.239997177124,
+      "reach_multiplier": 1.0,
+      "relative_rect": [
+        -24.0560302734375,
+        4.81005859375,
+        48.1094970703125,
+        53.280029296875
+      ]
+    },
+    {
+      "direction": "down",
+      "facing": 1,
+      "held_blade_world_px": 22.1259940719604,
+      "reach_multiplier": 1.15,
+      "relative_rect": [
+        -27.7562255859375,
+        4.81005859375,
+        55.491455078125,
+        62.27099609375
+      ]
+    }
+  ],
+  "captures": [
+    "01_compact_flame_in_arena.jpg",
+    "02_short_follow_through_in_arena.jpg",
+    "03_compact_upward_in_arena.jpg",
+    "04_compact_downward_in_arena.jpg",
+    "05_old_and_compact_comparison.jpg"
+  ],
+  "checks": 139,
+  "contact_seconds": [
+    0.06,
+    0.14
+  ],
+  "cooldown_seconds": 0.36,
+  "engine": "4.7.2-stable (official)",
+  "failures": [],
+  "hero_atlas_sha256": "6eca7436c7a8c39451256aa56db465d664df0d6dbb42d8e7f24122592b34bb66",
+  "schema": "m23-hero-compact-strike-1",
+  "scope": "Configured native player/model geometry and artwork review. Does not claim a full fight, input-only victory or subjective game feel.",
+  "source_sha256": {
+    "scripts/combat/m23_player.gd": "fd421f5f8f9b38aede083197e32bb6c864554111c4ea4f7b5302f9c8a6a635c0",
+    "scripts/warden_model_m23.gd": "b3554cf14cc78a6c5481de433a649456f208c87470b35d5068ec9c26c927bba6",
+    "tools/capture_m23_hero_strike.gd": "a677ec488adee5509619b6a07fcbd75d4dc8fd680fa9617194a5a0ea3d49b7ad",
+    "assets/warden_m20/warden_parts.png": "6eca7436c7a8c39451256aa56db465d664df0d6dbb42d8e7f24122592b34bb66"
+  },
+  "legacy_sources_unchanged": {
+    "scripts/combat/m20_player.gd": true,
+    "scripts/combat/m21_player.gd": true,
+    "scripts/warden_model_m20.gd": true,
+    "scripts/warden_model_m21.gd": true
+  },
+  "native_log_clean": true,
+  "expected_native_warning": "V-Sync is unsupported by the software display.",
+  "independent_read_only_review": "Compact range and visual passed; airborne downward sample was corrected before the139-check final run."
+}

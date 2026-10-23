@@ -1,0 +1,84 @@
+LAST LECTURE — M23 original music and audio
+
+Original title: The Unfinished Proof / البرهان غير المكتمل
+
+1. Original material
+
+The composition, arrangement, MIDI files, procedural combat cues, and Python
+composition/rendering source were created specifically for LAST LECTURE in
+October 2026. No Hollow Knight recording, melody, MIDI, audio asset, or game
+data was used. The original contributions are dedicated to the public domain
+under CC0 1.0 Universal:
+https://creativecommons.org/publicdomain/zero/1.0/
+
+To the extent possible under law, the author has waived all copyright and
+related or neighboring rights to those original contributions. They may be
+used, modified and distributed commercially without attribution. The sample
+library notice below remains applicable to the rendered orchestral recordings.
+
+Original procedural audio, using no external samples:
+  compiler_bolts.wav, compiler_sweep.wav, compiler_pillars.wav, compiler_phase.wav
+  All new wordless character voices, movement, combat, interaction and ambient
+  WAVs listed in character_audio_manifest.json are also original procedural
+  audio under the same CC0-1.0 terms. Voice synthesis uses a glottal source,
+  original formant/pitch envelopes and generated breath noise. It uses no
+  person-specific voice model, reference recording, extracted video sound,
+  external voice actor sample or cloned vocal identity.
+
+Original scores rendered with the MIT-licensed FluidR3 GM instrument samples:
+  compiler_phase_1.ogg, compiler_phase_2.ogg, compiler_victory.ogg
+  compiler_phase_1.mid, compiler_phase_2.mid contain the original score only.
+
+2. FluidR3 GM instrument sample library — MIT license
+
+Upstream author: Frank Wen <getfrank@gmail.com>
+Copyright (c) 2000-2002, 2008 Frank Wen
+Copyright (c) 2008 Toby Smithe
+
+Fluid was constructed partly from public-domain samples edited, cleaned,
+remixed and programmed by its author, and largely from original recordings.
+Contributors acknowledged by the library's README include Suren M. Seron,
+Scott Hanan, Steve Aupperle, Chris Gillman, Alex Taubr, Chris Prola, Andrew
+Klenk, Winfried Hubbe, Dylan, Tim, Gort, Uros Katic and Ethan Winer.
+
+The library README states:
+  "I hereby release Fluid under the MIT license, as described in COPYING."
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies
+of the Software, and to permit persons to whom the Software is furnished to
+do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.
+
+Exact license provenance inspected:
+https://deb.debian.org/debian/pool/main/f/fluid-soundfont/fluid-soundfont_3.1-5.3.debian.tar.xz
+  member debian/copyright, quoting the upstream README and MIT permission.
+
+Soundfont download used for rendering, outside the game repository:
+https://deb.debian.org/debian/pool/main/f/fluid-soundfont/fluid-soundfont-gm_3.1-5.3_all.deb
+  package SHA256:
+  6f531493ac4e4d9772fd96b2488ea1790af81c196135fbdd25997da0781fc60e
+  extracted usr/share/sounds/sf2/FluidR3_GM.sf2 SHA256:
+  74594e8f4250680adf590507a306655a299935343583256f3b722c48a1bc1cb0
+
+The full 142 MiB soundfont and Debian package are not distributed with the
+game. Debian packaging code is not included. Only the rendered audio and the
+notice for the underlying MIT instrument samples are included.
+
+3. Rendering dependencies
+
+The rendering tools use libfluidsynth, NumPy, SciPy and FFmpeg as external
+build tools. They are not copied into this game. Godot uses the supplied Ogg
+and WAV files directly and does not require a soundfont or Python at runtime.

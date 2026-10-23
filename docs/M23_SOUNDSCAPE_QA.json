@@ -1,0 +1,688 @@
+{
+  "checks": 45,
+  "configured_native_audio_and_floor_probe": true,
+  "engine": "4.7.2-stable (official)",
+  "failures": [],
+  "human_listening_claim": false,
+  "observations": {
+    "accepted_event_counts": {
+      "bench": 1,
+      "chain_tink": 1,
+      "coin": 1,
+      "compiler_bolts": 1,
+      "compiler_phase": 1,
+      "compiler_pillars": 1,
+      "compiler_release": 1,
+      "compiler_sweep": 1,
+      "compiler_voice_hurt": 1,
+      "compiler_voice_phase": 1,
+      "dash": 1,
+      "footstep_paper": 2,
+      "footstep_stone": 2,
+      "heal_complete": 1,
+      "heal_start": 1,
+      "hero_attack": 2,
+      "hero_dash_voice": 1,
+      "hero_death": 2,
+      "hit": 1,
+      "hurt": 1,
+      "journal_close": 1,
+      "journal_open": 1,
+      "journal_page": 2,
+      "jump": 1,
+      "lamp_flicker": 1,
+      "land": 1,
+      "paper_rustle": 1,
+      "parry_light": 1,
+      "puzzle_error": 1,
+      "puzzle_success": 1,
+      "room_transition": 1,
+      "spell": 1,
+      "swing": 4
+    },
+    "burst_bound": {
+      "accepted_events": 20,
+      "limit": 16,
+      "peak_active_players": 16
+    },
+    "event_log": [
+      {
+        "category": "hero_voice",
+        "clock": 0.146500333333333,
+        "cue": "jump",
+        "duration": 0.27,
+        "path": "res://assets/audio/m23/hero_jump_1.wav",
+        "pitch_scale": 0.980000019073486,
+        "position": [
+          100.0,
+          400.0
+        ],
+        "priority": 1,
+        "spatial": false,
+        "volume_db": -4.0
+      },
+      {
+        "category": "hero_voice",
+        "clock": 0.641186333333334,
+        "cue": "hero_attack",
+        "duration": 0.2,
+        "path": "res://assets/audio/m23/hero_attack_1.wav",
+        "pitch_scale": 0.980000019073486,
+        "position": [
+          100.0,
+          400.0
+        ],
+        "priority": 1,
+        "spatial": false,
+        "volume_db": -4.0
+      },
+      {
+        "category": "boss_voice",
+        "clock": 0.641186333333334,
+        "cue": "compiler_voice_hurt",
+        "duration": 0.4,
+        "path": "res://assets/audio/m23/compiler_voice_hurt.wav",
+        "pitch_scale": 0.980000019073486,
+        "position": [
+          100.0,
+          400.0
+        ],
+        "priority": 1,
+        "spatial": false,
+        "volume_db": -4.0
+      },
+      {
+        "category": "boss_voice",
+        "clock": 0.641186333333334,
+        "cue": "compiler_voice_phase",
+        "duration": 1.72,
+        "path": "res://assets/audio/m23/compiler_voice_phase.wav",
+        "pitch_scale": 1.0,
+        "position": [
+          100.0,
+          400.0
+        ],
+        "priority": 3,
+        "spatial": false,
+        "volume_db": -3.0
+      },
+      {
+        "category": "hero_voice",
+        "clock": 0.641186333333334,
+        "cue": "hero_death",
+        "duration": 0.96,
+        "path": "res://assets/audio/m23/hero_death.wav",
+        "pitch_scale": 1.0,
+        "position": [
+          100.0,
+          400.0
+        ],
+        "priority": 4,
+        "spatial": false,
+        "volume_db": -3.0
+      },
+      {
+        "category": "ui",
+        "clock": 0.866666666666667,
+        "cue": "journal_page",
+        "duration": 0.27,
+        "path": "res://assets/audio/m23/book_page.wav",
+        "pitch_scale": 0.980000019073486,
+        "position": [
+          100.0,
+          400.0
+        ],
+        "priority": 0,
+        "spatial": false,
+        "volume_db": -8.0
+      },
+      {
+        "category": "effects",
+        "clock": 1.17548633333333,
+        "cue": "swing",
+        "duration": 0.23,
+        "path": "res://assets/audio/m23/hero_slash_1.wav",
+        "pitch_scale": 0.980000019073486,
+        "position": [
+          100.0,
+          400.0
+        ],
+        "priority": 0,
+        "spatial": false,
+        "volume_db": -7.0
+      },
+      {
+        "category": "effects",
+        "clock": 1.30767233333333,
+        "cue": "swing",
+        "duration": 0.26,
+        "path": "res://assets/audio/m23/hero_slash_2.wav",
+        "pitch_scale": 1.00160002708435,
+        "position": [
+          100.0,
+          400.0
+        ],
+        "priority": 0,
+        "spatial": false,
+        "volume_db": -7.0
+      },
+      {
+        "category": "hero_voice",
+        "clock": 1.30767233333333,
+        "cue": "hero_attack",
+        "duration": 0.23,
+        "path": "res://assets/audio/m23/hero_attack_2.wav",
+        "pitch_scale": 1.00160002708435,
+        "position": [
+          100.0,
+          400.0
+        ],
+        "priority": 1,
+        "spatial": false,
+        "volume_db": -4.0
+      },
+      {
+        "category": "effects",
+        "clock": 1.44427166666667,
+        "cue": "swing",
+        "duration": 0.23,
+        "path": "res://assets/audio/m23/hero_slash_1.wav",
+        "pitch_scale": 0.993600010871887,
+        "position": [
+          100.0,
+          400.0
+        ],
+        "priority": 0,
+        "spatial": false,
+        "volume_db": -7.0
+      },
+      {
+        "category": "effects",
+        "clock": 1.76666666666667,
+        "cue": "footstep_stone",
+        "duration": 0.138,
+        "path": "res://assets/audio/m23/footstep_stone_1.wav",
+        "pitch_scale": 0.980000019073486,
+        "position": [
+          166.5,
+          399.925262451172
+        ],
+        "priority": 0,
+        "spatial": true,
+        "volume_db": -10.0
+      },
+      {
+        "category": "effects",
+        "clock": 2.07573788888889,
+        "cue": "footstep_stone",
+        "duration": 0.146,
+        "path": "res://assets/audio/m23/footstep_stone_2.wav",
+        "pitch_scale": 1.00160002708435,
+        "position": [
+          229.5,
+          399.925262451172
+        ],
+        "priority": 0,
+        "spatial": true,
+        "volume_db": -10.0
+      },
+      {
+        "category": "effects",
+        "clock": 2.69108688888889,
+        "cue": "footstep_paper",
+        "duration": 0.169,
+        "path": "res://assets/audio/m23/footstep_paper_1.wav",
+        "pitch_scale": 0.980000019073486,
+        "position": [
+          345.0,
+          399.925262451172
+        ],
+        "priority": 0,
+        "spatial": true,
+        "volume_db": -10.0
+      },
+      {
+        "category": "effects",
+        "clock": 2.987567,
+        "cue": "footstep_paper",
+        "duration": 0.178,
+        "path": "res://assets/audio/m23/footstep_paper_2.wav",
+        "pitch_scale": 1.00160002708435,
+        "position": [
+          408.0,
+          399.925262451172
+        ],
+        "priority": 0,
+        "spatial": true,
+        "volume_db": -10.0
+      },
+      {
+        "category": "effects",
+        "clock": 4.45179766666667,
+        "cue": "land",
+        "duration": 0.28,
+        "path": "res://assets/audio/m23/hero_land.wav",
+        "pitch_scale": 0.980000019073486,
+        "position": [
+          425.5,
+          399.924041748047
+        ],
+        "priority": 0,
+        "spatial": true,
+        "volume_db": -8.0
+      },
+      {
+        "category": "hero_voice",
+        "clock": 4.85,
+        "cue": "heal_start",
+        "duration": 0.6,
+        "path": "res://assets/audio/m23/hero_focus.wav",
+        "pitch_scale": 0.980000019073486,
+        "position": [
+          925.5,
+          399.924041748047
+        ],
+        "priority": 1,
+        "spatial": false,
+        "volume_db": -7.0
+      },
+      {
+        "category": "effects",
+        "clock": 4.91629933333333,
+        "cue": "heal_complete",
+        "duration": 0.66,
+        "path": "res://assets/audio/m23/heal_complete.wav",
+        "pitch_scale": 0.980000019073486,
+        "position": [
+          925.5,
+          399.924041748047
+        ],
+        "priority": 0,
+        "spatial": false,
+        "volume_db": -7.0
+      },
+      {
+        "category": "environment",
+        "clock": 4.97426,
+        "cue": "chain_tink",
+        "duration": 0.64,
+        "path": "res://assets/audio/m23/chain_tink.wav",
+        "pitch_scale": 0.980000019073486,
+        "position": [
+          1125.5,
+          319.924041748047
+        ],
+        "priority": 0,
+        "spatial": true,
+        "volume_db": -12.0
+      },
+      {
+        "category": "environment",
+        "clock": 5.06083111111111,
+        "cue": "lamp_flicker",
+        "duration": 0.62,
+        "path": "res://assets/audio/m23/lamp_flicker.wav",
+        "pitch_scale": 0.980000019073486,
+        "position": [
+          725.5,
+          319.924041748047
+        ],
+        "priority": 0,
+        "spatial": true,
+        "volume_db": -22.0
+      },
+      {
+        "category": "effects",
+        "clock": 5.06083111111111,
+        "cue": "swing",
+        "duration": 0.26,
+        "path": "res://assets/audio/m23/hero_slash_2.wav",
+        "pitch_scale": 1.01520001888275,
+        "position": [
+          925.5,
+          399.924041748047
+        ],
+        "priority": 0,
+        "spatial": false,
+        "volume_db": -7.0
+      },
+      {
+        "category": "effects",
+        "clock": 5.06083111111111,
+        "cue": "dash",
+        "duration": 0.29,
+        "path": "res://assets/audio/m23/hero_dash.wav",
+        "pitch_scale": 0.980000019073486,
+        "position": [
+          925.5,
+          399.924041748047
+        ],
+        "priority": 0,
+        "spatial": false,
+        "volume_db": -7.0
+      },
+      {
+        "category": "hero_voice",
+        "clock": 5.06083111111111,
+        "cue": "hero_dash_voice",
+        "duration": 0.24,
+        "path": "res://assets/audio/m23/hero_dash_voice.wav",
+        "pitch_scale": 0.980000019073486,
+        "position": [
+          925.5,
+          399.924041748047
+        ],
+        "priority": 1,
+        "spatial": false,
+        "volume_db": -5.0
+      },
+      {
+        "category": "effects",
+        "clock": 5.06083111111111,
+        "cue": "hit",
+        "duration": 0.2,
+        "path": "res://assets/audio/m23/combat_hit_1.wav",
+        "pitch_scale": 0.980000019073486,
+        "position": [
+          925.5,
+          399.924041748047
+        ],
+        "priority": 0,
+        "spatial": false,
+        "volume_db": -6.0
+      },
+      {
+        "category": "effects",
+        "clock": 5.06083111111111,
+        "cue": "hurt",
+        "duration": 0.27,
+        "path": "res://assets/audio/m23/combat_hurt.wav",
+        "pitch_scale": 0.980000019073486,
+        "position": [
+          925.5,
+          399.924041748047
+        ],
+        "priority": 0,
+        "spatial": false,
+        "volume_db": -7.0
+      },
+      {
+        "category": "effects",
+        "clock": 5.06083111111111,
+        "cue": "parry_light",
+        "duration": 0.33,
+        "path": "res://assets/audio/m23/combat_parry.wav",
+        "pitch_scale": 0.980000019073486,
+        "position": [
+          925.5,
+          399.924041748047
+        ],
+        "priority": 0,
+        "spatial": false,
+        "volume_db": -6.0
+      },
+      {
+        "category": "effects",
+        "clock": 5.06083111111111,
+        "cue": "compiler_release",
+        "duration": 0.3,
+        "path": "res://assets/audio/m23/compiler_release.wav",
+        "pitch_scale": 0.980000019073486,
+        "position": [
+          925.5,
+          399.924041748047
+        ],
+        "priority": 0,
+        "spatial": false,
+        "volume_db": -6.0
+      },
+      {
+        "category": "effects",
+        "clock": 5.06083111111111,
+        "cue": "compiler_bolts",
+        "duration": 0.38,
+        "path": "res://assets/audio/m23/compiler_bolts.wav",
+        "pitch_scale": 1.0,
+        "position": [
+          925.5,
+          399.924041748047
+        ],
+        "priority": 0,
+        "spatial": false,
+        "volume_db": -4.0
+      },
+      {
+        "category": "effects",
+        "clock": 5.06083111111111,
+        "cue": "compiler_sweep",
+        "duration": 0.52,
+        "path": "res://assets/audio/m23/compiler_sweep.wav",
+        "pitch_scale": 1.0,
+        "position": [
+          925.5,
+          399.924041748047
+        ],
+        "priority": 0,
+        "spatial": false,
+        "volume_db": -4.0
+      },
+      {
+        "category": "effects",
+        "clock": 5.06083111111111,
+        "cue": "compiler_pillars",
+        "duration": 0.6,
+        "path": "res://assets/audio/m23/compiler_pillars.wav",
+        "pitch_scale": 1.0,
+        "position": [
+          925.5,
+          399.924041748047
+        ],
+        "priority": 0,
+        "spatial": false,
+        "volume_db": -4.0
+      },
+      {
+        "category": "effects",
+        "clock": 5.06083111111111,
+        "cue": "compiler_phase",
+        "duration": 1.3,
+        "path": "res://assets/audio/m23/compiler_phase.wav",
+        "pitch_scale": 1.0,
+        "position": [
+          925.5,
+          399.924041748047
+        ],
+        "priority": 0,
+        "spatial": false,
+        "volume_db": -6.0
+      },
+      {
+        "category": "ui",
+        "clock": 5.06083111111111,
+        "cue": "journal_open",
+        "duration": 0.48,
+        "path": "res://assets/audio/m23/book_open.wav",
+        "pitch_scale": 0.980000019073486,
+        "position": [
+          925.5,
+          399.924041748047
+        ],
+        "priority": 0,
+        "spatial": false,
+        "volume_db": -8.0
+      },
+      {
+        "category": "ui",
+        "clock": 5.06083111111111,
+        "cue": "journal_page",
+        "duration": 0.27,
+        "path": "res://assets/audio/m23/book_page.wav",
+        "pitch_scale": 0.986800014972687,
+        "position": [
+          925.5,
+          399.924041748047
+        ],
+        "priority": 0,
+        "spatial": false,
+        "volume_db": -8.0
+      },
+      {
+        "category": "ui",
+        "clock": 5.06083111111111,
+        "cue": "journal_close",
+        "duration": 0.29,
+        "path": "res://assets/audio/m23/book_close.wav",
+        "pitch_scale": 0.980000019073486,
+        "position": [
+          925.5,
+          399.924041748047
+        ],
+        "priority": 0,
+        "spatial": false,
+        "volume_db": -8.0
+      },
+      {
+        "category": "ui",
+        "clock": 5.06083111111111,
+        "cue": "bench",
+        "duration": 0.78,
+        "path": "res://assets/audio/m23/bench_rest.wav",
+        "pitch_scale": 0.980000019073486,
+        "position": [
+          925.5,
+          399.924041748047
+        ],
+        "priority": 0,
+        "spatial": false,
+        "volume_db": -7.0
+      },
+      {
+        "category": "ui",
+        "clock": 5.06083111111111,
+        "cue": "coin",
+        "duration": 0.22,
+        "path": "res://assets/audio/m23/coin_pickup_1.wav",
+        "pitch_scale": 0.980000019073486,
+        "position": [
+          925.5,
+          399.924041748047
+        ],
+        "priority": 0,
+        "spatial": false,
+        "volume_db": -7.0
+      },
+      {
+        "category": "ui",
+        "clock": 5.06083111111111,
+        "cue": "puzzle_success",
+        "duration": 1.02,
+        "path": "res://assets/audio/m23/puzzle_success.wav",
+        "pitch_scale": 0.980000019073486,
+        "position": [
+          925.5,
+          399.924041748047
+        ],
+        "priority": 0,
+        "spatial": false,
+        "volume_db": -7.0
+      },
+      {
+        "category": "ui",
+        "clock": 5.06083111111111,
+        "cue": "puzzle_error",
+        "duration": 0.39,
+        "path": "res://assets/audio/m23/puzzle_error.wav",
+        "pitch_scale": 0.980000019073486,
+        "position": [
+          925.5,
+          399.924041748047
+        ],
+        "priority": 0,
+        "spatial": false,
+        "volume_db": -10.0
+      },
+      {
+        "category": "environment",
+        "clock": 5.06083111111111,
+        "cue": "paper_rustle",
+        "duration": 0.78,
+        "path": "res://assets/audio/m23/paper_rustle.wav",
+        "pitch_scale": 0.980000019073486,
+        "position": [
+          925.5,
+          399.924041748047
+        ],
+        "priority": 0,
+        "spatial": true,
+        "volume_db": -21.0
+      },
+      {
+        "category": "environment",
+        "clock": 5.06083111111111,
+        "cue": "room_transition",
+        "duration": 0.76,
+        "path": "res://assets/audio/m23/door_transition.wav",
+        "pitch_scale": 0.980000019073486,
+        "position": [
+          925.5,
+          399.924041748047
+        ],
+        "priority": 0,
+        "spatial": true,
+        "volume_db": -19.0
+      },
+      {
+        "category": "effects",
+        "clock": 5.06083111111111,
+        "cue": "spell",
+        "duration": 0.48,
+        "path": "res://assets/audio/m23/spell_cast.wav",
+        "pitch_scale": 0.980000019073486,
+        "position": [
+          925.5,
+          399.924041748047
+        ],
+        "priority": 0,
+        "spatial": false,
+        "volume_db": -6.0
+      },
+      {
+        "category": "hero_voice",
+        "clock": 5.09422477777778,
+        "cue": "hero_death",
+        "duration": 0.96,
+        "path": "res://assets/audio/m23/hero_death.wav",
+        "pitch_scale": 1.0,
+        "position": [
+          925.5,
+          399.924041748047
+        ],
+        "priority": 4,
+        "spatial": false,
+        "volume_db": -3.0
+      }
+    ],
+    "native_hero_jump_mix": {
+      "method": "AudioEffectCapture on the actual native Master mix; objective data, not a listening claim",
+      "peak": 0.361387580633163,
+      "rms": 0.136994687661903,
+      "stereo_frames": 8192
+    },
+    "rejected_event_counts": {
+      "compiler_voice_attack_2": 1,
+      "compiler_voice_hurt_2": 1,
+      "hero_attack": 1,
+      "hero_hurt": 1,
+      "hero_spell_voice": 1,
+      "jump": 2
+    }
+  },
+  "native_log_errors": [],
+  "native_log_warnings": [
+    "Software-display V-Sync mode cannot be changed."
+  ],
+  "reproduction": {
+    "command": "godot --path . --rendering-method gl_compatibility --audio-driver Dummy --max-fps 60 --script res://tools/test_m23_soundscape.gd",
+    "userdata": "Use an independent XDG_DATA_HOME for the configured probe."
+  }
+}

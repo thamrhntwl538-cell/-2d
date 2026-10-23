@@ -1,0 +1,113 @@
+{
+  "checks": 75,
+  "failures": [],
+  "decode_tool": "FFmpeg",
+  "sample_metrics_tool": "NumPy; FFmpeg loudnorm input measurement",
+  "scope": "independent decoding and objective mix/loop/format checks; native playback/crossfade/duck verified by the M23 game QA",
+  "listening_claim": false,
+  "files": [
+    {
+      "file": "assets/audio/m23/compiler_phase_1.ogg",
+      "duration_seconds": 52.36364583333334,
+      "decoded_frames": 2513455,
+      "sample_peak_dbfs": -3.233446388709967,
+      "rms_dbfs": -19.14074090333642,
+      "clipped_samples": 0,
+      "sha256": "e681be58f5af81f749f702c3d376f4332d9332c5adcc9e8234c8b85305c6b0af",
+      "integrated_lufs": -17.02,
+      "true_peak_dbtp": -3.21,
+      "wrap_step_dbfs": -35.64960442558149,
+      "wrap_step_to_99_9_derivative_ratio": 0.2709350194582279
+    },
+    {
+      "file": "assets/audio/m23/compiler_phase_2.ogg",
+      "duration_seconds": 43.63635416666666,
+      "decoded_frames": 2094545,
+      "sample_peak_dbfs": -2.346387749166609,
+      "rms_dbfs": -18.736684037715595,
+      "clipped_samples": 0,
+      "sha256": "cf079ca67c3cd09d5b151e1c534c1b81e0cfaa60c31daadeb83268a21b559dd4",
+      "integrated_lufs": -17.03,
+      "true_peak_dbtp": -2.33,
+      "wrap_step_dbfs": -41.15603172624777,
+      "wrap_step_to_99_9_derivative_ratio": 0.1625934803186219
+    },
+    {
+      "file": "assets/audio/m23/compiler_bolts.wav",
+      "duration_seconds": 0.38,
+      "decoded_frames": 18240,
+      "sample_peak_dbfs": -3.8003275322554213,
+      "rms_dbfs": -17.758247863550928,
+      "clipped_samples": 0,
+      "sha256": "c93c89e3e509bebd632610e86f02cb727f26ff10035316e45b5010bb19cf3773"
+    },
+    {
+      "file": "assets/audio/m23/compiler_sweep.wav",
+      "duration_seconds": 0.52,
+      "decoded_frames": 24960,
+      "sample_peak_dbfs": -3.8003275322554213,
+      "rms_dbfs": -18.197338267801612,
+      "clipped_samples": 0,
+      "sha256": "8e5e1b0cf1d4ec630293d7ed4c62e73b6bc430b50fdebcd7658daffe2f3c5301"
+    },
+    {
+      "file": "assets/audio/m23/compiler_pillars.wav",
+      "duration_seconds": 0.6,
+      "decoded_frames": 28800,
+      "sample_peak_dbfs": -3.8003275322554213,
+      "rms_dbfs": -22.392847464838376,
+      "clipped_samples": 0,
+      "sha256": "bd8d3ceecce62fb54b8be72e3f9097f5f20a532b7888b3ab8e1cc53a607a62ff"
+    },
+    {
+      "file": "assets/audio/m23/compiler_phase.wav",
+      "duration_seconds": 1.3,
+      "decoded_frames": 62400,
+      "sample_peak_dbfs": -3.8003275322554213,
+      "rms_dbfs": -22.318604138073344,
+      "clipped_samples": 0,
+      "sha256": "4095603091c2d00248a3c425a73e2df3aa838958d41bf2bec214e62d606d1bff"
+    },
+    {
+      "file": "assets/audio/m23/compiler_victory.ogg",
+      "duration_seconds": 7.8,
+      "decoded_frames": 374400,
+      "sample_peak_dbfs": -6.551389413793187,
+      "rms_dbfs": -21.565931291046553,
+      "clipped_samples": 0,
+      "sha256": "1d299ec2eadee8deaaab2d608612cd7f6222e2c66bff9a2a372de43b163bf4ed"
+    }
+  ],
+  "warning_cue_correlations": [
+    {
+      "a": "compiler_bolts.wav",
+      "b": "compiler_sweep.wav",
+      "absolute_waveform_correlation": 0.02520185150206089
+    },
+    {
+      "a": "compiler_bolts.wav",
+      "b": "compiler_pillars.wav",
+      "absolute_waveform_correlation": 0.016178935766220093
+    },
+    {
+      "a": "compiler_bolts.wav",
+      "b": "compiler_phase.wav",
+      "absolute_waveform_correlation": 0.0009658836061134934
+    },
+    {
+      "a": "compiler_sweep.wav",
+      "b": "compiler_pillars.wav",
+      "absolute_waveform_correlation": 0.0014498475939035416
+    },
+    {
+      "a": "compiler_sweep.wav",
+      "b": "compiler_phase.wav",
+      "absolute_waveform_correlation": 0.0021377934608608484
+    },
+    {
+      "a": "compiler_pillars.wav",
+      "b": "compiler_phase.wav",
+      "absolute_waveform_correlation": 0.003491705749183893
+    }
+  ]
+}

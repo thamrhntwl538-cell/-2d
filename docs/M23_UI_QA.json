@@ -1,0 +1,43 @@
+{
+  "checks": 47,
+  "configured_ui_fixture": true,
+  "engine": "4.7.2-stable (official)",
+  "failures": [],
+  "real_controller_confirm_events": true,
+  "samples": [
+    {
+      "configured_ui_fixture": true,
+      "description": "Configured native Arabic bar and exact incoming-code warning; neutral diagnostic background.",
+      "path": "user://m23_ui_samples/boss_warning_ar.jpg",
+      "repository_preview": "previews/m23/20_hud_ar_fixture.jpg"
+    },
+    {
+      "configured_ui_fixture": true,
+      "description": "Configured phase-II native bar at24/48 and actual marked-ground warning.",
+      "path": "user://m23_ui_samples/boss_phase_two_en.jpg",
+      "repository_preview": "previews/m23/21_hud_phase2_en_fixture.jpg"
+    },
+    {
+      "configured_ui_fixture": true,
+      "description": "Configured trial pause: actual native controller buttons emit return/retry/music actions; story progress stays world owned.",
+      "path": "user://m23_ui_samples/boss_trial_pause_en.jpg",
+      "repository_preview": "previews/m23/22_trial_pause_en_fixture.jpg"
+    }
+  ],
+  "native_log_errors": [],
+  "native_log_warnings": [
+    "Software-display V-Sync mode cannot be changed."
+  ],
+  "integrated_native_visual_review": {
+    "images": [
+      "previews/m23/02_compiler_code_warning.jpg",
+      "/workspace/work/m23_art_arena/01_compiler_arena_idle.jpg"
+    ],
+    "review": [
+      "The attack cue stays above the boss and leaves its flame/sword readable.",
+      "The thin boss bar is below the playable ground and above the control legend.",
+      "Approved hero, six lanterns and shared round energy display remain clear."
+    ],
+    "result": "Visually inspected both native rendered images."
+  }
+}

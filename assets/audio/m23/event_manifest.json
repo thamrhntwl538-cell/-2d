@@ -1,0 +1,655 @@
+{
+  "version": 1,
+  "sample_rate": 48000,
+  "original_audio": true,
+  "category_rules": {
+    "hero_voice": {
+      "cooldown": 0.18,
+      "max_instances": 1
+    },
+    "boss_voice": {
+      "cooldown": 1.1,
+      "max_instances": 1
+    }
+  },
+  "events": {
+    "hero_attack": {
+      "files": [
+        "res://assets/audio/m23/hero_attack_1.wav",
+        "res://assets/audio/m23/hero_attack_2.wav",
+        "res://assets/audio/m23/hero_attack_3.wav"
+      ],
+      "volume_db": -4,
+      "category": "hero_voice",
+      "cooldown": 0.52,
+      "max_instances": 1,
+      "pitch_min": 0.98,
+      "pitch_max": 1.02,
+      "layers": []
+    },
+    "hero_jump": {
+      "files": [
+        "res://assets/audio/m23/hero_jump_1.wav",
+        "res://assets/audio/m23/hero_jump_2.wav"
+      ],
+      "volume_db": -4,
+      "category": "hero_voice",
+      "cooldown": 0.38,
+      "max_instances": 1,
+      "pitch_min": 0.98,
+      "pitch_max": 1.02,
+      "layers": []
+    },
+    "hero_hurt": {
+      "files": [
+        "res://assets/audio/m23/hero_hurt_1.wav",
+        "res://assets/audio/m23/hero_hurt_2.wav"
+      ],
+      "volume_db": -3.5,
+      "category": "hero_voice",
+      "cooldown": 0.65,
+      "max_instances": 1,
+      "pitch_min": 0.98,
+      "pitch_max": 1.02,
+      "layers": []
+    },
+    "hero_death": {
+      "files": [
+        "res://assets/audio/m23/hero_death.wav"
+      ],
+      "volume_db": -3,
+      "category": "hero_voice",
+      "cooldown": 0.5,
+      "max_instances": 1,
+      "pitch_min": 1,
+      "pitch_max": 1,
+      "layers": [],
+      "preempt_category": true
+    },
+    "hero_dash_voice": {
+      "files": [
+        "res://assets/audio/m23/hero_dash_voice.wav"
+      ],
+      "volume_db": -5,
+      "category": "hero_voice",
+      "cooldown": 0.7,
+      "max_instances": 1,
+      "pitch_min": 0.98,
+      "pitch_max": 1.02,
+      "layers": []
+    },
+    "hero_focus": {
+      "files": [
+        "res://assets/audio/m23/hero_focus.wav"
+      ],
+      "volume_db": -7,
+      "category": "hero_voice",
+      "cooldown": 1.2,
+      "max_instances": 1,
+      "pitch_min": 0.98,
+      "pitch_max": 1.02,
+      "layers": []
+    },
+    "swing": {
+      "files": [
+        "res://assets/audio/m23/hero_slash_1.wav",
+        "res://assets/audio/m23/hero_slash_2.wav"
+      ],
+      "volume_db": -7,
+      "category": "effects",
+      "cooldown": 0.07,
+      "max_instances": 3,
+      "pitch_min": 0.98,
+      "pitch_max": 1.02,
+      "layers": [
+        "hero_attack"
+      ]
+    },
+    "jump": {
+      "files": [
+        "res://assets/audio/m23/hero_jump_1.wav",
+        "res://assets/audio/m23/hero_jump_2.wav"
+      ],
+      "volume_db": -4,
+      "category": "hero_voice",
+      "cooldown": 0.38,
+      "max_instances": 1,
+      "pitch_min": 0.98,
+      "pitch_max": 1.02,
+      "layers": []
+    },
+    "dash": {
+      "files": [
+        "res://assets/audio/m23/hero_dash.wav"
+      ],
+      "volume_db": -7,
+      "category": "effects",
+      "cooldown": 0.15,
+      "max_instances": 3,
+      "pitch_min": 0.98,
+      "pitch_max": 1.02,
+      "layers": [
+        "hero_dash_voice"
+      ]
+    },
+    "hit": {
+      "files": [
+        "res://assets/audio/m23/combat_hit_1.wav",
+        "res://assets/audio/m23/combat_hit_2.wav"
+      ],
+      "volume_db": -6,
+      "category": "effects",
+      "cooldown": 0.055,
+      "max_instances": 3,
+      "pitch_min": 0.98,
+      "pitch_max": 1.02,
+      "layers": []
+    },
+    "hurt": {
+      "files": [
+        "res://assets/audio/m23/combat_hurt.wav"
+      ],
+      "volume_db": -7,
+      "category": "effects",
+      "cooldown": 0.2,
+      "max_instances": 3,
+      "pitch_min": 0.98,
+      "pitch_max": 1.02,
+      "layers": [
+        "hero_hurt"
+      ]
+    },
+    "parry_light": {
+      "files": [
+        "res://assets/audio/m23/combat_parry.wav"
+      ],
+      "volume_db": -6,
+      "category": "effects",
+      "cooldown": 0.1,
+      "max_instances": 3,
+      "pitch_min": 0.98,
+      "pitch_max": 1.02,
+      "layers": []
+    },
+    "footstep": {
+      "files": [
+        "res://assets/audio/m23/footstep_1.wav",
+        "res://assets/audio/m23/footstep_2.wav",
+        "res://assets/audio/m23/footstep_3.wav",
+        "res://assets/audio/m23/footstep_4.wav"
+      ],
+      "volume_db": -10,
+      "category": "effects",
+      "cooldown": 0.125,
+      "max_instances": 3,
+      "pitch_min": 0.98,
+      "pitch_max": 1.02,
+      "layers": []
+    },
+    "land": {
+      "files": [
+        "res://assets/audio/m23/hero_land.wav"
+      ],
+      "volume_db": -8,
+      "category": "effects",
+      "cooldown": 0.2,
+      "max_instances": 3,
+      "pitch_min": 0.98,
+      "pitch_max": 1.02,
+      "layers": []
+    },
+    "pickup": {
+      "files": [
+        "res://assets/audio/m23/coin_pickup_1.wav",
+        "res://assets/audio/m23/coin_pickup_2.wav"
+      ],
+      "volume_db": -7,
+      "category": "ui",
+      "cooldown": 0.035,
+      "max_instances": 3,
+      "pitch_min": 0.98,
+      "pitch_max": 1.02,
+      "layers": []
+    },
+    "save": {
+      "files": [
+        "res://assets/audio/m23/bench_rest.wav"
+      ],
+      "volume_db": -7,
+      "category": "ui",
+      "cooldown": 1.0,
+      "max_instances": 3,
+      "pitch_min": 0.98,
+      "pitch_max": 1.02,
+      "layers": []
+    },
+    "book_open": {
+      "files": [
+        "res://assets/audio/m23/book_open.wav"
+      ],
+      "volume_db": -8,
+      "category": "ui",
+      "cooldown": 0.18,
+      "max_instances": 3,
+      "pitch_min": 0.98,
+      "pitch_max": 1.02,
+      "layers": []
+    },
+    "book_page": {
+      "files": [
+        "res://assets/audio/m23/book_page.wav"
+      ],
+      "volume_db": -8,
+      "category": "ui",
+      "cooldown": 0.12,
+      "max_instances": 3,
+      "pitch_min": 0.98,
+      "pitch_max": 1.02,
+      "layers": []
+    },
+    "book_close": {
+      "files": [
+        "res://assets/audio/m23/book_close.wav"
+      ],
+      "volume_db": -8,
+      "category": "ui",
+      "cooldown": 0.18,
+      "max_instances": 3,
+      "pitch_min": 0.98,
+      "pitch_max": 1.02,
+      "layers": []
+    },
+    "puzzle_success": {
+      "files": [
+        "res://assets/audio/m23/puzzle_success.wav"
+      ],
+      "volume_db": -7,
+      "category": "ui",
+      "cooldown": 0.6,
+      "max_instances": 3,
+      "pitch_min": 0.98,
+      "pitch_max": 1.02,
+      "layers": []
+    },
+    "puzzle_error": {
+      "files": [
+        "res://assets/audio/m23/puzzle_error.wav"
+      ],
+      "volume_db": -10,
+      "category": "ui",
+      "cooldown": 0.35,
+      "max_instances": 3,
+      "pitch_min": 0.98,
+      "pitch_max": 1.02,
+      "layers": []
+    },
+    "paper_rustle": {
+      "files": [
+        "res://assets/audio/m23/paper_rustle.wav"
+      ],
+      "volume_db": -12,
+      "category": "environment",
+      "cooldown": 2.0,
+      "max_instances": 3,
+      "pitch_min": 0.98,
+      "pitch_max": 1.02,
+      "layers": []
+    },
+    "chain_tink": {
+      "files": [
+        "res://assets/audio/m23/chain_tink.wav"
+      ],
+      "volume_db": -12,
+      "category": "environment",
+      "cooldown": 3.0,
+      "max_instances": 3,
+      "pitch_min": 0.98,
+      "pitch_max": 1.02,
+      "layers": []
+    },
+    "lamp_flicker": {
+      "files": [
+        "res://assets/audio/m23/lamp_flicker.wav"
+      ],
+      "volume_db": -13,
+      "category": "environment",
+      "cooldown": 2.5,
+      "max_instances": 3,
+      "pitch_min": 0.98,
+      "pitch_max": 1.02,
+      "layers": []
+    },
+    "room_enter": {
+      "files": [
+        "res://assets/audio/m23/door_transition.wav"
+      ],
+      "volume_db": -10,
+      "category": "environment",
+      "cooldown": 0.7,
+      "max_instances": 3,
+      "pitch_min": 0.98,
+      "pitch_max": 1.02,
+      "layers": []
+    },
+    "compiler_release": {
+      "files": [
+        "res://assets/audio/m23/compiler_release.wav"
+      ],
+      "volume_db": -6,
+      "category": "effects",
+      "cooldown": 0.07,
+      "max_instances": 3,
+      "pitch_min": 0.98,
+      "pitch_max": 1.02,
+      "layers": []
+    },
+    "compiler_bolts": {
+      "files": [
+        "res://assets/audio/m23/compiler_bolts.wav"
+      ],
+      "volume_db": -4,
+      "category": "effects",
+      "cooldown": 0.15,
+      "max_instances": 3,
+      "pitch_min": 1,
+      "pitch_max": 1,
+      "layers": []
+    },
+    "compiler_sweep": {
+      "files": [
+        "res://assets/audio/m23/compiler_sweep.wav"
+      ],
+      "volume_db": -4,
+      "category": "effects",
+      "cooldown": 0.15,
+      "max_instances": 3,
+      "pitch_min": 1,
+      "pitch_max": 1,
+      "layers": []
+    },
+    "compiler_pillars": {
+      "files": [
+        "res://assets/audio/m23/compiler_pillars.wav"
+      ],
+      "volume_db": -4,
+      "category": "effects",
+      "cooldown": 0.15,
+      "max_instances": 3,
+      "pitch_min": 1,
+      "pitch_max": 1,
+      "layers": []
+    },
+    "compiler_phase": {
+      "files": [
+        "res://assets/audio/m23/compiler_phase.wav"
+      ],
+      "volume_db": -6,
+      "category": "effects",
+      "cooldown": 1.0,
+      "max_instances": 3,
+      "pitch_min": 1,
+      "pitch_max": 1,
+      "layers": []
+    },
+    "footstep_stone": {
+      "files": [
+        "res://assets/audio/m23/footstep_stone_1.wav",
+        "res://assets/audio/m23/footstep_stone_2.wav"
+      ],
+      "volume_db": -10,
+      "category": "effects",
+      "cooldown": 0.125,
+      "max_instances": 3,
+      "pitch_min": 0.98,
+      "pitch_max": 1.02,
+      "layers": []
+    },
+    "footstep_paper": {
+      "files": [
+        "res://assets/audio/m23/footstep_paper_1.wav",
+        "res://assets/audio/m23/footstep_paper_2.wav"
+      ],
+      "volume_db": -10,
+      "category": "effects",
+      "cooldown": 0.125,
+      "max_instances": 3,
+      "pitch_min": 0.98,
+      "pitch_max": 1.02,
+      "layers": []
+    },
+    "heal_start": {
+      "files": [
+        "res://assets/audio/m23/hero_focus.wav"
+      ],
+      "volume_db": -7,
+      "category": "hero_voice",
+      "cooldown": 1.2,
+      "max_instances": 1,
+      "pitch_min": 0.98,
+      "pitch_max": 1.02,
+      "layers": []
+    },
+    "heal_complete": {
+      "files": [
+        "res://assets/audio/m23/heal_complete.wav"
+      ],
+      "volume_db": -7,
+      "category": "effects",
+      "cooldown": 0.45,
+      "max_instances": 3,
+      "pitch_min": 0.98,
+      "pitch_max": 1.02,
+      "layers": []
+    },
+    "heal_cancel": {
+      "files": [
+        "res://assets/audio/m23/heal_cancel.wav"
+      ],
+      "volume_db": -9,
+      "category": "effects",
+      "cooldown": 0.25,
+      "max_instances": 3,
+      "pitch_min": 0.98,
+      "pitch_max": 1.02,
+      "layers": []
+    },
+    "hero_spell_voice": {
+      "files": [
+        "res://assets/audio/m23/hero_spell_voice.wav"
+      ],
+      "volume_db": -4,
+      "category": "hero_voice",
+      "cooldown": 0.65,
+      "max_instances": 1,
+      "pitch_min": 0.98,
+      "pitch_max": 1.02,
+      "layers": []
+    },
+    "spell": {
+      "files": [
+        "res://assets/audio/m23/spell_cast.wav"
+      ],
+      "volume_db": -6,
+      "category": "effects",
+      "cooldown": 0.12,
+      "max_instances": 3,
+      "pitch_min": 0.98,
+      "pitch_max": 1.02,
+      "layers": [
+        "hero_spell_voice"
+      ]
+    },
+    "compiler_voice_intro": {
+      "files": [
+        "res://assets/audio/m23/compiler_voice_intro.wav"
+      ],
+      "volume_db": -3,
+      "category": "boss_voice",
+      "cooldown": 0.3,
+      "max_instances": 1,
+      "pitch_min": 1,
+      "pitch_max": 1,
+      "layers": [],
+      "preempt_category": true
+    },
+    "compiler_voice_attack_1": {
+      "files": [
+        "res://assets/audio/m23/compiler_voice_attack_1.wav"
+      ],
+      "volume_db": -4,
+      "category": "boss_voice",
+      "cooldown": 1.1,
+      "max_instances": 1,
+      "pitch_min": 0.98,
+      "pitch_max": 1.02,
+      "layers": []
+    },
+    "compiler_voice_attack_2": {
+      "files": [
+        "res://assets/audio/m23/compiler_voice_attack_2.wav"
+      ],
+      "volume_db": -4,
+      "category": "boss_voice",
+      "cooldown": 1.1,
+      "max_instances": 1,
+      "pitch_min": 0.98,
+      "pitch_max": 1.02,
+      "layers": []
+    },
+    "compiler_voice_attack_3": {
+      "files": [
+        "res://assets/audio/m23/compiler_voice_attack_3.wav"
+      ],
+      "volume_db": -4,
+      "category": "boss_voice",
+      "cooldown": 1.1,
+      "max_instances": 1,
+      "pitch_min": 0.98,
+      "pitch_max": 1.02,
+      "layers": []
+    },
+    "compiler_voice_hurt": {
+      "files": [
+        "res://assets/audio/m23/compiler_voice_hurt.wav"
+      ],
+      "volume_db": -4,
+      "category": "boss_voice",
+      "cooldown": 1.1,
+      "max_instances": 1,
+      "pitch_min": 0.98,
+      "pitch_max": 1.02,
+      "layers": []
+    },
+    "compiler_voice_hurt_2": {
+      "files": [
+        "res://assets/audio/m23/compiler_voice_hurt_2.wav"
+      ],
+      "volume_db": -4,
+      "category": "boss_voice",
+      "cooldown": 1.1,
+      "max_instances": 1,
+      "pitch_min": 0.98,
+      "pitch_max": 1.02,
+      "layers": []
+    },
+    "compiler_voice_phase": {
+      "files": [
+        "res://assets/audio/m23/compiler_voice_phase.wav"
+      ],
+      "volume_db": -3,
+      "category": "boss_voice",
+      "cooldown": 0.3,
+      "max_instances": 1,
+      "pitch_min": 1,
+      "pitch_max": 1,
+      "layers": [],
+      "preempt_category": true
+    },
+    "compiler_voice_death": {
+      "files": [
+        "res://assets/audio/m23/compiler_voice_death.wav"
+      ],
+      "volume_db": -3,
+      "category": "boss_voice",
+      "cooldown": 0.3,
+      "max_instances": 1,
+      "pitch_min": 1,
+      "pitch_max": 1,
+      "layers": [],
+      "preempt_category": true
+    },
+    "journal_open": {
+      "files": [
+        "res://assets/audio/m23/book_open.wav"
+      ],
+      "volume_db": -8,
+      "category": "ui",
+      "cooldown": 0.18,
+      "max_instances": 3,
+      "pitch_min": 0.98,
+      "pitch_max": 1.02,
+      "layers": []
+    },
+    "journal_close": {
+      "files": [
+        "res://assets/audio/m23/book_close.wav"
+      ],
+      "volume_db": -8,
+      "category": "ui",
+      "cooldown": 0.18,
+      "max_instances": 3,
+      "pitch_min": 0.98,
+      "pitch_max": 1.02,
+      "layers": []
+    },
+    "journal_page": {
+      "files": [
+        "res://assets/audio/m23/book_page.wav"
+      ],
+      "volume_db": -8,
+      "category": "ui",
+      "cooldown": 0.12,
+      "max_instances": 3,
+      "pitch_min": 0.98,
+      "pitch_max": 1.02,
+      "layers": []
+    },
+    "bench": {
+      "files": [
+        "res://assets/audio/m23/bench_rest.wav"
+      ],
+      "volume_db": -7,
+      "category": "ui",
+      "cooldown": 1.0,
+      "max_instances": 3,
+      "pitch_min": 0.98,
+      "pitch_max": 1.02,
+      "layers": []
+    },
+    "coin": {
+      "files": [
+        "res://assets/audio/m23/coin_pickup_1.wav",
+        "res://assets/audio/m23/coin_pickup_2.wav"
+      ],
+      "volume_db": -7,
+      "category": "ui",
+      "cooldown": 0.035,
+      "max_instances": 3,
+      "pitch_min": 0.98,
+      "pitch_max": 1.02,
+      "layers": []
+    },
+    "room_transition": {
+      "files": [
+        "res://assets/audio/m23/door_transition.wav"
+      ],
+      "volume_db": -10,
+      "category": "environment",
+      "cooldown": 0.7,
+      "max_instances": 3,
+      "pitch_min": 0.98,
+      "pitch_max": 1.02,
+      "layers": []
+    }
+  }
+}

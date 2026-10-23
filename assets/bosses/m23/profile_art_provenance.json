@@ -1,0 +1,36 @@
+{
+  "schema": "m23-compiler-profile-art-1",
+  "character": "Dr. Compiler — The Execution Chancellor (approved Option 2)",
+  "approved_design_reference": "WhatsApp Image 2026-10-21 at 6.35.58 PM.jpeg",
+  "orientation_reference": "User's Hollow Knight duel recording: asymmetric opponent-facing stance and visible weapon grip only; no game art was copied.",
+  "active_asset": "res://assets/bosses/m23/compiler_profile_rig_atlas.png",
+  "active_source_output": "/workspace/generated_images/exec-1a299a63-8db0-4bd6-81b3-4d19eebd8857.png",
+  "active_sha256": "bf7d5ded2b9422f07ce2d7fa6863d9447564902ffed0d3da7fbb1f2516c09bf8",
+  "active_bytes": 1401728,
+  "active_format": "RGBA PNG, 1774 x 887, alpha 0..255",
+  "source_output_is_byte_identical": true,
+  "parts": [
+    "True right-facing asymmetric three-quarter body; near arm removed; rear arm partly occluded",
+    "Separate complete near arm with connected forearm and closed black gauntlet",
+    "Separate full cyan data sword with its actual handle"
+  ],
+  "native_grip_note": "Godot crops the detached arm before its extra generated gold stub/endcap. The actual sword handle is drawn beneath the closed fingers, leaving one visible hilt. Source pixels are not edited.",
+  "generation_chain": [
+    {
+      "asset": "res://assets/bosses/m23/compiler_atlas.png",
+      "sha256": "6d05f702793b2458e74f16924ddc8c72b898ed8e62714717d7233af24d9c8b6c",
+      "purpose": "Historical front-facing design simplification, superseded for gameplay orientation"
+    },
+    {
+      "asset": "res://assets/bosses/m23/compiler_profile_atlas.png",
+      "sha256": "eeddf3dba166cb69be3ded9a3294097f516e58d6be893014d9f4dba9b6fcb0c1",
+      "source_output": "/workspace/generated_images/exec-f8144c88-cb6b-4c16-9f0d-5bbcafb6142f.png",
+      "purpose": "Successful right-facing design; near arm was baked into the body"
+    },
+    {
+      "asset": "res://assets/bosses/m23/compiler_profile_rig_atlas.png",
+      "sha256": "bf7d5ded2b9422f07ce2d7fa6863d9447564902ffed0d3da7fbb1f2516c09bf8",
+      "purpose": "Production layer separation for native shoulder/arm/hand/weapon animation"
+    }
+  ]
+}

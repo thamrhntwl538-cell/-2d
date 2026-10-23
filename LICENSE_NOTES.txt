@@ -40,3 +40,23 @@ See assets/enemies/m22/*art_manifest.json and the enemy documentation for source
 The journal binding, parchment, page animation, reading furniture, physical lamp
 puzzle, entrance accents and foreground groups are native Godot drawings/code.
 No Hollow Knight image, sprite, audio or game data is included as an asset.
+
+M23 Dr. Compiler (2026-10-23): the original transparent frontal atlas and its revised side-facing
+body/arm/blade atlas were edited with image_gen from the user's approved Execution Chancellor reference;
+see assets/bosses/m23/art_manifest.json. Runtime mesh animation, attack effects,
+arena gates, boss UI and combat code are authored for LAST LECTURE. The approved
+M20 hero atlas remains byte-identical. No Hollow Knight sprites, frames, audio,
+or code were added to the new runtime assets.
+
+The original two-part score The Unfinished Proof and cues were composed and
+rendered for this project. Composition/MIDI and synthesized cues are CC0;
+FluidR3_GM samples used in the score and victory cadence are MIT licensed.
+Exact notices, source and license scope: assets/audio/m23/LICENSE.txt. Composer,
+MIDI, cue generation and audio-audit sources are included under tools/audio/.
+The SoundFont is not bundled. Previously bundled legacy files retain the
+qualifications above; this note does not license third-party legacy material.
+
+M23 compact hero strike: the original M20 texture/parts remain byte-identical.
+The short orange flame envelope, small procedural sword and upper-body
+drive/recoil are native authored geometry in new M23 subclasses. No external
+game animation frames, sword graphics or voice recordings were copied.

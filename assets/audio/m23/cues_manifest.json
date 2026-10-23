@@ -1,0 +1,79 @@
+{
+  "original_audio": true,
+  "original_procedural_cues_license": "CC0-1.0",
+  "victory_composition_license": "CC0-1.0; FluidR3 samples MIT",
+  "cues": [
+    {
+      "file": "assets/audio/m23/compiler_bolts.wav",
+      "description": "Three dry ascending brass/pen ticks; the projectile volley warning.",
+      "original_procedural_audio": true,
+      "duration_seconds": 0.38,
+      "sample_rate": 48000,
+      "channels": 2,
+      "format": "PCM16 WAV",
+      "sample_peak_dbfs": -3.7999999999999994,
+      "rms_dbfs": -17.75724787479161,
+      "clipped_samples": 0,
+      "loop": false,
+      "recommended_runtime_gain_db": -4,
+      "sha256": "c93c89e3e509bebd632610e86f02cb727f26ff10035316e45b5010bb19cf3773"
+    },
+    {
+      "file": "assets/audio/m23/compiler_sweep.wav",
+      "description": "A broad rising paper scrape and low pressure swish; the sweeping-page warning.",
+      "original_procedural_audio": true,
+      "duration_seconds": 0.52,
+      "sample_rate": 48000,
+      "channels": 2,
+      "format": "PCM16 WAV",
+      "sample_peak_dbfs": -3.7999999999999994,
+      "rms_dbfs": -18.196298445484164,
+      "clipped_samples": 0,
+      "loop": false,
+      "recommended_runtime_gain_db": -4,
+      "sha256": "8e5e1b0cf1d4ec630293d7ed4c62e73b6bc430b50fdebcd7658daffe2f3c5301"
+    },
+    {
+      "file": "assets/audio/m23/compiler_pillars.wav",
+      "description": "Three resonant wooden press knocks; the ink-column warning.",
+      "original_procedural_audio": true,
+      "duration_seconds": 0.6,
+      "sample_rate": 48000,
+      "channels": 2,
+      "format": "PCM16 WAV",
+      "sample_peak_dbfs": -3.7999999999999994,
+      "rms_dbfs": -22.391449534159136,
+      "clipped_samples": 0,
+      "loop": false,
+      "recommended_runtime_gain_db": -4,
+      "sha256": "bd8d3ceecce62fb54b8be72e3f9097f5f20a532b7888b3ab8e1cc53a607a62ff"
+    },
+    {
+      "file": "assets/audio/m23/compiler_phase.wav",
+      "description": "A reverse paper/cymbal breath into a low resonant seal; phase change only.",
+      "original_procedural_audio": true,
+      "duration_seconds": 1.3,
+      "sample_rate": 48000,
+      "channels": 2,
+      "format": "PCM16 WAV",
+      "sample_peak_dbfs": -3.7999999999999994,
+      "rms_dbfs": -22.317246563465652,
+      "clipped_samples": 0,
+      "loop": false,
+      "recommended_runtime_gain_db": -6,
+      "sha256": "4095603091c2d00248a3c425a73e2df3aa838958d41bf2bec214e62d606d1bff"
+    }
+  ],
+  "victory": {
+    "file": "assets/audio/m23/compiler_victory.ogg",
+    "description": "Original motif resolves from D minor to a restrained D major, with strings, horn, choir and one bell. One-shot victory sting.",
+    "duration_seconds": 7.8,
+    "sample_rate": 48000,
+    "channels": 2,
+    "loop": false,
+    "integrated_lufs": -18.03,
+    "true_peak_dbtp": -6.55,
+    "recommended_runtime_gain_db": -6,
+    "sha256": "1d299ec2eadee8deaaab2d608612cd7f6222e2c66bff9a2a372de43b163bf4ed"
+  }
+}

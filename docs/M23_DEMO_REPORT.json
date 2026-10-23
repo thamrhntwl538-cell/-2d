@@ -1,0 +1,419 @@
+{
+  "asset": "previews/m23/40_compiler_and_ember_strike.mp4",
+  "sha256": "9c7593ec113677818f4e682304b89fa3ea07905f93fbb51f137da1b57ba71785",
+  "bytes": 3170354,
+  "duration_seconds": 20.5,
+  "video": {
+    "index": 0,
+    "codec_name": "h264",
+    "codec_long_name": "H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10",
+    "profile": "High",
+    "codec_type": "video",
+    "codec_tag_string": "avc1",
+    "codec_tag": "0x31637661",
+    "width": 1280,
+    "height": 720,
+    "coded_width": 1280,
+    "coded_height": 720,
+    "closed_captions": 0,
+    "film_grain": 0,
+    "has_b_frames": 2,
+    "sample_aspect_ratio": "1:1",
+    "display_aspect_ratio": "16:9",
+    "pix_fmt": "yuv420p",
+    "level": 32,
+    "color_range": "tv",
+    "color_space": "bt709",
+    "chroma_location": "center",
+    "field_order": "progressive",
+    "refs": 1,
+    "is_avc": "true",
+    "nal_length_size": "4",
+    "id": "0x1",
+    "r_frame_rate": "60/1",
+    "avg_frame_rate": "73800/1229",
+    "time_base": "1/15360",
+    "start_pts": 0,
+    "start_time": "0.000000",
+    "duration_ts": 314624,
+    "duration": "20.483333",
+    "bit_rate": "1059562",
+    "bits_per_raw_sample": "8",
+    "nb_frames": "1230",
+    "extradata_size": 51,
+    "disposition": {
+      "default": 1,
+      "dub": 0,
+      "original": 0,
+      "comment": 0,
+      "lyrics": 0,
+      "karaoke": 0,
+      "forced": 0,
+      "hearing_impaired": 0,
+      "visual_impaired": 0,
+      "clean_effects": 0,
+      "attached_pic": 0,
+      "timed_thumbnails": 0,
+      "non_diegetic": 0,
+      "captions": 0,
+      "descriptions": 0,
+      "metadata": 0,
+      "dependent": 0,
+      "still_image": 0,
+      "multilayer": 0
+    },
+    "tags": {
+      "language": "und",
+      "handler_name": "VideoHandler",
+      "vendor_id": "[0][0][0][0]",
+      "encoder": "Lavc61.19.101 libx264"
+    }
+  },
+  "audio": {
+    "index": 1,
+    "codec_name": "aac",
+    "codec_long_name": "AAC (Advanced Audio Coding)",
+    "profile": "LC",
+    "codec_type": "audio",
+    "codec_tag_string": "mp4a",
+    "codec_tag": "0x6134706d",
+    "sample_fmt": "fltp",
+    "sample_rate": "48000",
+    "channels": 2,
+    "channel_layout": "stereo",
+    "bits_per_sample": 0,
+    "initial_padding": 0,
+    "id": "0x2",
+    "r_frame_rate": "0/0",
+    "avg_frame_rate": "0/0",
+    "time_base": "1/48000",
+    "start_pts": 0,
+    "start_time": "0.000000",
+    "duration_ts": 984000,
+    "duration": "20.500000",
+    "bit_rate": "165223",
+    "nb_frames": "962",
+    "extradata_size": 5,
+    "disposition": {
+      "default": 1,
+      "dub": 0,
+      "original": 0,
+      "comment": 0,
+      "lyrics": 0,
+      "karaoke": 0,
+      "forced": 0,
+      "hearing_impaired": 0,
+      "visual_impaired": 0,
+      "clean_effects": 0,
+      "attached_pic": 0,
+      "timed_thumbnails": 0,
+      "non_diegetic": 0,
+      "captions": 0,
+      "descriptions": 0,
+      "metadata": 0,
+      "dependent": 0,
+      "still_image": 0,
+      "multilayer": 0
+    },
+    "tags": {
+      "language": "und",
+      "handler_name": "SoundHandler",
+      "vendor_id": "[0][0][0][0]"
+    }
+  },
+  "source": {
+    "writer": "Native Godot MovieWriter",
+    "kept_frame_range_exclusive_end": [
+      128,
+      1358
+    ],
+    "original_frame_count": 1363,
+    "original_codec": "mjpeg",
+    "fps": 60,
+    "raw_avi_in_project": false,
+    "conversion": "Only startup/cleanup trimmed. Full-range BT.601 MJPEG converted to TV-range BT.709 H.264 CRF19 fast; original captured PCM encoded as AAC160k; faststart.",
+    "performance_claim": false
+  },
+  "configured_showcase": true,
+  "uninterrupted_playthrough": false,
+  "full_win_claim": false,
+  "capture_report": {
+    "actual_input": [
+      "ordinary trial entry",
+      "move_right away from captured bolts",
+      "jump over execution",
+      "move into pillar gap",
+      "three compact hero attack inputs with body drive/recovery and voice",
+      "jump approaching low chains"
+    ],
+    "configured_cuts": [
+      "sweep composition and pattern",
+      "pillar composition and pattern",
+      "hero/actor composition and native.92-second recovery start with1.05x study camera; attacks use actual input",
+      "explicit direct damage to24HP to demonstrate native phase transition",
+      "phase-II chain composition and pattern"
+    ],
+    "configured_showcase": true,
+    "engine": "4.7.2-stable (official)",
+    "failures": [],
+    "fps": 60,
+    "full_win_claim": false,
+    "movie_end_frame": 1358,
+    "movie_start_frame": 128,
+    "observations": {
+      "actual_code_shots": 4,
+      "actual_music_playing": true,
+      "final_boss_hp": 24,
+      "first_code_warning_reposition_input": true,
+      "hero_hp": 2,
+      "hero_strike_study": {
+        "actual_attack_inputs": 3,
+        "actual_strikes_started": 3,
+        "boss_damage_from_actual_inputs": 3,
+        "boss_frozen": false,
+        "camera_zoom": 1.05,
+        "configured_initial_recovery": 0.92,
+        "hero_attack_voices": 3,
+        "native_body_drive_seen": true,
+        "native_compact_flame_seen": true,
+        "native_follow_through_seen": true
+      },
+      "music_phase_changes": 2,
+      "states_seen": [
+        "intro",
+        "idle",
+        "bolts_warning",
+        "bolts_active",
+        "recover",
+        "sweep_warning",
+        "sweep_active",
+        "pillars_warning",
+        "pillars_active",
+        "phase_transition",
+        "chains_warning",
+        "chains_active"
+      ]
+    },
+    "product_source_sha256": {
+      "res://assets/audio/m23/compiler_phase_1.ogg": "e681be58f5af81f749f702c3d376f4332d9332c5adcc9e8234c8b85305c6b0af",
+      "res://assets/audio/m23/compiler_phase_2.ogg": "cf079ca67c3cd09d5b151e1c534c1b81e0cfaa60c31daadeb83268a21b559dd4",
+      "res://assets/audio/m23/event_manifest.json": "31225fe0f0403367f8b3edec26797e5c33a4ba302c265933ebf59b162a60e99a",
+      "res://assets/bosses/m23/compiler_profile_rig_atlas.png": "bf7d5ded2b9422f07ce2d7fa6863d9447564902ffed0d3da7fbb1f2516c09bf8",
+      "res://assets/warden_m20/warden_parts.png": "6eca7436c7a8c39451256aa56db465d664df0d6dbb42d8e7f24122592b34bb66",
+      "res://scripts/audio/m23_boss_music.gd": "61f33b76681ee01415192a4aa9820ea2f80653440ba22e285f77c1760237b4ab",
+      "res://scripts/audio/m23_soundscape.gd": "29b0d042b0d951c1af4b927cee3463f3e8daa42a1796d5ba2c69f8fecddc317a",
+      "res://scripts/bosses/m23_boss_attack.gd": "6f595a7c546a3ce775ce81101be0f8f6c08b98909dbd09f6303f625f94c377ec",
+      "res://scripts/bosses/m23_compiler_visual.gd": "b1dc812f4d6f2496508199c960914885a2c1ccafd898875ac77e4ca468f3400b",
+      "res://scripts/bosses/m23_dr_compiler.gd": "ee212464c7ee6aa4658136cf7a3825c80abb1fd4d11a93cc73dd7a2a59172082",
+      "res://scripts/combat/m23_player.gd": "fd421f5f8f9b38aede083197e32bb6c864554111c4ea4f7b5302f9c8a6a635c0",
+      "res://scripts/stage/m23_folding_library.gd": "8d407ecccd5cf19ba228db377e78c0c43b9b363d0886f58b126b2e86a71c7e54",
+      "res://scripts/ui/m23_boss_display.gd": "68e94e47225b71ea915b9e23cb12c4f69567d54f3028e4686b20186f6726abe0",
+      "res://scripts/ui/m23_hud.gd": "2353a127998612db83609ba3d874548716640ea166dc618e567996a431692d2b",
+      "res://scripts/warden_model_m23.gd": "b3554cf14cc78a6c5481de433a649456f208c87470b35d5068ec9c26c927bba6"
+    },
+    "product_sources_unchanged": true,
+    "save_restored": true,
+    "scope": "20.5-second native-rendered configured attack/voice/score showcase. Hero attacks use ordinary attack input. Boss warnings and attacks progress through real code after declared cuts. Not an input-only win or continuous campaign recording.",
+    "segments": [
+      {
+        "boss_hp": 48,
+        "boss_phase": 1,
+        "caption": "NATIVE TRIAL INTRO + FIRST CODE WARNING",
+        "configured_cut": {},
+        "hero_hp": 6,
+        "movie_frame": 128,
+        "tracked_tick": 0
+      },
+      {
+        "boss_hp": 48,
+        "boss_phase": 1,
+        "caption": "CONFIGURED CUT / NATIVE EXECUTION WARNING + JUMP",
+        "configured_cut": {
+          "boss_position": [
+            2450,
+            1440
+          ],
+          "hero_position": [
+            2050,
+            1440
+          ],
+          "pattern": "sweep"
+        },
+        "hero_hp": 5,
+        "movie_frame": 488,
+        "tracked_tick": 360
+      },
+      {
+        "boss_hp": 48,
+        "boss_phase": 1,
+        "caption": "CONFIGURED CUT / NATIVE PILLAR MARKS + REPOSITION",
+        "configured_cut": {
+          "boss_position": [
+            2450,
+            1440
+          ],
+          "hero_position": [
+            2050,
+            1440
+          ],
+          "pattern": "pillars"
+        },
+        "hero_hp": 3,
+        "movie_frame": 668,
+        "tracked_tick": 540
+      },
+      {
+        "boss_hp": 48,
+        "boss_phase": 1,
+        "caption": "CONFIGURED 1.05X VIEW / ACTUAL HERO ATTACK INPUT + VOICE",
+        "configured_cut": {
+          "attack_pose_injection": false,
+          "boss_position": [
+            2450,
+            1440
+          ],
+          "camera_zoom": 1.05,
+          "hero_position": [
+            2338,
+            1440
+          ],
+          "initial_native_recovery": 0.92
+        },
+        "hero_hp": 3,
+        "movie_frame": 848,
+        "tracked_tick": 720
+      },
+      {
+        "boss_hp": 45,
+        "boss_phase": 1,
+        "caption": "DECLARED HP CUT TO 24 / NATIVE PHASE-II TRANSITION + VOICE",
+        "configured_cut": {
+          "direct_phase_trigger_damage": 21,
+          "purpose": "show second phase; no player-win claim"
+        },
+        "hero_hp": 2,
+        "movie_frame": 998,
+        "tracked_tick": 870
+      },
+      {
+        "boss_hp": 24,
+        "boss_phase": 2,
+        "caption": "CONFIGURED CUT / PHASE-II LOW CHAINS + INPUT JUMPS",
+        "configured_cut": {
+          "boss_position": [
+            2450,
+            1440
+          ],
+          "hero_position": [
+            2050,
+            1440
+          ],
+          "pattern": "chains",
+          "phase": 2
+        },
+        "hero_hp": 2,
+        "movie_frame": 1118,
+        "tracked_tick": 990
+      }
+    ],
+    "tracked_physics_frames": 1230,
+    "uninterrupted_playthrough": false,
+    "writer": "Native Godot MovieWriter"
+  },
+  "audio_measurement": {
+    "source_kept_pcm": {
+      "samples_interleaved": 1968000,
+      "peak": 0.71514892578125,
+      "peak_dbfs": -2.9120701874703374,
+      "rms": 0.09142945761418111,
+      "rms_dbfs": -20.77827713168285,
+      "samples_abs_ge_one": 0
+    },
+    "encoded_full": {
+      "samples_interleaved": 1968128,
+      "peak": 0.6942455768585205,
+      "peak_dbfs": -3.16973757046822,
+      "rms": 0.09060584055147099,
+      "rms_dbfs": -20.856876126481406,
+      "samples_abs_ge_one": 0
+    },
+    "encoded_first_phase": {
+      "samples_interleaved": 384000,
+      "peak": 0.5413979887962341,
+      "peak_dbfs": -5.32966723789022,
+      "rms": 0.07789311360017906,
+      "rms_dbfs": -22.170018717573367,
+      "samples_abs_ge_one": 0
+    },
+    "encoded_hero_strike": {
+      "samples_interleaved": 211200,
+      "peak": 0.6865735650062561,
+      "peak_dbfs": -3.2662584427007504,
+      "rms": 0.10180915442318131,
+      "rms_dbfs": -19.84426339151288,
+      "samples_abs_ge_one": 0
+    },
+    "encoded_phase_roar": {
+      "samples_interleaved": 192000,
+      "peak": 0.679937481880188,
+      "peak_dbfs": -3.3506203494826954,
+      "rms": 0.12580048396810586,
+      "rms_dbfs": -18.00635376219123,
+      "samples_abs_ge_one": 0
+    },
+    "encoded_phase_two": {
+      "samples_interleaved": 288000,
+      "peak": 0.468831866979599,
+      "peak_dbfs": -6.579657530966703,
+      "rms": 0.07602618815670284,
+      "rms_dbfs": -22.380735677312252,
+      "samples_abs_ge_one": 0
+    },
+    "human_listening_claim": false,
+    "result": "Native captured PCM and decoded AAC both contain non-silent original score/voice/effects, with no samples at or above full scale. No audio normalization, gain boost or replacement track was applied."
+  },
+  "decoded_frame_review": {
+    "timestamps_seconds": [
+      0.35,
+      1.4,
+      3.0,
+      6.8,
+      7.0,
+      9.6,
+      10.1,
+      12.28,
+      12.38,
+      12.5,
+      13.05,
+      14.8,
+      15.7,
+      17.2,
+      18.1,
+      19.1
+    ],
+    "checked": [
+      "side-facing boss and rigid sword grip",
+      "fixed arm lengths through execution and phase rise",
+      "native compact hero crescent at contact and cleared flame during recovery",
+      "three actual hero strikes causing three boss damage and three voice events",
+      "readable Arabic warnings and six-lantern HUD",
+      "phase fold/rise and low-chain jump",
+      "decoded H.264 color/range and no codec corruption"
+    ],
+    "result": "Visually inspected16 decoded frames. Root independently inspected12.28s and15.70s and accepted the movie for publication."
+  },
+  "reproduction": {
+    "capture_script": "res://tools/capture_m23_demo.gd",
+    "source_report": "user://m23_demo_source_report.json",
+    "command": "godot --path . --rendering-method gl_compatibility --audio-driver Dummy --fixed-fps 60 --write-movie /tmp/m23_native_source.avi --script res://tools/capture_m23_demo.gd",
+    "userdata": "Independent XDG_DATA_HOME; capture restores previous normal/trial files."
+  },
+  "scope": "Configured native rendering/voice/attack review with labeled pattern/composition cuts. Actual hero attack inputs deal3HP (48 to45); a declared direct21HP phase trigger then sets24HP. Actual player damage is retained (6 to2HP). This is not a full victory or uninterrupted campaign recording.",
+  "native_log_errors": [],
+  "native_log_warnings": [
+    "Software-display V-Sync mode cannot be changed."
+  ],
+  "capture_helper_sha256": "c1b1013e8b1621cde6b97fba73a36a826bcd602e4e5c2dc2d2c9e4d7dcbdbf60",
+  "approved_for_publication_by_root_after_visual_review": true,
+  "post_capture_product_sources_unchanged": true
+}
