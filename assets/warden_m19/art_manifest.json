@@ -1,0 +1,212 @@
+{
+  "asset": "assets/warden_m19/warden_parts.png",
+  "milestone": "M19 hero redesign",
+  "created_date": "2026-10-23",
+  "source": "Original image generation based on the user-provided inline M19 character reference sheet.",
+  "source_reference": "Latest user image in the 2026-10-23 hero redesign request; inline attachment has no local file path or Sediment ID.",
+  "generator": "image_gen.imagegen",
+  "generation_edit_mode": "num_last_images_to_include=1; transparent_background=true",
+  "original_output": "/workspace/generated_images/exec-84014950-881d-426a-92e3-d4ed3608b994.png",
+  "pixel_editing_performed": false,
+  "source_preserved": true,
+  "dimensions": [
+    1086,
+    1448
+  ],
+  "mode": "RGBA",
+  "byte_count": 1036602,
+  "sha256": "8b3ed6a4dd11530956b44369b970ecb233657f9679a3ab46fbcbef43554aab3e",
+  "alpha_extrema": [
+    0,
+    255
+  ],
+  "corner_alpha": [
+    0,
+    0,
+    0,
+    0
+  ],
+  "visible_bounds_measurement": "Connected alpha components with threshold alpha>8; regions add approximately three source pixels of padding. Analysis only; no image pixels were modified.",
+  "reference_identity": [
+    "Large warm amber flame-filled lantern head, asymmetric curved hook and dangling gold diamond ornaments.",
+    "Dark navy wrapped scarf and ragged cape with sparse gold diamond/rune motifs.",
+    "Small black cloth body, slender short dark legs, simple unarmored dark feet, pale ivory glove-like hands.",
+    "No cyan core, no human face, no heavy golden armor."
+  ],
+  "regions": {
+    "head": {
+      "rect": [
+        22,
+        0,
+        394,
+        453
+      ],
+      "anchor": [
+        248,
+        439
+      ],
+      "anchor_kind": "lower metal lantern base; neck attachment",
+      "flame_center": [
+        251,
+        313
+      ],
+      "includes_hanging_charms": true
+    },
+    "torso": {
+      "rect": [
+        489,
+        133,
+        167,
+        311
+      ],
+      "anchor": [
+        76,
+        12
+      ],
+      "anchor_kind": "neck opening"
+    },
+    "cape": {
+      "rect": [
+        690,
+        80,
+        388,
+        412
+      ],
+      "anchor": [
+        300,
+        46
+      ],
+      "anchor_kind": "neck at upper-right collar"
+    },
+    "scarf": {
+      "rect": [
+        50,
+        492,
+        355,
+        275
+      ],
+      "anchor": [
+        247,
+        52
+      ],
+      "anchor_kind": "wrapped collar center"
+    },
+    "upper_arm": {
+      "rect": [
+        566,
+        515,
+        111,
+        111
+      ],
+      "anchor": [
+        42,
+        24
+      ],
+      "anchor_kind": "shoulder; cropped to upper sleeve only"
+    },
+    "upper_arm_full_source": {
+      "rect": [
+        566,
+        515,
+        111,
+        225
+      ],
+      "use": "reference only; do not render its dark lower fingers in addition to cream hand"
+    },
+    "forearm_hand": {
+      "rect": [
+        892,
+        510,
+        126,
+        274
+      ],
+      "anchor": [
+        39,
+        15
+      ],
+      "anchor_kind": "elbow; ivory hand continues at lower end"
+    },
+    "thigh": {
+      "rect": [
+        148,
+        798,
+        121,
+        201
+      ],
+      "anchor": [
+        53,
+        18
+      ],
+      "anchor_kind": "hip"
+    },
+    "shin": {
+      "rect": [
+        525,
+        800,
+        76,
+        203
+      ],
+      "anchor": [
+        35,
+        12
+      ],
+      "anchor_kind": "knee"
+    },
+    "foot": {
+      "rect": [
+        849,
+        870,
+        134,
+        96
+      ],
+      "anchor": [
+        28,
+        18
+      ],
+      "anchor_kind": "ankle; toe faces right"
+    },
+    "pendant": {
+      "rect": [
+        122,
+        1026,
+        85,
+        361
+      ],
+      "anchor": [
+        17,
+        10
+      ],
+      "anchor_kind": "top ribbon; optional, head already includes two pendants"
+    },
+    "scarf_tail": {
+      "rect": [
+        302,
+        1058,
+        344,
+        369
+      ],
+      "anchor": [
+        294,
+        31
+      ],
+      "anchor_kind": "upper-right neck attachment"
+    },
+    "assembled_reference": {
+      "rect": [
+        689,
+        997,
+        352,
+        441
+      ],
+      "use": "visual reference only; do not render together with assembled rig"
+    }
+  },
+  "runtime_notes": [
+    "Use native AtlasTexture regions. All poses should reuse these identical source parts and palette.",
+    "Head pivot belongs at the lower metal lantern base, not at the center of its hook-and-pendants bounding box.",
+    "The upper-arm crop intentionally excludes the generated dark fingers so the cream forearm-hand is the only visible hand.",
+    "The head already contains two dangling charms; an additional pendant is optional and must not produce duplicated jewelry.",
+    "The assembled reference tile is an art guide, not a second on-screen hero.",
+    "The source is transparent RGBA; do not add a black rectangle or checkerboard background."
+  ]
+}

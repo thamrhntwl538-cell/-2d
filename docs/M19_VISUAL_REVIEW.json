@@ -1,0 +1,132 @@
+{
+  "captures": [
+    {
+      "airborne": false,
+      "configured_fixture": true,
+      "height": 720,
+      "hero_pose": "armed_ready",
+      "note": "Configured native encounter composition; new compact lantern hero at actual gameplay size.",
+      "path": "res://previews/m19/01_gameplay_idle.jpg",
+      "room": 2,
+      "width": 1280
+    },
+    {
+      "airborne": false,
+      "configured_fixture": true,
+      "height": 720,
+      "hero_pose": "armed_ready",
+      "note": "Configured3×camera inspection of reference-derived amber lantern, scarf, pale gloves and dark short body.",
+      "path": "res://previews/m19/02_hero_closeup.jpg",
+      "room": 2,
+      "width": 1280
+    },
+    {
+      "airborne": false,
+      "configured_fixture": true,
+      "height": 720,
+      "hero_pose": "slash",
+      "note": "Native attack Input from a configured closeup; same M19 parts and geometry during contact.",
+      "path": "res://previews/m19/03_forward_slash.jpg",
+      "room": 2,
+      "width": 1280
+    },
+    {
+      "airborne": false,
+      "configured_fixture": true,
+      "height": 720,
+      "hero_pose": "armed_run",
+      "note": "Actual movement Input sampled during the new run; configured camera only.",
+      "path": "res://previews/m19/04_running.jpg",
+      "room": 2,
+      "width": 1280
+    },
+    {
+      "airborne": true,
+      "configured_fixture": true,
+      "height": 720,
+      "hero_pose": "armed_jump",
+      "note": "Actual jump Input with the new M19 body and lantern; original traversal physics.",
+      "path": "res://previews/m19/05_jumping.jpg",
+      "room": 2,
+      "width": 1280
+    },
+    {
+      "airborne": false,
+      "configured_fixture": true,
+      "height": 720,
+      "hero_pose": "slash_up",
+      "note": "Actual upward slash Input; shared lantern size, warm light and wrist-anchored sword.",
+      "path": "res://previews/m19/06_upward_slash.jpg",
+      "room": 2,
+      "width": 1280
+    },
+    {
+      "airborne": true,
+      "configured_fixture": true,
+      "height": 720,
+      "hero_pose": "slash_down",
+      "note": "Configured airborne location followed by actual downward-attack Input; not traversal proof.",
+      "path": "res://previews/m19/07_downward_slash.jpg",
+      "room": 2,
+      "width": 1280
+    },
+    {
+      "airborne": true,
+      "configured_fixture": true,
+      "height": 720,
+      "hero_pose": "recoil",
+      "note": "Configured damage fixture demonstrates that recoil retains the same hero model.",
+      "path": "res://previews/m19/08_recoil.jpg",
+      "room": 2,
+      "width": 1280
+    },
+    {
+      "airborne": false,
+      "configured_fixture": true,
+      "height": 720,
+      "hero_pose": "armed_ready",
+      "note": "Actual Focus input with the same amber lantern and shared energy.",
+      "path": "res://previews/m19/09_focus.jpg",
+      "room": 2,
+      "width": 1280
+    },
+    {
+      "airborne": false,
+      "configured_fixture": true,
+      "height": 720,
+      "hero_pose": "death",
+      "note": "Declared death-presentation fixture; no claim of a gameplay loss in this visual composition.",
+      "path": "res://previews/m19/10_death_pose.jpg",
+      "room": 2,
+      "width": 1280
+    },
+    {
+      "path": "res://previews/m19/11_hero_review.jpg",
+      "width": 1280,
+      "height": 720,
+      "configured_fixture": true,
+      "scene": "res://scenes/warden_m19_review.tscn",
+      "kind": "native model review gallery",
+      "note": "Enlarged master and nine miniature animated study poses. Miniatures are not a claim of exact gameplay scale; gallery does not prove traversal or combat."
+    }
+  ],
+  "engine": "4.7.2-stable (official)",
+  "failures": [],
+  "rendered": true,
+  "save_restored": true,
+  "scope": "declared M19 visual fixtures; native action samples after actor placement; mechanics evidence separately in test_m19_hero.gd",
+  "evidence_metadata": {
+    "date_utc": "2026-10-23",
+    "renderer": "OpenGL Compatibility, Mesa llvmpipe, software rendering on an X11 display",
+    "capture_script": "res://tools/capture_m19.gd",
+    "gallery_command_scene": "res://scenes/warden_m19_review.tscn",
+    "gallery_capture_argument": "--capture-review",
+    "gallery_generated_source": "user://m19_hero_review.jpg",
+    "gallery_copy": "The gallery JPG was copied without modification to res://previews/m19/11_hero_review.jpg.",
+    "manually_reviewed": "All eleven native JPG captures; shared warm lantern, navy cloth, pale gloves, limb proportions, framing and pose continuity.",
+    "review_decision": "Near glove reads clearly; natural far-hand occlusion in three-quarter poses accepted. Product geometry frozen.",
+    "log_errors": 0,
+    "leak_warnings": 0,
+    "driver_warning": "The software graphics driver cannot change V-Sync mode; capture and review completed successfully."
+  }
+}
