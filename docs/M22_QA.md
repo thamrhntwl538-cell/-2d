@@ -51,3 +51,5 @@ godot --audio-driver Dummy --rendering-method gl_compatibility --fixed-fps 60 --
 For the long actual-input world route, omit the final mode argument from the headless world command. The spatial-lamp route has its own `tools/test_m22_lantern_route.gd`. Native rendering commands require a working display. No workspace-specific absolute path is required.
 
 Machine-readable evidence: `M22_ENGINE_QA.json`, `M22_VISUAL_REVIEW.json` and the independent reports named there.
+
+Published ZIP integrity, cold-import outcome and native downloaded-project startup: [M22_RELEASE_CHECK.md](M22_RELEASE_CHECK.md).
