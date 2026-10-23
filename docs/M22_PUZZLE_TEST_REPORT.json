@@ -1,0 +1,15 @@
+{
+	"checks": 3743,
+	"coverage": [
+		"physical sequence",
+		"idempotent activation",
+		"harmless retry",
+		"save reload",
+		"one-time reward",
+		"old-save migration",
+		"legacy folding semantics",
+		"bilingual observation clue"
+	],
+	"failures": [],
+	"sequence_cases": 243
+}

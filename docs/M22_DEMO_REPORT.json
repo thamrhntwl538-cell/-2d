@@ -1,0 +1,197 @@
+{
+  "asset": "previews/m22/40_library_journal_combat.mp4",
+  "sha256": "86b74e35ecd96cdbc86bb09486245b5b053bfdc2e6880742dddbe103b8a18d96",
+  "bytes": 2330177,
+  "duration_seconds": 17.083333,
+  "video": {
+    "codec_name": "h264",
+    "profile": "High",
+    "width": 1280,
+    "height": 720,
+    "pix_fmt": "yuv420p",
+    "color_range": "tv",
+    "color_space": "bt709",
+    "color_primaries": null,
+    "color_transfer": null,
+    "r_frame_rate": "60/1",
+    "nb_frames": "1025"
+  },
+  "audio": {
+    "codec_name": "aac",
+    "sample_rate": "48000",
+    "channels": 2,
+    "bit_rate": "127915"
+  },
+  "source": {
+    "engine": "4.7.2-stable (official)",
+    "writer": "Native Godot MovieWriter",
+    "original_frames": 1087,
+    "original_fps": 60,
+    "codec": "MJPEG yuvj420p full-range BT.601 + PCM 48kHz stereo",
+    "kept_frame_range_exclusive_end": [
+      58,
+      1083
+    ],
+    "conversion": "trim setup/cleanup only; scale=in_range=pc:out_range=tv:in_color_matrix=bt601:out_color_matrix=bt709,format=yuv420p; libx264 CRF19 fast; AAC128k; faststart",
+    "raw_avi_in_project": false,
+    "performance_claim": false
+  },
+  "scope": "Configured room01/03/08 positions and kept-page inventory; actual bilingual reader/journal controls and original hero; native wraith old-target dive and native turret burst/cover/reload. Not campaign traversal or benchmark evidence.",
+  "configured_showcase": true,
+  "uninterrupted_playthrough": false,
+  "configured_kept_pages": [
+    "assignment_note",
+    "archive_note",
+    "margin_lantern_clue"
+  ],
+  "configured_visited_places": [
+    1,
+    2,
+    5,
+    6
+  ],
+  "configured_abilities": [
+    "sword",
+    "dash",
+    "spell"
+  ],
+  "actual_input": [
+    "move_right",
+    "interact",
+    "F2",
+    "Escape",
+    "N",
+    "focused index Enter",
+    "focused Places Enter",
+    "move_left",
+    "jump",
+    "attack"
+  ],
+  "enemy_attack_state_injection": false,
+  "segments": [
+    {
+      "camera_zoom": 1.65,
+      "caption": "ROOM01 / CURATED READING NOOK + APPROVED HERO",
+      "configured_room_and_position": true,
+      "frame": 58,
+      "room": 1,
+      "tracked_frame": 0,
+      "time_seconds": 0.0
+    },
+    {
+      "camera_zoom": 1.65,
+      "caption": "REAL INTERACT / ARABIC READER / OPENING ANIMATION",
+      "configured_room_and_position": true,
+      "frame": 158,
+      "room": 1,
+      "tracked_frame": 100,
+      "time_seconds": 1.667
+    },
+    {
+      "camera_zoom": 1.65,
+      "caption": "F2 INPUT / SAME PAGE IN ENGLISH",
+      "configured_room_and_position": true,
+      "frame": 232,
+      "room": 1,
+      "tracked_frame": 174,
+      "time_seconds": 2.9
+    },
+    {
+      "camera_zoom": 1.65,
+      "caption": "N INPUT / JOURNAL WITH CONFIGURED KEPT-PAGE INVENTORY",
+      "configured_room_and_position": true,
+      "frame": 310,
+      "room": 1,
+      "tracked_frame": 252,
+      "time_seconds": 4.2
+    },
+    {
+      "camera_zoom": 1.65,
+      "caption": "INDEX SELECTION / REAL ENTER / PAGE-LEAF ANIMATION",
+      "configured_room_and_position": true,
+      "frame": 374,
+      "room": 1,
+      "tracked_frame": 316,
+      "time_seconds": 5.267
+    },
+    {
+      "camera_zoom": 1.65,
+      "caption": "F2 INPUT / BILINGUAL JOURNAL + PLACE NAMES",
+      "configured_room_and_position": true,
+      "frame": 432,
+      "room": 1,
+      "tracked_frame": 374,
+      "time_seconds": 6.233
+    },
+    {
+      "camera_zoom": 1.8,
+      "caption": "ROOM03 / REAL WRAITH WARNING / DIVE TO OLD TARGET",
+      "configured_room_and_position": true,
+      "frame": 574,
+      "room": 3,
+      "tracked_frame": 498,
+      "time_seconds": 8.6
+    },
+    {
+      "camera_zoom": 1.4,
+      "caption": "ROOM08 / REAL TURRET BURST / SOLID BOOK COVER / RELOAD",
+      "configured_room_and_position": true,
+      "frame": 783,
+      "room": 8,
+      "tracked_frame": 689,
+      "time_seconds": 12.083
+    }
+  ],
+  "observations": {
+    "cover_hero_hp_unchanged": true,
+    "index_record": "assignment_note",
+    "journal_opened": true,
+    "physical_reader_opened": true,
+    "places_section": "places",
+    "reader_english": true,
+    "turret_actual_shots": 3,
+    "turret_states": [
+      "scan",
+      "windup",
+      "burst",
+      "reload"
+    ],
+    "wraith_dodge_distance": 79.1666259765625,
+    "wraith_locked_old_target": true,
+    "wraith_warning_observed": true
+  },
+  "failures": [],
+  "save_restored": true,
+  "decoded_frame_review": {
+    "timestamps_seconds": [
+      1.0,
+      2.5,
+      5.5,
+      7.4,
+      10.5,
+      15.7
+    ],
+    "checked": [
+      "new six-lantern health and round flame orb",
+      "approved hero and eyes",
+      "native curated reading shelf",
+      "Arabic reader and page-leaf animation",
+      "English place index",
+      "native wraith and real sword motion",
+      "native turret and solid book cover"
+    ],
+    "result": "Reviewed decoded H.264 frames; no codec corruption, no clipped HUD/reader text, expected transient page-leaf overlay only during its animation."
+  },
+  "post_capture_source_changes": [
+    "scripts/stage/m22_folding_library.gd",
+    "scripts/ui/m22_hud.gd"
+  ],
+  "post_capture_note": "Two runtime files changed after the capture-start snapshot: world controller and HUD. The release coordinator reports a currency maximum-cap guard; the final product QA covers those later edits. This movie documents the recorded rendering, not later source bytes.",
+  "reproduction": {
+    "capture_script": "res://tools/capture_m22_demo.gd",
+    "report": "user://m22_demo_source_report.json",
+    "recommended_environment": "Independent XDG_DATA_HOME on Linux; restore_saved_game=false is set by the capture script.",
+    "command": "godot --path . --rendering-method gl_compatibility --audio-driver Dummy --fixed-fps 60 --write-movie /tmp/m22_native_source.avi --script res://tools/capture_m22_demo.gd"
+  },
+  "approved_hero_atlas_sha256": "6eca7436c7a8c39451256aa56db465d664df0d6dbb42d8e7f24122592b34bb66"
+}

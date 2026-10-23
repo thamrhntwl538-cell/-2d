@@ -1,0 +1,242 @@
+{
+  "milestone": "M22",
+  "engine": "Godot4.7.2 GL Compatibility / llvmpipe / isolated data / Dummy audio",
+  "final_native_JPG_count": 31,
+  "owned_final_capture_count": 21,
+  "final_images": [
+    {
+      "path": "previews/m22/01_room_01.jpg",
+      "bytes": 161900,
+      "sha256": "abb26cb2831b3b10033b58d5177ba16ab05308232169dcbd3fcf686b6dd430b1",
+      "kind": "native configured room/AI view"
+    },
+    {
+      "path": "previews/m22/02_room_02.jpg",
+      "bytes": 159235,
+      "sha256": "ac629737c2ef1af52213b634fa468c1f19b0c990ea2f47482e753602e977bc6a",
+      "kind": "native configured room/AI view"
+    },
+    {
+      "path": "previews/m22/03_room_03.jpg",
+      "bytes": 181890,
+      "sha256": "b116373d1068d71251f7b6ede6824a48b35b2b5d366fd43046b178d6d847e456",
+      "kind": "native configured room/AI view"
+    },
+    {
+      "path": "previews/m22/04_room_04.jpg",
+      "bytes": 165062,
+      "sha256": "0ba210a82d6878108ab8f142e7b26f2a4a4da269a99faac31a13996d9d33749e",
+      "kind": "native configured room/AI view"
+    },
+    {
+      "path": "previews/m22/05_room_05.jpg",
+      "bytes": 181220,
+      "sha256": "e54303f1412cee0128f48e37616d3bf4835a9b63e849db0d6467732ecfa9b67b",
+      "kind": "native configured room/AI view"
+    },
+    {
+      "path": "previews/m22/06_room_06.jpg",
+      "bytes": 184312,
+      "sha256": "d5f1cf69f45f80655cb446db7bd329819a82ac8ca2f8dab8ff350eaf08f5e0cb",
+      "kind": "native configured room/AI view"
+    },
+    {
+      "path": "previews/m22/07_room_07.jpg",
+      "bytes": 168427,
+      "sha256": "1cd696da3313a8f88251d63980da11cc7b9df345f4ca9582b437a1161a1d1425",
+      "kind": "native configured room/AI view"
+    },
+    {
+      "path": "previews/m22/08_room_08.jpg",
+      "bytes": 161796,
+      "sha256": "c0d445f0354273a2c49a656bb8d1e745625b90a299a37ca0631c110d874cf235",
+      "kind": "native configured room/AI view"
+    },
+    {
+      "path": "previews/m22/09_room_09.jpg",
+      "bytes": 170982,
+      "sha256": "a8307ee5e8d2ed39bf30e9ccf84f38d56a7edb7dc8a229214eb419cc34230883",
+      "kind": "native configured room/AI view"
+    },
+    {
+      "path": "previews/m22/10_room_10.jpg",
+      "bytes": 179827,
+      "sha256": "b7a812501bf859111f33e3faa3730ccf9cdbb154be5c6dc343cf3868d382c758",
+      "kind": "native configured room/AI view"
+    },
+    {
+      "path": "previews/m22/11_room_11.jpg",
+      "bytes": 170369,
+      "sha256": "2f9652f05f92aedfcab04e4e6ec077430675256e21c50bf3c2748718cec6a9fc",
+      "kind": "native configured room/AI view"
+    },
+    {
+      "path": "previews/m22/12_room_12.jpg",
+      "bytes": 173894,
+      "sha256": "2c4ccd412474644d67bea28b079f5ea70a9dde5841d148bc8803f0460b7c7b4d",
+      "kind": "native configured room/AI view"
+    },
+    {
+      "path": "previews/m22/13_room_13.jpg",
+      "bytes": 174391,
+      "sha256": "54b647893b33ad76e971c1a7060468d3b531aebec234e099035fe40e17c0e67e",
+      "kind": "native configured room/AI view"
+    },
+    {
+      "path": "previews/m22/14_room_14.jpg",
+      "bytes": 172079,
+      "sha256": "e8249fee6db626666b46ff34eab5175aaa80337175ed3950c0ee742bfba90f32",
+      "kind": "native configured room/AI view"
+    },
+    {
+      "path": "previews/m22/15_room_15.jpg",
+      "bytes": 172396,
+      "sha256": "c0c3393597261289f80d5dd5c710ccf5303fecd118031fe0bb6f85f5cc8205da",
+      "kind": "native configured room/AI view"
+    },
+    {
+      "path": "previews/m22/16_turret_gallery.jpg",
+      "bytes": 161491,
+      "sha256": "877c921130d73d836cbdf20b018584b606f88ea021db9f20b49ead650e8f305c",
+      "kind": "native configured room/AI view"
+    },
+    {
+      "path": "previews/m22/17_wraith_warning.jpg",
+      "bytes": 159525,
+      "sha256": "2f67ee78eb0f49839a8f0ae2da720a1e282a4109dd520258a3ac94616d2b1f37",
+      "kind": "native configured room/AI view"
+    },
+    {
+      "path": "previews/m22/18_reading_ar.jpg",
+      "bytes": 90175,
+      "sha256": "ffc0e757b79a2e5ce73a7fc5eae5b50d898a99aa83e60d032bb5d812394b3cf7",
+      "kind": "native reading/journal UI"
+    },
+    {
+      "path": "previews/m22/19_reading_en.jpg",
+      "bytes": 105358,
+      "sha256": "b4b2faa9ae69c3c2aa1ee00f960cfdc590a1555681f4a065b0015d53c9dd11dd",
+      "kind": "native reading/journal UI"
+    },
+    {
+      "path": "previews/m22/20_journal_ar.jpg",
+      "bytes": 102741,
+      "sha256": "c0b130fcc4dec49e37ebc1a48aed26f9f9cf666122da0b65c020d195d370a148",
+      "kind": "native reading/journal UI"
+    },
+    {
+      "path": "previews/m22/21_journal_en.jpg",
+      "bytes": 116409,
+      "sha256": "aee7851dd3a7f98cd2d1440308b03701218466af4355d37d6621f86836c4d71d",
+      "kind": "native reading/journal UI"
+    },
+    {
+      "path": "previews/m22/25_hud_lanterns.jpg",
+      "bytes": 48922,
+      "sha256": "00da1ff5b9735134b84c969721cf12fb5fc64d1f0e6fd4d88a2ebdc0fb70ee51",
+      "kind": "supplementary native display/spatial-puzzle fixture"
+    },
+    {
+      "path": "previews/m22/26_hud_damage.jpg",
+      "bytes": 48406,
+      "sha256": "bda1e2b02c5c6c6b3fb05a8f9f10dcba4b606fe867368f437cd68dbad99bdbc3",
+      "kind": "supplementary native display/spatial-puzzle fixture"
+    },
+    {
+      "path": "previews/m22/27_hud_energy.jpg",
+      "bytes": 48111,
+      "sha256": "02335be9d3114e4a2e90b6da96c9e3030f24037cf6bf2c16e8ee87d2c5adbd9f",
+      "kind": "supplementary native display/spatial-puzzle fixture"
+    },
+    {
+      "path": "previews/m22/30_lantern_clue_ar.jpg",
+      "bytes": 118741,
+      "sha256": "b982bbc5544d85a0e1a6341d0ba4a2a2690823c2cfae0b2fccb0872ec827a7d8",
+      "kind": "supplementary native display/spatial-puzzle fixture"
+    },
+    {
+      "path": "previews/m22/31_lantern_clue_en.jpg",
+      "bytes": 150112,
+      "sha256": "e87ccf5fcb95e092ff9658fb9ac179eaa76b760235290324b9424b0a1584467d",
+      "kind": "supplementary native display/spatial-puzzle fixture"
+    },
+    {
+      "path": "previews/m22/32_lantern_completed.jpg",
+      "bytes": 187689,
+      "sha256": "3e6c030fac541fc91b07a4a0db68a085888695f08251664e9825b477543150a3",
+      "kind": "supplementary native display/spatial-puzzle fixture"
+    },
+    {
+      "path": "previews/m22/33_lantern_record_ar.jpg",
+      "bytes": 109758,
+      "sha256": "94aacf9d725546285ba356f0a277429e0d0288707fbf8f08baab4935b07c2c56",
+      "kind": "supplementary native display/spatial-puzzle fixture"
+    },
+    {
+      "path": "previews/m22/34_lantern_journal_ar.jpg",
+      "bytes": 115943,
+      "sha256": "a33d33da32bb8b3646ec54bef83ba6746c2ecfd54df5a62611b238abe8f5b3c2",
+      "kind": "supplementary native display/spatial-puzzle fixture"
+    },
+    {
+      "path": "previews/m22/35_lantern_coin_drop.jpg",
+      "bytes": 188063,
+      "sha256": "5ee978c6472792eb2f8cf817e42cb20466fe40cb6890caa93abf923a192050c2",
+      "kind": "supplementary native display/spatial-puzzle fixture"
+    },
+    {
+      "path": "previews/m22/36_lantern_hud_environment.jpg",
+      "bytes": 184653,
+      "sha256": "bc2052ff51fbe3ab2c2d73dcb985eb108ad65eb61b0693164f3b89f903ae80ae",
+      "kind": "supplementary native display/spatial-puzzle fixture"
+    }
+  ],
+  "early_previews_excluded": [
+    "previews/m22/00_journal_preview_ar.jpg",
+    "previews/m22/00_journal_preview_en.jpg"
+  ],
+  "video": {
+    "path": "previews/m22/40_library_journal_combat.mp4",
+    "bytes": 2330177,
+    "sha256": "86b74e35ecd96cdbc86bb09486245b5b053bfdc2e6880742dddbe103b8a18d96",
+    "duration_seconds": 17.083333,
+    "streams": [
+      {
+        "codec_type": "video",
+        "codec_name": "h264",
+        "width": 1280,
+        "height": 720,
+        "pix_fmt": "yuv420p",
+        "color_range": "tv",
+        "r_frame_rate": "60/1"
+      },
+      {
+        "codec_type": "audio",
+        "codec_name": "aac",
+        "width": null,
+        "height": null,
+        "pix_fmt": null,
+        "color_range": null,
+        "r_frame_rate": "0/0"
+      }
+    ],
+    "scope": "Native MovieWriter fixture with configured cuts; not continuous campaign evidence. See the dedicated demo report."
+  },
+  "review": {
+    "01_to_15": "All15 supported configured placements,1.35 fitted cameras, real native scene/world lamps/new health and energy HUD. Visual room tour, not traversal evidence.",
+    "16": "Real optional turret warning on actual gallery and solid cover; no injected AI state.",
+    "17": "Real optional wraith warning on actual balcony and captured floor marker; no injected AI state.",
+    "18_to_19": "Physical leaf opened by actual movement/interact after a labelled supported nook start, then actual F2 translation.",
+    "20_to_21": "Actual controller navigation/acceptance and F2 in the full native journal, with three existing official IDs configured for the browser fixture.",
+    "25_to_27": "Independent native HUD state diagnostics.",
+    "30_to_36": "Independent actual-input spatial-lamp route and final environment/HUD review.",
+    "inspection": "All15 rooms viewed in a contact sheet; full-size physical reader/journal and key room01 inspected. Actor, landing lip, reading props, localized light and interaction text remain readable. Fitted cameras are declared; no screenshot is claimed to be default-game zoom.",
+    "errors": 0,
+    "expected_warning": "Software GL VSync mode unsupported"
+  },
+  "reproduce": {
+    "room_views": "godot --audio-driver Dummy --rendering-method gl_compatibility --fixed-fps 60 --path . --script res://tools/capture_m22.gd",
+    "physical_reader_and_journal": "godot --audio-driver Dummy --rendering-method gl_compatibility --fixed-fps 60 --path . --script res://tools/test_m22_world.gd -- --ui-only",
+    "isolation": "Set independent XDG_DATA_HOME/XDG_CONFIG_HOME/XDG_CACHE_HOME for each run. Native previews require a working display; output source PNGs/reports live under Godot user://, never in an absolute workspace dependency."
+  }
+}

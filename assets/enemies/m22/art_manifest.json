@@ -1,0 +1,48 @@
+{
+  "asset": "assets/enemies/m22/popup_wraith.png",
+  "milestone": "M22 Popup Wraith",
+  "created_date": "2026-10-23",
+  "source": "Original image_gen simplification of the approved Popup Wraith Proposal1 reference supplied by the user.",
+  "source_reference": "WhatsApp Image 2026-10-21 at 6.36.20 PM.jpeg",
+  "generator": "image_gen.imagegen",
+  "generation_edit_mode": "referenced_image_paths; transparent_background=true",
+  "original_output": "/workspace/generated_images/exec-85cb79b4-58b0-4ba8-bf4d-41744b3721ef.png",
+  "pixel_editing_performed": false,
+  "source_preserved": true,
+  "dimensions": [
+    1536,
+    1024
+  ],
+  "mode": "RGBA",
+  "bytes": 1898148,
+  "sha256": "f7df5178ec93f5bfb01fd78909d1ffce3a658565746756fdb75ecc746ed18e6c",
+  "alpha_extrema": [
+    0,
+    254
+  ],
+  "runtime_region_xywh": [
+    54,
+    19,
+    1448,
+    986
+  ],
+  "runtime_destination_xywh": [
+    -120,
+    -92.6077,
+    136,
+    92.6077
+  ],
+  "visual_anchor": "lower cloak tip/foot anchor, hood core near (0,-60) in world-local pixels",
+  "retained_identity": [
+    "Pointed parchment popup-window hood with close mark and two cyan flame eyes.",
+    "Long trailing dark ink and ivory-paper cloak, floating notice cards and small brass geometric charm."
+  ],
+  "removed_detail": [
+    "Tiny lettering and runes",
+    "Dense code/glitch particles",
+    "Fine hatching and scratches"
+  ],
+  "runtime_script": "scripts/enemies/m22_popup_wraith.gd",
+  "combat": "Three HP. Visible fixed OLD-floor-target warning0.65s, non-homing dive0.24s, harmless recovery0.85s and return0.60s. Entry grace1.2s. Only the window hood is dangerous during an allowed on-screen dive; scenery/UI safety comes from world.enemy_can_attack(actor).",
+  "api": "setup(world,spawn,limits=Vector2(-INF,INF),landing_floor_y=INF,zone=Rect2()); get_hitbox/danger_rect/clash_rect/on_clash/take_hit/is_dead/state; callbacks world.on_enemy_defeated exactly once."
+}

@@ -1,0 +1,1837 @@
+{
+  "milestone": "M22",
+  "engine": "Godot 4.7.2 stable",
+  "status": "PASS within the declared separate scopes",
+  "continuous_world_geometry": {
+    "renderer": "headless native Godot physics",
+    "continuous_route_complete": true,
+    "rooms_walked": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15
+    ],
+    "actual_portal_transitions": [
+      {
+        "actual_interact": true,
+        "from": 1,
+        "passed": true,
+        "to": 2
+      },
+      {
+        "actual_interact": true,
+        "from": 2,
+        "passed": true,
+        "to": 3
+      },
+      {
+        "actual_interact": true,
+        "from": 3,
+        "passed": true,
+        "to": 4
+      },
+      {
+        "actual_interact": true,
+        "from": 4,
+        "passed": true,
+        "to": 5
+      },
+      {
+        "actual_interact": true,
+        "from": 5,
+        "passed": true,
+        "to": 6
+      },
+      {
+        "actual_interact": true,
+        "from": 6,
+        "passed": true,
+        "to": 7
+      },
+      {
+        "actual_interact": true,
+        "from": 7,
+        "passed": true,
+        "to": 8
+      },
+      {
+        "actual_interact": true,
+        "from": 8,
+        "passed": true,
+        "to": 9
+      },
+      {
+        "actual_interact": true,
+        "from": 9,
+        "passed": true,
+        "to": 10
+      },
+      {
+        "actual_interact": true,
+        "from": 10,
+        "passed": true,
+        "to": 11
+      },
+      {
+        "actual_interact": true,
+        "from": 11,
+        "passed": true,
+        "to": 12
+      },
+      {
+        "actual_interact": true,
+        "from": 12,
+        "passed": true,
+        "to": 13
+      },
+      {
+        "actual_interact": true,
+        "from": 13,
+        "passed": true,
+        "to": 14
+      },
+      {
+        "actual_interact": true,
+        "from": 14,
+        "passed": true,
+        "to": 15
+      }
+    ],
+    "continuous_route_jumps": [
+      {
+        "actual_input": true,
+        "apex_y": 1107.86657714844,
+        "hold": "through ascent",
+        "landed": [
+          1031.50061035156,
+          1139.96765136719
+        ],
+        "passed": true,
+        "room": 1,
+        "start": [
+          970.000183105469,
+          1259.92529296875
+        ],
+        "target": [
+          1032.0,
+          1140.0
+        ]
+      },
+      {
+        "actual_input": true,
+        "apex_y": 1114.25854492188,
+        "hold": "through ascent",
+        "landed": [
+          1990.92529296875,
+          1139.97265625
+        ],
+        "passed": true,
+        "room": 1,
+        "start": [
+          1932.00073242188,
+          1259.92529296875
+        ],
+        "target": [
+          1992.0,
+          1140.0
+        ]
+      },
+      {
+        "actual_input": true,
+        "apex_y": 993.604736328125,
+        "hold": "through ascent",
+        "landed": [
+          2280.42626953125,
+          1019.97802734375
+        ],
+        "passed": true,
+        "room": 1,
+        "start": [
+          2175.92578125,
+          1139.92529296875
+        ],
+        "target": [
+          2282.0,
+          1020.0
+        ]
+      },
+      {
+        "actual_input": true,
+        "apex_y": 1107.86657714844,
+        "hold": "through ascent",
+        "landed": [
+          621.500427246094,
+          1139.96765136719
+        ],
+        "passed": true,
+        "room": 2,
+        "start": [
+          569.999938964844,
+          1259.92529296875
+        ],
+        "target": [
+          622.0,
+          1140.0
+        ]
+      },
+      {
+        "actual_input": true,
+        "apex_y": 1114.25854492188,
+        "hold": "through ascent",
+        "landed": [
+          1530.92529296875,
+          1139.97265625
+        ],
+        "passed": true,
+        "room": 2,
+        "start": [
+          1471.50048828125,
+          1259.92529296875
+        ],
+        "target": [
+          1532.0,
+          1140.0
+        ]
+      },
+      {
+        "actual_input": true,
+        "apex_y": 993.615478515625,
+        "hold": "through ascent",
+        "landed": [
+          1820.42565917969,
+          1019.98876953125
+        ],
+        "passed": true,
+        "room": 2,
+        "start": [
+          1715.92529296875,
+          1139.92529296875
+        ],
+        "target": [
+          1822.0,
+          1020.0
+        ]
+      },
+      {
+        "actual_input": true,
+        "apex_y": 873.604736328125,
+        "hold": "through ascent",
+        "landed": [
+          2111.92626953125,
+          899.97802734375
+        ],
+        "passed": true,
+        "room": 2,
+        "start": [
+          2005.42578125,
+          1019.92523193359
+        ],
+        "target": [
+          2112.0,
+          900.0
+        ]
+      },
+      {
+        "actual_input": true,
+        "apex_y": 1114.25769042969,
+        "hold": "through ascent",
+        "landed": [
+          330.925231933594,
+          1139.97180175781
+        ],
+        "passed": true,
+        "room": 3,
+        "start": [
+          270.0,
+          1259.92529296875
+        ],
+        "target": [
+          332.0,
+          1140.0
+        ]
+      },
+      {
+        "actual_input": true,
+        "apex_y": 1114.25769042969,
+        "hold": "through ascent",
+        "landed": [
+          1230.92529296875,
+          1139.97180175781
+        ],
+        "passed": true,
+        "room": 3,
+        "start": [
+          1170.92602539062,
+          1259.92529296875
+        ],
+        "target": [
+          1232.0,
+          1140.0
+        ]
+      },
+      {
+        "actual_input": true,
+        "apex_y": 993.615478515625,
+        "hold": "through ascent",
+        "landed": [
+          1520.42565917969,
+          1019.98876953125
+        ],
+        "passed": true,
+        "room": 3,
+        "start": [
+          1415.92529296875,
+          1139.92529296875
+        ],
+        "target": [
+          1522.0,
+          1020.0
+        ]
+      },
+      {
+        "actual_input": true,
+        "apex_y": 873.615478515625,
+        "hold": "through ascent",
+        "landed": [
+          1811.92614746094,
+          899.98876953125
+        ],
+        "passed": true,
+        "room": 3,
+        "start": [
+          1705.42578125,
+          1019.92523193359
+        ],
+        "target": [
+          1812.0,
+          900.0
+        ]
+      },
+      {
+        "actual_input": true,
+        "apex_y": 753.604736328125,
+        "hold": "through ascent",
+        "landed": [
+          2100.9267578125,
+          779.97802734375
+        ],
+        "passed": true,
+        "room": 3,
+        "start": [
+          1994.42626953125,
+          899.925231933594
+        ],
+        "target": [
+          2102.0,
+          780.0
+        ]
+      },
+      {
+        "actual_input": true,
+        "apex_y": 1107.86657714844,
+        "hold": "through ascent",
+        "landed": [
+          1461.50036621094,
+          1139.96765136719
+        ],
+        "passed": true,
+        "room": 4,
+        "start": [
+          1400.0,
+          1259.92529296875
+        ],
+        "target": [
+          1462.0,
+          1140.0
+        ]
+      },
+      {
+        "actual_input": true,
+        "apex_y": 1114.25769042969,
+        "hold": "through ascent",
+        "landed": [
+          530.925231933594,
+          1139.97180175781
+        ],
+        "passed": true,
+        "room": 5,
+        "start": [
+          470.0,
+          1259.92529296875
+        ],
+        "target": [
+          532.0,
+          1140.0
+        ]
+      },
+      {
+        "actual_input": true,
+        "apex_y": 993.615478515625,
+        "hold": "through ascent",
+        "landed": [
+          800.42578125,
+          1019.98876953125
+        ],
+        "passed": true,
+        "room": 5,
+        "start": [
+          695.92529296875,
+          1139.92529296875
+        ],
+        "target": [
+          802.0,
+          1020.0
+        ]
+      },
+      {
+        "actual_input": true,
+        "apex_y": 873.615478515625,
+        "hold": "through ascent",
+        "landed": [
+          1071.92639160156,
+          899.98876953125
+        ],
+        "passed": true,
+        "room": 5,
+        "start": [
+          965.425842285156,
+          1019.92523193359
+        ],
+        "target": [
+          1072.0,
+          900.0
+        ]
+      },
+      {
+        "actual_input": true,
+        "apex_y": 753.604736328125,
+        "hold": "through ascent",
+        "landed": [
+          1340.92687988281,
+          779.97802734375
+        ],
+        "passed": true,
+        "room": 5,
+        "start": [
+          1234.42651367188,
+          899.925231933594
+        ],
+        "target": [
+          1342.0,
+          780.0
+        ]
+      },
+      {
+        "actual_input": true,
+        "apex_y": 2554.2578125,
+        "hold": "through ascent",
+        "landed": [
+          330.925231933594,
+          2579.97192382812
+        ],
+        "passed": true,
+        "room": 6,
+        "start": [
+          270.0,
+          2699.92529296875
+        ],
+        "target": [
+          332.0,
+          2580.0
+        ]
+      },
+      {
+        "actual_input": true,
+        "apex_y": 2433.61547851562,
+        "hold": "through ascent",
+        "landed": [
+          600.425659179688,
+          2459.98876953125
+        ],
+        "passed": true,
+        "room": 6,
+        "start": [
+          495.925231933594,
+          2579.92529296875
+        ],
+        "target": [
+          602.0,
+          2460.0
+        ]
+      },
+      {
+        "actual_input": true,
+        "apex_y": 2313.61547851562,
+        "hold": "through ascent",
+        "landed": [
+          871.926208496094,
+          2339.98876953125
+        ],
+        "passed": true,
+        "room": 6,
+        "start": [
+          765.425720214844,
+          2459.92529296875
+        ],
+        "target": [
+          872.0,
+          2340.0
+        ]
+      },
+      {
+        "actual_input": true,
+        "apex_y": 2193.61547851562,
+        "hold": "through ascent",
+        "landed": [
+          1140.92663574219,
+          2219.98876953125
+        ],
+        "passed": true,
+        "room": 6,
+        "start": [
+          1034.42626953125,
+          2339.92529296875
+        ],
+        "target": [
+          1142.0,
+          2220.0
+        ]
+      },
+      {
+        "actual_input": true,
+        "apex_y": 2073.61547851562,
+        "hold": "through ascent",
+        "landed": [
+          1410.42712402344,
+          2099.98876953125
+        ],
+        "passed": true,
+        "room": 6,
+        "start": [
+          1305.9267578125,
+          2219.92529296875
+        ],
+        "target": [
+          1412.0,
+          2100.0
+        ]
+      },
+      {
+        "actual_input": true,
+        "apex_y": 1953.60473632812,
+        "hold": "through ascent",
+        "landed": [
+          1681.92761230469,
+          1979.97802734375
+        ],
+        "passed": true,
+        "room": 6,
+        "start": [
+          1575.42724609375,
+          2099.92529296875
+        ],
+        "target": [
+          1682.0,
+          1980.0
+        ]
+      },
+      {
+        "actual_input": true,
+        "apex_y": 1834.2587890625,
+        "hold": "through ascent",
+        "landed": [
+          2410.92504882812,
+          1859.97290039062
+        ],
+        "passed": true,
+        "room": 6,
+        "start": [
+          2351.9287109375,
+          1979.92529296875
+        ],
+        "target": [
+          2412.0,
+          1860.0
+        ]
+      },
+      {
+        "actual_input": true,
+        "apex_y": 1713.61560058594,
+        "hold": "through ascent",
+        "landed": [
+          2299.25805664062,
+          1739.98889160156
+        ],
+        "passed": true,
+        "room": 6,
+        "start": [
+          2401.75854492188,
+          1859.92529296875
+        ],
+        "target": [
+          2298.0,
+          1740.0
+        ]
+      },
+      {
+        "actual_input": true,
+        "apex_y": 1593.61560058594,
+        "hold": "through ascent",
+        "landed": [
+          2029.75732421875,
+          1619.98889160156
+        ],
+        "passed": true,
+        "room": 6,
+        "start": [
+          2134.2578125,
+          1739.92529296875
+        ],
+        "target": [
+          2028.0,
+          1620.0
+        ]
+      },
+      {
+        "actual_input": true,
+        "apex_y": 1473.61560058594,
+        "hold": "through ascent",
+        "landed": [
+          1758.25695800781,
+          1499.98889160156
+        ],
+        "passed": true,
+        "room": 6,
+        "start": [
+          1864.75732421875,
+          1619.92529296875
+        ],
+        "target": [
+          1758.0,
+          1500.0
+        ]
+      },
+      {
+        "actual_input": true,
+        "apex_y": 1353.61560058594,
+        "hold": "through ascent",
+        "landed": [
+          1489.25646972656,
+          1379.98889160156
+        ],
+        "passed": true,
+        "room": 6,
+        "start": [
+          1595.7568359375,
+          1499.92529296875
+        ],
+        "target": [
+          1488.0,
+          1380.0
+        ]
+      },
+      {
+        "actual_input": true,
+        "apex_y": 1233.60473632812,
+        "hold": "through ascent",
+        "landed": [
+          1219.75598144531,
+          1259.97802734375
+        ],
+        "passed": true,
+        "room": 6,
+        "start": [
+          1324.25634765625,
+          1379.92529296875
+        ],
+        "target": [
+          1218.0,
+          1260.0
+        ]
+      },
+      {
+        "actual_input": true,
+        "apex_y": 1114.25756835938,
+        "hold": "through ascent",
+        "landed": [
+          489.074829101562,
+          1139.9716796875
+        ],
+        "passed": true,
+        "room": 6,
+        "start": [
+          549.755920410156,
+          1259.92529296875
+        ],
+        "target": [
+          488.0,
+          1140.0
+        ]
+      },
+      {
+        "actual_input": true,
+        "apex_y": 993.615478515625,
+        "hold": "through ascent",
+        "landed": [
+          600.741943359375,
+          1019.98876953125
+        ],
+        "passed": true,
+        "room": 6,
+        "start": [
+          498.241485595703,
+          1139.92529296875
+        ],
+        "target": [
+          602.0,
+          1020.0
+        ]
+      },
+      {
+        "actual_input": true,
+        "apex_y": 873.615478515625,
+        "hold": "through ascent",
+        "landed": [
+          870.242492675781,
+          899.98876953125
+        ],
+        "passed": true,
+        "room": 6,
+        "start": [
+          765.742004394531,
+          1019.92523193359
+        ],
+        "target": [
+          872.0,
+          900.0
+        ]
+      },
+      {
+        "actual_input": true,
+        "apex_y": 753.615478515625,
+        "hold": "through ascent",
+        "landed": [
+          1141.74304199219,
+          779.98876953125
+        ],
+        "passed": true,
+        "room": 6,
+        "start": [
+          1035.24267578125,
+          899.925231933594
+        ],
+        "target": [
+          1142.0,
+          780.0
+        ]
+      },
+      {
+        "actual_input": true,
+        "apex_y": 633.615478515625,
+        "hold": "through ascent",
+        "landed": [
+          1410.74353027344,
+          659.98876953125
+        ],
+        "passed": true,
+        "room": 6,
+        "start": [
+          1304.2431640625,
+          779.925231933594
+        ],
+        "target": [
+          1412.0,
+          660.0
+        ]
+      },
+      {
+        "actual_input": true,
+        "apex_y": 513.604736328125,
+        "hold": "through ascent",
+        "landed": [
+          1680.24401855469,
+          539.97802734375
+        ],
+        "passed": true,
+        "room": 6,
+        "start": [
+          1575.74365234375,
+          659.925231933594
+        ],
+        "target": [
+          1682.0,
+          540.0
+        ]
+      },
+      {
+        "actual_input": true,
+        "apex_y": 1107.86657714844,
+        "hold": "through ascent",
+        "landed": [
+          591.500549316406,
+          1139.96765136719
+        ],
+        "passed": true,
+        "room": 7,
+        "start": [
+          530.000061035156,
+          1259.92529296875
+        ],
+        "target": [
+          592.0,
+          1140.0
+        ]
+      },
+      {
+        "actual_input": true,
+        "apex_y": 1114.25769042969,
+        "hold": "through ascent",
+        "landed": [
+          980.925170898438,
+          1139.97180175781
+        ],
+        "passed": true,
+        "room": 7,
+        "start": [
+          920.50048828125,
+          1259.92504882812
+        ],
+        "target": [
+          982.0,
+          1140.0
+        ]
+      },
+      {
+        "actual_input": true,
+        "apex_y": 993.604736328125,
+        "hold": "through ascent",
+        "landed": [
+          1270.42565917969,
+          1019.97802734375
+        ],
+        "passed": true,
+        "room": 7,
+        "start": [
+          1165.92529296875,
+          1139.92529296875
+        ],
+        "target": [
+          1272.0,
+          1020.0
+        ]
+      },
+      {
+        "actual_input": true,
+        "apex_y": 873.615478515625,
+        "hold": "through ascent",
+        "landed": [
+          1921.92590332031,
+          899.98876953125
+        ],
+        "passed": true,
+        "room": 7,
+        "start": [
+          1815.42553710938,
+          1019.92523193359
+        ],
+        "target": [
+          1922.0,
+          900.0
+        ]
+      },
+      {
+        "actual_input": true,
+        "apex_y": 1107.86657714844,
+        "hold": "through ascent",
+        "landed": [
+          581.50048828125,
+          1139.96765136719
+        ],
+        "passed": true,
+        "room": 8,
+        "start": [
+          520.0,
+          1259.92529296875
+        ],
+        "target": [
+          582.0,
+          1140.0
+        ]
+      },
+      {
+        "actual_input": true,
+        "apex_y": 1114.25854492188,
+        "hold": "through ascent",
+        "landed": [
+          1870.92529296875,
+          1139.97265625
+        ],
+        "passed": true,
+        "room": 8,
+        "start": [
+          1811.50048828125,
+          1259.92529296875
+        ],
+        "target": [
+          1872.0,
+          1140.0
+        ]
+      },
+      {
+        "actual_input": true,
+        "apex_y": 1114.25769042969,
+        "hold": "through ascent",
+        "landed": [
+          1130.92529296875,
+          1139.97180175781
+        ],
+        "passed": true,
+        "room": 9,
+        "start": [
+          1070.00024414062,
+          1259.92529296875
+        ],
+        "target": [
+          1132.0,
+          1140.0
+        ]
+      },
+      {
+        "actual_input": true,
+        "apex_y": 993.615478515625,
+        "hold": "through ascent",
+        "landed": [
+          1420.42565917969,
+          1019.98876953125
+        ],
+        "passed": true,
+        "room": 9,
+        "start": [
+          1315.92529296875,
+          1139.92529296875
+        ],
+        "target": [
+          1422.0,
+          1020.0
+        ]
+      },
+      {
+        "actual_input": true,
+        "apex_y": 873.615478515625,
+        "hold": "through ascent",
+        "landed": [
+          1711.92614746094,
+          899.98876953125
+        ],
+        "passed": true,
+        "room": 9,
+        "start": [
+          1605.42578125,
+          1019.92523193359
+        ],
+        "target": [
+          1712.0,
+          900.0
+        ]
+      },
+      {
+        "actual_input": true,
+        "apex_y": 753.604736328125,
+        "hold": "through ascent",
+        "landed": [
+          2000.92663574219,
+          779.97802734375
+        ],
+        "passed": true,
+        "room": 9,
+        "start": [
+          1894.42626953125,
+          899.925231933594
+        ],
+        "target": [
+          2002.0,
+          780.0
+        ]
+      },
+      {
+        "actual_input": true,
+        "apex_y": 1107.86657714844,
+        "hold": "through ascent",
+        "landed": [
+          501.500427246094,
+          1139.96765136719
+        ],
+        "passed": true,
+        "room": 10,
+        "start": [
+          440.0,
+          1259.92529296875
+        ],
+        "target": [
+          502.0,
+          1140.0
+        ]
+      },
+      {
+        "actual_input": true,
+        "apex_y": 1114.25854492188,
+        "hold": "through ascent",
+        "landed": [
+          1370.92529296875,
+          1139.97265625
+        ],
+        "passed": true,
+        "room": 10,
+        "start": [
+          1311.50048828125,
+          1259.92529296875
+        ],
+        "target": [
+          1372.0,
+          1140.0
+        ]
+      },
+      {
+        "actual_input": true,
+        "apex_y": 993.615478515625,
+        "hold": "through ascent",
+        "landed": [
+          1660.42565917969,
+          1019.98876953125
+        ],
+        "passed": true,
+        "room": 10,
+        "start": [
+          1555.92529296875,
+          1139.92529296875
+        ],
+        "target": [
+          1662.0,
+          1020.0
+        ]
+      },
+      {
+        "actual_input": true,
+        "apex_y": 873.604736328125,
+        "hold": "through ascent",
+        "landed": [
+          1951.92614746094,
+          899.97802734375
+        ],
+        "passed": true,
+        "room": 10,
+        "start": [
+          1845.42578125,
+          1019.92523193359
+        ],
+        "target": [
+          1952.0,
+          900.0
+        ]
+      },
+      {
+        "actual_input": true,
+        "apex_y": 1114.25769042969,
+        "hold": "through ascent",
+        "landed": [
+          630.925170898438,
+          1139.97180175781
+        ],
+        "passed": true,
+        "room": 11,
+        "start": [
+          570.000061035156,
+          1259.92529296875
+        ],
+        "target": [
+          632.0,
+          1140.0
+        ]
+      },
+      {
+        "actual_input": true,
+        "apex_y": 993.615478515625,
+        "hold": "through ascent",
+        "landed": [
+          920.425720214844,
+          1019.98876953125
+        ],
+        "passed": true,
+        "room": 11,
+        "start": [
+          815.925231933594,
+          1139.92529296875
+        ],
+        "target": [
+          922.0,
+          1020.0
+        ]
+      },
+      {
+        "actual_input": true,
+        "apex_y": 873.604736328125,
+        "hold": "through ascent",
+        "landed": [
+          1211.92614746094,
+          899.97802734375
+        ],
+        "passed": true,
+        "room": 11,
+        "start": [
+          1105.42578125,
+          1019.92523193359
+        ],
+        "target": [
+          1212.0,
+          900.0
+        ]
+      },
+      {
+        "actual_input": true,
+        "apex_y": 754.258605957031,
+        "hold": "through ascent",
+        "landed": [
+          1990.92529296875,
+          779.972717285156
+        ],
+        "passed": true,
+        "room": 11,
+        "start": [
+          1931.92626953125,
+          899.925231933594
+        ],
+        "target": [
+          1992.0,
+          780.0
+        ]
+      },
+      {
+        "actual_input": true,
+        "apex_y": 1114.25769042969,
+        "hold": "through ascent",
+        "landed": [
+          1080.92529296875,
+          1159.98950195312
+        ],
+        "passed": true,
+        "room": 13,
+        "start": [
+          1020.00006103516,
+          1259.92529296875
+        ],
+        "target": [
+          1082.0,
+          1160.0
+        ]
+      },
+      {
+        "actual_input": true,
+        "apex_y": 1287.86657714844,
+        "hold": "through ascent",
+        "landed": [
+          501.500427246094,
+          1319.96765136719
+        ],
+        "passed": true,
+        "room": 14,
+        "start": [
+          440.0,
+          1439.92529296875
+        ],
+        "target": [
+          502.0,
+          1320.0
+        ]
+      },
+      {
+        "actual_input": true,
+        "apex_y": 1107.86657714844,
+        "hold": "through ascent",
+        "landed": [
+          981.500549316406,
+          1139.96765136719
+        ],
+        "passed": true,
+        "room": 15,
+        "start": [
+          920.000061035156,
+          1259.92529296875
+        ],
+        "target": [
+          982.0,
+          1140.0
+        ]
+      },
+      {
+        "actual_input": true,
+        "apex_y": 993.615478515625,
+        "hold": "through ascent",
+        "landed": [
+          1270.50109863281,
+          1019.98876953125
+        ],
+        "passed": true,
+        "room": 15,
+        "start": [
+          1164.00073242188,
+          1139.92529296875
+        ],
+        "target": [
+          1272.0,
+          1020.0
+        ]
+      },
+      {
+        "actual_input": true,
+        "apex_y": 1114.25744628906,
+        "hold": "through ascent",
+        "landed": [
+          2270.92504882812,
+          1159.9892578125
+        ],
+        "passed": true,
+        "room": 15,
+        "start": [
+          2210.50170898438,
+          1259.92529296875
+        ],
+        "target": [
+          2272.0,
+          1160.0
+        ]
+      }
+    ],
+    "continuous_route_jump_count": 58,
+    "separate_configured_cover_jump": {
+      "actual_input": true,
+      "apex_y": 754.257202148438,
+      "hold": "through ascent",
+      "landed": [
+        2700.92504882812,
+        783.970336914062
+      ],
+      "passed": true,
+      "room": 8,
+      "start": [
+        2640.00024414062,
+        899.924011230469
+      ],
+      "target": [
+        2702.0,
+        784.0
+      ]
+    },
+    "physics_ticks_whole_original_integration_run": 14789,
+    "scope": "Actual Input actions through all15 rooms; original geometry unchanged afterward. The whole original diagnostic also included focused fixtures. Guardian/seal/boss progression remains explicit environment-preview traversal, never a real combat victory.",
+    "original_diagnostic_checks": 416,
+    "original_diagnostic_followups": [
+      {
+        "original": "continuous first native larva victory: genuine fight observes warning, lunge and recovery",
+        "resolution": "Focused first-larva approach now observes the complete real windup/lunge/recovery before attack; latest configured fight passes."
+      },
+      {
+        "original": "actual complete journal and controller focus: controller accept opens exactly the highlighted full-journal leaf",
+        "resolution": "Fixed QA list-end direction and added the missing product JOY_A ui_accept binding; latest native input test passes."
+      },
+      {
+        "original": "native gallery turret bolts hit real book cover: real solid book cover intercepts all three emitted bolts before the hero",
+        "resolution": "Product turret removed typed filter over freed projectiles; native repeated9-shot regression and latest real-cover check pass."
+      },
+      {
+        "original": "M22 real campaign save and restoration: fresh world restores every genuine campaign/puzzle/journal flag",
+        "resolution": "QA comparison normalizes JSON numeric representations; latest actual-save restoration passes."
+      }
+    ],
+    "new_currency_scope": "Original route predates final physical-coin rewards and new HUD. These were checked afterward without repeating unchanged movement geometry."
+  },
+  "latest_headless_world_focused": {
+    "captures": [],
+    "checks": 77,
+    "continuous_route_complete": false,
+    "display_server": "headless",
+    "encounters": [
+      {
+        "actual_input_fight": true,
+        "coins_earned": 12,
+        "configured_start_only": true,
+        "health_after": 6,
+        "health_before": 6,
+        "hits_injected": false,
+        "kind": "optional_wraith_native_victory",
+        "states_seen": [
+          "recover"
+        ],
+        "target_frozen": false,
+        "won": true
+      },
+      {
+        "actual_input_fight": true,
+        "coins_earned": 12,
+        "configured_start_only": true,
+        "health_after": 6,
+        "health_before": 6,
+        "hits_injected": false,
+        "kind": "optional_turret_native_victory",
+        "states_seen": [
+          "reload",
+          "scan",
+          "windup"
+        ],
+        "target_frozen": false,
+        "won": true
+      }
+    ],
+    "engine": "4.7.2-stable (official)",
+    "evidence": [
+      {
+        "configured_start_only": true,
+        "kind": "configured_room_start",
+        "physics_tick": 80,
+        "position": [
+          1160.0,
+          1260.0
+        ],
+        "room": 2,
+        "spawn": "left",
+        "stage": "startup"
+      },
+      {
+        "configured_start_only": true,
+        "kind": "configured_room_start",
+        "physics_tick": 307,
+        "position": [
+          800.0,
+          1260.0
+        ],
+        "room": 2,
+        "spawn": "left",
+        "stage": "configured native first larva and physical reward"
+      },
+      {
+        "after_actual_kill": true,
+        "enemy_stays_defeated": true,
+        "kind": "unclaimed_reward_real_reload",
+        "physics_tick": 307,
+        "room_revisit_configured": true,
+        "stage": "configured native first larva and physical reward",
+        "wallet_before_collection": 0
+      },
+      {
+        "actual_movement_and_autocollect": true,
+        "claim_injected_for_positive_path": false,
+        "kind": "actual_coin_collection",
+        "native_drops": 4,
+        "physics_tick": 439,
+        "reward_id": "enemy:encounter_assignments_cleared",
+        "stage": "configured native first larva and physical reward",
+        "wallet_after": 12,
+        "wallet_before": 0
+      },
+      {
+        "actor_teleported_during_fight": false,
+        "actual_input": true,
+        "coins": 12,
+        "configured_start_only": true,
+        "enemy_frozen": false,
+        "health_after": 6,
+        "health_before": 6,
+        "hits_injected": false,
+        "kind": "native_larva_fight",
+        "physics_tick": 439,
+        "stage": "configured native first larva and physical reward",
+        "states_seen": [
+          "crawl",
+          "windup",
+          "lunge",
+          "recover"
+        ],
+        "won": true
+      },
+      {
+        "configured_start_only": true,
+        "kind": "configured_room_start",
+        "physics_tick": 504,
+        "position": [
+          1040.0,
+          900.0
+        ],
+        "room": 3,
+        "spawn": "left",
+        "stage": "native balcony wraith keeps its old floor target"
+      },
+      {
+        "captured_floor": [
+          1040.0,
+          900.0
+        ],
+        "health_lost": 0,
+        "hero_after_dodge": [
+          924.999938964844,
+          899.924011230469
+        ],
+        "kind": "wraith_old_target",
+        "native_warning_and_dive": true,
+        "physics_tick": 596,
+        "stage": "native balcony wraith keeps its old floor target",
+        "target_state_injected": false
+      },
+      {
+        "actual_movement_and_autocollect": true,
+        "claim_injected_for_positive_path": false,
+        "kind": "actual_coin_collection",
+        "native_drops": 4,
+        "physics_tick": 734,
+        "reward_id": "enemy:lab_popup_wraith",
+        "stage": "native balcony wraith keeps its old floor target",
+        "wallet_after": 24,
+        "wallet_before": 12
+      },
+      {
+        "configured_start_only": true,
+        "kind": "configured_room_start",
+        "physics_tick": 769,
+        "position": [
+          2600.0,
+          900.0
+        ],
+        "room": 8,
+        "spawn": "left",
+        "stage": "native gallery turret bolts hit real book cover"
+      },
+      {
+        "book_cover_removed": false,
+        "cover_blocks": 3,
+        "hp_after": 6,
+        "hp_before": 6,
+        "kind": "native_turret_cover",
+        "native_AI": true,
+        "physics_tick": 921,
+        "shots": 3,
+        "stage": "native gallery turret bolts hit real book cover",
+        "states_seen": [
+          "scan",
+          "windup",
+          "burst",
+          "reload"
+        ]
+      },
+      {
+        "actual_movement_and_autocollect": true,
+        "claim_injected_for_positive_path": false,
+        "kind": "actual_coin_collection",
+        "native_drops": 4,
+        "physics_tick": 1378,
+        "reward_id": "enemy:process_syntax_turret",
+        "stage": "native gallery turret bolts hit real book cover",
+        "wallet_after": 36,
+        "wallet_before": 24
+      },
+      {
+        "configured_start_only": true,
+        "kind": "configured_room_start",
+        "physics_tick": 1418,
+        "position": [
+          750.0,
+          1260.0
+        ],
+        "room": 9,
+        "spawn": "left",
+        "stage": "configured output eligibility; native fold and physical task coins"
+      },
+      {
+        "actual_movement_and_autocollect": true,
+        "claim_injected_for_positive_path": false,
+        "kind": "actual_coin_collection",
+        "native_drops": 3,
+        "physics_tick": 1586,
+        "reward_id": "task:fold:output_open",
+        "stage": "configured output eligibility; native fold and physical task coins",
+        "wallet_after": 45,
+        "wallet_before": 36
+      },
+      {
+        "actual_coin_pickups": true,
+        "actual_console_input": true,
+        "actual_fold_animation": true,
+        "completed_flag": "output_open",
+        "configured_eligibility_only": true,
+        "kind": "main_fold_physical_reward",
+        "physics_tick": 1652,
+        "reward": 9,
+        "stage": "configured output eligibility; native fold and physical task coins"
+      },
+      {
+        "configured_start_only": true,
+        "kind": "configured_room_start",
+        "physics_tick": 1732,
+        "position": [
+          180.0,
+          1260.0
+        ],
+        "room": 2,
+        "spawn": "left",
+        "stage": "M22 real campaign save and restoration"
+      },
+      {
+        "configured_start_only": true,
+        "kind": "configured_room_start",
+        "physics_tick": 1767,
+        "position": [
+          180.0,
+          1260.0
+        ],
+        "room": 3,
+        "spawn": "left",
+        "stage": "M22 real campaign save and restoration"
+      },
+      {
+        "configured_start_only": true,
+        "kind": "configured_room_start",
+        "physics_tick": 1802,
+        "position": [
+          180.0,
+          1260.0
+        ],
+        "room": 8,
+        "spawn": "left",
+        "stage": "M22 real campaign save and restoration"
+      },
+      {
+        "canonical_defeats_persist": true,
+        "checkpoint": {
+          "position": [
+            310.0,
+            1260.0
+          ],
+          "room": 1
+        },
+        "earned_wallet": 45,
+        "kept_ids": [],
+        "kind": "campaign_save_restore",
+        "physics_tick": 1842,
+        "restored_world_created_from_disk": true,
+        "stage": "M22 real campaign save and restoration"
+      }
+    ],
+    "failures": [],
+    "genuine_first_victory": true,
+    "landings": [
+      {
+        "actual_input": true,
+        "apex_y": 754.257202148438,
+        "hold": "through ascent",
+        "landed": [
+          2700.92504882812,
+          783.970336914062
+        ],
+        "passed": true,
+        "room": 8,
+        "start": [
+          2640.00024414062,
+          899.924011230469
+        ],
+        "target": [
+          2702.0,
+          784.0
+        ]
+      }
+    ],
+    "mode": "native-focused",
+    "physics_ticks": 1842,
+    "rooms_walked": [],
+    "save_restored": true,
+    "scope": "full mode: actual movement/portals through15 rooms, actual first larva victory; focused modes: labelled configured native optional fights or journal data only; later guardian/boss remain explicit environment-preview bypass, no real victory claimed",
+    "transitions": [],
+    "ui": []
+  },
+  "latest_headless_journal_and_bookmarks": {
+    "captures": [],
+    "checks": 24,
+    "continuous_route_complete": false,
+    "display_server": "headless",
+    "encounters": [],
+    "engine": "4.7.2-stable (official)",
+    "evidence": [
+      {
+        "events": [
+          "Enter",
+          "Kp Enter",
+          "Space",
+          "Joypad Button 0 (Bottom Action, Sony Cross, Xbox A, Nintendo B)"
+        ],
+        "kind": "controller_accept_binding",
+        "matches_ui_accept": true,
+        "physics_tick": 82,
+        "stage": "actual complete journal and controller focus"
+      },
+      {
+        "accepted_title": "دفتر التسليم المتأخر",
+        "active_id": "assignment_note",
+        "actual_title": "دفتر التسليم المتأخر",
+        "after_A": {
+          "class": "Button",
+          "index": 1,
+          "path": "/root/TheFoldingLibraryM22/@CanvasLayer@2/M22ReadingAndCombatHUD/@PanelContainer@15/@MarginContainer@73/@VBoxContainer@74/@HBoxContainer@79/@VBoxContainer@80/@ScrollContainer@86/@VBoxContainer@87/@Button@89",
+          "text": "دفتر التسليم المتأخر"
+        },
+        "after_Dpad": {
+          "class": "Button",
+          "index": 1,
+          "path": "/root/TheFoldingLibraryM22/@CanvasLayer@2/M22ReadingAndCombatHUD/@PanelContainer@15/@MarginContainer@36/@VBoxContainer@37/@HBoxContainer@42/@VBoxContainer@43/@ScrollContainer@49/@VBoxContainer@50/@Button@52",
+          "text": "دفتر التسليم المتأخر"
+        },
+        "before": {
+          "class": "Button",
+          "index": 2,
+          "path": "/root/TheFoldingLibraryM22/@CanvasLayer@2/M22ReadingAndCombatHUD/@PanelContainer@15/@MarginContainer@36/@VBoxContainer@37/@HBoxContainer@42/@VBoxContainer@43/@ScrollContainer@49/@VBoxContainer@50/@Button@53",
+          "text": "سجل قنوات الحبر"
+        },
+        "kind": "journal_focus_trace",
+        "physics_tick": 103,
+        "stage": "actual complete journal and controller focus"
+      },
+      {
+        "actual_controller_page_turn": true,
+        "actual_disk_save_and_fresh_world": true,
+        "fictional_ID_saved": false,
+        "kind": "bookmark_disk_restore",
+        "official_leaf_id": "assignment_note",
+        "old_save_without_bookmark_loads": true,
+        "physics_tick": 297,
+        "runtime_two_page_fixture": true,
+        "saved_zero_based_page": 1,
+        "stage": "existing-leaf two-page fixture and actual bookmark disk restore"
+      }
+    ],
+    "failures": [],
+    "genuine_first_victory": false,
+    "landings": [],
+    "mode": "ui-only",
+    "physics_ticks": 297,
+    "rooms_walked": [],
+    "save_restored": true,
+    "scope": "full mode: actual movement/portals through15 rooms, actual first larva victory; focused modes: labelled configured native optional fights or journal data only; later guardian/boss remain explicit environment-preview bypass, no real victory claimed",
+    "transitions": [],
+    "ui": [
+      {
+        "controller_selection": "assignment_note",
+        "discovered_places": 3,
+        "kept_pages": 3,
+        "kind": "actual_tour_complete_journal",
+        "progress_unchanged": true,
+        "real_Dpad_and_A": true
+      }
+    ]
+  },
+  "latest_native_GL_physical_reading_journal_and_bookmarks": {
+    "captures": [],
+    "checks": 48,
+    "continuous_route_complete": false,
+    "display_server": "X11",
+    "encounters": [],
+    "engine": "4.7.2-stable (official)",
+    "evidence": [
+      {
+        "configured_start_only": true,
+        "kind": "configured_room_start",
+        "physics_tick": 80,
+        "position": [
+          1110.0,
+          1140.0
+        ],
+        "room": 1,
+        "spawn": "left",
+        "stage": "startup"
+      },
+      {
+        "events": [
+          "Enter",
+          "Kp Enter",
+          "Space",
+          "Joypad Button 0 (Bottom Action, Sony Cross, Xbox A, Nintendo B)"
+        ],
+        "kind": "controller_accept_binding",
+        "matches_ui_accept": true,
+        "physics_tick": 206,
+        "stage": "native curated leaf and bilingual journal"
+      },
+      {
+        "events": [
+          "Enter",
+          "Kp Enter",
+          "Space",
+          "Joypad Button 0 (Bottom Action, Sony Cross, Xbox A, Nintendo B)"
+        ],
+        "kind": "controller_accept_binding",
+        "matches_ui_accept": true,
+        "physics_tick": 317,
+        "stage": "actual complete journal and controller focus"
+      },
+      {
+        "accepted_title": "دفتر التسليم المتأخر",
+        "active_id": "assignment_note",
+        "actual_title": "دفتر التسليم المتأخر",
+        "after_A": {
+          "class": "Button",
+          "index": 1,
+          "path": "/root/TheFoldingLibraryM22/@CanvasLayer@2/M22ReadingAndCombatHUD/@PanelContainer@15/@MarginContainer@428/@VBoxContainer@429/@HBoxContainer@434/@VBoxContainer@435/@ScrollContainer@441/@VBoxContainer@442/@Button@444",
+          "text": "دفتر التسليم المتأخر"
+        },
+        "after_Dpad": {
+          "class": "Button",
+          "index": 1,
+          "path": "/root/TheFoldingLibraryM22/@CanvasLayer@2/M22ReadingAndCombatHUD/@PanelContainer@15/@MarginContainer@391/@VBoxContainer@392/@HBoxContainer@397/@VBoxContainer@398/@ScrollContainer@404/@VBoxContainer@405/@Button@407",
+          "text": "دفتر التسليم المتأخر"
+        },
+        "before": {
+          "class": "Button",
+          "index": 0,
+          "path": "/root/TheFoldingLibraryM22/@CanvasLayer@2/M22ReadingAndCombatHUD/@PanelContainer@15/@MarginContainer@391/@VBoxContainer@392/@HBoxContainer@397/@VBoxContainer@398/@ScrollContainer@404/@VBoxContainer@405/@Button@406",
+          "text": "موعد المحاضرة"
+        },
+        "kind": "journal_focus_trace",
+        "physics_tick": 338,
+        "stage": "actual complete journal and controller focus"
+      },
+      {
+        "actual_controller_page_turn": true,
+        "actual_disk_save_and_fresh_world": true,
+        "fictional_ID_saved": false,
+        "kind": "bookmark_disk_restore",
+        "official_leaf_id": "assignment_note",
+        "old_save_without_bookmark_loads": true,
+        "physics_tick": 532,
+        "runtime_two_page_fixture": true,
+        "saved_zero_based_page": 1,
+        "stage": "existing-leaf two-page fixture and actual bookmark disk restore"
+      }
+    ],
+    "failures": [],
+    "genuine_first_victory": false,
+    "landings": [],
+    "mode": "ui-only",
+    "physics_ticks": 532,
+    "rooms_walked": [],
+    "save_restored": true,
+    "scope": "full mode: actual movement/portals through15 rooms, actual first larva victory; focused modes: labelled configured native optional fights or journal data only; later guardian/boss remain explicit environment-preview bypass, no real victory claimed",
+    "transitions": [],
+    "ui": [
+      {
+        "actual_F2_keys": true,
+        "actual_world_interact": true,
+        "kind": "physical_bilingual_leaf",
+        "paused_world": true,
+        "record": "entrance_note"
+      },
+      {
+        "actual_N_key": true,
+        "actual_gamepad_events": true,
+        "kept_ids": [
+          "entrance_note"
+        ],
+        "kind": "native_journal_controller",
+        "page": 0,
+        "selected_record": "entrance_note"
+      },
+      {
+        "controller_selection": "assignment_note",
+        "discovered_places": 3,
+        "kept_pages": 3,
+        "kind": "actual_tour_complete_journal",
+        "progress_unchanged": true,
+        "real_Dpad_and_A": true
+      }
+    ]
+  },
+  "supplementary_independent_suites": [
+    {
+      "script": "tools/test_m22_lantern_route.gd",
+      "report": "docs/M22_LANTERN_ROUTE_REPORT.json",
+      "checks": 50,
+      "failures": 0,
+      "scope": "Configured normal room05 entrance,6 continuous real-input jumps, wrong/correct spatial lamps, physical15-coin pickup, actual save/reload; separate solved-lamp revisit."
+    },
+    {
+      "script": "tools/test_m22_puzzles.gd",
+      "report": "docs/M22_PUZZLE_TEST_REPORT.json",
+      "checks": 3743,
+      "failures": 0,
+      "scope": "State contracts over243 histories; includes partial JSON progress resume, not campaign traversal."
+    },
+    {
+      "script": "tools/test_m22_wraith.gd",
+      "checks": 55,
+      "failures": 0,
+      "scope": "Native isolated real-floor/old-target/clash/safety fixture."
+    },
+    {
+      "script": "tools/test_m22_turret.gd",
+      "checks": 18,
+      "failures": 0,
+      "scope": "Native isolated repeated burst including at least9 emitted shots blocked by solid cover."
+    },
+    {
+      "script": "tools/test_m22_currency.gd",
+      "checks": 42,
+      "failures": 0,
+      "scope": "Native coin/ledger, partial collection, wall guard, persistence, corrupt state, duplicate and death isolation fixtures."
+    },
+    {
+      "script": "tools/test_m22_journal.gd",
+      "report": "docs/M22_JOURNAL_UI_QA.json",
+      "checks": 28,
+      "failures": 0,
+      "scope": "Configured native journal UI."
+    },
+    {
+      "script": "tools/test_m22_menu_confirm.gd",
+      "report": "docs/M22_MENU_CONFIRM_QA.json",
+      "checks": 7,
+      "failures": 0,
+      "scope": "Actual controller confirm in native journal/map/puzzle controls."
+    },
+    {
+      "script": "tools/test_m22_combat_display.gd",
+      "report": "docs/M22_COMBAT_DISPLAY_QA.json",
+      "checks": 24,
+      "failures": 0,
+      "scope": "Configured native six-lantern health/orb pixel changes and live state context."
+    },
+    {
+      "script": "tools/test_m22_wallet_limit.gd",
+      "checks": 10,
+      "failures": 0,
+      "scope": "Headless wallet-cap atomic receipt/claim/save boundary, independently run by root."
+    }
+  ],
+  "counts_note": "Independent runs and overlapping assertions are not summed into a unique-check total. Native48 repeats the headless24 UI/bookmark cases and adds physical reading checks.",
+  "clean_final_logs": {
+    "focused_world_errors": 0,
+    "headless_UI_errors": 0,
+    "native_UI_errors": 0,
+    "native_capture_errors": 0,
+    "native_expected_warning": "llvmpipe VSync mode unsupported"
+  },
+  "preserved_hero_atlas": {
+    "path": "assets/warden_m20/warden_parts.png",
+    "sha256": "6eca7436c7a8c39451256aa56db465d664df0d6dbb42d8e7f24122592b34bb66",
+    "scope": "Exact approved M20 art; M21 native eye overlay retained. No repeated thousand-pose sweep."
+  },
+  "limits": [
+    "No full native-GL uninterrupted15-room run is claimed. Native opening diagnostic reached room05 and was stopped for software-rendering cost; final geometry proof is headless physics plus final native room views.",
+    "Optional wraith/turret positive fights use configured real balcony/gallery starting positions with actual AI/input, no frozen target or injected positive hit.",
+    "Guardian/Dr.Compiler and World02 remain unimplemented; preview bypass is not combat or departure proof.",
+    "Bookmark pagination uses two runtime-authored pages for an existing official collected ID; no invented note ID or fixture text is saved into story progress."
+  ]
+}

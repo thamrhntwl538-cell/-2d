@@ -1,0 +1,33 @@
+{
+  "captures": [
+    {
+      "configured_ui_fixture": true,
+      "height": 720,
+      "note": "Configured journal showing actual authored M22 clue, Arabic localization and native reading diagram.",
+      "path": "user://m22_journal_samples/journal_ar.jpg",
+      "width": 1280
+    },
+    {
+      "configured_ui_fixture": true,
+      "height": 720,
+      "note": "Same authored note and stable selection, English localization.",
+      "path": "user://m22_journal_samples/journal_en.jpg",
+      "width": 1280
+    },
+    {
+      "configured_ui_fixture": true,
+      "height": 720,
+      "note": "Configured individual reader with the authored physical-lantern clue; no journal list.",
+      "path": "user://m22_journal_samples/reading_ar.jpg",
+      "width": 1280
+    }
+  ],
+  "checks": 28,
+  "configured_ui_fixture": true,
+  "engine": "4.7.2-stable (official)",
+  "failures": [],
+  "published_diagnostic_images": [
+    "previews/m22/00_journal_preview_ar.jpg",
+    "previews/m22/00_journal_preview_en.jpg"
+  ]
+}

@@ -3,8 +3,8 @@ config_version=5
 
 [application]
 config/name="LAST LECTURE — The Forgotten Programming Wing"
-config/version="M21"
-run/main_scene="res://scenes/stage_01/folding_library_m21.tscn"
+config/version="M22"
+run/main_scene="res://scenes/stage_01/folding_library_m22.tscn"
 config/features=PackedStringArray("4.7", "GL Compatibility")
 
 [display]

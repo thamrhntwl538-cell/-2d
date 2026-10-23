@@ -1,0 +1,176 @@
+{
+  "actual_input_jumps": 6,
+  "captures": [
+    "previews/m22/30_lantern_clue_ar.jpg",
+    "previews/m22/31_lantern_clue_en.jpg",
+    "previews/m22/35_lantern_coin_drop.jpg",
+    "previews/m22/32_lantern_completed.jpg",
+    "previews/m22/33_lantern_record_ar.jpg",
+    "previews/m22/34_lantern_journal_ar.jpg"
+  ],
+  "checks": 50,
+  "continuous_route_passed": true,
+  "engine": "4.7.2-stable (official)",
+  "failures": [],
+  "physics_ticks": 1337,
+  "samples": [
+    {
+      "hero_position": [
+        180.0,
+        1260.0
+      ],
+      "kind": "configured_fixture",
+      "phase": "configured room05 entrance; continuous input-only optional route",
+      "physics_tick": 55,
+      "room": 5
+    },
+    {
+      "actual_input": true,
+      "jump_hold": "through ascent",
+      "kind": "continuous_route_jump",
+      "landing": [
+        530.925231933594,
+        1139.97180175781
+      ],
+      "passed": true,
+      "phase": "configured room05 entrance; continuous input-only optional route",
+      "physics_tick": 308,
+      "start": [
+        470.0,
+        1259.92529296875
+      ],
+      "target": [
+        532.0,
+        1140.0
+      ]
+    },
+    {
+      "actual_input": true,
+      "jump_hold": "through ascent",
+      "kind": "continuous_route_jump",
+      "landing": [
+        800.42578125,
+        1019.98876953125
+      ],
+      "passed": true,
+      "phase": "configured room05 entrance; continuous input-only optional route",
+      "physics_tick": 381,
+      "start": [
+        695.92529296875,
+        1139.92529296875
+      ],
+      "target": [
+        802.0,
+        1020.0
+      ]
+    },
+    {
+      "actual_input": true,
+      "jump_hold": "through ascent",
+      "kind": "continuous_route_jump",
+      "landing": [
+        1071.92639160156,
+        899.98876953125
+      ],
+      "passed": true,
+      "phase": "configured room05 entrance; continuous input-only optional route",
+      "physics_tick": 454,
+      "start": [
+        965.425842285156,
+        1019.92523193359
+      ],
+      "target": [
+        1072.0,
+        900.0
+      ]
+    },
+    {
+      "actual_input": true,
+      "jump_hold": "through ascent",
+      "kind": "continuous_route_jump",
+      "landing": [
+        801.927001953125,
+        1019.98876953125
+      ],
+      "passed": true,
+      "phase": "configured room05 entrance; continuous input-only optional route",
+      "physics_tick": 668,
+      "start": [
+        695.426513671875,
+        1139.92529296875
+      ],
+      "target": [
+        802.0,
+        1020.0
+      ]
+    },
+    {
+      "actual_input": true,
+      "jump_hold": "through ascent",
+      "kind": "continuous_route_jump",
+      "landing": [
+        1070.92749023438,
+        899.98876953125
+      ],
+      "passed": true,
+      "phase": "configured room05 entrance; continuous input-only optional route",
+      "physics_tick": 739,
+      "start": [
+        964.427001953125,
+        1019.92523193359
+      ],
+      "target": [
+        1072.0,
+        900.0
+      ]
+    },
+    {
+      "actual_input": true,
+      "jump_hold": "through ascent",
+      "kind": "continuous_route_jump",
+      "landing": [
+        1340.42785644531,
+        779.97802734375
+      ],
+      "passed": true,
+      "phase": "configured room05 entrance; continuous input-only optional route",
+      "physics_tick": 821,
+      "start": [
+        1235.92749023438,
+        899.925231933594
+      ],
+      "target": [
+        1342.0,
+        780.0
+      ]
+    },
+    {
+      "collection": "actual proximity and ordinary movement; no pickup button or direct wallet mutation",
+      "combined_value": 15,
+      "kind": "physical_lantern_reward",
+      "phase": "configured room05 entrance; continuous input-only optional route",
+      "physics_tick": 959,
+      "reward_id": "puzzle:margin_lantern_solved",
+      "spawned_discs": 5,
+      "wallet_after": 15,
+      "wallet_before": 0
+    },
+    {
+      "hero_position": [
+        1700.0,
+        780.0
+      ],
+      "kind": "configured_fixture",
+      "phase": "actual save reload; configured solved-lamp revisit",
+      "physics_tick": 1242,
+      "room": 5
+    }
+  ],
+  "scope": "configured normal room05 entrance; uninterrupted actual-input observation/wrong retry/shelf traversal/completion; physical coin spawn arc and proximity collection; reading/journal; actual disk save reload; separately configured solved-lamp revisit",
+  "capture_provenance": {
+    "kind": "actual_input_route",
+    "configured_start": "normal room05 entrance with existing equipment; no solution, currency or lamp state injected",
+    "configured_revisit": "supported upper shelf after actual disk reload, only to isolate the duplicate-reward guard",
+    "finished_state_fixture": false
+  }
+}

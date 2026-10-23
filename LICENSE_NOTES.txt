@@ -32,3 +32,11 @@ first larva art was simplified with image_gen in assets/enemies/m21/ while
 retaining its original contour. Both source manifests document provenance.
 The approved M20 hero atlas remains byte-for-byte unchanged; eyes, foreground
 paper silhouettes and localized lighting are authored native Godot additions.
+
+M22 adds original simplified Popup Wraith and Syntax Turret sprites, edited with
+OpenAI image generation from the user's approved character references. Their
+original PNG outputs are retained; rendering crops only transparent margins.
+See assets/enemies/m22/*art_manifest.json and the enemy documentation for sources.
+The journal binding, parchment, page animation, reading furniture, physical lamp
+puzzle, entrance accents and foreground groups are native Godot drawings/code.
+No Hollow Knight image, sprite, audio or game data is included as an asset.

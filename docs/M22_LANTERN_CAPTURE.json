@@ -1,0 +1,26 @@
+{
+  "engine": "4.7.2-stable (official)",
+  "fixture": false,
+  "capture_kind": "actual_input_route",
+  "image": "previews/m22/32_lantern_completed.jpg",
+  "coin_drop_image": "previews/m22/35_lantern_coin_drop.jpg",
+  "source_script": "tools/test_m22_lantern_route.gd",
+  "gameplay_evidence": "docs/M22_LANTERN_ROUTE_REPORT.json",
+  "checks": 50,
+  "failures": [],
+  "configured_start": "normal room05 entrance with existing equipment; no solution, currency or lamp state injected",
+  "configured_finished_state": false,
+  "caption_ar": "لقطة من المسار الفعلي بعد حل المصابيح بالأزرار وجمع قطع العملة تلقائيًا. يظهر العداد 15 بعد الجمع؛ تُظهر العينة 35 القطع أثناء سقوطها والعداد 0. الواجهة والمقدمة والإطار الجانبي هي النسخة النهائية.",
+  "caption_en": "Captured from the real input route after solving the physical lamps and automatically collecting the visible coins. The wallet shows 15 after collection; sample 35 shows the spawn arc while the wallet is 0. Uses the final lantern HUD, foreground and edge framing.",
+  "image_sha256": "3e6c030fac541fc91b07a4a0db68a085888695f08251664e9825b477543150a3",
+  "coin_drop_sha256": "5ee978c6472792eb2f8cf817e42cb20466fe40cb6890caa93abf923a192050c2",
+  "visual_sources": {
+    "scripts/stage/m22_room_visuals.gd": "3775c5262668e1cc69adccd2e9a420390cff9b54994b5fa46d19d38ead6e4721",
+    "scripts/stage/m22_foreground.gd": "4e9d4931fce62d6a1854347aed2b05885716fef891bcad49278f633fca495cfc",
+    "scripts/stage/m22_folding_library.gd": "070604529ac121061beae95cf52a01c50bc1536eb71cb5362240ebcdd5d5e712",
+    "scripts/ui/m22_hud.gd": "285f4cc0c46f971b6e3c0e3a2f8c7f563c64a95dfbbca35802d31176fc9a9f15",
+    "scripts/ui/m22_combat_display.gd": "53de498ea27af4ecdb0fbe138427dabdb68459d3ccd3bc09ef58d7fd5f4a957a",
+    "scripts/combat/m22_coin.gd": "71ee98fce27d30666c20e10c773867dac94779164160387c0960caa5cd41179f",
+    "scripts/combat/m22_currency_ledger.gd": "fe2fa9cc47bcb0113a1256085c5deb225d12be48dd41ba532df5aa54a180039e"
+  }
+}

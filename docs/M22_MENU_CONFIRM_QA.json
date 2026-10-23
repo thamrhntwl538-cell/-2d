@@ -1,0 +1,7 @@
+{
+  "checks": 7,
+  "configured_ui_fixture": true,
+  "engine": "4.7.2-stable (official)",
+  "failures": [],
+  "real_input_events": true
+}
