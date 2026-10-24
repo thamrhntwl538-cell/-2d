@@ -3,7 +3,7 @@ config_version=5
 
 [application]
 config/name="LAST LECTURE — The Forgotten Programming Wing"
-config/version="M24"
+config/version="M25"
 run/main_scene="res://scenes/minibosses/bell_character_review_m24.tscn"
 config/features=PackedStringArray("4.7", "GL Compatibility")
 

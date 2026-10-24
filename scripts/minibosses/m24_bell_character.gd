@@ -2,6 +2,24 @@ extends Node2D
 ## Native reconstruction of the approved Bell silhouette from unchanged atlas pixels.
 ## Crops rotate rigidly about measured joints. No pose changes texture/bone scale.
 const ATLAS=preload("res://assets/minibosses/m24/bell_character_parts.png")
+# Constant lift is confined to dark body texels. Bronze, eye and red cloth
+# retain their source colors; it is never animated as an attack cue.
+const BODY_READABILITY_SHADER:="""
+shader_type canvas_item;
+render_mode unshaded;
+uniform float body_lift = 1.0;
+void fragment() {
+	vec2 pixel = UV / TEXTURE_PIXEL_SIZE;
+	bool torso = pixel.x >= 1400.0 && pixel.x < 1647.0 && pixel.y >= 289.0 && pixel.y < 563.0;
+	bool near_leg = pixel.x >= 868.0 && pixel.x < 1112.0 && pixel.y >= 614.0 && pixel.y < 842.0;
+	bool far_leg = pixel.x >= 1392.0 && pixel.x < 1693.0 && pixel.y >= 586.0 && pixel.y < 851.0;
+	vec3 source = texture(TEXTURE, UV).rgb;
+	float darkest = max(source.r, max(source.g, source.b));
+	float black_fill = 1.0 - smoothstep(0.09, 0.23, darkest);
+	float region = (torso || near_leg || far_leg) ? 1.0 : 0.0;
+	COLOR.rgb += vec3(0.030, 0.032, 0.036) * black_fill * region * body_lift * COLOR.a;
+}
+"""
 const HEIGHT:=194.0
 const HEAD_SCALE:=146.0/576.0
 const LIMB_SCALE:=.235
@@ -34,15 +52,24 @@ var use_master:=false
 var pose_name:="idle"
 var pose_progress:=0.0
 var motion_velocity:=Vector2.ZERO
+var limb_readability:=true:
+	set(value):
+		limb_readability=value
+		if material is ShaderMaterial:material.set_shader_parameter("body_lift",1.0 if value else 0.0)
 var _rig:Dictionary={}
 var _body:=Vector2.ZERO
 var _head_angle:=0.0
 var _cloth_angle:=0.0
+var _head_offset:=Vector2.ZERO
+var _cloth_offset:=Vector2.ZERO
 
 func _ready() -> void:
 	texture_filter=CanvasItem.TEXTURE_FILTER_LINEAR_WITH_MIPMAPS
-	var lit:=CanvasItemMaterial.new()
-	lit.light_mode=CanvasItemMaterial.LIGHT_MODE_UNSHADED
+	var shader:=Shader.new()
+	shader.code=BODY_READABILITY_SHADER
+	var lit:=ShaderMaterial.new()
+	lit.shader=shader
+	lit.set_shader_parameter("body_lift",1.0 if limb_readability else 0.0)
 	material=lit
 
 func _process(delta:float) -> void:
@@ -105,6 +132,8 @@ func update_rig() -> void:
 	_body=Vector2.ZERO
 	_head_angle=0.0
 	_cloth_angle=0.0
+	_head_offset=Vector2.ZERO
+	_cloth_offset=Vector2.ZERO
 	var near_foot:=Vector2.ZERO
 	var far_foot:=Vector2.ZERO
 	match pose_name:
@@ -134,6 +163,78 @@ func update_rig() -> void:
 			far_foot=Vector2(-6*bound,-8*bound)
 			_head_angle=-.12*bound
 			_cloth_angle=.07*bound
+		"phase_change":
+			# Both soles stay planted as the heavy bell sinks, nods and settles.
+			# The cloth reaches the end of each movement after the bronze.
+			if p<.30:
+				var weight:=smoothstep(0,.30,p)
+				_body.y=11*weight
+				_head_angle=.10*weight
+				_head_offset.y=1.5*weight
+				_cloth_angle=-.055*weight
+				_cloth_offset.y=-2*weight
+			elif p<.62:
+				var weight:=smoothstep(.30,.62,p)
+				_body.y=11-3*weight
+				_head_angle=.10-.23*weight
+				_head_offset.y=1.5*(1-weight)
+				_cloth_angle=-.055+.175*weight
+				_cloth_offset.y=-2+3*weight
+			else:
+				var settle:=smoothstep(.62,1,p)
+				_body.y=8*(1-settle)
+				_head_angle=(-.13+sin(settle*TAU)*.025)*(1-settle)
+				_cloth_angle=.12*(1-settle)
+				_cloth_offset.y=1-settle
+		"double_drawback":
+			var weight:=smoothstep(0,1,p)
+			_body=Vector2(2*weight,3*weight)
+			_head_angle=.075*weight
+			_cloth_angle=-.04*sin(p*PI*.5)
+		"double_rush":
+			var bound:=sin(p*PI)
+			_body=Vector2(2*pow(1-p,3)-3*bound,3*pow(1-p,3))
+			near_foot=Vector2(5*bound,-10*bound)
+			far_foot=Vector2(-8*bound,-12*bound)
+			_head_angle=.075*pow(1-p,3)-.16*bound
+			_cloth_angle=-.04*pow(1-p,3)+.11*sin(p*PI*.85)
+		"turn_gap":
+			var weight:=sin(p*PI)
+			_body.y=8*pow(1-p,2)+3*weight
+			_head_angle=-.08*(1-p)+.06*sin(p*TAU)
+			_cloth_angle=.05*(1-p)-.10*weight
+		"high_crouch":
+			var weight:=smoothstep(0,1,p)
+			_body.y=12*weight
+			_head_angle=-.075*weight
+			_cloth_angle=.045*weight
+			_cloth_offset.y=-2*weight
+		"high_jump":
+			_body.y=-1
+			var tuck:=1-smoothstep(.30,.50,p)*.35
+			near_foot=Vector2(5*tuck,-16*tuck)
+			far_foot=Vector2(-10*tuck,-19*tuck)
+			_head_angle=-.10*tuck
+			_cloth_angle=.14*tuck
+		"high_fall":
+			var extension:=smoothstep(.50,.80,p)
+			_body.y=-(1-extension)
+			near_foot=Vector2(3.25,-10.4).lerp(Vector2(-2,-2),extension)
+			far_foot=Vector2(-6.5,-12.35).lerp(Vector2(0,-2),extension)
+			_head_angle=lerpf(-.065,.075,extension)
+			_cloth_angle=lerpf(.091,-.11,extension)
+		"slam_land","echo_wait":
+			var release:=smoothstep(0,.60,p)
+			_body.y=13*(1-release)
+			_head_offset.y=2.5*(1-release)
+			_head_angle=-.12*(1-release)+sin(p*TAU*1.4)*.055*(1-p)
+			_cloth_angle=.16*exp(-p*4.5)*sin(p*PI*3+.7)
+			_cloth_offset.y=-3*(1-release)
+			if pose_name=="echo_wait":
+				var brace:=smoothstep(.70,1,p)
+				_body.y+=6*brace
+				_head_angle-=.05*brace
+				_cloth_angle+=.04*brace
 		"drawback":
 			_body=Vector2(3*p,2*p)
 			_head_angle=.095*p
@@ -213,6 +314,6 @@ func _draw() -> void:
 		update_rig()
 		_draw_leg("far_leg")
 		_draw_leg("near_leg")
-		_draw_part("torso",Vector2(0,-63),_body,_cloth_angle)
-		_draw_part("head",Vector2(0,-62),_body,_head_angle)
+		_draw_part("torso",Vector2(0,-63),_body+_cloth_offset,_cloth_angle)
+		_draw_part("head",Vector2(0,-62),_body+_head_offset,_head_angle)
 	draw_set_transform(Vector2.ZERO)

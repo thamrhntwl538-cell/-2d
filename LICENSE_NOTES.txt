@@ -70,3 +70,10 @@ the new original miniature score/MIDI and its FluidR3 rendering are documented
 under assets/audio/m24/music/LICENSE.txt. No Hollow Knight recordings, sprites,
 animation frames or code were added. Room12 lighting and foreground refinements
 reuse the project's existing original near-archive artwork.
+
+M25 Bell resonance (2026-10-24): the M24 Bell and M20 hero source textures
+remain byte-identical. New fixed-bone poses, constant dark-body readability
+shader, bronze travelling crests, floor dust and folded-paper response are
+native authored Godot rendering/geometry. No new external artwork, recordings
+or samples are introduced. M24's original score/enemy sounds remain; hero vocal
+entries/layers are disabled at the local soundscape boundary.

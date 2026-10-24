@@ -1,0 +1,177 @@
+{
+	"actual_input_fight": false,
+	"arena": {
+		"hero_centres": [
+			1130,
+			2170
+		],
+		"left": 1110,
+		"right": 2190
+	},
+	"checks": 63,
+	"endpoint_matrix": [
+		{
+			"boundary_x": 1110.0,
+			"end_x": 1110.0,
+			"hero_hp": 5,
+			"landing": 1210.0,
+			"reason": "boundary",
+			"side": -1,
+			"speed": 520.0
+		},
+		{
+			"boundary_x": 2190.0,
+			"end_x": 2190.0,
+			"hero_hp": 5,
+			"landing": 1210.0,
+			"reason": "boundary",
+			"side": 1,
+			"speed": 520.0
+		},
+		{
+			"boundary_x": 1110.0,
+			"end_x": 1110.0,
+			"hero_hp": 5,
+			"landing": 1210.0,
+			"reason": "boundary",
+			"side": -1,
+			"speed": 620.0
+		},
+		{
+			"boundary_x": 2190.0,
+			"end_x": 2190.0,
+			"hero_hp": 5,
+			"landing": 1210.0,
+			"reason": "boundary",
+			"side": 1,
+			"speed": 620.0
+		},
+		{
+			"boundary_x": 1110.0,
+			"end_x": 1110.0,
+			"hero_hp": 5,
+			"landing": 1650.0,
+			"reason": "boundary",
+			"side": -1,
+			"speed": 520.0
+		},
+		{
+			"boundary_x": 2190.0,
+			"end_x": 2190.0,
+			"hero_hp": 5,
+			"landing": 1650.0,
+			"reason": "boundary",
+			"side": 1,
+			"speed": 520.0
+		},
+		{
+			"boundary_x": 1110.0,
+			"end_x": 1110.0,
+			"hero_hp": 5,
+			"landing": 1650.0,
+			"reason": "boundary",
+			"side": -1,
+			"speed": 620.0
+		},
+		{
+			"boundary_x": 2190.0,
+			"end_x": 2190.0,
+			"hero_hp": 5,
+			"landing": 1650.0,
+			"reason": "boundary",
+			"side": 1,
+			"speed": 620.0
+		},
+		{
+			"boundary_x": 1110.0,
+			"end_x": 1110.0,
+			"hero_hp": 5,
+			"landing": 2090.0,
+			"reason": "boundary",
+			"side": -1,
+			"speed": 520.0
+		},
+		{
+			"boundary_x": 2190.0,
+			"end_x": 2190.0,
+			"hero_hp": 5,
+			"landing": 2090.0,
+			"reason": "boundary",
+			"side": 1,
+			"speed": 520.0
+		},
+		{
+			"boundary_x": 1110.0,
+			"end_x": 1110.0,
+			"hero_hp": 5,
+			"landing": 2090.0,
+			"reason": "boundary",
+			"side": -1,
+			"speed": 620.0
+		},
+		{
+			"boundary_x": 2190.0,
+			"end_x": 2190.0,
+			"hero_hp": 5,
+			"landing": 2090.0,
+			"reason": "boundary",
+			"side": 1,
+			"speed": 620.0
+		}
+	],
+	"engine": "4.7.2-stable (official)",
+	"failures": [],
+	"fight_win_claim": false,
+	"fixture_damage_to_boss": true,
+	"outrun_probes": [
+		{
+			"fixture_run_speed": 330,
+			"hero_hp": 5,
+			"original_hero_run_speed": 300.0,
+			"reached_boundary": true,
+			"side": -1,
+			"wave_speed": 520.0
+		},
+		{
+			"fixture_run_speed": 330,
+			"hero_hp": 5,
+			"original_hero_run_speed": 300.0,
+			"reached_boundary": true,
+			"side": 1,
+			"wave_speed": 520.0
+		},
+		{
+			"fixture_run_speed": 330,
+			"hero_hp": 5,
+			"original_hero_run_speed": 300.0,
+			"reached_boundary": true,
+			"side": -1,
+			"wave_speed": 620.0
+		},
+		{
+			"fixture_run_speed": 330,
+			"hero_hp": 5,
+			"original_hero_run_speed": 300.0,
+			"reached_boundary": true,
+			"side": 1,
+			"wave_speed": 620.0
+		}
+	],
+	"phase_transition_count": 1,
+	"scope": "Deterministic fixtures using the native approved hero hurtboxes/constants and real Bell actor/wave collision. Actors and clocks are positioned/stepped directly. Positive fixture damage validates phase/death contracts; this is not a live-input win.",
+	"timings": {
+		"echo_delay": 0.96,
+		"high_leap_gravity": 3000,
+		"high_leap_launch": 1000,
+		"high_leap_preparation": 0.26,
+		"phase1_wave_speed": 520,
+		"phase2_first_drawback": 0.28,
+		"phase2_rush_distance": 240,
+		"phase2_rush_duration": 0.26,
+		"phase2_second_drawback": 0.2,
+		"phase2_wave_speed": 620,
+		"transformation_animation": 0.72,
+		"turn_gap": 0.36
+	},
+	"wave_completions": 27
+}

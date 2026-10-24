@@ -1,0 +1,235 @@
+{
+	"asset_or_music_changes": false,
+	"checks": 37,
+	"command": "DISPLAY=:95 godot --path /workspace/-2d --rendering-method gl_compatibility --audio-driver Dummy --script res://tools/test_m25_silent_hero.gd",
+	"engine": "4.6.3-stable (official)",
+	"failures": [],
+	"hero_voice_enabled": false,
+	"human_listening_claim": false,
+	"impact_gain_changed": false,
+	"implementation": "Remove local hero_voice entries and their layers; restore original nonvocal jump fallback; reject hero_voice at recursive playback boundary.",
+	"native_output_method": "AudioEffectCapture on native Godot Master mixer",
+	"observations": {
+		"actual_production_strikes": {
+			"end_serial": 3,
+			"hero_attack_events": 0,
+			"start_serial": 0,
+			"sword_events": 3
+		},
+		"final_event_log": [
+			{
+				"category": "effects",
+				"clock": 1.30931217171717,
+				"cue": "bell_impact",
+				"duration": 1.2,
+				"path": "res://assets/audio/m24/bell_impact.wav",
+				"pitch_scale": 0.985000014305115,
+				"position": [
+					360.0,
+					320.0
+				],
+				"priority": 0,
+				"spatial": true,
+				"volume_db": -8.0
+			},
+			{
+				"category": "effects",
+				"clock": 1.30931217171717,
+				"cue": "bell_hit",
+				"duration": 0.29,
+				"path": "res://assets/audio/m24/bell_hit.wav",
+				"pitch_scale": 0.985000014305115,
+				"position": [
+					360.0,
+					320.0
+				],
+				"priority": 0,
+				"spatial": true,
+				"volume_db": -9.0
+			},
+			{
+				"category": "effects",
+				"clock": 1.30931217171717,
+				"cue": "bell_swing",
+				"duration": 0.31,
+				"path": "res://assets/audio/m24/bell_swing.wav",
+				"pitch_scale": 0.985000014305115,
+				"position": [
+					360.0,
+					320.0
+				],
+				"priority": 0,
+				"spatial": true,
+				"volume_db": -11.0
+			},
+			{
+				"category": "effects",
+				"clock": 1.30931217171717,
+				"cue": "bell_takeoff",
+				"duration": 0.28,
+				"path": "res://assets/audio/m24/bell_takeoff.wav",
+				"pitch_scale": 0.985000014305115,
+				"position": [
+					360.0,
+					320.0
+				],
+				"priority": 0,
+				"spatial": true,
+				"volume_db": -11.5
+			},
+			{
+				"category": "effects",
+				"clock": 1.30931217171717,
+				"cue": "bell_step",
+				"duration": 0.23,
+				"path": "res://assets/audio/m24/bell_step.wav",
+				"pitch_scale": 0.985000014305115,
+				"position": [
+					360.0,
+					320.0
+				],
+				"priority": 0,
+				"spatial": true,
+				"volume_db": -14.0
+			},
+			{
+				"category": "effects",
+				"clock": 1.30931217171717,
+				"cue": "bell_cloth",
+				"duration": 0.34,
+				"path": "res://assets/audio/m24/bell_cloth.wav",
+				"pitch_scale": 0.985000014305115,
+				"position": [
+					360.0,
+					320.0
+				],
+				"priority": 0,
+				"spatial": true,
+				"volume_db": -17.0
+			},
+			{
+				"category": "boss_voice",
+				"clock": 1.30931217171717,
+				"cue": "bell_voice_hurt",
+				"duration": 0.44,
+				"path": "res://assets/audio/m24/bell_voice_hurt.wav",
+				"pitch_scale": 1.0,
+				"position": [
+					360.0,
+					320.0
+				],
+				"priority": 1,
+				"spatial": false,
+				"volume_db": -5.5
+			},
+			{
+				"category": "effects",
+				"clock": 1.30931217171717,
+				"cue": "hit",
+				"duration": 0.2,
+				"path": "res://assets/audio/m23/combat_hit_1.wav",
+				"pitch_scale": 0.980000019073486,
+				"position": [
+					360.0,
+					320.0
+				],
+				"priority": 0,
+				"spatial": false,
+				"volume_db": -6.0
+			},
+			{
+				"category": "effects",
+				"clock": 1.30931217171717,
+				"cue": "parry_light",
+				"duration": 0.33,
+				"path": "res://assets/audio/m23/combat_parry.wav",
+				"pitch_scale": 0.980000019073486,
+				"position": [
+					360.0,
+					320.0
+				],
+				"priority": 0,
+				"spatial": false,
+				"volume_db": -6.0
+			},
+			{
+				"category": "effects",
+				"clock": 1.30931217171717,
+				"cue": "hurt",
+				"duration": 0.27,
+				"path": "res://assets/audio/m23/combat_hurt.wav",
+				"pitch_scale": 0.980000019073486,
+				"position": [
+					360.0,
+					320.0
+				],
+				"priority": 0,
+				"spatial": false,
+				"volume_db": -7.0
+			}
+		],
+		"muted_direct_cues": [
+			"hero_attack",
+			"hero_jump",
+			"hero_hurt",
+			"hero_death",
+			"hero_dash_voice",
+			"hero_focus",
+			"heal_start",
+			"hero_spell_voice"
+		],
+		"native_bell_voice": {
+			"clipped_frames": 0,
+			"peak": 0.251175373792648,
+			"rms": 0.0799728211165378,
+			"sample_rate": 44100.0,
+			"stereo_frames": 8192
+		},
+		"native_muted_output": {
+			"clipped_frames": 0,
+			"peak": 0.0,
+			"rms": 0.0,
+			"sample_rate": 44100.0,
+			"stereo_frames": 4096
+		},
+		"native_score_contact_mix": {
+			"clipped_frames": 0,
+			"peak": 0.882359027862549,
+			"rms": 0.0771377949250762,
+			"sample_rate": 44100.0,
+			"stereo_frames": 53248
+		},
+		"retained_physical_events": [
+			"dash",
+			"hurt",
+			"hit",
+			"parry_light",
+			"jump",
+			"land",
+			"footstep_stone",
+			"footstep_paper",
+			"spell",
+			"heal_complete",
+			"heal_cancel",
+			"paper_rustle",
+			"bell_cloth"
+		],
+		"sword_only_native_output": {
+			"clipped_frames": 0,
+			"peak": 0.261016517877579,
+			"rms": 0.0487907756778333,
+			"sample_rate": 44100.0,
+			"stereo_frames": 12288
+		}
+	},
+	"passed": true,
+	"retained_source_sha256": {
+		"res://assets/audio/m23/event_manifest.json": "31225fe0f0403367f8b3edec26797e5c33a4ba302c265933ebf59b162a60e99a",
+		"res://assets/audio/m24/events.json": "92422e6a75ce3fe4e08b283dded5cba070c4219f6f6612eba3be23f645e44c01",
+		"res://assets/audio/m24/music/bell_warden_clockwork.ogg": "56368605bc4f2ea69aa2d654501f43a45d2d0ccacecc356555d8c314aeabf542",
+		"res://scripts/audio/m23_soundscape.gd": "29b0d042b0d951c1af4b927cee3463f3e8daa42a1796d5ba2c69f8fecddc317a",
+		"res://scripts/audio/m24_bell_music.gd": "f770ffe89614a53d6517667517123f37a614f6f9b99e98cd2717197d850acc09"
+	},
+	"scope": "M24 presentation-only hero mute: attack, jump, hurt, dash, healing, spell and death. Nonvocal movement/contact/sword, Bell/enemy voices, UI and continuous music retained. Production hero attack method is called in an isolated native fixture; no live combat claim.",
+	"version": 1
+}

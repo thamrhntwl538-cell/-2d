@@ -1,0 +1,21 @@
+{
+  "startup": {
+    "checks": 19,
+    "engine": "4.7.2-stable (official)",
+    "failures": [],
+    "scope": "Actual keyboard/controller review navigation, entering trial, walking into fight and loading new assets. Not full fight proof."
+  },
+  "presentation": {
+    "checks": 21,
+    "engine": "4.7.2-stable (official)",
+    "failures": [],
+    "scope": "Direct fixtures for arena margins, real presentation callbacks, localized post-contact response, live Arabic/English phase HUD, pause/expiry/caps and immutable source atlases. Not full fight proof."
+  },
+  "storage": {
+    "checks": 40,
+    "engine": "4.7.2-stable (official)",
+    "failures": [],
+    "prior_files_restored": true,
+    "scope": "Labelled save/reward fixtures with direct phase=2 and18 damage; actual controller trial/return and actual physical coin collection. Not full combat proof."
+  }
+}

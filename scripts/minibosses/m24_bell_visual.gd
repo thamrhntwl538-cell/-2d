@@ -21,15 +21,17 @@ func _process(delta:float) -> void:
 		"walk":name="walk"
 		"rush":name="rush"
 		"air":name="jump" if actor.flight_velocity.y<0 else "fall"
+		"high_air":name="high_jump" if actor.flight_velocity.y<0 else "high_fall"
 		"spring":name="crouch"
 		"resonance":
 			var elapsed:float=actor.state_duration-actor.state_time
-			name="land" if elapsed<.18 else "recover"
-			progress=clampf(elapsed/.18,0,1) if name=="land" else progress
+			name=("slam_land" if actor.phase>=2 else "land") if elapsed<.18 else "recover"
+			progress=clampf(elapsed/.18,0,1) if elapsed<.18 else progress
 		"recover":
 			var elapsed:float=actor.state_duration-actor.state_time
-			if _recover_from=="rush" and elapsed<.16:
-				name="land";progress=clampf(elapsed/.16,0,1)
+			if _recover_from in ["rush","double_rush"] and elapsed<.16:
+				name="slam_land" if _recover_from=="double_rush" else "land"
+				progress=clampf(elapsed/.16,0,1)
 		"stagger":name="hurt"
 		"dead":name="death";progress=clampf(actor._death_age/.7,0,1)
 	modulate=Color(1.25,1.15,1.02) if actor.hit_flash>0 else Color.WHITE

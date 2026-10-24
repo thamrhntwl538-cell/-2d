@@ -1,0 +1,25 @@
+{
+  "scope": "Configured native Godot character pose/readability fixtures only; no actual combat or traversal claim.",
+  "captures": [
+    {
+      "path": "previews/m25/10_phase2_poses.jpg",
+      "source_native_png": "/workspace/work/m25_character_qa/phase2_poses.png",
+      "source_sha256": "a1672d2a55480a09d2ee860c70e6495189958bff34cd9c28962df4db751ca175",
+      "width": 1280,
+      "height": 720,
+      "configured_fixture": true,
+      "combat_evidence": false,
+      "processing": "PNG to JPEG format conversion only; unchanged composition/content."
+    },
+    {
+      "path": "previews/m25/11_body_readability.jpg",
+      "source_native_png": "/workspace/work/m25_character_qa/body_readability.png",
+      "source_sha256": "670a84ef8b948521ad97158366f28765bbcdf13951d04d4e2516532e04b10d6d",
+      "width": 1280,
+      "height": 720,
+      "configured_fixture": true,
+      "combat_evidence": false,
+      "processing": "PNG to JPEG format conversion only; unchanged composition/content."
+    }
+  ]
+}

@@ -5,11 +5,39 @@ const BellHUD=preload("res://scripts/ui/m24_hud.gd")
 const BellSound=preload("res://scripts/audio/m24_soundscape.gd")
 const BellMusic=preload("res://scripts/audio/m24_bell_music.gd")
 const BellRoomVisuals=preload("res://scripts/stage/m24_room_visuals.gd")
+const BellImpact=preload("res://scripts/stage/m25_bell_impact.gd")
 const BELL_ROOM:=12
 const BELL_TRIAL:="res://scenes/minibosses/bell_trial_m24.tscn"
 const BELL_LIBRARY:="res://scenes/stage_01/folding_library_m24.tscn"
 const BELL_RETURN:="user://bell_trial_return_m24.json"
-const BELL_SPEC:={"arena_rect":Rect2(900,940,1500,320),"floor_y":1260.0,"intro_threshold_x":960.0,"safe_checkpoint_spawn":Vector2(620,1260),"boss_spawn":Vector2(1850,1260),"camera_center":Vector2(1650,1010),"camera_zoom":Vector2(.84,.84),"gate_rects":[Rect2(860,940,30,320),Rect2(2440,940,30,320)]}
+const BELL_SPEC:={"arena_rect":Rect2(1110,940,1080,320),"floor_y":1260.0,"intro_threshold_x":1150.0,"safe_checkpoint_spawn":Vector2(620,1260),"boss_spawn":Vector2(1850,1260),"camera_center":Vector2(1650,1010),"camera_zoom":Vector2(.94,.94),"gate_rects":[Rect2(1070,940,40,320),Rect2(2190,940,40,320)]}
+var bell_impact: Node2D
+var bell_impact_count:=0
+
+func _physics_process(delta: float) -> void:
+	# Closed book gates are the physical limits. A small interior margin also
+	# contains knockback and dash endpoints without changing the hero's code.
+	if boss_active and gameplay_active and current_room==BELL_ROOM:
+		_constrain_bell_fighter()
+	super._physics_process(delta)
+	if boss_active and gameplay_active and current_room==BELL_ROOM:
+		_constrain_bell_fighter()
+
+func _constrain_bell_fighter() -> void:
+	var minimum: float=BELL_SPEC.arena_rect.position.x+20.0
+	var maximum: float=BELL_SPEC.arena_rect.end.x-20.0
+	if hero.position.x<minimum:
+		hero.position.x=minimum
+		hero.velocity.x=maxf(0,hero.velocity.x)
+	elif hero.position.x>maximum:
+		hero.position.x=maximum
+		hero.velocity.x=minf(0,hero.velocity.x)
+
+func _open_panel(kind: String) -> void:
+	# Exploration pages stay outside the encounter; intentional pause/settings
+	# are still available through Esc/Start throughout both phases.
+	if boss_active and kind in ["map","journal","note"]: return
+	super._open_panel(kind)
 
 func _ready() -> void:
 	_register_inputs()
@@ -110,6 +138,10 @@ func _load_room(id: int, spawn_name: String="left", exact_position: Vector2=Vect
 	visuals=BellRoomVisuals.new()
 	active_room.add_child(visuals)
 	visuals.setup(self,data)
+	bell_impact=BellImpact.new()
+	active_room.add_child(bell_impact)
+	bell_impact.setup(self)
+	bell_impact_count=0
 	_spawn_bell()
 	_refresh_objects()
 	if is_instance_valid(visuals): visuals.queue_redraw()
@@ -139,7 +171,7 @@ func _compiler_flag() -> String:
 
 func _check_compiler_entry() -> void:
 	if current_room!=BELL_ROOM or boss_active or _compiler_won() or _respawning or not is_instance_valid(registered_boss): return
-	if hero.position.x<960 or hero.position.x>2340 or absf(hero.position.y-1260)>180: return
+	if hero.position.x<BELL_SPEC.intro_threshold_x or hero.position.x>BELL_SPEC.arena_rect.end.x-40 or absf(hero.position.y-BELL_SPEC.floor_y)>180: return
 	if not hero.has_blade or not combat_state.dash_owned: return
 	boss_active=true
 	boss_attempts+=1
@@ -148,8 +180,8 @@ func _check_compiler_entry() -> void:
 	if is_instance_valid(_boss_camera_tween): _boss_camera_tween.kill()
 	_boss_camera_tween=create_tween().set_parallel(true)
 	_boss_camera_tween.set_trans(Tween.TRANS_CUBIC).set_ease(Tween.EASE_IN_OUT)
-	_boss_camera_tween.tween_property(camera,"zoom",Vector2(.84,.84),.65)
-	_boss_camera_tween.tween_property(camera,"position",Vector2(1650,1010),.65)
+	_boss_camera_tween.tween_property(camera,"zoom",BELL_SPEC.camera_zoom,.65)
+	_boss_camera_tween.tween_property(camera,"position",BELL_SPEC.camera_center,.65)
 	registered_boss.start_encounter()
 	if is_instance_valid(arrival_title): arrival_title.dismiss()
 	if is_instance_valid(boss_music): boss_music.set_phase(1)
@@ -159,14 +191,27 @@ func _update_compiler_presentation(delta: float) -> void:
 	if not is_instance_valid(hud): return
 	var actor: Node2D=registered_boss if is_instance_valid(registered_boss) else null
 	var shown:=actor!=null and boss_active
-	hud.update_boss_status({"visible":shown,"name_ar":"حارس الجرس","name_en":"Bell Warden","hp":actor.hp if actor else 0,"max_hp":18,"phase":1,"state":actor.state if actor else "dormant"})
+	if shown and actor.phase!=boss_last_phase:
+		boss_last_phase=actor.phase
+		# Phase identity changes on the health display. No gate flash or music
+		# cue predicts any attack, and the continuous score never restarts.
+		if is_instance_valid(boss_music): boss_music.set_phase(actor.phase)
+	hud.update_boss_status({"visible":shown,"name_ar":"حارس الجرس","name_en":"Bell Warden","hp":actor.hp if actor else 0,"max_hp":18,"phase":actor.phase if actor else 1,"state":actor.state if actor else "dormant"})
 	if is_instance_valid(boss_music):
 		boss_music.set_warning(false)
 		boss_music.set_cinematic(shown and actor.state=="intro")
-	if boss_active and not paused:
-		boss_trauma=maxf(0,boss_trauma-delta*2.4)
-		camera.offset=Vector2(sin(elapsed*71),sin(elapsed*89))*boss_trauma*3
+	if boss_active and gameplay_active:
+		# A sharp sub-quarter-second reaction follows the actual floor contact.
+		# No sustained shake, phase pulse or anticipation shakes the camera.
+		boss_trauma=maxf(0,boss_trauma-delta*6.0)
+		camera.offset=Vector2(sin(elapsed*71),sin(elapsed*89))*boss_trauma*5.0
 	elif is_instance_valid(camera): camera.offset=Vector2.ZERO
+
+func on_bell_ground_impact(point: Vector2, phase: int=1) -> void:
+	if not boss_active or not gameplay_active or current_room!=BELL_ROOM: return
+	bell_impact_count+=1
+	boss_trauma=maxf(boss_trauma,1.15 if phase>=2 else .90)
+	if is_instance_valid(bell_impact): bell_impact.strike(point,phase)
 
 func on_compiler_defeated(actor: Node2D) -> void:
 	if not is_instance_valid(actor) or actor!=registered_boss or not actor.is_dead or actor.alive or actor.hp!=0 or _compiler_won(): return
