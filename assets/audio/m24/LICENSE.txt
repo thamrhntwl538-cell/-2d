@@ -1,0 +1,5 @@
+Bell Warden original sound effects and wordless instrument voice
+Copyright waived under CC0 1.0 Universal (CC0-1.0).
+https://creativecommons.org/publicdomain/zero/1.0/
+
+All m24 root WAV assets and tools/audio/make_m24_bell.py are original procedural works by LAST LECTURE build. No external samples, reference recordings, voice models, TTS or cloned voices were used. No M23 audio was sampled or modified. Voice uses an independently synthesized breath/pressure source and bronze resonators. Music under music/ has its own manifest and licensing notice.

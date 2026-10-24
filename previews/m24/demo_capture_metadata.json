@@ -1,0 +1,273 @@
+{
+  "audio_scope": "Native game mixer captured by Godot MovieWriter; no replacement audio track.",
+  "engine": "4.7.2-stable (official)",
+  "failures": [],
+  "fight": {
+    "active_combat_seconds": 8.73333333333347,
+    "actual_inputs_only": true,
+    "bell_hp": 0,
+    "damage_events": 15,
+    "distance": 1268.91630676389,
+    "hero_hp": 4,
+    "mode": "reactive",
+    "positive_injected_damage": false,
+    "seconds_nominal": 9.81666666666667,
+    "sounds": {
+      "bell_fall": 1,
+      "bell_hit": 15,
+      "bell_impact": 2,
+      "bell_step": 2,
+      "bell_swing": 2,
+      "bell_takeoff": 3,
+      "bell_voice_death": 1,
+      "bell_voice_hurt": 3,
+      "bell_voice_strain": 2,
+      "footstep_stone": 18,
+      "hero_attack": 10,
+      "hero_hurt": 2,
+      "hero_spell_voice": 3,
+      "hit": 3,
+      "hurt": 2,
+      "jump": 1,
+      "land": 2,
+      "spell": 3,
+      "swing": 16
+    },
+    "states": [
+      "idle",
+      "walk",
+      "drawback",
+      "rush",
+      "recover",
+      "crouch",
+      "air",
+      "resonance",
+      "spring"
+    ],
+    "ticks": 589,
+    "wall_seconds": 81.906,
+    "won": true
+  },
+  "gameplay_scope": "Inherited actual Input driver enters the arena and fights with real jump, movement, sword and spell. No positive damage injection or frozen fighters.",
+  "movie_fps": 60,
+  "native_stills": [
+    {
+      "actual_inputs_only": true,
+      "bell_hp": 18,
+      "bell_state": "dormant",
+      "configured_fixture": false,
+      "height": 720,
+      "hero_hp": 6,
+      "path": "res://previews/m24/30_native_rest.jpg",
+      "physics_tick": 10,
+      "sound_events": {},
+      "width": 1280
+    },
+    {
+      "actual_inputs_only": true,
+      "bell_hp": 18,
+      "bell_state": "idle",
+      "configured_fixture": false,
+      "height": 720,
+      "hero_hp": 6,
+      "path": "res://previews/m24/31_native_encounter.jpg",
+      "physics_tick": 141,
+      "sound_events": {
+        "footstep_stone": 5
+      },
+      "width": 1280
+    },
+    {
+      "actual_inputs_only": true,
+      "bell_hp": 18,
+      "bell_state": "walk",
+      "configured_fixture": false,
+      "height": 720,
+      "hero_hp": 6,
+      "path": "res://previews/m24/36_native_walk.jpg",
+      "physics_tick": 157,
+      "sound_events": {
+        "footstep_stone": 6
+      },
+      "width": 1280
+    },
+    {
+      "actual_inputs_only": true,
+      "bell_hp": 18,
+      "bell_state": "rush",
+      "configured_fixture": false,
+      "height": 720,
+      "hero_hp": 6,
+      "path": "res://previews/m24/32_native_swing.jpg",
+      "physics_tick": 203,
+      "sound_events": {
+        "bell_step": 2,
+        "bell_swing": 1,
+        "footstep_stone": 9
+      },
+      "width": 1280
+    },
+    {
+      "actual_inputs_only": true,
+      "bell_hp": 13,
+      "bell_state": "crouch",
+      "configured_fixture": false,
+      "height": 720,
+      "hero_hp": 6,
+      "path": "res://previews/m24/37_native_crouch.jpg",
+      "physics_tick": 304,
+      "sound_events": {
+        "bell_hit": 4,
+        "bell_step": 2,
+        "bell_swing": 1,
+        "bell_voice_hurt": 1,
+        "footstep_stone": 12,
+        "hero_attack": 2,
+        "hero_spell_voice": 1,
+        "hit": 1,
+        "spell": 1,
+        "swing": 3
+      },
+      "width": 1280
+    },
+    {
+      "actual_inputs_only": true,
+      "bell_hp": 12,
+      "bell_state": "air",
+      "configured_fixture": false,
+      "height": 720,
+      "hero_hp": 6,
+      "path": "res://previews/m24/33_native_air_drop.jpg",
+      "physics_tick": 340,
+      "sound_events": {
+        "bell_hit": 5,
+        "bell_step": 2,
+        "bell_swing": 1,
+        "bell_takeoff": 1,
+        "bell_voice_hurt": 1,
+        "bell_voice_strain": 1,
+        "footstep_stone": 13,
+        "hero_attack": 2,
+        "hero_spell_voice": 1,
+        "hit": 1,
+        "spell": 1,
+        "swing": 4
+      },
+      "width": 1280
+    },
+    {
+      "actual_inputs_only": true,
+      "bell_hp": 12,
+      "bell_state": "resonance",
+      "configured_fixture": false,
+      "height": 720,
+      "hero_hp": 6,
+      "path": "res://previews/m24/34_native_resonance.jpg",
+      "physics_tick": 361,
+      "sound_events": {
+        "bell_hit": 5,
+        "bell_impact": 1,
+        "bell_step": 2,
+        "bell_swing": 1,
+        "bell_takeoff": 1,
+        "bell_voice_hurt": 1,
+        "bell_voice_strain": 1,
+        "footstep_stone": 14,
+        "hero_attack": 3,
+        "hero_spell_voice": 1,
+        "hit": 1,
+        "spell": 1,
+        "swing": 5
+      },
+      "width": 1280
+    },
+    {
+      "actual_inputs_only": true,
+      "bell_hp": 0,
+      "bell_state": "dead",
+      "configured_fixture": false,
+      "height": 720,
+      "hero_hp": 4,
+      "path": "res://previews/m24/35_native_victory.jpg",
+      "physics_tick": 730,
+      "sound_events": {
+        "bell_fall": 1,
+        "bell_hit": 15,
+        "bell_impact": 2,
+        "bell_step": 2,
+        "bell_swing": 2,
+        "bell_takeoff": 3,
+        "bell_voice_death": 1,
+        "bell_voice_hurt": 3,
+        "bell_voice_strain": 2,
+        "footstep_stone": 18,
+        "hero_attack": 10,
+        "hero_hurt": 2,
+        "hero_spell_voice": 3,
+        "hit": 3,
+        "hurt": 2,
+        "jump": 1,
+        "land": 2,
+        "spell": 3,
+        "swing": 16
+      },
+      "width": 1280
+    },
+    {
+      "path": "res://previews/m24/38_native_midbound.jpg",
+      "source_movie": "/workspace/work/m24_native_demo.avi",
+      "movie_seconds": 7.65,
+      "actual_inputs_only": true,
+      "configured_fixture": false,
+      "note": "Unaltered source movie frame selected during the first low rush bound; no pose reconfiguration."
+    }
+  ],
+  "opening_art_fixture": "Configured native animation review; no gameplay claim.",
+  "opening_art_fixture_seconds": 4,
+  "renderer": "gl_compatibility",
+  "victory_outro_seconds": 6.5,
+  "viewport": [
+    1280,
+    720
+  ],
+  "encoded_video": "res://previews/m24/40_bell_native_demo.mp4",
+  "source_movie": "/workspace/work/m24_native_demo.avi",
+  "codec": {
+    "video": "H264",
+    "audio": "AAC",
+    "fps": 60,
+    "sample_rate": 48000,
+    "channels": 2
+  },
+  "audio_audit": {
+    "source_pcm": {
+      "peak": 0.714141845703125,
+      "sample_peak_dbfs": -2.9243103670578514,
+      "clipped_samples": 0,
+      "rms": 0.07370038330554962,
+      "sample_rate": 48000,
+      "channels": 2,
+      "true_peak_dbfs": -2.9
+    },
+    "export_aac": {
+      "peak": 0.7318593859672546,
+      "sample_peak_dbfs": -2.711447060927525,
+      "clipped_samples": 0,
+      "rms": 0.073092982172966,
+      "sample_rate": 48000,
+      "channels": 2,
+      "true_peak_dbfs": -2.7
+    }
+  },
+  "source_file_sha256": {
+    "scripts/minibosses/m24_bell_character.gd": "d57eaeafcce4fac4321a263f5eda950851acd777b55268f01404babe273225b7",
+    "scripts/minibosses/m24_bell_visual.gd": "25973de9ce7555a3b34809e20d1e4981bb4827f6c14cea291aeffbb3d8c2f4a5",
+    "scripts/minibosses/m24_bell_warden.gd": "6743804732bd22b1db26e433da75a6e84fb3d3c14bced58b67e80d8d7ed229d0",
+    "scripts/minibosses/m24_character_review.gd": "4938535efd3a1e28939151caf7024fd39979ece8fb3ff5f56d207d5039b92fc8",
+    "scripts/stage/m24_folding_library.gd": "244f81fda5853605856319ca6502d1f5996bac0aa7f2031ad38c235f20349d35",
+    "scripts/audio/m24_bell_music.gd": "f770ffe89614a53d6517667517123f37a614f6f9b99e98cd2717197d850acc09",
+    "scripts/audio/m24_soundscape.gd": "31d6bc6cb0eb2f41eecb1b5f2e49cbfa91ad0b2cc981ac3824d76c6b66fcb2ea",
+    "assets/minibosses/m24/bell_character_parts.png": "5e2e45ad2c3eaed31955aeae347929e0899a0de5d5d0a5a478caad4cf94c4d81",
+    "assets/audio/m24/events.json": "92422e6a75ce3fe4e08b283dded5cba070c4219f6f6612eba3be23f645e44c01"
+  }
+}

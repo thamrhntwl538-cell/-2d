@@ -1,0 +1,37 @@
+{
+  "bone_lengths_world_px": {
+    "far_leg": {
+      "lower": 21.9960498809814,
+      "upper": 35.0654296875
+    },
+    "near_leg": {
+      "lower": 16.99977684021,
+      "upper": 30.9790267944336
+    }
+  },
+  "engine": "4.7.2-stable (official)",
+  "facings": 2,
+  "failures": [],
+  "max_lower_length_error_px": 3.814697265625e-06,
+  "max_planted_ankle_error_px": 1.9073486328125e-06,
+  "max_upper_length_error_px": 3.814697265625e-06,
+  "max_world_stance_slip_px": 5.49316406406319e-06,
+  "phases_per_pose": 61,
+  "pose_samples": 1464,
+  "poses": [
+    "idle",
+    "walk",
+    "run",
+    "rush",
+    "drawback",
+    "crouch",
+    "jump",
+    "fall",
+    "land",
+    "recover",
+    "hurt",
+    "death"
+  ],
+  "result": "PASS",
+  "texture_scale_changes_per_pose": false
+}

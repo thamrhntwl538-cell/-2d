@@ -1,0 +1,15 @@
+{
+  "integration": {
+    "checks": 40,
+    "engine": "4.7.2-stable (official)",
+    "failures": [],
+    "prior_files_restored": true,
+    "scope": "Labelled save/reward fixtures with direct18 damage; actual controller trial/return and actual physical coin collection. Not full combat proof."
+  },
+  "startup": {
+    "checks": 13,
+    "engine": "4.7.2-stable (official)",
+    "failures": [],
+    "scope": "Actual keyboard/controller review navigation, entering trial, walking into fight and loading new assets. Not full fight proof."
+  }
+}

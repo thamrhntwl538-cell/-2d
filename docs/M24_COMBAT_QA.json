@@ -1,0 +1,107 @@
+{
+  "reactive": {
+    "checks": 16,
+    "engine": "4.7.2-stable (official)",
+    "failures": [],
+    "fight": {
+      "active_combat_seconds": 8.73333333333347,
+      "actual_inputs_only": true,
+      "bell_hp": 0,
+      "damage_events": 15,
+      "distance": 1268.91630676389,
+      "hero_hp": 4,
+      "mode": "reactive",
+      "positive_injected_damage": false,
+      "seconds_nominal": 9.81666666666667,
+      "sounds": {
+        "bell_fall": 1,
+        "bell_hit": 15,
+        "bell_impact": 2,
+        "bell_step": 2,
+        "bell_swing": 2,
+        "bell_takeoff": 3,
+        "bell_voice_death": 1,
+        "bell_voice_hurt": 3,
+        "bell_voice_strain": 2,
+        "footstep_stone": 18,
+        "hero_attack": 10,
+        "hero_hurt": 2,
+        "hero_spell_voice": 3,
+        "hit": 3,
+        "hurt": 2,
+        "jump": 1,
+        "land": 2,
+        "spell": 3,
+        "swing": 16
+      },
+      "states": [
+        "idle",
+        "walk",
+        "drawback",
+        "rush",
+        "recover",
+        "crouch",
+        "air",
+        "resonance",
+        "spring"
+      ],
+      "ticks": 589,
+      "wall_seconds": 37.646,
+      "won": true
+    },
+    "scope": "Actual Input fight; only native screenshots are captured conditionally. No direct positive damage or frozen combatants."
+  },
+  "cheap": {
+    "checks": 12,
+    "engine": "4.7.2-stable (official)",
+    "failures": [],
+    "fight": {
+      "active_combat_seconds": 9.28333333333349,
+      "actual_inputs_only": true,
+      "bell_hp": 1,
+      "damage_events": 17,
+      "distance": 1022.7600273788,
+      "hero_hp": 0,
+      "mode": "cheap",
+      "positive_injected_damage": false,
+      "seconds_nominal": 10.6666666666667,
+      "sounds": {
+        "bell_hit": 17,
+        "bell_impact": 2,
+        "bell_step": 2,
+        "bell_swing": 2,
+        "bell_takeoff": 3,
+        "bell_voice_hurt": 3,
+        "bell_voice_strain": 2,
+        "footstep_stone": 17,
+        "hero_attack": 10,
+        "hero_death": 1,
+        "hero_hurt": 2,
+        "hurt": 4,
+        "land": 3,
+        "swing": 18
+      },
+      "states": [
+        "idle",
+        "walk",
+        "drawback",
+        "rush",
+        "recover",
+        "crouch",
+        "air",
+        "resonance",
+        "spring"
+      ],
+      "ticks": 640,
+      "wall_seconds": 72.579,
+      "won": false
+    },
+    "scope": "Actual Input fight; only native screenshots are captured conditionally. No direct positive damage or frozen combatants."
+  },
+  "contracts": {
+    "checks": 20,
+    "engine": "4.7.2-stable (official)",
+    "failures": [],
+    "scope": "Deterministic mechanics fixtures. Actors are positioned and clocks stepped directly; sword geometry still comes from the approved hero and native melee resolver. This is not a real-input fight."
+  }
+}

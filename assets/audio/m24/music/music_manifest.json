@@ -1,0 +1,126 @@
+{
+  "title": "The Weight Between Chimes / الثقل بين الرنّات",
+  "original_composition": true,
+  "composition_license": "CC0-1.0",
+  "purpose": "Compact Bell Warden miniboss score, smaller in scale than the M23 main boss",
+  "original_sources": "Authored note events in tools/audio/compose_m24_miniboss.py and supplied MIDI",
+  "external_game_music_or_recordings_used": false,
+  "renderer": "libfluidsynth + MIT FluidR3; 36Hz high-pass; broad -2dB upper shelf; static peak shaping/gain; FFmpeg Vorbis",
+  "loop_method": "Three continuous score cycles, middle retained; final80ms blends to equivalent previous-cycle tail; no silence/fade-to-zero",
+  "instrument_programs": {
+    "0": {
+      "name": "Pizzicato clockwork",
+      "gm_zero_based_program": 45
+    },
+    "1": {
+      "name": "Contrabass feet",
+      "gm_zero_based_program": 43
+    },
+    "2": {
+      "name": "Bassoon question",
+      "gm_zero_based_program": 70
+    },
+    "3": {
+      "name": "Viola answering line",
+      "gm_zero_based_program": 41
+    },
+    "4": {
+      "name": "Dust organ",
+      "gm_zero_based_program": 19
+    },
+    "5": {
+      "name": "Damped wooden mallet",
+      "gm_zero_based_program": 12
+    },
+    "6": {
+      "name": "Soft low frame drum",
+      "gm_zero_based_program": 116
+    }
+  },
+  "runtime": {
+    "battle_gain_db": -8,
+    "victory_gain_db": -8,
+    "pause_or_cinematic_additional_duck_db": -12,
+    "warning_additional_duck_db": 0,
+    "attack_preparation_audio_changes": false,
+    "fade_in_seconds": 0.85,
+    "fade_out_seconds": 0.65,
+    "sections": 1,
+    "phase2_requests_continue_same_score": true
+  },
+  "tracks": [
+    {
+      "file": "assets/audio/m24/music/bell_warden_clockwork.ogg",
+      "sample_rate": 48000,
+      "channels": 2,
+      "frames": 1920000,
+      "duration_seconds": 40.0,
+      "codec": "Vorbis quality 6",
+      "integrated_lufs": -16.97,
+      "true_peak_dbtp": -7.02,
+      "loudness_range_lu": 1.4,
+      "sample_peak_dbfs": -7.022536527828468,
+      "clipped_samples": 0,
+      "recommended_runtime_gain_db": -8,
+      "loop": true,
+      "loop_offset_seconds": 0,
+      "sha256": "56368605bc4f2ea69aa2d654501f43a45d2d0ccacecc356555d8c314aeabf542",
+      "master_constant_gain_db": -2.9499999999999993,
+      "peak_shaping": "static tanh drive 1.25 before gain",
+      "first_50ms_rms_dbfs": -22.287033149542378,
+      "last_50ms_rms_dbfs": -43.1664777275795,
+      "stereo_correlation": 0.471752643841538,
+      "final_sample_abs": 0.00439453125,
+      "wrap_step_dbfs": -55.345238159070355,
+      "wrap_step_relative_to_99_9_percentile_derivative": 0.05685279187817259,
+      "bpm": 96,
+      "bars": 16.0,
+      "beats": 64,
+      "key": "D minor with A7 leading tone",
+      "note_count": 280,
+      "midi_file": "assets/audio/m24/music/bell_warden_clockwork.mid",
+      "midi_sha256": "909dbdd4f3010c59164ed030d5fe9f70ad22cada088056115856bf96cd7534cb"
+    },
+    {
+      "file": "assets/audio/m24/music/bell_warden_release.ogg",
+      "sample_rate": 48000,
+      "channels": 2,
+      "frames": 292114,
+      "duration_seconds": 6.085708333333334,
+      "codec": "Vorbis quality 6",
+      "integrated_lufs": -16.97,
+      "true_peak_dbtp": -8.71,
+      "loudness_range_lu": 5.3,
+      "sample_peak_dbfs": -8.708741757035801,
+      "clipped_samples": 0,
+      "recommended_runtime_gain_db": -8,
+      "loop": false,
+      "loop_offset_seconds": 0,
+      "sha256": "768ea0af7b3ea7fb6d178cfea11113ea9b8afca65bb8b8bd535378fcd41b01fa",
+      "master_constant_gain_db": -4.789999999999999,
+      "peak_shaping": "static tanh drive 1.25 before gain",
+      "first_50ms_rms_dbfs": -25.966209215925375,
+      "last_50ms_rms_dbfs": -240.0,
+      "stereo_correlation": 0.3727323497681951,
+      "final_sample_abs": 0.0,
+      "bpm": 112,
+      "bars": 2.0,
+      "beats": 8,
+      "key": "D minor with A7 leading tone",
+      "note_count": 24,
+      "midi_file": "assets/audio/m24/music/bell_warden_release.mid",
+      "midi_sha256": "0cb1360301f8fee45a58c127e5d01c1ba0ca8ccda3f6ce6d971aceecd831aa07"
+    }
+  ],
+  "sample_library_provenance": {
+    "name": "FluidR3 GM",
+    "license": "MIT",
+    "soundfont_sha256": "74594e8f4250680adf590507a306655a299935343583256f3b722c48a1bc1cb0",
+    "license_file": "assets/audio/m24/music/LICENSE.txt",
+    "source_url": "https://deb.debian.org/debian/pool/main/f/fluid-soundfont/fluid-soundfont-gm_3.1-5.3_all.deb",
+    "source_package_sha256": "6f531493ac4e4d9772fd96b2488ea1790af81c196135fbdd25997da0781fc60e",
+    "license_source_url": "https://deb.debian.org/debian/pool/main/f/fluid-soundfont/fluid-soundfont_3.1-5.3.debian.tar.xz",
+    "soundfont_bundled": false
+  },
+  "listening_review": "No human listening review claimed; objective measurements and runtime checks supplied."
+}

@@ -1,0 +1,84 @@
+{
+	"actors": {
+		"bell": [
+			1850,
+			1260
+		],
+		"hero": [
+			1360,
+			1260
+		]
+	},
+	"camera": {
+		"center": [
+			1650,
+			1010
+		],
+		"zoom": [
+			0.84,
+			0.84
+		]
+	},
+	"captures": [
+		{
+			"caption": "Configured native comparison: inherited close wall, repeated near shelves and three original press frames. Hero/actor physics suspended; visual press list reconstructed solely for this before image.",
+			"height": 720,
+			"path": "res://previews/m24/20_arena_before.jpg",
+			"width": 1280
+		},
+		{
+			"caption": "Configured native comparison: same scene, positions and camera, M24 parked side presses and clear body/air space. Not an input fight or victory proof.",
+			"height": 720,
+			"path": "res://previews/m24/21_arena_after.jpg",
+			"width": 1280
+		}
+	],
+	"checks": 24,
+	"engine": "4.7.2-stable (official)",
+	"failures": [],
+	"light_count": 6,
+	"physics_samples": [
+		{
+			"body_space_clear": true,
+			"supported": true,
+			"x": 620.0
+		},
+		{
+			"body_space_clear": true,
+			"supported": true,
+			"x": 960.0
+		},
+		{
+			"body_space_clear": true,
+			"supported": true,
+			"x": 1200.0
+		},
+		{
+			"body_space_clear": true,
+			"supported": true,
+			"x": 1500.0
+		},
+		{
+			"body_space_clear": true,
+			"supported": true,
+			"x": 1850.0
+		},
+		{
+			"body_space_clear": true,
+			"supported": true,
+			"x": 2200.0
+		},
+		{
+			"body_space_clear": true,
+			"supported": true,
+			"x": 2340.0
+		},
+		{
+			"body_space_clear": true,
+			"supported": true,
+			"x": 2604.0
+		}
+	],
+	"platform_count": 2,
+	"scope": "Room12 visual/collision ownership review only. Configured frozen actor comparison. No 15-room rerun, full fight or subjective feel claim."
+}

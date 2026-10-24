@@ -53,6 +53,12 @@ func _clip_liquid(points: PackedVector2Array, surface: float) -> PackedVector2Ar
 		previous_inside = current_inside
 	return result
 
+func _has_polygon_area(points: PackedVector2Array) -> bool:
+	if points.size()<3: return false
+	var twice_area := 0.0
+	for i in range(points.size()): twice_area += points[i].cross(points[(i+1)%points.size()])
+	return absf(twice_area)>.01
+
 func _energy_orb(ratio: float) -> void:
 	var center := ORB_CENTER
 	var radius := ORB_RADIUS
@@ -65,10 +71,10 @@ func _energy_orb(ratio: float) -> void:
 	for index in range(80): disk.append(center+Vector2(cos(TAU*index/80.0),sin(TAU*index/80.0))*(radius-4))
 	var surface := center.y+(radius-4)*(1.0-2.0*ratio)
 	var liquid := _clip_liquid(disk,surface)
-	if liquid.size()>=3:
+	if _has_polygon_area(liquid):
 		draw_colored_polygon(liquid,Color("bf7c36") if spend_flash<=0 else Color("f6c97b"))
 		var core := _clip_liquid(disk,surface+4)
-		if core.size()>=3: draw_colored_polygon(core,Color(.98,.66,.27,.31))
+		if _has_polygon_area(core): draw_colored_polygon(core,Color(.98,.66,.27,.31))
 		var half_width := sqrt(maxf(0,pow(radius-4,2)-pow(surface-center.y,2)))
 		if half_width>1:
 			draw_line(Vector2(center.x-half_width,surface),Vector2(center.x+half_width,surface),Color(1,.84,.53,.65),1.2,true)

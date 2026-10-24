@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/stage/m24_folding_library.gd" id="1"]
+
+[node name="BellWardenTrial" type="Node2D"]
+texture_filter = 2
+script = ExtResource("1")
+is_boss_trial = true
+environment_preview = true
+restore_saved_game = false

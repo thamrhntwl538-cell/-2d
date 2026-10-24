@@ -1,0 +1,51 @@
+{
+	"atlas": "res://assets/minibosses/m24/bell_character_parts.png",
+	"atlas_sha256": "5e2e45ad2c3eaed31955aeae347929e0899a0de5d5d0a5a478caad4cf94c4d81",
+	"captures": [
+		{
+			"configured_fixture": true,
+			"gameplay_evidence": false,
+			"height": 720,
+			"note": "Native character art review page. Poses and layout are configured for inspection.",
+			"page": "parts",
+			"path": "res://previews/m24/11_character_parts.jpg",
+			"source_png": "/workspace/work/m24_character_sources/11_character_parts.png",
+			"width": 1280
+		},
+		{
+			"configured_fixture": true,
+			"gameplay_evidence": false,
+			"height": 720,
+			"note": "Native character art review page. Poses and layout are configured for inspection.",
+			"page": "scale",
+			"path": "res://previews/m24/12_character_scale.jpg",
+			"source_png": "/workspace/work/m24_character_sources/12_character_scale.png",
+			"width": 1280
+		},
+		{
+			"configured_fixture": true,
+			"gameplay_evidence": false,
+			"height": 720,
+			"note": "Native character art review page. Poses and layout are configured for inspection.",
+			"page": "master",
+			"path": "res://previews/m24/14_character_reference_match.jpg",
+			"source_png": "/workspace/work/m24_character_sources/14_character_reference_match.png",
+			"width": 1280
+		},
+		{
+			"configured_fixture": true,
+			"gameplay_evidence": false,
+			"height": 720,
+			"note": "Native character art review page. Poses and layout are configured for inspection.",
+			"page": "motion",
+			"path": "res://previews/m24/13_character_motion.jpg",
+			"source_png": "/workspace/work/m24_character_sources/13_character_motion.png",
+			"width": 1280
+		}
+	],
+	"engine": "4.7.2-stable (official)",
+	"failures": [],
+	"renderer": "gl_compatibility",
+	"scene": "res://scenes/minibosses/bell_character_review_m24.tscn",
+	"scope": "Configured native character visual fixtures only; no combat, traversal, or victory claim."
+}

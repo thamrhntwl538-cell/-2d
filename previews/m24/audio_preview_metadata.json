@@ -1,0 +1,116 @@
+{
+  "audio_scope": "Godot soundscape and Bell music helpers at their configured runtime gains. No replacement soundtrack.",
+  "engine": "4.7.2-stable (official)",
+  "events": [
+    {
+      "category": "boss_voice",
+      "clock": 5.99999999999998,
+      "cue": "bell_voice_strain",
+      "duration": 0.38,
+      "path": "res://assets/audio/m24/bell_voice_strain.wav",
+      "pitch_scale": 1.0,
+      "position": [
+        640.0,
+        360.0
+      ],
+      "priority": 1,
+      "spatial": false,
+      "volume_db": -6.0
+    },
+    {
+      "category": "boss_voice",
+      "clock": 7.99999999999998,
+      "cue": "bell_voice_hurt",
+      "duration": 0.44,
+      "path": "res://assets/audio/m24/bell_voice_hurt.wav",
+      "pitch_scale": 1.0,
+      "position": [
+        640.0,
+        360.0
+      ],
+      "priority": 1,
+      "spatial": false,
+      "volume_db": -5.5
+    },
+    {
+      "category": "effects",
+      "clock": 10.0000000000001,
+      "cue": "bell_impact",
+      "duration": 1.2,
+      "path": "res://assets/audio/m24/bell_impact.wav",
+      "pitch_scale": 0.985000014305115,
+      "position": [
+        640.0,
+        360.0
+      ],
+      "priority": 0,
+      "spatial": true,
+      "volume_db": -8.0
+    },
+    {
+      "category": "effects",
+      "clock": 13.0000000000002,
+      "cue": "bell_fall",
+      "duration": 1.72,
+      "path": "res://assets/audio/m24/bell_fall.wav",
+      "pitch_scale": 0.985000014305115,
+      "position": [
+        640.0,
+        360.0
+      ],
+      "priority": 0,
+      "spatial": true,
+      "volume_db": -8.0
+    },
+    {
+      "category": "boss_voice",
+      "clock": 16.0000000000004,
+      "cue": "bell_voice_death",
+      "duration": 1.48,
+      "path": "res://assets/audio/m24/bell_voice_death.wav",
+      "pitch_scale": 1.0,
+      "position": [
+        640.0,
+        360.0
+      ],
+      "priority": 4,
+      "spatial": false,
+      "volume_db": -5.0
+    }
+  ],
+  "failures": [],
+  "fps": 60,
+  "music": "res://assets/audio/m24/music/bell_warden_clockwork.ogg",
+  "scope": "Configured native audio review. Explicit fixture caption. No gameplay claim.",
+  "viewport": [
+    1280,
+    720
+  ],
+  "encoded_video": "res://previews/m24/22_audio_preview.mp4",
+  "source_movie": "/workspace/work/m24_audio_preview.avi",
+  "codec": {
+    "video": "H264",
+    "audio": "AAC",
+    "fps": 60,
+    "sample_rate": 48000,
+    "channels": 2
+  },
+  "audio_audit": {
+    "source_pcm": {
+      "peak": 0.355560302734375,
+      "clipped_samples": 0,
+      "rms": 0.04820222035050392,
+      "sample_rate": 48000,
+      "channels": 2,
+      "true_peak_dbfs": -9.0
+    },
+    "export_aac": {
+      "peak": 0.352681428194046,
+      "clipped_samples": 0,
+      "rms": 0.048045966774225235,
+      "sample_rate": 48000,
+      "channels": 2,
+      "true_peak_dbfs": -9.0
+    }
+  }
+}

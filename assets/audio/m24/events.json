@@ -1,0 +1,165 @@
+{
+  "version": 2,
+  "original": true,
+  "license": "CC0-1.0",
+  "events": {
+    "bell_impact": {
+      "files": [
+        "res://assets/audio/m24/bell_impact.wav",
+        "res://assets/audio/m24/bell_impact_2.wav",
+        "res://assets/audio/m24/bell_impact_3.wav"
+      ],
+      "category": "effects",
+      "volume_db": -8.0,
+      "cooldown": 0.16,
+      "max_instances": 2,
+      "layers": [],
+      "pitch_min": 0.985,
+      "pitch_max": 1.015,
+      "spatial": true,
+      "timing": "actual floor impact; finite bronze ring and room reflections"
+    },
+    "bell_hit": {
+      "files": [
+        "res://assets/audio/m24/bell_hit.wav",
+        "res://assets/audio/m24/bell_hit_2.wav",
+        "res://assets/audio/m24/bell_hit_3.wav"
+      ],
+      "category": "effects",
+      "volume_db": -9.0,
+      "cooldown": 0.1,
+      "max_instances": 2,
+      "layers": [],
+      "pitch_min": 0.985,
+      "pitch_max": 1.015,
+      "spatial": true,
+      "timing": "accepted damage contact; muted bronze shell"
+    },
+    "bell_swing": {
+      "files": [
+        "res://assets/audio/m24/bell_swing.wav",
+        "res://assets/audio/m24/bell_swing_2.wav",
+        "res://assets/audio/m24/bell_swing_3.wav"
+      ],
+      "category": "effects",
+      "volume_db": -11.0,
+      "cooldown": 0.16,
+      "max_instances": 1,
+      "layers": [],
+      "pitch_min": 0.985,
+      "pitch_max": 1.015,
+      "spatial": true,
+      "timing": "rush movement/release only; displaced air and tabard drag"
+    },
+    "bell_takeoff": {
+      "files": [
+        "res://assets/audio/m24/bell_takeoff.wav",
+        "res://assets/audio/m24/bell_takeoff_2.wav"
+      ],
+      "category": "effects",
+      "volume_db": -11.5,
+      "cooldown": 0.2,
+      "max_instances": 1,
+      "layers": [],
+      "pitch_min": 0.985,
+      "pitch_max": 1.015,
+      "spatial": true,
+      "timing": "feet leave floor; compact heavy push and cloth"
+    },
+    "bell_fall": {
+      "files": [
+        "res://assets/audio/m24/bell_fall.wav"
+      ],
+      "category": "effects",
+      "volume_db": -8.0,
+      "cooldown": 3.0,
+      "max_instances": 1,
+      "layers": [],
+      "pitch_min": 0.985,
+      "pitch_max": 1.015,
+      "spatial": true,
+      "timing": "death collapse; irregular shell knocks and fading bronze"
+    },
+    "bell_step": {
+      "files": [
+        "res://assets/audio/m24/bell_step.wav",
+        "res://assets/audio/m24/bell_step_2.wav",
+        "res://assets/audio/m24/bell_step_3.wav",
+        "res://assets/audio/m24/bell_step_4.wav"
+      ],
+      "category": "effects",
+      "volume_db": -14.0,
+      "cooldown": 0.18,
+      "max_instances": 1,
+      "layers": [],
+      "pitch_min": 0.985,
+      "pitch_max": 1.015,
+      "spatial": true,
+      "timing": "planted moving foot only; stocky weight and short floor grit"
+    },
+    "bell_cloth": {
+      "files": [
+        "res://assets/audio/m24/bell_cloth.wav",
+        "res://assets/audio/m24/bell_cloth_2.wav"
+      ],
+      "category": "effects",
+      "volume_db": -17.0,
+      "cooldown": 0.3,
+      "max_instances": 1,
+      "layers": [],
+      "pitch_min": 0.985,
+      "pitch_max": 1.015,
+      "spatial": true,
+      "timing": "actual dark-red tabard movement; optional, no idle chatter"
+    },
+    "bell_voice_strain": {
+      "files": [
+        "res://assets/audio/m24/bell_voice_strain.wav",
+        "res://assets/audio/m24/bell_voice_strain_2.wav",
+        "res://assets/audio/m24/bell_voice_strain_3.wav"
+      ],
+      "category": "boss_voice",
+      "volume_db": -6.0,
+      "cooldown": 3.2,
+      "max_instances": 1,
+      "layers": [],
+      "pitch_min": 1.0,
+      "pitch_max": 1.0,
+      "spatial": false,
+      "timing": "sparse exertion on alternate actual takeoffs only"
+    },
+    "bell_voice_hurt": {
+      "files": [
+        "res://assets/audio/m24/bell_voice_hurt.wav",
+        "res://assets/audio/m24/bell_voice_hurt_2.wav",
+        "res://assets/audio/m24/bell_voice_hurt_3.wav"
+      ],
+      "category": "boss_voice",
+      "volume_db": -5.5,
+      "cooldown": 2.2,
+      "max_instances": 1,
+      "layers": [],
+      "pitch_min": 1.0,
+      "pitch_max": 1.0,
+      "spatial": false,
+      "timing": "sparse confirmed nonfatal hurt; never every hit"
+    },
+    "bell_voice_death": {
+      "files": [
+        "res://assets/audio/m24/bell_voice_death.wav"
+      ],
+      "category": "boss_voice",
+      "volume_db": -5.0,
+      "cooldown": 5.0,
+      "max_instances": 1,
+      "layers": [],
+      "pitch_min": 1.0,
+      "pitch_max": 1.0,
+      "spatial": false,
+      "timing": "single death exhalation; priority death replaces earlier boss bark",
+      "preempt_category": true
+    }
+  },
+  "timing_policy": "Actor plays only actual movement, release, contact, hurt or death. Windup/intro/drawback/crouch/spring contain no audio cue. No autonomous idle voice.",
+  "overlap_policy": "Inherited 16-player pool, boss_voice category exclusion and priority death preemption. Finite samples; zero loops; per-event cooldowns; no automatic layers."
+}

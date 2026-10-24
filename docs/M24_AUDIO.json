@@ -1,0 +1,275 @@
+{
+  "version": 1,
+  "production_scope": "Bell Warden original effects and sparse instrument voice only",
+  "license": "CC0-1.0",
+  "original_audio": true,
+  "external_samples": false,
+  "reference_audio_extracted": false,
+  "tts_or_cloned_voice": false,
+  "human_listening_claim": false,
+  "synthesis": "Original inharmonic bronze modes, band-limited cloth/floor noise, turbulent pressure and subharmonic resonators. Independent of M23 glottal/formant voice source.",
+  "events": {
+    "bell_impact": {
+      "files": [
+        "res://assets/audio/m24/bell_impact.wav",
+        "res://assets/audio/m24/bell_impact_2.wav",
+        "res://assets/audio/m24/bell_impact_3.wav"
+      ],
+      "category": "effects",
+      "volume_db": -8.0,
+      "cooldown": 0.16,
+      "max_instances": 2,
+      "layers": [],
+      "pitch_min": 0.985,
+      "pitch_max": 1.015,
+      "spatial": true,
+      "timing": "actual floor impact; finite bronze ring and room reflections"
+    },
+    "bell_hit": {
+      "files": [
+        "res://assets/audio/m24/bell_hit.wav",
+        "res://assets/audio/m24/bell_hit_2.wav",
+        "res://assets/audio/m24/bell_hit_3.wav"
+      ],
+      "category": "effects",
+      "volume_db": -9.0,
+      "cooldown": 0.1,
+      "max_instances": 2,
+      "layers": [],
+      "pitch_min": 0.985,
+      "pitch_max": 1.015,
+      "spatial": true,
+      "timing": "accepted damage contact; muted bronze shell"
+    },
+    "bell_swing": {
+      "files": [
+        "res://assets/audio/m24/bell_swing.wav",
+        "res://assets/audio/m24/bell_swing_2.wav",
+        "res://assets/audio/m24/bell_swing_3.wav"
+      ],
+      "category": "effects",
+      "volume_db": -11.0,
+      "cooldown": 0.16,
+      "max_instances": 1,
+      "layers": [],
+      "pitch_min": 0.985,
+      "pitch_max": 1.015,
+      "spatial": true,
+      "timing": "rush movement/release only; displaced air and tabard drag"
+    },
+    "bell_takeoff": {
+      "files": [
+        "res://assets/audio/m24/bell_takeoff.wav",
+        "res://assets/audio/m24/bell_takeoff_2.wav"
+      ],
+      "category": "effects",
+      "volume_db": -11.5,
+      "cooldown": 0.2,
+      "max_instances": 1,
+      "layers": [],
+      "pitch_min": 0.985,
+      "pitch_max": 1.015,
+      "spatial": true,
+      "timing": "feet leave floor; compact heavy push and cloth"
+    },
+    "bell_fall": {
+      "files": [
+        "res://assets/audio/m24/bell_fall.wav"
+      ],
+      "category": "effects",
+      "volume_db": -8.0,
+      "cooldown": 3.0,
+      "max_instances": 1,
+      "layers": [],
+      "pitch_min": 0.985,
+      "pitch_max": 1.015,
+      "spatial": true,
+      "timing": "death collapse; irregular shell knocks and fading bronze"
+    },
+    "bell_step": {
+      "files": [
+        "res://assets/audio/m24/bell_step.wav",
+        "res://assets/audio/m24/bell_step_2.wav",
+        "res://assets/audio/m24/bell_step_3.wav",
+        "res://assets/audio/m24/bell_step_4.wav"
+      ],
+      "category": "effects",
+      "volume_db": -14.0,
+      "cooldown": 0.18,
+      "max_instances": 1,
+      "layers": [],
+      "pitch_min": 0.985,
+      "pitch_max": 1.015,
+      "spatial": true,
+      "timing": "planted moving foot only; stocky weight and short floor grit"
+    },
+    "bell_cloth": {
+      "files": [
+        "res://assets/audio/m24/bell_cloth.wav",
+        "res://assets/audio/m24/bell_cloth_2.wav"
+      ],
+      "category": "effects",
+      "volume_db": -17.0,
+      "cooldown": 0.3,
+      "max_instances": 1,
+      "layers": [],
+      "pitch_min": 0.985,
+      "pitch_max": 1.015,
+      "spatial": true,
+      "timing": "actual dark-red tabard movement; optional, no idle chatter"
+    },
+    "bell_voice_strain": {
+      "files": [
+        "res://assets/audio/m24/bell_voice_strain.wav",
+        "res://assets/audio/m24/bell_voice_strain_2.wav",
+        "res://assets/audio/m24/bell_voice_strain_3.wav"
+      ],
+      "category": "boss_voice",
+      "volume_db": -6.0,
+      "cooldown": 3.2,
+      "max_instances": 1,
+      "layers": [],
+      "pitch_min": 1.0,
+      "pitch_max": 1.0,
+      "spatial": false,
+      "timing": "sparse exertion on alternate actual takeoffs only"
+    },
+    "bell_voice_hurt": {
+      "files": [
+        "res://assets/audio/m24/bell_voice_hurt.wav",
+        "res://assets/audio/m24/bell_voice_hurt_2.wav",
+        "res://assets/audio/m24/bell_voice_hurt_3.wav"
+      ],
+      "category": "boss_voice",
+      "volume_db": -5.5,
+      "cooldown": 2.2,
+      "max_instances": 1,
+      "layers": [],
+      "pitch_min": 1.0,
+      "pitch_max": 1.0,
+      "spatial": false,
+      "timing": "sparse confirmed nonfatal hurt; never every hit"
+    },
+    "bell_voice_death": {
+      "files": [
+        "res://assets/audio/m24/bell_voice_death.wav"
+      ],
+      "category": "boss_voice",
+      "volume_db": -5.0,
+      "cooldown": 5.0,
+      "max_instances": 1,
+      "layers": [],
+      "pitch_min": 1.0,
+      "pitch_max": 1.0,
+      "spatial": false,
+      "timing": "single death exhalation; priority death replaces earlier boss bark",
+      "preempt_category": true
+    }
+  },
+  "event_count": 10,
+  "sample_count": 25,
+  "production_format": {
+    "sample_rate": 48000,
+    "channels": 2,
+    "pcm_bits": 16,
+    "finite_one_shots": true,
+    "loops": false
+  },
+  "measured_asset_range": {
+    "duration_seconds": [
+      0.21,
+      1.72
+    ],
+    "sample_peak_dbfs": [
+      -9.000392326786972,
+      -5.5005100375222025
+    ],
+    "rms_dbfs": [
+      -28.681486513975084,
+      -16.4289004109649
+    ],
+    "clipped_samples": 0,
+    "highest_variant_correlation": 0.2689371166444377
+  },
+  "native_test": {
+    "report": "previews/m24/audio/native_audio_report.json",
+    "sample_reel": "previews/m24/audio/bell_native_event_samples.wav",
+    "checks": 45,
+    "failures": [],
+    "master_mix_sample_rate": 44100,
+    "method": "AudioEffectCapture reads actual native Godot Master mixer PCM; programmatic event fixture, not a live encounter or listening judgment.",
+    "contact_load": {
+      "accepted_events": 10,
+      "clipped_frames": 0,
+      "peak": 0.65434193611145,
+      "peak_players": 10,
+      "rms": 0.12467582683024,
+      "sample_rate": 44100.0,
+      "stereo_frames": 28672
+    },
+    "score_contact_load": {
+      "clipped_frames": 0,
+      "peak": 0.788617849349976,
+      "rms": 0.106899561102028,
+      "sample_rate": 44100.0,
+      "score_runtime_gain_db": -8.0,
+      "score_source": "res://assets/audio/m24/music/bell_warden_clockwork.ogg",
+      "stereo_frames": 49152,
+      "peak_dbfs": -2.0626679490988584
+    },
+    "exact_imported_asset_duration_tolerance_seconds": 0.001,
+    "passed": true,
+    "sample_reel_seconds": 10.72798185941043
+  },
+  "timing_policy": "Actor plays only actual movement, release, contact, hurt or death. Windup/intro/drawback/crouch/spring contain no audio cue. No autonomous idle voice.",
+  "voice_policy": {
+    "strain_cooldown_seconds": 3.2,
+    "hurt_cooldown_seconds": 2.2,
+    "shared_boss_category_gap_seconds": 1.1,
+    "actor_hurt_gate_seconds": 1.6,
+    "alternate_launch_only": true,
+    "death_once": true,
+    "no_idle_voice": true,
+    "death_priority": 4
+  },
+  "unchanged_m23_event_count": 51,
+  "m23_manifest_sha256": "31225fe0f0403367f8b3edec26797e5c33a4ba302c265933ebf59b162a60e99a",
+  "generator": "tools/audio/make_m24_bell.py",
+  "event_manifest": "assets/audio/m24/events.json",
+  "asset_audit": "assets/audio/m24/audit.json",
+  "license_notice": "assets/audio/m24/LICENSE.txt",
+  "music_owned_separately": "assets/audio/m24/music/",
+  "production_files_frozen": true,
+  "frozen_production_sha256": {
+    "assets/audio/m24/LICENSE.txt": "857112869d9020e2421752cb9c6bc3e970001126cd7906f170032e12b889de66",
+    "assets/audio/m24/audit.json": "8a9ea0e5dc89c622a7bedf32c2c8e62edf389519b0c0afbd0feb91315e0dccf7",
+    "assets/audio/m24/bell_cloth.wav": "f8d023706401feb094658116b9986bc023912a5bd871d9391b1dbe6ba4611467",
+    "assets/audio/m24/bell_cloth_2.wav": "a4c81b409a7e4a37c24e8026cffaaf9e9bfa56fe7542ded88e753c5705e5b8ea",
+    "assets/audio/m24/bell_fall.wav": "1f54a8f59cc5d7258fbcf0c393daad4715fabc1f061c842ba0fb1285d6c8cbe0",
+    "assets/audio/m24/bell_hit.wav": "15340a87835c56b6d452e074df0b3612947353ddc706cee79403d8ff6e56ffe2",
+    "assets/audio/m24/bell_hit_2.wav": "c7084a75b481026d939a2c512f5e3a6d8988e3317bdfe992b4d62d6a3983ecba",
+    "assets/audio/m24/bell_hit_3.wav": "133ac233c9c730a54d715e617a8e12a1c02053c86693b6d35c73c5b1d5ed0b3e",
+    "assets/audio/m24/bell_impact.wav": "6e69f8beb4d392e36588249bd5897935f6b2e2c9a6eb71128ea29bf082abd974",
+    "assets/audio/m24/bell_impact_2.wav": "48df852e2edeb8551eaf414bcf49cdf9c6d5a32740e64962d887544ab530ea2a",
+    "assets/audio/m24/bell_impact_3.wav": "68c9988511a9978f71bd796bb7bc1abec1a3a74cda40bbe55b7fd16792ca8854",
+    "assets/audio/m24/bell_step.wav": "210626d0291b9e1be0ec8c38b57db4477d2d9528f3c8bf54e28a4077ecaf4fda",
+    "assets/audio/m24/bell_step_2.wav": "369e5750e25b8313648f8f02ebe7efe1ca31fc30edf9b9ca910bdc6c4bd2985a",
+    "assets/audio/m24/bell_step_3.wav": "1f31992e32ec4f811a35550a823c1be8f43d867592dd8460b81c1f379eb9ed05",
+    "assets/audio/m24/bell_step_4.wav": "45cdb330940d53e758d4fe4e8dc539d187b7204164ca732f502b6bbef09bee30",
+    "assets/audio/m24/bell_swing.wav": "75c7915793027f9a67796fc5385ad47e9c296b9294448721cdccf006441e2695",
+    "assets/audio/m24/bell_swing_2.wav": "e7f430e766284fbedef8434a199e085aaab35081aa7fe6e4a04cccde8df6786a",
+    "assets/audio/m24/bell_swing_3.wav": "91db91ee1b1261d3afbb4516df8d9a00f2931973cbdf38ae24f0058523c4d393",
+    "assets/audio/m24/bell_takeoff.wav": "4160d481a9a170c2b530fd18d339746dc02236590804b0b8b865fc0fb4df7de3",
+    "assets/audio/m24/bell_takeoff_2.wav": "9268986a21d6bcde6b28b0e67b65705f8b951f2561430c2d5089fb455e83390e",
+    "assets/audio/m24/bell_voice_death.wav": "6502d495fe7316521c71a8bcce2912485b9419c86ca8a0255bb06fd0afaffb83",
+    "assets/audio/m24/bell_voice_hurt.wav": "48aa5df116455723cb65499860b4e73f62fb4f0b7f6450ab746d453f84a758e4",
+    "assets/audio/m24/bell_voice_hurt_2.wav": "72a4ebe19153b474b6ba949f7109673d5aa17a0e973d39e508c1f325ac6ef68c",
+    "assets/audio/m24/bell_voice_hurt_3.wav": "59efcaddb9b382366dc0f055b6d89d1621c017c9e01a4df5cf07b597e9404d0a",
+    "assets/audio/m24/bell_voice_strain.wav": "fc1218cbe727649143f212dd5c1395501ced0d8c201a76c590c15e3ee76c35c9",
+    "assets/audio/m24/bell_voice_strain_2.wav": "4ef078d83f736b1cd7648d0c35507bb856d583ff5fdeb8c3326066fcb6120891",
+    "assets/audio/m24/bell_voice_strain_3.wav": "bb49b06367bbaa9a2365574f75ab828fb06e54d44c4f078e236925691727fc8e",
+    "assets/audio/m24/events.json": "92422e6a75ce3fe4e08b283dded5cba070c4219f6f6612eba3be23f645e44c01",
+    "scripts/audio/m24_soundscape.gd": "31d6bc6cb0eb2f41eecb1b5f2e49cbfa91ad0b2cc981ac3824d76c6b66fcb2ea",
+    "tools/audio/make_m24_bell.py": "bf97df57d903c921e7080952b3a2ccffec5f40a0bb42fb01433bf529d749a03a"
+  }
+}

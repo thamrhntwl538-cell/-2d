@@ -1,0 +1,101 @@
+extends SceneTree
+const Score = preload("res://scripts/audio/m24_bell_music.gd")
+var score: Node
+var ambient: AudioStreamPlayer
+var checks: Array[Dictionary] = []
+var observations: Dictionary = {}
+var effect: AudioEffectCapture
+
+func _initialize() -> void:
+	call_deferred("run")
+
+func verify(ok: bool, label: String) -> void:
+	checks.append({"pass":ok,"check":label})
+	if not ok: push_error("M24 MUSIC FAIL: " + label)
+
+func wait_for(seconds: float) -> void:
+	await create_timer(seconds,true,false,true).timeout
+
+func capture(label: String) -> void:
+	var samples := effect.get_buffer(effect.get_frames_available())
+	var peak := 0.0
+	var squares := 0.0
+	for sample in samples:
+		peak = maxf(peak,maxf(absf(sample.x),absf(sample.y)))
+		squares += (sample.x*sample.x+sample.y*sample.y)*.5
+	observations[label] = {"frames":samples.size(),"sample_peak_linear":peak,"rms_linear":sqrt(squares/maxi(1,samples.size()))}
+	verify(samples.size()>0 and peak>.0001,label+" produces actual non-silent native mix frames")
+	verify(peak<1.0,label+" has no digital clipping")
+
+func run() -> void:
+	ambient = AudioStreamPlayer.new()
+	root.add_child(ambient)
+	score = Score.new()
+	root.add_child(score)
+	score.setup(ambient)
+	verify(score.assets_ready,"Loop and victory Ogg resources load")
+	verify(score.tracks.size()==1 and score.weights.size()==1,"Exactly one miniature score section")
+	verify(score.tracks[0].stream.loop,"Fight Ogg loops at runtime")
+	verify(not score.victory.stream.loop,"Victory Ogg does not loop")
+	var children: int = score.get_child_count()
+	score.setup(ambient)
+	verify(score.get_child_count()==children,"Repeated setup does not duplicate players")
+	effect = AudioEffectCapture.new()
+	effect.buffer_length = 2.0
+	AudioServer.add_bus_effect(0,effect)
+	score.set_phase(1)
+	await wait_for(1.05)
+	verify(score.fight_playing and score.current_phase==1 and score.tracks[0].playing,"First phase starts actual native AudioStreamPlayer")
+	verify(is_equal_approx(score.weights[0],1.0) and is_equal_approx(score.tracks[0].volume_db,-8.0),"Fade reaches battle gain -8dB")
+	capture("native_fight")
+	var before: float = score.tracks[0].get_playback_position()
+	score.set_phase(1)
+	score.set_phase(2)
+	await wait_for(.2)
+	verify(score.tracks[0].get_playback_position()>before and score.phase_changes==1,"Repeated phase1/phase2 requests preserve continuous playback")
+	score.set_warning(true)
+	await wait_for(.4)
+	verify(score.warning_mix and is_equal_approx(score.current_duck_db,0.0) and is_equal_approx(score.tracks[0].volume_db,-8.0),"Warning telemetry makes no predictive change to the score")
+	score.set_warning(false)
+	score.set_paused(true)
+	paused = true
+	await wait_for(.45)
+	verify(is_equal_approx(score.current_duck_db,-12.0) and is_equal_approx(score.tracks[0].volume_db,-20.0),"Pause ducks to -20dB while SceneTree is paused")
+	verify(score.tracks[0].playing,"Pause retains continuing score tail")
+	paused = false
+	score.set_paused(false)
+	await wait_for(.4)
+	verify(is_equal_approx(score.current_duck_db,0.0),"Resume restores score gain")
+	score.set_cinematic(true)
+	await wait_for(.4)
+	verify(is_equal_approx(score.tracks[0].volume_db,-20.0),"Cinematic ducks without resetting playback")
+	score.set_cinematic(false)
+	await wait_for(.4)
+	score.set_muted(true)
+	await wait_for(.05)
+	verify(score.tracks[0].volume_db==-80.0 and score.victory.volume_db==-80.0,"Mute reaches both score and victory players")
+	score.set_muted(false)
+	effect.clear_buffer()
+	score.stop_fight(true)
+	verify(score.victory.playing and not score.fight_playing and score.current_phase==0,"Winning starts the original cadence")
+	await wait_for(.85)
+	verify(score.weights[0]==0.0 and not score.tracks[0].playing,"Ended fight fades out and releases its active playback")
+	capture("native_victory_crossfade")
+	observations["ambient_gain_after_850ms"] = ambient.volume_db
+	await wait_for(.3)
+	verify(ambient.volume_db>=-29.01,"Ambient returns within 1.15 seconds of battle end")
+	score.stop_all()
+	verify(not score.assets_ready and not score.fight_playing and score.current_phase==0,"Stop_all resets lifecycle state")
+	verify(score.tracks[0].stream==null and score.victory.stream==null and not score.victory.playing,"Stop_all releases both audio resources")
+	score.queue_free()
+	await process_frame
+	verify(not is_instance_valid(score),"Scene cleanup removes score node and child players")
+	AudioServer.remove_bus_effect(0,AudioServer.get_bus_effect_count(0)-1)
+	var failed: Array[String] = []
+	for result in checks:
+		if not result.pass: failed.append(result.check)
+	var report := {"checks_pass":failed.is_empty(),"check_count":checks.size(),"failures":failed,"checks":checks,"observations":observations,"engine":Engine.get_version_info(),"audio_driver":AudioServer.get_driver_name(),"human_listening_claimed":false,"method":"Actual Godot score helper + native AudioStreamPlayer + Master AudioEffectCapture; pause includes a paused SceneTree"}
+	var out := FileAccess.open("res://assets/audio/m24/music/music_runtime_qa.json",FileAccess.WRITE)
+	out.store_string(JSON.stringify(report,"  ")+"\n")
+	print("M24 MUSIC RUNTIME ",JSON.stringify(report))
+	quit(0 if failed.is_empty() else 1)

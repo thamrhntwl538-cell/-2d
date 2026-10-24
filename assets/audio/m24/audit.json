@@ -1,0 +1,649 @@
+{
+  "version": 2,
+  "original": true,
+  "license": "CC0-1.0",
+  "rate": 48000,
+  "channels": 2,
+  "pcm_bits": 16,
+  "files": [
+    {
+      "file": "assets/audio/m24/bell_impact.wav",
+      "seconds": 1.2,
+      "rate": 48000,
+      "channels": 2,
+      "pcm_bits": 16,
+      "peak_dbfs": -5.5005100375222025,
+      "rms_dbfs": -22.269525136653275,
+      "dc_peak": 3.619723849826389e-06,
+      "first_last_16_peak": 3.0517578125e-05,
+      "clipping_samples": 0,
+      "spectral_centroid_hz": 136.99150981048922,
+      "sha256": "6e69f8beb4d392e36588249bd5897935f6b2e2c9a6eb71128ea29bf082abd974",
+      "passed": true
+    },
+    {
+      "file": "assets/audio/m24/bell_impact_2.wav",
+      "seconds": 1.28,
+      "rate": 48000,
+      "channels": 2,
+      "pcm_bits": 16,
+      "peak_dbfs": -5.5005100375222025,
+      "rms_dbfs": -23.846673639844983,
+      "dc_peak": 5.9569875399271645e-06,
+      "first_last_16_peak": 6.103515625e-05,
+      "clipping_samples": 0,
+      "spectral_centroid_hz": 136.30836220703333,
+      "sha256": "48df852e2edeb8551eaf414bcf49cdf9c6d5a32740e64962d887544ab530ea2a",
+      "passed": true
+    },
+    {
+      "file": "assets/audio/m24/bell_impact_3.wav",
+      "seconds": 1.16,
+      "rate": 48000,
+      "channels": 2,
+      "pcm_bits": 16,
+      "peak_dbfs": -5.5005100375222025,
+      "rms_dbfs": -22.85497908211883,
+      "dc_peak": 4.134781059177442e-06,
+      "first_last_16_peak": 3.0517578125e-05,
+      "clipping_samples": 0,
+      "spectral_centroid_hz": 140.2108438035275,
+      "sha256": "68c9988511a9978f71bd796bb7bc1abec1a3a74cda40bbe55b7fd16792ca8854",
+      "passed": true
+    },
+    {
+      "file": "assets/audio/m24/bell_hit.wav",
+      "seconds": 0.29,
+      "rate": 48000,
+      "channels": 2,
+      "pcm_bits": 16,
+      "peak_dbfs": -6.0004777433190135,
+      "rms_dbfs": -25.288365824017216,
+      "dc_peak": 1.4750162760416667e-05,
+      "first_last_16_peak": 9.1552734375e-05,
+      "clipping_samples": 0,
+      "spectral_centroid_hz": 292.84572519510823,
+      "sha256": "15340a87835c56b6d452e074df0b3612947353ddc706cee79403d8ff6e56ffe2",
+      "passed": true
+    },
+    {
+      "file": "assets/audio/m24/bell_hit_2.wav",
+      "seconds": 0.33,
+      "rate": 48000,
+      "channels": 2,
+      "pcm_bits": 16,
+      "peak_dbfs": -6.0004777433190135,
+      "rms_dbfs": -26.35281470598819,
+      "dc_peak": 1.0659959581163194e-05,
+      "first_last_16_peak": 3.0517578125e-05,
+      "clipping_samples": 0,
+      "spectral_centroid_hz": 297.61134418758303,
+      "sha256": "c7084a75b481026d939a2c512f5e3a6d8988e3317bdfe992b4d62d6a3983ecba",
+      "passed": true
+    },
+    {
+      "file": "assets/audio/m24/bell_hit_3.wav",
+      "seconds": 0.27,
+      "rate": 48000,
+      "channels": 2,
+      "pcm_bits": 16,
+      "peak_dbfs": -6.0004777433190135,
+      "rms_dbfs": -24.360605497604485,
+      "dc_peak": 1.217170997902199e-05,
+      "first_last_16_peak": 3.0517578125e-05,
+      "clipping_samples": 0,
+      "spectral_centroid_hz": 301.2558445593895,
+      "sha256": "133ac233c9c730a54d715e617a8e12a1c02053c86693b6d35c73c5b1d5ed0b3e",
+      "passed": true
+    },
+    {
+      "file": "assets/audio/m24/bell_swing.wav",
+      "seconds": 0.31,
+      "rate": 48000,
+      "channels": 2,
+      "pcm_bits": 16,
+      "peak_dbfs": -7.0005506829029605,
+      "rms_dbfs": -23.782931165789016,
+      "dc_peak": 1.7637847572244623e-07,
+      "first_last_16_peak": 0.0,
+      "clipping_samples": 0,
+      "spectral_centroid_hz": 2208.945507357233,
+      "sha256": "75c7915793027f9a67796fc5385ad47e9c296b9294448721cdccf006441e2695",
+      "passed": true
+    },
+    {
+      "file": "assets/audio/m24/bell_swing_2.wav",
+      "seconds": 0.35,
+      "rate": 48000,
+      "channels": 2,
+      "pcm_bits": 16,
+      "peak_dbfs": -7.0005506829029605,
+      "rms_dbfs": -24.764500975738812,
+      "dc_peak": 8.719308035714286e-08,
+      "first_last_16_peak": 0.0,
+      "clipping_samples": 0,
+      "spectral_centroid_hz": 2331.426508926267,
+      "sha256": "e7f430e766284fbedef8434a199e085aaab35081aa7fe6e4a04cccde8df6786a",
+      "passed": true
+    },
+    {
+      "file": "assets/audio/m24/bell_swing_3.wav",
+      "seconds": 0.29,
+      "rate": 48000,
+      "channels": 2,
+      "pcm_bits": 16,
+      "peak_dbfs": -7.0005506829029605,
+      "rms_dbfs": -24.490570803994693,
+      "dc_peak": 1.1400244701867816e-07,
+      "first_last_16_peak": 0.0,
+      "clipping_samples": 0,
+      "spectral_centroid_hz": 2147.4061672079015,
+      "sha256": "91db91ee1b1261d3afbb4516df8d9a00f2931973cbdf38ae24f0058523c4d393",
+      "passed": true
+    },
+    {
+      "file": "assets/audio/m24/bell_takeoff.wav",
+      "seconds": 0.28,
+      "rate": 48000,
+      "channels": 2,
+      "pcm_bits": 16,
+      "peak_dbfs": -6.500123505060556,
+      "rms_dbfs": -21.79652986775638,
+      "dc_peak": 1.9772847493489584e-05,
+      "first_last_16_peak": 6.103515625e-05,
+      "clipping_samples": 0,
+      "spectral_centroid_hz": 3141.3057753308995,
+      "sha256": "4160d481a9a170c2b530fd18d339746dc02236590804b0b8b865fc0fb4df7de3",
+      "passed": true
+    },
+    {
+      "file": "assets/audio/m24/bell_takeoff_2.wav",
+      "seconds": 0.31,
+      "rate": 48000,
+      "channels": 2,
+      "pcm_bits": 16,
+      "peak_dbfs": -6.500123505060556,
+      "rms_dbfs": -23.35663007351541,
+      "dc_peak": 1.4467136834257392e-05,
+      "first_last_16_peak": 3.0517578125e-05,
+      "clipping_samples": 0,
+      "spectral_centroid_hz": 3141.735203602377,
+      "sha256": "9268986a21d6bcde6b28b0e67b65705f8b951f2561430c2d5089fb455e83390e",
+      "passed": true
+    },
+    {
+      "file": "assets/audio/m24/bell_fall.wav",
+      "seconds": 1.72,
+      "rate": 48000,
+      "channels": 2,
+      "pcm_bits": 16,
+      "peak_dbfs": -6.0004777433190135,
+      "rms_dbfs": -25.708756942350448,
+      "dc_peak": 2.6806380397589634e-06,
+      "first_last_16_peak": 3.0517578125e-05,
+      "clipping_samples": 0,
+      "spectral_centroid_hz": 122.22796215990353,
+      "sha256": "1f54a8f59cc5d7258fbcf0c393daad4715fabc1f061c842ba0fb1285d6c8cbe0",
+      "passed": true
+    },
+    {
+      "file": "assets/audio/m24/bell_step.wav",
+      "seconds": 0.23,
+      "rate": 48000,
+      "channels": 2,
+      "pcm_bits": 16,
+      "peak_dbfs": -7.0005506829029605,
+      "rms_dbfs": -22.387961215577576,
+      "dc_peak": 2.4386419766191123e-05,
+      "first_last_16_peak": 6.103515625e-05,
+      "clipping_samples": 0,
+      "spectral_centroid_hz": 2544.613446771108,
+      "sha256": "210626d0291b9e1be0ec8c38b57db4477d2d9528f3c8bf54e28a4077ecaf4fda",
+      "passed": true
+    },
+    {
+      "file": "assets/audio/m24/bell_step_2.wav",
+      "seconds": 0.26,
+      "rate": 48000,
+      "channels": 2,
+      "pcm_bits": 16,
+      "peak_dbfs": -7.0005506829029605,
+      "rms_dbfs": -26.377488988210494,
+      "dc_peak": 1.0399940686348157e-05,
+      "first_last_16_peak": 3.0517578125e-05,
+      "clipping_samples": 0,
+      "spectral_centroid_hz": 2838.8927059518264,
+      "sha256": "369e5750e25b8313648f8f02ebe7efe1ca31fc30edf9b9ca910bdc6c4bd2985a",
+      "passed": true
+    },
+    {
+      "file": "assets/audio/m24/bell_step_3.wav",
+      "seconds": 0.21,
+      "rate": 48000,
+      "channels": 2,
+      "pcm_bits": 16,
+      "peak_dbfs": -7.0005506829029605,
+      "rms_dbfs": -23.687158600262805,
+      "dc_peak": 3.711458236452133e-05,
+      "first_last_16_peak": 6.103515625e-05,
+      "clipping_samples": 0,
+      "spectral_centroid_hz": 2168.704050957498,
+      "sha256": "1f31992e32ec4f811a35550a823c1be8f43d867592dd8460b81c1f379eb9ed05",
+      "passed": true
+    },
+    {
+      "file": "assets/audio/m24/bell_step_4.wav",
+      "seconds": 0.24,
+      "rate": 48000,
+      "channels": 2,
+      "pcm_bits": 16,
+      "peak_dbfs": -7.0005506829029605,
+      "rms_dbfs": -25.138445475624124,
+      "dc_peak": 9.23209720187717e-06,
+      "first_last_16_peak": 3.0517578125e-05,
+      "clipping_samples": 0,
+      "spectral_centroid_hz": 2452.638641905162,
+      "sha256": "45cdb330940d53e758d4fe4e8dc539d187b7204164ca732f502b6bbef09bee30",
+      "passed": true
+    },
+    {
+      "file": "assets/audio/m24/bell_cloth.wav",
+      "seconds": 0.34,
+      "rate": 48000,
+      "channels": 2,
+      "pcm_bits": 16,
+      "peak_dbfs": -9.000392326786972,
+      "rms_dbfs": -26.240990728761695,
+      "dc_peak": 7.47979856004902e-08,
+      "first_last_16_peak": 0.0,
+      "clipping_samples": 0,
+      "spectral_centroid_hz": 4009.472847519085,
+      "sha256": "f8d023706401feb094658116b9986bc023912a5bd871d9391b1dbe6ba4611467",
+      "passed": true
+    },
+    {
+      "file": "assets/audio/m24/bell_cloth_2.wav",
+      "seconds": 0.39,
+      "rate": 48000,
+      "channels": 2,
+      "pcm_bits": 16,
+      "peak_dbfs": -9.000392326786972,
+      "rms_dbfs": -28.681486513975084,
+      "dc_peak": 1.1737530048076924e-07,
+      "first_last_16_peak": 0.0,
+      "clipping_samples": 0,
+      "spectral_centroid_hz": 3945.314767465636,
+      "sha256": "a4c81b409a7e4a37c24e8026cffaaf9e9bfa56fe7542ded88e753c5705e5b8ea",
+      "passed": true
+    },
+    {
+      "file": "assets/audio/m24/bell_voice_strain.wav",
+      "seconds": 0.38,
+      "rate": 48000,
+      "channels": 2,
+      "pcm_bits": 16,
+      "peak_dbfs": -6.0004777433190135,
+      "rms_dbfs": -17.886619207548573,
+      "dc_peak": 3.5654034530907345e-06,
+      "first_last_16_peak": 0.0,
+      "clipping_samples": 0,
+      "spectral_centroid_hz": 535.7049974020472,
+      "sha256": "fc1218cbe727649143f212dd5c1395501ced0d8c201a76c590c15e3ee76c35c9",
+      "passed": true
+    },
+    {
+      "file": "assets/audio/m24/bell_voice_strain_2.wav",
+      "seconds": 0.43,
+      "rate": 48000,
+      "channels": 2,
+      "pcm_bits": 16,
+      "peak_dbfs": -6.0004777433190135,
+      "rms_dbfs": -18.314877238701605,
+      "dc_peak": 4.769850146862888e-06,
+      "first_last_16_peak": 0.0,
+      "clipping_samples": 0,
+      "spectral_centroid_hz": 549.3879474952581,
+      "sha256": "4ef078d83f736b1cd7648d0c35507bb856d583ff5fdeb8c3326066fcb6120891",
+      "passed": true
+    },
+    {
+      "file": "assets/audio/m24/bell_voice_strain_3.wav",
+      "seconds": 0.35,
+      "rate": 48000,
+      "channels": 2,
+      "pcm_bits": 16,
+      "peak_dbfs": -6.0004777433190135,
+      "rms_dbfs": -16.933573868253355,
+      "dc_peak": 1.4441353934151785e-06,
+      "first_last_16_peak": 0.0,
+      "clipping_samples": 0,
+      "spectral_centroid_hz": 544.1085323824964,
+      "sha256": "bb49b06367bbaa9a2365574f75ab828fb06e54d44c4f078e236925691727fc8e",
+      "passed": true
+    },
+    {
+      "file": "assets/audio/m24/bell_voice_hurt.wav",
+      "seconds": 0.44,
+      "rate": 48000,
+      "channels": 2,
+      "pcm_bits": 16,
+      "peak_dbfs": -6.0004777433190135,
+      "rms_dbfs": -17.327079869308918,
+      "dc_peak": 1.4984246456261838e-06,
+      "first_last_16_peak": 0.0,
+      "clipping_samples": 0,
+      "spectral_centroid_hz": 597.5172551259919,
+      "sha256": "48aa5df116455723cb65499860b4e73f62fb4f0b7f6450ab746d453f84a758e4",
+      "passed": true
+    },
+    {
+      "file": "assets/audio/m24/bell_voice_hurt_2.wav",
+      "seconds": 0.49,
+      "rate": 48000,
+      "channels": 2,
+      "pcm_bits": 16,
+      "peak_dbfs": -6.0004777433190135,
+      "rms_dbfs": -17.557731373557683,
+      "dc_peak": 5.773946541507228e-07,
+      "first_last_16_peak": 0.0,
+      "clipping_samples": 0,
+      "spectral_centroid_hz": 591.3755244682125,
+      "sha256": "72a4ebe19153b474b6ba949f7109673d5aa17a0e973d39e508c1f325ac6ef68c",
+      "passed": true
+    },
+    {
+      "file": "assets/audio/m24/bell_voice_hurt_3.wav",
+      "seconds": 0.4,
+      "rate": 48000,
+      "channels": 2,
+      "pcm_bits": 16,
+      "peak_dbfs": -6.0004777433190135,
+      "rms_dbfs": -16.4289004109649,
+      "dc_peak": 8.24292500813802e-06,
+      "first_last_16_peak": 0.0,
+      "clipping_samples": 0,
+      "spectral_centroid_hz": 590.8052986412054,
+      "sha256": "59efcaddb9b382366dc0f055b6d89d1621c017c9e01a4df5cf07b597e9404d0a",
+      "passed": true
+    },
+    {
+      "file": "assets/audio/m24/bell_voice_death.wav",
+      "seconds": 1.48,
+      "rate": 48000,
+      "channels": 2,
+      "pcm_bits": 16,
+      "peak_dbfs": -6.500123505060556,
+      "rms_dbfs": -18.786822089098667,
+      "dc_peak": 4.4676634642454954e-07,
+      "first_last_16_peak": 0.0,
+      "clipping_samples": 0,
+      "spectral_centroid_hz": 694.3445330845062,
+      "sha256": "6502d495fe7316521c71a8bcce2912485b9419c86ca8a0255bb06fd0afaffb83",
+      "passed": true
+    }
+  ],
+  "variant_checks": [
+    {
+      "event": "bell_impact",
+      "variants": [
+        1,
+        2
+      ],
+      "zero_lag_correlation": 0.10112709812367879,
+      "passed": true
+    },
+    {
+      "event": "bell_impact",
+      "variants": [
+        1,
+        3
+      ],
+      "zero_lag_correlation": 0.007823790027483634,
+      "passed": true
+    },
+    {
+      "event": "bell_impact",
+      "variants": [
+        2,
+        3
+      ],
+      "zero_lag_correlation": 0.04847807715693385,
+      "passed": true
+    },
+    {
+      "event": "bell_hit",
+      "variants": [
+        1,
+        2
+      ],
+      "zero_lag_correlation": 0.1996759984995369,
+      "passed": true
+    },
+    {
+      "event": "bell_hit",
+      "variants": [
+        1,
+        3
+      ],
+      "zero_lag_correlation": 0.05898810732856563,
+      "passed": true
+    },
+    {
+      "event": "bell_hit",
+      "variants": [
+        2,
+        3
+      ],
+      "zero_lag_correlation": 0.22438697716408873,
+      "passed": true
+    },
+    {
+      "event": "bell_swing",
+      "variants": [
+        1,
+        2
+      ],
+      "zero_lag_correlation": 0.03496718115805179,
+      "passed": true
+    },
+    {
+      "event": "bell_swing",
+      "variants": [
+        1,
+        3
+      ],
+      "zero_lag_correlation": 0.03739455522098633,
+      "passed": true
+    },
+    {
+      "event": "bell_swing",
+      "variants": [
+        2,
+        3
+      ],
+      "zero_lag_correlation": 0.004771940804639683,
+      "passed": true
+    },
+    {
+      "event": "bell_takeoff",
+      "variants": [
+        1,
+        2
+      ],
+      "zero_lag_correlation": 0.12467226388122551,
+      "passed": true
+    },
+    {
+      "event": "bell_step",
+      "variants": [
+        1,
+        2
+      ],
+      "zero_lag_correlation": 0.2412040725491597,
+      "passed": true
+    },
+    {
+      "event": "bell_step",
+      "variants": [
+        1,
+        3
+      ],
+      "zero_lag_correlation": 0.2689371166444377,
+      "passed": true
+    },
+    {
+      "event": "bell_step",
+      "variants": [
+        1,
+        4
+      ],
+      "zero_lag_correlation": 0.0004573220759835745,
+      "passed": true
+    },
+    {
+      "event": "bell_step",
+      "variants": [
+        2,
+        3
+      ],
+      "zero_lag_correlation": 0.2320159637280454,
+      "passed": true
+    },
+    {
+      "event": "bell_step",
+      "variants": [
+        2,
+        4
+      ],
+      "zero_lag_correlation": 0.2607825467897186,
+      "passed": true
+    },
+    {
+      "event": "bell_step",
+      "variants": [
+        3,
+        4
+      ],
+      "zero_lag_correlation": 0.05624535242607196,
+      "passed": true
+    },
+    {
+      "event": "bell_cloth",
+      "variants": [
+        1,
+        2
+      ],
+      "zero_lag_correlation": 0.005165202203683312,
+      "passed": true
+    },
+    {
+      "event": "bell_voice_strain",
+      "variants": [
+        1,
+        2
+      ],
+      "zero_lag_correlation": 0.15757399320728546,
+      "passed": true
+    },
+    {
+      "event": "bell_voice_strain",
+      "variants": [
+        1,
+        3
+      ],
+      "zero_lag_correlation": 0.03744934029654478,
+      "passed": true
+    },
+    {
+      "event": "bell_voice_strain",
+      "variants": [
+        2,
+        3
+      ],
+      "zero_lag_correlation": 0.06275764382570817,
+      "passed": true
+    },
+    {
+      "event": "bell_voice_hurt",
+      "variants": [
+        1,
+        2
+      ],
+      "zero_lag_correlation": 0.1047618397742098,
+      "passed": true
+    },
+    {
+      "event": "bell_voice_hurt",
+      "variants": [
+        1,
+        3
+      ],
+      "zero_lag_correlation": 0.007521160171397417,
+      "passed": true
+    },
+    {
+      "event": "bell_voice_hurt",
+      "variants": [
+        2,
+        3
+      ],
+      "zero_lag_correlation": 0.14654654397223305,
+      "passed": true
+    }
+  ],
+  "proposed_gain_mixes": [
+    {
+      "name": "landing_exertion",
+      "events": [
+        "bell_impact",
+        "bell_voice_strain"
+      ],
+      "peak_dbfs": -9.643682665154266,
+      "clipping_samples": 0,
+      "passed": true
+    },
+    {
+      "name": "hurt_contact",
+      "events": [
+        "bell_hit",
+        "bell_voice_hurt"
+      ],
+      "peak_dbfs": -10.813273769371825,
+      "clipping_samples": 0,
+      "passed": true
+    },
+    {
+      "name": "death_collapse",
+      "events": [
+        "bell_fall",
+        "bell_hit",
+        "bell_voice_death"
+      ],
+      "peak_dbfs": -8.423218513137432,
+      "clipping_samples": 0,
+      "passed": true
+    },
+    {
+      "name": "body_load",
+      "events": [
+        "bell_step",
+        "bell_cloth",
+        "bell_takeoff",
+        "bell_swing",
+        "bell_impact"
+      ],
+      "peak_dbfs": -9.983700780874443,
+      "clipping_samples": 0,
+      "passed": true
+    }
+  ],
+  "event_count": 10,
+  "file_count": 25,
+  "m23_event_manifest_sha256": "31225fe0f0403367f8b3edec26797e5c33a4ba302c265933ebf59b162a60e99a",
+  "no_external_or_reference_samples": true,
+  "no_predictive_warning_audio": true,
+  "no_speech_or_tts": true,
+  "human_listening_claim": false,
+  "scope": "Objective production PCM, event map, duration, level, DC, soft boundaries, variants and proposed-gain sum. Native output is verified separately.",
+  "passed": true
+}

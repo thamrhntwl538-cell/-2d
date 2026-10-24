@@ -1,0 +1,142 @@
+{
+	"checks": 45,
+	"engine": "4.6.3-stable (official)",
+	"failures": [],
+	"human_listening_claim": false,
+	"method": "AudioEffectCapture reads actual native Godot Master mixer PCM; programmatic event fixture, not a live encounter or listening judgment.",
+	"native_audio_output": true,
+	"observations": {
+		"native_contact_load": {
+			"accepted_events": 10,
+			"clipped_frames": 0,
+			"peak": 0.65434193611145,
+			"peak_players": 10,
+			"rms": 0.12467582683024,
+			"sample_rate": 44100.0,
+			"stereo_frames": 28672
+		},
+		"native_score_contact_load": {
+			"clipped_frames": 0,
+			"peak": 0.788617849349976,
+			"rms": 0.106899561102028,
+			"sample_rate": 44100.0,
+			"score_runtime_gain_db": -8.0,
+			"score_source": "res://assets/audio/m24/music/bell_warden_clockwork.ogg",
+			"stereo_frames": 49152
+		},
+		"native_solo_events": {
+			"bell_cloth": {
+				"clipped_frames": 0,
+				"cue": "bell_cloth",
+				"peak": 0.0250448677688837,
+				"rms": 0.00296108529988141,
+				"runtime_gain_db": -17.0,
+				"sample_rate": 44100.0,
+				"source": "res://assets/audio/m24/bell_cloth.wav",
+				"source_duration_seconds": 0.34,
+				"stereo_frames": 20480
+			},
+			"bell_fall": {
+				"clipped_frames": 0,
+				"cue": "bell_fall",
+				"peak": 0.0997461229562759,
+				"rms": 0.0105401935582187,
+				"runtime_gain_db": -8.0,
+				"sample_rate": 44100.0,
+				"source": "res://assets/audio/m24/bell_fall.wav",
+				"source_duration_seconds": 1.72,
+				"stereo_frames": 73728
+			},
+			"bell_hit": {
+				"clipped_frames": 0,
+				"cue": "bell_hit",
+				"peak": 0.0874956324696541,
+				"rms": 0.0085894571585924,
+				"runtime_gain_db": -9.0,
+				"sample_rate": 44100.0,
+				"source": "res://assets/audio/m24/bell_hit.wav",
+				"source_duration_seconds": 0.29,
+				"stereo_frames": 16384
+			},
+			"bell_impact": {
+				"clipped_frames": 0,
+				"cue": "bell_impact",
+				"peak": 0.103432856500149,
+				"rms": 0.0148333861606008,
+				"runtime_gain_db": -8.0,
+				"sample_rate": 44100.0,
+				"source": "res://assets/audio/m24/bell_impact.wav",
+				"source_duration_seconds": 1.2,
+				"stereo_frames": 57344
+			},
+			"bell_step": {
+				"clipped_frames": 0,
+				"cue": "bell_step",
+				"peak": 0.0429996363818645,
+				"rms": 0.00600413523552046,
+				"runtime_gain_db": -14.0,
+				"sample_rate": 44100.0,
+				"source": "res://assets/audio/m24/bell_step.wav",
+				"source_duration_seconds": 0.23,
+				"stereo_frames": 16384
+			},
+			"bell_swing": {
+				"clipped_frames": 0,
+				"cue": "bell_swing",
+				"peak": 0.062360230833292,
+				"rms": 0.00749902815510097,
+				"runtime_gain_db": -11.0,
+				"sample_rate": 44100.0,
+				"source": "res://assets/audio/m24/bell_swing.wav",
+				"source_duration_seconds": 0.31,
+				"stereo_frames": 20480
+			},
+			"bell_takeoff": {
+				"clipped_frames": 0,
+				"cue": "bell_takeoff",
+				"peak": 0.0632643029093742,
+				"rms": 0.00945989205940652,
+				"runtime_gain_db": -11.5,
+				"sample_rate": 44100.0,
+				"source": "res://assets/audio/m24/bell_takeoff.wav",
+				"source_duration_seconds": 0.28,
+				"stereo_frames": 16384
+			},
+			"bell_voice_death": {
+				"clipped_frames": 0,
+				"cue": "bell_voice_death",
+				"peak": 0.265866726636887,
+				"rms": 0.0645146926046674,
+				"runtime_gain_db": -5.0,
+				"sample_rate": 44100.0,
+				"source": "res://assets/audio/m24/bell_voice_death.wav",
+				"source_duration_seconds": 1.48,
+				"stereo_frames": 65536
+			},
+			"bell_voice_hurt": {
+				"clipped_frames": 0,
+				"cue": "bell_voice_hurt",
+				"peak": 0.266905754804611,
+				"rms": 0.0641581860790384,
+				"runtime_gain_db": -5.5,
+				"sample_rate": 44100.0,
+				"source": "res://assets/audio/m24/bell_voice_hurt.wav",
+				"source_duration_seconds": 0.44,
+				"stereo_frames": 24576
+			},
+			"bell_voice_strain": {
+				"clipped_frames": 0,
+				"cue": "bell_voice_strain",
+				"peak": 0.251175373792648,
+				"rms": 0.0578201747241862,
+				"runtime_gain_db": -6.0,
+				"sample_rate": 44100.0,
+				"source": "res://assets/audio/m24/bell_voice_strain.wav",
+				"source_duration_seconds": 0.38,
+				"stereo_frames": 20480
+			}
+		}
+	},
+	"passed": true,
+	"sample_reel": "previews/m24/audio/bell_native_event_samples.wav"
+}

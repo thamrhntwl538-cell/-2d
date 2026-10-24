@@ -1,0 +1,90 @@
+{
+  "asset": "bell_character_parts.png",
+  "generator_output": "/workspace/generated_images/exec-639b4932-85ab-4507-8604-59cffe5c9a25.png",
+  "sha256": "5e2e45ad2c3eaed31955aeae347929e0899a0de5d5d0a5a478caad4cf94c4d81",
+  "dimensions": [
+    1774,
+    887
+  ],
+  "pixel_edits_after_generation": false,
+  "reference": "Approved Bell Warden / character1 from approved five-character sheet; Bell-only reference used to request layered atlas",
+  "native_crops": {
+    "assembled_master": [
+      97,
+      25,
+      598,
+      826
+    ],
+    "head": [
+      757,
+      22,
+      524,
+      576
+    ],
+    "torso_tabard": [
+      1400,
+      289,
+      247,
+      274
+    ],
+    "near_leg": [
+      868,
+      614,
+      244,
+      228
+    ],
+    "far_leg": [
+      1392,
+      586,
+      301,
+      265
+    ]
+  },
+  "assembly_height_world_px": 194,
+  "head_height_world_px": 146,
+  "leg_rig": "Measured hip/knee/ankle joints; rigid overlapping thigh, shin and level foot texture regions; constant bone lengths",
+  "walk_root_speed_px_s": 45,
+  "walk_cycle_s": 0.52,
+  "walk_foot_contacts_s": [
+    0.26,
+    0.52
+  ],
+  "unchanged_hero_sha256": "6eca7436c7a8c39451256aa56db465d664df0d6dbb42d8e7f24122592b34bb66",
+  "native_rig_qa": {
+    "bone_lengths_world_px": {
+      "far_leg": {
+        "lower": 21.9960498809814,
+        "upper": 35.0654296875
+      },
+      "near_leg": {
+        "lower": 16.99977684021,
+        "upper": 30.9790267944336
+      }
+    },
+    "engine": "4.7.2-stable (official)",
+    "facings": 2,
+    "failures": [],
+    "max_lower_length_error_px": 3.814697265625e-06,
+    "max_planted_ankle_error_px": 1.9073486328125e-06,
+    "max_upper_length_error_px": 3.814697265625e-06,
+    "max_world_stance_slip_px": 5.49316406406319e-06,
+    "phases_per_pose": 61,
+    "pose_samples": 1464,
+    "poses": [
+      "idle",
+      "walk",
+      "run",
+      "rush",
+      "drawback",
+      "crouch",
+      "jump",
+      "fall",
+      "land",
+      "recover",
+      "hurt",
+      "death"
+    ],
+    "result": "PASS",
+    "texture_scale_changes_per_pose": false
+  }
+}

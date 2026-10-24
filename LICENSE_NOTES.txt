@@ -60,3 +60,13 @@ M23 compact hero strike: the original M20 texture/parts remain byte-identical.
 The short orange flame envelope, small procedural sword and upper-body
 drive/recoil are native authored geometry in new M23 subclasses. No external
 game animation frames, sword graphics or voice recordings were copied.
+
+M24 Bell Warden (2026-10-24): the faithful layered character atlas was generated
+from the user's approved Bell concept using image_gen. All generated pixels are
+preserved; Godot crops, fixed-length native leg/foot rig and authored poses
+reconstruct the character. See assets/minibosses/m24/bell_character_parts.provenance.json.
+The original M20 hero texture remains unchanged. Original Bell cues are CC0;
+the new original miniature score/MIDI and its FluidR3 rendering are documented
+under assets/audio/m24/music/LICENSE.txt. No Hollow Knight recordings, sprites,
+animation frames or code were added. Room12 lighting and foreground refinements
+reuse the project's existing original near-archive artwork.

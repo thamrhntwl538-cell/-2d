@@ -1,0 +1,150 @@
+{
+  "audio_driver": "Dummy",
+  "check_count": 24,
+  "checks": [
+    {
+      "check": "Loop and victory Ogg resources load",
+      "pass": true
+    },
+    {
+      "check": "Exactly one miniature score section",
+      "pass": true
+    },
+    {
+      "check": "Fight Ogg loops at runtime",
+      "pass": true
+    },
+    {
+      "check": "Victory Ogg does not loop",
+      "pass": true
+    },
+    {
+      "check": "Repeated setup does not duplicate players",
+      "pass": true
+    },
+    {
+      "check": "First phase starts actual native AudioStreamPlayer",
+      "pass": true
+    },
+    {
+      "check": "Fade reaches battle gain -8dB",
+      "pass": true
+    },
+    {
+      "check": "native_fight produces actual non-silent native mix frames",
+      "pass": true
+    },
+    {
+      "check": "native_fight has no digital clipping",
+      "pass": true
+    },
+    {
+      "check": "Repeated phase1/phase2 requests preserve continuous playback",
+      "pass": true
+    },
+    {
+      "check": "Warning telemetry makes no predictive change to the score",
+      "pass": true
+    },
+    {
+      "check": "Pause ducks to -20dB while SceneTree is paused",
+      "pass": true
+    },
+    {
+      "check": "Pause retains continuing score tail",
+      "pass": true
+    },
+    {
+      "check": "Resume restores score gain",
+      "pass": true
+    },
+    {
+      "check": "Cinematic ducks without resetting playback",
+      "pass": true
+    },
+    {
+      "check": "Mute reaches both score and victory players",
+      "pass": true
+    },
+    {
+      "check": "Winning starts the original cadence",
+      "pass": true
+    },
+    {
+      "check": "Ended fight fades out and releases its active playback",
+      "pass": true
+    },
+    {
+      "check": "native_victory_crossfade produces actual non-silent native mix frames",
+      "pass": true
+    },
+    {
+      "check": "native_victory_crossfade has no digital clipping",
+      "pass": true
+    },
+    {
+      "check": "Ambient returns within 1.15 seconds of battle end",
+      "pass": true
+    },
+    {
+      "check": "Stop_all resets lifecycle state",
+      "pass": true
+    },
+    {
+      "check": "Stop_all releases both audio resources",
+      "pass": true
+    },
+    {
+      "check": "Scene cleanup removes score node and child players",
+      "pass": true
+    }
+  ],
+  "checks_pass": true,
+  "engine": {
+    "build": "official",
+    "hash": "7d41c59c457bd5a245092b4e7eb2d833e3b3f8c3",
+    "hex": 263683,
+    "major": 4,
+    "minor": 6,
+    "patch": 3,
+    "status": "stable",
+    "string": "4.6.3-stable (official)",
+    "timestamp": 0
+  },
+  "failures": [],
+  "human_listening_claimed": false,
+  "method": "Actual Godot score helper + native AudioStreamPlayer + Master AudioEffectCapture; pause includes a paused SceneTree",
+  "observations": {
+    "ambient_gain_after_850ms": -35.5188446044922,
+    "native_fight": {
+      "frames": 47616,
+      "rms_linear": 0.0347600275104967,
+      "sample_peak_linear": 0.155534893274307
+    },
+    "native_victory_crossfade": {
+      "frames": 40960,
+      "rms_linear": 0.0544024407497581,
+      "sample_peak_linear": 0.179282903671265
+    }
+  },
+  "m23_existing_audio_files_checked": 67,
+  "m23_existing_audio_changed": [],
+  "runtime_helper_sha256": "f770ffe89614a53d6517667517123f37a614f6f9b99e98cd2717197d850acc09",
+  "probe_source_sha256": "1352d896989cf077806fcacce3471ee7b17fdf50228f49014efe70f154c2c4bd",
+  "command": "godot --headless --path . --audio-driver Dummy --script /workspace/work/m24_music/probe.gd",
+  "probe_source_snapshot": "assets/audio/m24/music/music_runtime_probe.gd.txt",
+  "probe_reproduction": "Copy music_runtime_probe.gd.txt to a .gd file outside the project; run the recorded command with that path. Its final report can overwrite runtime QA; M23 preservation metadata was appended from the separately recorded pre-change baseline.",
+  "combined_score_contact_stress": {
+    "source_report": "previews/m24/audio/native_audio_report.json",
+    "source_observation": "native_score_contact_load",
+    "clipped_frames": 0,
+    "peak": 0.788617849349976,
+    "rms": 0.106899561102028,
+    "sample_rate": 44100.0,
+    "score_runtime_gain_db": -8.0,
+    "score_source": "res://assets/audio/m24/music/bell_warden_clockwork.ogg",
+    "stereo_frames": 49152,
+    "peak_dbfs": -2.0626679490988584,
+    "scope": "Configured simultaneous ten hero/Bell cue contact load; not an all-combinations guarantee."
+  }
+}
