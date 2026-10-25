@@ -1,0 +1,1218 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>أمين الأرشيف</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600&family=IBM+Plex+Sans+Arabic:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: one wide stage on top, transport + scrubber under it, move list and frame data below. */
+:root {
+  --bg: #0b0806; --bg2: #120d09; --panel: #16100b; --line: #2a1e14; --line2: #4a3624;
+  --text: #eadfcb; --mute: #a39073; --cyan: #ffb246; --cyan-d: #b9761c; --gold: #e2aa42; --paper: #ecdcb8;
+  --display: 'Cinzel', 'Times New Roman', serif;
+  --ui: 'IBM Plex Sans Arabic', 'Segoe UI', Tahoma, sans-serif;
+  --mono: 'JetBrains Mono', ui-monospace, Menlo, Consolas, monospace;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+body { background: var(--bg); color: var(--text); font-family: var(--ui); font-size: 14px; line-height: 1.55; }
+#app { max-width: 1180px; margin: 0 auto; padding-block: 18px 40px; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); display: flex; flex-direction: column; gap: 14px; }
+header { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; flex-wrap: wrap; border-bottom: 1px solid var(--line); padding-bottom: 10px; }
+h1 { margin: 0; font-family: var(--display); font-weight: 600; font-size: clamp(22px, 4.4vw, 34px); letter-spacing: .12em; color: var(--paper); text-wrap: balance; direction: ltr; }
+.sub { color: var(--mute); font-size: 13px; }
+.stagewrap { position: relative; border: 1px solid var(--line2); background: #0a0705; }
+canvas#stage { display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; direction: ltr; }
+.hud { position: absolute; inset: 0; pointer-events: none; direction: ltr; font-family: var(--mono); font-size: 11px; color: var(--mute); }
+.hud .tl { position: absolute; top: 10px; left: 12px; text-transform: uppercase; letter-spacing: .08em; }
+.hud .tl b { display: block; font-family: var(--display); font-weight: 600; font-size: clamp(13px, 2.2vw, 18px); color: var(--paper); letter-spacing: .1em; }
+.hud .br { position: absolute; bottom: 8px; right: 12px; text-align: right; }
+.hud .tr { position: absolute; top: 10px; right: 12px; color: var(--cyan); letter-spacing: .12em; }
+.bar { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; }
+.tbtn { width: 40px; height: 40px; display: grid; place-items: center; background: var(--panel); border: 1px solid var(--line2); color: var(--text); cursor: pointer; border-radius: 2px; }
+.tbtn:hover { border-color: var(--cyan); color: var(--cyan); }
+.tbtn svg { width: 18px; height: 18px; fill: currentColor; }
+button:focus-visible, input:focus-visible, select:focus-visible { outline: 2px solid var(--cyan); outline-offset: 2px; }
+.scrub { flex: 1 1 260px; min-width: 0; position: relative; height: 40px; direction: ltr; }
+.scrub .marks { position: absolute; left: 0; right: 0; top: 6px; height: 8px; }
+.scrub .marks i { position: absolute; top: 0; width: 2px; height: 8px; background: var(--gold); transform: translateX(-1px); }
+.scrub input { position: absolute; left: 0; right: 0; bottom: 2px; width: 100%; margin: 0; background: transparent; accent-color: var(--cyan); height: 24px; }
+.opts { display: flex; flex-wrap: wrap; gap: 8px 16px; align-items: center; }
+.seg { display: inline-flex; border: 1px solid var(--line2); border-radius: 2px; overflow: hidden; }
+.seg button, .tog { background: var(--panel); color: var(--mute); border: 0; border-inline-start: 1px solid var(--line2); padding: 6px 12px; font: inherit; font-size: 13px; cursor: pointer; }
+.seg button:first-child { border-inline-start: 0; }
+.seg button[aria-pressed="true"], .tog[aria-pressed="true"] { background: rgba(255, 178, 70, .12); color: var(--cyan); }
+.tog { border: 1px solid var(--line2); border-radius: 2px; }
+.lbl { color: var(--mute); font-size: 12px; margin-inline-end: 6px; }
+select { background: var(--panel); color: var(--text); border: 1px solid var(--line2); padding: 6px 8px; font: inherit; font-family: var(--mono); font-size: 12px; border-radius: 2px; }
+section h2 { margin: 0 0 8px; font-size: 12px; font-weight: 500; color: var(--mute); letter-spacing: .04em; display: flex; align-items: center; gap: 10px; }
+section h2::after { content: ""; flex: 1; border-top: 1px solid var(--line); }
+.moves { display: grid; grid-template-columns: repeat(auto-fill, minmax(168px, 1fr)); gap: 8px; }
+.chip { text-align: start; background: var(--panel); border: 1px solid var(--line); color: var(--text); padding: 9px 11px; cursor: pointer; border-radius: 2px; display: flex; flex-direction: column; gap: 2px; min-width: 0; font: inherit; }
+.chip:hover { border-color: var(--line2); background: #1d140d; }
+.chip[aria-pressed="true"] { border-color: var(--cyan); background: rgba(255, 178, 70, .08); }
+.chip .en { font-family: var(--display); font-size: 12.5px; letter-spacing: .06em; color: var(--paper); direction: ltr; text-align: left; overflow-wrap: anywhere; }
+.chip .ar { font-size: 13px; }
+.chip .meta { font-family: var(--mono); font-size: 10.5px; color: var(--mute); direction: ltr; text-align: left; }
+.strip { display: flex; gap: 6px; overflow-x: auto; padding-bottom: 6px; direction: ltr; }
+.strip canvas { flex: 0 0 auto; width: 150px; height: 98px; background: #0a0705; border: 1px solid var(--line); cursor: pointer; }
+.strip canvas.cur { border-color: var(--cyan); }
+.data { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 14px; }
+.kv { display: grid; grid-template-columns: auto 1fr; gap: 4px 14px; font-size: 13px; align-content: start; }
+.kv dt { color: var(--mute); } .kv dd { margin: 0; font-family: var(--mono); font-size: 12.5px; direction: ltr; text-align: left; }
+.evs { overflow-x: auto; }
+table { border-collapse: collapse; width: 100%; font-size: 12.5px; }
+th, td { text-align: start; padding: 5px 10px; border-bottom: 1px solid var(--line); white-space: nowrap; }
+th { color: var(--mute); font-weight: 500; }
+td.m { font-family: var(--mono); direction: ltr; text-align: left; }
+.note { color: var(--mute); font-size: 12.5px; max-width: 70ch; }
+@media (max-width: 560px) { .hud .tr { display: none; } .moves { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (prefers-reduced-motion: reduce) { * { scroll-behavior: auto; } }
+</style>
+
+<div id="app" dir="rtl">
+  <header>
+    <h1>THE ARCHIVIST</h1>
+    <span class="sub">أمين الأرشيف · مختبر الأنيميشن بأسلوب هولو نايت</span>
+  </header>
+
+  <div class="stagewrap">
+    <canvas id="stage" width="1280" height="720" aria-label="معاينة حيّة للبوس"></canvas>
+    <div class="hud" aria-hidden="true">
+      <div class="tl"><b id="hName">Idle</b><span id="hState">PHASE 1</span></div>
+      <div class="tr" id="hPhase"></div>
+      <div class="br" id="hFrame">F 00 / 00</div>
+    </div>
+  </div>
+
+  <div class="bar">
+    <button class="tbtn" id="bPrev" aria-label="الإطار السابق"><svg viewBox="0 0 24 24"><path d="M6 5h2v14H6zM20 5v14L9.5 12z"/></svg></button>
+    <button class="tbtn" id="bPlay" aria-label="تشغيل / إيقاف"><svg viewBox="0 0 24 24" id="icoPlay"><path d="M6 5h4v14H6zM14 5h4v14h-4z"/></svg></button>
+    <button class="tbtn" id="bNext" aria-label="الإطار التالي"><svg viewBox="0 0 24 24"><path d="M16 5h2v14h-2zM4 5l10.5 7L4 19z"/></svg></button>
+    <div class="scrub"><div class="marks" id="marks"></div><input type="range" id="scrub" min="0" max="100" value="0" step="1" aria-label="الخط الزمني"></div>
+  </div>
+
+  <div class="opts">
+    <span><span class="lbl">المرحلة</span><span class="seg" id="segPhase"><button data-v="0" aria-pressed="true">١</button><button data-v="1" aria-pressed="false">٢</button></span></span>
+    <span><span class="lbl">الطبقة</span><span class="seg" id="segLayer"><button data-v="all" aria-pressed="true">كاملة</button><button data-v="body" aria-pressed="false">الجسم</button><button data-v="fx" aria-pressed="false">المؤثرات</button></span></span>
+    <span><span class="lbl">السرعة</span><select id="speed" aria-label="السرعة"><option value="0.25">0.25×</option><option value="0.5">0.5×</option><option value="1" selected>1×</option><option value="1.5">1.5×</option></select></span>
+    <button class="tog" id="tStep" aria-pressed="false" title="يعرض الإطارات بنفس معدّل التصدير">إطارات حقيقية</button>
+    <button class="tog" id="tLoop" aria-pressed="true">تكرار</button>
+    <button class="tog" id="tFlip" aria-pressed="false">قلب الاتجاه</button>
+    <button class="tog" id="tBox" aria-pressed="false">صناديق الإصابة</button>
+    <button class="tog" id="tRage" aria-pressed="false" title="أقل من 15% دم: حركات أسرع بنسبة 30%">غضب أخير</button>
+    <button class="tog" id="tCombo" aria-pressed="false">عرض المعركة</button>
+  </div>
+
+  <section>
+    <h2>الحركات</h2>
+    <div class="moves" id="moves"></div>
+  </section>
+
+  <section>
+    <h2>الإطارات المفتاحية</h2>
+    <div class="strip" id="strip"></div>
+  </section>
+
+  <section>
+    <h2>بيانات الحركة</h2>
+    <div class="data">
+      <dl class="kv" id="kv"></dl>
+      <div class="evs"><table><thead><tr><th>الحدث</th><th>الإطار</th><th>الثانية</th></tr></thead><tbody id="evs"></tbody></table></div>
+    </div>
+    <p class="note">اللعبة ما فيها صدّ، فكل هجمة لها تحذير (توهج أو لون) قبل الضربة، والمقطع الأحمر والإمساك لا ينصدّان ويحتاجون داش بالوقت. الأحداث فوق هي نقاط الإصابة والإطلاق اللي تربطها بالكود.</p>
+  </section>
+</div>
+
+<script>
+/* ============================================================
+   THE ARCHIVIST — part 1: helpers, palette, animation library
+   Facing right. y up = negative. Ground y = 0. Foot pivot = (0,0).
+   ============================================================ */
+(function (g) {
+'use strict';
+const TAU = Math.PI * 2, R = Math.PI / 180;
+const C = {
+  amber: [255, 178, 70], hi: [255, 233, 170], ember: [255, 104, 38], red: [190, 56, 44],
+  paper: [236, 220, 184], gold: [226, 170, 66], ink: [10, 10, 14]
+};
+const rgba = (c, a) => `rgba(${c[0]},${c[1]},${c[2]},${a})`;
+const clamp = (v, a = 0, b = 1) => Math.max(a, Math.min(b, v));
+const lerp = (a, b, t) => a + (b - a) * t;
+const sm = t => t * t * (3 - 2 * t);
+const frac = v => v - Math.floor(v);
+const hash = n => { n = Math.sin(n * 127.1 + 311.7) * 43758.5453; return n - Math.floor(n); };
+const h2 = (a, b) => hash(a * 17.31 + b * 91.7 + 3.3);
+const E = {
+  lin: t => t, io: sm, out: t => 1 - Math.pow(1 - t, 3), in: t => t * t * t, out2: t => 1 - (1 - t) * (1 - t),
+  in2: t => t * t, back: t => { const c = 2.2; return 1 + (c + 1) * Math.pow(t - 1, 3) + c * Math.pow(t - 1, 2); },
+  expo: t => t >= 1 ? 1 : 1 - Math.pow(2, -10 * t), step: t => t < 1 ? 0 : 1
+};
+function kf(u, keys) {
+  if (u <= keys[0][0]) return keys[0][1];
+  for (let i = 1; i < keys.length; i++) {
+    if (u <= keys[i][0]) {
+      const a = keys[i - 1], b = keys[i], t = (u - a[0]) / ((b[0] - a[0]) || 1e-6);
+      return lerp(a[1], b[1], (E[b[2] || 'io'])(t));
+    }
+  }
+  return keys[keys.length - 1][1];
+}
+const K = kf;
+
+const DEF = {
+  x: 0, y: 0, lean: 0, sx: 1, sy: 1, by: 0, bx: 0, btilt: 0,
+  hx: 86, hy: -138, ang: 28, hs: 1.12, th2: 0,
+  lfx: -54, lfy: 0, rfx: 60, rfy: 0,
+  eye: 1, open: 0, shut: 0, p2: 0, ink: 0, flash: 0, alpha: 1, hglow: 0, warn: 0,
+  tremor: 0, rage: 0, rev: 1, pgs: 0, fireH: 0, armSwing: 0, tear: 0
+};
+
+const A = {};
+const ev = (...a) => a.map(([u, name]) => ({ u, name }));
+const gait = (u, st, lift) => {
+  const ph = TAU * u;
+  return {
+    lfx: -54 + st * Math.sin(ph), lfy: -lift * Math.max(0, Math.cos(ph)),
+    rfx: 60 + st * Math.sin(ph + Math.PI), rfy: -lift * Math.max(0, Math.cos(ph + Math.PI))
+  };
+};
+
+/* ---------------- BASE ---------------- */
+A.idle = {
+  label: 'Idle — Reading', ar: 'وقفة القراءة', dur: 2.6, loop: true, cyc: 1, fps: 15, cat: 'base',
+  p: u => { const ph = TAU * u; return {
+    by: 4 * Math.sin(ph), sy: 1 + .012 * Math.sin(ph), btilt: 1.2 * Math.sin(ph + 1), hy: -138 + 3 * Math.sin(ph + .6), ang: 28 + 2 * Math.sin(ph),
+    eye: .85 + .15 * Math.sin(ph * 2), lfx: -56, rfx: 62, hglow: 0
+  }; }, ev: [], hits: []
+};
+A.walk = {
+  label: 'Walk — Relentless', ar: 'المشية المتواصلة', dur: .9, loop: true, cyc: 1, fps: 20, cat: 'base',
+  p: u => { const ph = TAU * u, g_ = gait(u, 44, 30); return Object.assign(g_, {
+    by: 7 * Math.cos(ph * 2) + 2, lean: .035, btilt: 3 * Math.sin(ph), bx: 6, x: 0,
+    hx: 74 + 5 * Math.sin(ph * 2), hy: -178 + 8 * Math.cos(ph * 2), ang: -62 + 5 * Math.sin(ph * 2), th2: 0,
+    eye: 1, armSwing: Math.sin(ph)
+  }); }, ev: ev([0, 'footstep_L'], [.5, 'footstep_R']), hits: []
+};
+A.hurt = {
+  label: 'Hurt — Flinch', ar: 'تلقّي ضربة', dur: .6, loop: false, cyc: 1, fps: 24, cat: 'base',
+  p: u => ({
+    x: K(u, [[0, 0], [.1, -26, 'out'], [.5, -6], [1, 0]]), btilt: K(u, [[0, 0], [.1, -9, 'out'], [.4, 3], [1, 0]]),
+    sy: K(u, [[0, 1], [.1, .93], [.45, 1.02], [1, 1]]), flash: K(u, [[0, 1], [.2, 0, 'out']]), eye: K(u, [[0, .1], [.2, 1.6], [1, 1]]),
+    pgs: K(u, [[0, 0], [.1, 1], [.7, 0]]), tremor: K(u, [[0, 1], [.5, 0]]), lfx: -62, rfx: 56, ang: K(u, [[0, 28], [.1, 80], [1, 28]])
+  }), ev: ev([.04, 'hit_flash']), hits: []
+};
+A.death = {
+  label: 'Death — Last Page', ar: 'الصفحة الأخيرة', dur: 3.6, loop: false, cyc: 1, fps: 20, cat: 'base',
+  p: u => ({
+    flash: K(u, [[0, 1], [.05, 0]]), x: K(u, [[0, 0], [.1, -30, 'out'], [.4, -20], [.7, -10], [1, -8]]),
+    btilt: K(u, [[0, 0], [.1, -10, 'out'], [.3, -6], [.55, 20, 'in'], [.7, 90, 'in2'], [.75, 86, 'out'], [1, 88]]),
+    by: K(u, [[0, 0], [.3, 40, 'out'], [.55, 70], [.7, 96, 'in'], [1, 98]]),
+    bx: K(u, [[0, 0], [.55, 10], [.7, 40], [1, 40]]),
+    sy: K(u, [[0, 1], [.3, .92], [1, .96]]), shut: K(u, [[0, 0], [.18, 1, 'out'], [1, 1]]),
+    eye: K(u, [[0, 1], [.12, .1], [.3, .5], [.4, .1], [1, 0]]),
+    lfx: K(u, [[0, -54], [.4, -30], [.7, 20]]), rfx: K(u, [[0, 60], [.4, 40], [.7, 90]]), lfy: K(u, [[0, 0], [.6, -6]]), rfy: K(u, [[0, 0], [.6, -14]]),
+    hx: K(u, [[0, 86], [.3, 120], [.6, 190], [1, 210]]), hy: K(u, [[0, -138], [.3, -70], [.6, -26], [1, -22]]), ang: K(u, [[0, 28], [.5, 40], [.75, 4], [1, 2]]),
+    ink: K(u, [[0, 0], [.4, 1.5], [1, 3]]), pgs: K(u, [[0, 0], [.6, 0], [.72, 1], [1, 0]]),
+    alpha: K(u, [[0, 1], [.85, 1], [1, 0]]), tremor: K(u, [[0, 1], [.2, .3], [.5, 0]]), th2: 0
+  }), ev: ev([.7, 'body_hits_ground'], [.85, 'dissolve_begin']), hits: []
+};
+A.appear = {
+  label: 'Appear — Unshelved', ar: 'الظهور', dur: 2.4, loop: false, cyc: 1, fps: 20, cat: 'base',
+  p: u => ({
+    rev: K(u, [[0, 0], [.1, 0], [.65, 1]]), ink: K(u, [[0, 2.5], [.65, 1.2], [1, 0]]), pgs: K(u, [[0, 0], [.1, 1], [.65, 1], [.8, 0]]),
+    eye: K(u, [[0, 0], [.62, 0], [.7, 2], [.85, 1]]), by: K(u, [[0, 30], [.65, 30], [.8, -6, 'out'], [1, 0]]),
+    sy: K(u, [[0, .9], [.7, .9], [.82, 1.05, 'out'], [1, 1]]), hy: K(u, [[0, -60], [.7, -60], [1, -138]]), ang: K(u, [[0, 30], [.7, 40], [1, 28]]),
+    flash: 0, alpha: K(u, [[0, 0], [.1, 1]])
+  }), ev: ev([.7, 'eyes_open']), hits: []
+};
+
+/* ---------------- PHASE 1 ATTACKS ---------------- */
+A.slam = {
+  label: 'Index Slam', ar: 'ضربة الفهرس', dur: 1.9, loop: false, cyc: 1, fps: 24, cat: 'p1',
+  p: u => {
+    const rs = K(u, [[0, 0], [.1, 0], [.28, 1, 'out'], [.4, 1], [.46, 0, 'in']]);
+    return {
+      hx: K(u, [[0, 86], [.1, 70], [.28, 38, 'out'], [.4, 40], [.46, 150, 'in'], [.8, 150], [1, 86]]),
+      hy: K(u, [[0, -138], [.1, -214], [.28, -336, 'out'], [.4, -332], [.46, -214, 'in'], [.8, -214], [1, -138]]),
+      ang: K(u, [[0, 28], [.1, 20], [.28, -128, 'out'], [.4, -130], [.46, 76, 'in'], [.8, 74], [1, 28]]),
+      th2: K(u, [[0, 0], [.12, 1], [.8, 1], [1, 0]]),
+      by: K(u, [[0, 0], [.1, 16, 'out'], [.28, -12, 'out'], [.4, -10], [.46, 24, 'in'], [.6, 14], [1, 0]]),
+      btilt: K(u, [[0, 0], [.28, -9], [.4, -10], [.46, 11, 'in'], [.7, 6], [1, 0]]),
+      x: K(u, [[0, 0], [.4, -14], [.46, 36, 'in'], [.8, 32], [1, 0]]),
+      lfx: K(u, [[0, -54], [.1, -84], [.46, -92], [1, -54]]), rfx: K(u, [[0, 60], [.1, 92], [.46, 112], [1, 60]]),
+      sy: K(u, [[0, 1], [.1, .96], [.28, 1.03], [.46, .95], [.7, 1], [1, 1]]),
+      hglow: K(u, [[0, 0], [.28, .8], [.4, 1], [.5, 1.5], [.7, 0]]), eye: K(u, [[0, 1], [.4, 1.5], [.5, 1.8], [1, 1]]),
+      tremor: K(u, [[0, 0], [.28, 0], [.34, .8], [.4, .9], [.44, 0]]), warn: K(u, [[0, 0], [.3, 0], [.36, .7], [.44, 0]])
+    }; },
+  ev: ev([.28, 'telegraph_begin'], [.46, 'hit_active_begin'], [.56, 'hit_active_end']),
+  hits: [{ u0: .46, u1: .56, x: 100, y: -170, w: 170, h: 170, k: 'n' }, { u0: .47, u1: .78, x: 200, y: -60, w: 520, h: 60, k: 'wave' }]
+};
+A.sweep = {
+  label: 'Margin Sweep', ar: 'مسح الهامش', dur: 1.3, loop: false, cyc: 1, fps: 24, cat: 'p1',
+  p: u => ({
+    hx: K(u, [[0, 86], [.22, -30, 'out'], [.38, -34], [.5, 120, 'in'], [.72, 120], [1, 86]]),
+    hy: K(u, [[0, -138], [.22, -158, 'out'], [.38, -156], [.5, -150], [1, -138]]),
+    ang: K(u, [[0, 28], [.22, 168, 'out'], [.38, 170], [.5, 20, 'in'], [.7, 14], [1, 28]]),
+    by: K(u, [[0, 0], [.22, 12], [.38, 14], [.5, 8], [1, 0]]),
+    btilt: K(u, [[0, 0], [.22, -14, 'out'], [.38, -15], [.5, 15, 'in'], [.72, 8], [1, 0]]),
+    x: K(u, [[0, 0], [.38, -20], [.5, 54, 'in'], [.75, 50], [1, 0]]),
+    lfx: K(u, [[0, -54], [.3, -90], [.5, -70], [1, -54]]), rfx: K(u, [[0, 60], [.3, 70], [.5, 120], [1, 60]]),
+    hglow: K(u, [[0, 0], [.4, .4], [.5, 1.2], [.75, 0]]), warn: K(u, [[0, 0], [.22, 0], [.3, .6], [.38, 0]]), th2: 0,
+    sy: K(u, [[0, 1], [.3, .97], [.5, 1.02], [1, 1]]), eye: K(u, [[0, 1], [.5, 1.6], [1, 1]]), tremor: K(u, [[0, 0], [.3, .5], [.38, 0]])
+  }),
+  ev: ev([.22, 'telegraph_begin'], [.42, 'hit_active_begin'], [.58, 'hit_active_end']),
+  hits: [{ u0: .42, u1: .58, x: 40, y: -190, w: 330, h: 190, k: 'n' }]
+};
+A.shut = {
+  label: 'Close Cover — Guard', ar: 'إغلاق الغلاف', dur: 2.0, loop: false, cyc: 1, fps: 24, cat: 'p1',
+  p: u => ({
+    shut: K(u, [[0, 0], [.1, 0], [.24, 1, 'out'], [.74, 1], [.84, 0, 'out']]),
+    sx: K(u, [[0, 1], [.24, .94], [.74, .94], [.8, 1.04], [.9, 1]]), sy: K(u, [[0, 1], [.24, 1.03], [.74, 1.03], [.8, .95], [.9, 1]]),
+    hx: K(u, [[0, 86], [.24, 150], [.84, 150], [1, 86]]), hy: K(u, [[0, -138], [.24, -150], [.84, -150], [1, -138]]), ang: K(u, [[0, 28], [.24, 80], [.84, 80], [1, 28]]),
+    by: K(u, [[0, 0], [.24, 18, 'out'], [.74, 16], [.8, -4], [1, 0]]), eye: K(u, [[0, 1], [.2, .2], [.84, .2], [.92, 2], [1, 1]]),
+    tremor: K(u, [[0, 0], [.3, .15], [.7, .5], [.74, 0]]), lfx: -76, rfx: 84, flash: K(u, [[0, 0], [.74, 0], [.78, .6, 'out'], [.9, 0]]),
+    hglow: K(u, [[0, 0], [.74, 0], [.8, 1.2], [1, 0]]), warn: K(u, [[0, 0], [.64, 0], [.74, .6], [.8, 0]]), btilt: K(u, [[0, 0], [.24, 5], [.8, 4], [1, 0]])
+  }),
+  ev: ev([.24, 'guard_begin'], [.74, 'guard_end'], [.78, 'burst_hit_active_begin'], [.9, 'burst_hit_active_end']),
+  hits: [{ u0: .78, u1: .9, x: -190, y: -300, w: 520, h: 300, k: 'n' }]
+};
+const VOL = [.40, .54, .68];
+A.pagestorm = {
+  label: 'Page Storm', ar: 'عاصفة الصفحات', dur: 2.3, loop: false, cyc: 1, fps: 24, cat: 'p1',
+  p: u => ({
+    open: K(u, [[0, 0], [.12, 0], [.3, 1, 'out'], [.8, 1], [.92, 0]]),
+    btilt: K(u, [[0, 0], [.3, -11, 'out'], [.4, -4, 'out'], [.54, -5], [.68, -5], [.8, -2], [1, 0]]),
+    by: K(u, [[0, 0], [.12, 12], [.3, -8], [.8, -6], [1, 0]]), eye: K(u, [[0, 1], [.3, 2.2], [.8, 1.8], [1, 1]]),
+    hx: K(u, [[0, 86], [.3, 120], [.9, 120], [1, 86]]), hy: K(u, [[0, -138], [.3, -128], [.9, -128], [1, -138]]), ang: K(u, [[0, 28], [.3, 84], [.9, 84], [1, 28]]),
+    tremor: K(u, [[0, 0], [.2, 0], [.3, .8], [.84, .6], [.9, 0]]), pgs: K(u, [[0, 0], [.2, 0], [.3, 1], [.84, 1], [.95, 0]]),
+    lfx: -70, rfx: 76, warn: K(u, [[0, 0], [.22, 0], [.3, .6], [.38, 0]]), x: K(u, [[0, 0], [.3, -18], [.8, -18], [1, 0]]),
+    hglow: 0
+  }),
+  ev: ev([.22, 'telegraph_begin']).concat(VOL.map((u, i) => ({ u, name: 'volley_' + i }))),
+  hits: VOL.map(u => ({ u0: u, u1: u + .1, x: 120, y: -300, w: 620, h: 200, k: 'proj' }))
+};
+const TOMES = [210, 370, 530, 700, -190];
+const tomeT = i => .50 + i * .05;
+A.tomes = {
+  label: 'Falling Tomes', ar: 'سقوط المجلدات', dur: 2.8, loop: false, cyc: 1, fps: 24, cat: 'p1',
+  p: u => ({
+    hx: K(u, [[0, 86], [.18, 40, 'out'], [.28, 44], [.34, 140, 'in'], [.42, 140], [.52, 44, 'out'], [.9, 44], [1, 86]]),
+    hy: K(u, [[0, -138], [.18, -330, 'out'], [.28, -326], [.34, -214, 'in'], [.42, -214], [.52, -336, 'out'], [.9, -336], [1, -138]]),
+    ang: K(u, [[0, 28], [.18, -126, 'out'], [.28, -128], [.34, 76, 'in'], [.42, 74], [.52, -90, 'out'], [.9, -90], [1, 28]]),
+    th2: K(u, [[0, 0], [.1, 1], [.92, 1], [1, 0]]),
+    by: K(u, [[0, 0], [.18, -10], [.28, -8], [.34, 22, 'in'], [.42, 16], [.52, -14, 'out'], [.9, -12], [1, 0]]),
+    btilt: K(u, [[0, 0], [.28, -8], [.34, 9, 'in'], [.5, 2], [.9, -6], [1, 0]]),
+    hglow: K(u, [[0, 0], [.5, 0], [.56, 1.5], [.9, 1.2], [1, 0]]), eye: K(u, [[0, 1], [.5, 2], [.9, 1.6], [1, 1]]),
+    tremor: K(u, [[0, 0], [.2, 0], [.28, .6], [.32, 0], [.52, 0], [.6, .5], [.85, .3], [.92, 0]]), lfx: -76, rfx: 88,
+    x: K(u, [[0, 0], [.34, 20], [.9, 20], [1, 0]]), warn: K(u, [[0, 0], [.24, 0], [.3, .6], [.34, 0]])
+  }),
+  ev: ev([.34, 'ground_hit'], [.36, 'markers_spawn']).concat(TOMES.map((x, i) => ({ u: tomeT(i), name: 'tome_' + i + '_fall', x }))),
+  hits: TOMES.map((x, i) => ({ u0: tomeT(i) + .09, u1: tomeT(i) + .17, x: x - 55, y: -90, w: 110, h: 90, k: 'n' }))
+};
+A.combo3 = {
+  label: 'Sweep · Sweep · Slam', ar: 'كومبو المسح والفهرس', dur: 3.3, loop: false, cyc: 1, fps: 24, cat: 'p1',
+  p: u => ({
+    hx: K(u, [[0, 86], [.1, -30, 'out'], [.16, -34], [.23, 120, 'in'], [.3, 118], [.4, -30, 'out'], [.44, -34], [.5, 120, 'in'], [.55, 118], [.66, 38, 'out'], [.72, 40], [.76, 150, 'in'], [.88, 150], [1, 86]]),
+    hy: K(u, [[0, -138], [.1, -158], [.23, -150], [.4, -158], [.5, -150], [.55, -150], [.66, -336, 'out'], [.72, -332], [.76, -214, 'in'], [.88, -214], [1, -138]]),
+    ang: K(u, [[0, 28], [.1, 168, 'out'], [.16, 170], [.23, 20, 'in'], [.3, 16], [.4, 168, 'out'], [.44, 170], [.5, 18, 'in'], [.55, 14], [.66, -128, 'out'], [.72, -130], [.76, 76, 'in'], [.88, 74], [1, 28]]),
+    th2: K(u, [[0, 0], [.58, 0], [.64, 1], [.9, 1], [1, 0]]),
+    by: K(u, [[0, 0], [.1, 12], [.23, 8], [.4, 12], [.5, 8], [.66, -12], [.76, 24, 'in'], [.88, 12], [1, 0]]),
+    btilt: K(u, [[0, 0], [.1, -14], [.23, 14, 'in'], [.4, -14], [.5, 15, 'in'], [.66, -9], [.76, 11, 'in'], [.9, 5], [1, 0]]),
+    x: K(u, [[0, 0], [.16, -20], [.23, 40, 'in'], [.44, 36], [.5, 90, 'in'], [.72, 80], [.76, 118, 'in'], [.9, 112], [1, 112]]),
+    lfx: K(u, [[0, -54], [.2, -80], [.5, -76], [.76, -92], [1, -54]]), rfx: K(u, [[0, 60], [.2, 90], [.5, 110], [.76, 112], [1, 60]]),
+    hglow: K(u, [[0, 0], [.2, 1], [.3, 0], [.5, 1], [.58, 0], [.72, 1], [.8, 1.4], [.9, 0]]),
+    warn: K(u, [[0, 0], [.06, 0], [.1, .5], [.16, 0], [.36, 0], [.4, .5], [.44, 0], [.62, 0], [.68, .7], [.74, 0]]),
+    eye: K(u, [[0, 1], [.5, 1.6], [.8, 1.9], [1, 1]]), sy: K(u, [[0, 1], [.76, .95], [1, 1]]),
+    tremor: K(u, [[0, 0], [.62, 0], [.7, .8], [.74, 0]])
+  }),
+  ev: ev([.10, 'telegraph_1'], [.19, 'hit_1_begin'], [.27, 'hit_1_end'], [.40, 'telegraph_2'], [.47, 'hit_2_begin'], [.55, 'hit_2_end'], [.66, 'telegraph_3'], [.76, 'hit_3_begin'], [.84, 'hit_3_end']),
+  hits: [{ u0: .19, u1: .27, x: 40, y: -190, w: 340, h: 190, k: 'n' }, { u0: .47, u1: .55, x: 100, y: -190, w: 340, h: 190, k: 'n' }, { u0: .76, u1: .84, x: 280, y: -170, w: 170, h: 170, k: 'n' }, { u0: .77, u1: .95, x: 380, y: -60, w: 520, h: 60, k: 'wave' }]
+};
+
+/* ---------------- PHASE 2 ---------------- */
+A.p2tr = {
+  label: 'Forbidden Edition — Rebind', ar: 'الطبعة المحرّمة', dur: 3.4, loop: false, cyc: 1, fps: 20, cat: 'phase', noOverlay: true,
+  p: u => ({
+    p2: K(u, [[0, 0], [.46, 0], [.6, 1]]), tear: K(u, [[0, 0], [.2, .2], [.46, 1, 'in'], [1, 1]]),
+    by: K(u, [[0, 0], [.14, 30, 'out'], [.4, 40], [.5, -22, 'out'], [.7, -4], [1, 0]]),
+    btilt: K(u, [[0, 0], [.14, 12, 'out'], [.4, 16], [.5, -14, 'out'], [.75, -2], [1, 0]]),
+    sy: K(u, [[0, 1], [.14, .9], [.4, .86], [.5, 1.1, 'out'], [.75, 1], [1, 1]]),
+    ink: K(u, [[0, 0], [.46, 0], [.6, 2.6, 'out'], [1, 2]]), flash: K(u, [[0, 0], [.45, 0], [.48, 1, 'out'], [.62, 0]]),
+    eye: K(u, [[0, 1], [.14, .1], [.4, .3], [.46, 3, 'in'], [.6, 2], [1, 1.5]]), open: K(u, [[0, 0], [.4, .2], [.5, 1, 'out'], [.62, .5], [.78, 0]]),
+    shut: K(u, [[0, 0], [.14, .8], [.4, .85], [.46, 0]]), tremor: K(u, [[0, 0], [.1, 1], [.45, 1.8], [.6, 0]]),
+    pgs: K(u, [[0, 0], [.4, 0], [.5, 1], [.9, 0]]), fireH: K(u, [[0, 0], [.5, 0], [.62, 1]]),
+    hx: K(u, [[0, 86], [.14, 150], [.4, 150], [.5, 60, 'out'], [.8, 90], [1, 86]]), hy: K(u, [[0, -138], [.14, -60], [.4, -60], [.5, -300, 'out'], [.8, -150], [1, -138]]),
+    ang: K(u, [[0, 28], [.14, 50], [.4, 50], [.5, -100, 'out'], [.8, 60], [1, 28]]), th2: K(u, [[0, 0], [.48, 0], [.54, 1], [.84, 1], [1, 0]]),
+    hglow: K(u, [[0, 0], [.46, 0], [.6, 1.8], [1, 1]]), lfx: -82, rfx: 90, rage: K(u, [[0, 0], [.5, 0], [.7, .6]])
+  }),
+  ev: ev([0, 'invulnerable_begin'], [.47, 'shockwave'], [.72, 'invulnerable_end']),
+  hits: [{ u0: .47, u1: .6, x: -300, y: -300, w: 900, h: 300, k: 'wave' }]
+};
+A.combo5 = {
+  label: 'Five-Hit Chapter', ar: 'فصل الضربات الخمس', dur: 3.5, loop: false, cyc: 1, fps: 24, cat: 'p2',
+  p: u => ({
+    hx: K(u, [[0, 86], [.07, -30, 'out'], [.1, -34], [.15, 120, 'in'], [.2, 118], [.26, 40, 'out'], [.3, 60], [.34, 90, 'in'], [.4, 100], [.5, 100], [.54, 60, 'out'], [.6, 80], [.66, 150, 'in'], [.78, 150], [1, 86]]),
+    hy: K(u, [[0, -138], [.07, -158], [.15, -150], [.26, -120, 'out'], [.34, -250, 'in'], [.4, -190], [.5, -190], [.54, -330, 'out'], [.6, -320], [.66, -214, 'in'], [.78, -214], [1, -138]]),
+    ang: K(u, [[0, 28], [.07, 168, 'out'], [.1, 170], [.15, 18, 'in'], [.2, 14], [.26, 70, 'out'], [.34, -130, 'in'], [.4, -140], [.44, -140], [.5, 280, 'in'], [.54, 330], [.6, -128, 'out'], [.66, 76, 'in'], [.78, 74], [1, 28]]),
+    th2: K(u, [[0, 0], [.22, 0], [.26, 1], [.4, 1], [.44, 0], [.52, 0], [.56, 1], [.8, 1], [1, 0]]),
+    y: K(u, [[0, 0], [.5, 0], [.56, 130, 'out'], [.62, 150], [.66, 0, 'in'], [1, 0]]),
+    x: K(u, [[0, 0], [.1, -16], [.15, 36, 'in'], [.34, 52], [.44, 40], [.5, 40], [.6, 170], [.66, 210, 'in'], [.8, 200], [1, 200]]),
+    by: K(u, [[0, 0], [.07, 12], [.15, 8], [.26, 14], [.34, -4], [.5, 16], [.56, -20], [.66, 26, 'in'], [.8, 10], [1, 0]]),
+    btilt: K(u, [[0, 0], [.07, -14], [.15, 14, 'in'], [.26, -10], [.34, 8], [.44, -6], [.5, 40, 'in'], [.56, -8], [.66, 12, 'in'], [.85, 3], [1, 0]]),
+    lfx: K(u, [[0, -54], [.15, -80], [.56, -40], [.62, -20], [.66, -92], [1, -54]]), rfx: K(u, [[0, 60], [.15, 120], [.56, 40], [.62, 30], [.66, 112], [1, 60]]),
+    lfy: K(u, [[0, 0], [.56, -30], [.62, -36], [.66, 0]]), rfy: K(u, [[0, 0], [.56, -50], [.62, -50], [.66, 0]]),
+    hglow: K(u, [[0, 0], [.1, 1], [.3, 1], [.5, 1.4], [.8, 1.6], [1, 0]]), eye: 2, ink: 1.6, fireH: 1,
+    warn: K(u, [[0, 0], [.03, 0], [.07, .6], [.1, 0], [.2, 0], [.24, .5], [.28, 0], [.4, 0], [.44, .5], [.48, 0], [.5, 0], [.55, .6], [.6, 0], [.62, 0], [.64, .7], [.66, 0]]),
+    tremor: K(u, [[0, 0], [.56, 0], [.62, .5], [.66, 0]]), sy: K(u, [[0, 1], [.66, .94], [.85, 1], [1, 1]])
+  }),
+  ev: ev([.06, 'telegraph_1'], [.12, 'hit_1'], [.22, 'telegraph_2'], [.29, 'hit_2'], [.40, 'telegraph_3'], [.47, 'hit_3'], [.53, 'telegraph_4_leap'], [.62, 'hit_4_air'], [.66, 'hit_5_slam']),
+  hits: [{ u0: .12, u1: .19, x: 40, y: -190, w: 330, h: 190, k: 'n' }, { u0: .29, u1: .36, x: 60, y: -300, w: 260, h: 300, k: 'n' }, { u0: .45, u1: .52, x: -140, y: -300, w: 520, h: 300, k: 'n' }, { u0: .58, u1: .66, x: 250, y: -330, w: 250, h: 330, k: 'n' }, { u0: .66, u1: .8, x: 280, y: -110, w: 170, h: 110, k: 'n' }, { u0: .67, u1: .86, x: 380, y: -60, w: 540, h: 60, k: 'wave' }]
+};
+A.redpass = {
+  label: 'Red Passage — Unblockable', ar: 'المقطع الأحمر', dur: 2.8, loop: false, cyc: 1, fps: 24, cat: 'p2',
+  p: u => ({
+    hx: K(u, [[0, 86], [.2, 38, 'out'], [.58, 42], [.64, 156, 'in'], [.9, 156], [1, 86]]),
+    hy: K(u, [[0, -138], [.2, -338, 'out'], [.58, -344], [.64, -214, 'in'], [.9, -214], [1, -138]]),
+    ang: K(u, [[0, 28], [.2, -130, 'out'], [.58, -134], [.64, 76, 'in'], [.9, 74], [1, 28]]), th2: K(u, [[0, 0], [.1, 1], [.9, 1], [1, 0]]),
+    warn: K(u, [[0, 0], [.2, .4], [.3, 1], [.58, 1], [.62, .4], [.7, 0]]), hglow: K(u, [[0, 0], [.2, 1.4], [.58, 2.2], [.7, 2.6], [.9, 0]]),
+    by: K(u, [[0, 0], [.2, -14], [.58, -16], [.64, 28, 'in'], [.8, 16], [1, 0]]), btilt: K(u, [[0, 0], [.2, -12], [.58, -13], [.64, 14, 'in'], [.85, 6], [1, 0]]),
+    x: K(u, [[0, 0], [.58, -20], [.64, 56, 'in'], [.9, 50], [1, 0]]), lfx: -88, rfx: 108, eye: K(u, [[0, 1], [.2, 2.4], [.9, 2.4], [1, 1]]), ink: 2, fireH: 1,
+    tremor: K(u, [[0, 0], [.2, .4], [.3, 1], [.6, 1.3], [.62, 0]]), sy: K(u, [[0, 1], [.58, 1.04], [.64, .93], [.9, 1], [1, 1]]),
+    pgs: K(u, [[0, 0], [.3, .6], [.62, 1], [.9, 0]]), flash: K(u, [[0, 0], [.63, 0], [.65, .4, 'out'], [.75, 0]])
+  }),
+  ev: ev([.2, 'telegraph_red_begin'], [.58, 'telegraph_red_end'], [.64, 'hit_unblockable_begin'], [.78, 'hit_unblockable_end']),
+  hits: [{ u0: .64, u1: .78, x: 100, y: -200, w: 220, h: 200, k: 'red' }, { u0: .65, u1: .9, x: 200, y: -80, w: 760, h: 80, k: 'red' }]
+};
+A.indexlock = {
+  label: 'Index Lock — Page Walls', ar: 'قفلة الفهرس', dur: 2.8, loop: false, cyc: 1, fps: 24, cat: 'p2',
+  p: u => ({
+    hx: K(u, [[0, 86], [.14, 40, 'out'], [.24, 44], [.3, 140, 'in'], [.84, 140], [1, 86]]), hy: K(u, [[0, -138], [.14, -330, 'out'], [.24, -326], [.3, -214, 'in'], [.84, -214], [1, -138]]),
+    ang: K(u, [[0, 28], [.14, -126, 'out'], [.24, -128], [.3, 76, 'in'], [.84, 74], [1, 28]]), th2: K(u, [[0, 0], [.08, 1], [.86, 1], [1, 0]]),
+    by: K(u, [[0, 0], [.14, -12], [.24, -10], [.3, 24, 'in'], [.46, 14], [.84, 12], [1, 0]]), btilt: K(u, [[0, 0], [.24, -9], [.3, 10, 'in'], [.5, 4], [1, 0]]),
+    hglow: K(u, [[0, 0], [.2, 1], [.3, 2], [.84, 1.2], [1, 0]]), eye: K(u, [[0, 1], [.3, 2.2], [.84, 2], [1, 1]]), lfx: -86, rfx: 98, ink: 1.8, fireH: 1,
+    tremor: K(u, [[0, 0], [.14, 0], [.22, .7], [.28, 0], [.36, .4], [.8, .3], [.86, 0]]), warn: K(u, [[0, 0], [.18, 0], [.24, .6], [.3, 0]]), pgs: K(u, [[0, 0], [.3, 1], [.84, 1], [1, 0]])
+  }),
+  ev: ev([.14, 'telegraph_begin'], [.3, 'walls_rise'], [.4, 'walls_close_begin'], [.78, 'walls_sink']),
+  hits: [{ u0: .3, u1: .38, x: 190, y: -120, w: 150, h: 120, k: 'n' }, { u0: .34, u1: .82, x: 480, y: -420, w: 80, h: 420, k: 'wall' }, { u0: .34, u1: .82, x: -290, y: -420, w: 80, h: 420, k: 'wall' }]
+};
+const FIRE = [260, 420, 580, 740];
+A.burning = {
+  label: 'Burning Chapter', ar: 'الفصل المحترق', dur: 2.6, loop: false, cyc: 1, fps: 24, cat: 'p2',
+  p: u => ({
+    hx: K(u, [[0, 86], [.16, 30, 'out'], [.34, 34], [.4, 150, 'in'], [.8, 150], [1, 86]]), hy: K(u, [[0, -138], [.16, -300, 'out'], [.34, -296], [.4, -214, 'in'], [.8, -214], [1, -138]]),
+    ang: K(u, [[0, 28], [.16, -120, 'out'], [.34, -124], [.4, 76, 'in'], [.8, 74], [1, 28]]), th2: K(u, [[0, 0], [.1, 1], [.8, 1], [1, 0]]),
+    hglow: K(u, [[0, 0], [.14, 1.2], [.34, 2.4], [.8, 1.6], [1, 0]]), fireH: K(u, [[0, 0], [.1, 1]]), by: K(u, [[0, 0], [.16, -12], [.34, -10], [.4, 22, 'in'], [.6, 12], [1, 0]]),
+    btilt: K(u, [[0, 0], [.34, -8], [.4, 10, 'in'], [.7, 4], [1, 0]]), eye: K(u, [[0, 1], [.34, 2.2], [1, 1.3]]), ink: 1.6, lfx: -84, rfx: 96,
+    tremor: K(u, [[0, 0], [.2, .4], [.3, .8], [.36, 0]]), warn: K(u, [[0, 0], [.2, 0], [.3, .6], [.36, 0]]), x: K(u, [[0, 0], [.4, 30], [.8, 28], [1, 0]])
+  }),
+  ev: ev([.12, 'telegraph_begin'], [.4, 'ground_hit']).concat(FIRE.map((x, i) => ({ u: .42 + i * .035, name: 'fire_' + i + '_ignite', x }))).concat([{ u: .85, name: 'fire_end' }]),
+  hits: [{ u0: .4, u1: .48, x: 110, y: -170, w: 170, h: 170, k: 'n' }].concat(FIRE.map((x, i) => ({ u0: .44 + i * .035, u1: .85, x: x - 60, y: -90, w: 120, h: 90, k: 'fire' })))
+};
+A.pageflip = {
+  label: 'Page Flip — Teleport Strike', ar: 'قلب الصفحة', dur: 1.9, loop: false, cyc: 1, fps: 24, cat: 'p2',
+  p: u => ({
+    alpha: K(u, [[0, 1], [.1, 1], [.2, 0], [.4, 0], [.44, 1]]), x: u < .42 ? 0 : 360,
+    pgs: K(u, [[0, 0], [.08, 1], [.2, 1], [.5, 1], [.62, 0]]), hx: K(u, [[0, 86], [.5, -30, 'out'], [.54, -34], [.62, 120, 'in'], [.8, 118], [1, 86]]),
+    hy: K(u, [[0, -138], [.5, -158], [.62, -150], [1, -138]]), ang: K(u, [[0, 28], [.5, 168, 'out'], [.54, 170], [.62, 18, 'in'], [.76, 14], [1, 28]]),
+    by: K(u, [[0, 0], [.1, 14], [.44, 14], [.54, 14], [.62, 8], [1, 0]]), btilt: K(u, [[0, 0], [.5, -14], [.62, 14, 'in'], [.8, 6], [1, 0]]),
+    lfx: K(u, [[0, -54], [.5, -90], [.62, -70], [1, -54]]), rfx: K(u, [[0, 60], [.5, 70], [.62, 120], [1, 60]]), hglow: K(u, [[0, 0], [.5, .6], [.62, 1.6], [.85, 0]]),
+    eye: K(u, [[0, 1], [.44, 2.6], [1, 1.4]]), flash: K(u, [[0, 0], [.43, 0], [.46, .7, 'out'], [.6, 0]]), ink: 1.6, fireH: 1, warn: K(u, [[0, 0], [.46, .6], [.54, 0]]),
+    sy: K(u, [[0, 1], [.44, .94], [.5, 1], [1, 1]]), th2: 0
+  }),
+  ev: ev([.04, 'vanish_begin'], [.2, 'untargetable_begin'], [.42, 'teleport'], [.46, 'reappear_telegraph'], [.58, 'hit_active_begin'], [.7, 'hit_active_end']),
+  hits: [{ u0: .58, u1: .7, x: 400, y: -190, w: 340, h: 190, k: 'n' }]
+};
+A.finale = {
+  label: 'Final Chapter — Grab', ar: 'الفصل الأخير', dur: 3.2, loop: false, cyc: 1, fps: 24, cat: 'p2',
+  p: u => ({
+    x: K(u, [[0, 0], [.24, -26, 'out'], [.3, -26], [.38, 220, 'expo'], [.52, 230], [.62, 150, 'io'], [.74, 150], [1, 0, 'io']]),
+    hx: K(u, [[0, 86], [.24, -20, 'out'], [.36, 40], [.4, 230, 'out'], [.52, 236], [.6, 80, 'io'], [.7, 80], [1, 86]]),
+    hy: K(u, [[0, -138], [.24, -150], [.4, -150], [.52, -156], [.6, -150], [1, -138]]), ang: K(u, [[0, 28], [.24, 150, 'out'], [.4, 8], [.52, 10], [.62, 60], [1, 28]]),
+    th2: 0, shut: K(u, [[0, 0], [.52, 0], [.62, 1, 'out'], [.82, 1], [.9, 0, 'out']]),
+    lean: K(u, [[0, 0], [.24, -.05], [.4, .12], [.52, .1], [.7, 0]]), warn: K(u, [[0, 0], [.1, .6], [.2, 1], [.3, 1], [.36, .3], [.4, 0]]),
+    by: K(u, [[0, 0], [.24, 14], [.4, 12], [.52, 12], [.66, 16], [.72, -12, 'out'], [.76, 30, 'in'], [.9, 8], [1, 0]]), btilt: K(u, [[0, 0], [.24, -12], [.4, 14], [.62, 4], [.72, -20, 'out'], [.76, 14, 'in'], [1, 0]]),
+    eye: K(u, [[0, 1], [.2, 2.6], [.5, 2.6], [.62, .2], [.82, .2], [.92, 2.6], [1, 1.2]]), hglow: K(u, [[0, 0], [.5, 1], [.8, 2], [1, 0]]), ink: 2, fireH: 1,
+    tremor: K(u, [[0, 0], [.1, .8], [.3, 1.4], [.38, 0], [.62, .6], [.72, 1.2], [.76, 0]]), pgs: K(u, [[0, 0], [.56, 0], [.62, 1], [.9, 0]]),
+    flash: K(u, [[0, 0], [.75, 0], [.77, .8, 'out'], [.9, 0]]), lfx: K(u, [[0, -54], [.3, -100], [.4, -30], [.62, -90], [1, -54]]), rfx: K(u, [[0, 60], [.3, 70], [.4, 120], [.62, 100], [1, 60]])
+  }),
+  ev: ev([.1, 'telegraph_red_begin'], [.36, 'lunge'], [.42, 'grab_active_begin'], [.52, 'grab_active_end'], [.62, 'player_locked'], [.76, 'slam_damage'], [.9, 'release']),
+  hits: [{ u0: .4, u1: .52, x: 150, y: -230, w: 160, h: 190, k: 'grab' }, { u0: .76, u1: .86, x: -40, y: -300, w: 520, h: 300, k: 'red' }]
+};
+
+const ORDER = ['idle', 'walk', 'slam', 'sweep', 'shut', 'pagestorm', 'tomes', 'combo3', 'p2tr', 'combo5', 'redpass', 'indexlock', 'burning', 'pageflip', 'finale', 'hurt', 'death', 'appear'];
+
+function getPose(name, u, T, p2, rage) {
+  const a = A[name];
+  const p = Object.assign({}, DEF, a.p(u));
+  if (p2 && !a.noOverlay) {
+    p.p2 = 1; p.hs = (p.hs || 1) * 1.16; p.ink = Math.max(p.ink, 1.4); p.fireH = Math.max(p.fireH, 1); p.hglow = Math.max(p.hglow, .6) * 1.1;
+    p.eye *= 1.25; p.tear = 1;
+  }
+  if (name === 'p2tr') p.hs = lerp(1.12, 1.3, clamp((p.p2)));
+  if (rage && !a.noOverlay) p.rage = 1;
+  p.u = u; p.T = T; p.cyc = a.cyc; p.name = name; p.dur = a.dur;
+  return p;
+}
+function blendPose(a, b, t) { const o = Object.assign({}, b); for (const k in DEF) if (typeof a[k] === 'number' && typeof b[k] === 'number') o[k] = lerp(a[k], b[k], t); return o; }
+
+g.ACORE = { TAU, R, C, rgba, clamp, lerp, sm, frac, hash, h2, kf, DEF, A, ORDER, getPose, blendPose, TOMES, tomeT, VOL, FIRE };
+})(typeof window !== 'undefined' ? window : globalThis);
+
+/* ============================================================
+   THE ARCHIVIST — part 2: drawing (book body, black limbs, book-hammer)
+   ============================================================ */
+(function (g) {
+'use strict';
+const { TAU, R, C, rgba, clamp, lerp, sm, frac, h2 } = g.ACORE;
+
+const OUT = '#120a07', INKB = '#0a0a0c';
+const RED = '#8c2a22', RED_L = '#b4483a', RED_D = '#4a1410', GOLD = '#e2aa42', GOLD_D = '#8e6422';
+const CR_L = '#efe0bd', CR_M = '#d8c195', CR_D = '#a88c5e';
+
+function poly(ctx, pts) { ctx.beginPath(); ctx.moveTo(pts[0][0], pts[0][1]); for (let i = 1; i < pts.length; i++) ctx.lineTo(pts[i][0], pts[i][1]); ctx.closePath(); }
+function glowDot(ctx, x, y, r, col, a) {
+  if (a <= .003) return; const gr = ctx.createRadialGradient(x, y, 0, x, y, r);
+  gr.addColorStop(0, rgba(col, a)); gr.addColorStop(.4, rgba(col, a * .35)); gr.addColorStop(1, rgba(col, 0)); ctx.fillStyle = gr; ctx.fillRect(x - r, y - r, r * 2, r * 2);
+}
+function add(ctx, fn) { ctx.save(); ctx.globalCompositeOperation = 'lighter'; fn(); ctx.restore(); }
+function ik(sx, sy, hx, hy, l1, l2, bend) {
+  let dx = hx - sx, dy = hy - sy, d = Math.hypot(dx, dy); const mx = l1 + l2 - .5;
+  if (d > mx) { dx *= mx / d; dy *= mx / d; d = mx; } if (d < 24) { const k = 24 / (d || 1); dx *= k; dy *= k; d = 24; }
+  const a = Math.atan2(dy, dx), cs = clamp((l1 * l1 + d * d - l2 * l2) / (2 * l1 * d), -1, 1), an = Math.acos(cs) * bend;
+  return { ex: sx + Math.cos(a + an) * l1, ey: sy + Math.sin(a + an) * l1, hx: sx + dx, hy: sy + dy };
+}
+function limb(ctx, pts, ws) {
+  const L = [], Rr = [];
+  for (let i = 0; i < pts.length; i++) {
+    const p0 = pts[Math.max(0, i - 1)], p1 = pts[Math.min(pts.length - 1, i + 1)]; let dx = p1[0] - p0[0], dy = p1[1] - p0[1]; const d = Math.hypot(dx, dy) || 1; dx /= d; dy /= d;
+    L.push([pts[i][0] - dy * ws[i], pts[i][1] + dx * ws[i]]); Rr.push([pts[i][0] + dy * ws[i], pts[i][1] - dx * ws[i]]);
+  }
+  poly(ctx, L.concat(Rr.reverse()));
+}
+function blob(ctx, S, K_, H, ws, p2, amb) {
+  ctx.save();
+  const circ = (P_, w) => { ctx.moveTo(P_[0] + w, P_[1]); ctx.arc(P_[0], P_[1], w, 0, TAU); };
+  ctx.lineWidth = 5; ctx.strokeStyle = '#000';
+  limb(ctx, [S, K_, H], ws); ctx.stroke(); ctx.beginPath(); circ(S, ws[0]); circ(K_, ws[1]); ctx.stroke();
+  const gr = ctx.createLinearGradient(S[0], S[1], H[0], H[1]); gr.addColorStop(0, '#202026'); gr.addColorStop(1, '#09090b');
+  ctx.fillStyle = gr; limb(ctx, [S, K_, H], ws); ctx.fill(); ctx.beginPath(); circ(S, ws[0]); circ(K_, ws[1]); ctx.fill();
+  ctx.strokeStyle = 'rgba(160,150,165,.30)'; ctx.lineWidth = 2.2; ctx.lineCap = 'round';
+  const nx = -(K_[1] - S[1]), ny = (K_[0] - S[0]), nl = Math.hypot(nx, ny) || 1;
+  ctx.beginPath(); ctx.moveTo(S[0] + nx / nl * (ws[0] - 5), S[1] + ny / nl * (ws[0] - 5)); ctx.quadraticCurveTo(K_[0] + nx / nl * (ws[1] - 3), K_[1] + ny / nl * (ws[1] - 3), K_[0] + nx / nl * (ws[1] - 5), K_[1] + ny / nl * (ws[1] - 5)); ctx.stroke();
+  ctx.restore();
+  if (p2 > .02) add(ctx, () => { ctx.strokeStyle = rgba(C.amber, .55 * p2 * amb); ctx.lineWidth = 1.5; ctx.beginPath(); ctx.moveTo(S[0] + 5, S[1] + 4); ctx.lineTo(lerp(S[0], K_[0], .5) - 3, lerp(S[1], K_[1], .5) + 6); ctx.lineTo(K_[0] + 4, K_[1] - 2); ctx.stroke(); });
+}
+function fist(ctx, x, y, rot, p2) {
+  ctx.save(); ctx.translate(x, y); ctx.rotate(rot);
+  ctx.beginPath(); ctx.ellipse(0, 0, 23, 20, 0, 0, TAU); const gr = ctx.createRadialGradient(-6, -8, 2, 0, 0, 24); gr.addColorStop(0, '#222227'); gr.addColorStop(1, '#09090b');
+  ctx.fillStyle = gr; ctx.fill(); ctx.lineWidth = 2.2; ctx.strokeStyle = '#000'; ctx.stroke();
+  ctx.strokeStyle = 'rgba(0,0,0,.9)'; ctx.lineWidth = 1.6; for (const k of [-8, 0, 8]) { ctx.beginPath(); ctx.moveTo(8, k); ctx.lineTo(19, k * 1.1); ctx.stroke(); }
+  ctx.strokeStyle = 'rgba(150,140,150,.3)'; ctx.lineWidth = 1.8; ctx.beginPath(); ctx.arc(0, 0, 18, Math.PI * 1.15, Math.PI * 1.6); ctx.stroke();
+  ctx.restore();
+}
+function foot(ctx, x, y, dir) {
+  ctx.save(); ctx.translate(x, y);
+  ctx.beginPath(); ctx.moveTo(-26, -22); ctx.quadraticCurveTo(-34, 2, -22, 6); ctx.lineTo(34, 6);
+  ctx.quadraticCurveTo(46, 4, 40, -6); ctx.quadraticCurveTo(34, -20, 16, -26); ctx.closePath();
+  const gr = ctx.createLinearGradient(0, -26, 0, 6); gr.addColorStop(0, '#1d1d21'); gr.addColorStop(1, '#050506'); ctx.fillStyle = gr; ctx.fill(); ctx.lineWidth = 2.2; ctx.strokeStyle = '#000'; ctx.stroke();
+  ctx.strokeStyle = 'rgba(0,0,0,.95)'; ctx.lineWidth = 1.8; for (const k of [10, 21, 31]) { ctx.beginPath(); ctx.moveTo(k, 6); ctx.lineTo(k - 2, -9); ctx.stroke(); }
+  ctx.strokeStyle = 'rgba(150,140,150,.28)'; ctx.lineWidth = 1.6; ctx.beginPath(); ctx.moveTo(-18, -20); ctx.quadraticCurveTo(0, -27, 18, -23); ctx.stroke();
+  ctx.restore();
+}
+
+/* -------- the book hammer -------- */
+function drawHammer(ctx, P, ph) {
+  const a = P.ang * R, d = [Math.cos(a), Math.sin(a)], n = [-Math.sin(a), Math.cos(a)], hs = P.hs;
+  const gx = P.gx, gy = P.gy;
+  const pt = (s_, o_) => [gx + d[0] * s_ * hs + n[0] * o_ * hs, gy + d[1] * s_ * hs + n[1] * o_ * hs];
+  ctx.save(); ctx.lineJoin = 'round';
+  // handle
+  poly(ctx, [pt(-62, -6), pt(100, -6), pt(100, 6), pt(-62, 6)]);
+  let gr = ctx.createLinearGradient(...pt(0, -7), ...pt(0, 7)); gr.addColorStop(0, '#8a5a34'); gr.addColorStop(.5, '#5a3820'); gr.addColorStop(1, '#2e1a0e');
+  ctx.fillStyle = gr; ctx.fill(); ctx.lineWidth = 2.4; ctx.strokeStyle = OUT; ctx.stroke();
+  // pommel
+  poly(ctx, [pt(-72, -9), pt(-60, -9), pt(-60, 9), pt(-72, 9)]); ctx.fillStyle = '#6b4126'; ctx.fill(); ctx.stroke();
+  ctx.strokeStyle = GOLD_D; ctx.lineWidth = 1.4; for (const s_ of [-66, -63]) { const a_ = pt(s_, -9), b_ = pt(s_, 9); ctx.beginPath(); ctx.moveTo(a_[0], a_[1]); ctx.lineTo(b_[0], b_[1]); ctx.stroke(); }
+  // head: a big book. long axis along the handle
+  const HL = 92, HW = 108, c0 = 148;
+  const corner = [[c0 - HL / 2, -HW / 2], [c0 + HL / 2, -HW / 2], [c0 + HL / 2, HW / 2], [c0 - HL / 2, HW / 2]].map(p => pt(p[0], p[1]));
+  // pages edge (towards +perp), drawn first as a slab under the cover
+  const pg = [[c0 - HL / 2 + 6, HW / 2], [c0 + HL / 2 - 6, HW / 2], [c0 + HL / 2 - 6, HW / 2 + 16], [c0 - HL / 2 + 6, HW / 2 + 16]].map(p => pt(p[0], p[1]));
+  poly(ctx, pg); ctx.fillStyle = CR_M; ctx.fill(); ctx.lineWidth = 2.2; ctx.strokeStyle = OUT; ctx.stroke();
+  ctx.strokeStyle = 'rgba(70,45,20,.6)'; ctx.lineWidth = 1; for (let i = 1; i < 7; i++) { const a_ = pt(c0 - HL / 2 + 6 + i * (HL - 12) / 7, HW / 2), b_ = pt(c0 - HL / 2 + 6 + i * (HL - 12) / 7, HW / 2 + 16); ctx.beginPath(); ctx.moveTo(a_[0], a_[1]); ctx.lineTo(b_[0], b_[1]); ctx.stroke(); }
+  poly(ctx, corner);
+  gr = ctx.createLinearGradient(...pt(c0 - HL / 2, 0), ...pt(c0 + HL / 2, 0)); gr.addColorStop(0, RED_D); gr.addColorStop(.35, RED_L); gr.addColorStop(1, RED);
+  ctx.fillStyle = gr; ctx.fill(); ctx.lineWidth = 2.6; ctx.strokeStyle = OUT; ctx.stroke();
+  // gold inlay frames
+  ctx.strokeStyle = GOLD; ctx.lineWidth = 1.8;
+  const fr = [[c0 - HL / 2 + 9, -HW / 2 + 9], [c0 + HL / 2 - 9, -HW / 2 + 9], [c0 + HL / 2 - 9, HW / 2 - 9], [c0 - HL / 2 + 9, HW / 2 - 9]].map(p => pt(p[0], p[1]));
+  poly(ctx, fr); ctx.stroke();
+  ctx.strokeStyle = GOLD_D; ctx.lineWidth = 1.2; const m1 = pt(c0 - 8, -HW / 2 + 9), m2 = pt(c0 - 8, HW / 2 - 9); ctx.beginPath(); ctx.moveTo(m1[0], m1[1]); ctx.lineTo(m2[0], m2[1]); ctx.stroke();
+  // corner caps
+  ctx.fillStyle = GOLD_D; for (const c_ of corner) { ctx.beginPath(); ctx.arc(c_[0], c_[1], 4.5, 0, TAU); ctx.fill(); }
+  // glow / fire
+  const hc = pt(c0, 0), gk = Math.min(2.6, P.hglow);
+  if (gk > .02) add(ctx, () => { glowDot(ctx, hc[0], hc[1], 130 * hs, C.amber, .32 * gk); ctx.strokeStyle = rgba(C.hi, .5 * Math.min(1, gk)); ctx.lineWidth = 2; poly(ctx, corner); ctx.stroke(); });
+  if (P.fireH > .02) fireOn(ctx, pg[2], pg[3], P.T, hs, P.fireH);
+  ctx.restore();
+  P.headC = hc; P.headPts = corner;
+}
+function fireOn(ctx, a, b, T, hs, k) {
+  add(ctx, () => {
+    const n = 7;
+    for (let i = 0; i < n; i++) {
+      const t = (i + .5) / n, x = lerp(a[0], b[0], t), y = lerp(a[1], b[1], t);
+      const f = frac(T * 2.6 + h2(i, 1)), h = (18 + 22 * h2(i, 2)) * hs * k * (1 - f * .4);
+      const gr = ctx.createRadialGradient(x, y, 0, x, y - h * .6, h); gr.addColorStop(0, rgba(C.hi, .85)); gr.addColorStop(.4, rgba(C.amber, .6)); gr.addColorStop(1, rgba(C.ember, 0));
+      ctx.fillStyle = gr; ctx.beginPath(); ctx.ellipse(x, y - h * .45, 6 * hs, h * .7, 0, 0, TAU); ctx.fill();
+      ctx.fillStyle = rgba(C.hi, (1 - f) * .8); ctx.fillRect(x + (h2(i, 3) - .5) * 20, y - h - 22 * f, 2.5, 2.5);
+    }
+  });
+}
+
+/* -------- the book body -------- */
+function drawBook(ctx, P, ph) {
+  const BW = 105, BH = 115, T = P.T;
+  ctx.save();
+  ctx.transform(1, 0, .1, 1, 0, 0);
+  const sh = P.shut, op = P.open, pt2 = P.p2;
+  // back cover (dark red) peeks at lower-left
+  poly(ctx, [[-BW - 7, -BH + 8], [BW - 40, -BH + 4], [BW - 40, BH + 6], [-BW - 7, BH + 8]]); ctx.fillStyle = RED_D; ctx.fill(); ctx.lineWidth = 2.6; ctx.strokeStyle = OUT; ctx.stroke();
+  // pages block (front face)
+  const PX0 = 56, PX1 = 112;
+  poly(ctx, [[PX0 - 4, -BH + 2], [PX1 + 3, -BH + 7], [PX1 + 3, BH - 5], [PX0 - 4, BH - 1]]); ctx.fillStyle = CR_M; ctx.fill(); ctx.lineWidth = 2.4; ctx.strokeStyle = OUT; ctx.stroke();
+  ctx.save(); ctx.clip();
+  for (let i = 0; i < 17; i++) { const x = PX0 - 2 + i * 3.4; ctx.fillStyle = i % 2 ? '#efe2c4' : '#cdb78a'; ctx.fillRect(x, -BH, 2.4, BH * 2); }
+  ctx.restore();
+  // cover plate
+  poly(ctx, [[-BW, -BH], [PX0 + 6, -BH + 1], [PX0 + 6, BH], [-BW, BH]]);
+  let gr = ctx.createLinearGradient(-BW, -BH, PX0, BH); gr.addColorStop(0, CR_L); gr.addColorStop(.55, CR_M); gr.addColorStop(1, CR_D);
+  ctx.fillStyle = gr; ctx.fill(); ctx.lineWidth = 2.8; ctx.strokeStyle = OUT; ctx.stroke();
+  ctx.save(); ctx.clip();
+  // stains + fold lines
+  for (let i = 0; i < 9; i++) { ctx.fillStyle = `rgba(110,80,40,${.06 + .06 * h2(i, 3)})`; ctx.beginPath(); ctx.ellipse(-BW + 20 + h2(i, 1) * 150, -BH + 20 + h2(i, 2) * 210, 12 + 22 * h2(i, 4), 8 + 14 * h2(i, 5), h2(i, 6), 0, TAU); ctx.fill(); }
+  ctx.strokeStyle = 'rgba(20,12,6,.85)'; ctx.lineWidth = 2.2; for (const yy of [-52, -34]) { ctx.beginPath(); ctx.moveTo(-BW, yy); ctx.lineTo(PX0 - 4, yy + 2); ctx.stroke(); }
+  ctx.strokeStyle = 'rgba(20,12,6,.35)'; ctx.lineWidth = 1.4; ctx.beginPath(); ctx.moveTo(-BW + 36, -BH); ctx.lineTo(-BW + 34, BH); ctx.stroke();
+  // soot toward the lower edge
+  const sg = ctx.createLinearGradient(0, BH - 60, 0, BH); sg.addColorStop(0, 'rgba(20,10,4,0)'); sg.addColorStop(1, 'rgba(20,10,4,.38)'); ctx.fillStyle = sg; ctx.fillRect(-BW, BH - 60, 200, 60);
+  ctx.restore();
+  // red leather spine band
+  poly(ctx, [[8, -BH - 5], [54, -BH - 3], [56, BH + 5], [6, BH + 6]]);
+  gr = ctx.createLinearGradient(8, 0, 56, 0); gr.addColorStop(0, RED); gr.addColorStop(.45, RED_L); gr.addColorStop(1, RED_D); ctx.fillStyle = gr; ctx.fill(); ctx.lineWidth = 2.8; ctx.strokeStyle = OUT; ctx.stroke();
+  ctx.strokeStyle = GOLD; ctx.lineWidth = 1.7; for (const yy of [-22, -12, 70, 80]) { ctx.beginPath(); ctx.moveTo(10, yy); ctx.lineTo(54, yy + 1); ctx.stroke(); }
+  ctx.strokeStyle = GOLD_D; ctx.lineWidth = 1.2; ctx.beginPath(); ctx.moveTo(31, -BH + 6); ctx.lineTo(31, BH - 6); ctx.stroke();
+  // red corner guards on the cover
+  ctx.fillStyle = RED; for (const [cx, cy, sx, sy] of [[-BW, -BH, 1, 1], [-BW, BH, 1, -1]]) { poly(ctx, [[cx, cy], [cx + 26 * sx, cy], [cx + 26 * sx, cy + 6 * sy], [cx + 6 * sx, cy + 26 * sy], [cx, cy + 26 * sy]]); ctx.fill(); ctx.lineWidth = 2; ctx.stroke(); }
+
+  /* ---- cavity with the eye (front, pages side) ---- */
+  const top = lerp(-92, -BH + 14, op), bot = lerp(2, BH - 18, op), lx = lerp(52, 38, op), rx = 116;
+  poly(ctx, [[lx, top], [rx, top - 8], [rx + 2, bot - 6], [lx + 2, bot]]);
+  ctx.fillStyle = '#080503'; ctx.fill(); ctx.lineWidth = 2.4; ctx.strokeStyle = OUT; ctx.stroke();
+  if (op > .02) {
+    ctx.save(); ctx.clip();
+    const ig = ctx.createRadialGradient(84, (top + bot) / 2, 4, 84, (top + bot) / 2, 100); ig.addColorStop(0, rgba(C.hi, .95 * op)); ig.addColorStop(.35, rgba(C.amber, .8 * op)); ig.addColorStop(1, rgba(C.ember, .1 * op));
+    ctx.fillStyle = ig; ctx.fillRect(lx - 4, top - 10, 100, bot - top + 20);
+    ctx.strokeStyle = rgba(C.paper, .6 * op); ctx.lineWidth = 1.3; for (let i = 0; i < 9; i++) { const yy = top + 12 + i * ((bot - top - 24) / 8); ctx.beginPath(); ctx.moveTo(lx + 8, yy); ctx.lineTo(lx + 8 + (30 + 36 * h2(i, 9)) * (.7 + .3 * Math.sin(T * 6 + i)), yy); ctx.stroke(); }
+    ctx.restore();
+    // paper teeth around the opened mouth
+    ctx.fillStyle = CR_M; ctx.lineWidth = 1.6; ctx.strokeStyle = OUT;
+    for (let i = 0; i < 8; i++) { const yy = lerp(top, bot, (i + .5) / 8), l = (10 + 12 * h2(i, 11)) * op * (1 + .4 * Math.sin(T * 7 + i)); poly(ctx, [[lx + 1, yy - 6], [lx - l, yy + 1], [lx + 1, yy + 7]]); ctx.fill(); ctx.stroke(); poly(ctx, [[rx, yy - 6], [rx + l, yy + 1], [rx, yy + 7]]); ctx.fill(); ctx.stroke(); }
+  }
+  // hood flap above the cavity (paper corner)
+  if (op < .7) { poly(ctx, [[lx - 6, top + 6], [rx - 12, top - 30 + 8 * 0], [rx + 1, top - 6], [lx + 2, top + 14]]); ctx.fillStyle = CR_L; ctx.fill(); ctx.lineWidth = 2.4; ctx.strokeStyle = OUT; ctx.stroke(); }
+  // the eye
+  const ek = Math.max(0, P.eye) * (1 - sh * .9);
+  if (ek > .02) {
+    const ex = lerp(84, 82, op), ey = lerp(-44, 0, op);
+    add(ctx, () => { glowDot(ctx, ex, ey, 56 * (.6 + ek * .5), C.amber, .5 * Math.min(1.5, ek)); });
+    ctx.beginPath(); ctx.ellipse(ex, ey, 5.2 + ek * .6, 17 + ek * 2, 0, 0, TAU); ctx.fillStyle = rgba(C.hi, 1); ctx.fill();
+    ctx.beginPath(); ctx.ellipse(ex, ey, 3, 12 + ek, 0, 0, TAU); ctx.fillStyle = '#fff6d6'; ctx.fill();
+    add(ctx, () => { ctx.strokeStyle = rgba(C.amber, .8 * Math.min(1, ek)); ctx.lineWidth = 2; ctx.beginPath(); ctx.ellipse(ex, ey, 6.5, 19, 0, 0, TAU); ctx.stroke(); });
+  }
+  // closing cover plate
+  if (sh > .01) {
+    const x0 = lerp(130, 40, sm(sh));
+    poly(ctx, [[x0, -BH - 4], [128, -BH + 2], [128, BH + 2], [x0 - 2, BH + 4]]);
+    gr = ctx.createLinearGradient(x0, 0, 128, 0); gr.addColorStop(0, RED_D); gr.addColorStop(.4, RED_L); gr.addColorStop(1, RED);
+    ctx.fillStyle = gr; ctx.fill(); ctx.lineWidth = 3; ctx.strokeStyle = OUT; ctx.stroke();
+    ctx.strokeStyle = GOLD; ctx.lineWidth = 2; poly(ctx, [[x0 + 8, -BH + 10], [120, -BH + 14], [120, BH - 10], [x0 + 6, BH - 8]]); ctx.stroke();
+    // clasp
+    const cx = lerp(x0, 128, .45);
+    ctx.fillStyle = '#2a1608'; ctx.beginPath(); ctx.arc(cx, 0, 18, 0, TAU); ctx.fill(); ctx.strokeStyle = GOLD; ctx.lineWidth = 2.4; ctx.stroke();
+    ctx.beginPath(); ctx.arc(cx, 0, 8, 0, TAU); ctx.stroke(); ctx.fillStyle = GOLD; ctx.fillRect(cx - 1.5, -16, 3, 32);
+    if (P.warn > .02 || P.p2 > .5) add(ctx, () => glowDot(ctx, cx, 0, 60, P.p2 > .5 ? C.ember : C.amber, .3 + .4 * P.warn));
+  }
+  // cover top-front corner patch
+  ctx.fillStyle = RED; poly(ctx, [[PX0 - 2, -BH], [PX0 + 14, -BH - 1], [PX0 + 14, -BH + 18], [PX0 - 2, -BH + 8]]); ctx.fill(); ctx.lineWidth = 2; ctx.strokeStyle = OUT; ctx.stroke();
+
+  /* ---- phase-2 damage: torn corner, cracks, embers ---- */
+  if (pt2 > .02 || P.tear > .02) {
+    const k = Math.max(pt2, P.tear);
+    ctx.save(); ctx.globalAlpha = k;
+    // torn top-back corner
+    poly(ctx, [[-BW - 8, -BH - 8], [-BW + 52, -BH - 8], [-BW + 40, -BH + 14], [-BW + 22, -BH + 8], [-BW + 14, -BH + 36], [-BW - 8, -BH + 28]]); ctx.fillStyle = '#080503'; ctx.fill();
+    ctx.strokeStyle = '#e9d9b0'; ctx.lineWidth = 1.4; ctx.stroke();
+    ctx.restore();
+    add(ctx, () => {
+      ctx.globalAlpha = k; ctx.lineCap = 'round';
+      const cracks = [[[-70, -20], [-52, 0], [-60, 22], [-40, 44], [-48, 70]], [[0, -90], [-14, -64], [4, -44], [-8, -20]], [[-90, 60], [-70, 80], [-74, 100]]];
+      cracks.forEach((cr, ci) => { for (const [lw, al] of [[6, .12], [2.2, .85]]) { ctx.strokeStyle = rgba(ci ? C.ember : C.amber, al * (.7 + .3 * Math.sin(T * 5 + ci))); ctx.lineWidth = lw; ctx.beginPath(); cr.forEach((p, i) => i ? ctx.lineTo(p[0], p[1]) : ctx.moveTo(p[0], p[1])); ctx.stroke(); } });
+    });
+  }
+  ctx.restore();
+}
+
+/* ink drips under the book */
+function drawInk(ctx, P, bc) {
+  if (P.ink < .03) return;
+  const T = P.T; ctx.save();
+  for (let i = 0; i < 7; i++) {
+    const x = bc[0] - 96 + i * 32 + (h2(i, 2) - .5) * 10, y0 = bc[1] + 112, ph = frac(T * .8 + h2(i, 3));
+    const len = (12 + 38 * h2(i, 4)) * Math.min(1.6, P.ink) * (.6 + .4 * Math.sin(ph * Math.PI));
+    ctx.fillStyle = '#05050a'; ctx.beginPath(); ctx.moveTo(x - 5, y0); ctx.lineTo(x + 5, y0); ctx.lineTo(x + 2.5, y0 + len); ctx.arc(x, y0 + len, 4, 0, Math.PI); ctx.lineTo(x - 2.5, y0 + len); ctx.closePath(); ctx.fill();
+    ctx.fillStyle = 'rgba(150,140,160,.35)'; ctx.fillRect(x - 3, y0 + 2, 1.5, len * .8);
+  }
+  ctx.restore();
+}
+
+/* -------- full character -------- */
+function drawBody(ctx, P) {
+  const T = P.T, ph = Math.PI * 2 * P.u * P.cyc;
+  const tremX = P.tremor ? Math.sin(T * 95) * 2.6 * P.tremor : 0, tremY = P.tremor ? Math.cos(T * 80) * 1.6 * P.tremor : 0;
+  ctx.save();
+  ctx.translate(P.x + tremX, -P.y + tremY);
+  ctx.rotate(P.lean); ctx.scale(P.sx, P.sy);
+  ctx.lineJoin = 'round'; ctx.lineCap = 'round';
+  const bc = [P.bx, -228 + P.by];
+  const rot = P.btilt * R, cs = Math.cos(rot), sn = Math.sin(rot);
+  const B2L = (x, y) => [bc[0] + x * cs - y * sn, bc[1] + x * sn + y * cs];
+
+  // ember aura (phase 2 / rage)
+  const aura = Math.max(P.p2 * .5, P.rage * .5, P.warn * .5);
+  if (aura > .02) add(ctx, () => { ctx.save(); ctx.translate(bc[0], bc[1]); ctx.scale(1.15, 1.3); glowDot(ctx, 0, 0, 190, P.p2 > .5 ? C.ember : C.amber, .2 * aura * (.8 + .2 * Math.sin(T * 9))); ctx.restore(); });
+
+  // grip points
+  const a = P.ang * R, gx = P.hx, gy = P.hy; P.gx = gx; P.gy = gy;
+  const gpt = s_ => [gx + Math.cos(a) * s_ * P.hs, gy + Math.sin(a) * s_ * P.hs];
+  const hand2 = gpt(-48);
+
+  // shoulders
+  const shF = B2L(36, -58), shB = B2L(-40, -62);
+  const swing = P.armSwing * 26;
+  // back arm (behind body) when not used on the hammer
+  const backFront = P.th2 > .5;
+  const drawArm = (S, H_, bend, ws, rotF) => {
+    const k = ik(S[0], S[1], H_[0], H_[1], 78, 74, bend);
+    blob(ctx, S, [k.ex, k.ey], [k.hx, k.hy], ws, P.p2, 1); fist(ctx, k.hx, k.hy, rotF, P.p2);
+  };
+  if (!backFront) {
+    const relax = [shB[0] - 16 + swing * -.7, shB[1] + 120];
+    drawArm(shB, relax, 1, [24, 20, 16], 1.2);
+  }
+  // legs
+  const hipL = B2L(-46, 108), hipR = B2L(46, 108);
+  const leg = (hp, fx, fy) => {
+    const k = ik(hp[0], hp[1], fx, fy - 20, 66, 62, -1);
+    blob(ctx, hp, [k.ex, k.ey], [k.hx, k.hy], [30, 26, 21], P.p2, .6);
+    foot(ctx, fx, fy);
+  };
+  leg(hipL, P.lfx, P.lfy);
+  // body
+  drawInk(ctx, P, bc);
+  ctx.save(); ctx.translate(bc[0], bc[1]); ctx.rotate(rot); ctx.scale(1, 1); drawBook(ctx, P, ph); ctx.restore();
+  leg(hipR, P.rfx, P.rfy);
+
+  // front arm + hammer
+  const sF = shF;
+  const kf_ = ik(sF[0], sF[1], gx, gy, 78, 74, 1);
+  // hammer handle behind the front fist, head in front
+  P.T = T; drawHammer(ctx, P, ph);
+  blob(ctx, sF, [kf_.ex, kf_.ey], [kf_.hx, kf_.hy], [26, 22, 17], P.p2, 1); fist(ctx, kf_.hx, kf_.hy, a, P.p2);
+  if (backFront) {
+    const sB = B2L(-8, -50), k2 = ik(sB[0], sB[1], hand2[0], hand2[1], 78, 74, 1);
+    blob(ctx, sB, [k2.ex, k2.ey], [k2.hx, k2.hy], [25, 21, 16], P.p2, 1); fist(ctx, k2.hx, k2.hy, a, P.p2);
+  }
+  // pages orbiting (swirl)
+  if (P.pgs > .02) {
+    for (let i = 0; i < 12; i++) {
+      const th = Math.PI * 2 * (i / 12 + T * (.5 + .3 * h2(i, 1))), rr = (120 + 70 * h2(i, 2)) * (.6 + .5 * P.pgs);
+      const x = bc[0] + Math.cos(th) * rr * 1.1, y = bc[1] + Math.sin(th) * rr * .9;
+      ctx.save(); ctx.translate(x, y); ctx.rotate(th * 2 + i); ctx.scale(Math.cos(th * 1.7 + i) * .7 + .3, 1); ctx.globalAlpha = P.pgs * (.5 + .5 * h2(i, 4));
+      ctx.fillStyle = CR_L; ctx.fillRect(-9, -12, 18, 24); ctx.strokeStyle = OUT; ctx.lineWidth = 1.6; ctx.strokeRect(-9, -12, 18, 24);
+      ctx.fillStyle = 'rgba(40,24,12,.55)'; for (let k = 0; k < 3; k++) ctx.fillRect(-6, -8 + k * 6, 12 * (.5 + .5 * h2(i, k)), 1.4); ctx.restore();
+    }
+  }
+  ctx.restore();
+  P.bodyC = bc;
+}
+
+g.ABODY = { drawBody, glowDot, add, poly, ik, fireOn };
+})(typeof window !== 'undefined' ? window : globalThis);
+
+/* ============================================================
+   THE ARCHIVIST — part 3: FX, render pipeline, API
+   ============================================================ */
+(function (g) {
+'use strict';
+const { TAU, R, C, rgba, clamp, lerp, sm, frac, h2, kf, A, ORDER, getPose, blendPose, TOMES, tomeT, VOL, FIRE } = g.ACORE;
+const { drawBody, glowDot, add, poly } = g.ABODY;
+const PAPER = '#efe0bd', OUT = '#120a07';
+const pxl = (ctx, x, y, sz, a, col) => { ctx.fillStyle = rgba(col || C.amber, a); ctx.fillRect(x - sz / 2, y - sz / 2, sz, sz); };
+const eo = t => 1 - Math.pow(1 - clamp(t), 3);
+const col2 = P => P.p2flag ? C.ember : C.amber;
+
+function headPos(P) { const a = P.ang * R, hs = P.hs; return [P.x + P.hx + Math.cos(a) * 148 * hs, -P.y + P.hy + Math.sin(a) * 148 * hs + P.by * 0]; }
+
+function floorGlow(ctx, P, k) { add(ctx, () => { ctx.save(); ctx.scale(1, .12); glowDot(ctx, 0, 0, 300 * k, col2(P), .1 + .1 * P.p2flag); ctx.restore(); }); }
+function motes(ctx, P, n, spread) {
+  add(ctx, () => { for (let i = 0; i < n; i++) { const c = frac(P.T * .35 + h2(i, 1)), x = (h2(i, 2) - .4) * spread, y = -c * 360 * (.4 + h2(i, 3) * .8); pxl(ctx, x + 12 * Math.sin(6.28 * c + i), y - 10, 1.5 + 2 * h2(i, 4), Math.sin(Math.PI * c) * .6, i % 4 ? col2(P) : C.hi); } });
+}
+function dust(ctx, x, t, n, spread, hgt, a, seed) {
+  if (t <= 0 || t > 1) return;
+  for (let i = 0; i < n; i++) {
+    const dir = h2(i, seed) > .5 ? 1 : -1, sp = (.3 + h2(i, seed + 1)) * spread, xx = x + dir * sp * eo(t), r = (10 + 22 * h2(i, seed + 2)) * (.5 + t), yy = -r * .4 - hgt * eo(t) * h2(i, seed + 3);
+    ctx.fillStyle = `rgba(120,98,70,${(1 - t) * a * .5})`; ctx.beginPath(); ctx.ellipse(xx, yy, r, r * .7, 0, 0, TAU); ctx.fill();
+    ctx.fillStyle = `rgba(210,186,140,${(1 - t) * a * .22})`; ctx.beginPath(); ctx.ellipse(xx - 3, yy - 3, r * .7, r * .5, 0, 0, TAU); ctx.fill();
+  }
+}
+function ring(ctx, cx, cy, t, rx, ry, w, a, col) {
+  if (t <= 0 || t >= 1) return; const e = eo(t);
+  add(ctx, () => { ctx.strokeStyle = rgba(col, (1 - t) * a); ctx.lineWidth = w * (1 - t) + 1; ctx.beginPath(); ctx.ellipse(cx, cy, rx * e, ry * e, 0, 0, TAU); ctx.stroke();
+    ctx.strokeStyle = rgba(C.hi, (1 - t) * a * .7); ctx.lineWidth = Math.max(1, w * .3 * (1 - t)); ctx.beginPath(); ctx.ellipse(cx, cy, rx * e * .97, ry * e * .97, 0, 0, TAU); ctx.stroke(); });
+}
+function pageAt(ctx, x, y, rot, flip, sz, a) {
+  ctx.save(); ctx.translate(x, y); ctx.rotate(rot); ctx.scale(flip, 1); ctx.globalAlpha = a;
+  ctx.fillStyle = PAPER; ctx.fillRect(-sz * .6, -sz * .8, sz * 1.2, sz * 1.6); ctx.strokeStyle = OUT; ctx.lineWidth = 1.6; ctx.strokeRect(-sz * .6, -sz * .8, sz * 1.2, sz * 1.6);
+  ctx.fillStyle = 'rgba(40,24,12,.55)'; for (let k = 0; k < 4; k++) ctx.fillRect(-sz * .45, -sz * .55 + k * sz * .36, sz * .9 * (.55 + .4 * h2(k, sz)), 1.4); ctx.restore();
+}
+function pagesBurst(ctx, x, y, t, n, speed, grav, seed, up) {
+  if (t <= 0 || t >= 1) return;
+  for (let i = 0; i < n; i++) {
+    const an = (up ? -Math.PI * (.12 + .76 * h2(i, seed)) : TAU * h2(i, seed)), sp = speed * (.35 + .8 * h2(i, seed + 1));
+    const x1 = x + Math.cos(an) * sp * t, y1 = y + Math.sin(an) * sp * t + grav * t * t * 260;
+    pageAt(ctx, x1, y1, t * (4 + 7 * h2(i, seed + 2)) * (i % 2 ? 1 : -1), Math.cos(t * (7 + 5 * h2(i, seed + 3)) + i), 7 + 7 * h2(i, seed + 4), 1 - t * t);
+  }
+}
+function sparks(ctx, x, y, t, n, speed, col, seed) {
+  if (t <= 0 || t >= 1) return;
+  add(ctx, () => { for (let i = 0; i < n; i++) { const an = -Math.PI * (.05 + .9 * h2(i, seed)), sp = speed * (.3 + .9 * h2(i, seed + 1)); const x1 = x + Math.cos(an) * sp * t, y1 = y + Math.sin(an) * sp * t + 180 * t * t; ctx.strokeStyle = rgba(i % 3 ? col : C.hi, (1 - t) * .9); ctx.lineWidth = 1.6; ctx.beginPath(); ctx.moveTo(x1, y1); ctx.lineTo(x1 - Math.cos(an) * 14, y1 - Math.sin(an) * 14 + 6 * t); ctx.stroke(); } });
+}
+function cracks(ctx, x, t, len, col) {
+  if (t <= 0) return; const e = eo(clamp(t * 2)), fa = 1 - clamp((t - .4) / .6);
+  add(ctx, () => { ctx.lineCap = 'round';
+    for (let i = 0; i < 6; i++) { const dir = i < 3 ? 1 : -1; let px = x, py = -2; ctx.beginPath(); ctx.moveTo(px, py);
+      const L = len * (.4 + .6 * h2(i, 5)) * e; const n = 6; for (let k = 1; k <= n; k++) { px = x + dir * L * k / n; py = -2 + 8 * (h2(i * 10 + k, 7) - .3) * (k / n) + 3; ctx.lineTo(px, py); }
+      ctx.strokeStyle = rgba(col, .8 * fa); ctx.lineWidth = 2.2; ctx.stroke(); ctx.strokeStyle = rgba(col, .18 * fa); ctx.lineWidth = 8; ctx.stroke(); } });
+}
+function wave(ctx, x0, t, speed, maxx, col, h, a) {
+  if (t <= 0) return; const x = x0 + speed * eo(clamp(t / 1.1)) * 1.1, life = 1 - clamp((x - x0) / (maxx - x0));
+  if (life <= 0) return;
+  add(ctx, () => {
+    ctx.globalAlpha = a * life;
+    const w = 150, gr = ctx.createLinearGradient(x - w, 0, x + 18, 0); gr.addColorStop(0, rgba(col, 0)); gr.addColorStop(.7, rgba(col, .65)); gr.addColorStop(1, rgba(C.hi, .95));
+    ctx.fillStyle = gr; poly(ctx, [[x - w, -2], [x - w * .2, -h * .5], [x + 8, -h], [x + 22, -h * .35], [x + 26, -2]]); ctx.fill();
+    ctx.strokeStyle = rgba(C.hi, .9); ctx.lineWidth = 2; ctx.beginPath(); ctx.moveTo(x - w * .5, -3); ctx.lineTo(x + 24, -h * .4); ctx.stroke();
+    for (let i = 0; i < 12; i++) pxl(ctx, x - 20 - h2(i, 3) * 120, -6 - h2(i, 4) * h * .9, 2 + 4 * h2(i, 5), .8);
+  });
+  ctx.save(); ctx.globalAlpha = life; for (let i = 0; i < 5; i++) pageAt(ctx, x - 20 - i * 24, -30 - 40 * h2(i, 8) - 14 * Math.sin(t * 12 + i), t * 8 + i, Math.cos(t * 9 + i), 9, .9); ctx.restore();
+}
+/* ribbon following the hammer head, generic for every strike */
+function trail(ctx, P) {
+  const a = A[P.name]; if (!a || a.cat === 'base' && P.name !== 'hurt' || P.name === 'idle' || P.name === 'walk') return;
+  const N = 26, pts = [];
+  for (let k = 0; k < N; k++) { const uu = P.u - k * .0046; if (uu < 0) break; const Q = getPose(P.name, uu, uu * a.dur, P.p2flag); pts.push(headPos(Q)); }
+  if (pts.length < 3) return;
+  let sp = 0; for (let i = 1; i < pts.length; i++) sp += Math.hypot(pts[i][0] - pts[i - 1][0], pts[i][1] - pts[i - 1][1]); sp /= pts.length - 1;
+  if (sp < 8) return;
+  const k = clamp((sp - 8) / 20), col = col2(P);
+  add(ctx, () => {
+    for (let i = 1; i < pts.length; i++) { const f = 1 - i / pts.length; ctx.strokeStyle = rgba(i < 4 ? C.hi : col, f * .8 * k); ctx.lineWidth = 4 + 34 * f * f * k; ctx.lineCap = 'round'; ctx.beginPath(); ctx.moveTo(pts[i - 1][0], pts[i - 1][1]); ctx.lineTo(pts[i][0], pts[i][1]); ctx.stroke(); }
+    for (let i = 1; i < pts.length; i++) { const f = 1 - i / pts.length; ctx.strokeStyle = rgba(C.hi, f * .55 * k); ctx.lineWidth = 2 + 6 * f; ctx.beginPath(); ctx.moveTo(pts[i - 1][0], pts[i - 1][1]); ctx.lineTo(pts[i][0], pts[i][1]); ctx.stroke(); }
+  });
+}
+function warnGlow(ctx, P) {
+  if (P.warn < .02) return; const h = headPos(P), red = P.name === 'redpass' || P.name === 'finale';
+  add(ctx, () => { const col = red ? C.red : C.hi; glowDot(ctx, h[0], h[1], 150 * P.warn + 40, col, .5 * P.warn); if (red) glowDot(ctx, P.x, -200, 260, [255, 40, 40], .22 * P.warn); });
+}
+function flames(ctx, x, w, hgt, T, seed, k) {
+  add(ctx, () => {
+    const n = Math.max(3, Math.floor(w / 18));
+    for (let i = 0; i < n; i++) { const xx = x - w / 2 + (i + .5) * w / n, f = frac(T * 3 + h2(i, seed)), h = hgt * (.55 + .6 * h2(i, seed + 1)) * k * (.8 + .3 * Math.sin(T * 14 + i * 2)); const gr = ctx.createLinearGradient(0, 0, 0, -h);
+      gr.addColorStop(0, rgba(C.hi, .95)); gr.addColorStop(.3, rgba(C.amber, .85)); gr.addColorStop(.75, rgba(C.ember, .5)); gr.addColorStop(1, rgba(C.ember, 0)); ctx.fillStyle = gr;
+      ctx.beginPath(); ctx.moveTo(xx - 12, 0); ctx.quadraticCurveTo(xx - 12 + 3 * Math.sin(T * 9 + i), -h * .55, xx + 2 * Math.sin(T * 11 + i), -h); ctx.quadraticCurveTo(xx + 12 + 3 * Math.cos(T * 10 + i), -h * .5, xx + 12, 0); ctx.closePath(); ctx.fill();
+      pxl(ctx, xx + (h2(i, seed + 3) - .5) * 30, -h - 30 * f, 2.4, (1 - f) * .8 * k, i % 2 ? C.amber : C.hi); }
+    glowDot(ctx, x, -hgt * .35, w * .9, C.ember, .22 * k);
+  });
+}
+function bookAt(ctx, x, y, rot, sc, a) {
+  ctx.save(); ctx.translate(x, y); ctx.rotate(rot); ctx.scale(sc, sc); ctx.globalAlpha = a;
+  ctx.fillStyle = PAPER; ctx.fillRect(-46, -8, 92, 14); ctx.strokeStyle = OUT; ctx.lineWidth = 2.2; ctx.strokeRect(-46, -8, 92, 14);
+  const gr = ctx.createLinearGradient(0, -48, 0, -8); gr.addColorStop(0, '#b4483a'); gr.addColorStop(1, '#6a1e16'); ctx.fillStyle = gr; ctx.fillRect(-52, -50, 104, 44); ctx.strokeRect(-52, -50, 104, 44);
+  ctx.strokeStyle = '#e2aa42'; ctx.lineWidth = 1.8; ctx.strokeRect(-44, -43, 88, 30); ctx.beginPath(); ctx.moveTo(-8, -43); ctx.lineTo(-8, -13); ctx.stroke();
+  ctx.restore();
+}
+
+/* -------- per animation -------- */
+const FX = {};
+FX.idle = (ctx, P) => { floorGlow(ctx, P, 1); motes(ctx, P, P.p2flag ? 18 : 10, 520); if (P.p2flag) add(ctx, () => { for (let i = 0; i < 10; i++) { const c = frac(P.T * .9 + h2(i, 9)); pxl(ctx, (h2(i, 2) - .5) * 300, -30 - c * 380, 2.5, (1 - c) * .8, i % 2 ? C.ember : C.amber); } }); };
+FX.walk = (ctx, P) => {
+  floorGlow(ctx, P, 1); motes(ctx, P, 8, 520);
+  for (let k = 0; k < 2; k++) { const t = frac(P.u * 1 - k * .5) * 1.6; dust(ctx, (k ? 100 : -110) - 40 * t, t, 4, 40, 14, .8, k * 17 + 3); }
+};
+FX.slam = (ctx, P) => {
+  const u = P.u, d = A.slam.dur, X = 226, col = col2(P); floorGlow(ctx, P, 1); trail(ctx, P); warnGlow(ctx, P);
+  if (u > .26 && u < .46) { const k = sm(clamp((u - .26) / .18)); add(ctx, () => { const h = headPos(P); for (let i = 0; i < 12; i++) { const an = TAU * i / 12 + u * 6, rr = 70 * (1 - frac(u * 4 + i / 12)) + 8; pxl(ctx, h[0] + Math.cos(an) * rr, h[1] + Math.sin(an) * rr, 3, .8 * k, col); } }); }
+  if (u > .46) { const t = (u - .46) * d;
+    ring(ctx, X, -3, t / .5, 260, 26, 8, .95, col); ring(ctx, X, -3, (t - .06) / .5, 170, 18, 5, .7, C.hi);
+    dust(ctx, X, t / .9, 9, 190, 60, 1, 3); sparks(ctx, X, -10, t / .7, 18, 330, col, 11); pagesBurst(ctx, X, -20, t / .9, 12, 300, .9, 21, true); cracks(ctx, X, t / .9, 300, col);
+    wave(ctx, X + 30, t, 520, 780, col, 88, .95);
+    if (t < .14) add(ctx, () => glowDot(ctx, X, -30, 160 * (1 - t / .14), C.hi, .8));
+  }
+};
+FX.sweep = (ctx, P) => {
+  const u = P.u, d = A.sweep.dur, col = col2(P); floorGlow(ctx, P, 1); trail(ctx, P); warnGlow(ctx, P);
+  if (u > .4) { const t = (u - .4) * d; dust(ctx, 120, t / .7, 8, 190, 30, .9, 5); sparks(ctx, 250, -30, t / .5, 10, 220, col, 41); if (t < .1) add(ctx, () => glowDot(ctx, 240, -80, 110 * (1 - t / .1), C.hi, .6)); }
+};
+FX.shut = (ctx, P) => {
+  const u = P.u, d = A.shut.dur, col = col2(P); floorGlow(ctx, P, 1);
+  if (u > .2 && u < .28) ring(ctx, 20, -190, (u - .2) / .08, 150, 160, 5, .6, C.gold);
+  if (u > .24 && u < .75) add(ctx, () => { const k = .5 + .5 * Math.sin(P.T * 8); ctx.strokeStyle = rgba(C.hi, .3 + .15 * k); ctx.lineWidth = 3; ctx.beginPath(); ctx.ellipse(10, -200, 130, 150, 0, 0, TAU); ctx.stroke(); glowDot(ctx, 10, -200, 220, C.gold, .12); });
+  if (u > .76) { const t = (u - .76) * d; ring(ctx, 10, -200, t / .5, 330, 330, 14, .95, col); ring(ctx, 10, -3, (t - .04) / .5, 420, 34, 8, .8, C.hi); pagesBurst(ctx, 20, -200, t / .85, 26, 480, .6, 7, false); sparks(ctx, 10, -150, t / .7, 14, 300, col, 3); if (t < .12) add(ctx, () => glowDot(ctx, 10, -200, 340 * (1 - t / .12), C.hi, .8)); }
+};
+FX.pagestorm = (ctx, P) => {
+  const u = P.u, d = A.pagestorm.dur, col = col2(P); floorGlow(ctx, P, 1); warnGlow(ctx, P);
+  if (u > .12 && u < .84) add(ctx, () => { glowDot(ctx, 120, -200, 150 * clamp(P.open * 1.4), col, .4 * P.open); });
+  VOL.forEach((v, vi) => {
+    if (u < v) return; const age = (u - v) * d, n = 7, base = (vi - 1) * 5;
+    add(ctx, () => { const t = age; if (t < .1) glowDot(ctx, 140, -200, 100 * (1 - t / .1), C.hi, .85); });
+    for (let i = 0; i < n; i++) {
+      const an = (-24 + 48 * i / (n - 1) + base) * R, sp = 780 + 120 * h2(i, vi), x = 140 + Math.cos(an) * sp * age, y = -200 + Math.sin(an) * sp * age + 40 * age * age;
+      if (x > 1020) continue; const al = clamp(1 - Math.max(0, x - 720) / 280);
+      add(ctx, () => { ctx.globalAlpha = al; const gr = ctx.createLinearGradient(x - Math.cos(an) * 160, y - Math.sin(an) * 160, x, y); gr.addColorStop(0, rgba(col, 0)); gr.addColorStop(1, rgba(C.hi, .85)); ctx.strokeStyle = gr; ctx.lineWidth = 6; ctx.beginPath(); ctx.moveTo(x - Math.cos(an) * 160, y - Math.sin(an) * 160); ctx.lineTo(x, y); ctx.stroke(); });
+      ctx.save(); ctx.globalAlpha = al; pageAt(ctx, x, y, an + Math.PI / 2 + age * 14, Math.cos(age * 22 + i), 15, 1); ctx.restore();
+    }
+  });
+};
+FX.tomes = (ctx, P) => {
+  const u = P.u, d = A.tomes.dur, col = col2(P); floorGlow(ctx, P, 1); trail(ctx, P); warnGlow(ctx, P);
+  if (u > .34) { const t = (u - .34) * d; ring(ctx, 226, -3, t / .45, 200, 20, 6, .8, col); dust(ctx, 226, t / .7, 5, 120, 30, .8, 2); }
+  TOMES.forEach((x, i) => {
+    const t0 = tomeT(i), tt = (u - t0) * d, land = .24;
+    if (u > .36 && tt < land + .55) { // marker
+      const k = clamp((u - .36) / .1), pulse = .6 + .4 * Math.sin(P.T * 12 + i);
+      if (tt < land) add(ctx, () => { ctx.strokeStyle = rgba(col, .85 * k * pulse); ctx.lineWidth = 2.4; ctx.beginPath(); ctx.ellipse(x, -3, 62 * k, 11 * k, 0, 0, TAU); ctx.stroke(); ctx.strokeStyle = rgba(C.hi, .5 * k); ctx.beginPath(); ctx.ellipse(x, -3, 36 * k, 6 * k, 0, 0, TAU); ctx.stroke();
+        ctx.setLineDash([4, 9]); ctx.strokeStyle = rgba(col, .3 * k); ctx.beginPath(); ctx.moveTo(x, -4); ctx.lineTo(x, -620); ctx.stroke(); ctx.setLineDash([]); });
+    }
+    if (tt > 0 && tt < land) { const f = (tt / land); const y = -720 + 720 * f * f; add(ctx, () => { ctx.strokeStyle = rgba(col, .4); ctx.lineWidth = 16; ctx.beginPath(); ctx.moveTo(x, y - 120); ctx.lineTo(x, y - 50); ctx.stroke(); }); bookAt(ctx, x, y, .25 * Math.sin(tt * 18 + i) + (1 - f) * .3, 1.15, 1); }
+    if (tt >= land) { const t2 = tt - land; const al = 1 - clamp((t2 - .35) / .25);
+      if (al > 0) bookAt(ctx, x, 0, (i % 2 ? .06 : -.05), 1.15, al);
+      ring(ctx, x, -3, t2 / .45, 150, 16, 6, .9, col); dust(ctx, x, t2 / .8, 7, 110, 40, 1, 31 + i); sparks(ctx, x, -20, t2 / .6, 10, 240, col, 13 + i); pagesBurst(ctx, x, -30, t2 / .8, 7, 200, .9, 61 + i, true);
+      if (t2 < .1) add(ctx, () => glowDot(ctx, x, -30, 120 * (1 - t2 / .1), C.hi, .7)); }
+  });
+};
+FX.combo3 = (ctx, P) => {
+  const u = P.u, d = A.combo3.dur, col = col2(P); floorGlow(ctx, P, 1); trail(ctx, P); warnGlow(ctx, P);
+  [.20, .48].forEach((h, i) => { if (u > h) { const t = (u - h) * d; dust(ctx, 150 + i * 40, t / .6, 6, 160, 24, .8, 9 + i); sparks(ctx, 260 + i * 40, -40, t / .45, 8, 200, col, 3 + i); if (t < .08) add(ctx, () => glowDot(ctx, 260 + i * 40, -90, 100 * (1 - t / .08), C.hi, .55)); } });
+  if (u > .76) { const t = (u - .76) * d, X = 340; ring(ctx, X, -3, t / .5, 280, 28, 8, .95, col); dust(ctx, X, t / .9, 9, 190, 60, 1, 4); sparks(ctx, X, -10, t / .7, 16, 320, col, 5); pagesBurst(ctx, X, -20, t / .9, 12, 300, .9, 8, true); cracks(ctx, X, t / .9, 280, col); wave(ctx, X + 30, t, 520, 840, col, 90, .95); if (t < .12) add(ctx, () => glowDot(ctx, X, -30, 170 * (1 - t / .12), C.hi, .8)); }
+};
+FX.p2tr = (ctx, P) => {
+  const u = P.u, d = A.p2tr.dur, cy = -200; floorGlow(ctx, P, 1.4);
+  if (u > .12 && u < .47) { const k = sm((u - .12) / .35); add(ctx, () => { glowDot(ctx, 0, cy, 200 * k, C.ember, .5 * k); for (let i = 0; i < 26; i++) { const an = TAU * i / 26 + u * 9, rr = 240 * (1 - frac(u * 2.4 + i / 26)) + 10; pxl(ctx, Math.cos(an) * rr, cy + Math.sin(an) * rr * .8, 3, .85 * k, i % 3 ? C.ember : C.hi); } }); }
+  if (u > .46) { const t = (u - .46) * d;
+    ring(ctx, 0, cy, t / .8, 540, 540, 22, 1, C.ember); ring(ctx, 0, cy, (t - .08) / .8, 400, 400, 12, .8, C.hi); ring(ctx, 0, -3, t / .8, 800, 60, 12, .9, C.amber);
+    add(ctx, () => glowDot(ctx, 0, cy, 460 * (1 - clamp(t / .6)), C.hi, .75 * (1 - clamp(t / .6))));
+    pagesBurst(ctx, 0, cy, t / 1.4, 40, 620, .5, 71, false); sparks(ctx, 0, cy, t / 1, 40, 560, C.ember, 17); cracks(ctx, 0, t / 1.4, 520, C.ember);
+    add(ctx, () => { for (let i = 0; i < 14; i++) { const c = clamp(t / 1.6); pxl(ctx, (h2(i, 5) - .5) * 700, -20 - c * 420 * (.3 + h2(i, 6)), 3 + 3 * h2(i, 7), (1 - c) * .85, i % 2 ? C.ember : C.amber); } }); }
+};
+FX.combo5 = (ctx, P) => {
+  const u = P.u, d = A.combo5.dur, col = col2(P); floorGlow(ctx, P, 1.1); trail(ctx, P); warnGlow(ctx, P);
+  [[.14, 260], [.31, 300], [.47, 200]].forEach(([h, x], i) => { if (u > h) { const t = (u - h) * d; dust(ctx, x, t / .5, 5, 130, 30, .7, 3 + i); sparks(ctx, x, -60, t / .4, 9, 240, col, 9 + i); if (t < .08) add(ctx, () => glowDot(ctx, x, -100, 110 * (1 - t / .08), C.hi, .6)); } });
+  if (u > .66) { const t = (u - .66) * d, X = 440; ring(ctx, X, -3, t / .5, 330, 32, 9, 1, col); ring(ctx, X, -3, (t - .05) / .5, 220, 22, 6, .8, C.hi); dust(ctx, X, t / .9, 10, 220, 70, 1, 12); sparks(ctx, X, -10, t / .7, 20, 360, col, 15); pagesBurst(ctx, X, -20, t / .9, 14, 340, .9, 17, true); cracks(ctx, X, t / .9, 360, col); wave(ctx, X + 40, t, 520, 960, col, 100, .95); wave(ctx, X - 40, t, -520, -300, col, 80, .8); if (t < .12) add(ctx, () => glowDot(ctx, X, -30, 200 * (1 - t / .12), C.hi, .85)); }
+};
+FX.redpass = (ctx, P) => {
+  const u = P.u, d = A.redpass.dur, RED = C.red; floorGlow(ctx, P, 1.3); trail(ctx, P); warnGlow(ctx, P);
+  if (u > .2 && u < .66) { const k = sm(clamp((u - .2) / .15)) * (1 - clamp((u - .62) / .04)), pul = .6 + .4 * Math.sin(P.T * 14);
+    add(ctx, () => { const gr = ctx.createLinearGradient(0, 0, 0, -40); gr.addColorStop(0, rgba([255, 50, 50], .4 * k * pul)); gr.addColorStop(1, rgba([255, 50, 50], 0)); ctx.fillStyle = gr; ctx.fillRect(90, -40, 840, 40);
+      ctx.strokeStyle = rgba([255, 80, 70], .85 * k); ctx.lineWidth = 2; ctx.beginPath(); ctx.moveTo(90, -2); ctx.lineTo(930, -2); ctx.stroke();
+      for (let i = 0; i < 10; i++) { const x = 130 + i * 84 + ((P.T * 70) % 84); ctx.strokeStyle = rgba([255, 90, 80], .6 * k * pul); ctx.beginPath(); ctx.moveTo(x, -4); ctx.lineTo(x + 18, -20); ctx.lineTo(x, -36); ctx.stroke(); }
+      for (let i = 0; i < 16; i++) { const an = TAU * i / 16 + u * 4, rr = 90 * (1 - frac(u * 3 + i / 16)) + 10, h = headPos(P); pxl(ctx, h[0] + Math.cos(an) * rr, h[1] + Math.sin(an) * rr, 3.2, .9 * k, [255, 60, 50]); } }); }
+  if (u > .64) { const t = (u - .64) * d, X = 240;
+    add(ctx, () => glowDot(ctx, 220, -260, 900, [255, 50, 40], .3 * (1 - clamp(t / .35))));
+    ring(ctx, X, -3, t / .6, 420, 40, 12, 1, RED); ring(ctx, X, -3, (t - .06) / .6, 300, 28, 7, .9, C.hi); dust(ctx, X, t / 1, 12, 260, 80, 1, 3); sparks(ctx, X, -10, t / .8, 26, 420, [255, 90, 60], 5);
+    pagesBurst(ctx, X, -20, t / 1, 16, 380, .9, 18, true); cracks(ctx, X, t / 1.2, 420, RED); wave(ctx, X + 30, t, 640, 1000, RED, 120, 1);
+    add(ctx, () => { if (t < .14) glowDot(ctx, X, -40, 260 * (1 - t / .14), [255, 120, 100], .9); }); }
+};
+FX.indexlock = (ctx, P) => {
+  const u = P.u, d = A.indexlock.dur, col = col2(P); floorGlow(ctx, P, 1.2); trail(ctx, P); warnGlow(ctx, P);
+  if (u > .3) { const t = (u - .3) * d; ring(ctx, 226, -3, t / .5, 240, 24, 8, .9, col); dust(ctx, 226, t / .8, 6, 140, 40, .9, 3); sparks(ctx, 226, -10, t / .6, 10, 260, col, 5); }
+  const rise = eo((u - .3) / .1), sink = 1 - clamp((u - .78) / .12), cl = sm(clamp((u - .4) / .32));
+  if (rise > 0 && sink > 0) [[1, 700, 560], [-1, -520, -380]].forEach(([sd, x0, x1], wi) => {
+    const x = lerp(x0, x1, cl), h = 430 * rise * sink, w = 78;
+    add(ctx, () => { glowDot(ctx, x, -h * .5, 260, col, .22 * sink); });
+    ctx.save(); ctx.beginPath(); ctx.rect(x - w / 2, -h, w, h); ctx.clip();
+    const gr = ctx.createLinearGradient(x - w / 2, 0, x + w / 2, 0); gr.addColorStop(0, '#6a4a2a'); gr.addColorStop(.5, '#e8d6ac'); gr.addColorStop(1, '#8a6a42'); ctx.fillStyle = gr; ctx.fillRect(x - w / 2, -h, w, h);
+    for (let i = 0; i < 26; i++) { const yy = -i * 18 - ((P.T * 40) % 18); ctx.fillStyle = i % 2 ? 'rgba(60,38,18,.35)' : 'rgba(255,240,200,.25)'; ctx.fillRect(x - w / 2 + (i * 7) % 9, yy, w - 12, 2); ctx.fillStyle = rgba(col, .75); ctx.fillRect(x - w / 2 + 8 + (h2(i, wi) * 20), yy - 8, 14 + 30 * h2(i, 3), 2.2); }
+    ctx.restore(); ctx.strokeStyle = OUT; ctx.lineWidth = 3; ctx.strokeRect(x - w / 2, -h, w, h);
+    add(ctx, () => { ctx.strokeStyle = rgba(col, .8 * sink); ctx.lineWidth = 2; ctx.beginPath(); ctx.moveTo(x - sd * w / 2, -h); ctx.lineTo(x - sd * w / 2, 0); ctx.stroke(); });
+    dust(ctx, x, frac(P.T * 1.2) , 3, 70, 30, .6, 6 + wi);
+  });
+};
+FX.burning = (ctx, P) => {
+  const u = P.u, d = A.burning.dur, col = C.ember; floorGlow(ctx, P, 1.2); trail(ctx, P); warnGlow(ctx, P);
+  if (u > .4) { const t = (u - .4) * d, X = 226; ring(ctx, X, -3, t / .5, 260, 26, 8, .95, col); dust(ctx, X, t / .8, 6, 150, 40, .9, 3); sparks(ctx, X, -10, t / .6, 14, 300, col, 5); pagesBurst(ctx, X, -20, t / .9, 8, 260, .9, 23, true); }
+  FIRE.forEach((x, i) => { const ti = .42 + i * .035, tt = (u - ti) * d; if (tt > 0) { const fade = 1 - clamp((u - .82) / .1), grow = eo(tt / .3); if (fade > 0) flames(ctx, x, 130, 170, P.T, 10 * i + 3, grow * fade); if (tt < .12) add(ctx, () => glowDot(ctx, x, -30, 110 * (1 - tt / .12), C.hi, .7)); } });
+};
+FX.pageflip = (ctx, P) => {
+  const u = P.u, d = A.pageflip.dur, col = C.ember; floorGlow(ctx, P, 1.1); trail(ctx, P); warnGlow(ctx, P);
+  if (u < .5) { const t = clamp(u / .22); for (let i = 0; i < 18; i++) { const f = clamp((u - .06 - h2(i, 2) * .1) / .26); if (f <= 0) continue; const e = 1 - Math.pow(1 - f, 2); const x = lerp((h2(i, 3) - .5) * 160, 360 + (h2(i, 4) - .5) * 160, e), y = lerp(-80 - 220 * h2(i, 5), -80 - 220 * h2(i, 6), e) - 120 * Math.sin(Math.PI * e); pageAt(ctx, x, y, f * 12 * (i % 2 ? 1 : -1), Math.cos(f * 20 + i), 10 + 5 * h2(i, 7), (1 - Math.abs(f - .5) * 1) * .95); }
+    ring(ctx, 0, -3, (u - .12) / .3, 220, 22, 6, .8, col); }
+  if (u > .42) { const t = (u - .42) * d; ring(ctx, 360, -3, t / .5, 260, 26, 8, .95, col); ring(ctx, 360, -150, t / .4, 200, 220, 6, .6, C.hi); pagesBurst(ctx, 360, -150, t / .8, 16, 340, .4, 33, false); sparks(ctx, 360, -150, t / .6, 12, 300, col, 4); dust(ctx, 360, t / .7, 5, 100, 20, .8, 7); }
+  if (u > .58) { const t = (u - .58) * d; dust(ctx, 520, t / .6, 7, 170, 30, .9, 5); sparks(ctx, 620, -40, t / .45, 10, 230, col, 8); if (t < .08) add(ctx, () => glowDot(ctx, 620, -90, 110 * (1 - t / .08), C.hi, .6)); }
+};
+FX.finale = (ctx, P) => {
+  const u = P.u, d = A.finale.dur, RED = C.red; floorGlow(ctx, P, 1.3); trail(ctx, P); warnGlow(ctx, P);
+  if (u > .1 && u < .37) { const k = sm(clamp((u - .1) / .16)); add(ctx, () => { for (let i = 0; i < 14; i++) { const an = TAU * i / 14 + u * 7, rr = 90 * (1 - frac(u * 3 + i / 14)) + 10; pxl(ctx, 40 + Math.cos(an) * rr, -200 + Math.sin(an) * rr, 3, .85 * k, [255, 70, 60]); } }); }
+  if (u > .3 && u < .62) dust(ctx, 30, (u - .3) / .3, 8, 140, 24, .9, 3);
+  if (u > .38 && u < .66) { const hx = P.x + 270, hy = -156, k = sm(clamp((u - .38) / .06)) * (1 - clamp((u - .6) / .06));
+    add(ctx, () => { glowDot(ctx, hx, hy, 150, [255, 60, 50], .5 * k); ctx.strokeStyle = rgba([255, 90, 70], .9 * k); ctx.lineWidth = 2.6; for (const [r, sp] of [[56, 1], [38, -1.6], [22, 2]]) { ctx.save(); ctx.translate(hx, hy); ctx.rotate(P.T * sp * 2); ctx.setLineDash([10, 6]); ctx.beginPath(); ctx.arc(0, 0, r, 0, TAU); ctx.stroke(); ctx.restore(); }
+      ctx.beginPath(); ctx.moveTo(hx - 70, hy); ctx.lineTo(hx + 70, hy); ctx.moveTo(hx, hy - 70); ctx.lineTo(hx, hy + 70); ctx.stroke(); }); }
+  if (u > .62 && u < .76) add(ctx, () => { ctx.strokeStyle = rgba([255, 80, 70], .8); ctx.lineWidth = 3; for (let i = 0; i < 6; i++) { const f = (u - .62) / .14, y = -60 - i * 30; ctx.beginPath(); ctx.moveTo(P.x + 120, y); ctx.lineTo(P.x + 120 - 60 * f * (1 + h2(i, 2)), y - 10 * f); ctx.stroke(); } });
+  if (u > .75) { const t = (u - .75) * d, X = P.x + 60;
+    add(ctx, () => glowDot(ctx, 200, -260, 900, [255, 50, 40], .38 * (1 - clamp(t / .35))));
+    ring(ctx, X, -3, t / .6, 520, 48, 14, 1, RED); ring(ctx, X, -180, t / .6, 340, 340, 12, .9, RED); dust(ctx, X, t / 1, 12, 280, 80, 1, 3); sparks(ctx, X, -60, t / .8, 30, 460, [255, 90, 60], 5);
+    pagesBurst(ctx, X, -180, t / 1.1, 24, 520, .7, 41, false); cracks(ctx, X, t / 1.2, 460, RED); if (t < .14) add(ctx, () => glowDot(ctx, X, -150, 340 * (1 - t / .14), [255, 140, 120], .9)); }
+};
+FX.hurt = (ctx, P) => {
+  const u = P.u; floorGlow(ctx, P, 1);
+  if (u < .3) { const t = u / .3; add(ctx, () => { glowDot(ctx, 90, -190, 110 * (1 - t), C.hi, .8 * (1 - t)); for (let i = 0; i < 9; i++) { const an = TAU * (i / 9), l = 40 + 70 * h2(i, 4); ctx.strokeStyle = rgba(C.hi, (1 - t) * .9); ctx.lineWidth = 1.8; ctx.beginPath(); ctx.moveTo(90 + Math.cos(an) * 16 * (1 + t * 3), -190 + Math.sin(an) * 16 * (1 + t * 3)); ctx.lineTo(90 + Math.cos(an) * (16 + l * t), -190 + Math.sin(an) * (16 + l * t)); ctx.stroke(); } }); }
+  pagesBurst(ctx, 60, -190, u / .9, 10, 240, .8, 31, true);
+};
+FX.death = (ctx, P) => {
+  const u = P.u, d = A.death.dur; ctx.save(); ctx.globalAlpha = P.alpha; floorGlow(ctx, P, 1 - u * .8);
+  if (u < .62) pagesBurst(ctx, 0, -180, u / .62, 14, 260, .9, 41, true);
+  if (u > .6) { const t = (u - .6) * d;
+    ring(ctx, 40, -3, t / .6, 420, 36, 10, .9, C.hi); dust(ctx, 40, t / .9, 10, 200, 50, 1, 3); pagesBurst(ctx, 40, -90, t / 1.3, 24, 460, .7, 53, true);
+    const pool = eo(clamp((u - .62) / .3)); ctx.fillStyle = '#040408'; ctx.beginPath(); ctx.ellipse(40, -3, 260 * pool, 16 * pool, 0, 0, TAU); ctx.fill(); ctx.fillStyle = 'rgba(160,150,190,.25)'; ctx.beginPath(); ctx.ellipse(10, -6, 120 * pool, 4 * pool, 0, 0, TAU); ctx.fill();
+    add(ctx, () => { for (let i = 0; i < 40; i++) { const c = clamp((u - .66) / .34); pxl(ctx, 40 + (h2(i, 81) - .5) * 360, -10 - c * (60 + 260 * h2(i, 83)), 2 + 4 * h2(i, 84), (1 - c) * .8, i % 3 ? C.amber : C.hi); } }); }
+  ctx.restore();
+};
+FX.appear = (ctx, P) => {
+  const u = P.u; floorGlow(ctx, P, sm(clamp(u / .6)));
+  const pool = (1 - sm(clamp((u - .55) / .3))) * eo(clamp(u / .15)); if (pool > .01) { ctx.fillStyle = '#040408'; ctx.beginPath(); ctx.ellipse(0, -3, 250 * pool, 15 * pool, 0, 0, TAU); ctx.fill(); ctx.fillStyle = 'rgba(160,150,190,.25)'; ctx.beginPath(); ctx.ellipse(-30, -6, 110 * pool, 4 * pool, 0, 0, TAU); ctx.fill(); }
+  if (u < .68) add(ctx, () => { for (let i = 0; i < 46; i++) { const c = clamp((u - h2(i, 91) * .3 - .05) / .45); if (c <= 0 || c >= 1) continue; const e = 1 - Math.pow(1 - c, 3), sx = (h2(i, 92) - .5) * 900, sy = -(h2(i, 93) * 500), tx = (h2(i, 94) - .5) * 260, ty = -(10 + h2(i, 95) * 320); pxl(ctx, lerp(sx, tx, e), lerp(sy, ty, e), 2.5 + 4 * h2(i, 96), (1 - c) * .9 + .1, i % 3 ? C.amber : C.hi); } });
+  if (u > .62 && u < .9) { const t = (u - .62) / .28; ring(ctx, 0, -3, t, 420, 38, 7, .8, C.amber); dust(ctx, 0, t, 6, 150, 30, .8, 3); }
+  if (u > .6) motes(ctx, P, 8, 420);
+};
+
+/* ============ render pipeline ============ */
+const BUF = {};
+function getBuf(i, W, H) { let b = BUF[i]; if (!b) b = BUF[i] = document.createElement('canvas'); if (b.width !== W || b.height !== H) { b.width = W; b.height = H; } return b; }
+function lt(c, o) { c.setTransform(1, 0, 0, 1, 0, 0); c.translate(o.ox, o.oy); c.scale(o.sc * (o.facing || 1), o.sc); }
+
+function render(canvas, o) {
+  const W = canvas.width, H = canvas.height, tctx = canvas.getContext('2d');
+  const P = o.pose || getPose(o.anim, o.u, o.T, o.phase2, o.rage); P.p2flag = (P.p2 > .5 || o.phase2) ? 1 : 0;
+  const layer = o.layer || 'all';
+  if (o.shadow) { tctx.save(); lt(tctx, o); tctx.fillStyle = 'rgba(0,0,0,.55)'; tctx.beginPath(); tctx.ellipse(P.x * .8 + 20, 4, 190 * P.sx * (1 - Math.min(1, P.y / 220) * .4), 15, 0, 0, TAU); tctx.fill(); tctx.restore(); }
+  if (layer !== 'fx') {
+    const buf = getBuf(0, W, H), b = buf.getContext('2d'); b.setTransform(1, 0, 0, 1, 0, 0); b.clearRect(0, 0, W, H);
+    lt(b, o); drawBody(b, P); b.setTransform(1, 0, 0, 1, 0, 0);
+    if (P.flash > .01) { b.globalCompositeOperation = 'source-atop'; b.fillStyle = `rgba(255,248,230,${clamp(P.flash)})`; b.fillRect(0, 0, W, H); b.globalCompositeOperation = 'source-over'; }
+    if (P.rev < .999) { b.globalCompositeOperation = 'destination-in'; b.fillStyle = '#000'; b.fillRect(0, o.oy - 380 * P.rev * o.sc, W, H); b.globalCompositeOperation = 'source-over'; }
+    tctx.save(); tctx.setTransform(1, 0, 0, 1, 0, 0); tctx.globalAlpha = P.alpha; tctx.drawImage(buf, 0, 0); tctx.restore();
+  }
+  if (layer !== 'body') {
+    tctx.save(); lt(tctx, o); tctx.lineCap = 'round'; tctx.lineJoin = 'round';
+    const f = FX[P.name] || FX.idle; f(tctx, P); tctx.restore();
+  }
+  return P;
+}
+
+g.DR = { A, ORDER, FX, render, getPose, blendPose, PIL: null, frames: n => Math.max(2, Math.round(A[n].dur * A[n].fps)), CELL: { w: 1100, h: 720, fx: 380, fy: 680 } };
+g.DR.frameU = (n, f) => { const a = A[n], F = g.DR.frames(n); return a.loop ? f / F : f / (F - 1); };
+})(typeof window !== 'undefined' ? window : globalThis);
+
+
+</script>
+<script>
+(function () {
+'use strict';
+const { A, ORDER } = DR;
+const $ = id => document.getElementById(id);
+const stage = $('stage'), sctx = stage.getContext('2d');
+const q = Math.min(window.devicePixelRatio || 1, 1.5);
+const W = Math.round(1280 * q), H = Math.round(720 * q);
+stage.width = W; stage.height = H;
+
+/* ---------- stage background (reading hall, cached) ---------- */
+function mk(w, h) { const c = document.createElement('canvas'); c.width = w; c.height = h; return c; }
+const FLOOR = Math.round(H * .9);
+const far = mk(W, H), mid = mk(W, H), fore = mk(W, H);
+function shelf(c, x, y, w, h, seed) {
+  c.fillStyle = '#120c08'; c.fillRect(x, y, w, h); c.strokeStyle = '#2b1d12'; c.lineWidth = 3 * q; c.strokeRect(x, y, w, h);
+  const rows = 4, rh = h / rows;
+  for (let r = 0; r < rows; r++) {
+    const yy = y + r * rh; c.fillStyle = '#24170d'; c.fillRect(x, yy + rh - 7 * q, w, 7 * q);
+    let xx = x + 6 * q, k = 0;
+    while (xx < x + w - 14 * q) { const bw = (10 + 16 * ((Math.sin((seed + r * 7 + k) * 12.9898) * 43758.5453) % 1 + 1) % 1) * q, bh = (rh - 14 * q) * (.62 + .36 * (((Math.sin((seed + r * 3 + k * 5) * 78.233) * 43758.5453) % 1 + 1) % 1)); const hue = ((Math.sin((seed + k + r) * 3.7) * 43758) % 1 + 1) % 1;
+      c.fillStyle = hue < .3 ? '#4a1c14' : hue < .55 ? '#2c2a30' : hue < .8 ? '#3e2a16' : '#5a4630'; c.fillRect(xx, yy + rh - 7 * q - bh, bw, bh); c.fillStyle = 'rgba(226,170,66,.35)'; c.fillRect(xx, yy + rh - 7 * q - bh + 8 * q, bw, 2 * q); xx += bw + 1.5 * q; k++; }
+  }
+}
+(function () {
+  let c = far.getContext('2d');
+  let g = c.createLinearGradient(0, 0, 0, H); g.addColorStop(0, '#0a0604'); g.addColorStop(.6, '#140d08'); g.addColorStop(1, '#1d130b'); c.fillStyle = g; c.fillRect(0, 0, W, H);
+  for (let k = 0; k < 4; k++) { shelf(c, k * W / 4 + 18 * q, 40 * q, W / 4 - 36 * q, FLOOR - 70 * q, k * 11 + 1); }
+  [.16, .5, .84].forEach(f => { const x = W * f, y = 120 * q; const r = 150 * q; const lg = c.createRadialGradient(x, y, 0, x, y, r); lg.addColorStop(0, 'rgba(255,190,100,.35)'); lg.addColorStop(1, 'rgba(255,190,100,0)'); c.fillStyle = lg; c.fillRect(x - r, y - r, r * 2, r * 2); c.fillStyle = '#ffd488'; c.beginPath(); c.arc(x, y, 7 * q, 0, 6.3); c.fill(); c.strokeStyle = '#2a1c10'; c.lineWidth = 2 * q; c.beginPath(); c.moveTo(x, 0); c.lineTo(x, y - 8 * q); c.stroke(); });
+  c = mid.getContext('2d'); c.clearRect(0, 0, W, H);
+  for (let k = 0; k <= 3; k++) { const x = k * W / 3, pw = 110 * q; const pg = c.createLinearGradient(x - pw / 2, 0, x + pw / 2, 0); pg.addColorStop(0, '#060302'); pg.addColorStop(.45, '#241709'); pg.addColorStop(1, '#050302'); c.fillStyle = pg; c.fillRect(x - pw / 2, 0, pw, H);
+    c.strokeStyle = 'rgba(255,200,130,.12)'; c.lineWidth = 1.5 * q; c.beginPath(); c.moveTo(x - pw / 2, 0); c.lineTo(x - pw / 2, H); c.stroke();
+    c.fillStyle = '#1b1109'; c.fillRect(x - pw * .7, FLOOR - 90 * q, pw * 1.4, 90 * q); c.strokeStyle = 'rgba(255,200,130,.16)'; c.strokeRect(x - pw * .7, FLOOR - 90 * q, pw * 1.4, 90 * q);
+    for (let i = 0; i < 5; i++) { c.fillStyle = ['#4a1c14', '#2c2a30', '#3e2a16'][i % 3]; c.fillRect(x - pw * .6 + i * 22 * q, FLOOR - 90 * q - (20 + (i * 37) % 30) * q, 18 * q, (20 + (i * 37) % 30) * q); } }
+  c.strokeStyle = '#150d07'; c.lineWidth = 14 * q; for (let k = 0; k < 3; k++) { const x0 = k * W / 3, x1 = (k + 1) * W / 3; c.beginPath(); c.moveTo(x0, 150 * q); c.quadraticCurveTo((x0 + x1) / 2, -60 * q, x1, 150 * q); c.stroke(); }
+  c = fore.getContext('2d'); c.clearRect(0, 0, W, H);
+  g = c.createLinearGradient(0, FLOOR, 0, H); g.addColorStop(0, '#2c1e12'); g.addColorStop(1, '#0a0604'); c.fillStyle = g; c.fillRect(0, FLOOR, W, H - FLOOR);
+  c.strokeStyle = '#6a4c2c'; c.lineWidth = 2 * q; c.beginPath(); c.moveTo(0, FLOOR); c.lineTo(W, FLOOR); c.stroke();
+  c.strokeStyle = 'rgba(0,0,0,.45)'; c.lineWidth = 2 * q; for (let i = 0; i < 18; i++) { const x = i * W / 17; c.beginPath(); c.moveTo(x, FLOOR); c.lineTo(x - (W / 2 - x) * .25, H); c.stroke(); }
+  c.strokeStyle = 'rgba(255,200,130,.08)'; c.lineWidth = 1; for (let i = 1; i < 5; i++) { c.beginPath(); c.moveTo(0, FLOOR + i * i * 3.5 * q); c.lineTo(W, FLOOR + i * i * 3.5 * q); c.stroke(); }
+  g = c.createRadialGradient(W / 2, H * .55, H * .35, W / 2, H * .55, H * 1.05); g.addColorStop(0, 'rgba(0,0,0,0)'); g.addColorStop(1, 'rgba(0,0,0,.72)'); c.fillStyle = g; c.fillRect(0, 0, W, H);
+})();
+let scroll = 0;
+function drawStage() {
+  const lay = (cv, k) => { const o = ((scroll * k) % W + W) % W; sctx.drawImage(cv, -o, 0); sctx.drawImage(cv, W - o, 0); };
+  sctx.fillStyle = '#04070a'; sctx.fillRect(0, 0, W, H);
+  lay(far, .18); lay(mid, .5);
+  sctx.drawImage(fore, 0, 0, W, H);
+}
+
+/* ---------- state ---------- */
+const S = { rage: false, anim: 'idle', t: 0, playing: true, speed: 1, p2: false, layer: 'all', flip: false, step: false, loop: true, box: false, combo: false, hold: 0, from: null, blend: 1, lastP: null, scrubbing: false };
+const SEQ = [['appear', 0], ['idle', 2], ['walk', 1.6], ['slam', 0], ['idle', .5], ['sweep', 0], ['walk', 1], ['shut', 0], ['pagestorm', 0], ['tomes', 0], ['walk', .8], ['combo3', 0], ['hurt', 0], ['p2tr', 0], ['idle', 1.2], ['combo5', 0], ['redpass', 0], ['indexlock', 0], ['burning', 0], ['pageflip', 0], ['walk', .8], ['finale', 0], ['hurt', 0], ['death', 0]];
+let seqI = 0, seqT = 0;
+
+const nF = n => DR.frames(n);
+function setAnim(n, keep) {
+  if (n === S.anim && !keep) { S.t = 0; S.hold = 0; return; }
+  S.from = S.lastP; S.blend = 0; S.anim = n; S.t = 0; S.hold = 0;
+  if (n === 'p2tr') S.p2 = false; if (A[n].cat === 'p2') { S.p2 = true; syncSegPhase(); }
+  syncUI();
+}
+function curU() {
+  const a = A[S.anim]; let u;
+  if (a.loop) u = ((S.t % a.dur) + a.dur) % a.dur / a.dur; else u = Math.min(S.t / a.dur, 1);
+  if (S.step) { const F = nF(S.anim), f = Math.min(F - 1, Math.floor(u * (a.loop ? F : F - 1) + 1e-6)); u = DR.frameU(S.anim, f); }
+  return u;
+}
+function curFrame() { const a = A[S.anim], F = nF(S.anim); const u = curU(); return Math.max(0, Math.min(F - 1, Math.round(u * (a.loop ? F : F - 1)))); }
+
+/* ---------- UI build ---------- */
+const GROUPS = [['base', 'أساسية'], ['p1', 'هجمات الفيس الأول'], ['phase', 'التحوّل'], ['p2', 'هجمات الفيس الثاني']];
+const movesEl = $('moves');
+function buildMoves() {
+  movesEl.innerHTML = '';
+  GROUPS.forEach(([k]) => { ORDER.filter(n => A[n].cat === k).forEach(n => {
+    const a = A[n], b = document.createElement('button'); b.className = 'chip'; b.dataset.n = n; b.setAttribute('aria-pressed', 'false');
+    b.innerHTML = `<span class="en">${a.label}</span><span class="ar">${a.ar}</span><span class="meta">${a.dur.toFixed(2)}s · ${nF(n)}f · ${a.fps}fps${a.loop ? ' · loop' : ''}</span>`;
+    b.onclick = () => { S.combo = false; $('tCombo').setAttribute('aria-pressed', 'false'); setAnim(n); S.playing = true; syncUI(); };
+    movesEl.appendChild(b); }); });
+}
+function syncUI() {
+  [...movesEl.children].forEach(b => b.setAttribute('aria-pressed', String(b.dataset.n === S.anim)));
+  $('icoPlay').innerHTML = S.playing ? '<path d="M6 5h4v14H6zM14 5h4v14h-4z"/>' : '<path d="M7 4.5v15l12-7.5z"/>';
+  const a = A[S.anim], F = nF(S.anim);
+  $('scrub').max = F - 1;
+  const mk_ = $('marks'); mk_.innerHTML = '';
+  a.ev.forEach(e => { const i = document.createElement('i'); i.style.left = (e.u * 100) + '%'; i.title = e.name; mk_.appendChild(i); });
+  $('hName').textContent = a.label; $('hState').textContent = a.ar.length ? (S.p2 ? 'PHASE 2 · FORBIDDEN EDITION' : 'PHASE 1 · FIRST EDITION') : '';
+  const kv = $('kv');
+  kv.innerHTML = `<dt>الاسم</dt><dd>${S.anim}</dd><dt>المدة</dt><dd>${a.dur.toFixed(2)} s</dd><dt>معدّل الإطارات</dt><dd>${a.fps} fps</dd><dt>عدد الإطارات</dt><dd>${F}</dd><dt>النوع</dt><dd>${a.loop ? 'loop' : 'one-shot'}</dd><dt>حجم الخلية</dt><dd>${DR.CELL.w}×${DR.CELL.h}px</dd><dt>نقطة القدم</dt><dd>(${DR.CELL.fx}, ${DR.CELL.fy})</dd>` + (a.hit ? `<dt>صندوق الإصابة</dt><dd>x${a.hit.x} y${a.hit.y} ${a.hit.w}×${a.hit.h}</dd>` : '');
+  $('evs').innerHTML = a.ev.length ? a.ev.map(e => `<tr><td class="m">${e.name}</td><td class="m">${Math.round(e.u * (a.loop ? F : F - 1))}</td><td class="m">${(e.u * a.dur).toFixed(2)}</td></tr>`).join('') : '<tr><td colspan="3" class="m">—</td></tr>';
+  buildStrip();
+}
+let stripTok = 0;
+function buildStrip() {
+  const tok = ++stripTok, host = $('strip'); host.innerHTML = '';
+  const F = nF(S.anim), n = Math.min(F, 14), cv = [];
+  for (let i = 0; i < n; i++) { const c = document.createElement('canvas'); c.width = 300; c.height = 196; c.dataset.f = Math.round(i * (F - 1) / (n - 1 || 1)); c.onclick = () => { S.playing = false; setFrame(+c.dataset.f); syncUI(); }; host.appendChild(c); cv.push(c); }
+  let i = 0; const nm = S.anim, p2 = S.p2, layer = S.layer;
+  (function next() {
+    if (tok !== stripTok || i >= cv.length) return; const c = cv[i++], f = +c.dataset.f, x = c.getContext('2d');
+    x.fillStyle = '#05090d'; x.fillRect(0, 0, c.width, c.height);
+    const sc = .4;
+    const u = DR.frameU(nm, f);
+    DR.render(c, { anim: nm, u, T: f / A[nm].fps, phase2: p2, rage: S.rage, layer, ox: c.width * .27, oy: c.height - 10, sc, facing: 1 });
+    setTimeout(next, 0);
+  })();
+}
+function markStrip() { const f = curFrame(); let best = null, bd = 1e9; [...$('strip').children].forEach(c => { c.classList.remove('cur'); const d = Math.abs(+c.dataset.f - f); if (d < bd) { bd = d; best = c; } }); if (best) best.classList.add('cur'); }
+function setFrame(f) { const a = A[S.anim], F = nF(S.anim); const u = f / (a.loop ? F : F - 1); S.t = u * a.dur; }
+
+/* ---------- controls ---------- */
+$('bPlay').onclick = () => { S.playing = !S.playing; if (S.playing && !A[S.anim].loop && S.t >= A[S.anim].dur) S.t = 0; syncUI(); };
+$('bPrev').onclick = () => { S.playing = false; setFrame((curFrame() - 1 + nF(S.anim)) % nF(S.anim)); syncUI(); };
+$('bNext').onclick = () => { S.playing = false; setFrame((curFrame() + 1) % nF(S.anim)); syncUI(); };
+$('scrub').oninput = e => { S.playing = false; S.combo = false; $('tCombo').setAttribute('aria-pressed', 'false'); setFrame(+e.target.value); syncUI(); };
+function seg(id, cb) { $(id).onclick = e => { const b = e.target.closest('button'); if (!b) return; [...$(id).children].forEach(x => x.setAttribute('aria-pressed', String(x === b))); cb(b.dataset.v); syncUI(); }; }
+seg('segPhase', v => { S.p2 = v === '1'; });
+seg('segLayer', v => { S.layer = v; });
+$('speed').onchange = e => { S.speed = +e.target.value; };
+function tog(id, key, cb) { $(id).onclick = () => { S[key] = !S[key]; $(id).setAttribute('aria-pressed', String(S[key])); if (cb) cb(); }; }
+tog('tStep', 'step'); tog('tRage', 'rage'); tog('tLoop', 'loop'); tog('tFlip', 'flip'); tog('tBox', 'box');
+tog('tCombo', 'combo', () => { if (S.combo) { seqI = 0; seqT = 0; S.p2 = false; S.playing = true; setAnim(SEQ[0][0], true); S.t = 0; syncSegPhase(); } });
+function syncSegPhase() { [...$('segPhase').children].forEach(b => b.setAttribute('aria-pressed', String((b.dataset.v === '1') === S.p2))); }
+window.addEventListener('keydown', e => { if (e.target.tagName === 'INPUT' || e.target.tagName === 'SELECT') return; if (e.code === 'Space') { e.preventDefault(); $('bPlay').click(); } if (e.code === 'ArrowLeft') $('bPrev').click(); if (e.code === 'ArrowRight') $('bNext').click(); });
+
+/* ---------- hit / hurt boxes ---------- */
+function drawBoxes(P, u, o) {
+  const c = sctx; c.save(); c.setTransform(1, 0, 0, 1, 0, 0); c.translate(o.ox, o.oy); c.scale(o.sc * o.facing, o.sc); c.lineWidth = 1.6 / o.sc; c.font = (11 / o.sc) + 'px monospace';
+  c.strokeStyle = 'rgba(120,255,160,.9)'; c.strokeRect(P.x - 120, -330, 240, 330); c.fillStyle = 'rgba(120,255,160,.9)'; c.fillText('HURTBOX', P.x - 118, -336);
+  const COL = { n: '255,90,110', wave: '255,150,60', proj: '255,200,90', red: '255,40,40', wall: '200,160,255', fire: '255,120,30', grab: '255,60,200' };
+  (A[S.anim].hits || []).forEach(h => { if (u < h.u0 || u > h.u1) return; const cc = COL[h.k] || COL.n; c.fillStyle = `rgba(${cc},.18)`; c.strokeStyle = `rgba(${cc},.95)`; c.fillRect(h.x, h.y, h.w, h.h); c.strokeRect(h.x, h.y, h.w, h.h); c.fillStyle = `rgba(${cc},1)`; c.fillText(h.k.toUpperCase(), h.x + 3, h.y - 4 / o.sc); });
+  c.restore();
+}
+
+/* ---------- main loop ---------- */
+let last = performance.now();
+function frame(now) {
+  const dt = Math.min(.05, (now - last) / 1000); last = now;
+  const a = A[S.anim];
+  if (S.playing) {
+    S.t += dt * S.speed * (S.rage ? 1.3 : 1) * (S.p2 && A[S.anim].cat !== 'base' && A[S.anim].cat !== 'phase' ? 1.15 : 1);
+    if (S.blend < 1) S.blend = Math.min(1, S.blend + dt / .16);
+    if (!a.loop && S.t >= a.dur) {
+      S.hold += dt * S.speed;
+      if (S.combo) { if (S.hold > .25) nextSeq(); }
+      else if (S.loop && S.hold > .7) { S.t = 0; S.hold = 0; if (S.anim === 'phase2' && !S.p2) {} }
+    }
+    if (S.combo && a.loop) { seqT += dt * S.speed; if (seqT >= SEQ[seqI][1]) nextSeq(); }
+    if (S.anim === 'glide' || (S.anim === 'dash' && S.t > .15 * a.dur && S.t < .75 * a.dur)) scroll += dt * S.speed * (S.anim === 'glide' ? 420 : 900) * q;
+    // phase 2 flag flips once the transition has run
+    if (S.anim === 'p2tr' && S.t >= a.dur && S.combo) S.p2 = true;
+  }
+  const u = curU();
+  const T = S.t;
+  const o = { anim: S.anim, u, T, phase2: S.p2, rage: S.rage, layer: S.layer, ox: W * .28, oy: FLOOR + 6 * q, sc: 1.02 * q, facing: S.flip ? -1 : 1, shadow: S.layer === 'all' };
+  if (S.flip) o.ox = W * .72;
+  let P = DR.getPose(S.anim, u, T, S.p2, S.rage);
+  if (S.from && S.blend < 1) { const b = DR.blendPose(S.from, P, S.blend); P = Object.assign(P, b, { name: S.anim, u, T, cyc: a.cyc, dur: a.dur }); }
+  o.pose = P; S.lastP = P;
+  drawStage();
+  if (S.layer === 'fx' || S.layer === 'body') { sctx.fillStyle = 'rgba(6,10,14,.35)'; sctx.fillRect(0, 0, W, H); }
+  DR.render(stage, o);
+  if (S.box) drawBoxes(P, u, o);
+  const F = nF(S.anim), f = curFrame();
+  $('hFrame').textContent = `F ${String(f).padStart(2, '0')} / ${String(F - 1).padStart(2, '0')}  ·  ${(Math.min(S.t, a.dur)).toFixed(2)}s`;
+  $('hPhase').textContent = S.combo ? 'COMBO' : '';
+  if (!S.scrubbing) $('scrub').value = f;
+  markStrip();
+  requestAnimationFrame(frame);
+}
+function nextSeq() {
+  if (S.anim === 'p2tr') S.p2 = true;
+  seqI = (seqI + 1) % SEQ.length; seqT = 0;
+  if (seqI === 0) { S.p2 = false; }
+  setAnim(SEQ[seqI][0], true); S.t = 0; S.hold = 0; syncSegPhase();
+}
+
+buildMoves(); syncUI(); requestAnimationFrame(frame);
+})();
+</script>
+
+</body></html>

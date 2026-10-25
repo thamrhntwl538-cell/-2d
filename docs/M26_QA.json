@@ -1,0 +1,41 @@
+{
+  "engine": "Godot 4.7.2",
+  "checks": [
+    {
+      "scope": "art",
+      "checks": 1604,
+      "failures": []
+    },
+    {
+      "scope": "pixels",
+      "checks": 24,
+      "failures": []
+    },
+    {
+      "scope": "audio",
+      "checks": 130,
+      "failures": []
+    },
+    {
+      "scope": "trial",
+      "checks": 171,
+      "failures": []
+    },
+    {
+      "scope": "actual_input_launch",
+      "checks": 29,
+      "failures": []
+    }
+  ],
+  "preservation": {
+    "baseline": "dfca439976ea65f99baba035497fcb2bac3a325d",
+    "protected_files_checked": 1936,
+    "permitted_changed_existing_files": [
+      "LICENSE_NOTES.txt",
+      "README.md",
+      "project.godot"
+    ],
+    "violations": []
+  },
+  "scope": "Native reference and isolated playable trial. Fixtures and real-input routes are distinguished in the linked reports. Not a full human skill-played victory or hardware performance benchmark."
+}

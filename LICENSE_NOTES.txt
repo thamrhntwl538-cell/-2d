@@ -77,3 +77,36 @@ shader, bronze travelling crests, floor dust and folded-paper response are
 native authored Godot rendering/geometry. No new external artwork, recordings
 or samples are introduced. M24's original score/enemy sounds remain; hero vocal
 entries/layers are disabled at the local soundscape boundary.
+
+M26 Archivist supplied reference integration (2026-10-25): character art,
+animation sheets, metadata, HTML canvas reference and the 43 WAV sound effects
+were supplied by the user in the Archivist_part1..part6 and Archivist_SFX_v2
+uploads. The project records their provenance without asserting copyright
+ownership or assigning them a new blanket license. This replaces the unpublished
+M26 generated-atlas character study; that reconstruction is not part of this
+release. Original source-cell RGBA pixels are preserved in all 1505 frames.
+Outside-cell margins are restored using the supplied HTML's own drawing
+functions, without changing the original cell pixels. Source hashes and import
+verification are recorded under assets/minibosses/m26_imported; the supplied
+HTML is retained in docs/reference/archivist_user_reference.html.
+
+The supplied SFX WAV files and PCM payloads remain unchanged on disk. Godot
+compatibility adapts the WAVE_FORMAT_EXTENSIBLE container tag only in memory
+after validating its PCM subtype. Sound-file provenance and hashes are recorded
+under assets/audio/m26_imported/source_hashes.json. No new license is asserted
+for these user-provided recordings.
+
+The pre-encounter singing is the full user-provided recording named
+WhatsApp Audio 2026-10-24 at 4.43.00 PM.mp4, converted to mono Vorbis for runtime
+playback. It was not trimmed, normalized, pitch-shifted, synthesized or cloned.
+Original and shipped hashes, conversion details and rights classification are
+in assets/audio/m26/provenance.json and assets/audio/m26/LICENSE.txt. Copyright
+ownership and a blanket reuse license are not asserted. The source is attached
+to the Archivist's body and stops on encounter start.
+
+The new catalog, isolated playable trial, sound scheduling and runtime collision
+integration are authored for this project. Encounter health, world walking speed,
+attack selection and the half-health phase trigger are integration defaults,
+not rules claimed to be present in the supplied HTML. The original hero, Bell
+Warden and library gameplay sources remain unchanged. The isolated trial does
+not yet place the Archivist in the fifteen-room library or grant saved rewards.

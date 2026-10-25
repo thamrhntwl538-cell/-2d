@@ -1,0 +1,1019 @@
+{
+ "idle": {
+  "frames": 39,
+  "fps": 15,
+  "duration": 2.6,
+  "loop": true,
+  "category": "base",
+  "columns": 8,
+  "rows": 5,
+  "events": [],
+  "hitboxes": []
+ },
+ "walk": {
+  "frames": 18,
+  "fps": 20,
+  "duration": 0.9,
+  "loop": true,
+  "category": "base",
+  "columns": 8,
+  "rows": 3,
+  "events": [
+   {
+    "u": 0,
+    "name": "footstep_L",
+    "frame": 0,
+    "time": 0
+   },
+   {
+    "u": 0.5,
+    "name": "footstep_R",
+    "frame": 9,
+    "time": 0.45
+   }
+  ],
+  "hitboxes": []
+ },
+ "slam": {
+  "frames": 46,
+  "fps": 24,
+  "duration": 1.9,
+  "loop": false,
+  "category": "p1",
+  "columns": 8,
+  "rows": 6,
+  "events": [
+   {
+    "u": 0.28,
+    "name": "telegraph_begin",
+    "frame": 13,
+    "time": 0.532
+   },
+   {
+    "u": 0.46,
+    "name": "hit_active_begin",
+    "frame": 21,
+    "time": 0.874
+   },
+   {
+    "u": 0.56,
+    "name": "hit_active_end",
+    "frame": 25,
+    "time": 1.064
+   }
+  ],
+  "hitboxes": [
+   {
+    "u0": 0.46,
+    "u1": 0.56,
+    "x": 100,
+    "y": -170,
+    "w": 170,
+    "h": 170,
+    "k": "n"
+   },
+   {
+    "u0": 0.47,
+    "u1": 0.78,
+    "x": 200,
+    "y": -60,
+    "w": 520,
+    "h": 60,
+    "k": "wave"
+   }
+  ]
+ },
+ "sweep": {
+  "frames": 31,
+  "fps": 24,
+  "duration": 1.3,
+  "loop": false,
+  "category": "p1",
+  "columns": 8,
+  "rows": 4,
+  "events": [
+   {
+    "u": 0.22,
+    "name": "telegraph_begin",
+    "frame": 7,
+    "time": 0.286
+   },
+   {
+    "u": 0.42,
+    "name": "hit_active_begin",
+    "frame": 13,
+    "time": 0.546
+   },
+   {
+    "u": 0.58,
+    "name": "hit_active_end",
+    "frame": 17,
+    "time": 0.754
+   }
+  ],
+  "hitboxes": [
+   {
+    "u0": 0.42,
+    "u1": 0.58,
+    "x": 40,
+    "y": -190,
+    "w": 330,
+    "h": 190,
+    "k": "n"
+   }
+  ]
+ },
+ "shut": {
+  "frames": 48,
+  "fps": 24,
+  "duration": 2,
+  "loop": false,
+  "category": "p1",
+  "columns": 8,
+  "rows": 6,
+  "events": [
+   {
+    "u": 0.24,
+    "name": "guard_begin",
+    "frame": 11,
+    "time": 0.48
+   },
+   {
+    "u": 0.74,
+    "name": "guard_end",
+    "frame": 35,
+    "time": 1.48
+   },
+   {
+    "u": 0.78,
+    "name": "burst_hit_active_begin",
+    "frame": 37,
+    "time": 1.56
+   },
+   {
+    "u": 0.9,
+    "name": "burst_hit_active_end",
+    "frame": 42,
+    "time": 1.8
+   }
+  ],
+  "hitboxes": [
+   {
+    "u0": 0.78,
+    "u1": 0.9,
+    "x": -190,
+    "y": -300,
+    "w": 520,
+    "h": 300,
+    "k": "n"
+   }
+  ]
+ },
+ "pagestorm": {
+  "frames": 55,
+  "fps": 24,
+  "duration": 2.3,
+  "loop": false,
+  "category": "p1",
+  "columns": 8,
+  "rows": 7,
+  "events": [
+   {
+    "u": 0.22,
+    "name": "telegraph_begin",
+    "frame": 12,
+    "time": 0.506
+   },
+   {
+    "u": 0.4,
+    "name": "volley_0",
+    "frame": 22,
+    "time": 0.92
+   },
+   {
+    "u": 0.54,
+    "name": "volley_1",
+    "frame": 29,
+    "time": 1.242
+   },
+   {
+    "u": 0.68,
+    "name": "volley_2",
+    "frame": 37,
+    "time": 1.564
+   }
+  ],
+  "hitboxes": [
+   {
+    "u0": 0.4,
+    "u1": 0.5,
+    "x": 120,
+    "y": -300,
+    "w": 620,
+    "h": 200,
+    "k": "proj"
+   },
+   {
+    "u0": 0.54,
+    "u1": 0.64,
+    "x": 120,
+    "y": -300,
+    "w": 620,
+    "h": 200,
+    "k": "proj"
+   },
+   {
+    "u0": 0.68,
+    "u1": 0.78,
+    "x": 120,
+    "y": -300,
+    "w": 620,
+    "h": 200,
+    "k": "proj"
+   }
+  ]
+ },
+ "tomes": {
+  "frames": 67,
+  "fps": 24,
+  "duration": 2.8,
+  "loop": false,
+  "category": "p1",
+  "columns": 8,
+  "rows": 9,
+  "events": [
+   {
+    "u": 0.34,
+    "name": "ground_hit",
+    "frame": 22,
+    "time": 0.952
+   },
+   {
+    "u": 0.36,
+    "name": "markers_spawn",
+    "frame": 24,
+    "time": 1.008
+   },
+   {
+    "u": 0.5,
+    "name": "tome_0_fall",
+    "x": 210,
+    "frame": 33,
+    "time": 1.4
+   },
+   {
+    "u": 0.55,
+    "name": "tome_1_fall",
+    "x": 370,
+    "frame": 36,
+    "time": 1.54
+   },
+   {
+    "u": 0.6,
+    "name": "tome_2_fall",
+    "x": 530,
+    "frame": 40,
+    "time": 1.68
+   },
+   {
+    "u": 0.65,
+    "name": "tome_3_fall",
+    "x": 700,
+    "frame": 43,
+    "time": 1.82
+   },
+   {
+    "u": 0.7,
+    "name": "tome_4_fall",
+    "x": -190,
+    "frame": 46,
+    "time": 1.96
+   }
+  ],
+  "hitboxes": [
+   {
+    "u0": 0.59,
+    "u1": 0.67,
+    "x": 155,
+    "y": -90,
+    "w": 110,
+    "h": 90,
+    "k": "n"
+   },
+   {
+    "u0": 0.64,
+    "u1": 0.7200000000000001,
+    "x": 315,
+    "y": -90,
+    "w": 110,
+    "h": 90,
+    "k": "n"
+   },
+   {
+    "u0": 0.69,
+    "u1": 0.77,
+    "x": 475,
+    "y": -90,
+    "w": 110,
+    "h": 90,
+    "k": "n"
+   },
+   {
+    "u0": 0.74,
+    "u1": 0.8200000000000001,
+    "x": 645,
+    "y": -90,
+    "w": 110,
+    "h": 90,
+    "k": "n"
+   },
+   {
+    "u0": 0.7899999999999999,
+    "u1": 0.87,
+    "x": -245,
+    "y": -90,
+    "w": 110,
+    "h": 90,
+    "k": "n"
+   }
+  ]
+ },
+ "combo3": {
+  "frames": 79,
+  "fps": 24,
+  "duration": 3.3,
+  "loop": false,
+  "category": "p1",
+  "columns": 8,
+  "rows": 10,
+  "events": [
+   {
+    "u": 0.1,
+    "name": "telegraph_1",
+    "frame": 8,
+    "time": 0.33
+   },
+   {
+    "u": 0.19,
+    "name": "hit_1_begin",
+    "frame": 15,
+    "time": 0.627
+   },
+   {
+    "u": 0.27,
+    "name": "hit_1_end",
+    "frame": 21,
+    "time": 0.891
+   },
+   {
+    "u": 0.4,
+    "name": "telegraph_2",
+    "frame": 31,
+    "time": 1.32
+   },
+   {
+    "u": 0.47,
+    "name": "hit_2_begin",
+    "frame": 37,
+    "time": 1.551
+   },
+   {
+    "u": 0.55,
+    "name": "hit_2_end",
+    "frame": 43,
+    "time": 1.815
+   },
+   {
+    "u": 0.66,
+    "name": "telegraph_3",
+    "frame": 51,
+    "time": 2.178
+   },
+   {
+    "u": 0.76,
+    "name": "hit_3_begin",
+    "frame": 59,
+    "time": 2.508
+   },
+   {
+    "u": 0.84,
+    "name": "hit_3_end",
+    "frame": 66,
+    "time": 2.772
+   }
+  ],
+  "hitboxes": [
+   {
+    "u0": 0.19,
+    "u1": 0.27,
+    "x": 40,
+    "y": -190,
+    "w": 340,
+    "h": 190,
+    "k": "n"
+   },
+   {
+    "u0": 0.47,
+    "u1": 0.55,
+    "x": 100,
+    "y": -190,
+    "w": 340,
+    "h": 190,
+    "k": "n"
+   },
+   {
+    "u0": 0.76,
+    "u1": 0.84,
+    "x": 280,
+    "y": -170,
+    "w": 170,
+    "h": 170,
+    "k": "n"
+   },
+   {
+    "u0": 0.77,
+    "u1": 0.95,
+    "x": 380,
+    "y": -60,
+    "w": 520,
+    "h": 60,
+    "k": "wave"
+   }
+  ]
+ },
+ "p2tr": {
+  "frames": 68,
+  "fps": 20,
+  "duration": 3.4,
+  "loop": false,
+  "category": "phase",
+  "columns": 8,
+  "rows": 9,
+  "events": [
+   {
+    "u": 0,
+    "name": "invulnerable_begin",
+    "frame": 0,
+    "time": 0
+   },
+   {
+    "u": 0.47,
+    "name": "shockwave",
+    "frame": 31,
+    "time": 1.598
+   },
+   {
+    "u": 0.72,
+    "name": "invulnerable_end",
+    "frame": 48,
+    "time": 2.448
+   }
+  ],
+  "hitboxes": [
+   {
+    "u0": 0.47,
+    "u1": 0.6,
+    "x": -300,
+    "y": -300,
+    "w": 900,
+    "h": 300,
+    "k": "wave"
+   }
+  ]
+ },
+ "combo5": {
+  "frames": 84,
+  "fps": 24,
+  "duration": 3.5,
+  "loop": false,
+  "category": "p2",
+  "columns": 8,
+  "rows": 11,
+  "events": [
+   {
+    "u": 0.06,
+    "name": "telegraph_1",
+    "frame": 5,
+    "time": 0.21
+   },
+   {
+    "u": 0.12,
+    "name": "hit_1",
+    "frame": 10,
+    "time": 0.42
+   },
+   {
+    "u": 0.22,
+    "name": "telegraph_2",
+    "frame": 18,
+    "time": 0.77
+   },
+   {
+    "u": 0.29,
+    "name": "hit_2",
+    "frame": 24,
+    "time": 1.015
+   },
+   {
+    "u": 0.4,
+    "name": "telegraph_3",
+    "frame": 33,
+    "time": 1.4
+   },
+   {
+    "u": 0.47,
+    "name": "hit_3",
+    "frame": 39,
+    "time": 1.645
+   },
+   {
+    "u": 0.53,
+    "name": "telegraph_4_leap",
+    "frame": 44,
+    "time": 1.855
+   },
+   {
+    "u": 0.62,
+    "name": "hit_4_air",
+    "frame": 51,
+    "time": 2.17
+   },
+   {
+    "u": 0.66,
+    "name": "hit_5_slam",
+    "frame": 55,
+    "time": 2.31
+   }
+  ],
+  "hitboxes": [
+   {
+    "u0": 0.12,
+    "u1": 0.19,
+    "x": 40,
+    "y": -190,
+    "w": 330,
+    "h": 190,
+    "k": "n"
+   },
+   {
+    "u0": 0.29,
+    "u1": 0.36,
+    "x": 60,
+    "y": -300,
+    "w": 260,
+    "h": 300,
+    "k": "n"
+   },
+   {
+    "u0": 0.45,
+    "u1": 0.52,
+    "x": -140,
+    "y": -300,
+    "w": 520,
+    "h": 300,
+    "k": "n"
+   },
+   {
+    "u0": 0.58,
+    "u1": 0.66,
+    "x": 250,
+    "y": -330,
+    "w": 250,
+    "h": 330,
+    "k": "n"
+   },
+   {
+    "u0": 0.66,
+    "u1": 0.8,
+    "x": 280,
+    "y": -110,
+    "w": 170,
+    "h": 110,
+    "k": "n"
+   },
+   {
+    "u0": 0.67,
+    "u1": 0.86,
+    "x": 380,
+    "y": -60,
+    "w": 540,
+    "h": 60,
+    "k": "wave"
+   }
+  ]
+ },
+ "redpass": {
+  "frames": 67,
+  "fps": 24,
+  "duration": 2.8,
+  "loop": false,
+  "category": "p2",
+  "columns": 8,
+  "rows": 9,
+  "events": [
+   {
+    "u": 0.2,
+    "name": "telegraph_red_begin",
+    "frame": 13,
+    "time": 0.56
+   },
+   {
+    "u": 0.58,
+    "name": "telegraph_red_end",
+    "frame": 38,
+    "time": 1.624
+   },
+   {
+    "u": 0.64,
+    "name": "hit_unblockable_begin",
+    "frame": 42,
+    "time": 1.792
+   },
+   {
+    "u": 0.78,
+    "name": "hit_unblockable_end",
+    "frame": 51,
+    "time": 2.184
+   }
+  ],
+  "hitboxes": [
+   {
+    "u0": 0.64,
+    "u1": 0.78,
+    "x": 100,
+    "y": -200,
+    "w": 220,
+    "h": 200,
+    "k": "red"
+   },
+   {
+    "u0": 0.65,
+    "u1": 0.9,
+    "x": 200,
+    "y": -80,
+    "w": 760,
+    "h": 80,
+    "k": "red"
+   }
+  ]
+ },
+ "indexlock": {
+  "frames": 67,
+  "fps": 24,
+  "duration": 2.8,
+  "loop": false,
+  "category": "p2",
+  "columns": 8,
+  "rows": 9,
+  "events": [
+   {
+    "u": 0.14,
+    "name": "telegraph_begin",
+    "frame": 9,
+    "time": 0.392
+   },
+   {
+    "u": 0.3,
+    "name": "walls_rise",
+    "frame": 20,
+    "time": 0.84
+   },
+   {
+    "u": 0.4,
+    "name": "walls_close_begin",
+    "frame": 26,
+    "time": 1.12
+   },
+   {
+    "u": 0.78,
+    "name": "walls_sink",
+    "frame": 51,
+    "time": 2.184
+   }
+  ],
+  "hitboxes": [
+   {
+    "u0": 0.3,
+    "u1": 0.38,
+    "x": 190,
+    "y": -120,
+    "w": 150,
+    "h": 120,
+    "k": "n"
+   },
+   {
+    "u0": 0.34,
+    "u1": 0.82,
+    "x": 480,
+    "y": -420,
+    "w": 80,
+    "h": 420,
+    "k": "wall"
+   },
+   {
+    "u0": 0.34,
+    "u1": 0.82,
+    "x": -290,
+    "y": -420,
+    "w": 80,
+    "h": 420,
+    "k": "wall"
+   }
+  ]
+ },
+ "burning": {
+  "frames": 62,
+  "fps": 24,
+  "duration": 2.6,
+  "loop": false,
+  "category": "p2",
+  "columns": 8,
+  "rows": 8,
+  "events": [
+   {
+    "u": 0.12,
+    "name": "telegraph_begin",
+    "frame": 7,
+    "time": 0.312
+   },
+   {
+    "u": 0.4,
+    "name": "ground_hit",
+    "frame": 24,
+    "time": 1.04
+   },
+   {
+    "u": 0.42,
+    "name": "fire_0_ignite",
+    "x": 260,
+    "frame": 26,
+    "time": 1.092
+   },
+   {
+    "u": 0.45499999999999996,
+    "name": "fire_1_ignite",
+    "x": 420,
+    "frame": 28,
+    "time": 1.183
+   },
+   {
+    "u": 0.49,
+    "name": "fire_2_ignite",
+    "x": 580,
+    "frame": 30,
+    "time": 1.274
+   },
+   {
+    "u": 0.525,
+    "name": "fire_3_ignite",
+    "x": 740,
+    "frame": 32,
+    "time": 1.365
+   },
+   {
+    "u": 0.85,
+    "name": "fire_end",
+    "frame": 52,
+    "time": 2.21
+   }
+  ],
+  "hitboxes": [
+   {
+    "u0": 0.4,
+    "u1": 0.48,
+    "x": 110,
+    "y": -170,
+    "w": 170,
+    "h": 170,
+    "k": "n"
+   },
+   {
+    "u0": 0.44,
+    "u1": 0.85,
+    "x": 200,
+    "y": -90,
+    "w": 120,
+    "h": 90,
+    "k": "fire"
+   },
+   {
+    "u0": 0.475,
+    "u1": 0.85,
+    "x": 360,
+    "y": -90,
+    "w": 120,
+    "h": 90,
+    "k": "fire"
+   },
+   {
+    "u0": 0.51,
+    "u1": 0.85,
+    "x": 520,
+    "y": -90,
+    "w": 120,
+    "h": 90,
+    "k": "fire"
+   },
+   {
+    "u0": 0.545,
+    "u1": 0.85,
+    "x": 680,
+    "y": -90,
+    "w": 120,
+    "h": 90,
+    "k": "fire"
+   }
+  ]
+ },
+ "pageflip": {
+  "frames": 46,
+  "fps": 24,
+  "duration": 1.9,
+  "loop": false,
+  "category": "p2",
+  "columns": 8,
+  "rows": 6,
+  "events": [
+   {
+    "u": 0.04,
+    "name": "vanish_begin",
+    "frame": 2,
+    "time": 0.076
+   },
+   {
+    "u": 0.2,
+    "name": "untargetable_begin",
+    "frame": 9,
+    "time": 0.38
+   },
+   {
+    "u": 0.42,
+    "name": "teleport",
+    "frame": 19,
+    "time": 0.798
+   },
+   {
+    "u": 0.46,
+    "name": "reappear_telegraph",
+    "frame": 21,
+    "time": 0.874
+   },
+   {
+    "u": 0.58,
+    "name": "hit_active_begin",
+    "frame": 26,
+    "time": 1.102
+   },
+   {
+    "u": 0.7,
+    "name": "hit_active_end",
+    "frame": 31,
+    "time": 1.33
+   }
+  ],
+  "hitboxes": [
+   {
+    "u0": 0.58,
+    "u1": 0.7,
+    "x": 400,
+    "y": -190,
+    "w": 340,
+    "h": 190,
+    "k": "n"
+   }
+  ]
+ },
+ "finale": {
+  "frames": 77,
+  "fps": 24,
+  "duration": 3.2,
+  "loop": false,
+  "category": "p2",
+  "columns": 8,
+  "rows": 10,
+  "events": [
+   {
+    "u": 0.1,
+    "name": "telegraph_red_begin",
+    "frame": 8,
+    "time": 0.32
+   },
+   {
+    "u": 0.36,
+    "name": "lunge",
+    "frame": 27,
+    "time": 1.152
+   },
+   {
+    "u": 0.42,
+    "name": "grab_active_begin",
+    "frame": 32,
+    "time": 1.344
+   },
+   {
+    "u": 0.52,
+    "name": "grab_active_end",
+    "frame": 40,
+    "time": 1.664
+   },
+   {
+    "u": 0.62,
+    "name": "player_locked",
+    "frame": 47,
+    "time": 1.984
+   },
+   {
+    "u": 0.76,
+    "name": "slam_damage",
+    "frame": 58,
+    "time": 2.432
+   },
+   {
+    "u": 0.9,
+    "name": "release",
+    "frame": 68,
+    "time": 2.88
+   }
+  ],
+  "hitboxes": [
+   {
+    "u0": 0.4,
+    "u1": 0.52,
+    "x": 150,
+    "y": -230,
+    "w": 160,
+    "h": 190,
+    "k": "grab"
+   },
+   {
+    "u0": 0.76,
+    "u1": 0.86,
+    "x": -40,
+    "y": -300,
+    "w": 520,
+    "h": 300,
+    "k": "red"
+   }
+  ]
+ },
+ "hurt": {
+  "frames": 14,
+  "fps": 24,
+  "duration": 0.6,
+  "loop": false,
+  "category": "base",
+  "columns": 8,
+  "rows": 2,
+  "events": [
+   {
+    "u": 0.04,
+    "name": "hit_flash",
+    "frame": 1,
+    "time": 0.024
+   }
+  ],
+  "hitboxes": []
+ },
+ "death": {
+  "frames": 72,
+  "fps": 20,
+  "duration": 3.6,
+  "loop": false,
+  "category": "base",
+  "columns": 8,
+  "rows": 9,
+  "events": [
+   {
+    "u": 0.7,
+    "name": "body_hits_ground",
+    "frame": 50,
+    "time": 2.52
+   },
+   {
+    "u": 0.85,
+    "name": "dissolve_begin",
+    "frame": 60,
+    "time": 3.06
+   }
+  ],
+  "hitboxes": []
+ },
+ "appear": {
+  "frames": 48,
+  "fps": 20,
+  "duration": 2.4,
+  "loop": false,
+  "category": "base",
+  "columns": 8,
+  "rows": 6,
+  "events": [
+   {
+    "u": 0.7,
+    "name": "eyes_open",
+    "frame": 33,
+    "time": 1.68
+   }
+  ],
+  "hitboxes": []
+ }
+}

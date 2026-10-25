@@ -1,0 +1,875 @@
+{
+  "checks": 171,
+  "failed": 0,
+  "passed": 171,
+  "results": [
+    {
+      "detail": null,
+      "name": "Isolated trial starts at six lanterns and configured 48 HP",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "Keeper sings before encounter",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "Emitter belongs to enemy body; listener belongs to hero",
+      "passed": true
+    },
+    {
+      "detail": {
+        "far_db": -15.4842456646436,
+        "near_db": -3.5104396393225
+      },
+      "name": "Approach increases positional voice before entering combat",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "Actual P input pauses both movement and singing",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "Actual P resumes the same singing encounter",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "Actual walking reaches enemy, synchronously cutting song",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "Encounter starts only near the singing enemy",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "Visible singer remains present at combat entry",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "Only upper-left vitals remain visible in combat",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "Walking away cannot restart the encounter song",
+      "passed": true
+    },
+    {
+      "detail": {
+        "energy": 11.0,
+        "hp": 47
+      },
+      "name": "Real J/attack timeline deals one melee hit and grants 11 reserve",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "One strike cannot repeatedly damage the same boss",
+      "passed": true
+    },
+    {
+      "detail": {
+        "hp": 46,
+        "vy": -510.0
+      },
+      "name": "Actual airborne downward slash pogo-bounces and refreshes air dash",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "P1 slam facing -1 has a visible active collider",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "P1 slam facing -1 actually damages an overlapping hero",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "P1 slam facing -1 wind-up has no premature damage",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "P1 slam facing -1 hazards remain inside current rendered art",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "P1 slam facing 1 has a visible active collider",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "P1 slam facing 1 actually damages an overlapping hero",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "P1 slam facing 1 wind-up has no premature damage",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "P1 slam facing 1 hazards remain inside current rendered art",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "P1 sweep facing -1 has a visible active collider",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "P1 sweep facing -1 actually damages an overlapping hero",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "P1 sweep facing -1 wind-up has no premature damage",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "P1 sweep facing -1 hazards remain inside current rendered art",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "P1 sweep facing 1 has a visible active collider",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "P1 sweep facing 1 actually damages an overlapping hero",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "P1 sweep facing 1 wind-up has no premature damage",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "P1 sweep facing 1 hazards remain inside current rendered art",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "P1 pagestorm facing -1 has a visible active collider",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "P1 pagestorm facing -1 actually damages an overlapping hero",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "P1 pagestorm facing -1 wind-up has no premature damage",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "P1 pagestorm facing -1 hazards remain inside current rendered art",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "P1 pagestorm facing 1 has a visible active collider",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "P1 pagestorm facing 1 actually damages an overlapping hero",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "P1 pagestorm facing 1 wind-up has no premature damage",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "P1 pagestorm facing 1 hazards remain inside current rendered art",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "P1 shut facing -1 has a visible active collider",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "P1 shut facing -1 actually damages an overlapping hero",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "P1 shut facing -1 wind-up has no premature damage",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "P1 shut facing -1 hazards remain inside current rendered art",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "P1 shut facing 1 has a visible active collider",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "P1 shut facing 1 actually damages an overlapping hero",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "P1 shut facing 1 wind-up has no premature damage",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "P1 shut facing 1 hazards remain inside current rendered art",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "P1 tomes facing -1 has a visible active collider",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "P1 tomes facing -1 actually damages an overlapping hero",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "P1 tomes facing -1 wind-up has no premature damage",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "P1 tomes facing -1 hazards remain inside current rendered art",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "P1 tomes facing 1 has a visible active collider",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "P1 tomes facing 1 actually damages an overlapping hero",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "P1 tomes facing 1 wind-up has no premature damage",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "P1 tomes facing 1 hazards remain inside current rendered art",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "P1 combo3 facing -1 has a visible active collider",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "P1 combo3 facing -1 actually damages an overlapping hero",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "P1 combo3 facing -1 wind-up has no premature damage",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "P1 combo3 facing -1 hazards remain inside current rendered art",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "P1 combo3 facing 1 has a visible active collider",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "P1 combo3 facing 1 actually damages an overlapping hero",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "P1 combo3 facing 1 wind-up has no premature damage",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "P1 combo3 facing 1 hazards remain inside current rendered art",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "P2 combo5 facing -1 has a visible active collider",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "P2 combo5 facing -1 actually damages an overlapping hero",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "P2 combo5 facing -1 wind-up has no premature damage",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "P2 combo5 facing -1 hazards remain inside current rendered art",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "P2 combo5 facing 1 has a visible active collider",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "P2 combo5 facing 1 actually damages an overlapping hero",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "P2 combo5 facing 1 wind-up has no premature damage",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "P2 combo5 facing 1 hazards remain inside current rendered art",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "P2 redpass facing -1 has a visible active collider",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "P2 redpass facing -1 actually damages an overlapping hero",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "P2 redpass facing -1 wind-up has no premature damage",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "P2 redpass facing -1 hazards remain inside current rendered art",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "P2 redpass facing 1 has a visible active collider",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "P2 redpass facing 1 actually damages an overlapping hero",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "P2 redpass facing 1 wind-up has no premature damage",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "P2 redpass facing 1 hazards remain inside current rendered art",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "P2 sweep facing -1 has a visible active collider",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "P2 sweep facing -1 actually damages an overlapping hero",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "P2 sweep facing -1 wind-up has no premature damage",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "P2 sweep facing -1 hazards remain inside current rendered art",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "P2 sweep facing 1 has a visible active collider",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "P2 sweep facing 1 actually damages an overlapping hero",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "P2 sweep facing 1 wind-up has no premature damage",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "P2 sweep facing 1 hazards remain inside current rendered art",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "P2 indexlock facing -1 has a visible active collider",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "P2 indexlock facing -1 actually damages an overlapping hero",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "P2 indexlock facing -1 wind-up has no premature damage",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "P2 indexlock facing -1 hazards remain inside current rendered art",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "P2 indexlock facing 1 has a visible active collider",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "P2 indexlock facing 1 actually damages an overlapping hero",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "P2 indexlock facing 1 wind-up has no premature damage",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "P2 indexlock facing 1 hazards remain inside current rendered art",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "P2 burning facing -1 has a visible active collider",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "P2 burning facing -1 actually damages an overlapping hero",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "P2 burning facing -1 wind-up has no premature damage",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "P2 burning facing -1 hazards remain inside current rendered art",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "P2 burning facing 1 has a visible active collider",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "P2 burning facing 1 actually damages an overlapping hero",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "P2 burning facing 1 wind-up has no premature damage",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "P2 burning facing 1 hazards remain inside current rendered art",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "P2 pageflip facing -1 has a visible active collider",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "P2 pageflip facing -1 actually damages an overlapping hero",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "P2 pageflip facing -1 wind-up has no premature damage",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "P2 pageflip facing -1 hazards remain inside current rendered art",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "P2 pageflip facing 1 has a visible active collider",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "P2 pageflip facing 1 actually damages an overlapping hero",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "P2 pageflip facing 1 wind-up has no premature damage",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "P2 pageflip facing 1 hazards remain inside current rendered art",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "P2 pagestorm facing -1 has a visible active collider",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "P2 pagestorm facing -1 actually damages an overlapping hero",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "P2 pagestorm facing -1 wind-up has no premature damage",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "P2 pagestorm facing -1 hazards remain inside current rendered art",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "P2 pagestorm facing 1 has a visible active collider",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "P2 pagestorm facing 1 actually damages an overlapping hero",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "P2 pagestorm facing 1 wind-up has no premature damage",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "P2 pagestorm facing 1 hazards remain inside current rendered art",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "P2 finale facing -1 has a visible active collider",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "Final chapter catches only within its visible grab ring (-1)",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "Caught hero receives the authored slam at its event (-1)",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "P2 finale facing -1 wind-up has no premature damage",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "P2 finale facing -1 hazards remain inside current rendered art",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "P2 finale facing 1 has a visible active collider",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "Final chapter catches only within its visible grab ring (1)",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "Caught hero receives the authored slam at its event (1)",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "P2 finale facing 1 wind-up has no premature damage",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "P2 finale facing 1 hazards remain inside current rendered art",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "P2 tomes facing -1 has a visible active collider",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "P2 tomes facing -1 actually damages an overlapping hero",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "P2 tomes facing -1 wind-up has no premature damage",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "P2 tomes facing -1 hazards remain inside current rendered art",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "P2 tomes facing 1 has a visible active collider",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "P2 tomes facing 1 actually damages an overlapping hero",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "P2 tomes facing 1 wind-up has no premature damage",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "P2 tomes facing 1 hazards remain inside current rendered art",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "P2 combo3 facing -1 has a visible active collider",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "P2 combo3 facing -1 actually damages an overlapping hero",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "P2 combo3 facing -1 wind-up has no premature damage",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "P2 combo3 facing -1 hazards remain inside current rendered art",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "P2 combo3 facing 1 has a visible active collider",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "P2 combo3 facing 1 actually damages an overlapping hero",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "P2 combo3 facing 1 wind-up has no premature damage",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "P2 combo3 facing 1 hazards remain inside current rendered art",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "P2 slam facing -1 has a visible active collider",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "P2 slam facing -1 actually damages an overlapping hero",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "P2 slam facing -1 wind-up has no premature damage",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "P2 slam facing -1 hazards remain inside current rendered art",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "P2 slam facing 1 has a visible active collider",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "P2 slam facing 1 actually damages an overlapping hero",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "P2 slam facing 1 wind-up has no premature damage",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "P2 slam facing 1 hazards remain inside current rendered art",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "P2 shut facing -1 has a visible active collider",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "P2 shut facing -1 actually damages an overlapping hero",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "P2 shut facing -1 wind-up has no premature damage",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "P2 shut facing -1 hazards remain inside current rendered art",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "P2 shut facing 1 has a visible active collider",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "P2 shut facing 1 actually damages an overlapping hero",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "P2 shut facing 1 wind-up has no premature damage",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "P2 shut facing 1 hazards remain inside current rendered art",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "Closed book guard blocks actual incoming damage",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "Transformation invulnerability prevents damage during source protected interval",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "Vanished page-flip actor is untargetable",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "50% damage queues transformation until current attack finishes",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "Exactly one source transformation starts after attack completion",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "Phase-two ordinary attacks run at source 1.15 multiplier",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "Below 15% HP the next clip uses source 1.15 x 1.3 rage speed",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "Animation and sound-event clocks share phase/rage speed",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "Defeat plays the supplied last-page death animation",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "Death completion opens gates and leaves singing latched silent",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "Actual R restarts a fresh isolated encounter and singing",
+      "passed": true
+    }
+  ],
+  "engine": "Godot 4.7.2 Standard",
+  "renderer": "Native GL Compatibility / llvmpipe",
+  "scope": "Isolated native gameplay integration after exact-HTML exterior restoration",
+  "log_errors": 0
+}

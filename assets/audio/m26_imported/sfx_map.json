@@ -1,0 +1,970 @@
+{
+ "notes": {
+  "offset": "seconds relative to the event time (negative = play earlier, e.g. whoosh before the hit)",
+  "p2_swap": {
+   "whoosh_sweep": "whoosh_sweep_p2",
+   "impact_slam": "impact_slam_p2"
+  },
+  "extra_game_triggered": {
+   "guard_hit_block": "play when the player hits the boss while the cover is closed",
+   "wall_close_loop": "loop until walls_sink",
+   "fire_loop": "loop until fire_end",
+   "idle_breath": "loop while idle"
+  },
+  "format": "48 kHz, 24-bit stereo WAV"
+ },
+ "animations": {
+  "idle": {
+   "anim_start": [
+    {
+     "sound": "idle_breath",
+     "offset": 0,
+     "volume": 0.5
+    }
+   ]
+  },
+  "walk": {
+   "footstep_L": [
+    {
+     "sound": "footstep_1",
+     "offset": 0,
+     "volume": 1.0
+    }
+   ],
+   "footstep_R": [
+    {
+     "sound": "footstep_2",
+     "offset": 0,
+     "volume": 1.0
+    }
+   ]
+  },
+  "slam": {
+   "telegraph_begin": [
+    {
+     "sound": "telegraph_raise",
+     "offset": 0,
+     "volume": 1.0
+    },
+    {
+     "sound": "telegraph_charge",
+     "offset": 0.1,
+     "volume": 0.6
+    }
+   ],
+   "hit_active_begin": [
+    {
+     "sound": "whoosh_overhead",
+     "offset": -0.4,
+     "volume": 1.0
+    },
+    {
+     "sound": "impact_slam",
+     "offset": 0,
+     "volume": 1.0
+    },
+    {
+     "sound": "shockwave_travel",
+     "offset": 0.05,
+     "volume": 0.8
+    }
+   ]
+  },
+  "sweep": {
+   "telegraph_begin": [
+    {
+     "sound": "telegraph_raise",
+     "offset": 0,
+     "volume": 0.7
+    }
+   ],
+   "hit_active_begin": [
+    {
+     "sound": "whoosh_sweep",
+     "offset": -0.31,
+     "volume": 1.0
+    },
+    {
+     "sound": "impact_sweep",
+     "offset": 0,
+     "volume": 1.0
+    }
+   ]
+  },
+  "shut": {
+   "guard_begin": [
+    {
+     "sound": "guard_close",
+     "offset": 0,
+     "volume": 1.0
+    }
+   ],
+   "burst_hit_active_begin": [
+    {
+     "sound": "guard_burst",
+     "offset": 0,
+     "volume": 1.0
+    }
+   ]
+  },
+  "pagestorm": {
+   "telegraph_begin": [
+    {
+     "sound": "page_open",
+     "offset": 0,
+     "volume": 1.0
+    },
+    {
+     "sound": "telegraph_charge",
+     "offset": 0.1,
+     "volume": 0.6
+    }
+   ],
+   "volley_0": [
+    {
+     "sound": "page_volley",
+     "offset": 0,
+     "volume": 1.0
+    }
+   ],
+   "volley_1": [
+    {
+     "sound": "page_volley",
+     "offset": 0,
+     "volume": 1.0
+    }
+   ],
+   "volley_2": [
+    {
+     "sound": "page_volley",
+     "offset": 0,
+     "volume": 1.0
+    }
+   ]
+  },
+  "tomes": {
+   "ground_hit": [
+    {
+     "sound": "impact_slam",
+     "offset": 0,
+     "volume": 1.0
+    }
+   ],
+   "markers_spawn": [
+    {
+     "sound": "tome_marker",
+     "offset": 0,
+     "volume": 1.0
+    }
+   ],
+   "tome_0_fall": [
+    {
+     "sound": "tome_fall",
+     "offset": 0,
+     "volume": 1.0
+    },
+    {
+     "sound": "tome_land",
+     "offset": 0.24,
+     "volume": 1.0
+    }
+   ],
+   "tome_1_fall": [
+    {
+     "sound": "tome_fall",
+     "offset": 0,
+     "volume": 1.0
+    },
+    {
+     "sound": "tome_land",
+     "offset": 0.24,
+     "volume": 1.0
+    }
+   ],
+   "tome_2_fall": [
+    {
+     "sound": "tome_fall",
+     "offset": 0,
+     "volume": 1.0
+    },
+    {
+     "sound": "tome_land",
+     "offset": 0.24,
+     "volume": 1.0
+    }
+   ],
+   "tome_3_fall": [
+    {
+     "sound": "tome_fall",
+     "offset": 0,
+     "volume": 1.0
+    },
+    {
+     "sound": "tome_land",
+     "offset": 0.24,
+     "volume": 1.0
+    }
+   ],
+   "tome_4_fall": [
+    {
+     "sound": "tome_fall",
+     "offset": 0,
+     "volume": 1.0
+    },
+    {
+     "sound": "tome_land",
+     "offset": 0.24,
+     "volume": 1.0
+    }
+   ]
+  },
+  "combo3": {
+   "telegraph_1": [
+    {
+     "sound": "telegraph_raise",
+     "offset": 0,
+     "volume": 0.5
+    }
+   ],
+   "hit_1_begin": [
+    {
+     "sound": "whoosh_sweep",
+     "offset": -0.31,
+     "volume": 1.0
+    },
+    {
+     "sound": "impact_sweep",
+     "offset": 0,
+     "volume": 1.0
+    }
+   ],
+   "telegraph_2": [
+    {
+     "sound": "telegraph_raise",
+     "offset": 0,
+     "volume": 0.4
+    }
+   ],
+   "hit_2_begin": [
+    {
+     "sound": "whoosh_sweep",
+     "offset": -0.31,
+     "volume": 1.0
+    },
+    {
+     "sound": "impact_sweep",
+     "offset": 0,
+     "volume": 1.0
+    }
+   ],
+   "telegraph_3": [
+    {
+     "sound": "telegraph_raise",
+     "offset": 0,
+     "volume": 0.7
+    }
+   ],
+   "hit_3_begin": [
+    {
+     "sound": "whoosh_overhead",
+     "offset": -0.4,
+     "volume": 1.0
+    },
+    {
+     "sound": "impact_slam",
+     "offset": 0,
+     "volume": 1.0
+    },
+    {
+     "sound": "shockwave_travel",
+     "offset": 0.05,
+     "volume": 0.8
+    }
+   ]
+  },
+  "p2tr": {
+   "invulnerable_begin": [
+    {
+     "sound": "p2_transform",
+     "offset": 0,
+     "volume": 1.0
+    }
+   ],
+   "shockwave": [
+    {
+     "sound": "p2_shockwave",
+     "offset": 0,
+     "volume": 0.55
+    }
+   ]
+  },
+  "combo5": {
+   "telegraph_1": [
+    {
+     "sound": "telegraph_raise",
+     "offset": 0,
+     "volume": 0.5
+    }
+   ],
+   "hit_1": [
+    {
+     "sound": "whoosh_sweep",
+     "offset": -0.31,
+     "volume": 1.0
+    },
+    {
+     "sound": "impact_sweep",
+     "offset": 0,
+     "volume": 1.0
+    }
+   ],
+   "telegraph_2": [
+    {
+     "sound": "telegraph_raise",
+     "offset": 0,
+     "volume": 0.4
+    }
+   ],
+   "hit_2": [
+    {
+     "sound": "whoosh_sweep",
+     "offset": -0.31,
+     "volume": 1.0
+    },
+    {
+     "sound": "impact_sweep",
+     "offset": 0,
+     "volume": 1.0
+    }
+   ],
+   "telegraph_3": [
+    {
+     "sound": "telegraph_raise",
+     "offset": 0,
+     "volume": 0.4
+    }
+   ],
+   "hit_3": [
+    {
+     "sound": "whoosh_sweep",
+     "offset": -0.31,
+     "volume": 1.0
+    },
+    {
+     "sound": "impact_sweep",
+     "offset": 0,
+     "volume": 1.0
+    }
+   ],
+   "telegraph_4_leap": [
+    {
+     "sound": "leap_whoosh",
+     "offset": 0,
+     "volume": 1.0
+    }
+   ],
+   "hit_4_air": [
+    {
+     "sound": "impact_sweep",
+     "offset": 0,
+     "volume": 0.8
+    }
+   ],
+   "hit_5_slam": [
+    {
+     "sound": "impact_slam",
+     "offset": 0,
+     "volume": 1.0
+    },
+    {
+     "sound": "shockwave_travel",
+     "offset": 0.05,
+     "volume": 0.8
+    }
+   ]
+  },
+  "redpass": {
+   "telegraph_red_begin": [
+    {
+     "sound": "telegraph_red",
+     "offset": 0,
+     "volume": 1.0
+    }
+   ],
+   "hit_unblockable_begin": [
+    {
+     "sound": "whoosh_overhead",
+     "offset": -0.4,
+     "volume": 1.0
+    },
+    {
+     "sound": "impact_red",
+     "offset": 0,
+     "volume": 1.0
+    },
+    {
+     "sound": "shockwave_travel",
+     "offset": 0.05,
+     "volume": 0.9
+    }
+   ]
+  },
+  "indexlock": {
+   "telegraph_begin": [
+    {
+     "sound": "telegraph_raise",
+     "offset": 0,
+     "volume": 0.8
+    }
+   ],
+   "walls_rise": [
+    {
+     "sound": "impact_slam",
+     "offset": 0,
+     "volume": 1.0
+    },
+    {
+     "sound": "wall_rise",
+     "offset": 0,
+     "volume": 1.0
+    }
+   ],
+   "walls_close_begin": [
+    {
+     "sound": "wall_close_loop",
+     "offset": 0,
+     "volume": 0.7,
+     "stop_on": "walls_sink"
+    }
+   ],
+   "walls_sink": [
+    {
+     "sound": "wall_sink",
+     "offset": 0,
+     "volume": 1.0
+    }
+   ]
+  },
+  "burning": {
+   "telegraph_begin": [
+    {
+     "sound": "telegraph_charge",
+     "offset": 0,
+     "volume": 1.0
+    }
+   ],
+   "ground_hit": [
+    {
+     "sound": "impact_slam",
+     "offset": 0,
+     "volume": 1.0
+    }
+   ],
+   "fire_0_ignite": [
+    {
+     "sound": "fire_ignite",
+     "offset": 0,
+     "volume": 1.0
+    },
+    {
+     "sound": "fire_loop",
+     "offset": 0,
+     "volume": 0.6,
+     "stop_on": "fire_end"
+    }
+   ],
+   "fire_1_ignite": [
+    {
+     "sound": "fire_ignite",
+     "offset": 0,
+     "volume": 0.8
+    }
+   ],
+   "fire_2_ignite": [
+    {
+     "sound": "fire_ignite",
+     "offset": 0,
+     "volume": 0.8
+    }
+   ],
+   "fire_3_ignite": [
+    {
+     "sound": "fire_ignite",
+     "offset": 0,
+     "volume": 0.8
+    }
+   ],
+   "fire_end": [
+    {
+     "sound": "fire_end",
+     "offset": 0,
+     "volume": 1.0
+    }
+   ]
+  },
+  "pageflip": {
+   "vanish_begin": [
+    {
+     "sound": "page_vanish",
+     "offset": 0,
+     "volume": 1.0
+    }
+   ],
+   "teleport": [
+    {
+     "sound": "page_reappear",
+     "offset": -0.0,
+     "volume": 1.0
+    }
+   ],
+   "hit_active_begin": [
+    {
+     "sound": "whoosh_sweep",
+     "offset": -0.31,
+     "volume": 1.0
+    },
+    {
+     "sound": "impact_sweep",
+     "offset": 0,
+     "volume": 1.0
+    }
+   ]
+  },
+  "finale": {
+   "telegraph_red_begin": [
+    {
+     "sound": "telegraph_red",
+     "offset": 0,
+     "volume": 1.0
+    }
+   ],
+   "lunge": [
+    {
+     "sound": "grab_lunge",
+     "offset": 0,
+     "volume": 1.0
+    }
+   ],
+   "player_locked": [
+    {
+     "sound": "grab_catch",
+     "offset": 0,
+     "volume": 1.0
+    },
+    {
+     "sound": "lock_clamp",
+     "offset": 0.1,
+     "volume": 1.0
+    }
+   ],
+   "slam_damage": [
+    {
+     "sound": "finale_slam",
+     "offset": 0,
+     "volume": 1.0
+    }
+   ],
+   "release": [
+    {
+     "sound": "release_exhale",
+     "offset": 0,
+     "volume": 1.0
+    }
+   ]
+  },
+  "hurt": {
+   "hit_flash": [
+    {
+     "sound": "hurt",
+     "offset": 0,
+     "volume": 1.0
+    }
+   ]
+  },
+  "death": {
+   "anim_start": [
+    {
+     "sound": "hurt",
+     "offset": 0,
+     "volume": 1.0
+    }
+   ],
+   "body_hits_ground": [
+    {
+     "sound": "death_fall",
+     "offset": -0.72,
+     "volume": 1.0
+    }
+   ],
+   "dissolve_begin": [
+    {
+     "sound": "death_ink_dissolve",
+     "offset": 0,
+     "volume": 1.0
+    }
+   ]
+  },
+  "appear": {
+   "anim_start": [
+    {
+     "sound": "appear",
+     "offset": 0,
+     "volume": 1.0
+    }
+   ],
+   "eyes_open": [
+    {
+     "sound": "eye_glow",
+     "offset": 0,
+     "volume": 1.0
+    }
+   ]
+  }
+ },
+ "sounds": {
+  "footstep_1": {
+   "group": "base",
+   "desc": "خطوة ثقيلة ناعمة يسار",
+   "loop": false,
+   "hit_at": 0,
+   "duration": 0.45,
+   "peak": 0.75
+  },
+  "footstep_2": {
+   "group": "base",
+   "desc": "خطوة ثقيلة ناعمة يمين",
+   "loop": false,
+   "hit_at": 0,
+   "duration": 0.45,
+   "peak": 0.87
+  },
+  "idle_breath": {
+   "group": "base",
+   "desc": "تنفّس الكتاب وحفيف ناعم (حلقة)",
+   "loop": true,
+   "hit_at": 0.0,
+   "duration": 2.58,
+   "peak": 0.56
+  },
+  "eye_glow": {
+   "group": "base",
+   "desc": "توهّج العين: طنين ناعم وجرس خفيف",
+   "loop": false,
+   "hit_at": 0.0,
+   "duration": 0.95,
+   "peak": 0.36
+  },
+  "hurt": {
+   "group": "base",
+   "desc": "تلقّي ضربة: خبطة ناعمة وورق وأنين منخفض",
+   "loop": false,
+   "hit_at": 0.0,
+   "duration": 0.6,
+   "peak": 0.88
+  },
+  "death_fall": {
+   "group": "base",
+   "desc": "سقوط الكتاب على الأرض",
+   "loop": false,
+   "hit_at": 0.72,
+   "duration": 2.2,
+   "peak": 0.89
+  },
+  "death_ink_dissolve": {
+   "group": "base",
+   "desc": "ذوبان الحبر والصفحات: طنين وجرس ناعم",
+   "loop": false,
+   "hit_at": 0.0,
+   "duration": 2.5,
+   "peak": 0.34
+  },
+  "appear": {
+   "group": "base",
+   "desc": "ظهور من الحبر وفتح العين",
+   "loop": false,
+   "hit_at": 1.1,
+   "duration": 2.8,
+   "peak": 0.83
+  },
+  "telegraph_raise": {
+   "group": "cue",
+   "desc": "رفع المطرقة (تحذير)",
+   "loop": false,
+   "hit_at": 0.0,
+   "duration": 0.6,
+   "peak": 0.44
+  },
+  "telegraph_charge": {
+   "group": "cue",
+   "desc": "شحن طاقة أمبر قبل الضربة",
+   "loop": false,
+   "hit_at": 0.0,
+   "duration": 0.95,
+   "peak": 0.4
+  },
+  "telegraph_red": {
+   "group": "cue",
+   "desc": "إنذار أحمر: هجوم لا ينصدّ (داش!)",
+   "loop": false,
+   "hit_at": 0.0,
+   "duration": 1.2,
+   "peak": 0.46
+  },
+  "whoosh_overhead": {
+   "group": "attack",
+   "desc": "ضربة من فوق: هواء ثقيل",
+   "loop": false,
+   "hit_at": 0.4,
+   "duration": 0.5,
+   "peak": 0.73
+  },
+  "whoosh_sweep": {
+   "group": "attack",
+   "desc": "مسح أفقي ناعم",
+   "loop": false,
+   "hit_at": 0.31,
+   "duration": 0.42,
+   "peak": 0.77
+  },
+  "whoosh_sweep_p2": {
+   "group": "attack",
+   "desc": "مسح أفقي ناري (الفيس الثاني)",
+   "loop": false,
+   "hit_at": 0.31,
+   "duration": 0.42,
+   "peak": 0.74
+  },
+  "impact_slam": {
+   "group": "attack",
+   "desc": "ضربة الفهرس: دويّ عميق ناعم وتكسّر خفيف",
+   "loop": false,
+   "hit_at": 0.0,
+   "duration": 1.6,
+   "peak": 0.89
+  },
+  "impact_slam_p2": {
+   "group": "attack",
+   "desc": "نفس الضربة بنسخة محترقة (الفيس الثاني)",
+   "loop": false,
+   "hit_at": 0.0,
+   "duration": 1.6,
+   "peak": 0.89
+  },
+  "shockwave_travel": {
+   "group": "attack",
+   "desc": "موجة الصدمة وهي تمشي على الأرض",
+   "loop": false,
+   "hit_at": 0.0,
+   "duration": 1.1,
+   "peak": 0.54
+  },
+  "impact_sweep": {
+   "group": "attack",
+   "desc": "ارتطام المسح",
+   "loop": false,
+   "hit_at": 0.0,
+   "duration": 0.5,
+   "peak": 0.89
+  },
+  "guard_close": {
+   "group": "attack",
+   "desc": "إغلاق الغلاف + طقّة المشبك الناعمة",
+   "loop": false,
+   "hit_at": 0.1,
+   "duration": 0.7,
+   "peak": 0.81
+  },
+  "guard_hit_block": {
+   "group": "attack",
+   "desc": "ضربة ترتطم بالغلاف المغلق",
+   "loop": false,
+   "hit_at": 0.0,
+   "duration": 0.45,
+   "peak": 0.79
+  },
+  "guard_burst": {
+   "group": "attack",
+   "desc": "انفجار الورق بعد الدفاع",
+   "loop": false,
+   "hit_at": 0.0,
+   "duration": 1.4,
+   "peak": 0.89
+  },
+  "page_volley": {
+   "group": "attack",
+   "desc": "إطلاق صفحات حادة على شكل مروحة",
+   "loop": false,
+   "hit_at": 0.0,
+   "duration": 0.7,
+   "peak": 0.8
+  },
+  "page_open": {
+   "group": "attack",
+   "desc": "فتح الكتاب (عاصفة الصفحات)",
+   "loop": false,
+   "hit_at": 0.0,
+   "duration": 0.8,
+   "peak": 0.55
+  },
+  "tome_marker": {
+   "group": "attack",
+   "desc": "ظهور علامات سقوط المجلدات: جرس ناعم",
+   "loop": false,
+   "hit_at": 0.0,
+   "duration": 0.6,
+   "peak": 0.37
+  },
+  "tome_fall": {
+   "group": "attack",
+   "desc": "صفير ناعم لسقوط مجلد",
+   "loop": false,
+   "hit_at": 0.24,
+   "duration": 0.28,
+   "peak": 0.34
+  },
+  "tome_land": {
+   "group": "attack",
+   "desc": "ارتطام مجلد بالأرض",
+   "loop": false,
+   "hit_at": 0.0,
+   "duration": 1.0,
+   "peak": 0.89
+  },
+  "p2_transform": {
+   "group": "phase",
+   "desc": "تحوّل الطبعة المحرّمة: زئير منخفض وتمزّق وانفجار نار ناعم",
+   "loop": false,
+   "hit_at": 1.58,
+   "duration": 3.4,
+   "peak": 0.89
+  },
+  "p2_shockwave": {
+   "group": "phase",
+   "desc": "موجة الصدمة الكبرى",
+   "loop": false,
+   "hit_at": 0.0,
+   "duration": 2.2,
+   "peak": 0.89
+  },
+  "leap_whoosh": {
+   "group": "attack",
+   "desc": "قفزة الكومبو الخماسي",
+   "loop": false,
+   "hit_at": 0.3,
+   "duration": 0.6,
+   "peak": 0.65
+  },
+  "impact_red": {
+   "group": "attack",
+   "desc": "المقطع الأحمر: ضربة ثقيلة ناعمة",
+   "loop": false,
+   "hit_at": 0.0,
+   "duration": 2.2,
+   "peak": 0.89
+  },
+  "wall_rise": {
+   "group": "attack",
+   "desc": "صعود جدران الصفحات",
+   "loop": false,
+   "hit_at": 0.0,
+   "duration": 1.2,
+   "peak": 0.64
+  },
+  "wall_close_loop": {
+   "group": "attack",
+   "desc": "الجدران تقترب (حلقة ناعمة)",
+   "loop": true,
+   "hit_at": 0.0,
+   "duration": 1.88,
+   "peak": 0.48
+  },
+  "wall_sink": {
+   "group": "attack",
+   "desc": "هبوط الجدران",
+   "loop": false,
+   "hit_at": 0.0,
+   "duration": 1.0,
+   "peak": 0.78
+  },
+  "fire_ignite": {
+   "group": "attack",
+   "desc": "اشتعال ناعم",
+   "loop": false,
+   "hit_at": 0.0,
+   "duration": 0.7,
+   "peak": 0.7
+  },
+  "fire_loop": {
+   "group": "attack",
+   "desc": "نار تحترق بهدوء (حلقة)",
+   "loop": true,
+   "hit_at": 0.0,
+   "duration": 2.08,
+   "peak": 0.79
+  },
+  "fire_end": {
+   "group": "attack",
+   "desc": "انطفاء النار",
+   "loop": false,
+   "hit_at": 0.0,
+   "duration": 0.8,
+   "peak": 0.55
+  },
+  "page_vanish": {
+   "group": "attack",
+   "desc": "يتحوّل إلى صفحات ويختفي",
+   "loop": false,
+   "hit_at": 0.0,
+   "duration": 0.7,
+   "peak": 0.59
+  },
+  "page_reappear": {
+   "group": "attack",
+   "desc": "يظهر من الصفحات",
+   "loop": false,
+   "hit_at": 0.28,
+   "duration": 0.8,
+   "peak": 0.89
+  },
+  "grab_lunge": {
+   "group": "attack",
+   "desc": "اندفاع الإمساك",
+   "loop": false,
+   "hit_at": 0.28,
+   "duration": 0.45,
+   "peak": 0.75
+  },
+  "grab_catch": {
+   "group": "attack",
+   "desc": "قبضة اليد (إمساك)",
+   "loop": false,
+   "hit_at": 0.0,
+   "duration": 0.5,
+   "peak": 0.74
+  },
+  "lock_clamp": {
+   "group": "attack",
+   "desc": "إقفال الغلاف على اللاعب",
+   "loop": false,
+   "hit_at": 0.0,
+   "duration": 1.1,
+   "peak": 0.89
+  },
+  "finale_slam": {
+   "group": "attack",
+   "desc": "الفصل الأخير: ضربة ساحقة ناعمة",
+   "loop": false,
+   "hit_at": 0.0,
+   "duration": 2.6,
+   "peak": 0.89
+  },
+  "release_exhale": {
+   "group": "attack",
+   "desc": "إفلات اللاعب وزفرة الورق",
+   "loop": false,
+   "hit_at": 0.0,
+   "duration": 1.0,
+   "peak": 0.51
+  }
+ }
+}

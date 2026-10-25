@@ -1,0 +1,1837 @@
+{
+	"checks": 130,
+	"command": "godot --path . --rendering-method gl_compatibility --audio-driver Dummy --script res://tools/test_m26_imported_audio.gd",
+	"engine": "4.7.2-stable (official)",
+	"failures": [],
+	"hero_voice_added": false,
+	"observations": {
+		"decoded_wavs": {
+			"count": 43,
+			"failures": [],
+			"raw_files_sha256_verified": true,
+			"runtime_container_adaptation": "In-memory format tag only; source files and PCM payload bytes are preserved. Godot decodes to its supported internal PCM representation.",
+			"source_bits": 24,
+			"source_channels": 2,
+			"source_container": "WAVE_FORMAT_EXTENSIBLE / PCM GUID",
+			"source_rate": 48000
+		},
+		"schedules": [
+			{
+				"actual": [
+					{
+						"sound": "idle_breath",
+						"source_time": 0.0
+					}
+				],
+				"animation": "idle",
+				"expected": [
+					{
+						"sound": "idle_breath",
+						"source_time": 0.0
+					}
+				],
+				"phase": 1
+			},
+			{
+				"actual": [
+					{
+						"sound": "footstep_1",
+						"source_time": 0.0
+					},
+					{
+						"sound": "footstep_2",
+						"source_time": 0.45
+					}
+				],
+				"animation": "walk",
+				"expected": [
+					{
+						"sound": "footstep_1",
+						"source_time": 0.0
+					},
+					{
+						"sound": "footstep_2",
+						"source_time": 0.45
+					}
+				],
+				"phase": 1
+			},
+			{
+				"actual": [
+					{
+						"sound": "whoosh_overhead",
+						"source_time": 0.474
+					},
+					{
+						"sound": "telegraph_raise",
+						"source_time": 0.532
+					},
+					{
+						"sound": "telegraph_charge",
+						"source_time": 0.632
+					},
+					{
+						"sound": "impact_slam",
+						"source_time": 0.874
+					},
+					{
+						"sound": "shockwave_travel",
+						"source_time": 0.924
+					}
+				],
+				"animation": "slam",
+				"expected": [
+					{
+						"sound": "whoosh_overhead",
+						"source_time": 0.474
+					},
+					{
+						"sound": "telegraph_raise",
+						"source_time": 0.532
+					},
+					{
+						"sound": "telegraph_charge",
+						"source_time": 0.632
+					},
+					{
+						"sound": "impact_slam",
+						"source_time": 0.874
+					},
+					{
+						"sound": "shockwave_travel",
+						"source_time": 0.924
+					}
+				],
+				"phase": 1
+			},
+			{
+				"actual": [
+					{
+						"sound": "whoosh_sweep",
+						"source_time": 0.236
+					},
+					{
+						"sound": "telegraph_raise",
+						"source_time": 0.286
+					},
+					{
+						"sound": "impact_sweep",
+						"source_time": 0.546
+					}
+				],
+				"animation": "sweep",
+				"expected": [
+					{
+						"sound": "whoosh_sweep",
+						"source_time": 0.236
+					},
+					{
+						"sound": "telegraph_raise",
+						"source_time": 0.286
+					},
+					{
+						"sound": "impact_sweep",
+						"source_time": 0.546
+					}
+				],
+				"phase": 1
+			},
+			{
+				"actual": [
+					{
+						"sound": "guard_close",
+						"source_time": 0.48
+					},
+					{
+						"sound": "guard_burst",
+						"source_time": 1.56
+					}
+				],
+				"animation": "shut",
+				"expected": [
+					{
+						"sound": "guard_close",
+						"source_time": 0.48
+					},
+					{
+						"sound": "guard_burst",
+						"source_time": 1.56
+					}
+				],
+				"phase": 1
+			},
+			{
+				"actual": [
+					{
+						"sound": "page_open",
+						"source_time": 0.506
+					},
+					{
+						"sound": "telegraph_charge",
+						"source_time": 0.606
+					},
+					{
+						"sound": "page_volley",
+						"source_time": 0.92
+					},
+					{
+						"sound": "page_volley",
+						"source_time": 1.242
+					},
+					{
+						"sound": "page_volley",
+						"source_time": 1.564
+					}
+				],
+				"animation": "pagestorm",
+				"expected": [
+					{
+						"sound": "page_open",
+						"source_time": 0.506
+					},
+					{
+						"sound": "telegraph_charge",
+						"source_time": 0.606
+					},
+					{
+						"sound": "page_volley",
+						"source_time": 0.92
+					},
+					{
+						"sound": "page_volley",
+						"source_time": 1.242
+					},
+					{
+						"sound": "page_volley",
+						"source_time": 1.564
+					}
+				],
+				"phase": 1
+			},
+			{
+				"actual": [
+					{
+						"sound": "impact_slam",
+						"source_time": 0.952
+					},
+					{
+						"sound": "tome_marker",
+						"source_time": 1.008
+					},
+					{
+						"sound": "tome_fall",
+						"source_time": 1.4
+					},
+					{
+						"sound": "tome_fall",
+						"source_time": 1.54
+					},
+					{
+						"sound": "tome_land",
+						"source_time": 1.64
+					},
+					{
+						"sound": "tome_fall",
+						"source_time": 1.68
+					},
+					{
+						"sound": "tome_land",
+						"source_time": 1.78
+					},
+					{
+						"sound": "tome_fall",
+						"source_time": 1.82
+					},
+					{
+						"sound": "tome_land",
+						"source_time": 1.92
+					},
+					{
+						"sound": "tome_fall",
+						"source_time": 1.96
+					},
+					{
+						"sound": "tome_land",
+						"source_time": 2.06
+					},
+					{
+						"sound": "tome_land",
+						"source_time": 2.2
+					}
+				],
+				"animation": "tomes",
+				"expected": [
+					{
+						"sound": "impact_slam",
+						"source_time": 0.952
+					},
+					{
+						"sound": "tome_marker",
+						"source_time": 1.008
+					},
+					{
+						"sound": "tome_fall",
+						"source_time": 1.4
+					},
+					{
+						"sound": "tome_fall",
+						"source_time": 1.54
+					},
+					{
+						"sound": "tome_land",
+						"source_time": 1.64
+					},
+					{
+						"sound": "tome_fall",
+						"source_time": 1.68
+					},
+					{
+						"sound": "tome_land",
+						"source_time": 1.78
+					},
+					{
+						"sound": "tome_fall",
+						"source_time": 1.82
+					},
+					{
+						"sound": "tome_land",
+						"source_time": 1.92
+					},
+					{
+						"sound": "tome_fall",
+						"source_time": 1.96
+					},
+					{
+						"sound": "tome_land",
+						"source_time": 2.06
+					},
+					{
+						"sound": "tome_land",
+						"source_time": 2.2
+					}
+				],
+				"phase": 1
+			},
+			{
+				"actual": [
+					{
+						"sound": "whoosh_sweep",
+						"source_time": 0.317
+					},
+					{
+						"sound": "telegraph_raise",
+						"source_time": 0.33
+					},
+					{
+						"sound": "impact_sweep",
+						"source_time": 0.627
+					},
+					{
+						"sound": "whoosh_sweep",
+						"source_time": 1.241
+					},
+					{
+						"sound": "telegraph_raise",
+						"source_time": 1.32
+					},
+					{
+						"sound": "impact_sweep",
+						"source_time": 1.551
+					},
+					{
+						"sound": "whoosh_overhead",
+						"source_time": 2.108
+					},
+					{
+						"sound": "telegraph_raise",
+						"source_time": 2.178
+					},
+					{
+						"sound": "impact_slam",
+						"source_time": 2.508
+					},
+					{
+						"sound": "shockwave_travel",
+						"source_time": 2.558
+					}
+				],
+				"animation": "combo3",
+				"expected": [
+					{
+						"sound": "whoosh_sweep",
+						"source_time": 0.317
+					},
+					{
+						"sound": "telegraph_raise",
+						"source_time": 0.33
+					},
+					{
+						"sound": "impact_sweep",
+						"source_time": 0.627
+					},
+					{
+						"sound": "whoosh_sweep",
+						"source_time": 1.241
+					},
+					{
+						"sound": "telegraph_raise",
+						"source_time": 1.32
+					},
+					{
+						"sound": "impact_sweep",
+						"source_time": 1.551
+					},
+					{
+						"sound": "whoosh_overhead",
+						"source_time": 2.108
+					},
+					{
+						"sound": "telegraph_raise",
+						"source_time": 2.178
+					},
+					{
+						"sound": "impact_slam",
+						"source_time": 2.508
+					},
+					{
+						"sound": "shockwave_travel",
+						"source_time": 2.558
+					}
+				],
+				"phase": 1
+			},
+			{
+				"actual": [
+					{
+						"sound": "p2_transform",
+						"source_time": 0.0
+					},
+					{
+						"sound": "p2_shockwave",
+						"source_time": 1.598
+					}
+				],
+				"animation": "p2tr",
+				"expected": [
+					{
+						"sound": "p2_transform",
+						"source_time": 0.0
+					},
+					{
+						"sound": "p2_shockwave",
+						"source_time": 1.598
+					}
+				],
+				"phase": 1
+			},
+			{
+				"actual": [
+					{
+						"sound": "whoosh_sweep",
+						"source_time": 0.11
+					},
+					{
+						"sound": "telegraph_raise",
+						"source_time": 0.21
+					},
+					{
+						"sound": "impact_sweep",
+						"source_time": 0.42
+					},
+					{
+						"sound": "whoosh_sweep",
+						"source_time": 0.705
+					},
+					{
+						"sound": "telegraph_raise",
+						"source_time": 0.77
+					},
+					{
+						"sound": "impact_sweep",
+						"source_time": 1.015
+					},
+					{
+						"sound": "whoosh_sweep",
+						"source_time": 1.335
+					},
+					{
+						"sound": "telegraph_raise",
+						"source_time": 1.4
+					},
+					{
+						"sound": "impact_sweep",
+						"source_time": 1.645
+					},
+					{
+						"sound": "leap_whoosh",
+						"source_time": 1.855
+					},
+					{
+						"sound": "impact_sweep",
+						"source_time": 2.17
+					},
+					{
+						"sound": "impact_slam",
+						"source_time": 2.31
+					},
+					{
+						"sound": "shockwave_travel",
+						"source_time": 2.36
+					}
+				],
+				"animation": "combo5",
+				"expected": [
+					{
+						"sound": "whoosh_sweep",
+						"source_time": 0.11
+					},
+					{
+						"sound": "telegraph_raise",
+						"source_time": 0.21
+					},
+					{
+						"sound": "impact_sweep",
+						"source_time": 0.42
+					},
+					{
+						"sound": "whoosh_sweep",
+						"source_time": 0.705
+					},
+					{
+						"sound": "telegraph_raise",
+						"source_time": 0.77
+					},
+					{
+						"sound": "impact_sweep",
+						"source_time": 1.015
+					},
+					{
+						"sound": "whoosh_sweep",
+						"source_time": 1.335
+					},
+					{
+						"sound": "telegraph_raise",
+						"source_time": 1.4
+					},
+					{
+						"sound": "impact_sweep",
+						"source_time": 1.645
+					},
+					{
+						"sound": "leap_whoosh",
+						"source_time": 1.855
+					},
+					{
+						"sound": "impact_sweep",
+						"source_time": 2.17
+					},
+					{
+						"sound": "impact_slam",
+						"source_time": 2.31
+					},
+					{
+						"sound": "shockwave_travel",
+						"source_time": 2.36
+					}
+				],
+				"phase": 1
+			},
+			{
+				"actual": [
+					{
+						"sound": "telegraph_red",
+						"source_time": 0.56
+					},
+					{
+						"sound": "whoosh_overhead",
+						"source_time": 1.392
+					},
+					{
+						"sound": "impact_red",
+						"source_time": 1.792
+					},
+					{
+						"sound": "shockwave_travel",
+						"source_time": 1.842
+					}
+				],
+				"animation": "redpass",
+				"expected": [
+					{
+						"sound": "telegraph_red",
+						"source_time": 0.56
+					},
+					{
+						"sound": "whoosh_overhead",
+						"source_time": 1.392
+					},
+					{
+						"sound": "impact_red",
+						"source_time": 1.792
+					},
+					{
+						"sound": "shockwave_travel",
+						"source_time": 1.842
+					}
+				],
+				"phase": 1
+			},
+			{
+				"actual": [
+					{
+						"sound": "telegraph_raise",
+						"source_time": 0.392
+					},
+					{
+						"sound": "impact_slam",
+						"source_time": 0.84
+					},
+					{
+						"sound": "wall_rise",
+						"source_time": 0.84
+					},
+					{
+						"sound": "wall_close_loop",
+						"source_time": 1.12
+					},
+					{
+						"sound": "wall_sink",
+						"source_time": 2.184
+					}
+				],
+				"animation": "indexlock",
+				"expected": [
+					{
+						"sound": "telegraph_raise",
+						"source_time": 0.392
+					},
+					{
+						"sound": "impact_slam",
+						"source_time": 0.84
+					},
+					{
+						"sound": "wall_rise",
+						"source_time": 0.84
+					},
+					{
+						"sound": "wall_close_loop",
+						"source_time": 1.12
+					},
+					{
+						"sound": "wall_sink",
+						"source_time": 2.184
+					}
+				],
+				"phase": 1
+			},
+			{
+				"actual": [
+					{
+						"sound": "telegraph_charge",
+						"source_time": 0.312
+					},
+					{
+						"sound": "impact_slam",
+						"source_time": 1.04
+					},
+					{
+						"sound": "fire_ignite",
+						"source_time": 1.092
+					},
+					{
+						"sound": "fire_loop",
+						"source_time": 1.092
+					},
+					{
+						"sound": "fire_ignite",
+						"source_time": 1.183
+					},
+					{
+						"sound": "fire_ignite",
+						"source_time": 1.274
+					},
+					{
+						"sound": "fire_ignite",
+						"source_time": 1.365
+					},
+					{
+						"sound": "fire_end",
+						"source_time": 2.21
+					}
+				],
+				"animation": "burning",
+				"expected": [
+					{
+						"sound": "telegraph_charge",
+						"source_time": 0.312
+					},
+					{
+						"sound": "impact_slam",
+						"source_time": 1.04
+					},
+					{
+						"sound": "fire_ignite",
+						"source_time": 1.092
+					},
+					{
+						"sound": "fire_loop",
+						"source_time": 1.092
+					},
+					{
+						"sound": "fire_ignite",
+						"source_time": 1.183
+					},
+					{
+						"sound": "fire_ignite",
+						"source_time": 1.274
+					},
+					{
+						"sound": "fire_ignite",
+						"source_time": 1.365
+					},
+					{
+						"sound": "fire_end",
+						"source_time": 2.21
+					}
+				],
+				"phase": 1
+			},
+			{
+				"actual": [
+					{
+						"sound": "page_vanish",
+						"source_time": 0.076
+					},
+					{
+						"sound": "whoosh_sweep",
+						"source_time": 0.792
+					},
+					{
+						"sound": "page_reappear",
+						"source_time": 0.798
+					},
+					{
+						"sound": "impact_sweep",
+						"source_time": 1.102
+					}
+				],
+				"animation": "pageflip",
+				"expected": [
+					{
+						"sound": "page_vanish",
+						"source_time": 0.076
+					},
+					{
+						"sound": "whoosh_sweep",
+						"source_time": 0.792
+					},
+					{
+						"sound": "page_reappear",
+						"source_time": 0.798
+					},
+					{
+						"sound": "impact_sweep",
+						"source_time": 1.102
+					}
+				],
+				"phase": 1
+			},
+			{
+				"actual": [
+					{
+						"sound": "telegraph_red",
+						"source_time": 0.32
+					},
+					{
+						"sound": "grab_lunge",
+						"source_time": 1.152
+					},
+					{
+						"sound": "grab_catch",
+						"source_time": 1.984
+					},
+					{
+						"sound": "lock_clamp",
+						"source_time": 2.084
+					},
+					{
+						"sound": "finale_slam",
+						"source_time": 2.432
+					},
+					{
+						"sound": "release_exhale",
+						"source_time": 2.88
+					}
+				],
+				"animation": "finale",
+				"expected": [
+					{
+						"sound": "telegraph_red",
+						"source_time": 0.32
+					},
+					{
+						"sound": "grab_lunge",
+						"source_time": 1.152
+					},
+					{
+						"sound": "grab_catch",
+						"source_time": 1.984
+					},
+					{
+						"sound": "lock_clamp",
+						"source_time": 2.084
+					},
+					{
+						"sound": "finale_slam",
+						"source_time": 2.432
+					},
+					{
+						"sound": "release_exhale",
+						"source_time": 2.88
+					}
+				],
+				"phase": 1
+			},
+			{
+				"actual": [
+					{
+						"sound": "hurt",
+						"source_time": 0.024
+					}
+				],
+				"animation": "hurt",
+				"expected": [
+					{
+						"sound": "hurt",
+						"source_time": 0.024
+					}
+				],
+				"phase": 1
+			},
+			{
+				"actual": [
+					{
+						"sound": "hurt",
+						"source_time": 0.0
+					},
+					{
+						"sound": "death_fall",
+						"source_time": 1.8
+					},
+					{
+						"sound": "death_ink_dissolve",
+						"source_time": 3.06
+					}
+				],
+				"animation": "death",
+				"expected": [
+					{
+						"sound": "hurt",
+						"source_time": 0.0
+					},
+					{
+						"sound": "death_fall",
+						"source_time": 1.8
+					},
+					{
+						"sound": "death_ink_dissolve",
+						"source_time": 3.06
+					}
+				],
+				"phase": 1
+			},
+			{
+				"actual": [
+					{
+						"sound": "appear",
+						"source_time": 0.0
+					},
+					{
+						"sound": "eye_glow",
+						"source_time": 1.68
+					}
+				],
+				"animation": "appear",
+				"expected": [
+					{
+						"sound": "appear",
+						"source_time": 0.0
+					},
+					{
+						"sound": "eye_glow",
+						"source_time": 1.68
+					}
+				],
+				"phase": 1
+			},
+			{
+				"actual": [
+					{
+						"sound": "idle_breath",
+						"source_time": 0.0
+					}
+				],
+				"animation": "idle",
+				"expected": [
+					{
+						"sound": "idle_breath",
+						"source_time": 0.0
+					}
+				],
+				"phase": 2
+			},
+			{
+				"actual": [
+					{
+						"sound": "footstep_1",
+						"source_time": 0.0
+					},
+					{
+						"sound": "footstep_2",
+						"source_time": 0.45
+					}
+				],
+				"animation": "walk",
+				"expected": [
+					{
+						"sound": "footstep_1",
+						"source_time": 0.0
+					},
+					{
+						"sound": "footstep_2",
+						"source_time": 0.45
+					}
+				],
+				"phase": 2
+			},
+			{
+				"actual": [
+					{
+						"sound": "whoosh_overhead",
+						"source_time": 0.474
+					},
+					{
+						"sound": "telegraph_raise",
+						"source_time": 0.532
+					},
+					{
+						"sound": "telegraph_charge",
+						"source_time": 0.632
+					},
+					{
+						"sound": "impact_slam_p2",
+						"source_time": 0.874
+					},
+					{
+						"sound": "shockwave_travel",
+						"source_time": 0.924
+					}
+				],
+				"animation": "slam",
+				"expected": [
+					{
+						"sound": "whoosh_overhead",
+						"source_time": 0.474
+					},
+					{
+						"sound": "telegraph_raise",
+						"source_time": 0.532
+					},
+					{
+						"sound": "telegraph_charge",
+						"source_time": 0.632
+					},
+					{
+						"sound": "impact_slam_p2",
+						"source_time": 0.874
+					},
+					{
+						"sound": "shockwave_travel",
+						"source_time": 0.924
+					}
+				],
+				"phase": 2
+			},
+			{
+				"actual": [
+					{
+						"sound": "whoosh_sweep_p2",
+						"source_time": 0.236
+					},
+					{
+						"sound": "telegraph_raise",
+						"source_time": 0.286
+					},
+					{
+						"sound": "impact_sweep",
+						"source_time": 0.546
+					}
+				],
+				"animation": "sweep",
+				"expected": [
+					{
+						"sound": "whoosh_sweep_p2",
+						"source_time": 0.236
+					},
+					{
+						"sound": "telegraph_raise",
+						"source_time": 0.286
+					},
+					{
+						"sound": "impact_sweep",
+						"source_time": 0.546
+					}
+				],
+				"phase": 2
+			},
+			{
+				"actual": [
+					{
+						"sound": "guard_close",
+						"source_time": 0.48
+					},
+					{
+						"sound": "guard_burst",
+						"source_time": 1.56
+					}
+				],
+				"animation": "shut",
+				"expected": [
+					{
+						"sound": "guard_close",
+						"source_time": 0.48
+					},
+					{
+						"sound": "guard_burst",
+						"source_time": 1.56
+					}
+				],
+				"phase": 2
+			},
+			{
+				"actual": [
+					{
+						"sound": "page_open",
+						"source_time": 0.506
+					},
+					{
+						"sound": "telegraph_charge",
+						"source_time": 0.606
+					},
+					{
+						"sound": "page_volley",
+						"source_time": 0.92
+					},
+					{
+						"sound": "page_volley",
+						"source_time": 1.242
+					},
+					{
+						"sound": "page_volley",
+						"source_time": 1.564
+					}
+				],
+				"animation": "pagestorm",
+				"expected": [
+					{
+						"sound": "page_open",
+						"source_time": 0.506
+					},
+					{
+						"sound": "telegraph_charge",
+						"source_time": 0.606
+					},
+					{
+						"sound": "page_volley",
+						"source_time": 0.92
+					},
+					{
+						"sound": "page_volley",
+						"source_time": 1.242
+					},
+					{
+						"sound": "page_volley",
+						"source_time": 1.564
+					}
+				],
+				"phase": 2
+			},
+			{
+				"actual": [
+					{
+						"sound": "impact_slam_p2",
+						"source_time": 0.952
+					},
+					{
+						"sound": "tome_marker",
+						"source_time": 1.008
+					},
+					{
+						"sound": "tome_fall",
+						"source_time": 1.4
+					},
+					{
+						"sound": "tome_fall",
+						"source_time": 1.54
+					},
+					{
+						"sound": "tome_land",
+						"source_time": 1.64
+					},
+					{
+						"sound": "tome_fall",
+						"source_time": 1.68
+					},
+					{
+						"sound": "tome_land",
+						"source_time": 1.78
+					},
+					{
+						"sound": "tome_fall",
+						"source_time": 1.82
+					},
+					{
+						"sound": "tome_land",
+						"source_time": 1.92
+					},
+					{
+						"sound": "tome_fall",
+						"source_time": 1.96
+					},
+					{
+						"sound": "tome_land",
+						"source_time": 2.06
+					},
+					{
+						"sound": "tome_land",
+						"source_time": 2.2
+					}
+				],
+				"animation": "tomes",
+				"expected": [
+					{
+						"sound": "impact_slam_p2",
+						"source_time": 0.952
+					},
+					{
+						"sound": "tome_marker",
+						"source_time": 1.008
+					},
+					{
+						"sound": "tome_fall",
+						"source_time": 1.4
+					},
+					{
+						"sound": "tome_fall",
+						"source_time": 1.54
+					},
+					{
+						"sound": "tome_land",
+						"source_time": 1.64
+					},
+					{
+						"sound": "tome_fall",
+						"source_time": 1.68
+					},
+					{
+						"sound": "tome_land",
+						"source_time": 1.78
+					},
+					{
+						"sound": "tome_fall",
+						"source_time": 1.82
+					},
+					{
+						"sound": "tome_land",
+						"source_time": 1.92
+					},
+					{
+						"sound": "tome_fall",
+						"source_time": 1.96
+					},
+					{
+						"sound": "tome_land",
+						"source_time": 2.06
+					},
+					{
+						"sound": "tome_land",
+						"source_time": 2.2
+					}
+				],
+				"phase": 2
+			},
+			{
+				"actual": [
+					{
+						"sound": "whoosh_sweep_p2",
+						"source_time": 0.317
+					},
+					{
+						"sound": "telegraph_raise",
+						"source_time": 0.33
+					},
+					{
+						"sound": "impact_sweep",
+						"source_time": 0.627
+					},
+					{
+						"sound": "whoosh_sweep_p2",
+						"source_time": 1.241
+					},
+					{
+						"sound": "telegraph_raise",
+						"source_time": 1.32
+					},
+					{
+						"sound": "impact_sweep",
+						"source_time": 1.551
+					},
+					{
+						"sound": "whoosh_overhead",
+						"source_time": 2.108
+					},
+					{
+						"sound": "telegraph_raise",
+						"source_time": 2.178
+					},
+					{
+						"sound": "impact_slam_p2",
+						"source_time": 2.508
+					},
+					{
+						"sound": "shockwave_travel",
+						"source_time": 2.558
+					}
+				],
+				"animation": "combo3",
+				"expected": [
+					{
+						"sound": "whoosh_sweep_p2",
+						"source_time": 0.317
+					},
+					{
+						"sound": "telegraph_raise",
+						"source_time": 0.33
+					},
+					{
+						"sound": "impact_sweep",
+						"source_time": 0.627
+					},
+					{
+						"sound": "whoosh_sweep_p2",
+						"source_time": 1.241
+					},
+					{
+						"sound": "telegraph_raise",
+						"source_time": 1.32
+					},
+					{
+						"sound": "impact_sweep",
+						"source_time": 1.551
+					},
+					{
+						"sound": "whoosh_overhead",
+						"source_time": 2.108
+					},
+					{
+						"sound": "telegraph_raise",
+						"source_time": 2.178
+					},
+					{
+						"sound": "impact_slam_p2",
+						"source_time": 2.508
+					},
+					{
+						"sound": "shockwave_travel",
+						"source_time": 2.558
+					}
+				],
+				"phase": 2
+			},
+			{
+				"actual": [
+					{
+						"sound": "p2_transform",
+						"source_time": 0.0
+					},
+					{
+						"sound": "p2_shockwave",
+						"source_time": 1.598
+					}
+				],
+				"animation": "p2tr",
+				"expected": [
+					{
+						"sound": "p2_transform",
+						"source_time": 0.0
+					},
+					{
+						"sound": "p2_shockwave",
+						"source_time": 1.598
+					}
+				],
+				"phase": 2
+			},
+			{
+				"actual": [
+					{
+						"sound": "whoosh_sweep_p2",
+						"source_time": 0.11
+					},
+					{
+						"sound": "telegraph_raise",
+						"source_time": 0.21
+					},
+					{
+						"sound": "impact_sweep",
+						"source_time": 0.42
+					},
+					{
+						"sound": "whoosh_sweep_p2",
+						"source_time": 0.705
+					},
+					{
+						"sound": "telegraph_raise",
+						"source_time": 0.77
+					},
+					{
+						"sound": "impact_sweep",
+						"source_time": 1.015
+					},
+					{
+						"sound": "whoosh_sweep_p2",
+						"source_time": 1.335
+					},
+					{
+						"sound": "telegraph_raise",
+						"source_time": 1.4
+					},
+					{
+						"sound": "impact_sweep",
+						"source_time": 1.645
+					},
+					{
+						"sound": "leap_whoosh",
+						"source_time": 1.855
+					},
+					{
+						"sound": "impact_sweep",
+						"source_time": 2.17
+					},
+					{
+						"sound": "impact_slam_p2",
+						"source_time": 2.31
+					},
+					{
+						"sound": "shockwave_travel",
+						"source_time": 2.36
+					}
+				],
+				"animation": "combo5",
+				"expected": [
+					{
+						"sound": "whoosh_sweep_p2",
+						"source_time": 0.11
+					},
+					{
+						"sound": "telegraph_raise",
+						"source_time": 0.21
+					},
+					{
+						"sound": "impact_sweep",
+						"source_time": 0.42
+					},
+					{
+						"sound": "whoosh_sweep_p2",
+						"source_time": 0.705
+					},
+					{
+						"sound": "telegraph_raise",
+						"source_time": 0.77
+					},
+					{
+						"sound": "impact_sweep",
+						"source_time": 1.015
+					},
+					{
+						"sound": "whoosh_sweep_p2",
+						"source_time": 1.335
+					},
+					{
+						"sound": "telegraph_raise",
+						"source_time": 1.4
+					},
+					{
+						"sound": "impact_sweep",
+						"source_time": 1.645
+					},
+					{
+						"sound": "leap_whoosh",
+						"source_time": 1.855
+					},
+					{
+						"sound": "impact_sweep",
+						"source_time": 2.17
+					},
+					{
+						"sound": "impact_slam_p2",
+						"source_time": 2.31
+					},
+					{
+						"sound": "shockwave_travel",
+						"source_time": 2.36
+					}
+				],
+				"phase": 2
+			},
+			{
+				"actual": [
+					{
+						"sound": "telegraph_red",
+						"source_time": 0.56
+					},
+					{
+						"sound": "whoosh_overhead",
+						"source_time": 1.392
+					},
+					{
+						"sound": "impact_red",
+						"source_time": 1.792
+					},
+					{
+						"sound": "shockwave_travel",
+						"source_time": 1.842
+					}
+				],
+				"animation": "redpass",
+				"expected": [
+					{
+						"sound": "telegraph_red",
+						"source_time": 0.56
+					},
+					{
+						"sound": "whoosh_overhead",
+						"source_time": 1.392
+					},
+					{
+						"sound": "impact_red",
+						"source_time": 1.792
+					},
+					{
+						"sound": "shockwave_travel",
+						"source_time": 1.842
+					}
+				],
+				"phase": 2
+			},
+			{
+				"actual": [
+					{
+						"sound": "telegraph_raise",
+						"source_time": 0.392
+					},
+					{
+						"sound": "impact_slam_p2",
+						"source_time": 0.84
+					},
+					{
+						"sound": "wall_rise",
+						"source_time": 0.84
+					},
+					{
+						"sound": "wall_close_loop",
+						"source_time": 1.12
+					},
+					{
+						"sound": "wall_sink",
+						"source_time": 2.184
+					}
+				],
+				"animation": "indexlock",
+				"expected": [
+					{
+						"sound": "telegraph_raise",
+						"source_time": 0.392
+					},
+					{
+						"sound": "impact_slam_p2",
+						"source_time": 0.84
+					},
+					{
+						"sound": "wall_rise",
+						"source_time": 0.84
+					},
+					{
+						"sound": "wall_close_loop",
+						"source_time": 1.12
+					},
+					{
+						"sound": "wall_sink",
+						"source_time": 2.184
+					}
+				],
+				"phase": 2
+			},
+			{
+				"actual": [
+					{
+						"sound": "telegraph_charge",
+						"source_time": 0.312
+					},
+					{
+						"sound": "impact_slam_p2",
+						"source_time": 1.04
+					},
+					{
+						"sound": "fire_ignite",
+						"source_time": 1.092
+					},
+					{
+						"sound": "fire_loop",
+						"source_time": 1.092
+					},
+					{
+						"sound": "fire_ignite",
+						"source_time": 1.183
+					},
+					{
+						"sound": "fire_ignite",
+						"source_time": 1.274
+					},
+					{
+						"sound": "fire_ignite",
+						"source_time": 1.365
+					},
+					{
+						"sound": "fire_end",
+						"source_time": 2.21
+					}
+				],
+				"animation": "burning",
+				"expected": [
+					{
+						"sound": "telegraph_charge",
+						"source_time": 0.312
+					},
+					{
+						"sound": "impact_slam_p2",
+						"source_time": 1.04
+					},
+					{
+						"sound": "fire_ignite",
+						"source_time": 1.092
+					},
+					{
+						"sound": "fire_loop",
+						"source_time": 1.092
+					},
+					{
+						"sound": "fire_ignite",
+						"source_time": 1.183
+					},
+					{
+						"sound": "fire_ignite",
+						"source_time": 1.274
+					},
+					{
+						"sound": "fire_ignite",
+						"source_time": 1.365
+					},
+					{
+						"sound": "fire_end",
+						"source_time": 2.21
+					}
+				],
+				"phase": 2
+			},
+			{
+				"actual": [
+					{
+						"sound": "page_vanish",
+						"source_time": 0.076
+					},
+					{
+						"sound": "whoosh_sweep_p2",
+						"source_time": 0.792
+					},
+					{
+						"sound": "page_reappear",
+						"source_time": 0.798
+					},
+					{
+						"sound": "impact_sweep",
+						"source_time": 1.102
+					}
+				],
+				"animation": "pageflip",
+				"expected": [
+					{
+						"sound": "page_vanish",
+						"source_time": 0.076
+					},
+					{
+						"sound": "whoosh_sweep_p2",
+						"source_time": 0.792
+					},
+					{
+						"sound": "page_reappear",
+						"source_time": 0.798
+					},
+					{
+						"sound": "impact_sweep",
+						"source_time": 1.102
+					}
+				],
+				"phase": 2
+			},
+			{
+				"actual": [
+					{
+						"sound": "telegraph_red",
+						"source_time": 0.32
+					},
+					{
+						"sound": "grab_lunge",
+						"source_time": 1.152
+					},
+					{
+						"sound": "grab_catch",
+						"source_time": 1.984
+					},
+					{
+						"sound": "lock_clamp",
+						"source_time": 2.084
+					},
+					{
+						"sound": "finale_slam",
+						"source_time": 2.432
+					},
+					{
+						"sound": "release_exhale",
+						"source_time": 2.88
+					}
+				],
+				"animation": "finale",
+				"expected": [
+					{
+						"sound": "telegraph_red",
+						"source_time": 0.32
+					},
+					{
+						"sound": "grab_lunge",
+						"source_time": 1.152
+					},
+					{
+						"sound": "grab_catch",
+						"source_time": 1.984
+					},
+					{
+						"sound": "lock_clamp",
+						"source_time": 2.084
+					},
+					{
+						"sound": "finale_slam",
+						"source_time": 2.432
+					},
+					{
+						"sound": "release_exhale",
+						"source_time": 2.88
+					}
+				],
+				"phase": 2
+			},
+			{
+				"actual": [
+					{
+						"sound": "hurt",
+						"source_time": 0.024
+					}
+				],
+				"animation": "hurt",
+				"expected": [
+					{
+						"sound": "hurt",
+						"source_time": 0.024
+					}
+				],
+				"phase": 2
+			},
+			{
+				"actual": [
+					{
+						"sound": "hurt",
+						"source_time": 0.0
+					},
+					{
+						"sound": "death_fall",
+						"source_time": 1.8
+					},
+					{
+						"sound": "death_ink_dissolve",
+						"source_time": 3.06
+					}
+				],
+				"animation": "death",
+				"expected": [
+					{
+						"sound": "hurt",
+						"source_time": 0.0
+					},
+					{
+						"sound": "death_fall",
+						"source_time": 1.8
+					},
+					{
+						"sound": "death_ink_dissolve",
+						"source_time": 3.06
+					}
+				],
+				"phase": 2
+			},
+			{
+				"actual": [
+					{
+						"sound": "appear",
+						"source_time": 0.0
+					},
+					{
+						"sound": "eye_glow",
+						"source_time": 1.68
+					}
+				],
+				"animation": "appear",
+				"expected": [
+					{
+						"sound": "appear",
+						"source_time": 0.0
+					},
+					{
+						"sound": "eye_glow",
+						"source_time": 1.68
+					}
+				],
+				"phase": 2
+			}
+		],
+		"sfx_pcm": {
+			"impact": {
+				"frames": 12288,
+				"last_nonzero_seconds": 0.278639455782313,
+				"peak": 0.0699110180139542,
+				"rms": 0.0215343885270718
+			},
+			"locked_silence": {
+				"frames": 4096,
+				"last_nonzero_seconds": 0.0,
+				"peak": 0.0,
+				"rms": 0.0
+			},
+			"paused": {
+				"frames": 8192,
+				"last_nonzero_seconds": 0.011609977324263,
+				"peak": 0.0196298006922007,
+				"rms": 0.00153769550985013
+			},
+			"pending_pause": {
+				"frames": 12288,
+				"last_nonzero_seconds": 0.0,
+				"peak": 0.0,
+				"rms": 0.0
+			},
+			"pending_resume": {
+				"frames": 4096,
+				"last_nonzero_seconds": 0.0928798185941043,
+				"peak": 0.0699110180139542,
+				"rms": 0.0282708772864302
+			},
+			"resumed": {
+				"frames": 4096,
+				"last_nonzero_seconds": 0.0928798185941043,
+				"peak": 0.0461368374526501,
+				"rms": 0.0134370209204387
+			},
+			"stopped": {
+				"frames": 8192,
+				"last_nonzero_seconds": 0.011609977324263,
+				"peak": 0.00767641002312303,
+				"rms": 0.000790876178326995
+			},
+			"wall_loop": {
+				"frames": 12288,
+				"last_nonzero_seconds": 0.278639455782313,
+				"peak": 0.0203959625214338,
+				"rms": 0.00490744722215701
+			}
+		},
+		"singing_pcm": {
+			"cutoff": {
+				"frames": 8192,
+				"last_nonzero_seconds": 0.011609977324263,
+				"peak": 0.0602015554904938,
+				"rms": 0.00440563022804434
+			},
+			"far": {
+				"frames": 24576,
+				"last_nonzero_seconds": 0.557278911564626,
+				"peak": 0.0436580628156662,
+				"rms": 0.00504359563979055
+			},
+			"immediate_pause": {
+				"frames": 4096,
+				"last_nonzero_seconds": 0.0,
+				"peak": 0.0,
+				"rms": 0.0
+			},
+			"locked": {
+				"frames": 8192,
+				"last_nonzero_seconds": 0.0,
+				"peak": 0.0,
+				"rms": 0.0
+			},
+			"near": {
+				"frames": 28672,
+				"last_nonzero_seconds": 0.65015873015873,
+				"peak": 0.194359183311462,
+				"rms": 0.0469357373838549
+			},
+			"near_far_rms_ratio": 9.30600720913545,
+			"normal_pause": {
+				"frames": 8192,
+				"last_nonzero_seconds": 0.0,
+				"peak": 0.0,
+				"rms": 0.0
+			},
+			"paused_pending": {
+				"frames": 4096,
+				"last_nonzero_seconds": 0.0,
+				"peak": 0.0,
+				"rms": 0.0
+			},
+			"rate": 44100.0,
+			"resumed": {
+				"frames": 4096,
+				"last_nonzero_seconds": 0.0928798185941043,
+				"peak": 0.175198540091515,
+				"rms": 0.0447142003319424
+			}
+		}
+	},
+	"passed": true,
+	"runtime_notes": {
+		"audio_driver": "Dummy with native AudioEffectCapture Master PCM",
+		"device_sample_rate": 44100.0,
+		"human_listening_claim": false,
+		"mix_boundary_seconds": 0.011609977324263,
+		"rendering": "Native X11 OpenGL compatibility on Mesa llvmpipe; no hardware performance claim",
+		"source_wav_sample_rate": 48000
+	},
+	"scope": "Native Godot raw WAV decode, supplied source bytes and SFX event map, spatial body voice PCM encounter cutoff. No human listening claim.",
+	"script_sha256": "e753b0b78bb345eb15c356afa22b19b8bb77ac4b25f572dbd0e28b4dfa23b7ec",
+	"tested_files_sha256": {
+		"assets/audio/m26_imported/sfx_map.json": "94022232171d564c6b3e2f7f4ccb04f3907ae67836fca15dad2e67285c1d06ba",
+		"assets/minibosses/m26_imported/meta_p1.json": "38182118f47037034bef48830e8ce9d9b2276a2a54c3578583ea7a7bdbae79ef",
+		"scripts/audio/m26_archive_singing.gd": "f86d707bf2909eec9f662069afa0c9cb5e8be865ee0f778c8037a531009e4660",
+		"scripts/audio/m26_archivist_sfx.gd": "e753b0b78bb345eb15c356afa22b19b8bb77ac4b25f572dbd0e28b4dfa23b7ec",
+		"tools/test_m26_imported_audio.gd": "ecd8fd3833f18adf0e0c6b977bcf9d50b2a985cce10ae02fa0368433d815a9c5"
+	}
+}

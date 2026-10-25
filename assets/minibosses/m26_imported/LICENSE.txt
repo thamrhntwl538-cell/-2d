@@ -1,0 +1,4 @@
+User-supplied Archivist sprite sheets and metadata.
+The project records their supplied provenance without asserting ownership or a new license.
+Frame packs preserve original decoded RGBA pixels exactly, without redrawing or resampling.
+Exterior pixels are restored only outside the original cells by executing the same user-provided HTML rendering function; every original cell RGBA value remains unchanged.

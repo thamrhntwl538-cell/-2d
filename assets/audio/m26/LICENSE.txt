@@ -1,0 +1,8 @@
+Archive Keeper singing — user-provided recording
+
+The source recording was supplied by the user for use in this project. No copyright ownership or blanket license is asserted for that recording. Copyright and any other rights remain with their respective rights holders. This converted recording is not labeled CC0, MIT, or as an original synthesized work.
+
+Original filename: WhatsApp Audio 2026-10-24 at 4.43.00 PM.mp4
+Source SHA-256: e39ac4d2fa7c6df1edbfc3eeb2707c2c1bb1f9bfcfa19a064ed270a2fcd69306
+
+The full mono recording was converted from AAC to Vorbis without edits, normalization, speed/pitch changes, synthesis, or voice cloning. Personal container metadata was omitted. See provenance.json for format and objective measurements.

@@ -1,0 +1,101 @@
+{
+  "version": 1,
+  "source": {
+    "provided_by": "user",
+    "original_filename": "WhatsApp Audio 2026-10-24 at 4.43.00 PM.mp4",
+    "size_bytes": 350963,
+    "sha256": "e39ac4d2fa7c6df1edbfc3eeb2707c2c1bb1f9bfcfa19a064ed270a2fcd69306",
+    "codec": "aac",
+    "sample_rate": 48000,
+    "channels": 1,
+    "metrics": {
+      "decoded_samples": 2016256,
+      "duration_seconds": 42.00533333333333,
+      "sample_peak_dbfs": -0.4318807480803023,
+      "rms_dbfs": -16.436319473318868,
+      "clipped_samples": 0,
+      "dc": -4.752633780019126e-08
+    }
+  },
+  "shipped": {
+    "file": "assets/audio/m26/archive_keeper_singing.ogg",
+    "sha256": "1efa234c352a19758b808166d2976bfc443c391d03d74c179eb0895fdc4977bc",
+    "codec": "Vorbis quality 6",
+    "sample_rate": 48000,
+    "channels": 1,
+    "size_bytes": 426489,
+    "metrics": {
+      "decoded_samples": 2016256,
+      "duration_seconds": 42.00533333333333,
+      "sample_peak_dbfs": -0.2684749863402922,
+      "rms_dbfs": -16.381776654512564,
+      "clipped_samples": 0,
+      "dc": -2.5500289132195976e-07,
+      "loop_wrap_sample_difference": 1.1229407391510904e-05,
+      "first_sample": 0.0,
+      "last_sample": -1.1229407391510904e-05
+    },
+    "integrated_lufs": -16.77,
+    "true_peak_dbtp": -0.26,
+    "loudness_range_lu": 6.3
+  },
+  "processing": {
+    "full_recording_preserved": true,
+    "trimmed": false,
+    "pitch_changed": false,
+    "speed_changed": false,
+    "synthesized_or_cloned_voice": false,
+    "normalization_applied": false,
+    "gain_applied_db": 0,
+    "metadata_removed": true,
+    "source_to_shipped_zero_lag_correlation": 0.999753966766053,
+    "decode_error_rms_dbfs": -49.154028498134046
+  },
+  "runtime": {
+    "emitter_offset": [
+      0,
+      -115
+    ],
+    "listener_offset": [
+      0,
+      -55
+    ],
+    "base_volume_db": -7,
+    "max_distance": 1500,
+    "attenuation": 1.15,
+    "panning_strength": 1,
+    "loop_only_before_encounter": true,
+    "stop_on_encounter": "immediate no fade; latch blocks distance/pause auto restart",
+    "hero_voice": "unchanged M25 mute remains active"
+  },
+  "rights": {
+    "classification": "user-provided recording",
+    "copyright_owner": "not asserted",
+    "blanket_license": "none asserted",
+    "notice": "assets/audio/m26/LICENSE.txt"
+  },
+  "conversion_command": [
+    "ffmpeg",
+    "-v",
+    "error",
+    "-y",
+    "-i",
+    "<user-provided file>",
+    "-map",
+    "0:a:0",
+    "-map_metadata",
+    "-1",
+    "-vn",
+    "-ac",
+    "1",
+    "-ar",
+    "48000",
+    "-c:a",
+    "libvorbis",
+    "-q:a",
+    "6",
+    "assets/audio/m26/archive_keeper_singing.ogg"
+  ],
+  "human_listening_claim": false,
+  "passed": true
+}
