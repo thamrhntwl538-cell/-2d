@@ -1,0 +1,1296 @@
+{
+	"actual_input_only": false,
+	"configured_fixture": true,
+	"engine": "4.7.2-stable (official)",
+	"failures": [],
+	"fixtures": [
+		{
+			"actual_hit_volley_zero_based": 1,
+			"after_hp": 5,
+			"before_hp": 6,
+			"earlier_volley_overlap": false,
+			"hero_position": [
+				1225.86840820312,
+				595.402954101562
+			],
+			"no_prior_damage": true,
+			"requested_volley_zero_based": 1,
+			"sheet_world_rect": [
+				1220.32556152344,
+				561.642944335938,
+				11.085693359375,
+				15.5199584960938
+			],
+			"source_frame": 37,
+			"source_seconds": 1.592
+		},
+		{
+			"actual_hit_volley_zero_based": 2,
+			"after_hp": 5,
+			"before_hp": 6,
+			"earlier_volley_overlap": false,
+			"hero_position": [
+				1216.4541015625,
+				615.799560546875
+			],
+			"no_prior_damage": true,
+			"requested_volley_zero_based": 2,
+			"sheet_world_rect": [
+				1210.91125488281,
+				582.03955078125,
+				11.085693359375,
+				15.52001953125
+			],
+			"source_frame": 45,
+			"source_seconds": 1.914
+		}
+	],
+	"photos": [
+		{
+			"actual_input_only": false,
+			"arena": {
+				"art_scale": [
+					0.765550255775452,
+					0.765550255775452
+				],
+				"art_top": 2.58373205741623,
+				"background_loaded": true,
+				"dedicated_archivist_arena": true,
+				"dust_motes": 18,
+				"elapsed": 0.05,
+				"floor_y": 620.0,
+				"left_transition_width": 120.0,
+				"lights": [
+					[
+						1035.71997070312,
+						225.360000610352
+					],
+					[
+						1658.10998535156,
+						226.119995117188
+					]
+				],
+				"painted_floor_y": 620.0,
+				"paused": false,
+				"source": "res://assets/environments/m27_archivist/sealed_catalog_vault.png",
+				"source_size": [
+					1672.0,
+					941.0
+				],
+				"visual_only": true,
+				"world_origin": [
+					0.0,
+					0.0
+				],
+				"world_view": [
+					705.0,
+					0.0,
+					1280.0,
+					720.0
+				]
+			},
+			"caption": "اختبار اصطدام مضبوط للدفعة اللاحقة؛ ليس تسجيل تفادٍ أو قتال طبيعي",
+			"configured_fixture": true,
+			"path": "res://previews/m27/20_configured_second_volley.jpg",
+			"snapshot": {
+				"animation": "pagestorm",
+				"animation_history": [
+					"idle",
+					"pagestorm"
+				],
+				"approach_direction": 0,
+				"attack_start_record": {},
+				"boss_damage_events": 0,
+				"direction": -1,
+				"encounter_started": true,
+				"gate_open": false,
+				"grabbed": false,
+				"guard_blocks": 0,
+				"hero_energy": 99.0,
+				"hero_hp": 5,
+				"hero_position": [
+					1225.86840820312,
+					595.402954101562
+				],
+				"hit_history": [
+					{
+						"animation": "pagestorm",
+						"contact": "overlap",
+						"damage": 1,
+						"kind": "proj",
+						"paper_id": "2:1:3",
+						"phase": 1,
+						"sheet": 3,
+						"source_time": 1.592,
+						"volley": 1
+					}
+				],
+				"hp": 48,
+				"is_dead": false,
+				"isolated_trial": true,
+				"keeper_position": [
+					1440.0,
+					617.0
+				],
+				"max_hp": 48,
+				"paper_generation": 2,
+				"paused": false,
+				"pending_attack": "",
+				"phase": 1,
+				"phase_pending": false,
+				"phase_transitions": 0,
+				"player_hits": 1,
+				"previous_paper_count": 21,
+				"rage": false,
+				"runtime_hitboxes": [
+					{
+						"id": "2:0:0",
+						"kind": "proj",
+						"rect": [
+							1103.53405761719,
+							369.234283447266,
+							11.0858154296875,
+							13.7882995605469
+						],
+						"sheet": 0,
+						"source_rect": [
+							587.026123046875,
+							-447.0,
+							20.0,
+							24.8758239746094
+						],
+						"volley": 0
+					},
+					{
+						"id": "2:0:1",
+						"kind": "proj",
+						"rect": [
+							1089.59069824219,
+							405.327880859375,
+							11.085693359375,
+							15.52001953125
+						],
+						"sheet": 1,
+						"source_rect": [
+							612.181762695312,
+							-381.882659912109,
+							20.0,
+							28.0
+						],
+						"volley": 0
+					},
+					{
+						"id": "2:0:2",
+						"kind": "proj",
+						"rect": [
+							1068.98986816406,
+							441.462463378906,
+							11.085693359375,
+							15.52001953125
+						],
+						"sheet": 2,
+						"source_rect": [
+							649.348205566406,
+							-316.691436767578,
+							20.0,
+							28.0
+						],
+						"volley": 0
+					},
+					{
+						"id": "2:0:3",
+						"kind": "proj",
+						"rect": [
+							1049.73229980469,
+							481.051940917969,
+							11.085693359375,
+							15.5199890136719
+						],
+						"sheet": 3,
+						"source_rect": [
+							684.091186523438,
+							-245.267150878906,
+							20.0,
+							28.0
+						],
+						"volley": 0
+					},
+					{
+						"id": "2:0:4",
+						"kind": "proj",
+						"rect": [
+							1048.45812988281,
+							524.084350585938,
+							11.085693359375,
+							15.52001953125
+						],
+						"sheet": 4,
+						"source_rect": [
+							686.390014648438,
+							-167.631286621094,
+							20.0,
+							28.0
+						],
+						"volley": 0
+					},
+					{
+						"id": "2:0:5",
+						"kind": "proj",
+						"rect": [
+							1071.72387695312,
+							563.34619140625,
+							11.085693359375,
+							15.5199584960938
+						],
+						"sheet": 5,
+						"source_rect": [
+							644.415832519531,
+							-96.7981414794922,
+							20.0,
+							28.0
+						],
+						"volley": 0
+					},
+					{
+						"id": "2:0:6",
+						"kind": "proj",
+						"rect": [
+							1086.75549316406,
+							600.92529296875,
+							11.0858154296875,
+							15.52001953125
+						],
+						"sheet": 6,
+						"source_rect": [
+							617.296752929688,
+							-29.0007209777832,
+							20.0,
+							28.0
+						],
+						"volley": 0
+					},
+					{
+						"id": "2:1:0",
+						"kind": "proj",
+						"rect": [
+							1212.29797363281,
+							436.493225097656,
+							11.085693359375,
+							15.52001953125
+						],
+						"sheet": 0,
+						"source_rect": [
+							390.802642822266,
+							-325.656555175781,
+							20.0,
+							28.0
+						],
+						"volley": 1
+					},
+					{
+						"id": "2:1:1",
+						"kind": "proj",
+						"rect": [
+							1213.26147460938,
+							459.679748535156,
+							11.0858154296875,
+							15.5199890136719
+						],
+						"sheet": 1,
+						"source_rect": [
+							389.064270019531,
+							-283.825225830078,
+							20.0,
+							28.0
+						],
+						"volley": 1
+					},
+					{
+						"id": "2:1:2",
+						"kind": "proj",
+						"rect": [
+							1192.01611328125,
+							477.688232421875,
+							11.085693359375,
+							15.5199890136719
+						],
+						"sheet": 2,
+						"source_rect": [
+							427.393646240234,
+							-251.335693359375,
+							20.0,
+							28.0
+						],
+						"volley": 1
+					},
+					{
+						"id": "2:1:3",
+						"kind": "proj",
+						"rect": [
+							1208.25073242188,
+							500.855102539062,
+							11.085693359375,
+							15.52001953125
+						],
+						"sheet": 3,
+						"source_rect": [
+							398.104431152344,
+							-209.539733886719,
+							20.0,
+							28.0
+						],
+						"volley": 1
+					},
+					{
+						"id": "2:1:4",
+						"kind": "proj",
+						"rect": [
+							1192.56750488281,
+							523.944519042969,
+							11.085693359375,
+							15.52001953125
+						],
+						"sheet": 4,
+						"source_rect": [
+							426.398864746094,
+							-167.883590698242,
+							20.0,
+							28.0
+						],
+						"volley": 1
+					},
+					{
+						"id": "2:1:5",
+						"kind": "proj",
+						"rect": [
+							1199.70935058594,
+							545.91650390625,
+							11.085693359375,
+							15.52001953125
+						],
+						"sheet": 5,
+						"source_rect": [
+							413.514068603516,
+							-128.243377685547,
+							20.0,
+							28.0
+						],
+						"volley": 1
+					},
+					{
+						"id": "2:1:6",
+						"kind": "proj",
+						"rect": [
+							1220.32556152344,
+							561.642944335938,
+							11.085693359375,
+							15.5199584960938
+						],
+						"sheet": 6,
+						"source_rect": [
+							376.319946289062,
+							-99.8710327148438,
+							20.0,
+							28.0
+						],
+						"volley": 1
+					},
+					{
+						"id": "2:2:0",
+						"kind": "proj",
+						"rect": [
+							1351.23974609375,
+							496.451812744141,
+							11.0858154296875,
+							15.5199890136719
+						],
+						"sheet": 0,
+						"source_rect": [
+							140.134368896484,
+							-217.483856201172,
+							20.0,
+							28.0
+						],
+						"volley": 2
+					},
+					{
+						"id": "2:2:1",
+						"kind": "proj",
+						"rect": [
+							1351.19262695312,
+							497.284942626953,
+							11.085693359375,
+							15.5199890136719
+						],
+						"sheet": 1,
+						"source_rect": [
+							140.219543457031,
+							-215.98078918457,
+							20.0,
+							28.0
+						],
+						"volley": 2
+					},
+					{
+						"id": "2:2:2",
+						"kind": "proj",
+						"rect": [
+							1350.92749023438,
+							498.075256347656,
+							11.085693359375,
+							15.52001953125
+						],
+						"sheet": 2,
+						"source_rect": [
+							140.697937011719,
+							-214.554962158203,
+							20.0,
+							28.0
+						],
+						"volley": 2
+					},
+					{
+						"id": "2:2:3",
+						"kind": "proj",
+						"rect": [
+							1351.64916992188,
+							498.841644287109,
+							11.085693359375,
+							15.5199890136719
+						],
+						"sheet": 3,
+						"source_rect": [
+							139.395751953125,
+							-213.172286987305,
+							20.0,
+							28.0
+						],
+						"volley": 2
+					},
+					{
+						"id": "2:2:4",
+						"kind": "proj",
+						"rect": [
+							1351.453125,
+							499.633605957031,
+							11.085693359375,
+							15.52001953125
+						],
+						"sheet": 4,
+						"source_rect": [
+							139.749465942383,
+							-211.743469238281,
+							20.0,
+							28.0
+						],
+						"volley": 2
+					},
+					{
+						"id": "2:2:5",
+						"kind": "proj",
+						"rect": [
+							1351.44604492188,
+							500.463104248047,
+							11.0858154296875,
+							15.5199890136719
+						],
+						"sheet": 5,
+						"source_rect": [
+							139.762191772461,
+							-210.246963500977,
+							20.0,
+							28.0
+						],
+						"volley": 2
+					},
+					{
+						"id": "2:2:6",
+						"kind": "proj",
+						"rect": [
+							1351.92175292969,
+							501.121734619141,
+							11.085693359375,
+							15.5199890136719
+						],
+						"sheet": 6,
+						"source_rect": [
+							138.904022216797,
+							-209.058731079102,
+							20.0,
+							28.0
+						],
+						"volley": 2
+					}
+				],
+				"singing": false,
+				"singing_latched": true,
+				"source": {
+					"active_hitboxes": [
+						{
+							"h": 200.0,
+							"k": "proj",
+							"kind": "proj",
+							"rect": [
+								120.0,
+								-300.0,
+								620.0,
+								200.0
+							],
+							"source_coordinates": true,
+							"u0": 0.68,
+							"u1": 0.78,
+							"w": 620.0,
+							"x": 120.0,
+							"y": -300.0
+						}
+					],
+					"animation": "pagestorm",
+					"cache_frames": 2,
+					"draw_frame_rect": [
+						90.0,
+						233.0,
+						1001.0,
+						546.0
+					],
+					"duration": 2.3,
+					"facing": -1,
+					"finished": false,
+					"fps": 24.0,
+					"frame": 37,
+					"frames": 55,
+					"loop": false,
+					"phase": 1,
+					"playback_speed": 1.0,
+					"playing": true,
+					"pose": {
+						"T": 1.54166666666667,
+						"alpha": 1.0,
+						"ang": 84.0,
+						"armSwing": 0.0,
+						"btilt": -4.98368022038194,
+						"bx": 0.0,
+						"by": -6.26794533353655,
+						"cyc": 1.0,
+						"dur": 2.3,
+						"eye": 1.85358906670731,
+						"fireH": 0.0,
+						"flash": 0.0,
+						"hglow": 0.0,
+						"hs": 1.12,
+						"hx": 120.0,
+						"hy": -128.0,
+						"ink": 0.0,
+						"lean": 0.0,
+						"lfx": -70.0,
+						"lfy": 0.0,
+						"name": "pagestorm",
+						"open": 1.0,
+						"p2": 0.0,
+						"pgs": 1.0,
+						"rage": 0.0,
+						"rev": 1.0,
+						"rfx": 76.0,
+						"rfy": 0.0,
+						"shut": 0.0,
+						"sx": 1.0,
+						"sy": 1.0,
+						"tear": 0.0,
+						"th2": 0.0,
+						"tremor": 0.63989034715198,
+						"u": 0.685185185185185,
+						"warn": 0.0,
+						"x": -18.0,
+						"y": 0.0
+					},
+					"resolved_source_phase": 1,
+					"source_cell": [
+						1100,
+						720
+					],
+					"source_frame_rect": [
+						90.0,
+						233.0,
+						1001.0,
+						487.0
+					],
+					"source_key": "p1/pagestorm",
+					"source_origin": [
+						380.0,
+						680.0
+					],
+					"source_pivot": [
+						380.0,
+						680.0
+					],
+					"time": 1.592,
+					"visual_scale": 0.554285714285714
+				},
+				"state": "attack",
+				"swept_paper_hits": 0,
+				"writes_save": false
+			},
+			"tick": 1
+		},
+		{
+			"actual_input_only": false,
+			"arena": {
+				"art_scale": [
+					0.765550255775452,
+					0.765550255775452
+				],
+				"art_top": 2.58373205741623,
+				"background_loaded": true,
+				"dedicated_archivist_arena": true,
+				"dust_motes": 18,
+				"elapsed": 0.05,
+				"floor_y": 620.0,
+				"left_transition_width": 120.0,
+				"lights": [
+					[
+						1035.71997070312,
+						225.360000610352
+					],
+					[
+						1658.10998535156,
+						226.119995117188
+					]
+				],
+				"painted_floor_y": 620.0,
+				"paused": false,
+				"source": "res://assets/environments/m27_archivist/sealed_catalog_vault.png",
+				"source_size": [
+					1672.0,
+					941.0
+				],
+				"visual_only": true,
+				"world_origin": [
+					0.0,
+					0.0
+				],
+				"world_view": [
+					705.0,
+					0.0,
+					1280.0,
+					720.0
+				]
+			},
+			"caption": "اختبار اصطدام مضبوط للدفعة اللاحقة؛ ليس تسجيل تفادٍ أو قتال طبيعي",
+			"configured_fixture": true,
+			"path": "res://previews/m27/21_configured_third_volley.jpg",
+			"snapshot": {
+				"animation": "pagestorm",
+				"animation_history": [
+					"idle",
+					"pagestorm"
+				],
+				"approach_direction": 0,
+				"attack_start_record": {},
+				"boss_damage_events": 0,
+				"direction": -1,
+				"encounter_started": true,
+				"gate_open": false,
+				"grabbed": false,
+				"guard_blocks": 0,
+				"hero_energy": 99.0,
+				"hero_hp": 5,
+				"hero_position": [
+					1216.4541015625,
+					615.799560546875
+				],
+				"hit_history": [
+					{
+						"animation": "pagestorm",
+						"contact": "overlap",
+						"damage": 1,
+						"kind": "proj",
+						"paper_id": "2:2:3",
+						"phase": 1,
+						"sheet": 3,
+						"source_time": 1.914,
+						"volley": 2
+					}
+				],
+				"hp": 48,
+				"is_dead": false,
+				"isolated_trial": true,
+				"keeper_position": [
+					1440.0,
+					617.0
+				],
+				"max_hp": 48,
+				"paper_generation": 2,
+				"paused": false,
+				"pending_attack": "",
+				"phase": 1,
+				"phase_pending": false,
+				"phase_transitions": 0,
+				"player_hits": 1,
+				"previous_paper_count": 21,
+				"rage": false,
+				"runtime_hitboxes": [
+					{
+						"id": "2:0:0",
+						"kind": "proj",
+						"rect": [
+							971.937683105469,
+							307.042388916016,
+							11.0857543945312,
+							15.5199890136719
+						],
+						"sheet": 0,
+						"source_rect": [
+							824.442321777344,
+							-559.201904296875,
+							20.0,
+							28.0
+						],
+						"volley": 0
+					},
+					{
+						"id": "2:0:1",
+						"kind": "proj",
+						"rect": [
+							950.7509765625,
+							364.517181396484,
+							11.085693359375,
+							15.5199890136719
+						],
+						"sheet": 1,
+						"source_rect": [
+							862.665771484375,
+							-455.51025390625,
+							20.0,
+							28.0
+						],
+						"volley": 0
+					},
+					{
+						"id": "2:0:2",
+						"kind": "proj",
+						"rect": [
+							919.448425292969,
+							419.422973632812,
+							11.085693359375,
+							15.5199890136719
+						],
+						"sheet": 2,
+						"source_rect": [
+							919.139465332031,
+							-356.453430175781,
+							20.0,
+							28.0
+						],
+						"volley": 0
+					},
+					{
+						"id": "2:0:3",
+						"kind": "proj",
+						"rect": [
+							890.186950683594,
+							479.578369140625,
+							11.085693359375,
+							15.52001953125
+						],
+						"sheet": 3,
+						"source_rect": [
+							971.930786132812,
+							-247.92561340332,
+							20.0,
+							28.0
+						],
+						"volley": 0
+					},
+					{
+						"id": "2:0:4",
+						"kind": "proj",
+						"rect": [
+							888.485717773438,
+							544.96533203125,
+							10.8507690429688,
+							15.52001953125
+						],
+						"sheet": 4,
+						"source_rect": [
+							975.423828125,
+							-129.959442138672,
+							19.576171875,
+							28.0
+						],
+						"volley": 0
+					},
+					{
+						"id": "2:0:5",
+						"kind": "proj",
+						"rect": [
+							923.602600097656,
+							604.622863769531,
+							11.085693359375,
+							15.52001953125
+						],
+						"sheet": 5,
+						"source_rect": [
+							911.644836425781,
+							-22.3298625946045,
+							20.0,
+							28.0
+						],
+						"volley": 0
+					},
+					{
+						"id": "2:0:6",
+						"kind": "proj",
+						"rect": [
+							946.442993164062,
+							661.7236328125,
+							11.085693359375,
+							15.52001953125
+						],
+						"sheet": 6,
+						"source_rect": [
+							870.437927246094,
+							80.6869964599609,
+							20.0,
+							28.0
+						],
+						"volley": 0
+					},
+					{
+						"id": "2:1:0",
+						"kind": "proj",
+						"rect": [
+							1064.78857421875,
+							378.437438964844,
+							11.085693359375,
+							15.52001953125
+						],
+						"sheet": 0,
+						"source_rect": [
+							656.927795410156,
+							-430.396362304688,
+							20.0,
+							28.0
+						],
+						"volley": 1
+					},
+					{
+						"id": "2:1:1",
+						"kind": "proj",
+						"rect": [
+							1066.7353515625,
+							425.283660888672,
+							11.085693359375,
+							15.5199890136719
+						],
+						"sheet": 1,
+						"source_rect": [
+							653.415588378906,
+							-345.880004882812,
+							20.0,
+							28.0
+						],
+						"volley": 1
+					},
+					{
+						"id": "2:1:2",
+						"kind": "proj",
+						"rect": [
+							1023.81091308594,
+							461.668151855469,
+							11.0858154296875,
+							15.5199890136719
+						],
+						"sheet": 2,
+						"source_rect": [
+							730.856567382812,
+							-280.237884521484,
+							20.0,
+							28.0
+						],
+						"volley": 1
+					},
+					{
+						"id": "2:1:3",
+						"kind": "proj",
+						"rect": [
+							1056.61145019531,
+							508.474731445312,
+							11.085693359375,
+							15.52001953125
+						],
+						"sheet": 3,
+						"source_rect": [
+							671.680358886719,
+							-195.792999267578,
+							20.0,
+							28.0
+						],
+						"volley": 1
+					},
+					{
+						"id": "2:1:4",
+						"kind": "proj",
+						"rect": [
+							1024.92504882812,
+							555.124755859375,
+							11.085693359375,
+							15.52001953125
+						],
+						"sheet": 4,
+						"source_rect": [
+							728.8466796875,
+							-111.630577087402,
+							20.0,
+							28.0
+						],
+						"volley": 1
+					},
+					{
+						"id": "2:1:5",
+						"kind": "proj",
+						"rect": [
+							1039.3544921875,
+							599.517150878906,
+							11.085693359375,
+							15.52001953125
+						],
+						"sheet": 5,
+						"source_rect": [
+							702.814147949219,
+							-31.5411758422852,
+							20.0,
+							28.0
+						],
+						"volley": 1
+					},
+					{
+						"id": "2:1:6",
+						"kind": "proj",
+						"rect": [
+							1081.00756835938,
+							631.290893554688,
+							11.085693359375,
+							15.52001953125
+						],
+						"sheet": 6,
+						"source_rect": [
+							627.666809082031,
+							25.7825508117676,
+							20.0,
+							28.0
+						],
+						"volley": 1
+					},
+					{
+						"id": "2:2:0",
+						"kind": "proj",
+						"rect": [
+							1190.74438476562,
+							443.943237304688,
+							11.0858154296875,
+							15.5199584960938
+						],
+						"sheet": 0,
+						"source_rect": [
+							429.687866210938,
+							-312.215850830078,
+							20.0,
+							28.0
+						],
+						"volley": 2
+					},
+					{
+						"id": "2:2:1",
+						"kind": "proj",
+						"rect": [
+							1189.34838867188,
+							468.580017089844,
+							11.085693359375,
+							15.5199890136719
+						],
+						"sheet": 1,
+						"source_rect": [
+							432.206512451172,
+							-267.768035888672,
+							20.0,
+							28.0
+						],
+						"volley": 2
+					},
+					{
+						"id": "2:2:2",
+						"kind": "proj",
+						"rect": [
+							1181.50695800781,
+							491.95068359375,
+							11.0858154296875,
+							15.52001953125
+						],
+						"sheet": 2,
+						"source_rect": [
+							446.353363037109,
+							-225.604431152344,
+							20.0,
+							28.0
+						],
+						"volley": 2
+					},
+					{
+						"id": "2:2:3",
+						"kind": "proj",
+						"rect": [
+							1202.85107421875,
+							514.614196777344,
+							11.0858154296875,
+							15.5199584960938
+						],
+						"sheet": 3,
+						"source_rect": [
+							407.845886230469,
+							-184.716690063477,
+							20.0,
+							28.0
+						],
+						"volley": 2
+					},
+					{
+						"id": "2:2:4",
+						"kind": "proj",
+						"rect": [
+							1197.05346679688,
+							538.033996582031,
+							11.085693359375,
+							15.52001953125
+						],
+						"sheet": 4,
+						"source_rect": [
+							418.305725097656,
+							-142.464431762695,
+							20.0,
+							28.0
+						],
+						"volley": 2
+					},
+					{
+						"id": "2:2:5",
+						"kind": "proj",
+						"rect": [
+							1196.84484863281,
+							562.563354492188,
+							11.085693359375,
+							15.52001953125
+						],
+						"sheet": 5,
+						"source_rect": [
+							418.681976318359,
+							-98.2104187011719,
+							20.0,
+							28.0
+						],
+						"volley": 2
+					},
+					{
+						"id": "2:2:6",
+						"kind": "proj",
+						"rect": [
+							1210.91125488281,
+							582.03955078125,
+							11.085693359375,
+							15.52001953125
+						],
+						"sheet": 6,
+						"source_rect": [
+							393.304473876953,
+							-63.0729942321777,
+							20.0,
+							28.0
+						],
+						"volley": 2
+					}
+				],
+				"singing": false,
+				"singing_latched": true,
+				"source": {
+					"active_hitboxes": [],
+					"animation": "pagestorm",
+					"cache_frames": 2,
+					"draw_frame_rect": [
+						90.0,
+						119.0,
+						1285.0,
+						670.0
+					],
+					"duration": 2.3,
+					"facing": -1,
+					"finished": false,
+					"fps": 24.0,
+					"frame": 45,
+					"frames": 55,
+					"loop": false,
+					"phase": 1,
+					"playback_speed": 1.0,
+					"playing": true,
+					"pose": {
+						"T": 1.875,
+						"alpha": 1.0,
+						"ang": 84.0,
+						"armSwing": 0.0,
+						"btilt": -1.85185185185185,
+						"bx": 0.0,
+						"by": -5.55555555555556,
+						"cyc": 1.0,
+						"dur": 2.3,
+						"eye": 1.74074074074074,
+						"fireH": 0.0,
+						"flash": 0.0,
+						"hglow": 0.0,
+						"hs": 1.12,
+						"hx": 120.0,
+						"hy": -128.0,
+						"ink": 0.0,
+						"lean": 0.0,
+						"lfx": -70.0,
+						"lfy": 0.0,
+						"name": "pagestorm",
+						"open": 0.811385459533608,
+						"p2": 0.0,
+						"pgs": 1.0,
+						"rage": 0.0,
+						"rev": 1.0,
+						"rfx": 76.0,
+						"rfy": 0.0,
+						"shut": 0.0,
+						"sx": 1.0,
+						"sy": 1.0,
+						"tear": 0.0,
+						"th2": 0.0,
+						"tremor": 0.600090696803596,
+						"u": 0.833333333333333,
+						"warn": 0.0,
+						"x": -16.6666666666667,
+						"y": 0.0
+					},
+					"resolved_source_phase": 1,
+					"source_cell": [
+						1100,
+						720
+					],
+					"source_frame_rect": [
+						90.0,
+						195.0,
+						1010.0,
+						525.0
+					],
+					"source_key": "p1/pagestorm",
+					"source_origin": [
+						380.0,
+						680.0
+					],
+					"source_pivot": [
+						380.0,
+						680.0
+					],
+					"time": 1.914,
+					"visual_scale": 0.554285714285714
+				},
+				"state": "attack",
+				"swept_paper_hits": 0,
+				"writes_save": false
+			},
+			"tick": 1
+		}
+	],
+	"scope": "Explicit configured collision fixtures, not gameplay or actual player dodges. Original later sheets, fresh normal six health, no earlier sheet overlapping the target position.",
+	"source_files_changed": [],
+	"source_sha256": {
+		"assets/audio/m26/archive_keeper_singing.ogg": "1efa234c352a19758b808166d2976bfc443c391d03d74c179eb0895fdc4977bc",
+		"assets/audio/m26_imported/sfx_map.json": "94022232171d564c6b3e2f7f4ccb04f3907ae67836fca15dad2e67285c1d06ba",
+		"assets/audio/m26_imported/wav/appear.wav": "947f24123afd0c7cf787a6385f64d566c7f40714bbc8e7abe924608b19c081c6",
+		"assets/audio/m26_imported/wav/death_fall.wav": "92194d3f08a1f7fa38042f0479e09b1b2999a1bd63e3e97d70a7a2d6a40b9e0d",
+		"assets/audio/m26_imported/wav/death_ink_dissolve.wav": "b39380eb39743cb215e95b84d6d9689c96b3e7d071e89f10465b3cfb5690257b",
+		"assets/audio/m26_imported/wav/eye_glow.wav": "df96074c206e275be0ef82312cb66161e0a002dc7c808af1b7287aecb4fff849",
+		"assets/audio/m26_imported/wav/finale_slam.wav": "1e830ca49944be446a8c0901a46b283ab8daf8b95523cce47d19925e0a7f5e76",
+		"assets/audio/m26_imported/wav/fire_end.wav": "d72e4d0393df8b0ccb5ddd78aeb6458034506ff504ae65c288010c6a5b6824b7",
+		"assets/audio/m26_imported/wav/fire_ignite.wav": "2de0ef9489abd1d9dbd886c3990659354e61c356467d6e46ca53459d08239940",
+		"assets/audio/m26_imported/wav/fire_loop.wav": "08bb63ae8d1f0c84ed9135d974dec47792084be7edbeb3f9e7dd31c6e541643b",
+		"assets/audio/m26_imported/wav/footstep_1.wav": "d78c716ef53e2fe1f9f691b9bc28cf5779f9b015737494b218d7ec396c3ac0ad",
+		"assets/audio/m26_imported/wav/footstep_2.wav": "9744f916de8e4c308059d59529d4c72a9f89509670ecb87a4bb9b4afff2bab0a",
+		"assets/audio/m26_imported/wav/grab_catch.wav": "1602a98f734590276aecd7dfebbd4ad232c8f07d57878c72cc7016cfc9073a35",
+		"assets/audio/m26_imported/wav/grab_lunge.wav": "cb2f29f97e67fba80a0454843f33beb1e657551ea7e0a2b8ab7876778266462f",
+		"assets/audio/m26_imported/wav/guard_burst.wav": "5123b2901ed432ceed955e195107bae9a5a1c4dc245b8b052c932aeca1a869a2",
+		"assets/audio/m26_imported/wav/guard_close.wav": "c140e48d640c1d25ba7c292a80b6d15f6d1ac9ad13d14340490c10d1bb39c509",
+		"assets/audio/m26_imported/wav/guard_hit_block.wav": "7134e30684c0676f314f4d4bdbcf6ef753b8383623c237e42909c3979ba51a0f",
+		"assets/audio/m26_imported/wav/hurt.wav": "15183631d902cba05f4eae60a29a152d4ec6f2af7dc86f8a5cfca746b5de99dd",
+		"assets/audio/m26_imported/wav/idle_breath.wav": "a496b33bd1e1f67f53b66d0c6f40deff38d58510dc5f3e26878248e08e7af7aa",
+		"assets/audio/m26_imported/wav/impact_red.wav": "2e7e0ced5c3f1843746c91985eed577352ffe5fc6b2195741eca922c12ced913",
+		"assets/audio/m26_imported/wav/impact_slam.wav": "0fa45733e40bad3aa0614fcbf10179c5960f11f45cb4328b4227124d873f8525",
+		"assets/audio/m26_imported/wav/impact_slam_p2.wav": "49a139c11f5025676129a0929ff1379e952446d4388ba0e420d4abed0e4e7d19",
+		"assets/audio/m26_imported/wav/impact_sweep.wav": "9d6b99ac4944908ba4a3ac71c24e155eb9e3396358c70f33d7cf8ae5f119a599",
+		"assets/audio/m26_imported/wav/leap_whoosh.wav": "97d0b59ceaf5c9b3210049ad54177bfefffd3ca56ca6a648e2a32bbf414e692c",
+		"assets/audio/m26_imported/wav/lock_clamp.wav": "56ecdbaf7cf7d4c74222d30001fb40e548c2c1283d1ebb1110abbbebf3d08aa8",
+		"assets/audio/m26_imported/wav/p2_shockwave.wav": "077d87def88797b8a8b24fba941b571e99bc166ea7d3ced5289a51a021dde7bc",
+		"assets/audio/m26_imported/wav/p2_transform.wav": "07d6ac215e8f0ac306094e78f10b05df2eeefe84824588ba605b380a5036d46d",
+		"assets/audio/m26_imported/wav/page_open.wav": "938fc8ccf65b9e3a0f7d2c21b397e90231dd3ca8c08b1316a6c1f3e20c75c724",
+		"assets/audio/m26_imported/wav/page_reappear.wav": "921fec6bf76393bc2d1492eb530c8f32101c4f4b3923d5dbf0ce2b5b21eeab73",
+		"assets/audio/m26_imported/wav/page_vanish.wav": "2c6ef8ea75be29ac105ac09700fb73383d224fe4f4f76e2aca02d5bb8ccf44c1",
+		"assets/audio/m26_imported/wav/page_volley.wav": "8841f91efcfeee690a6aff50f7a1c54297c2429457348809e2afb55eeb67214e",
+		"assets/audio/m26_imported/wav/release_exhale.wav": "7dde5e1ede178d4bb7d3a6e59e2fc7a4b24d68871c153143f4a5c56e1a61ee31",
+		"assets/audio/m26_imported/wav/shockwave_travel.wav": "5528fef272657a1291805cb60fec24856b04858bc61b5b8682da0e01a9b8a408",
+		"assets/audio/m26_imported/wav/telegraph_charge.wav": "5bb555790ef77d8ccd64e3ba7e2b3239c364027ea7163aa245ed313d6b959281",
+		"assets/audio/m26_imported/wav/telegraph_raise.wav": "e1f3bbe12b3480805de50cb08d1aa1bd395282ef708e760da67d5c1012452e8b",
+		"assets/audio/m26_imported/wav/telegraph_red.wav": "16d943991aba804db0cf3b5ddbe273bd443f03a97fa7c4543c92d6522c21e666",
+		"assets/audio/m26_imported/wav/tome_fall.wav": "dffdce6f7055b2cfa42732da4617d0c40a8649504a174a042ea7b6c645f696f0",
+		"assets/audio/m26_imported/wav/tome_land.wav": "cdec46239b3c68b69d43e31c0801b8ec3e60da3962d01e2620ad719ccfbad884",
+		"assets/audio/m26_imported/wav/tome_marker.wav": "b0ffa317c605abe8584818bb94e41ad675c81bdd182b4341c03842c195724def",
+		"assets/audio/m26_imported/wav/wall_close_loop.wav": "9c2b030fa49c1661e316411ae794a50bdf6ec5c3a0974f50c21e21710737ebd6",
+		"assets/audio/m26_imported/wav/wall_rise.wav": "87d5672ce73a08761ec47ad578222adc590a2c26dd7b644107313f951be936dc",
+		"assets/audio/m26_imported/wav/wall_sink.wav": "5976356810a50bb6b64fd5470924cd89bc82798ecedf7ba08bbd7822cb3e6740",
+		"assets/audio/m26_imported/wav/whoosh_overhead.wav": "618f39804f2517f7a4ff045602cf8f28dd7612eee536c2da6876ef01e307ea11",
+		"assets/audio/m26_imported/wav/whoosh_sweep.wav": "61c99cf087da12236b1bce312add30967d8ebbbea6858e58275b1234998b136b",
+		"assets/audio/m26_imported/wav/whoosh_sweep_p2.wav": "2af2127915cfdde73587cd44c2e18ae1fc0dec659cd6d3dc2ef4fb722ee3afbc",
+		"assets/environments/m27_archivist/provenance.json": "52f21db56e60eca29a87ac6a5a75b30662ca102e307a31c87934221d0f493672",
+		"assets/environments/m27_archivist/sealed_catalog_vault.png": "aa0775426f3723231ec9a7dfe921d0eb78dfedb29575038a6974903e4a33efff",
+		"assets/fonts/DejaVuSans.ttf": "57f73e11f51999432bf7ab22ce55b6f945d5eca1bf824404cfa9ec2e3718c84e",
+		"assets/minibosses/m26_imported/manifest.json": "e13b60a746632d43f1f7500e5bc84b650a494f4200b8f11b716e993247940f26",
+		"assets/minibosses/m26_imported/p1_appear.zip": "5ea48d9d8706b61603f2e997b54d1c12200814708b8b8133b611b8f4a8378f71",
+		"assets/minibosses/m26_imported/p1_combo3.zip": "073b9c465e4569e689353424ce8b5d85f8a60d1d0040f2d5f6f0e06777098045",
+		"assets/minibosses/m26_imported/p1_death.zip": "7c7b830d39719662f6f4dd20b7e27f827c54833c7d0668225483c605a1b8f733",
+		"assets/minibosses/m26_imported/p1_hurt.zip": "480a7c624950d8bd0f3e263fbd4d7fe0039cda0cc5bb1fd14f2cd8e893644e2e",
+		"assets/minibosses/m26_imported/p1_idle.zip": "6d686fa8010cef0d1a7775a02a6f2c26eed5fa1a0c5ef1947fe5b62b3c06d9a6",
+		"assets/minibosses/m26_imported/p1_pagestorm.zip": "fadc89b0e731c6354462d38c9115a61d58ebf03e80fc94278184e2240fa8d376",
+		"assets/minibosses/m26_imported/p1_shut.zip": "8a4864c830d97a35244ce0b2b5ef7cfd3a20c218fc6ccfe087b4829b37f7772c",
+		"assets/minibosses/m26_imported/p1_slam.zip": "82475e0ddf2feb4477e7281a2f2b4ef3ddd97957b9af34fd71476e193056aa4f",
+		"assets/minibosses/m26_imported/p1_sweep.zip": "852d637b09286f9b737c53a897c51f4b026cd0852dffeaec6bc4e7c5bf366fa4",
+		"assets/minibosses/m26_imported/p1_tomes.zip": "8c2b06b108b29ba3e3abd35542a9d0f7aade23f368673c70985a8c943cf5ac04",
+		"assets/minibosses/m26_imported/p1_walk.zip": "1d4926ebca5d6c017041f767510b273f0ed5fdd37c73c1e8d562600f5587e736",
+		"assets/minibosses/m26_imported/p2_appear.zip": "e431424b35e447d6044a0bda23e86da229820a72f32d367996f3ed233470232a",
+		"assets/minibosses/m26_imported/p2_burning.zip": "c57499e5d1a0c6f74ad58ddcb58ab5d78003a8cc0966e02db67a09c0b2ec2ba3",
+		"assets/minibosses/m26_imported/p2_combo3.zip": "07415d5fcb69b4550d05cb0d57838e3184e8c5cb77bce5d5fba9b59dc8901442",
+		"assets/minibosses/m26_imported/p2_combo5.zip": "8bc3afc4c47f2ab871146bba16081d834c1441bc6d7eb503dc903fdd1789c1cc",
+		"assets/minibosses/m26_imported/p2_death.zip": "3e465c42fd38d657f0c8ba1408ccbc0d1c4badbb6076d30545a72c9365f15bfd",
+		"assets/minibosses/m26_imported/p2_finale.zip": "ade7507d4e3437d9dada008123a1db83d5f98cbaea9584e3b448ae3b0f5c2dd3",
+		"assets/minibosses/m26_imported/p2_hurt.zip": "f770c545dcd3ee427b9f204cbe95c2e74f482b2608c4c8ae687bf43038ee987a",
+		"assets/minibosses/m26_imported/p2_idle.zip": "617d2d95d62cb68303b0b254dceb135bdc9ccb0d15088796c670372b4c6dad15",
+		"assets/minibosses/m26_imported/p2_indexlock.zip": "b5a8d17265c5d470247829c22ef0a1d2f729ec12ab2b9d1d67b641c87c2179a0",
+		"assets/minibosses/m26_imported/p2_p2tr.zip": "37100cef0847b1e0df532927354f0e758ad65460a8c43299f07c0ed3e7630f9d",
+		"assets/minibosses/m26_imported/p2_pageflip.zip": "e39a00382f04a1931af37d4178768d76752417b92555d2bd2c13678eb64d5dc6",
+		"assets/minibosses/m26_imported/p2_pagestorm.zip": "ba1459bd94d3b0b3a56cc1183fa15680f1a80f7e61000ac57fc36fc632c60441",
+		"assets/minibosses/m26_imported/p2_redpass.zip": "0e71820507fa343b87a2b23cd7eed8c6aaa47c092187d61b2137f7d35fb94b5a",
+		"assets/minibosses/m26_imported/p2_shut.zip": "fd0a6f7a5b868880c61919f3bba0767d0dc55ae68dfb8ff7a0ce4294ff0682d1",
+		"assets/minibosses/m26_imported/p2_slam.zip": "be8b696556a057c90c0866d00766c0526620e9f8cdb1c832ae4e1f9082234f75",
+		"assets/minibosses/m26_imported/p2_sweep.zip": "f952390b7b3e82cc9fac6f936eac8a75589e928b313f22c72211a4b914acdf25",
+		"assets/minibosses/m26_imported/p2_tomes.zip": "e53ca45e3e91e52a44b1756136170e61f410ecb059918ce407df765bf611d314",
+		"assets/minibosses/m26_imported/p2_walk.zip": "cb986baa9943009f234b3b8fa7695884507aec3571374bd0afee67143a4c882a",
+		"assets/warden_m20/warden_parts.png": "6eca7436c7a8c39451256aa56db465d664df0d6dbb42d8e7f24122592b34bb66",
+		"scenes/minibosses/archivist_trial_m26.tscn": "8e6b1b3b902e51349e2cba4864ee64050fa6dd6c73aadb2b346c0c645c863675",
+		"scripts/audio/m24_soundscape.gd": "176fada25ec9f6b4264ff4e1ec7cc9af7c526fc4ee6b49512ee81db0b78242ce",
+		"scripts/audio/m26_archive_singing.gd": "f86d707bf2909eec9f662069afa0c9cb5e8be865ee0f778c8037a531009e4660",
+		"scripts/audio/m26_archivist_sfx.gd": "e753b0b78bb345eb15c356afa22b19b8bb77ac4b25f572dbd0e28b4dfa23b7ec",
+		"scripts/combat/m23_player.gd": "fd421f5f8f9b38aede083197e32bb6c864554111c4ea4f7b5302f9c8a6a635c0",
+		"scripts/minibosses/m26_archivist_sprite.gd": "7a61ee82f6a85abc2a997b79e3708275d33f7133a9ba302c5098813dba02a047",
+		"scripts/minibosses/m26_archivist_trial.gd": "1d865ee3e5160fe68188575cd2f027b93f99f4ed5ed1e09583969a76c4cfecc3",
+		"scripts/stage/m27_archivist_arena.gd": "2b6e27b7b88e6b9c579387fc45884e94e641e5efbe1c461b24c1e72d8d2aaea8",
+		"scripts/ui/m22_combat_display.gd": "a1c9489d9098688cb2ec655ff2a5f60037b2bbf9efcf5caa355e0c08f9c194db",
+		"scripts/warden_model_m23.gd": "b3554cf14cc78a6c5481de433a649456f208c87470b35d5068ec9c26c927bba6",
+		"tools/capture_m27_archivist.gd": "2afc080423ebf0102a9b78f4b9c60901c5288c08c83758a93d366d047f22c0b6"
+	}
+}

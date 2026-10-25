@@ -1,0 +1,22 @@
+{
+  "source": "Generated original arena background using image_gen, with approved close_archive.png as visual reference.",
+  "source_generation_file": "exec-40c99e46-f883-4955-98ce-ebbe085e4dad.png",
+  "sha256": "aa0775426f3723231ec9a7dfe921d0eb78dfedb29575038a6974903e4a33efff",
+  "pixel_edits": "none; original generated PNG copied unchanged",
+  "source_size": [
+    1672,
+    941
+  ],
+  "source_floor_center_y": 806.5,
+  "runtime_mapping": "Uniform aspect-preserving scale1280/1672; vertical offset620-806.5*scale (about2.58px); no anisotropic stretching or blank top band.",
+  "world_arena_view": [
+    705,
+    0,
+    1280,
+    720
+  ],
+  "playable_floor_y": 620,
+  "foreground": "Background only; combat actors draw above it; no collision or gameplay markers.",
+  "first_composition_generation": "exec-dd91e4cc-befc-4b2c-9391-a2f94be2c3d7.png",
+  "composition_refinement": "image_gen edit: lower painted floor and naturally extend lower architecture, avoiding blank ceiling cap."
+}

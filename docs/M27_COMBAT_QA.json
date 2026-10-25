@@ -1,0 +1,2015 @@
+{
+  "checks": 224,
+  "failed": 0,
+  "passed": 224,
+  "results": [
+    {
+      "detail": null,
+      "name": "M27 approach API is present",
+      "passed": true
+    },
+    {
+      "detail": {
+        "gap": 568.75,
+        "pattern_index": 0,
+        "state": "walk"
+      },
+      "name": "Far melee keeps approaching beyond 0.9 s without wasting its pending attack",
+      "passed": true
+    },
+    {
+      "detail": {
+        "band": {
+          "max": 145.0,
+          "min": 80.0,
+          "preferred": 115.0
+        },
+        "deferred": "",
+        "facing": -1,
+        "gap": 143.5,
+        "name": "slam",
+        "origin": "(993.5, 617.0)",
+        "reaction": false,
+        "target": "(850.0, 620.0)"
+      },
+      "name": "Far melee commits only after entering its own effective strike band",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "Attack order advances exactly once on an actual committed strike",
+      "passed": true
+    },
+    {
+      "detail": {
+        "animation": "walk",
+        "animation_history": [
+          "idle",
+          "idle",
+          "walk",
+          "slam",
+          "idle",
+          "walk"
+        ],
+        "approach_direction": 1,
+        "attack_start_record": {
+          "band": {
+            "max": 145.0,
+            "min": 80.0,
+            "preferred": 115.0
+          },
+          "deferred": "",
+          "facing": -1,
+          "gap": 143.5,
+          "name": "slam",
+          "origin": "(993.5, 617.0)",
+          "reaction": false,
+          "target": "(850.0, 620.0)"
+        },
+        "boss_damage_events": 0,
+        "direction": 1,
+        "encounter_started": true,
+        "gate_open": true,
+        "grabbed": false,
+        "guard_blocks": 0,
+        "hero_energy": 99.0,
+        "hero_hp": 6,
+        "hero_position": "(1850.0, 620.0)",
+        "hit_history": [],
+        "hp": 48,
+        "is_dead": false,
+        "isolated_trial": true,
+        "keeper_position": "(1420.75, 617.0)",
+        "max_hp": 48,
+        "paper_generation": 6,
+        "paused": false,
+        "pending_attack": "slam",
+        "phase": 1,
+        "phase_pending": false,
+        "phase_transitions": 0,
+        "player_hits": 0,
+        "previous_paper_count": 0,
+        "rage": false,
+        "runtime_hitboxes": [],
+        "singing": false,
+        "singing_latched": true,
+        "source": {
+          "active_hitboxes": [],
+          "animation": "walk",
+          "cache_frames": 8,
+          "draw_frame_rect": "[P: (90.0, 291.0), S: (598.0, 424.0)]",
+          "duration": 0.9,
+          "facing": 1,
+          "finished": false,
+          "fps": 20.0,
+          "frame": 10,
+          "frames": 18,
+          "loop": true,
+          "phase": 1,
+          "playback_speed": 1.0,
+          "playing": true,
+          "pose": {
+            "T": 0.5,
+            "alpha": 1.0,
+            "ang": -58.7860619515673,
+            "armSwing": -0.342020143325669,
+            "btilt": -1.02606042997701,
+            "bx": 6.0,
+            "by": 7.36231110183285,
+            "cyc": 1.0,
+            "dur": 0.9,
+            "eye": 1.0,
+            "fireH": 0.0,
+            "flash": 0.0,
+            "hglow": 0.0,
+            "hs": 1.12,
+            "hx": 77.2139380484327,
+            "hy": -171.871644455048,
+            "ink": 0.0,
+            "lean": 0.035,
+            "lfx": -69.0488863063294,
+            "lfy": 0.0,
+            "name": "walk",
+            "open": 0.0,
+            "p2": 0.0,
+            "pgs": 0.0,
+            "rage": 0.0,
+            "rev": 1.0,
+            "rfx": 75.0488863063294,
+            "rfy": -28.1907786235773,
+            "shut": 0.0,
+            "sx": 1.0,
+            "sy": 1.0,
+            "tear": 0.0,
+            "th2": 0.0,
+            "tremor": 0.0,
+            "u": 0.555555555555556,
+            "warn": 0.0,
+            "x": 0.0,
+            "y": 0.0
+          },
+          "resolved_source_phase": 1,
+          "source_cell": "(1100, 720)",
+          "source_frame_rect": "[P: (90.0, 291.0), S: (598.0, 424.0)]",
+          "source_key": "p1/walk",
+          "source_origin": "(380.0, 680.0)",
+          "source_pivot": "(380.0, 680.0)",
+          "time": 0.516666666666667,
+          "visual_scale": 0.554285714285714
+        },
+        "state": "walk",
+        "swept_paper_hits": 0,
+        "writes_save": false
+      },
+      "name": "Keeper turns toward a hero crossing behind during approach",
+      "passed": true
+    },
+    {
+      "detail": {
+        "band": {
+          "max": 145.0,
+          "min": 80.0,
+          "preferred": 115.0
+        },
+        "deferred": "",
+        "facing": -1,
+        "gap": 115.0,
+        "name": "slam",
+        "origin": "(1440.0, 617.0)",
+        "reaction": false,
+        "target": "(1325.0, 620.0)"
+      },
+      "name": "P1 slam facing -1 starts inside its own spacing band",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "P1 slam facing -1 captures its target and facing once",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "Started staff attack keeps its facing when the hero dodges behind",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "Started staff attack does not home toward a moving target",
+      "passed": true
+    },
+    {
+      "detail": {
+        "band": {
+          "max": 145.0,
+          "min": 80.0,
+          "preferred": 115.0
+        },
+        "deferred": "",
+        "facing": 1,
+        "gap": 115.0,
+        "name": "slam",
+        "origin": "(1440.0, 617.0)",
+        "reaction": false,
+        "target": "(1555.0, 620.0)"
+      },
+      "name": "P1 slam facing 1 starts inside its own spacing band",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "P1 slam facing 1 captures its target and facing once",
+      "passed": true
+    },
+    {
+      "detail": {
+        "band": {
+          "max": 190.0,
+          "min": 90.0,
+          "preferred": 145.0
+        },
+        "deferred": "",
+        "facing": -1,
+        "gap": 145.0,
+        "name": "sweep",
+        "origin": "(1440.0, 617.0)",
+        "reaction": false,
+        "target": "(1295.0, 620.0)"
+      },
+      "name": "P1 sweep facing -1 starts inside its own spacing band",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "P1 sweep facing -1 captures its target and facing once",
+      "passed": true
+    },
+    {
+      "detail": {
+        "band": {
+          "max": 190.0,
+          "min": 90.0,
+          "preferred": 145.0
+        },
+        "deferred": "",
+        "facing": 1,
+        "gap": 145.0,
+        "name": "sweep",
+        "origin": "(1440.0, 617.0)",
+        "reaction": false,
+        "target": "(1585.0, 620.0)"
+      },
+      "name": "P1 sweep facing 1 starts inside its own spacing band",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "P1 sweep facing 1 captures its target and facing once",
+      "passed": true
+    },
+    {
+      "detail": {
+        "band": {
+          "max": 470.0,
+          "min": 170.0,
+          "preferred": 260.0
+        },
+        "deferred": "",
+        "facing": -1,
+        "gap": 260.0,
+        "name": "pagestorm",
+        "origin": "(1440.0, 617.0)",
+        "reaction": false,
+        "target": "(1180.0, 620.0)"
+      },
+      "name": "P1 pagestorm facing -1 starts inside its own spacing band",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "P1 pagestorm facing -1 captures its target and facing once",
+      "passed": true
+    },
+    {
+      "detail": {
+        "band": {
+          "max": 470.0,
+          "min": 170.0,
+          "preferred": 260.0
+        },
+        "deferred": "",
+        "facing": 1,
+        "gap": 260.0,
+        "name": "pagestorm",
+        "origin": "(1440.0, 617.0)",
+        "reaction": false,
+        "target": "(1700.0, 620.0)"
+      },
+      "name": "P1 pagestorm facing 1 starts inside its own spacing band",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "P1 pagestorm facing 1 captures its target and facing once",
+      "passed": true
+    },
+    {
+      "detail": {
+        "band": {
+          "max": 155.0,
+          "min": 0.0,
+          "preferred": 115.0
+        },
+        "deferred": "",
+        "facing": -1,
+        "gap": 115.0,
+        "name": "shut",
+        "origin": "(1440.0, 617.0)",
+        "reaction": false,
+        "target": "(1325.0, 620.0)"
+      },
+      "name": "P1 shut facing -1 starts inside its own spacing band",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "P1 shut facing -1 captures its target and facing once",
+      "passed": true
+    },
+    {
+      "detail": {
+        "band": {
+          "max": 155.0,
+          "min": 0.0,
+          "preferred": 115.0
+        },
+        "deferred": "",
+        "facing": 1,
+        "gap": 115.0,
+        "name": "shut",
+        "origin": "(1440.0, 617.0)",
+        "reaction": false,
+        "target": "(1555.0, 620.0)"
+      },
+      "name": "P1 shut facing 1 starts inside its own spacing band",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "P1 shut facing 1 captures its target and facing once",
+      "passed": true
+    },
+    {
+      "detail": {
+        "band": {
+          "max": 400.0,
+          "min": 100.0,
+          "preferred": 290.0
+        },
+        "deferred": "",
+        "facing": -1,
+        "gap": 290.0,
+        "name": "tomes",
+        "origin": "(1440.0, 617.0)",
+        "reaction": false,
+        "target": "(1150.0, 620.0)"
+      },
+      "name": "P1 tomes facing -1 starts inside its own spacing band",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "P1 tomes facing -1 captures its target and facing once",
+      "passed": true
+    },
+    {
+      "detail": {
+        "band": {
+          "max": 400.0,
+          "min": 100.0,
+          "preferred": 290.0
+        },
+        "deferred": "",
+        "facing": 1,
+        "gap": 290.0,
+        "name": "tomes",
+        "origin": "(1440.0, 617.0)",
+        "reaction": false,
+        "target": "(1730.0, 620.0)"
+      },
+      "name": "P1 tomes facing 1 starts inside its own spacing band",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "P1 tomes facing 1 captures its target and facing once",
+      "passed": true
+    },
+    {
+      "detail": {
+        "band": {
+          "max": 195.0,
+          "min": 145.0,
+          "preferred": 170.0
+        },
+        "deferred": "",
+        "facing": -1,
+        "gap": 170.0,
+        "name": "combo3",
+        "origin": "(1440.0, 617.0)",
+        "reaction": false,
+        "target": "(1270.0, 620.0)"
+      },
+      "name": "P1 combo3 facing -1 starts inside its own spacing band",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "P1 combo3 facing -1 captures its target and facing once",
+      "passed": true
+    },
+    {
+      "detail": {
+        "band": {
+          "max": 195.0,
+          "min": 145.0,
+          "preferred": 170.0
+        },
+        "deferred": "",
+        "facing": 1,
+        "gap": 170.0,
+        "name": "combo3",
+        "origin": "(1440.0, 617.0)",
+        "reaction": false,
+        "target": "(1610.0, 620.0)"
+      },
+      "name": "P1 combo3 facing 1 starts inside its own spacing band",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "P1 combo3 facing 1 captures its target and facing once",
+      "passed": true
+    },
+    {
+      "detail": {
+        "band": {
+          "max": 180.0,
+          "min": 145.0,
+          "preferred": 160.0
+        },
+        "deferred": "",
+        "facing": -1,
+        "gap": 160.0,
+        "name": "combo5",
+        "origin": "(1440.0, 617.0)",
+        "reaction": false,
+        "target": "(1280.0, 620.0)"
+      },
+      "name": "P2 combo5 facing -1 starts inside its own spacing band",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "P2 combo5 facing -1 captures its target and facing once",
+      "passed": true
+    },
+    {
+      "detail": {
+        "band": {
+          "max": 180.0,
+          "min": 145.0,
+          "preferred": 160.0
+        },
+        "deferred": "",
+        "facing": 1,
+        "gap": 160.0,
+        "name": "combo5",
+        "origin": "(1440.0, 617.0)",
+        "reaction": false,
+        "target": "(1600.0, 620.0)"
+      },
+      "name": "P2 combo5 facing 1 starts inside its own spacing band",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "P2 combo5 facing 1 captures its target and facing once",
+      "passed": true
+    },
+    {
+      "detail": {
+        "band": {
+          "max": 170.0,
+          "min": 85.0,
+          "preferred": 130.0
+        },
+        "deferred": "",
+        "facing": -1,
+        "gap": 130.0,
+        "name": "redpass",
+        "origin": "(1440.0, 617.0)",
+        "reaction": false,
+        "target": "(1310.0, 620.0)"
+      },
+      "name": "P2 redpass facing -1 starts inside its own spacing band",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "P2 redpass facing -1 captures its target and facing once",
+      "passed": true
+    },
+    {
+      "detail": {
+        "band": {
+          "max": 170.0,
+          "min": 85.0,
+          "preferred": 130.0
+        },
+        "deferred": "",
+        "facing": 1,
+        "gap": 130.0,
+        "name": "redpass",
+        "origin": "(1440.0, 617.0)",
+        "reaction": false,
+        "target": "(1570.0, 620.0)"
+      },
+      "name": "P2 redpass facing 1 starts inside its own spacing band",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "P2 redpass facing 1 captures its target and facing once",
+      "passed": true
+    },
+    {
+      "detail": {
+        "band": {
+          "max": 190.0,
+          "min": 90.0,
+          "preferred": 145.0
+        },
+        "deferred": "",
+        "facing": -1,
+        "gap": 145.0,
+        "name": "sweep",
+        "origin": "(1440.0, 617.0)",
+        "reaction": false,
+        "target": "(1295.0, 620.0)"
+      },
+      "name": "P2 sweep facing -1 starts inside its own spacing band",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "P2 sweep facing -1 captures its target and facing once",
+      "passed": true
+    },
+    {
+      "detail": {
+        "band": {
+          "max": 190.0,
+          "min": 90.0,
+          "preferred": 145.0
+        },
+        "deferred": "",
+        "facing": 1,
+        "gap": 145.0,
+        "name": "sweep",
+        "origin": "(1440.0, 617.0)",
+        "reaction": false,
+        "target": "(1585.0, 620.0)"
+      },
+      "name": "P2 sweep facing 1 starts inside its own spacing band",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "P2 sweep facing 1 captures its target and facing once",
+      "passed": true
+    },
+    {
+      "detail": {
+        "band": {
+          "max": 250.0,
+          "min": 100.0,
+          "preferred": 170.0
+        },
+        "deferred": "",
+        "facing": -1,
+        "gap": 170.0,
+        "name": "indexlock",
+        "origin": "(1440.0, 617.0)",
+        "reaction": false,
+        "target": "(1270.0, 620.0)"
+      },
+      "name": "P2 indexlock facing -1 starts inside its own spacing band",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "P2 indexlock facing -1 captures its target and facing once",
+      "passed": true
+    },
+    {
+      "detail": {
+        "band": {
+          "max": 250.0,
+          "min": 100.0,
+          "preferred": 170.0
+        },
+        "deferred": "",
+        "facing": 1,
+        "gap": 170.0,
+        "name": "indexlock",
+        "origin": "(1440.0, 617.0)",
+        "reaction": false,
+        "target": "(1610.0, 620.0)"
+      },
+      "name": "P2 indexlock facing 1 starts inside its own spacing band",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "P2 indexlock facing 1 captures its target and facing once",
+      "passed": true
+    },
+    {
+      "detail": {
+        "band": {
+          "max": 390.0,
+          "min": 160.0,
+          "preferred": 235.0
+        },
+        "deferred": "",
+        "facing": -1,
+        "gap": 235.0,
+        "name": "burning",
+        "origin": "(1440.0, 617.0)",
+        "reaction": false,
+        "target": "(1205.0, 620.0)"
+      },
+      "name": "P2 burning facing -1 starts inside its own spacing band",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "P2 burning facing -1 captures its target and facing once",
+      "passed": true
+    },
+    {
+      "detail": {
+        "band": {
+          "max": 390.0,
+          "min": 160.0,
+          "preferred": 235.0
+        },
+        "deferred": "",
+        "facing": 1,
+        "gap": 235.0,
+        "name": "burning",
+        "origin": "(1440.0, 617.0)",
+        "reaction": false,
+        "target": "(1675.0, 620.0)"
+      },
+      "name": "P2 burning facing 1 starts inside its own spacing band",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "P2 burning facing 1 captures its target and facing once",
+      "passed": true
+    },
+    {
+      "detail": {
+        "band": {
+          "max": 380.0,
+          "min": 245.0,
+          "preferred": 315.0
+        },
+        "deferred": "",
+        "facing": -1,
+        "gap": 315.0,
+        "name": "pageflip",
+        "origin": "(1440.0, 617.0)",
+        "reaction": false,
+        "target": "(1125.0, 620.0)"
+      },
+      "name": "P2 pageflip facing -1 starts inside its own spacing band",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "P2 pageflip facing -1 captures its target and facing once",
+      "passed": true
+    },
+    {
+      "detail": {
+        "band": {
+          "max": 380.0,
+          "min": 245.0,
+          "preferred": 315.0
+        },
+        "deferred": "",
+        "facing": 1,
+        "gap": 315.0,
+        "name": "pageflip",
+        "origin": "(1440.0, 617.0)",
+        "reaction": false,
+        "target": "(1755.0, 620.0)"
+      },
+      "name": "P2 pageflip facing 1 starts inside its own spacing band",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "P2 pageflip facing 1 captures its target and facing once",
+      "passed": true
+    },
+    {
+      "detail": {
+        "band": {
+          "max": 470.0,
+          "min": 170.0,
+          "preferred": 260.0
+        },
+        "deferred": "",
+        "facing": -1,
+        "gap": 260.0,
+        "name": "pagestorm",
+        "origin": "(1440.0, 617.0)",
+        "reaction": false,
+        "target": "(1180.0, 620.0)"
+      },
+      "name": "P2 pagestorm facing -1 starts inside its own spacing band",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "P2 pagestorm facing -1 captures its target and facing once",
+      "passed": true
+    },
+    {
+      "detail": {
+        "band": {
+          "max": 470.0,
+          "min": 170.0,
+          "preferred": 260.0
+        },
+        "deferred": "",
+        "facing": 1,
+        "gap": 260.0,
+        "name": "pagestorm",
+        "origin": "(1440.0, 617.0)",
+        "reaction": false,
+        "target": "(1700.0, 620.0)"
+      },
+      "name": "P2 pagestorm facing 1 starts inside its own spacing band",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "P2 pagestorm facing 1 captures its target and facing once",
+      "passed": true
+    },
+    {
+      "detail": {
+        "band": {
+          "max": 305.0,
+          "min": 235.0,
+          "preferred": 270.0
+        },
+        "deferred": "",
+        "facing": -1,
+        "gap": 270.0,
+        "name": "finale",
+        "origin": "(1440.0, 617.0)",
+        "reaction": false,
+        "target": "(1170.0, 620.0)"
+      },
+      "name": "P2 finale facing -1 starts inside its own spacing band",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "P2 finale facing -1 captures its target and facing once",
+      "passed": true
+    },
+    {
+      "detail": {
+        "band": {
+          "max": 305.0,
+          "min": 235.0,
+          "preferred": 270.0
+        },
+        "deferred": "",
+        "facing": 1,
+        "gap": 270.0,
+        "name": "finale",
+        "origin": "(1440.0, 617.0)",
+        "reaction": false,
+        "target": "(1710.0, 620.0)"
+      },
+      "name": "P2 finale facing 1 starts inside its own spacing band",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "P2 finale facing 1 captures its target and facing once",
+      "passed": true
+    },
+    {
+      "detail": {
+        "band": {
+          "max": 400.0,
+          "min": 100.0,
+          "preferred": 290.0
+        },
+        "deferred": "",
+        "facing": -1,
+        "gap": 290.0,
+        "name": "tomes",
+        "origin": "(1440.0, 617.0)",
+        "reaction": false,
+        "target": "(1150.0, 620.0)"
+      },
+      "name": "P2 tomes facing -1 starts inside its own spacing band",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "P2 tomes facing -1 captures its target and facing once",
+      "passed": true
+    },
+    {
+      "detail": {
+        "band": {
+          "max": 400.0,
+          "min": 100.0,
+          "preferred": 290.0
+        },
+        "deferred": "",
+        "facing": 1,
+        "gap": 290.0,
+        "name": "tomes",
+        "origin": "(1440.0, 617.0)",
+        "reaction": false,
+        "target": "(1730.0, 620.0)"
+      },
+      "name": "P2 tomes facing 1 starts inside its own spacing band",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "P2 tomes facing 1 captures its target and facing once",
+      "passed": true
+    },
+    {
+      "detail": {
+        "band": {
+          "max": 195.0,
+          "min": 145.0,
+          "preferred": 170.0
+        },
+        "deferred": "",
+        "facing": -1,
+        "gap": 170.0,
+        "name": "combo3",
+        "origin": "(1440.0, 617.0)",
+        "reaction": false,
+        "target": "(1270.0, 620.0)"
+      },
+      "name": "P2 combo3 facing -1 starts inside its own spacing band",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "P2 combo3 facing -1 captures its target and facing once",
+      "passed": true
+    },
+    {
+      "detail": {
+        "band": {
+          "max": 195.0,
+          "min": 145.0,
+          "preferred": 170.0
+        },
+        "deferred": "",
+        "facing": 1,
+        "gap": 170.0,
+        "name": "combo3",
+        "origin": "(1440.0, 617.0)",
+        "reaction": false,
+        "target": "(1610.0, 620.0)"
+      },
+      "name": "P2 combo3 facing 1 starts inside its own spacing band",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "P2 combo3 facing 1 captures its target and facing once",
+      "passed": true
+    },
+    {
+      "detail": {
+        "band": {
+          "max": 145.0,
+          "min": 80.0,
+          "preferred": 115.0
+        },
+        "deferred": "",
+        "facing": -1,
+        "gap": 115.0,
+        "name": "slam",
+        "origin": "(1440.0, 617.0)",
+        "reaction": false,
+        "target": "(1325.0, 620.0)"
+      },
+      "name": "P2 slam facing -1 starts inside its own spacing band",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "P2 slam facing -1 captures its target and facing once",
+      "passed": true
+    },
+    {
+      "detail": {
+        "band": {
+          "max": 145.0,
+          "min": 80.0,
+          "preferred": 115.0
+        },
+        "deferred": "",
+        "facing": 1,
+        "gap": 115.0,
+        "name": "slam",
+        "origin": "(1440.0, 617.0)",
+        "reaction": false,
+        "target": "(1555.0, 620.0)"
+      },
+      "name": "P2 slam facing 1 starts inside its own spacing band",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "P2 slam facing 1 captures its target and facing once",
+      "passed": true
+    },
+    {
+      "detail": {
+        "band": {
+          "max": 155.0,
+          "min": 0.0,
+          "preferred": 115.0
+        },
+        "deferred": "",
+        "facing": -1,
+        "gap": 115.0,
+        "name": "shut",
+        "origin": "(1440.0, 617.0)",
+        "reaction": false,
+        "target": "(1325.0, 620.0)"
+      },
+      "name": "P2 shut facing -1 starts inside its own spacing band",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "P2 shut facing -1 captures its target and facing once",
+      "passed": true
+    },
+    {
+      "detail": {
+        "band": {
+          "max": 155.0,
+          "min": 0.0,
+          "preferred": 115.0
+        },
+        "deferred": "",
+        "facing": 1,
+        "gap": 115.0,
+        "name": "shut",
+        "origin": "(1440.0, 617.0)",
+        "reaction": false,
+        "target": "(1555.0, 620.0)"
+      },
+      "name": "P2 shut facing 1 starts inside its own spacing band",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "P2 shut facing 1 captures its target and facing once",
+      "passed": true
+    },
+    {
+      "detail": {
+        "band": {
+          "max": 145.0,
+          "min": 80.0,
+          "preferred": 115.0
+        },
+        "deferred": "",
+        "facing": -1,
+        "gap": 144.75,
+        "name": "slam",
+        "origin": "(918.75, 617.0)",
+        "reaction": false,
+        "target": "(774.0, 620.0)"
+      },
+      "name": "Keeper reaches a valid melee band at arena edge -1 without walking forever",
+      "passed": true
+    },
+    {
+      "detail": {
+        "band": {
+          "max": 145.0,
+          "min": 80.0,
+          "preferred": 115.0
+        },
+        "deferred": "",
+        "facing": 1,
+        "gap": 143.5,
+        "name": "slam",
+        "origin": "(1772.5, 617.0)",
+        "reaction": false,
+        "target": "(1916.0, 620.0)"
+      },
+      "name": "Keeper reaches a valid melee band at arena edge 1 without walking forever",
+      "passed": true
+    },
+    {
+      "detail": {
+        "gap": 42.5001220703125,
+        "hero": "(1397.5, 619.9252)",
+        "keeper": "(1440.0, 617.0)",
+        "pending": "",
+        "state": "attack"
+      },
+      "name": "Close moving-player pressure on slam cannot cause endless retreat",
+      "passed": true
+    },
+    {
+      "detail": {
+        "gap": 42.5001220703125,
+        "hero": "(1482.5, 619.9252)",
+        "keeper": "(1440.0, 617.0)",
+        "pending": "",
+        "state": "attack"
+      },
+      "name": "Close moving-player pressure on pageflip cannot cause endless retreat",
+      "passed": true
+    },
+    {
+      "detail": {
+        "gap": 42.5001220703125,
+        "hero": "(1397.5, 619.9252)",
+        "keeper": "(1440.0, 617.0)",
+        "pending": "",
+        "state": "attack"
+      },
+      "name": "Close moving-player pressure on finale cannot cause endless retreat",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "A hugging hero receives the existing closed-book defense rather than endless retreat",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "A defensive response does not consume the intended ranged attack",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "Defense completion restores the original planned move",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "The restored ranged attack commits normally once its distance opens",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "P1 volley 1 facing -1 retains seven separately identified visible sheets",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "Requested later-volley sheet exists independently",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "Later volley fixture actually dodged all earlier volleys",
+      "passed": true
+    },
+    {
+      "detail": {
+        "animation": "pagestorm",
+        "contact": "overlap",
+        "damage": 1,
+        "kind": "proj",
+        "paper_id": "96:0:3",
+        "phase": 1,
+        "sheet": 3,
+        "source_time": 1.27,
+        "volley": 0
+      },
+      "name": "P1 volley 1 facing -1 can independently damage after earlier volleys were dodged",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "Paper damage keeps the original shared one-second grace",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "Paper animation keeps the source phase/rage timing",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "P1 volley 2 facing -1 retains seven separately identified visible sheets",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "Requested later-volley sheet exists independently",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "Later volley fixture actually dodged all earlier volleys",
+      "passed": true
+    },
+    {
+      "detail": {
+        "animation": "pagestorm",
+        "contact": "overlap",
+        "damage": 1,
+        "kind": "proj",
+        "paper_id": "98:1:3",
+        "phase": 1,
+        "sheet": 3,
+        "source_time": 1.592,
+        "volley": 1
+      },
+      "name": "P1 volley 2 facing -1 can independently damage after earlier volleys were dodged",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "Paper damage keeps the original shared one-second grace",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "Paper animation keeps the source phase/rage timing",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "P1 volley 3 facing -1 retains seven separately identified visible sheets",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "Requested later-volley sheet exists independently",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "Later volley fixture actually dodged all earlier volleys",
+      "passed": true
+    },
+    {
+      "detail": {
+        "animation": "pagestorm",
+        "contact": "overlap",
+        "damage": 1,
+        "kind": "proj",
+        "paper_id": "100:2:3",
+        "phase": 1,
+        "sheet": 3,
+        "source_time": 1.914,
+        "volley": 2
+      },
+      "name": "P1 volley 3 facing -1 can independently damage after earlier volleys were dodged",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "Paper damage keeps the original shared one-second grace",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "Paper animation keeps the source phase/rage timing",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "P1 volley 1 facing 1 retains seven separately identified visible sheets",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "Requested later-volley sheet exists independently",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "Later volley fixture actually dodged all earlier volleys",
+      "passed": true
+    },
+    {
+      "detail": {
+        "animation": "pagestorm",
+        "contact": "overlap",
+        "damage": 1,
+        "kind": "proj",
+        "paper_id": "102:0:3",
+        "phase": 1,
+        "sheet": 3,
+        "source_time": 1.27,
+        "volley": 0
+      },
+      "name": "P1 volley 1 facing 1 can independently damage after earlier volleys were dodged",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "Paper damage keeps the original shared one-second grace",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "Paper animation keeps the source phase/rage timing",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "P1 volley 2 facing 1 retains seven separately identified visible sheets",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "Requested later-volley sheet exists independently",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "Later volley fixture actually dodged all earlier volleys",
+      "passed": true
+    },
+    {
+      "detail": {
+        "animation": "pagestorm",
+        "contact": "overlap",
+        "damage": 1,
+        "kind": "proj",
+        "paper_id": "104:1:3",
+        "phase": 1,
+        "sheet": 3,
+        "source_time": 1.592,
+        "volley": 1
+      },
+      "name": "P1 volley 2 facing 1 can independently damage after earlier volleys were dodged",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "Paper damage keeps the original shared one-second grace",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "Paper animation keeps the source phase/rage timing",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "P1 volley 3 facing 1 retains seven separately identified visible sheets",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "Requested later-volley sheet exists independently",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "Later volley fixture actually dodged all earlier volleys",
+      "passed": true
+    },
+    {
+      "detail": {
+        "animation": "pagestorm",
+        "contact": "overlap",
+        "damage": 1,
+        "kind": "proj",
+        "paper_id": "106:2:3",
+        "phase": 1,
+        "sheet": 3,
+        "source_time": 1.914,
+        "volley": 2
+      },
+      "name": "P1 volley 3 facing 1 can independently damage after earlier volleys were dodged",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "Paper damage keeps the original shared one-second grace",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "Paper animation keeps the source phase/rage timing",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "P2 volley 1 facing -1 retains seven separately identified visible sheets",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "Requested later-volley sheet exists independently",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "Later volley fixture actually dodged all earlier volleys",
+      "passed": true
+    },
+    {
+      "detail": {
+        "animation": "pagestorm",
+        "contact": "overlap",
+        "damage": 1,
+        "kind": "proj",
+        "paper_id": "108:0:3",
+        "phase": 2,
+        "sheet": 3,
+        "source_time": 1.27,
+        "volley": 0
+      },
+      "name": "P2 volley 1 facing -1 can independently damage after earlier volleys were dodged",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "Paper damage keeps the original shared one-second grace",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "Paper animation keeps the source phase/rage timing",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "P2 volley 2 facing -1 retains seven separately identified visible sheets",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "Requested later-volley sheet exists independently",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "Later volley fixture actually dodged all earlier volleys",
+      "passed": true
+    },
+    {
+      "detail": {
+        "animation": "pagestorm",
+        "contact": "overlap",
+        "damage": 1,
+        "kind": "proj",
+        "paper_id": "110:1:3",
+        "phase": 2,
+        "sheet": 3,
+        "source_time": 1.592,
+        "volley": 1
+      },
+      "name": "P2 volley 2 facing -1 can independently damage after earlier volleys were dodged",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "Paper damage keeps the original shared one-second grace",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "Paper animation keeps the source phase/rage timing",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "P2 volley 3 facing -1 retains seven separately identified visible sheets",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "Requested later-volley sheet exists independently",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "Later volley fixture actually dodged all earlier volleys",
+      "passed": true
+    },
+    {
+      "detail": {
+        "animation": "pagestorm",
+        "contact": "overlap",
+        "damage": 1,
+        "kind": "proj",
+        "paper_id": "112:2:3",
+        "phase": 2,
+        "sheet": 3,
+        "source_time": 1.914,
+        "volley": 2
+      },
+      "name": "P2 volley 3 facing -1 can independently damage after earlier volleys were dodged",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "Paper damage keeps the original shared one-second grace",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "Paper animation keeps the source phase/rage timing",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "P2 volley 1 facing 1 retains seven separately identified visible sheets",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "Requested later-volley sheet exists independently",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "Later volley fixture actually dodged all earlier volleys",
+      "passed": true
+    },
+    {
+      "detail": {
+        "animation": "pagestorm",
+        "contact": "overlap",
+        "damage": 1,
+        "kind": "proj",
+        "paper_id": "114:0:3",
+        "phase": 2,
+        "sheet": 3,
+        "source_time": 1.27,
+        "volley": 0
+      },
+      "name": "P2 volley 1 facing 1 can independently damage after earlier volleys were dodged",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "Paper damage keeps the original shared one-second grace",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "Paper animation keeps the source phase/rage timing",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "P2 volley 2 facing 1 retains seven separately identified visible sheets",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "Requested later-volley sheet exists independently",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "Later volley fixture actually dodged all earlier volleys",
+      "passed": true
+    },
+    {
+      "detail": {
+        "animation": "pagestorm",
+        "contact": "overlap",
+        "damage": 1,
+        "kind": "proj",
+        "paper_id": "116:1:3",
+        "phase": 2,
+        "sheet": 3,
+        "source_time": 1.592,
+        "volley": 1
+      },
+      "name": "P2 volley 2 facing 1 can independently damage after earlier volleys were dodged",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "Paper damage keeps the original shared one-second grace",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "Paper animation keeps the source phase/rage timing",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "P2 volley 3 facing 1 retains seven separately identified visible sheets",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "Requested later-volley sheet exists independently",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "Later volley fixture actually dodged all earlier volleys",
+      "passed": true
+    },
+    {
+      "detail": {
+        "animation": "pagestorm",
+        "contact": "overlap",
+        "damage": 1,
+        "kind": "proj",
+        "paper_id": "118:2:3",
+        "phase": 2,
+        "sheet": 3,
+        "source_time": 1.914,
+        "volley": 2
+      },
+      "name": "P2 volley 3 facing 1 can independently damage after earlier volleys were dodged",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "Paper damage keeps the original shared one-second grace",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "Paper animation keeps the source phase/rage timing",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "P2 rage volley 1 facing -1 retains seven separately identified visible sheets",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "Requested later-volley sheet exists independently",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "Later volley fixture actually dodged all earlier volleys",
+      "passed": true
+    },
+    {
+      "detail": {
+        "animation": "pagestorm",
+        "contact": "overlap",
+        "damage": 1,
+        "kind": "proj",
+        "paper_id": "120:0:3",
+        "phase": 2,
+        "sheet": 3,
+        "source_time": 1.27,
+        "volley": 0
+      },
+      "name": "P2 rage volley 1 facing -1 can independently damage after earlier volleys were dodged",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "Paper damage keeps the original shared one-second grace",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "Paper animation keeps the source phase/rage timing",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "P2 rage volley 2 facing -1 retains seven separately identified visible sheets",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "Requested later-volley sheet exists independently",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "Later volley fixture actually dodged all earlier volleys",
+      "passed": true
+    },
+    {
+      "detail": {
+        "animation": "pagestorm",
+        "contact": "overlap",
+        "damage": 1,
+        "kind": "proj",
+        "paper_id": "122:1:3",
+        "phase": 2,
+        "sheet": 3,
+        "source_time": 1.592,
+        "volley": 1
+      },
+      "name": "P2 rage volley 2 facing -1 can independently damage after earlier volleys were dodged",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "Paper damage keeps the original shared one-second grace",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "Paper animation keeps the source phase/rage timing",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "P2 rage volley 3 facing -1 retains seven separately identified visible sheets",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "Requested later-volley sheet exists independently",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "Later volley fixture actually dodged all earlier volleys",
+      "passed": true
+    },
+    {
+      "detail": {
+        "animation": "pagestorm",
+        "contact": "overlap",
+        "damage": 1,
+        "kind": "proj",
+        "paper_id": "124:2:3",
+        "phase": 2,
+        "sheet": 3,
+        "source_time": 1.914,
+        "volley": 2
+      },
+      "name": "P2 rage volley 3 facing -1 can independently damage after earlier volleys were dodged",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "Paper damage keeps the original shared one-second grace",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "Paper animation keeps the source phase/rage timing",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "P2 rage volley 1 facing 1 retains seven separately identified visible sheets",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "Requested later-volley sheet exists independently",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "Later volley fixture actually dodged all earlier volleys",
+      "passed": true
+    },
+    {
+      "detail": {
+        "animation": "pagestorm",
+        "contact": "overlap",
+        "damage": 1,
+        "kind": "proj",
+        "paper_id": "126:0:3",
+        "phase": 2,
+        "sheet": 3,
+        "source_time": 1.27,
+        "volley": 0
+      },
+      "name": "P2 rage volley 1 facing 1 can independently damage after earlier volleys were dodged",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "Paper damage keeps the original shared one-second grace",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "Paper animation keeps the source phase/rage timing",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "P2 rage volley 2 facing 1 retains seven separately identified visible sheets",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "Requested later-volley sheet exists independently",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "Later volley fixture actually dodged all earlier volleys",
+      "passed": true
+    },
+    {
+      "detail": {
+        "animation": "pagestorm",
+        "contact": "overlap",
+        "damage": 1,
+        "kind": "proj",
+        "paper_id": "128:1:3",
+        "phase": 2,
+        "sheet": 3,
+        "source_time": 1.592,
+        "volley": 1
+      },
+      "name": "P2 rage volley 2 facing 1 can independently damage after earlier volleys were dodged",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "Paper damage keeps the original shared one-second grace",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "Paper animation keeps the source phase/rage timing",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "P2 rage volley 3 facing 1 retains seven separately identified visible sheets",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "Requested later-volley sheet exists independently",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "Later volley fixture actually dodged all earlier volleys",
+      "passed": true
+    },
+    {
+      "detail": {
+        "animation": "pagestorm",
+        "contact": "overlap",
+        "damage": 1,
+        "kind": "proj",
+        "paper_id": "130:2:3",
+        "phase": 2,
+        "sheet": 3,
+        "source_time": 1.914,
+        "volley": 2
+      },
+      "name": "P2 rage volley 3 facing 1 can independently damage after earlier volleys were dodged",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "Paper damage keeps the original shared one-second grace",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "Paper animation keeps the source phase/rage timing",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "First paper starts shared grace without removing a whole volley",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "Second volley remains visible after another sheet hit the hero",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "A second contact during shared immunity correctly causes no extra damage",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "The unchanged native hero expires immunity after elapsed physics time",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "A still-visible later sheet damages after shared immunity expires",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "Invulnerable contact never permanently discards that sheet",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "P1 facing -1 fast-crossing endpoints are both clear",
+      "passed": true
+    },
+    {
+      "detail": {
+        "animation": "pagestorm",
+        "contact": "sweep",
+        "damage": 1,
+        "kind": "proj",
+        "paper_id": "134:0:0",
+        "phase": 1,
+        "sheet": 0,
+        "source_time": 1.112,
+        "volley": 0
+      },
+      "name": "P1 facing -1 continuous per-sheet collision catches the actual crossing",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "P1 facing 1 fast-crossing endpoints are both clear",
+      "passed": true
+    },
+    {
+      "detail": {
+        "animation": "pagestorm",
+        "contact": "sweep",
+        "damage": 1,
+        "kind": "proj",
+        "paper_id": "136:0:0",
+        "phase": 1,
+        "sheet": 0,
+        "source_time": 1.112,
+        "volley": 0
+      },
+      "name": "P1 facing 1 continuous per-sheet collision catches the actual crossing",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "P2 facing -1 fast-crossing endpoints are both clear",
+      "passed": true
+    },
+    {
+      "detail": {
+        "animation": "pagestorm",
+        "contact": "sweep",
+        "damage": 1,
+        "kind": "proj",
+        "paper_id": "138:0:0",
+        "phase": 2,
+        "sheet": 0,
+        "source_time": 1.127,
+        "volley": 0
+      },
+      "name": "P2 facing -1 continuous per-sheet collision catches the actual crossing",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "P2 facing 1 fast-crossing endpoints are both clear",
+      "passed": true
+    },
+    {
+      "detail": {
+        "animation": "pagestorm",
+        "contact": "sweep",
+        "damage": 1,
+        "kind": "proj",
+        "paper_id": "140:0:0",
+        "phase": 2,
+        "sheet": 0,
+        "source_time": 1.127,
+        "volley": 0
+      },
+      "name": "P2 facing 1 continuous per-sheet collision catches the actual crossing",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "P2 rage facing -1 fast-crossing endpoints are both clear",
+      "passed": true
+    },
+    {
+      "detail": {
+        "animation": "pagestorm",
+        "contact": "sweep",
+        "damage": 1,
+        "kind": "proj",
+        "paper_id": "142:0:0",
+        "phase": 2,
+        "sheet": 0,
+        "source_time": 1.1615,
+        "volley": 0
+      },
+      "name": "P2 rage facing -1 continuous per-sheet collision catches the actual crossing",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "P2 rage facing 1 fast-crossing endpoints are both clear",
+      "passed": true
+    },
+    {
+      "detail": {
+        "animation": "pagestorm",
+        "contact": "sweep",
+        "damage": 1,
+        "kind": "proj",
+        "paper_id": "144:0:0",
+        "phase": 2,
+        "sheet": 0,
+        "source_time": 1.1615,
+        "volley": 0
+      },
+      "name": "P2 rage facing 1 continuous per-sheet collision catches the actual crossing",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "Swept solver leaves an empty diagonal corridor harmless",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "Swept solver detects a true diagonal crossing",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "A parallel paper passing outside a hero box does not damage it",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "Fresh casts and opposite facings never reuse a paper or create a phantom sweep",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "A forward seek never turns a clear interval into an attack",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "A backward seek never turns a clear interval into an attack",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "Continuous collision retains live sheets between real physics samples",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "Pausing clears motion samples rather than connecting separate timelines",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "Resuming at a clear position never creates phantom paper damage",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "The supplied Page Storm duration and all 55 frames are unchanged",
+      "passed": true
+    }
+  ]
+}

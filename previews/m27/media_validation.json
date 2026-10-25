@@ -1,0 +1,42 @@
+{
+  "scope": "Native Godot MovieWriter recording, ordinary gameplay inputs. No health/AI/pose overrides, replacement images, added voice or music. Fixed60fps export is not a hardware performance benchmark.",
+  "video": {
+    "path": "10_actual_melee_and_movement.mp4",
+    "sha256": "f2e17bdae71e2d2b67130d22eba2677710b7b81e82fb66e65454ee21f4529d60",
+    "probe": {
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "codec_name": "h264",
+          "r_frame_rate": "60/1"
+        },
+        {
+          "codec_name": "aac",
+          "sample_rate": "48000",
+          "channels": 2,
+          "r_frame_rate": "0/0"
+        }
+      ],
+      "format": {
+        "duration": "10.616667",
+        "size": "3529023"
+      }
+    },
+    "native_pcm": {
+      "sample_rate": 48000,
+      "channels": 2,
+      "duration": 10.616666666666667,
+      "peak": 0.27410888671875,
+      "rms": 0.016126059987720123,
+      "clipped_samples": 0
+    }
+  },
+  "captured_sources_unchanged": true,
+  "actual_input_failures": [],
+  "presinging_distance_gain_db": {
+    "far": -15.4842456646436,
+    "near": -1.71024834789644
+  },
+  "native_logs_no_script_errors": true
+}

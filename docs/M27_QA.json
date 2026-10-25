@@ -1,0 +1,70 @@
+{
+  "engine": "Godot 4.7.2",
+  "native_checks": [
+    {
+      "scope": "range_and_papers",
+      "result": "M27 ARCHIVIST COMBAT: 224/224 passed",
+      "errors": []
+    },
+    {
+      "scope": "existing_trial",
+      "result": "M26 ARCHIVIST TRIAL: 171/171 passed",
+      "errors": []
+    },
+    {
+      "scope": "actual_inputs",
+      "result": "M26 LAUNCH {\"checks\":29,\"engine\":\"4.7.2-stable (official)\",\"failures\":[],\"scope\":\"ActualF5/nativecontrols/newtrial/actualwalksingingcutoff/pause/returnandpreservedBell/save/art. Notafullskill-playedfightproof.\"}",
+      "errors": []
+    }
+  ],
+  "arena": {
+    "checks": 15,
+    "failures": [],
+    "pass": true,
+    "snapshot": {
+      "art_scale": "(0.76555, 0.76555)",
+      "art_top": 2.58373205741623,
+      "background_loaded": true,
+      "dedicated_archivist_arena": true,
+      "dust_motes": 18,
+      "elapsed": 0.305623333333333,
+      "floor_y": 620.0,
+      "left_transition_width": 120.0,
+      "lights": [
+        "(1035.72, 225.36)",
+        "(1658.11, 226.12)"
+      ],
+      "painted_floor_y": 620.0,
+      "paused": true,
+      "source": "res://assets/environments/m27_archivist/sealed_catalog_vault.png",
+      "source_size": "(1672.0, 941.0)",
+      "visual_only": true,
+      "world_origin": "(0.0, 0.0)",
+      "world_view": "[P: (705.0, 0.0), S: (1280.0, 720.0)]"
+    }
+  },
+  "hero_light": {
+    "configured_visual_light_toggle": true,
+    "hero_art_unchanged": true,
+    "pass": true,
+    "sum_nearby_world_light_delta": 539.50197624974
+  },
+  "preservation": {
+    "baseline_commit": "9e65a6bffe04118aae66aa1c95223a7e7679aa0a",
+    "files_preserved": 2067,
+    "permitted_existing_changes": [
+      "LICENSE_NOTES.txt",
+      "README.md",
+      "project.godot",
+      "scripts/minibosses/m26_archivist_trial.gd"
+    ],
+    "violations": []
+  },
+  "source_sha256": {
+    "scripts/minibosses/m26_archivist_trial.gd": "1d865ee3e5160fe68188575cd2f027b93f99f4ed5ed1e09583969a76c4cfecc3",
+    "scripts/stage/m27_archivist_arena.gd": "2b6e27b7b88e6b9c579387fc45884e94e641e5efbe1c461b24c1e72d8d2aaea8",
+    "assets/environments/m27_archivist/sealed_catalog_vault.png": "aa0775426f3723231ec9a7dfe921d0eb78dfedb29575038a6974903e4a33efff",
+    "tools/test_m27_archivist_combat.gd": "97502332d4673fbf512321064b6b8ddea1eae680d3b7fdfd3ece97cdf52fef0d"
+  },
+  "scope": "Native fixtures and actual keyboard routes are distinguished. Not a full human skill-played victory or hardware performance benchmark."
+}

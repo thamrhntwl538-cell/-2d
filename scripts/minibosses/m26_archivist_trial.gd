@@ -12,6 +12,7 @@ const Controls = preload("res://scripts/combat/m18_controls.gd")
 const Cleave = preload("res://scripts/combat/m18_projectile.gd")
 const Vitals = preload("res://scripts/ui/m22_combat_display.gd")
 const BossDisplay = preload("res://scripts/ui/m23_boss_display.gd")
+const ArchiveArena = preload("res://scripts/stage/m27_archivist_arena.gd")
 const FONT = preload("res://assets/fonts/DejaVuSans.ttf")
 const BACKDROP = preload("res://assets/environments/paper_shadows/close_archive.png")
 const CATALOG := "res://scenes/minibosses/archivist_reference_m26.tscn"
@@ -22,6 +23,23 @@ const WALK_SPEED := 105.0
 const P1_ORDER := ["slam","sweep","pagestorm","shut","tomes","combo3"]
 const P2_ORDER := ["combo5","redpass","sweep","indexlock","burning","pageflip","pagestorm","finale","tomes","combo3","slam","shut"]
 const ENDPOINT_X := {"combo3":112.0,"combo5":200.0,"pageflip":360.0}
+## World-pixel engagement bands at the approved 194 px character scale.
+## The narrow staff bands reach the hero with the first actual blow; teleport
+## and grab keep the run-up distance already painted into their source frames.
+const ATTACK_SPACING := {
+	"slam":{"min":80.0,"max":145.0,"preferred":115.0},
+	"sweep":{"min":90.0,"max":190.0,"preferred":145.0},
+	"combo3":{"min":145.0,"max":195.0,"preferred":170.0},
+	"combo5":{"min":145.0,"max":180.0,"preferred":160.0},
+	"redpass":{"min":85.0,"max":170.0,"preferred":130.0},
+	"shut":{"min":0.0,"max":155.0,"preferred":115.0},
+	"finale":{"min":235.0,"max":305.0,"preferred":270.0},
+	"pageflip":{"min":245.0,"max":380.0,"preferred":315.0},
+	"pagestorm":{"min":170.0,"max":470.0,"preferred":260.0},
+	"tomes":{"min":100.0,"max":400.0,"preferred":290.0},
+	"burning":{"min":160.0,"max":390.0,"preferred":235.0},
+	"indexlock":{"min":100.0,"max":250.0,"preferred":170.0},
+}
 
 class EncounterTarget extends Node2D:
 	var encounter: Node2D
@@ -79,6 +97,20 @@ var _boss_damage_events := 0
 var _scene_exiting := false
 var rage_active := false
 var _render_bounds := Rect2(-380,-680,1100,720)
+var arena_art: Node2D
+var pending_attack := ""
+var approach_direction := 0
+var attack_start_record: Dictionary = {}
+var attack_generation := 0
+var _paper_previous: Dictionary = {}
+var _paper_previous_hero: Array[Rect2] = []
+var _paper_sample_time := -1.0
+var _paper_sample_generation := -1
+var _paper_sample_facing := 0
+var _paper_sample_origin := Vector2.ZERO
+var _swept_paper_hits := 0
+var _deferred_attack := ""
+var _reaction_attack := false
 
 func _ready() -> void:
 	process_priority = 10 # The unchanged hero resolves sword contact before hazards.
@@ -89,6 +121,9 @@ func _ready() -> void:
 	active_room.name = "IsolatedArchivistRoom"
 	add_child(active_room)
 	_add_floor()
+	arena_art = ArchiveArena.new()
+	arena_art.name = "ArchivistCatalogVault"
+	active_room.add_child(arena_art)
 	combat_state.dash_owned = true
 	combat_state.spell_owned = true
 	hero = Hero.new()
@@ -209,12 +244,12 @@ func _physics_process(delta: float) -> void:
 		keeper_sound.advance(delta)
 		keeper.advance(delta)
 		if state=="walk":
-			keeper.position.x = clampf(keeper.position.x+attack_direction*WALK_SPEED*delta,ARENA.position.x+150,ARENA.end.x-150)
-		state_time = maxf(0,state_time-delta)
-		if state in ["intro","idle","walk"] and state_time<=0:
+			_update_approach(delta)
+		else:
+			state_time = maxf(0,state_time-delta)
+		if state in ["intro","idle"] and state_time<=0:
 			if state=="intro": _set_idle(.18)
 			elif phase_pending: _begin_transform()
-			elif state=="walk": _begin_attack()
 			else: _next_attack()
 		if _grabbed:
 			var pose: Dictionary = keeper.get_pose()
@@ -222,7 +257,7 @@ func _physics_process(delta: float) -> void:
 			hero.velocity = Vector2.ZERO
 			# The successful grab alone locks control until the source release event.
 			hero.set_physics_process(false)
-		_resolve_source_hits()
+		_resolve_source_hits(delta)
 	target.position = keeper.position
 	_refresh_hud()
 	queue_redraw()
@@ -242,6 +277,8 @@ func start_encounter() -> void:
 	_refresh_hud()
 
 func _start_clip(name: String, with_sound: bool = true) -> void:
+	attack_generation += 1
+	reset_hazard_sweep()
 	current_animation = name
 	var use_phase := 2 if phase==2 or name=="p2tr" else 1
 	var speed := 1.15 if phase==2 and str(_meta.get(name,{}).get("category","")) in ["p1","p2"] else 1.0
@@ -264,27 +301,98 @@ func _set_idle(seconds: float) -> void:
 	_start_clip("idle")
 
 func _next_attack() -> void:
+	if pending_attack.is_empty():
+		var order: Array = P2_ORDER if phase==2 else P1_ORDER
+		pending_attack = str(order[pattern_index%order.size()])
+	_begin_attack()
+
+func _attack_band(name: String) -> Dictionary:
+	var band: Dictionary = ATTACK_SPACING.get(name,{"min":80.0,"max":180.0,"preferred":130.0}).duplicate()
+	var ratio: float = keeper.visual_scale / (194.0/350.0)
+	for key in ["min","max","preferred"]: band[key] = float(band[key])*ratio
+	return band
+
+func _approach_limits(name: String, facing: int) -> Vector2:
+	var end_shift: float = float(ENDPOINT_X.get(name,0))*keeper.visual_scale*facing
+	# Reserve room for the baked endpoint before committing a combo/teleport.
+	return Vector2(ARENA.position.x+75.0-minf(0,end_shift),ARENA.end.x-75.0-maxf(0,end_shift))
+
+func _attack_in_range(name: String) -> bool:
+	var gap := absf(hero.position.x-keeper.position.x)
+	var band := _attack_band(name)
+	var face := 1 if hero.position.x>keeper.position.x else -1
+	var limits := _approach_limits(name,face)
+	return gap>=float(band.min)-.01 and gap<=float(band.max)+.01 and keeper.position.x>=limits.x-.01 and keeper.position.x<=limits.y+.01
+
+func reset_ai_intent() -> void:
+	pending_attack = ""
+	_deferred_attack = ""
+	_reaction_attack = false
+	approach_direction = 0
+
+func _try_close_response() -> bool:
+	if pending_attack.is_empty() or _reaction_attack: return false
+	var band := _attack_band(pending_attack)
+	if absf(hero.position.x-keeper.position.x)>=float(band.min): return false
+	# A faster hero can keep chasing a retreating book. Respond with an
+	# existing attack which reaches that distance, then retry the planned move.
+	for response in ["shut","sweep","pagestorm"]:
+		if response!=pending_attack and _attack_in_range(response):
+			_deferred_attack = pending_attack
+			pending_attack = response
+			_reaction_attack = true
+			_begin_attack()
+			return true
+	return false
+
+func _update_approach(delta: float) -> void:
+	if phase_pending:
+		_begin_transform()
+		return
+	if pending_attack.is_empty():
+		_next_attack()
+		return
+	if _attack_in_range(pending_attack):
+		_begin_attack()
+		return
+	if _try_close_response(): return
+	# Only approach tracks the hero. Actual attacks retain their captured facing.
 	attack_direction = 1 if hero.position.x>keeper.position.x else -1
 	keeper.set_facing(attack_direction)
-	if absf(hero.position.x-keeper.position.x)>265:
-		state = "walk"
-		state_time = minf(.9,(absf(hero.position.x-keeper.position.x)-235)/WALK_SPEED)
-		_start_clip("walk")
-	else: _begin_attack()
+	var band := _attack_band(pending_attack)
+	var limits := _approach_limits(pending_attack,attack_direction)
+	var goal := clampf(hero.position.x-attack_direction*float(band.preferred),limits.x,limits.y)
+	approach_direction = int(signf(goal-keeper.position.x))
+	keeper.position.x = move_toward(keeper.position.x,goal,WALK_SPEED*delta)
+	state_time = absf(goal-keeper.position.x)/WALK_SPEED
+	if _attack_in_range(pending_attack): _begin_attack()
 
 func _begin_attack() -> void:
 	if phase_pending:
 		_begin_transform()
 		return
+	if pending_attack.is_empty():
+		var order: Array = P2_ORDER if phase==2 else P1_ORDER
+		pending_attack = str(order[pattern_index%order.size()])
+	if not _attack_in_range(pending_attack):
+		if _try_close_response(): return
+		if state!="walk":
+			state = "walk"
+			_start_clip("walk")
+		state_time = absf(hero.position.x-keeper.position.x)/WALK_SPEED
+		return
+	var name := pending_attack
 	attack_direction = 1 if hero.position.x>keeper.position.x else -1
 	keeper.set_facing(attack_direction)
-	var order: Array = P2_ORDER if phase==2 else P1_ORDER
-	var name: String = order[pattern_index%order.size()]
-	pattern_index += 1
+	attack_start_record = {"name":name,"gap":absf(hero.position.x-keeper.position.x),"origin":keeper.position,"target":hero.position,"facing":attack_direction,"band":_attack_band(name),"reaction":_reaction_attack,"deferred":_deferred_attack}
+	pending_attack = ""
+	approach_direction = 0
+	if not _reaction_attack: pattern_index += 1
 	state = "attack"
 	_start_clip(name)
 
 func _begin_transform() -> void:
+	reset_ai_intent()
 	phase_pending = false
 	phase = 2
 	phase_transition_count += 1
@@ -304,8 +412,12 @@ func _on_animation_finished() -> void:
 	if state in ["attack","transform","intro","hurt"]:
 		# Artwork contains its own lunge/teleport: commit only the endpoint after
 		# completion, so the following idle starts at the visible ending location.
-		keeper.position.x = clampf(keeper.position.x+float(ENDPOINT_X.get(current_animation,0))*keeper.visual_scale*attack_direction,ARENA.position.x+150,ARENA.end.x-150)
+		keeper.position.x = clampf(keeper.position.x+float(ENDPOINT_X.get(current_animation,0))*keeper.visual_scale*attack_direction,ARENA.position.x+75,ARENA.end.x-75)
 		_release_grab()
+		if _reaction_attack:
+			pending_attack = _deferred_attack
+			_deferred_attack = ""
+			_reaction_attack = false
 		if phase_pending: _begin_transform()
 		else: _set_idle(.18 if phase==2 else .30)
 
@@ -325,12 +437,63 @@ func _release_grab() -> void:
 		hero.position.y = minf(hero.position.y,FLOOR_Y-10)
 		hero.velocity = Vector2(attack_direction*160,-180)
 
-func _resolve_source_hits() -> void:
+func reset_hazard_sweep() -> void:
+	_paper_previous.clear()
+	_paper_previous_hero.clear()
+	_paper_sample_time = -1.0
+	_paper_sample_generation = -1
+	_paper_sample_facing = 0
+
+func _segment_hits_box(start: Vector2, finish: Vector2, half_size: Vector2) -> bool:
+	var direction := finish-start
+	var enter := 0.0
+	var leave := 1.0
+	for axis in range(2):
+		if absf(direction[axis])<.000001:
+			if start[axis]<-half_size[axis] or start[axis]>half_size[axis]: return false
+		else:
+			var near: float = (-half_size[axis]-start[axis])/direction[axis]
+			var far: float = (half_size[axis]-start[axis])/direction[axis]
+			if near>far:
+				var swap := near
+				near = far
+				far = swap
+			enter = maxf(enter,near)
+			leave = minf(leave,far)
+			if enter>leave: return false
+	return true
+
+func _paper_crossed_hero(previous: Rect2, current: Rect2, boxes: Array[Rect2]) -> bool:
+	if boxes.size()!=_paper_previous_hero.size(): return false
+	# Relative motion tests each actual hero box separately. Sweeping one
+	# rectangle per sheet never fills the harmless gaps between the paper fan.
+	for index in range(boxes.size()):
+		var old_hero := _paper_previous_hero[index]
+		var new_hero := boxes[index]
+		var half_size := previous.size.max(current.size)*.5+old_hero.size.max(new_hero.size)*.5
+		if _segment_hits_box(previous.get_center()-old_hero.get_center(),current.get_center()-new_hero.get_center(),half_size): return true
+	return false
+
+func _resolve_source_hits(delta: float = 0.0) -> void:
 	_last_hitboxes = _runtime_hitboxes()
+	var current_time: float = keeper.animation_time
+	var hero_boxes: Array[Rect2] = hero.get_hurtboxes()
+	var continuous := delta>0 and _paper_sample_generation==attack_generation and _paper_sample_facing==attack_direction
+	continuous = continuous and current_time>=_paper_sample_time and current_time-_paper_sample_time<=delta*keeper.playback_speed+.0001
+	continuous = continuous and keeper.global_position.distance_to(_paper_sample_origin)<.01
+	if continuous and not _paper_previous_hero.is_empty():
+		continuous = hero_boxes[0].get_center().distance_to(_paper_previous_hero[0].get_center())<=1200.0*delta+24.0
+	var next_papers: Dictionary = {}
 	for entry in _last_hitboxes:
 		var rect: Rect2 = entry.get("rect",Rect2())
 		var kind := str(entry.get("kind",entry.get("k","n")))
-		if not _hero_overlaps(rect): continue
+		var overlap := _hero_overlaps(rect)
+		var crossed := false
+		if kind=="proj":
+			var id := str(entry.get("id",""))
+			if continuous and _paper_previous.has(id): crossed = _paper_crossed_hero(_paper_previous[id],rect,hero_boxes)
+			next_papers[id] = rect
+		if not overlap and not crossed: continue
 		if kind=="grab":
 			if not _grabbed and hero.invulnerable<=0:
 				_grabbed = true
@@ -342,7 +505,16 @@ func _resolve_source_hits() -> void:
 		hero.hurt(amount,rect.get_center().x)
 		if hero.hp<before:
 			_player_hits += 1
-			_hitbox_history.append({"animation":current_animation,"phase":phase,"kind":kind,"damage":amount,"source_time":keeper.get_snapshot().get("time",0)})
+			if kind=="proj" and crossed and not overlap: _swept_paper_hits += 1
+			_hitbox_history.append({"animation":current_animation,"phase":phase,"kind":kind,"damage":amount,"source_time":keeper.get_snapshot().get("time",0),"paper_id":entry.get("id",""),"volley":entry.get("volley",-1),"sheet":entry.get("sheet",-1),"contact":"sweep" if crossed and not overlap else "overlap"})
+	# Visible sheets are not consumed by an invulnerable contact or by a hit
+	# from a different sheet. The shared hero.hurt() grace remains authoritative.
+	_paper_previous = next_papers
+	_paper_previous_hero = hero_boxes
+	_paper_sample_time = current_time
+	_paper_sample_generation = attack_generation
+	_paper_sample_facing = attack_direction
+	_paper_sample_origin = keeper.global_position
 
 func _hero_overlaps(rect: Rect2) -> bool:
 	for box in hero.get_hurtboxes():
@@ -424,7 +596,13 @@ func _runtime_hitboxes() -> Array:
 				var speed := 780+120*_hash2(i,volley)
 				var x := 140+cos(angle)*speed*age
 				var y := -200+sin(angle)*speed*age+40*age*age
-				if x<=995: _source_hit(result,Rect2(x-10,y-14,20,28),"proj")
+				if x<=995:
+					var count := result.size()
+					_source_hit(result,Rect2(x-10,y-14,20,28),"proj")
+					if result.size()>count:
+						result[-1]["id"] = "%d:%d:%d" % [attack_generation,volley,i]
+						result[-1]["volley"] = volley
+						result[-1]["sheet"] = i
 	elif current_animation=="tomes":
 		for i in range(5):
 			var age := (u-(.50+i*.05))*duration
@@ -497,6 +675,7 @@ func damage_boss(amount: int, kind: String = "melee") -> bool:
 	_boss_damage_events += 1
 	play_sfx("hit")
 	if hp<=0:
+		reset_ai_intent()
 		is_dead = true
 		state = "death"
 		_release_grab()
@@ -577,10 +756,12 @@ func on_player_death() -> void:
 	_refresh_hud()
 
 func set_paused(value: bool) -> void:
+	reset_hazard_sweep()
 	paused = value
 	gameplay_active = not value and hero.hp>0 and hit_stop_remaining<=0
 	singing.set_paused(value)
 	keeper_sound.set_paused(value)
+	if is_instance_valid(arena_art): arena_art.set_paused(value)
 	_refresh_hud()
 
 func _refresh_hud() -> void:
@@ -625,7 +806,7 @@ func _return_to_catalog() -> void:
 	get_tree().change_scene_to_file(CATALOG)
 
 func get_trial_snapshot() -> Dictionary:
-	return {"isolated_trial":true,"writes_save":false,"state":state,"animation":current_animation,"encounter_started":encounter_started,"singing":singing.is_singing(),"singing_latched":singing.encounter_started,"hp":hp,"max_hp":MAX_HP,"hero_hp":hero.hp,"hero_energy":hero.energy,"phase":phase,"phase_transitions":phase_transition_count,"phase_pending":phase_pending,"rage":rage_active,"paused":paused,"gate_open":gate_open,"is_dead":is_dead,"keeper_position":keeper.position,"hero_position":hero.position,"direction":attack_direction,"source":keeper.get_snapshot(),"animation_history":_animation_history.duplicate(),"player_hits":_player_hits,"boss_damage_events":_boss_damage_events,"guard_blocks":_guard_block_count,"hit_history":_hitbox_history.duplicate(true),"grabbed":_grabbed,"runtime_hitboxes":_last_hitboxes.duplicate(true)}
+	return {"isolated_trial":true,"writes_save":false,"state":state,"animation":current_animation,"encounter_started":encounter_started,"singing":singing.is_singing(),"singing_latched":singing.encounter_started,"hp":hp,"max_hp":MAX_HP,"hero_hp":hero.hp,"hero_energy":hero.energy,"phase":phase,"phase_transitions":phase_transition_count,"phase_pending":phase_pending,"rage":rage_active,"paused":paused,"gate_open":gate_open,"is_dead":is_dead,"keeper_position":keeper.position,"hero_position":hero.position,"direction":attack_direction,"source":keeper.get_snapshot(),"animation_history":_animation_history.duplicate(),"player_hits":_player_hits,"boss_damage_events":_boss_damage_events,"guard_blocks":_guard_block_count,"hit_history":_hitbox_history.duplicate(true),"grabbed":_grabbed,"runtime_hitboxes":_last_hitboxes.duplicate(true),"pending_attack":pending_attack,"approach_direction":approach_direction,"attack_start_record":attack_start_record.duplicate(true),"paper_generation":attack_generation,"previous_paper_count":_paper_previous.size(),"swept_paper_hits":_swept_paper_hits}
 
 func _draw() -> void:
 	draw_texture_rect(BACKDROP,Rect2(0,-135,2040,900),false,Color(.56,.57,.63))

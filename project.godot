@@ -3,7 +3,7 @@ config_version=5
 
 [application]
 config/name="LAST LECTURE — The Forgotten Programming Wing"
-config/version="M26"
+config/version="M27"
 run/main_scene="res://scenes/minibosses/archivist_reference_m26.tscn"
 config/features=PackedStringArray("4.7", "GL Compatibility")
 

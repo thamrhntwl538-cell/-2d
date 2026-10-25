@@ -110,3 +110,21 @@ attack selection and the half-health phase trigger are integration defaults,
 not rules claimed to be present in the supplied HTML. The original hero, Bell
 Warden and library gameplay sources remain unchanged. The isolated trial does
 not yet place the Archivist in the fifteen-room library or grant saved rewards.
+
+M27 Archivist combat and Catalog Vault arena (2026-10-25):
+assets/environments/m27_archivist/sealed_catalog_vault.png is an original arena
+background generated and refined with image_gen for this project, using the
+approved close_archive.png background as a visual reference. The final generated
+PNG is retained unchanged. Its source generation identifier, SHA-256, dimensions
+and runtime placement are recorded in
+assets/environments/m27_archivist/provenance.json. The native arena composition,
+light response, dust and pause handling are authored for this project. This
+provenance note does not assign a new license to previously supplied material.
+
+M27's per-attack approach distances, attack commitment and individually tracked
+paper collision paths are native gameplay integration changes. The supplied
+Archivist animation pixels, source timings, SFX files and pre-encounter singing
+recording remain unchanged from M26. The player's one-second post-hit protection
+and the source paper-volley timings are retained. The approved hero and Bell
+Warden source assets and gameplay sources remain unchanged. Existing source
+notices and rights qualifications above continue to apply.
