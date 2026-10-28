@@ -64,6 +64,7 @@ var boss_display: Control
 var camera: Camera2D
 var message: Label
 var caption: Label
+var focus_hint: Label
 var enemies: Array = []
 var gameplay_active := true
 var paused := false
@@ -112,6 +113,8 @@ var _swept_paper_hits := 0
 var _deferred_attack := ""
 var _reaction_attack := false
 
+func _create_hero() -> CharacterBody2D: return Hero.new()
+
 func _ready() -> void:
 	process_priority = 10 # The unchanged hero resolves sword contact before hazards.
 	RenderingServer.set_default_clear_color(Color("070b13"))
@@ -126,7 +129,7 @@ func _ready() -> void:
 	active_room.add_child(arena_art)
 	combat_state.dash_owned = true
 	combat_state.spell_owned = true
-	hero = Hero.new()
+	hero = _create_hero()
 	hero.name = "ApprovedLanternHero"
 	hero.world_ref = self
 	hero.position = Vector2(260,FLOOR_Y)
@@ -200,6 +203,10 @@ func _make_hud() -> void:
 	hud.add_child(boss_display)
 	message = _make_label("",Vector2(260,220),Vector2(760,180),27)
 	caption = _make_label("",Vector2(260,600),Vector2(760,42),15)
+	focus_hint = _make_label("",Vector2(18,143),Vector2(335,40),14)
+	focus_hint.name = "FocusStatus"
+	focus_hint.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
+	focus_hint.visible = false
 
 func _make_label(value: String, at: Vector2, dimensions: Vector2, font_size: int) -> Label:
 	var label := Label.new()
@@ -766,7 +773,10 @@ func set_paused(value: bool) -> void:
 
 func _refresh_hud() -> void:
 	if not is_instance_valid(vitals): return
-	vitals.update_context({"hp":hero.hp,"max_hp":6,"energy":hero.energy,"max_energy":99,"wallet":0,"equipped":[],"spell_owned":true},"ar")
+	var context := {"hp":hero.hp,"max_hp":6,"energy":hero.energy,"max_energy":99,"wallet":0,"equipped":[],"spell_owned":true}
+	context.merge(healing_status_context(),true)
+	vitals.update_context(context,"ar")
+	_update_focus_hint("ar")
 	boss_display.update_context({"visible":encounter_started and not is_dead,"name_ar":"أمين الأرشيف","name_en":"The Archivist","hp":hp,"max_hp":MAX_HP,"phase":phase},"ar")
 	# The encounter stays clean: only the player vitals remain on screen.
 	boss_display.visible = false
@@ -784,6 +794,37 @@ func _refresh_hud() -> void:
 	elif not encounter_started:
 		message.text = "أمين الأرشيف"
 		caption.text = "اقترب من صوته · A/D: حركة · Space: قفز · J: سيف · K: داش · L: تقنية · H: علاج"
+
+func healing_status_context() -> Dictionary:
+	var reason := ""
+	if not is_instance_valid(hero): return {"healing":false,"heal_progress":0.0,"heal_block_reason":""}
+	if Input.is_action_pressed("heal") and not hero.healing:
+		if hero.heal_release_required: reason = "release"
+		elif hero.hp>=hero.max_hp: reason = "full"
+		elif hero.energy<Hero.ACTION_COST: reason = "energy"
+		elif not hero.is_on_floor(): reason = "airborne"
+		elif absf(Input.get_axis("move_left","move_right"))>.05: reason = "moving"
+		elif hero.attack_time>0 or hero.dash_time>0 or hero.hurt_time>0 or hero.spell_cooldown>0: reason = "busy"
+	var duration := 1.141*combat_state.focus_duration_multiplier()
+	return {"healing":hero.healing,"heal_progress":clampf(1.0-hero.heal_time/duration,0,1) if hero.healing else 0.0,"heal_block_reason":reason}
+
+func _update_focus_hint(locale: String) -> void:
+	if not is_instance_valid(focus_hint): return
+	focus_hint.visible = Input.is_action_pressed("heal") and not paused and hero.hp>0
+	if not focus_hint.visible: return
+	var arabic := locale=="ar"
+	var status := healing_status_context()
+	var binding := controls.hint("heal")
+	if hero.healing:
+		focus_hint.text = "استمر بالضغط لإكمال العلاج" if arabic else "Keep holding to complete Focus"
+	else:
+		match str(status.heal_block_reason):
+			"release": focus_hint.text = ("أفلت %s ثم اضغطه مطولًا" if arabic else "Release %s, then hold again") % binding
+			"energy": focus_hint.text = "تحتاج إلى 33 وهج · أصب العدو بالسيف" if arabic else "Needs 33 glow · Strike enemies with your blade"
+			"full": focus_hint.text = "فوانيس الصحة ممتلئة" if arabic else "Health lanterns are full"
+			"airborne": focus_hint.text = "اهبط واثبت لبدء العلاج" if arabic else "Land and stand still to Focus"
+			"moving": focus_hint.text = "اثبت لبدء العلاج" if arabic else "Stand still to Focus"
+			_: focus_hint.text = "انتظر انتهاء الحركة ثم استمر بالضغط" if arabic else "Keep holding after the current action"
 
 func _unhandled_input(event: InputEvent) -> void:
 	if event is InputEventKey and event.pressed and not event.echo:

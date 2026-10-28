@@ -1,0 +1,66 @@
+{
+  "milestone": "M28",
+  "engine": "Godot 4.7.2 Standard",
+  "suites": [
+    {
+      "report": "docs/M28_AUDIO_QA.json",
+      "checks": 49,
+      "failures": 0
+    },
+    {
+      "report": "docs/M28_BELL_DOOR_QA.json",
+      "checks": 22,
+      "failures": 0
+    },
+    {
+      "report": "docs/M28_FOCUS_QA.json",
+      "checks": 40,
+      "failures": 0
+    },
+    {
+      "report": "docs/M28_INDEPENDENT_QA.json",
+      "checks": 80,
+      "failures": 0
+    },
+    {
+      "report": "docs/M28_JOURNEY_QA.json",
+      "checks": 42,
+      "failures": 0
+    },
+    {
+      "report": "docs/M28_MOVEMENT_QA.json",
+      "checks": 37,
+      "failures": 0
+    },
+    {
+      "report": "docs/M28_MUTUAL_DEATH_QA.json",
+      "checks": 4,
+      "failures": 0
+    },
+    {
+      "report": "docs/M28_REWARD_CLEARANCE_QA.json",
+      "checks": 8,
+      "failures": 0
+    },
+    {
+      "report": "docs/M28_ROUTE_QA.json",
+      "checks": 283,
+      "failures": 0
+    },
+    {
+      "report": "docs/M28_SHOP_QA.json",
+      "checks": 37,
+      "failures": 0
+    },
+    {
+      "report": "docs/M28_STUDIO_QA.json",
+      "checks": 9,
+      "failures": 0
+    }
+  ],
+  "counts_overlap": true,
+  "approved_files_unchanged": 866,
+  "clean_candidate_runtime_files_matched": 832,
+  "native_media_sources_matched": 835,
+  "scope": "Integrated 15-room world, existing two bosses, traversal and market. Other minibosses/final boss and World Two are not complete. See release QA for the final cosmetic gate change and its targeted checks."
+}

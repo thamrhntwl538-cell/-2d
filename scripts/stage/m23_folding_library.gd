@@ -91,12 +91,20 @@ var _boss_camera_tween: Tween
 var _return_record: Dictionary = {}
 var protected_kinds := ["note", "secret", "book", "bench", "dialogue", "ink_control", "process_control", "output_control", "balance_control", "secret_overlay", "secret_pop", "margin_lantern"]
 
+# Creation/layout hooks preserve prior releases while allowing the integrated
+# M28 journey to reuse the same world, controls, journal and combat authority.
+func _room_layout(id: int) -> Dictionary: return Layouts.room(id)
+func _all_layouts() -> Array[Dictionary]: return Layouts.all_rooms()
+func _create_hero() -> CharacterBody2D: return Hero.new()
+func _create_hud() -> CanvasLayer: return HUD.new()
+func _create_room_visuals() -> Node2D: return RoomVisuals.new()
+
 func _ready() -> void:
 	_register_inputs()
 	progress = Puzzle.new_progress()
 	CurrencyLedger.sanitize(progress)
 	progress.preview_departed = false
-	hud = HUD.new()
+	hud = _create_hud()
 	add_child(hud)
 	hud.setup(self)
 	hud.action.connect(_on_ui_action)
@@ -106,7 +114,7 @@ func _ready() -> void:
 	add_child(arrival_title)
 	camera = RoomCamera.new()
 	add_child(camera)
-	hero = Hero.new()
+	hero = _create_hero()
 	hero.name = "LanternWarden_M23"
 	hero.world_ref = self
 	hero.z_index = 5
@@ -170,7 +178,7 @@ func _load_room(id: int, spawn_name: String = "left", exact_position: Vector2 = 
 		remove_child(active_room)
 		active_room.free()
 	current_room = clampi(id,1,15)
-	data = Layouts.room(current_room)
+	data = _room_layout(current_room)
 	var scene_path := str(data.get("scene",""))
 	if not scene_path.is_empty() and ResourceLoader.exists(scene_path):
 		active_room = load(scene_path).instantiate()
@@ -178,7 +186,7 @@ func _load_room(id: int, spawn_name: String = "left", exact_position: Vector2 = 
 		active_room = Node2D.new()
 	active_room.name = "LibraryArea_%02d" % current_room
 	add_child(active_room)
-	visuals = RoomVisuals.new()
+	visuals = _create_room_visuals()
 	active_room.add_child(visuals)
 	visuals.setup(self,data)
 	surface_root = Node2D.new()
@@ -388,7 +396,7 @@ func _exit_label(exit: Dictionary) -> String:
 	var target := int(exit.get("target",16))
 	if target > 15:
 		return "عتبة المحاضرة التالية" if hud.language == "ar" else "The next lecture"
-	var destination: Dictionary = Layouts.room(target)
+	var destination: Dictionary = _room_layout(target)
 	var label := str(destination.get("title_ar",destination.get("arabic_title",""))) if hud.language == "ar" else str(destination.title)
 	return label + (" · ممر مغلق" if hud.language == "ar" else " · locked") if not can_use_exit(exit) else label
 
@@ -490,7 +498,7 @@ func _panel_context() -> Dictionary:
 	if requirement_met("black_flame_warning_seen"):
 		notes.append({"id":"black_flame_warning","text_key":"black_flame_warning"})
 	var catalog: Array = []
-	for room in Layouts.all_rooms():
+	for room in _all_layouts():
 		for source in room.get("objects",[]):
 			if str(source.get("kind","")) not in ["note","secret"]: continue
 			var definition: Dictionary = source.duplicate(true)
@@ -507,7 +515,7 @@ func _panel_context() -> Dictionary:
 		if not exists: catalog.append(definition)
 		if progress.get("notes",[]).has(str(definition.id)) and not notes.any(func(entry): return str(entry.id)==str(definition.id)):
 			notes.append(definition)
-	return {"progress":progress,"state":progress,"definition":_panel_definition,"room":data,"rooms":Layouts.all_rooms(),"notes":notes,"note_catalog":catalog,"read_ids":progress.get("notes",[]),"is_boss_trial":is_boss_trial,"boss_active":boss_active,"boss_victory":_compiler_won(),"boss_music_muted":boss_music_muted,"environment_preview":environment_preview,"preview_departed":tour_finished,"combat":combat_hud_context(),"bindings":controls.rows(),"awaiting_action":awaiting_action}
+	return {"progress":progress,"state":progress,"definition":_panel_definition,"room":data,"rooms":_all_layouts(),"notes":notes,"note_catalog":catalog,"read_ids":progress.get("notes",[]),"is_boss_trial":is_boss_trial,"boss_active":boss_active,"boss_victory":_compiler_won(),"boss_music_muted":boss_music_muted,"environment_preview":environment_preview,"preview_departed":tour_finished,"combat":combat_hud_context(),"bindings":controls.rows(),"awaiting_action":awaiting_action}
 
 func _open_panel(kind: String) -> void:
 	if kind in ["journal","note"]: play_sfx("journal_open")
@@ -784,7 +792,7 @@ func _restore_save() -> void:
 	if point is Dictionary and int(point.get("room",0)) >= 1 and int(point.get("room",0)) <= 15:
 		var position_value: Variant = point.get("position",[])
 		if position_value is Array and position_value.size() == 2:
-			var room: Dictionary = Layouts.room(int(point.room))
+			var room: Dictionary = _room_layout(int(point.room))
 			var candidate := Vector2(float(position_value[0]),float(position_value[1]))
 			if Rect2(Vector2.ZERO,room.size).has_point(candidate):
 				checkpoint = {"room":int(point.room),"position":[candidate.x,candidate.y]}
@@ -1191,7 +1199,7 @@ func _read_trial_return() -> void:
 	var point: Variant = stored.get("position",[])
 	if room<1 or room>15 or not point is Array or point.size()!=2: return
 	var at := Vector2(float(point[0]),float(point[1]))
-	if not Rect2(Vector2.ZERO,Layouts.room(room).size).has_point(at): return
+	if not Rect2(Vector2.ZERO,_room_layout(room).size).has_point(at): return
 	_return_record = stored
 
 func _enter_boss_trial() -> void:

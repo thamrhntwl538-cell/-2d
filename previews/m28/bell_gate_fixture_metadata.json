@@ -1,0 +1,15 @@
+{
+  "checks": 22,
+  "engine": "4.7.2-stable (official)",
+  "failures": [],
+  "gate_pixel_differences": [
+    11137,
+    11071
+  ],
+  "native_frame": "previews/m28/08_bell_gates_locked_fixture.jpg",
+  "renderer": "gl_compatibility",
+  "scope": "Configured Bell room/fight-camera fixture; real native rendering plus open/closed gate ray collisions. No fight or victory claim.",
+  "native_frame_sha256": "fa60fcf656c70c4f37ee27b98cfdbf01518c37169da35f5f3e99c161bff3512c",
+  "world_script_sha256": "22e429ceb0f74395f3491059e5a3fd2c5dc09deef2d6afcf382897cbebeeeba1",
+  "presentation_note": "Configured closed gate visualization with actors frozen and encounter not started; exploration HUD is intentionally visible. This is not a gameplay battle screenshot."
+}

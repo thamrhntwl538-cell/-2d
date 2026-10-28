@@ -1,0 +1,101 @@
+{
+  "engine": "Godot 4.7.2 stable official",
+  "scope": "Final clean-candidate import/startup and deterministic physics/transaction regression. Not a downloaded published ZIP or a full human-played campaign. Journeys and advanced route starts contain explicitly labelled controlled fixtures.",
+  "source_runtime_files": 832,
+  "runtime_files_match_repository": true,
+  "runtime_mismatches": [],
+  "runtime_manifest_sha256": "121deabaafc77b64ec8fd38c02440a737d46be7088009da5c9e4b218e295a3d0",
+  "tests": [
+    {
+      "name": "routes",
+      "checks": 283,
+      "renderer": "headless",
+      "passed": true,
+      "script_or_runtime_errors": [],
+      "log_sha256": "c521967e89bde3126dd57555c53fe6b227de1723655f0748987ccbb9ea44f533",
+      "log_path": "/workspace/work/m28_final_qa/routes.log",
+      "notes": "Existing gameplay test tool run from the clean imported release candidate with isolated userdata.",
+      "tested_runtime_manifest_sha256": "016a81477ac2e9b7163c2a74884a6dcabeb8d4c672351f0f2758946c07fb0faa"
+    },
+    {
+      "name": "archivist_combat",
+      "checks": 224,
+      "renderer": "headless",
+      "passed": true,
+      "script_or_runtime_errors": [],
+      "log_sha256": "8a27b91d28feaaa14a5d64b6b5ec63e90bf84cafefdf5bf293e92ec5d7320afc",
+      "log_path": "/workspace/work/m28_final_qa/archivist_combat.log",
+      "notes": "Existing gameplay test tool run from the clean imported release candidate with isolated userdata.",
+      "tested_runtime_manifest_sha256": "016a81477ac2e9b7163c2a74884a6dcabeb8d4c672351f0f2758946c07fb0faa"
+    },
+    {
+      "name": "journey_final",
+      "checks": 42,
+      "renderer": "headless",
+      "passed": true,
+      "script_or_runtime_errors": [],
+      "log_sha256": "99e8542125eb0480823e604ccca449587bc12bb789c09f013838a597401f2758",
+      "log_path": "/workspace/work/m28_final_qa/journey_final.log",
+      "notes": "Existing gameplay test tool run from the clean imported release candidate with isolated userdata.",
+      "tested_runtime_manifest_sha256": "016a81477ac2e9b7163c2a74884a6dcabeb8d4c672351f0f2758946c07fb0faa"
+    },
+    {
+      "name": "main",
+      "checks": null,
+      "renderer": "OpenGL compatibility / Mesa llvmpipe",
+      "passed": true,
+      "script_or_runtime_errors": [],
+      "log_sha256": "052211730d2e6bad1bb27d0ba1621ed54bb0ef792b898c4c8600ed8b3be20a67",
+      "log_path": "/workspace/work/m28_final_qa/main.log",
+      "notes": "Actual configured main scene, no --script, 180-frame native startup and clean exit.",
+      "tested_runtime_manifest_sha256": "016a81477ac2e9b7163c2a74884a6dcabeb8d4c672351f0f2758946c07fb0faa"
+    },
+    {
+      "name": "main_after_cosmetic",
+      "checks": null,
+      "renderer": "OpenGL compatibility / Mesa llvmpipe",
+      "passed": true,
+      "script_or_runtime_errors": [],
+      "log_sha256": "052211730d2e6bad1bb27d0ba1621ed54bb0ef792b898c4c8600ed8b3be20a67",
+      "log_path": "/workspace/work/m28_final_qa/main_after_cosmetic.log",
+      "notes": "Actual configured main scene, no --script, 60-frame native startup after the parent-only cosmetic Bell folio suppression.",
+      "tested_runtime_manifest_sha256": "121deabaafc77b64ec8fd38c02440a737d46be7088009da5c9e4b218e295a3d0"
+    },
+    {
+      "name": "bell_door_cosmetic",
+      "checks": 22,
+      "renderer": "OpenGL compatibility / Mesa llvmpipe",
+      "passed": true,
+      "script_or_runtime_errors": [],
+      "log_sha256": "a5906323f945142d633f35b6831303a0eb673b1d6ae9e74014b8a01704f7d95c",
+      "log_path": "/workspace/work/m28_final_qa/bell_door.log",
+      "notes": "Configured Bell room/fight-camera fixture; real native rendering plus open/closed gate ray collisions. No fight or victory claim.",
+      "tested_runtime_manifest_sha256": "121deabaafc77b64ec8fd38c02440a737d46be7088009da5c9e4b218e295a3d0"
+    }
+  ],
+  "test_failures": 0,
+  "imports": [
+    {
+      "log_path": "/workspace/work/m28_candidate_import.log",
+      "log_sha256": "228e49e4941a66cb962725ff0a33e30e28d7949a4aec59fbc2df0c63b855eec0",
+      "completed": true,
+      "errors": []
+    },
+    {
+      "log_path": "/workspace/work/m28_candidate_final_import.log",
+      "log_sha256": "cc01b382f9475ceaf036886d91f9a2cdc3d5fa901b8e6d26bcbe631dbd2f0c76",
+      "completed": true,
+      "errors": []
+    }
+  ],
+  "setup_notes": [
+    "The journey fixture intentionally rejected a first generic userdata directory before starting any gameplay; its documented required m28_journey_userdata sandbox name was used in the successful rerun.",
+    "Native startup has only the software-driver VSync warning; no script/runtime errors."
+  ],
+  "post_regression_cosmetic_change": {
+    "path": "scripts/stage/m28_folding_library.gd",
+    "description": "Only the legacy Bell arena parent self_modulate alpha is zero, suppressing its flat decorative folios. Child gate drawings and native collision behavior remain intact. No layout, combat, or movement changes.",
+    "original_regression_runtime_manifest_sha256": "016a81477ac2e9b7163c2a74884a6dcabeb8d4c672351f0f2758946c07fb0faa",
+    "verification": "22/22 native focused gate checks plus fresh actual main startup. Earlier283/224/42 logic runs retain their original source digest and were not re-labelled as reruns."
+  }
+}

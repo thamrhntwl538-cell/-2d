@@ -1,0 +1,58 @@
+{
+	"checks": 37,
+	"engine": "4.7.2-stable (official)",
+	"failures": [],
+	"samples": [
+		{
+			"frames": 29,
+			"height": 64.2830810546875,
+			"held_frames": 2,
+			"kind": "jump_profile",
+			"landed": true,
+			"previous_actor": true
+		},
+		{
+			"frames": 46,
+			"height": 145.741394042969,
+			"held_frames": 30,
+			"kind": "jump_profile",
+			"landed": true,
+			"previous_actor": true
+		},
+		{
+			"frames": 29,
+			"height": 64.2830810546875,
+			"held_frames": 2,
+			"kind": "jump_profile",
+			"landed": true,
+			"previous_actor": false
+		},
+		{
+			"frames": 46,
+			"height": 145.741394042969,
+			"held_frames": 30,
+			"kind": "jump_profile",
+			"landed": true,
+			"previous_actor": false
+		},
+		{
+			"jumped": true,
+			"kind": "coyote",
+			"velocity": [
+				300.0,
+				-755.833312988281
+			],
+			"wait_ticks": 3
+		},
+		{
+			"jumped": false,
+			"kind": "coyote",
+			"velocity": [
+				300.0,
+				375.833312988281
+			],
+			"wait_ticks": 9
+		}
+	],
+	"scope": "Configured native terrain fixtures with actual input-driven coyote/buffer/variable jumps, stacked-shelf descent, controller parity, solid-wall dash, ordinary sword contact, damage/energy and reset/death checks; no claim of a continuous full-world playthrough."
+}

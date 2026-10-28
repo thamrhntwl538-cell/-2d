@@ -1,0 +1,6 @@
+{
+	"checks": 4,
+	"engine": "4.7.2-stable (official)",
+	"failures": [],
+	"fixture": "Simultaneous player/boss death before source death-animation completion"
+}

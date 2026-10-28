@@ -1,0 +1,50 @@
+{
+  "kind": "original procedural soft sole and paper contacts",
+  "generator": "tools/build_m28_soft_steps.py",
+  "sample_rate": 48000,
+  "external_samples": false,
+  "files": [
+    {
+      "path": "assets/audio/m28/soft_step_stone_1.wav",
+      "sha256": "f981715535b38ac8493ecfc2c2c6e3aac161e7a55ab4eecbb92e135bfafd2be3",
+      "seconds": 0.151,
+      "peak": 0.42,
+      "rms": 0.08033693340311507
+    },
+    {
+      "path": "assets/audio/m28/soft_step_stone_2.wav",
+      "sha256": "07930a4196b0e6aaf4019cbb52d8a2d174ea042e94457a7f12a937cd63af7359",
+      "seconds": 0.157,
+      "peak": 0.42,
+      "rms": 0.08097171093744653
+    },
+    {
+      "path": "assets/audio/m28/soft_step_stone_3.wav",
+      "sha256": "424cc11218fd745661362343ed967a07569ca71654c35333f3194049d2bbefc5",
+      "seconds": 0.16297916666666667,
+      "peak": 0.42000000000000004,
+      "rms": 0.07524372206053141
+    },
+    {
+      "path": "assets/audio/m28/soft_step_paper_1.wav",
+      "sha256": "bb8ab3d9f0555c87e0f0cd50066a6c284c460a503f5df868ef89d6b8331b610e",
+      "seconds": 0.151,
+      "peak": 0.42,
+      "rms": 0.06357456727200869
+    },
+    {
+      "path": "assets/audio/m28/soft_step_paper_2.wav",
+      "sha256": "cd716964a8b34a563b4411bb8692428c96a6dbbeffc1f16b015dcb04d20fceb5",
+      "seconds": 0.157,
+      "peak": 0.42,
+      "rms": 0.06100998122845006
+    },
+    {
+      "path": "assets/audio/m28/soft_step_paper_3.wav",
+      "sha256": "4e78f80ff9d943f1c66dce2ff450ddd80ace7a5a28535f5181a1abb5363f2066",
+      "seconds": 0.16297916666666667,
+      "peak": 0.42,
+      "rms": 0.055289842434991396
+    }
+  ]
+}

@@ -14,6 +14,9 @@ const BELL_SPEC:={"arena_rect":Rect2(1110,940,1080,320),"floor_y":1260.0,"intro_
 var bell_impact: Node2D
 var bell_impact_count:=0
 
+func _create_hud() -> CanvasLayer: return BellHUD.new()
+func _create_room_visuals() -> Node2D: return BellRoomVisuals.new()
+
 func _physics_process(delta: float) -> void:
 	# Closed book gates are the physical limits. A small interior margin also
 	# contains knockback and dash endpoints without changing the hero's code.
@@ -44,7 +47,7 @@ func _ready() -> void:
 	progress = Puzzle.new_progress()
 	CurrencyLedger.sanitize(progress)
 	progress.preview_departed = false
-	hud = BellHUD.new()
+	hud = _create_hud()
 	add_child(hud)
 	hud.setup(self)
 	hud.action.connect(_on_ui_action)
@@ -54,7 +57,7 @@ func _ready() -> void:
 	add_child(arrival_title)
 	camera = RoomCamera.new()
 	add_child(camera)
-	hero = Hero.new()
+	hero = _create_hero()
 	hero.name = "LanternWarden_M24"
 	hero.world_ref = self
 	hero.z_index = 5
@@ -135,7 +138,7 @@ func _load_room(id: int, spawn_name: String="left", exact_position: Vector2=Vect
 	if is_instance_valid(visuals):
 		active_room.remove_child(visuals)
 		visuals.free()
-	visuals=BellRoomVisuals.new()
+	visuals=_create_room_visuals()
 	active_room.add_child(visuals)
 	visuals.setup(self,data)
 	bell_impact=BellImpact.new()
@@ -251,10 +254,12 @@ func _read_trial_return() -> void:
 	var room_id:=int(saved.get("room",0))
 	if room_id<1 or room_id>15: return
 	var p:=Vector2(float(saved.position[0]),float(saved.position[1]))
-	if Rect2(Vector2.ZERO,Layouts.room(room_id).size).has_point(p): _return_record=saved
+	if Rect2(Vector2.ZERO,_room_layout(room_id).size).has_point(p): _return_record=saved
 
 func _return_from_trial() -> void:
-	if is_boss_trial: get_tree().change_scene_to_file(BELL_LIBRARY)
+	if not is_boss_trial: return
+	var destination:= "res://scenes/minibosses/archivist_reference_m26.tscn" if get_tree().has_meta("m28_studio_return") else BELL_LIBRARY
+	get_tree().change_scene_to_file(destination)
 
 func _restart_boss_trial() -> void:
 	if is_boss_trial: get_tree().change_scene_to_file(BELL_TRIAL)

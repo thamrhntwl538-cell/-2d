@@ -98,6 +98,10 @@ func set_exploded(value:bool) -> void:
 	set_page("parts" if value else "master")
 
 func _unhandled_input(event:InputEvent) -> void:
+	if get_tree().has_meta("m28_studio_return"):
+		if (event is InputEventKey and event.pressed and event.keycode==KEY_ESCAPE) or (event is InputEventJoypadButton and event.pressed and event.button_index==JOY_BUTTON_BACK):
+			get_tree().change_scene_to_file("res://scenes/minibosses/archivist_reference_m26.tscn")
+			return
 	if event is InputEventKey and event.pressed and not event.echo:
 		match event.keycode:
 			KEY_ENTER,KEY_KP_ENTER:_start_trial()

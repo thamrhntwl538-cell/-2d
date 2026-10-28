@@ -1,0 +1,141 @@
+{
+  "engine": "Godot 4.7.2 native X11 / GL Compatibility",
+  "files": [
+    {
+      "path": "previews/m28/40_fresh_entry_movement.mp4",
+      "sha256": "64cac975c9b589faa9f8c298aef40ed8cba382f35be1ad684aaad829d4802233",
+      "bytes": 5512587,
+      "probe": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "index": 0,
+            "codec_name": "h264",
+            "width": 1280,
+            "height": 720,
+            "avg_frame_rate": "60/1"
+          },
+          {
+            "index": 1,
+            "codec_name": "aac",
+            "sample_rate": "48000",
+            "channels": 2,
+            "avg_frame_rate": "0/0"
+          }
+        ],
+        "format": {
+          "duration": "8.933333",
+          "size": "5512587"
+        }
+      },
+      "native_pcm": {
+        "sample_count": 857600,
+        "peak": 0.3919677734375,
+        "rms": 0.02710541886864276,
+        "clipped_samples": 0,
+        "scope": "Original native MovieWriter PCM before AAC compression. No gain or replacement sound was applied."
+      },
+      "full_decode_success": true
+    },
+    {
+      "path": "previews/m28/41_gap_and_return_bridge.mp4",
+      "sha256": "6e6bf9c38b455425d9536886a045ee2fe20867468840160f8656d4e964b0b40b",
+      "bytes": 1737481,
+      "probe": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "index": 0,
+            "codec_name": "h264",
+            "width": 1280,
+            "height": 720,
+            "avg_frame_rate": "60/1"
+          },
+          {
+            "index": 1,
+            "codec_name": "aac",
+            "sample_rate": "48000",
+            "channels": 2,
+            "avg_frame_rate": "0/0"
+          }
+        ],
+        "format": {
+          "duration": "5.150000",
+          "size": "1737481"
+        }
+      },
+      "native_pcm": {
+        "sample_count": 494400,
+        "peak": 0.29949951171875,
+        "rms": 0.027569161969420202,
+        "clipped_samples": 0,
+        "scope": "Original native MovieWriter PCM before AAC compression. No gain or replacement sound was applied."
+      },
+      "full_decode_success": true
+    }
+  ],
+  "metadata": [
+    {
+      "path": "previews/m28/fresh_movement_capture_metadata.json",
+      "checks": 14,
+      "shot_count": 2,
+      "source_hash_count": 835,
+      "source_mismatches": [],
+      "sources_unchanged_during_capture": true,
+      "failures": []
+    },
+    {
+      "path": "previews/m28/gap_movement_capture_metadata.json",
+      "checks": 4,
+      "shot_count": 2,
+      "source_hash_count": 835,
+      "source_mismatches": [],
+      "sources_unchanged_during_capture": true,
+      "failures": []
+    },
+    {
+      "path": "previews/m28/world_capture_metadata.json",
+      "checks": null,
+      "shot_count": 7,
+      "source_hash_count": 835,
+      "source_mismatches": [],
+      "sources_unchanged_during_capture": true,
+      "failures": []
+    },
+    {
+      "path": "previews/m28/native_ui_capture_metadata.json",
+      "checks": 80,
+      "shot_count": 5,
+      "source_hash_count": 835,
+      "source_mismatches": [],
+      "sources_unchanged_during_capture": null,
+      "failures": []
+    }
+  ],
+  "failures": [],
+  "image_review": [
+    "01_bound_volume_threshold.jpg",
+    "02_margin_market.jpg",
+    "03_torn_output_route.jpg",
+    "04_archivist_vault_door.jpg",
+    "05_counterweight_seals.jpg",
+    "06_bell_bindery_gate.jpg",
+    "07_final_spine_challenge.jpg",
+    "21_native_market_purchase.jpg",
+    "24_market_controller_scroll.jpg",
+    "32_actual_gap_landing.jpg",
+    "33_actual_return_bridge_unfolded.jpg",
+    "08_bell_gates_locked_fixture.jpg"
+  ],
+  "scope": "Frozen-runtime native captures. Fresh movie uses ordinary input from actual opening; gap movie and gallery starts are explicitly configured fixtures. Video exported at60fps is not a hardware performance claim.",
+  "gate_fixture": {
+    "path": "previews/m28/bell_gate_fixture_metadata.json",
+    "checks": 22,
+    "failures": [],
+    "sha256": "fa60fcf656c70c4f37ee27b98cfdbf01518c37169da35f5f3e99c161bff3512c",
+    "scope": "Configured Bell room/fight-camera fixture; real native rendering plus open/closed gate ray collisions. No fight or victory claim."
+  },
+  "success": true
+}

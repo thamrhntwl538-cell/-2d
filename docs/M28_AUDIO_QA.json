@@ -1,0 +1,1067 @@
+{
+	"actual_run_inputs": true,
+	"assets": [
+		{
+			"clipped_samples": 0,
+			"dc": 0.000235778606490584,
+			"first": 0.0,
+			"format": 1,
+			"last": 0.0,
+			"loaded": true,
+			"longest_zero_run_in_audible_body": 0,
+			"maximum_adjacent_delta": 0.03546142578125,
+			"path": "res://assets/audio/m28/soft_step_stone_1.wav",
+			"peak": 0.41998291015625,
+			"rms": 0.0803344813026781,
+			"sample_rate": 48000,
+			"samples": 7248,
+			"seconds": 0.151,
+			"sha256": "f981715535b38ac8493ecfc2c2c6e3aac161e7a55ab4eecbb92e135bfafd2be3",
+			"stereo": false
+		},
+		{
+			"clipped_samples": 0,
+			"dc": 0.000276796377388535,
+			"first": 0.0,
+			"format": 1,
+			"last": 0.0,
+			"loaded": true,
+			"longest_zero_run_in_audible_body": 0,
+			"maximum_adjacent_delta": 0.03515625,
+			"path": "res://assets/audio/m28/soft_step_stone_2.wav",
+			"peak": 0.41998291015625,
+			"rms": 0.0809691787047702,
+			"sample_rate": 48000,
+			"samples": 7536,
+			"seconds": 0.157,
+			"sha256": "07930a4196b0e6aaf4019cbb52d8a2d174ea042e94457a7f12a937cd63af7359",
+			"stereo": false
+		},
+		{
+			"clipped_samples": 0,
+			"dc": 0.000202189195221622,
+			"first": 0.0,
+			"format": 1,
+			"last": 0.0,
+			"loaded": true,
+			"longest_zero_run_in_audible_body": 1,
+			"maximum_adjacent_delta": 0.029388427734375,
+			"path": "res://assets/audio/m28/soft_step_stone_3.wav",
+			"peak": 0.41998291015625,
+			"rms": 0.0752414473889358,
+			"sample_rate": 48000,
+			"samples": 7823,
+			"seconds": 0.162979166666667,
+			"sha256": "424cc11218fd745661362343ed967a07569ca71654c35333f3194049d2bbefc5",
+			"stereo": false
+		},
+		{
+			"clipped_samples": 0,
+			"dc": 0.00015956044986548,
+			"first": 0.0,
+			"format": 1,
+			"last": 0.0,
+			"loaded": true,
+			"longest_zero_run_in_audible_body": 0,
+			"maximum_adjacent_delta": 0.09283447265625,
+			"path": "res://assets/audio/m28/soft_step_paper_1.wav",
+			"peak": 0.41998291015625,
+			"rms": 0.0635724852558712,
+			"sample_rate": 48000,
+			"samples": 7248,
+			"seconds": 0.151,
+			"sha256": "bb8ab3d9f0555c87e0f0cd50066a6c284c460a503f5df868ef89d6b8331b610e",
+			"stereo": false
+		},
+		{
+			"clipped_samples": 0,
+			"dc": 0.000197129138209511,
+			"first": 0.0,
+			"format": 1,
+			"last": 0.0,
+			"loaded": true,
+			"longest_zero_run_in_audible_body": 1,
+			"maximum_adjacent_delta": 0.0699462890625,
+			"path": "res://assets/audio/m28/soft_step_paper_2.wav",
+			"peak": 0.41998291015625,
+			"rms": 0.0610080215522275,
+			"sample_rate": 48000,
+			"samples": 7536,
+			"seconds": 0.157,
+			"sha256": "cd716964a8b34a563b4411bb8692428c96a6dbbeffc1f16b015dcb04d20fceb5",
+			"stereo": false
+		},
+		{
+			"clipped_samples": 0,
+			"dc": 0.00012357610121996,
+			"first": 0.0,
+			"format": 1,
+			"last": 0.0,
+			"loaded": true,
+			"longest_zero_run_in_audible_body": 0,
+			"maximum_adjacent_delta": 0.068939208984375,
+			"path": "res://assets/audio/m28/soft_step_paper_3.wav",
+			"peak": 0.41998291015625,
+			"rms": 0.0552881079605081,
+			"sample_rate": 48000,
+			"samples": 7823,
+			"seconds": 0.162979166666667,
+			"sha256": "4e78f80ff9d943f1c66dce2ff450ddd80ace7a5a28535f5181a1abb5363f2066",
+			"stereo": false
+		}
+	],
+	"checks": [
+		{
+			"detail": null,
+			"name": "Audio fixtures use isolated userdata",
+			"passed": true
+		},
+		{
+			"detail": null,
+			"name": "Native WAV load: stone 1",
+			"passed": true
+		},
+		{
+			"detail": null,
+			"name": "PCM has headroom: stone 1",
+			"passed": true
+		},
+		{
+			"detail": 0.03546142578125,
+			"name": "PCM boundaries and contact avoid hard discontinuities: stone 1",
+			"passed": true
+		},
+		{
+			"detail": null,
+			"name": "Audible contact body has no 1ms silent gaps: stone 1",
+			"passed": true
+		},
+		{
+			"detail": null,
+			"name": "Native WAV load: stone 2",
+			"passed": true
+		},
+		{
+			"detail": null,
+			"name": "PCM has headroom: stone 2",
+			"passed": true
+		},
+		{
+			"detail": 0.03515625,
+			"name": "PCM boundaries and contact avoid hard discontinuities: stone 2",
+			"passed": true
+		},
+		{
+			"detail": null,
+			"name": "Audible contact body has no 1ms silent gaps: stone 2",
+			"passed": true
+		},
+		{
+			"detail": null,
+			"name": "Native WAV load: stone 3",
+			"passed": true
+		},
+		{
+			"detail": null,
+			"name": "PCM has headroom: stone 3",
+			"passed": true
+		},
+		{
+			"detail": 0.029388427734375,
+			"name": "PCM boundaries and contact avoid hard discontinuities: stone 3",
+			"passed": true
+		},
+		{
+			"detail": null,
+			"name": "Audible contact body has no 1ms silent gaps: stone 3",
+			"passed": true
+		},
+		{
+			"detail": null,
+			"name": "Native WAV load: paper 1",
+			"passed": true
+		},
+		{
+			"detail": null,
+			"name": "PCM has headroom: paper 1",
+			"passed": true
+		},
+		{
+			"detail": 0.09283447265625,
+			"name": "PCM boundaries and contact avoid hard discontinuities: paper 1",
+			"passed": true
+		},
+		{
+			"detail": null,
+			"name": "Audible contact body has no 1ms silent gaps: paper 1",
+			"passed": true
+		},
+		{
+			"detail": null,
+			"name": "Native WAV load: paper 2",
+			"passed": true
+		},
+		{
+			"detail": null,
+			"name": "PCM has headroom: paper 2",
+			"passed": true
+		},
+		{
+			"detail": 0.0699462890625,
+			"name": "PCM boundaries and contact avoid hard discontinuities: paper 2",
+			"passed": true
+		},
+		{
+			"detail": null,
+			"name": "Audible contact body has no 1ms silent gaps: paper 2",
+			"passed": true
+		},
+		{
+			"detail": null,
+			"name": "Native WAV load: paper 3",
+			"passed": true
+		},
+		{
+			"detail": null,
+			"name": "PCM has headroom: paper 3",
+			"passed": true
+		},
+		{
+			"detail": 0.068939208984375,
+			"name": "PCM boundaries and contact avoid hard discontinuities: paper 3",
+			"passed": true
+		},
+		{
+			"detail": null,
+			"name": "Audible contact body has no 1ms silent gaps: paper 3",
+			"passed": true
+		},
+		{
+			"detail": null,
+			"name": "Six generated contacts are distinct waveforms",
+			"passed": true
+		},
+		{
+			"detail": null,
+			"name": "Live stone profile uses muted spatial three-variant contacts",
+			"passed": true
+		},
+		{
+			"detail": null,
+			"name": "Live paper profile uses muted spatial three-variant contacts",
+			"passed": true
+		},
+		{
+			"detail": null,
+			"name": "Jump remains the approved nonvocal movement effect",
+			"passed": true
+		},
+		{
+			"detail": [],
+			"name": "All non-footstep cues and gains match previous silent-hero definitions",
+			"passed": true
+		},
+		{
+			"detail": [],
+			"name": "No hero-vocal entry was reintroduced",
+			"passed": true
+		},
+		{
+			"detail": null,
+			"name": "Configured run starts on real collision at (1100.0, 1260.0)",
+			"passed": true
+		},
+		{
+			"detail": null,
+			"name": "Idle on floor emits no footsteps",
+			"passed": true
+		},
+		{
+			"detail": 1779.16650390625,
+			"name": "Real run reaches bounded surface target 1760.0",
+			"passed": true
+		},
+		{
+			"detail": [
+				{
+					"category": "effects",
+					"clock": 6.35004133333334,
+					"cue": "footstep_stone",
+					"duration": 0.151,
+					"path": "res://assets/audio/m28/soft_step_stone_1.wav",
+					"pitch_scale": 0.970000028610229,
+					"position": [
+						1177.49987792969,
+						1259.92529296875
+					],
+					"priority": 0,
+					"spatial": true,
+					"volume_db": -14.0
+				},
+				{
+					"category": "effects",
+					"clock": 6.62729433333334,
+					"cue": "footstep_stone",
+					"duration": 0.157,
+					"path": "res://assets/audio/m28/soft_step_stone_2.wav",
+					"pitch_scale": 1.00240004062653,
+					"position": [
+						1257.49987792969,
+						1259.92529296875
+					],
+					"priority": 0,
+					"spatial": true,
+					"volume_db": -14.0
+				},
+				{
+					"category": "effects",
+					"clock": 6.75788966666667,
+					"cue": "footstep_stone",
+					"duration": 0.162979166666667,
+					"path": "res://assets/audio/m28/soft_step_stone_3.wav",
+					"pitch_scale": 0.974200010299683,
+					"position": [
+						1297.49987792969,
+						1259.92529296875
+					],
+					"priority": 0,
+					"spatial": true,
+					"volume_db": -14.0
+				},
+				{
+					"category": "effects",
+					"clock": 7.02139466666667,
+					"cue": "footstep_stone",
+					"duration": 0.151,
+					"path": "res://assets/audio/m28/soft_step_stone_1.wav",
+					"pitch_scale": 1.00059998035431,
+					"position": [
+						1377.49987792969,
+						1259.92529296875
+					],
+					"priority": 0,
+					"spatial": true,
+					"volume_db": -14.0
+				},
+				{
+					"category": "effects",
+					"clock": 7.29785866666667,
+					"cue": "footstep_stone",
+					"duration": 0.157,
+					"path": "res://assets/audio/m28/soft_step_stone_2.wav",
+					"pitch_scale": 0.972400009632111,
+					"position": [
+						1457.49987792969,
+						1259.92529296875
+					],
+					"priority": 0,
+					"spatial": true,
+					"volume_db": -14.0
+				},
+				{
+					"category": "effects",
+					"clock": 7.41666666666667,
+					"cue": "footstep_stone",
+					"duration": 0.162979166666667,
+					"path": "res://assets/audio/m28/soft_step_stone_3.wav",
+					"pitch_scale": 1.00479996204376,
+					"position": [
+						1497.49987792969,
+						1259.92529296875
+					],
+					"priority": 0,
+					"spatial": true,
+					"volume_db": -14.0
+				},
+				{
+					"category": "effects",
+					"clock": 7.69013,
+					"cue": "footstep_stone",
+					"duration": 0.151,
+					"path": "res://assets/audio/m28/soft_step_stone_1.wav",
+					"pitch_scale": 0.970600008964539,
+					"position": [
+						1577.49987792969,
+						1259.92529296875
+					],
+					"priority": 0,
+					"spatial": true,
+					"volume_db": -14.0
+				},
+				{
+					"category": "effects",
+					"clock": 7.83333333333333,
+					"cue": "footstep_stone",
+					"duration": 0.157,
+					"path": "res://assets/audio/m28/soft_step_stone_2.wav",
+					"pitch_scale": 1.00300002098083,
+					"position": [
+						1617.49987792969,
+						1259.92529296875
+					],
+					"priority": 0,
+					"spatial": true,
+					"volume_db": -14.0
+				},
+				{
+					"category": "effects",
+					"clock": 8.08333333333333,
+					"cue": "footstep_stone",
+					"duration": 0.162979166666667,
+					"path": "res://assets/audio/m28/soft_step_stone_3.wav",
+					"pitch_scale": 0.974799990653992,
+					"position": [
+						1697.49987792969,
+						1259.92529296875
+					],
+					"priority": 0,
+					"spatial": true,
+					"volume_db": -14.0
+				},
+				{
+					"category": "effects",
+					"clock": 8.35,
+					"cue": "footstep_stone",
+					"duration": 0.151,
+					"path": "res://assets/audio/m28/soft_step_stone_1.wav",
+					"pitch_scale": 1.00119996070862,
+					"position": [
+						1777.49987792969,
+						1259.92529296875
+					],
+					"priority": 0,
+					"spatial": true,
+					"volume_db": -14.0
+				}
+			],
+			"name": "Real ground run emits muted stone contacts",
+			"passed": true
+		},
+		{
+			"detail": [
+				"res://assets/audio/m28/soft_step_stone_1.wav",
+				"res://assets/audio/m28/soft_step_stone_2.wav",
+				"res://assets/audio/m28/soft_step_stone_3.wav"
+			],
+			"name": "Actual stone run cycles all three source variants",
+			"passed": true
+		},
+		{
+			"detail": {
+				"clipped_frames": 0,
+				"peak": 0.0376247353851795,
+				"rms": 0.00324888839851671,
+				"sample_rate": 44100.0,
+				"stereo_frames": 261632
+			},
+			"name": "Native running mix is audible, bounded and unclipped",
+			"passed": true
+		},
+		{
+			"detail": null,
+			"name": "Configured run starts on real collision at (2320.0, 1020.0)",
+			"passed": true
+		},
+		{
+			"detail": 2719.1669921875,
+			"name": "Real run reaches bounded surface target 2710.0",
+			"passed": true
+		},
+		{
+			"detail": 2320.00024414062,
+			"name": "Real run reaches bounded surface target 2340.0",
+			"passed": true
+		},
+		{
+			"detail": [
+				{
+					"category": "effects",
+					"clock": 10.0833333333333,
+					"cue": "footstep_paper",
+					"duration": 0.151,
+					"path": "res://assets/audio/m28/soft_step_paper_1.wav",
+					"pitch_scale": 0.970000028610229,
+					"position": [
+						2397.50024414062,
+						1019.92401123047
+					],
+					"priority": 0,
+					"spatial": true,
+					"volume_db": -15.0
+				},
+				{
+					"category": "effects",
+					"clock": 10.3666666666667,
+					"cue": "footstep_paper",
+					"duration": 0.157,
+					"path": "res://assets/audio/m28/soft_step_paper_2.wav",
+					"pitch_scale": 1.00240004062653,
+					"position": [
+						2477.50024414062,
+						1019.92401123047
+					],
+					"priority": 0,
+					"spatial": true,
+					"volume_db": -15.0
+				},
+				{
+					"category": "effects",
+					"clock": 10.4926556666667,
+					"cue": "footstep_paper",
+					"duration": 0.162979166666667,
+					"path": "res://assets/audio/m28/soft_step_paper_3.wav",
+					"pitch_scale": 0.974200010299683,
+					"position": [
+						2517.50024414062,
+						1019.92523193359
+					],
+					"priority": 0,
+					"spatial": true,
+					"volume_db": -15.0
+				},
+				{
+					"category": "effects",
+					"clock": 10.75,
+					"cue": "footstep_paper",
+					"duration": 0.151,
+					"path": "res://assets/audio/m28/soft_step_paper_1.wav",
+					"pitch_scale": 1.00059998035431,
+					"position": [
+						2597.50024414062,
+						1019.92523193359
+					],
+					"priority": 0,
+					"spatial": true,
+					"volume_db": -15.0
+				},
+				{
+					"category": "effects",
+					"clock": 11.0333333333333,
+					"cue": "footstep_paper",
+					"duration": 0.157,
+					"path": "res://assets/audio/m28/soft_step_paper_2.wav",
+					"pitch_scale": 0.972400009632111,
+					"position": [
+						2677.50024414062,
+						1019.92523193359
+					],
+					"priority": 0,
+					"spatial": true,
+					"volume_db": -15.0
+				},
+				{
+					"category": "effects",
+					"clock": 11.1666666666667,
+					"cue": "footstep_paper",
+					"duration": 0.162979166666667,
+					"path": "res://assets/audio/m28/soft_step_paper_3.wav",
+					"pitch_scale": 1.00479996204376,
+					"position": [
+						2717.50024414062,
+						1019.92523193359
+					],
+					"priority": 0,
+					"spatial": true,
+					"volume_db": -15.0
+				},
+				{
+					"category": "effects",
+					"clock": 11.8166666666667,
+					"cue": "footstep_paper",
+					"duration": 0.151,
+					"path": "res://assets/audio/m28/soft_step_paper_1.wav",
+					"pitch_scale": 0.970600008964539,
+					"position": [
+						2641.6669921875,
+						1019.92523193359
+					],
+					"priority": 0,
+					"spatial": true,
+					"volume_db": -15.0
+				},
+				{
+					"category": "effects",
+					"clock": 12.099725,
+					"cue": "footstep_paper",
+					"duration": 0.157,
+					"path": "res://assets/audio/m28/soft_step_paper_2.wav",
+					"pitch_scale": 1.00300002098083,
+					"position": [
+						2561.6669921875,
+						1019.92523193359
+					],
+					"priority": 0,
+					"spatial": true,
+					"volume_db": -15.0
+				},
+				{
+					"category": "effects",
+					"clock": 12.2213743333333,
+					"cue": "footstep_paper",
+					"duration": 0.162979166666667,
+					"path": "res://assets/audio/m28/soft_step_paper_3.wav",
+					"pitch_scale": 0.974799990653992,
+					"position": [
+						2521.6669921875,
+						1019.92523193359
+					],
+					"priority": 0,
+					"spatial": true,
+					"volume_db": -15.0
+				},
+				{
+					"category": "effects",
+					"clock": 12.4865906666667,
+					"cue": "footstep_paper",
+					"duration": 0.151,
+					"path": "res://assets/audio/m28/soft_step_paper_1.wav",
+					"pitch_scale": 1.00119996070862,
+					"position": [
+						2441.6669921875,
+						1019.92401123047
+					],
+					"priority": 0,
+					"spatial": true,
+					"volume_db": -15.0
+				},
+				{
+					"category": "effects",
+					"clock": 12.7666666666667,
+					"cue": "footstep_paper",
+					"duration": 0.157,
+					"path": "res://assets/audio/m28/soft_step_paper_2.wav",
+					"pitch_scale": 0.97299998998642,
+					"position": [
+						2361.6669921875,
+						1019.92401123047
+					],
+					"priority": 0,
+					"spatial": true,
+					"volume_db": -15.0
+				},
+				{
+					"category": "effects",
+					"clock": 12.8928183333333,
+					"cue": "footstep_paper",
+					"duration": 0.162979166666667,
+					"path": "res://assets/audio/m28/soft_step_paper_3.wav",
+					"pitch_scale": 1.00539994239807,
+					"position": [
+						2321.6669921875,
+						1019.92401123047
+					],
+					"priority": 0,
+					"spatial": true,
+					"volume_db": -15.0
+				}
+			],
+			"name": "Real one-way shelf run emits muted paper contacts",
+			"passed": true
+		},
+		{
+			"detail": [
+				"res://assets/audio/m28/soft_step_paper_1.wav",
+				"res://assets/audio/m28/soft_step_paper_2.wav",
+				"res://assets/audio/m28/soft_step_paper_3.wav"
+			],
+			"name": "Actual paper run cycles all three source variants",
+			"passed": true
+		},
+		{
+			"detail": null,
+			"name": "Every footstep originates at a recorded actual hero-foot position",
+			"passed": true
+		},
+		{
+			"detail": null,
+			"name": "Moving through the air emits no footsteps",
+			"passed": true
+		},
+		{
+			"detail": null,
+			"name": "Actual jump still produces its nonvocal physical cue",
+			"passed": true
+		},
+		{
+			"detail": null,
+			"name": "Pause freezes movement and emits no new contacts",
+			"passed": true
+		},
+		{
+			"detail": null,
+			"name": "Existing gameplay audio is paused with the world",
+			"passed": true
+		},
+		{
+			"detail": null,
+			"name": "Actual sword strike retains one ordinary sword cue",
+			"passed": true
+		},
+		{
+			"detail": [],
+			"name": "No hero voice plays during run, jump, sword or pause",
+			"passed": true
+		}
+	],
+	"command": "DISPLAY=:95 XDG_DATA_HOME=/workspace/work/m28_steps_userdata godot --path /workspace/-2d --rendering-method gl_compatibility --audio-driver Dummy --script res://tools/test_m28_steps.gd",
+	"configured_start_positions": true,
+	"engine": "4.7.2-stable (official)",
+	"failed": 0,
+	"human_listening_claim": false,
+	"normal_gameplay_saves_touched": false,
+	"observations": {
+		"final_event_counts": {
+			"footstep_paper": 12,
+			"footstep_stone": 10,
+			"jump": 1,
+			"land": 1,
+			"swing": 1
+		},
+		"hero_vocal_events": [],
+		"native_stone_run_mix": {
+			"clipped_frames": 0,
+			"peak": 0.0376247353851795,
+			"rms": 0.00324888839851671,
+			"sample_rate": 44100.0,
+			"stereo_frames": 261632
+		},
+		"paper_run": [
+			{
+				"category": "effects",
+				"clock": 10.0833333333333,
+				"cue": "footstep_paper",
+				"duration": 0.151,
+				"path": "res://assets/audio/m28/soft_step_paper_1.wav",
+				"pitch_scale": 0.970000028610229,
+				"position": [
+					2397.50024414062,
+					1019.92401123047
+				],
+				"priority": 0,
+				"spatial": true,
+				"volume_db": -15.0
+			},
+			{
+				"category": "effects",
+				"clock": 10.3666666666667,
+				"cue": "footstep_paper",
+				"duration": 0.157,
+				"path": "res://assets/audio/m28/soft_step_paper_2.wav",
+				"pitch_scale": 1.00240004062653,
+				"position": [
+					2477.50024414062,
+					1019.92401123047
+				],
+				"priority": 0,
+				"spatial": true,
+				"volume_db": -15.0
+			},
+			{
+				"category": "effects",
+				"clock": 10.4926556666667,
+				"cue": "footstep_paper",
+				"duration": 0.162979166666667,
+				"path": "res://assets/audio/m28/soft_step_paper_3.wav",
+				"pitch_scale": 0.974200010299683,
+				"position": [
+					2517.50024414062,
+					1019.92523193359
+				],
+				"priority": 0,
+				"spatial": true,
+				"volume_db": -15.0
+			},
+			{
+				"category": "effects",
+				"clock": 10.75,
+				"cue": "footstep_paper",
+				"duration": 0.151,
+				"path": "res://assets/audio/m28/soft_step_paper_1.wav",
+				"pitch_scale": 1.00059998035431,
+				"position": [
+					2597.50024414062,
+					1019.92523193359
+				],
+				"priority": 0,
+				"spatial": true,
+				"volume_db": -15.0
+			},
+			{
+				"category": "effects",
+				"clock": 11.0333333333333,
+				"cue": "footstep_paper",
+				"duration": 0.157,
+				"path": "res://assets/audio/m28/soft_step_paper_2.wav",
+				"pitch_scale": 0.972400009632111,
+				"position": [
+					2677.50024414062,
+					1019.92523193359
+				],
+				"priority": 0,
+				"spatial": true,
+				"volume_db": -15.0
+			},
+			{
+				"category": "effects",
+				"clock": 11.1666666666667,
+				"cue": "footstep_paper",
+				"duration": 0.162979166666667,
+				"path": "res://assets/audio/m28/soft_step_paper_3.wav",
+				"pitch_scale": 1.00479996204376,
+				"position": [
+					2717.50024414062,
+					1019.92523193359
+				],
+				"priority": 0,
+				"spatial": true,
+				"volume_db": -15.0
+			},
+			{
+				"category": "effects",
+				"clock": 11.8166666666667,
+				"cue": "footstep_paper",
+				"duration": 0.151,
+				"path": "res://assets/audio/m28/soft_step_paper_1.wav",
+				"pitch_scale": 0.970600008964539,
+				"position": [
+					2641.6669921875,
+					1019.92523193359
+				],
+				"priority": 0,
+				"spatial": true,
+				"volume_db": -15.0
+			},
+			{
+				"category": "effects",
+				"clock": 12.099725,
+				"cue": "footstep_paper",
+				"duration": 0.157,
+				"path": "res://assets/audio/m28/soft_step_paper_2.wav",
+				"pitch_scale": 1.00300002098083,
+				"position": [
+					2561.6669921875,
+					1019.92523193359
+				],
+				"priority": 0,
+				"spatial": true,
+				"volume_db": -15.0
+			},
+			{
+				"category": "effects",
+				"clock": 12.2213743333333,
+				"cue": "footstep_paper",
+				"duration": 0.162979166666667,
+				"path": "res://assets/audio/m28/soft_step_paper_3.wav",
+				"pitch_scale": 0.974799990653992,
+				"position": [
+					2521.6669921875,
+					1019.92523193359
+				],
+				"priority": 0,
+				"spatial": true,
+				"volume_db": -15.0
+			},
+			{
+				"category": "effects",
+				"clock": 12.4865906666667,
+				"cue": "footstep_paper",
+				"duration": 0.151,
+				"path": "res://assets/audio/m28/soft_step_paper_1.wav",
+				"pitch_scale": 1.00119996070862,
+				"position": [
+					2441.6669921875,
+					1019.92401123047
+				],
+				"priority": 0,
+				"spatial": true,
+				"volume_db": -15.0
+			},
+			{
+				"category": "effects",
+				"clock": 12.7666666666667,
+				"cue": "footstep_paper",
+				"duration": 0.157,
+				"path": "res://assets/audio/m28/soft_step_paper_2.wav",
+				"pitch_scale": 0.97299998998642,
+				"position": [
+					2361.6669921875,
+					1019.92401123047
+				],
+				"priority": 0,
+				"spatial": true,
+				"volume_db": -15.0
+			},
+			{
+				"category": "effects",
+				"clock": 12.8928183333333,
+				"cue": "footstep_paper",
+				"duration": 0.162979166666667,
+				"path": "res://assets/audio/m28/soft_step_paper_3.wav",
+				"pitch_scale": 1.00539994239807,
+				"position": [
+					2321.6669921875,
+					1019.92401123047
+				],
+				"priority": 0,
+				"spatial": true,
+				"volume_db": -15.0
+			}
+		],
+		"stone_run": [
+			{
+				"category": "effects",
+				"clock": 6.35004133333334,
+				"cue": "footstep_stone",
+				"duration": 0.151,
+				"path": "res://assets/audio/m28/soft_step_stone_1.wav",
+				"pitch_scale": 0.970000028610229,
+				"position": [
+					1177.49987792969,
+					1259.92529296875
+				],
+				"priority": 0,
+				"spatial": true,
+				"volume_db": -14.0
+			},
+			{
+				"category": "effects",
+				"clock": 6.62729433333334,
+				"cue": "footstep_stone",
+				"duration": 0.157,
+				"path": "res://assets/audio/m28/soft_step_stone_2.wav",
+				"pitch_scale": 1.00240004062653,
+				"position": [
+					1257.49987792969,
+					1259.92529296875
+				],
+				"priority": 0,
+				"spatial": true,
+				"volume_db": -14.0
+			},
+			{
+				"category": "effects",
+				"clock": 6.75788966666667,
+				"cue": "footstep_stone",
+				"duration": 0.162979166666667,
+				"path": "res://assets/audio/m28/soft_step_stone_3.wav",
+				"pitch_scale": 0.974200010299683,
+				"position": [
+					1297.49987792969,
+					1259.92529296875
+				],
+				"priority": 0,
+				"spatial": true,
+				"volume_db": -14.0
+			},
+			{
+				"category": "effects",
+				"clock": 7.02139466666667,
+				"cue": "footstep_stone",
+				"duration": 0.151,
+				"path": "res://assets/audio/m28/soft_step_stone_1.wav",
+				"pitch_scale": 1.00059998035431,
+				"position": [
+					1377.49987792969,
+					1259.92529296875
+				],
+				"priority": 0,
+				"spatial": true,
+				"volume_db": -14.0
+			},
+			{
+				"category": "effects",
+				"clock": 7.29785866666667,
+				"cue": "footstep_stone",
+				"duration": 0.157,
+				"path": "res://assets/audio/m28/soft_step_stone_2.wav",
+				"pitch_scale": 0.972400009632111,
+				"position": [
+					1457.49987792969,
+					1259.92529296875
+				],
+				"priority": 0,
+				"spatial": true,
+				"volume_db": -14.0
+			},
+			{
+				"category": "effects",
+				"clock": 7.41666666666667,
+				"cue": "footstep_stone",
+				"duration": 0.162979166666667,
+				"path": "res://assets/audio/m28/soft_step_stone_3.wav",
+				"pitch_scale": 1.00479996204376,
+				"position": [
+					1497.49987792969,
+					1259.92529296875
+				],
+				"priority": 0,
+				"spatial": true,
+				"volume_db": -14.0
+			},
+			{
+				"category": "effects",
+				"clock": 7.69013,
+				"cue": "footstep_stone",
+				"duration": 0.151,
+				"path": "res://assets/audio/m28/soft_step_stone_1.wav",
+				"pitch_scale": 0.970600008964539,
+				"position": [
+					1577.49987792969,
+					1259.92529296875
+				],
+				"priority": 0,
+				"spatial": true,
+				"volume_db": -14.0
+			},
+			{
+				"category": "effects",
+				"clock": 7.83333333333333,
+				"cue": "footstep_stone",
+				"duration": 0.157,
+				"path": "res://assets/audio/m28/soft_step_stone_2.wav",
+				"pitch_scale": 1.00300002098083,
+				"position": [
+					1617.49987792969,
+					1259.92529296875
+				],
+				"priority": 0,
+				"spatial": true,
+				"volume_db": -14.0
+			},
+			{
+				"category": "effects",
+				"clock": 8.08333333333333,
+				"cue": "footstep_stone",
+				"duration": 0.162979166666667,
+				"path": "res://assets/audio/m28/soft_step_stone_3.wav",
+				"pitch_scale": 0.974799990653992,
+				"position": [
+					1697.49987792969,
+					1259.92529296875
+				],
+				"priority": 0,
+				"spatial": true,
+				"volume_db": -14.0
+			},
+			{
+				"category": "effects",
+				"clock": 8.35,
+				"cue": "footstep_stone",
+				"duration": 0.151,
+				"path": "res://assets/audio/m28/soft_step_stone_1.wav",
+				"pitch_scale": 1.00119996070862,
+				"position": [
+					1777.49987792969,
+					1259.92529296875
+				],
+				"priority": 0,
+				"spatial": true,
+				"volume_db": -14.0
+			}
+		]
+	},
+	"originality": "Six original synthesized files; no Hollow Knight audio sampled",
+	"passed": 49,
+	"scope": "M28 original soft run contacts, independent native world and PCM audit",
+	"total": 49
+}

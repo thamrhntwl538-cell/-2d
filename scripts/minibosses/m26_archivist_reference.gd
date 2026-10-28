@@ -94,6 +94,16 @@ func _ready() -> void:
 	button("عرض المعركة / C",Vector2(806,660),Vector2(200,30),start_sequence)
 	button("تجربة القتال / Enter",Vector2(1013,660),Vector2(230,30),open_trial)
 	select_animation("idle")
+	if get_tree().has_meta("m28_studio_return"):
+		button("العودة للمكتبة / Esc",Vector2(20,684),Vector2(260,29),_return_to_journey)
+
+func _return_to_journey() -> void:
+	if not get_tree().has_meta("m28_studio_return"): return
+	var destination:=str(get_tree().get_meta("m28_studio_return"))
+	if destination!="res://scenes/stage_01/folding_library_m28.tscn": return
+	get_tree().remove_meta("m28_studio_return")
+	sound.stop_all()
+	get_tree().change_scene_to_file(destination)
 
 func _draw() -> void:
 	draw_rect(Rect2(299,99,963,466),Color("120d09"))
@@ -216,6 +226,10 @@ func open_trial() -> void:
 	get_tree().change_scene_to_file(TRIAL)
 
 func _unhandled_input(event: InputEvent) -> void:
+	if get_tree().has_meta("m28_studio_return"):
+		if (event is InputEventKey and event.pressed and event.keycode==KEY_ESCAPE) or (event is InputEventJoypadButton and event.pressed and event.button_index==JOY_BUTTON_BACK):
+			_return_to_journey()
+			return
 	if event is InputEventKey and event.pressed and not event.echo:
 		match event.keycode:
 			KEY_SPACE: set_paused(not paused)

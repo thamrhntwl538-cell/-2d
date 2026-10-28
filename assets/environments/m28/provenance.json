@@ -1,0 +1,40 @@
+{
+  "asset": "margin_exchange.png",
+  "source": "OpenAI image_gen original environment generated for this project",
+  "source_path": "/workspace/generated_images/exec-77c528fc-4c88-4ff3-98bf-6204f7484b4a.png",
+  "sha256": "101f842d3b9458e0d52265a3de5cd8c97cc066f176c3d7efe28cccbb641606ff",
+  "source_size": [
+    1672,
+    941
+  ],
+  "painted_floor_y": 700.0,
+  "world_floor_y": 1260.0,
+  "scale": 0.8,
+  "world_x": 1266.0,
+  "world_y": 700.0,
+  "characters_or_text": false,
+  "purpose": "Close side-on bookshop facade; empty foreground. Approved hero and bosses unchanged.",
+  "bell_bound_arch": {
+    "asset": "bell_bound_arch.png",
+    "source": "OpenAI image_gen original isolated environment architecture generated for this project",
+    "source_path": "/workspace/generated_images/exec-f1ce939b-d62b-4f67-91d9-bd467689f626.png",
+    "sha256": "96a0a6c3b2667e0310b48a62570ff06c600a6b06b83e743f11e2ac2bcf1f41f0",
+    "image_size": [
+      1457,
+      1079
+    ],
+    "alpha_128_bbox": [
+      28,
+      25,
+      1429,
+      1020
+    ],
+    "source_baseline_y": 1018.0,
+    "source_center_x": 728.5,
+    "world_center_x": 1000.0,
+    "world_floor_y": 1260.0,
+    "scale": 0.39,
+    "characters_or_text": false,
+    "physics_changed": false
+  }
+}

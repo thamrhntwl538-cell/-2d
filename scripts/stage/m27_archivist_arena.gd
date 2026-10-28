@@ -45,13 +45,14 @@ func _ready() -> void:
 func setup() -> void:
 	if is_instance_valid(background):
 		return
-	var source := Image.load_from_file(BACKDROP_PATH)
+	# Use the imported texture in both editor runs and exported projects.
+	var source := load(BACKDROP_PATH) as Texture2D
 	if source == null:
 		push_error("Archive Keeper arena background could not be read")
 		return
 	background = Sprite2D.new()
 	background.name = "SealedCatalogVault"
-	background.texture = ImageTexture.create_from_image(source)
+	background.texture = source
 	background.centered = false
 	background.position = Vector2(WORLD_LEFT,ART_TOP)
 	background.scale = Vector2.ONE * ART_SCALE

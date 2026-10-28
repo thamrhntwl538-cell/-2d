@@ -1,0 +1,6 @@
+{
+	"checks": 42,
+	"engine": "4.7.2-stable (official)",
+	"failures": [],
+	"scope": "Native actual door/world transitions; controlled death/damage fixtures for transaction QA, not a full human-played victory."
+}

@@ -1,0 +1,195 @@
+{
+	"checks": [
+		{
+			"detail": null,
+			"name": "New inventory starts with no purchases",
+			"passed": true
+		},
+		{
+			"detail": null,
+			"name": "Insufficient coins leave tool and wallet untouched",
+			"passed": true
+		},
+		{
+			"detail": null,
+			"name": "Failed purchase leaves every combat field unchanged",
+			"passed": true
+		},
+		{
+			"detail": null,
+			"name": "Atlas is bought for exactly 24 collected coins",
+			"passed": true
+		},
+		{
+			"detail": null,
+			"name": "Repeated confirmation cannot charge twice",
+			"passed": true
+		},
+		{
+			"detail": null,
+			"name": "Atlas survives real JSON save roundtrip",
+			"passed": true
+		},
+		{
+			"detail": null,
+			"name": "Pagefinder has an independent once-only receipt",
+			"passed": true
+		},
+		{
+			"detail": null,
+			"name": "Death drops coins while keeping purchased tools",
+			"passed": true
+		},
+		{
+			"detail": null,
+			"name": "Purchased tools leave original lost-coin recovery unchanged",
+			"passed": true
+		},
+		{
+			"detail": null,
+			"name": "World-acquired fitil is owned without charging at market",
+			"passed": true
+		},
+		{
+			"detail": null,
+			"name": "Stillness purchase acquires the real existing fitil",
+			"passed": true
+		},
+		{
+			"detail": null,
+			"name": "Buying a fitil never equips it or grants its effect away from a bench",
+			"passed": true
+		},
+		{
+			"detail": null,
+			"name": "Purchased fitil uses unchanged bench-only equip and actual healing effect",
+			"passed": true
+		},
+		{
+			"detail": null,
+			"name": "Spare ring expands actual capacity once",
+			"passed": true
+		},
+		{
+			"detail": null,
+			"name": "Ring cannot sell again after sanitize/re-entry",
+			"passed": true
+		},
+		{
+			"detail": null,
+			"name": "Capacity receipt prevents reselling when progress block is missing",
+			"passed": true
+		},
+		{
+			"detail": null,
+			"name": "Capacity technical ceiling rejects transaction without charging",
+			"passed": true
+		},
+		{
+			"detail": null,
+			"name": "Full durable-claim ledger cannot consume coins",
+			"passed": true
+		},
+		{
+			"detail": null,
+			"name": "Malformed and duplicate purchase IDs are normalized",
+			"passed": true
+		},
+		{
+			"detail": null,
+			"name": "UI catalog cannot mutate canonical prices",
+			"passed": true
+		},
+		{
+			"detail": null,
+			"name": "Unknown item never mutates progression or wallet",
+			"passed": true
+		},
+		{
+			"detail": null,
+			"name": "Basic map opens before any purchase",
+			"passed": true
+		},
+		{
+			"detail": null,
+			"name": "Native market presents all five real offers",
+			"passed": true
+		},
+		{
+			"detail": null,
+			"name": "Unaffordable offer remains reachable by controller and keyboard",
+			"passed": true
+		},
+		{
+			"detail": null,
+			"name": "Shop scroll follows controller focus to offers below the fold",
+			"passed": true
+		},
+		{
+			"detail": null,
+			"name": "Shop button emits item identity to world transaction owner",
+			"passed": true
+		},
+		{
+			"detail": null,
+			"name": "Insufficient-funds response remains visible in fixed footer",
+			"passed": true
+		},
+		{
+			"detail": null,
+			"name": "Market names and offers switch to English",
+			"passed": true
+		},
+		{
+			"detail": null,
+			"name": "Bought atlas enables live discovered-room survey markers",
+			"passed": true
+		},
+		{
+			"detail": null,
+			"name": "Purchased needle points toward nearby unread page",
+			"passed": true
+		},
+		{
+			"detail": null,
+			"name": "Reading target removes it from needle guidance",
+			"passed": true
+		},
+		{
+			"detail": null,
+			"name": "Combat suppresses exploration needle",
+			"passed": true
+		},
+		{
+			"detail": null,
+			"name": "Journal suppresses exploration needle",
+			"passed": true
+		},
+		{
+			"detail": null,
+			"name": "Needle does not reveal distant pages across entire room",
+			"passed": true
+		},
+		{
+			"detail": null,
+			"name": "Pause routes to current character/trial studio",
+			"passed": true
+		},
+		{
+			"detail": null,
+			"name": "M28 world status replaces archived Bell build caption",
+			"passed": true
+		},
+		{
+			"detail": null,
+			"name": "World control hint documents new shelf drop",
+			"passed": true
+		}
+	],
+	"engine": "4.7.2-stable (official)",
+	"existing_gameplay_saves_touched": false,
+	"failed": 0,
+	"passed": 37,
+	"scope": "M28 shop transactions and native HUD",
+	"total": 37
+}

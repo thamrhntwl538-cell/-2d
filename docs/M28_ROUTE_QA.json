@@ -1,0 +1,890 @@
+{
+  "checks": 283,
+  "engine": "4.7.2-stable (official)",
+  "failures": [],
+  "passed": 283,
+  "physics_ticks": 2845,
+  "rendering": "headless",
+  "samples": [
+    {
+      "actual_input": true,
+      "apex_y": 1114.25732421875,
+      "dash_requested": false,
+      "dash_started": false,
+      "kind": "native_jump",
+      "landing": [
+        884.000427246094,
+        1177.97485351562
+      ],
+      "passed": true,
+      "room": 1,
+      "stage": "fresh starter route without progression injection",
+      "start": [
+        790.000183105469,
+        1259.92529296875
+      ],
+      "target": [
+        885.0,
+        1178.0
+      ]
+    },
+    {
+      "actual_input": true,
+      "apex_y": 1107.86657714844,
+      "dash_requested": false,
+      "dash_started": false,
+      "kind": "native_jump",
+      "landing": [
+        1078.51159667969,
+        1139.96765136719
+      ],
+      "passed": true,
+      "room": 1,
+      "stage": "fresh starter route without progression injection",
+      "start": [
+        976.500427246094,
+        1259.98315429688
+      ],
+      "target": [
+        1080.0,
+        1140.0
+      ]
+    },
+    {
+      "actual_input": true,
+      "apex_y": 1114.25732421875,
+      "dash_requested": false,
+      "dash_started": false,
+      "kind": "native_jump",
+      "landing": [
+        2030.92529296875,
+        1139.92529296875
+      ],
+      "passed": true,
+      "room": 1,
+      "stage": "fresh starter route without progression injection",
+      "start": [
+        1931.51171875,
+        1259.92529296875
+      ],
+      "target": [
+        2040.0,
+        1140.0
+      ]
+    },
+    {
+      "actual_input": true,
+      "apex_y": 994.25732421875,
+      "dash_requested": false,
+      "dash_started": false,
+      "kind": "native_jump",
+      "landing": [
+        2334.75927734375,
+        1019.92401123047
+      ],
+      "passed": true,
+      "room": 1,
+      "stage": "fresh starter route without progression injection",
+      "start": [
+        2174.75903320312,
+        1139.92529296875
+      ],
+      "target": [
+        2350.0,
+        1020.0
+      ]
+    },
+    {
+      "actual_input": true,
+      "blade_owned": true,
+      "combat_bypass": false,
+      "dash_owned": true,
+      "hp": 6,
+      "kind": "fresh_starter",
+      "room": 2,
+      "stage": "fresh starter route without progression injection"
+    },
+    {
+      "fixture": true,
+      "kind": "room_setup",
+      "objects": 6,
+      "platform_nodes": 6,
+      "room": 1,
+      "spawn": [
+        180.0,
+        1260.0
+      ],
+      "stage": "configured fifteen-room scene/support matrix",
+      "supported": [
+        180.0,
+        1260.0
+      ]
+    },
+    {
+      "fixture": true,
+      "kind": "room_setup",
+      "objects": 5,
+      "platform_nodes": 7,
+      "room": 2,
+      "spawn": [
+        180.0,
+        1260.0
+      ],
+      "stage": "configured fifteen-room scene/support matrix",
+      "supported": [
+        180.0,
+        1260.0
+      ]
+    },
+    {
+      "fixture": true,
+      "kind": "room_setup",
+      "objects": 4,
+      "platform_nodes": 11,
+      "room": 3,
+      "spawn": [
+        180.0,
+        1260.0
+      ],
+      "stage": "configured fifteen-room scene/support matrix",
+      "supported": [
+        180.0,
+        1260.0
+      ]
+    },
+    {
+      "fixture": true,
+      "kind": "room_setup",
+      "objects": 4,
+      "platform_nodes": 2,
+      "room": 4,
+      "spawn": [
+        180.0,
+        1260.0
+      ],
+      "stage": "configured fifteen-room scene/support matrix",
+      "supported": [
+        180.0,
+        1260.0
+      ]
+    },
+    {
+      "fixture": true,
+      "kind": "room_setup",
+      "objects": 6,
+      "platform_nodes": 7,
+      "room": 5,
+      "spawn": [
+        180.0,
+        1260.0
+      ],
+      "stage": "configured fifteen-room scene/support matrix",
+      "supported": [
+        180.0,
+        1260.0
+      ]
+    },
+    {
+      "fixture": true,
+      "kind": "room_setup",
+      "objects": 10,
+      "platform_nodes": 23,
+      "room": 6,
+      "spawn": [
+        180.0,
+        2700.0
+      ],
+      "stage": "configured fifteen-room scene/support matrix",
+      "supported": [
+        180.0,
+        2700.0
+      ]
+    },
+    {
+      "fixture": true,
+      "kind": "room_setup",
+      "objects": 3,
+      "platform_nodes": 7,
+      "room": 7,
+      "spawn": [
+        180.0,
+        1260.0
+      ],
+      "stage": "configured fifteen-room scene/support matrix",
+      "supported": [
+        180.0,
+        1260.0
+      ]
+    },
+    {
+      "fixture": true,
+      "kind": "room_setup",
+      "objects": 2,
+      "platform_nodes": 8,
+      "room": 8,
+      "spawn": [
+        180.0,
+        1260.0
+      ],
+      "stage": "configured fifteen-room scene/support matrix",
+      "supported": [
+        180.0,
+        1260.0
+      ]
+    },
+    {
+      "fixture": true,
+      "kind": "room_setup",
+      "objects": 2,
+      "platform_nodes": 7,
+      "room": 9,
+      "spawn": [
+        180.0,
+        1260.0
+      ],
+      "stage": "configured fifteen-room scene/support matrix",
+      "supported": [
+        180.0,
+        1260.0
+      ]
+    },
+    {
+      "fixture": true,
+      "kind": "room_setup",
+      "objects": 3,
+      "platform_nodes": 7,
+      "room": 10,
+      "spawn": [
+        180.0,
+        1260.0
+      ],
+      "stage": "configured fifteen-room scene/support matrix",
+      "supported": [
+        180.0,
+        1260.0
+      ]
+    },
+    {
+      "fixture": true,
+      "kind": "room_setup",
+      "objects": 2,
+      "platform_nodes": 13,
+      "room": 11,
+      "spawn": [
+        180.0,
+        1260.0
+      ],
+      "stage": "configured fifteen-room scene/support matrix",
+      "supported": [
+        180.0,
+        1260.0
+      ]
+    },
+    {
+      "fixture": true,
+      "kind": "room_setup",
+      "objects": 6,
+      "platform_nodes": 2,
+      "room": 12,
+      "spawn": [
+        180.0,
+        1260.0
+      ],
+      "stage": "configured fifteen-room scene/support matrix",
+      "supported": [
+        180.0,
+        1260.0
+      ]
+    },
+    {
+      "fixture": true,
+      "kind": "room_setup",
+      "objects": 3,
+      "platform_nodes": 4,
+      "room": 13,
+      "spawn": [
+        180.0,
+        1260.0
+      ],
+      "stage": "configured fifteen-room scene/support matrix",
+      "supported": [
+        180.0,
+        1260.0
+      ]
+    },
+    {
+      "fixture": true,
+      "kind": "room_setup",
+      "objects": 2,
+      "platform_nodes": 2,
+      "room": 14,
+      "spawn": [
+        180.0,
+        1440.0
+      ],
+      "stage": "configured fifteen-room scene/support matrix",
+      "supported": [
+        180.0,
+        1440.0
+      ]
+    },
+    {
+      "fixture": true,
+      "kind": "room_setup",
+      "objects": 1,
+      "platform_nodes": 4,
+      "room": 15,
+      "spawn": [
+        180.0,
+        1260.0
+      ],
+      "stage": "configured fifteen-room scene/support matrix",
+      "supported": [
+        180.0,
+        1260.0
+      ]
+    },
+    {
+      "actual_interaction": true,
+      "fixture_start": true,
+      "id": "m28_market_bench",
+      "kind": "new_rest_checkpoint",
+      "point": [
+        1804.0,
+        1260.0
+      ],
+      "room": 4,
+      "stage": "new market and vault rest checkpoints",
+      "supported": true
+    },
+    {
+      "actual_interaction": true,
+      "fixture_start": true,
+      "id": "m28_vault_bench",
+      "kind": "new_rest_checkpoint",
+      "point": [
+        2524.0,
+        1860.0
+      ],
+      "room": 6,
+      "stage": "new market and vault rest checkpoints",
+      "supported": true
+    },
+    {
+      "actual_input": true,
+      "apex_y": 1834.26135253906,
+      "dash_requested": false,
+      "dash_started": false,
+      "kind": "native_jump",
+      "landing": [
+        2436.01416015625,
+        1859.92529296875
+      ],
+      "passed": true,
+      "room": 6,
+      "stage": "new market and vault rest checkpoints",
+      "start": [
+        2280.0,
+        1980.0
+      ],
+      "target": [
+        2440.0,
+        1860.0
+      ]
+    },
+    {
+      "actual_input": true,
+      "final": [
+        2705.349609375,
+        1979.92529296875
+      ],
+      "fixture_start": true,
+      "kind": "vault_rest_to_door",
+      "passed": true,
+      "portal_entered": false,
+      "rest_checkpoint": [
+        2524,
+        1860
+      ],
+      "stage": "new market and vault rest checkpoints",
+      "start": [
+        2280,
+        1980
+      ]
+    },
+    {
+      "actual_input": true,
+      "apex_y": 1114.25732421875,
+      "dash_requested": false,
+      "dash_started": false,
+      "kind": "native_jump",
+      "landing": [
+        884.000305175781,
+        1177.97485351562
+      ],
+      "passed": true,
+      "room": 1,
+      "stage": "authored route first_bookstep",
+      "start": [
+        790.000061035156,
+        1259.92529296875
+      ],
+      "target": [
+        885.0,
+        1178.0
+      ]
+    },
+    {
+      "actual_input": true,
+      "final": [
+        976.500305175781,
+        1259.98315429688
+      ],
+      "fixture_start": true,
+      "hp": 6,
+      "id": "first_bookstep",
+      "kind": "authored_route",
+      "passed": true,
+      "room": 1,
+      "stage": "authored route first_bookstep"
+    },
+    {
+      "actual_input": true,
+      "apex_y": 754.261413574219,
+      "dash_requested": false,
+      "dash_started": false,
+      "kind": "native_jump",
+      "landing": [
+        2556.01416015625,
+        813.957885742188
+      ],
+      "passed": true,
+      "room": 2,
+      "stage": "authored route assignment_binding",
+      "start": [
+        2440.0,
+        900.0
+      ],
+      "target": [
+        2556.0,
+        814.0
+      ]
+    },
+    {
+      "actual_input": true,
+      "final": [
+        2678.51391601562,
+        899.991455078125
+      ],
+      "fixture_start": true,
+      "hp": 6,
+      "id": "assignment_binding",
+      "kind": "authored_route",
+      "passed": true,
+      "room": 2,
+      "stage": "authored route assignment_binding"
+    },
+    {
+      "actual_input": true,
+      "apex_y": 634.257385253906,
+      "dash_requested": false,
+      "dash_started": false,
+      "kind": "native_jump",
+      "landing": [
+        2749.0009765625,
+        779.979736328125
+      ],
+      "passed": true,
+      "room": 3,
+      "stage": "authored route ink_lab_vent",
+      "start": [
+        2545.00073242188,
+        779.925231933594
+      ],
+      "target": [
+        2750.0,
+        780.0
+      ]
+    },
+    {
+      "actual_input": true,
+      "final": [
+        2749.0009765625,
+        779.979736328125
+      ],
+      "fixture_start": true,
+      "hp": 6,
+      "id": "ink_lab_vent",
+      "kind": "authored_route",
+      "passed": true,
+      "room": 3,
+      "stage": "authored route ink_lab_vent"
+    },
+    {
+      "actual_input": true,
+      "apex_y": 634.965759277344,
+      "dash_requested": true,
+      "dash_started": true,
+      "kind": "native_jump",
+      "landing": [
+        2678.0009765625,
+        779.925109863281
+      ],
+      "passed": true,
+      "room": 5,
+      "stage": "authored route margin_dash",
+      "start": [
+        2320.00073242188,
+        779.925231933594
+      ],
+      "target": [
+        2710.0,
+        780.0
+      ]
+    },
+    {
+      "actual_input": true,
+      "final": [
+        2705.50122070312,
+        779.925231933594
+      ],
+      "fixture_start": true,
+      "hp": 6,
+      "id": "margin_dash",
+      "kind": "authored_route",
+      "passed": true,
+      "room": 5,
+      "stage": "authored route margin_dash"
+    },
+    {
+      "actual_input": true,
+      "apex_y": 754.261413574219,
+      "dash_requested": false,
+      "dash_started": false,
+      "kind": "native_jump",
+      "landing": [
+        2176.01416015625,
+        809.993835449219
+      ],
+      "passed": true,
+      "room": 7,
+      "stage": "authored route input_binding",
+      "start": [
+        2060.0,
+        900.0
+      ],
+      "target": [
+        2176.0,
+        810.0
+      ]
+    },
+    {
+      "actual_input": true,
+      "final": [
+        2298.51416015625,
+        899.973083496094
+      ],
+      "fixture_start": true,
+      "hp": 6,
+      "id": "input_binding",
+      "kind": "authored_route",
+      "passed": true,
+      "room": 7,
+      "stage": "authored route input_binding"
+    },
+    {
+      "actual_input": true,
+      "apex_y": 1114.25732421875,
+      "dash_requested": false,
+      "dash_started": false,
+      "kind": "native_jump",
+      "landing": [
+        1719.00024414062,
+        1259.97973632812
+      ],
+      "passed": true,
+      "room": 8,
+      "stage": "authored route process_vent",
+      "start": [
+        1515.0,
+        1259.92529296875
+      ],
+      "target": [
+        1720.0,
+        1260.0
+      ]
+    },
+    {
+      "actual_input": true,
+      "final": [
+        1719.00024414062,
+        1259.97973632812
+      ],
+      "fixture_start": true,
+      "hp": 6,
+      "id": "process_vent",
+      "kind": "authored_route",
+      "passed": true,
+      "room": 8,
+      "stage": "authored route process_vent"
+    },
+    {
+      "actual_input": true,
+      "apex_y": 634.965759277344,
+      "dash_requested": true,
+      "dash_started": true,
+      "kind": "native_jump",
+      "landing": [
+        2768.0009765625,
+        779.925109863281
+      ],
+      "passed": true,
+      "room": 9,
+      "stage": "authored route output_dash_latch",
+      "start": [
+        2410.00073242188,
+        779.925231933594
+      ],
+      "target": [
+        2830.0,
+        780.0
+      ]
+    },
+    {
+      "actual_input": true,
+      "final": [
+        2905.50170898438,
+        779.925231933594
+      ],
+      "fixture_start": true,
+      "hp": 6,
+      "id": "output_dash_latch",
+      "kind": "authored_route",
+      "passed": true,
+      "room": 9,
+      "stage": "authored route output_dash_latch"
+    },
+    {
+      "actual_input": true,
+      "apex_y": 754.257385253906,
+      "dash_requested": false,
+      "dash_started": false,
+      "kind": "native_jump",
+      "landing": [
+        2774.00073242188,
+        803.985290527344
+      ],
+      "passed": true,
+      "room": 10,
+      "stage": "authored route counterweight_relay",
+      "start": [
+        2655.00048828125,
+        899.925231933594
+      ],
+      "target": [
+        2775.0,
+        804.0
+      ]
+    },
+    {
+      "actual_input": true,
+      "apex_y": 754.257385253906,
+      "dash_requested": false,
+      "dash_started": false,
+      "kind": "native_jump",
+      "landing": [
+        2775.50048828125,
+        803.985290527344
+      ],
+      "passed": true,
+      "room": 10,
+      "stage": "authored route counterweight_relay",
+      "start": [
+        2894.50073242188,
+        899.925231933594
+      ],
+      "target": [
+        2775.0,
+        804.0
+      ]
+    },
+    {
+      "actual_input": true,
+      "final": [
+        2495.49975585938,
+        899.925231933594
+      ],
+      "fixture_start": true,
+      "hp": 6,
+      "id": "counterweight_relay",
+      "kind": "authored_route",
+      "passed": true,
+      "room": 10,
+      "stage": "authored route counterweight_relay"
+    },
+    {
+      "actual_input": true,
+      "apex_y": 1107.86657714844,
+      "dash_requested": false,
+      "dash_started": false,
+      "kind": "native_jump",
+      "landing": [
+        3049.01416015625,
+        1139.96765136719
+      ],
+      "passed": true,
+      "room": 10,
+      "stage": "authored route relay_return_stair",
+      "start": [
+        3040.0,
+        1260.0
+      ],
+      "target": [
+        3050.0,
+        1140.0
+      ]
+    },
+    {
+      "actual_input": true,
+      "apex_y": 994.25732421875,
+      "dash_requested": false,
+      "dash_started": false,
+      "kind": "native_jump",
+      "landing": [
+        3286.01489257812,
+        1019.92517089844
+      ],
+      "passed": true,
+      "room": 10,
+      "stage": "authored route relay_return_stair",
+      "start": [
+        3134.0146484375,
+        1139.92529296875
+      ],
+      "target": [
+        3290.0,
+        1020.0
+      ]
+    },
+    {
+      "actual_input": true,
+      "apex_y": 867.866516113281,
+      "dash_requested": false,
+      "dash_started": false,
+      "kind": "native_jump",
+      "landing": [
+        3298.681640625,
+        899.967529296875
+      ],
+      "passed": true,
+      "room": 10,
+      "stage": "authored route relay_return_stair",
+      "start": [
+        3289.68139648438,
+        1019.92523193359
+      ],
+      "target": [
+        3300.0,
+        900.0
+      ]
+    },
+    {
+      "actual_input": true,
+      "final": [
+        3298.681640625,
+        899.967529296875
+      ],
+      "fixture_start": true,
+      "hp": 6,
+      "id": "relay_return_stair",
+      "kind": "authored_route",
+      "passed": true,
+      "room": 10,
+      "stage": "authored route relay_return_stair"
+    },
+    {
+      "actual_input": true,
+      "apex_y": 754.965759277344,
+      "dash_requested": true,
+      "dash_started": true,
+      "kind": "native_jump",
+      "landing": [
+        3318.0009765625,
+        899.925109863281
+      ],
+      "passed": true,
+      "room": 11,
+      "stage": "authored route lecture_dash",
+      "start": [
+        2960.00073242188,
+        899.925231933594
+      ],
+      "target": [
+        3360.0,
+        900.0
+      ]
+    },
+    {
+      "actual_input": true,
+      "final": [
+        3355.50122070312,
+        899.925231933594
+      ],
+      "fixture_start": true,
+      "hp": 6,
+      "id": "lecture_dash",
+      "kind": "authored_route",
+      "passed": true,
+      "room": 11,
+      "stage": "authored route lecture_dash"
+    },
+    {
+      "actual_input": true,
+      "apex_y": 1114.26135253906,
+      "dash_requested": false,
+      "dash_started": false,
+      "kind": "native_jump",
+      "landing": [
+        2224.01416015625,
+        1147.98352050781
+      ],
+      "passed": true,
+      "room": 13,
+      "stage": "authored route corrector_last_spine",
+      "start": [
+        2100.0,
+        1260.0
+      ],
+      "target": [
+        2225.0,
+        1148.0
+      ]
+    },
+    {
+      "actual_input": true,
+      "final": [
+        2370.51391601562,
+        1259.990234375
+      ],
+      "fixture_start": true,
+      "hp": 6,
+      "id": "corrector_last_spine",
+      "kind": "authored_route",
+      "passed": true,
+      "room": 13,
+      "stage": "authored route corrector_last_spine"
+    }
+  ],
+  "scope": "Fresh actual-input first-room acquisition and exit. Remaining rooms/challenge starts are labelled configured fixtures with puzzle gates opened for geometry checks; no full campaign win or human difficulty claim.",
+  "source_sha256_after_run": {
+    "tools/test_m28_routes.gd": "9ce0d28b9675b5df6400e7c55871c6103be99861c1c80a008d2ea3f356aacf7b",
+    "scripts/stage/m28_layouts.gd": "d81c94438707a113584634427a7cc11ee768f9b101028f09897e5d7f5fa3e681",
+    "scripts/stage/m28_environment_director.gd": "3e57355ecfd7b5dd3e9b06141b8a914f7093961beaf07f61772b33ec8104bc15",
+    "scripts/combat/m28_player.gd": "e675b0199fcafa49efe72ae4c931eabdb1ab9543a279d3ddbd9d6c002c1dc0ff",
+    "scripts/stage/m28_folding_library.gd": "9e778ee79533d031874145c280724cbf8347b209d5ecd193ca51382f9214f740"
+  },
+  "native_gl_attempt": {
+    "completed": false,
+    "reason": "Stopped the older GL run after ordinary first-room acquisition and transition reached room2, because the lecture fixture was revised during parallel development. No completed GL full-suite pass is claimed. Final 283-check run uses native Godot headless physics."
+  }
+}

@@ -1,0 +1,136 @@
+{
+  "scope": "Real keyboard J hit→11energy, three actual hits→33reserve, heldH→one-lantern Focus in standalone and world-journey native scenes. Safe idle AI opening and initial injury/positions are configured fixtures, not a full boss playthrough. Costs, interruption, insufficientreserve, movement and fullHP negative controls included.",
+  "capture_metadata": [
+    {
+      "actual_held_H": false,
+      "actual_keyboard_hits": 3,
+      "boss_hp": 45,
+      "configured_safe_idle": true,
+      "file": "standalone_01_three_hits_33_glow.jpg",
+      "healing": false,
+      "healing_context": {
+        "heal_block_reason": "",
+        "heal_progress": 0.0,
+        "healing": false
+      },
+      "hero_energy": 33.0,
+      "hero_hp": 5
+    },
+    {
+      "actual_held_H": true,
+      "actual_keyboard_hits": 3,
+      "boss_hp": 45,
+      "configured_safe_idle": true,
+      "file": "standalone_02_holding_H.jpg",
+      "healing": true,
+      "healing_context": {
+        "heal_block_reason": "",
+        "heal_progress": 0.292141396435875,
+        "healing": true
+      },
+      "hero_energy": 0.0,
+      "hero_hp": 5
+    },
+    {
+      "actual_held_H": false,
+      "actual_keyboard_hits": 3,
+      "boss_hp": 45,
+      "configured_safe_idle": true,
+      "file": "standalone_03_lantern_restored.jpg",
+      "healing": false,
+      "healing_context": {
+        "heal_block_reason": "",
+        "heal_progress": 0.0,
+        "healing": false
+      },
+      "hero_energy": 0.0,
+      "hero_hp": 6
+    },
+    {
+      "actual_held_H": false,
+      "actual_keyboard_hits": 3,
+      "boss_hp": 45,
+      "configured_safe_idle": true,
+      "file": "journey_01_three_hits_33_glow.jpg",
+      "healing": false,
+      "healing_context": {
+        "heal_block_reason": "",
+        "heal_progress": 0.0,
+        "healing": false
+      },
+      "hero_energy": 33.0,
+      "hero_hp": 5
+    },
+    {
+      "actual_held_H": true,
+      "actual_keyboard_hits": 3,
+      "boss_hp": 45,
+      "configured_safe_idle": true,
+      "file": "journey_02_holding_H.jpg",
+      "healing": true,
+      "healing_context": {
+        "heal_block_reason": "",
+        "heal_progress": 0.292141396435875,
+        "healing": true
+      },
+      "hero_energy": 0.0,
+      "hero_hp": 5
+    },
+    {
+      "actual_held_H": false,
+      "actual_keyboard_hits": 3,
+      "boss_hp": 45,
+      "configured_safe_idle": true,
+      "file": "journey_03_lantern_restored.jpg",
+      "healing": false,
+      "healing_context": {
+        "heal_block_reason": "",
+        "heal_progress": 0.0,
+        "healing": false
+      },
+      "hero_energy": 0.0,
+      "hero_hp": 6
+    }
+  ],
+  "media_files": [
+    {
+      "path": "previews/m28/focus/journey_01_three_hits_33_glow.jpg",
+      "sha256": "2ab2552f128d1094e4bd40b4e3ec03299a9ff770711656b7408e0794f8a7d183",
+      "bytes": 231661
+    },
+    {
+      "path": "previews/m28/focus/journey_02_holding_H.jpg",
+      "sha256": "22ef6e51d0b5c741d45f7e6dbf4ad172556b02a860c8d4e6f8720f31daf0e0e6",
+      "bytes": 232040
+    },
+    {
+      "path": "previews/m28/focus/journey_03_lantern_restored.jpg",
+      "sha256": "4449abdbda21c3d1c63444b2ee422f0626f4de018cf108d116c537538388e53d",
+      "bytes": 230561
+    },
+    {
+      "path": "previews/m28/focus/standalone_01_three_hits_33_glow.jpg",
+      "sha256": "2ab2552f128d1094e4bd40b4e3ec03299a9ff770711656b7408e0794f8a7d183",
+      "bytes": 231661
+    },
+    {
+      "path": "previews/m28/focus/standalone_02_holding_H.jpg",
+      "sha256": "22ef6e51d0b5c741d45f7e6dbf4ad172556b02a860c8d4e6f8720f31daf0e0e6",
+      "bytes": 232040
+    },
+    {
+      "path": "previews/m28/focus/standalone_03_lantern_restored.jpg",
+      "sha256": "e38e5da10acccd24f3e94ec7614a047ac529eb6f5902837f4754c5083a8db406",
+      "bytes": 230571
+    }
+  ],
+  "source_hashes_after_capture": {
+    "scripts/minibosses/m26_archivist_trial.gd": "ef35e11650eebfae99bfc01fa86762f18645d3ad3b7c326e748120422e9755c3",
+    "scripts/minibosses/m28_archivist_journey.gd": "4a2827147d5d1a8a8dd182c44501c808349f09e4a1bdf19464eac96302d6044d",
+    "scripts/combat/m28_player.gd": "e675b0199fcafa49efe72ae4c931eabdb1ab9543a279d3ddbd9d6c002c1dc0ff",
+    "scripts/combat/m23_player.gd": "fd421f5f8f9b38aede083197e32bb6c864554111c4ea4f7b5302f9c8a6a635c0",
+    "scripts/combat/m20_player.gd": "22fb0da7445feafeaa3b504025235d0dd5200e57472c910cb87ecc185143dd95",
+    "scripts/combat/m18_player.gd": "176d89cd5a91cb1b865cc0b292600e78dd5d5b98f4d0c30e1dfcf78d523f9068",
+    "scripts/ui/m22_combat_display.gd": "a1c9489d9098688cb2ec655ff2a5f60037b2bbf9efcf5caa355e0c08f9c194db"
+  }
+}
