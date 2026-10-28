@@ -56,11 +56,25 @@
       "report": "docs/M28_STUDIO_QA.json",
       "checks": 9,
       "failures": 0
+    },
+    {
+      "report": "docs/M28_SHUTDOWN_QA.json",
+      "checks": 3,
+      "failures": 0
     }
   ],
   "counts_overlap": true,
   "approved_files_unchanged": 866,
   "clean_candidate_runtime_files_matched": 832,
-  "native_media_sources_matched": 835,
-  "scope": "Integrated 15-room world, existing two bosses, traversal and market. Other minibosses/final boss and World Two are not complete. See release QA for the final cosmetic gate change and its targeted checks."
+  "scope": "Integrated 15-room world, existing two bosses, traversal and market. Other minibosses/final boss and World Two are not complete. See release QA for the final cosmetic gate change and its targeted checks.",
+  "native_media_capture_sources_matched": 835,
+  "post_capture_release_source_changes": [
+    {
+      "path": "scripts/stage/m28_folding_library.gd",
+      "captured_source_sha256": "22e429ceb0f74395f3491059e5a3fd2c5dc09deef2d6afcf382897cbebeeeba1",
+      "release_source_sha256": "82a006f2e00e86fe690c8c1696b580eada6f04cde3aa793cd1ad9785b6f675f4",
+      "description": "Only after world exit: inherited audio cleanup followed by a 150ms audio-mixer drain. No changes to recorded movement, combat, drawings or puzzle state.",
+      "captured_source_commit": "a2d0cfaf7c638f10bfb4811097c8995605eb268e"
+    }
+  ]
 }

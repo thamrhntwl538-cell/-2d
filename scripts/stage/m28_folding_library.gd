@@ -196,5 +196,11 @@ func restart_stage() -> void:
 	Journey.remove_session()
 	super.restart_stage()
 
+func _exit_tree() -> void:
+	super._exit_tree()
+	# Let the audio mixing thread release the stopped ambient WAV playback
+	# before Godot destroys resources. This runs only after leaving the world.
+	OS.delay_msec(150)
+
 func get_m28_world_snapshot() -> Dictionary:
 	return {"room":current_room,"save_path":save_path(),"boss_active":boss_active,"bell_defeated":bool(progress.get("miniboss_bell_defeated",false)),"archivist_defeated":bool(progress.get("miniboss_archivist_defeated",false)),"hero_hp":hero.hp,"hero_energy":hero.energy,"wallet":combat_state.wallet,"checkpoint":checkpoint.duplicate(true),"journey_pending":FileAccess.file_exists(Journey.SESSION_PATH),"shop":progress.get("m28_shop",{}),"environment":environment_director.get_environment_snapshot() if is_instance_valid(environment_director) and environment_director.has_method("get_environment_snapshot") else {}}

@@ -84,7 +84,11 @@
       "source_hash_count": 835,
       "source_mismatches": [],
       "sources_unchanged_during_capture": true,
-      "failures": []
+      "failures": [],
+      "source_comparison_scope": "Captured source commit a2d0cfaf7c638f10bfb4811097c8995605eb268e; before final exit-only audio cleanup",
+      "release_source_differences": [
+        "scripts/stage/m28_folding_library.gd"
+      ]
     },
     {
       "path": "previews/m28/gap_movement_capture_metadata.json",
@@ -93,7 +97,11 @@
       "source_hash_count": 835,
       "source_mismatches": [],
       "sources_unchanged_during_capture": true,
-      "failures": []
+      "failures": [],
+      "source_comparison_scope": "Captured source commit a2d0cfaf7c638f10bfb4811097c8995605eb268e; before final exit-only audio cleanup",
+      "release_source_differences": [
+        "scripts/stage/m28_folding_library.gd"
+      ]
     },
     {
       "path": "previews/m28/world_capture_metadata.json",
@@ -102,7 +110,11 @@
       "source_hash_count": 835,
       "source_mismatches": [],
       "sources_unchanged_during_capture": true,
-      "failures": []
+      "failures": [],
+      "source_comparison_scope": "Captured source commit a2d0cfaf7c638f10bfb4811097c8995605eb268e; before final exit-only audio cleanup",
+      "release_source_differences": [
+        "scripts/stage/m28_folding_library.gd"
+      ]
     },
     {
       "path": "previews/m28/native_ui_capture_metadata.json",
@@ -111,7 +123,11 @@
       "source_hash_count": 835,
       "source_mismatches": [],
       "sources_unchanged_during_capture": null,
-      "failures": []
+      "failures": [],
+      "source_comparison_scope": "Captured source commit a2d0cfaf7c638f10bfb4811097c8995605eb268e; before final exit-only audio cleanup",
+      "release_source_differences": [
+        "scripts/stage/m28_folding_library.gd"
+      ]
     }
   ],
   "failures": [],
@@ -129,7 +145,7 @@
     "33_actual_return_bridge_unfolded.jpg",
     "08_bell_gates_locked_fixture.jpg"
   ],
-  "scope": "Frozen-runtime native captures. Fresh movie uses ordinary input from actual opening; gap movie and gallery starts are explicitly configured fixtures. Video exported at60fps is not a hardware performance claim.",
+  "scope": "Frozen-runtime native captures. Fresh movie uses ordinary input from actual opening; gap movie and gallery starts are explicitly configured fixtures. Video exported at60fps is not a hardware performance claim. A later release change only drains the audio mixing thread after world exit; the original captured source fingerprints are retained and the changed path is declared separately.",
   "gate_fixture": {
     "path": "previews/m28/bell_gate_fixture_metadata.json",
     "checks": 22,
@@ -137,5 +153,14 @@
     "sha256": "fa60fcf656c70c4f37ee27b98cfdbf01518c37169da35f5f3e99c161bff3512c",
     "scope": "Configured Bell room/fight-camera fixture; real native rendering plus open/closed gate ray collisions. No fight or victory claim."
   },
-  "success": true
+  "success": true,
+  "post_capture_release_changes": [
+    {
+      "path": "scripts/stage/m28_folding_library.gd",
+      "captured_source_sha256": "22e429ceb0f74395f3491059e5a3fd2c5dc09deef2d6afcf382897cbebeeeba1",
+      "release_source_sha256": "82a006f2e00e86fe690c8c1696b580eada6f04cde3aa793cd1ad9785b6f675f4",
+      "description": "Only after world exit: inherited audio cleanup followed by a 150ms audio-mixer drain. No changes to recorded movement, combat, drawings or puzzle state.",
+      "captured_source_commit": "a2d0cfaf7c638f10bfb4811097c8995605eb268e"
+    }
+  ]
 }

@@ -4,7 +4,7 @@
   "source_runtime_files": 832,
   "runtime_files_match_repository": true,
   "runtime_mismatches": [],
-  "runtime_manifest_sha256": "121deabaafc77b64ec8fd38c02440a737d46be7088009da5c9e4b218e295a3d0",
+  "runtime_manifest_sha256": "02cad92428d4a4af50989b6b8c716043801cbe1fea284fc1d3cfb0418026b5af",
   "tests": [
     {
       "name": "routes",
@@ -97,5 +97,17 @@
     "description": "Only the legacy Bell arena parent self_modulate alpha is zero, suppressing its flat decorative folios. Child gate drawings and native collision behavior remain intact. No layout, combat, or movement changes.",
     "original_regression_runtime_manifest_sha256": "016a81477ac2e9b7163c2a74884a6dcabeb8d4c672351f0f2758946c07fb0faa",
     "verification": "22/22 native focused gate checks plus fresh actual main startup. Earlier283/224/42 logic runs retain their original source digest and were not re-labelled as reruns."
+  },
+  "post_capture_shutdown_cleanup": {
+    "change": {
+      "path": "scripts/stage/m28_folding_library.gd",
+      "captured_source_sha256": "22e429ceb0f74395f3491059e5a3fd2c5dc09deef2d6afcf382897cbebeeeba1",
+      "release_source_sha256": "82a006f2e00e86fe690c8c1696b580eada6f04cde3aa793cd1ad9785b6f675f4",
+      "description": "Only after world exit: inherited audio cleanup followed by a 150ms audio-mixer drain. No changes to recorded movement, combat, drawings or puzzle state.",
+      "captured_source_commit": "a2d0cfaf7c638f10bfb4811097c8995605eb268e"
+    },
+    "previous_runtime_manifest_sha256": "121deabaafc77b64ec8fd38c02440a737d46be7088009da5c9e4b218e295a3d0",
+    "verification": "Actual patched main: forced180frames and normal rootWindow close clean; source runtime files832 matchclean candidate.",
+    "report": "docs/M28_SHUTDOWN_QA.json"
   }
 }

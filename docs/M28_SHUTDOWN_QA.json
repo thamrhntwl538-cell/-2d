@@ -1,0 +1,110 @@
+{
+  "engine": "Godot 4.7.2 native OpenGL / Dummy audio",
+  "checks": 3,
+  "failures": [],
+  "runtime_files_match": 832,
+  "runtime_manifest_sha256": "02cad92428d4a4af50989b6b8c716043801cbe1fea284fc1d3cfb0418026b5af",
+  "change": {
+    "path": "scripts/stage/m28_folding_library.gd",
+    "captured_source_sha256": "22e429ceb0f74395f3491059e5a3fd2c5dc09deef2d6afcf382897cbebeeeba1",
+    "release_source_sha256": "82a006f2e00e86fe690c8c1696b580eada6f04cde3aa793cd1ad9785b6f675f4",
+    "description": "Only after world exit: inherited audio cleanup followed by a 150ms audio-mixer drain. No changes to recorded movement, combat, drawings or puzzle state.",
+    "captured_source_commit": "a2d0cfaf7c638f10bfb4811097c8995605eb268e"
+  },
+  "actual_patched_main_logs": [
+    {
+      "log": "actual_shutdown_fixed.log",
+      "sha256": "052211730d2e6bad1bb27d0ba1621ed54bb0ef792b898c4c8600ed8b3be20a67",
+      "exit_code": 0,
+      "errors": 0,
+      "leak_warnings": 0
+    },
+    {
+      "log": "actual_shutdown_close_fixed.log",
+      "sha256": "93ee15bbac0ebae7d559325be28350a885c22c21a653eed6ba0a0971a1b7d197",
+      "exit_code": 0,
+      "errors": 0,
+      "leak_warnings": 0
+    }
+  ],
+  "diagnosis": {
+    "engine": "Godot4.7.2nativeOpenGLCompatibility",
+    "audio_driver": "Dummy",
+    "gameplay_files_edited": false,
+    "finding": "Atshutdown activeAudioStreamWAVplayback canretainonePlayback+oneWAVresourceuntilmixerprocessesitsstop. Same exactwarning reproduced in minimalambient-only scene withoutgameplaynodes.",
+    "recommendation": "M28worldonly: callinherited_exit_tree(), thenOS.delay_msec(150) beforeenginefreesobjects; prototypecleaninbothnormalandforcedquit.",
+    "tests": [
+      {
+        "log": "/workspace/work/m28_download_validation/diagnostic_verbose.log",
+        "scope": "Unmodified published main; forced180frame exit",
+        "sha256": "a5074b143a8975180c8a01bc9104da7b03d230d825c8d3f72d61599c00440a4a",
+        "leaked_instances": [
+          "AudioStreamPlaybackWAV:9223372100088104715 - Reference count: 1",
+          "AudioStreamWAV:9223372100037773069 - Reference count: 1"
+        ],
+        "resources_still_in_use": [
+          "res://assets/audio/ambient.wav (AudioStreamWAV)"
+        ],
+        "runtime_script_errors": []
+      },
+      {
+        "log": "/workspace/work/m28_download_validation/window_signal_verbose.log",
+        "scope": "Unmodified published main; normal rootWindow close signal after3real-time seconds",
+        "sha256": "c28c419d26790ad19adbbf113aa9beef41aec6bb7b8e3908c056edf8dceca664",
+        "leaked_instances": [
+          "AudioStreamPlaybackWAV:9223372100423649036 - Reference count: 1",
+          "AudioStreamWAV:9223372100373317390 - Reference count: 1"
+        ],
+        "resources_still_in_use": [
+          "res://assets/audio/ambient.wav (AudioStreamWAV)"
+        ],
+        "runtime_script_errors": []
+      },
+      {
+        "log": "/workspace/work/m28_download_validation/minimal_ambient_verbose.log",
+        "scope": "Minimal ambientWAV-onlyplayer; immediate close",
+        "sha256": "716e8fed2fdccb987f9c79809c68f6b37f389e63736329c99b24f19dec248458",
+        "leaked_instances": [
+          "AudioStreamPlaybackWAV:9223372064050644430 - Reference count: 1",
+          "AudioStreamWAV:9223372064000312784 - Reference count: 1"
+        ],
+        "resources_still_in_use": [
+          "res://assets/audio/ambient.wav (AudioStreamWAV)"
+        ],
+        "runtime_script_errors": []
+      },
+      {
+        "log": "/workspace/work/m28_download_validation/minimal_ambient_flush.log",
+        "scope": "Minimal ambientWAV-onlyplayer; stop/null then180ms mixerdrain",
+        "sha256": "7fe6b750460dc96ecee2568b7515bb99a90c7d33a9c69916001166ca47612b82",
+        "leaked_instances": [],
+        "resources_still_in_use": [],
+        "runtime_script_errors": []
+      },
+      {
+        "log": "/workspace/work/m28_download_validation/world_ambient_flush.log",
+        "scope": "Unmodified published main loadedbyexternaldriver; ambientstop+180ms thennormalclose",
+        "sha256": "011adeb616bb7e1af66762eba0362c420e13fd257d167527d8b4a08c74132b1d",
+        "leaked_instances": [],
+        "resources_still_in_use": [],
+        "runtime_script_errors": []
+      },
+      {
+        "log": "/workspace/work/m28_download_validation/world_exit_delay_close.log",
+        "scope": "ExternalderivedM28exit-onlyprototype: inheritedcleanup+OS.delay150ms; normalclose",
+        "sha256": "6551b07172b28163c46b72342ab7ebd208762173012fa8dcb0076fcf3606b902",
+        "leaked_instances": [],
+        "resources_still_in_use": [],
+        "runtime_script_errors": []
+      },
+      {
+        "log": "/workspace/work/m28_download_validation/world_exit_delay_forced.log",
+        "scope": "ExternalderivedM28exit-onlyprototype: inheritedcleanup+OS.delay150ms; forced180frameclose",
+        "sha256": "735f45fba5ba602950269c7d7a7647d78c4ad96b2a3868d720af9096e9897409",
+        "leaked_instances": [],
+        "resources_still_in_use": [],
+        "runtime_script_errors": []
+      }
+    ]
+  }
+}
