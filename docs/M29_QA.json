@@ -1,0 +1,53 @@
+{
+  "milestone": "M29",
+  "engine": "Godot4.7.2Standard",
+  "suites": [
+    {
+      "report": "docs/M29_BENCH_FLOW_QA.json",
+      "checks": 37,
+      "failures": 0
+    },
+    {
+      "report": "docs/M29_BENCH_QA.json",
+      "checks": 73,
+      "failures": 0
+    },
+    {
+      "report": "docs/M29_BENCH_UI_QA.json",
+      "checks": 37,
+      "failures": 0
+    },
+    {
+      "report": "docs/M29_DOOR_SAFETY_QA.json",
+      "checks": 26,
+      "failures": 0
+    },
+    {
+      "report": "docs/M29_ENVIRONMENT_QA.json",
+      "checks": 175,
+      "failures": 0
+    },
+    {
+      "report": "docs/M29_INTERIORS_QA.json",
+      "checks": 39,
+      "failures": 0
+    },
+    {
+      "report": "docs/M29_JOURNEY_QA.json",
+      "checks": 42,
+      "failures": 0
+    },
+    {
+      "report": "docs/M29_PORTAL_FLOW_QA.json",
+      "checks": 41,
+      "failures": 0
+    }
+  ],
+  "counts_overlap": true,
+  "approved_files_unchanged": 866,
+  "clean_candidate_runtime_files_matched": 850,
+  "world_rooms": 15,
+  "ordinary_building_thresholds": 39,
+  "major_building_thresholds": 3,
+  "scope": "Seated rest/loadout; complete buildings and real interiors; existing two bosses only. Configured advanced-room and inventory starts are explicitly documented."
+}

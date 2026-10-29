@@ -1,0 +1,282 @@
+{
+  "engine": "Godot4.7.2 stable official",
+  "renderer": "native X11 OpenGL Compatibility / llvmpipe",
+  "resolution": [
+    1280,
+    720
+  ],
+  "movie_writer_fps": 60,
+  "hardware_performance_claimed": false,
+  "full_campaign_or_boss_victory_claimed": false,
+  "capture_scope": "Explicit initial fixtures followed by unmodified gameplay input. Bench movie omits only initial50 setup frames. Market and Bell begin from declared supported exterior fixture points. No mid-recording hero-position injection. Final source and screenshot hashes independently rechecked.",
+  "instrumentation_note": "First market take was rejected because a synthetic action press after frame_post_draw missed the process-only consumer. Final market uses capture_m29_native.gd to resume the next process phase, and includes this extra tool source SHA. No runtime changes were required.",
+  "metadata_validation": [
+    {
+      "file": "bell_movie_metadata.json",
+      "checks": 5,
+      "failures": [],
+      "sources_unchanged_during_capture": true,
+      "source_count": 854,
+      "current_source_mismatches": [],
+      "current_photo_mismatches": []
+    },
+    {
+      "file": "bench_capture_metadata.json",
+      "checks": 37,
+      "failures": [],
+      "sources_unchanged_during_capture": true,
+      "source_count": 854,
+      "current_source_mismatches": [],
+      "current_photo_mismatches": []
+    },
+    {
+      "file": "market_movie_metadata.json",
+      "checks": 13,
+      "failures": [],
+      "sources_unchanged_during_capture": true,
+      "source_count": 855,
+      "current_source_mismatches": [],
+      "current_photo_mismatches": []
+    },
+    {
+      "file": "portal_capture_metadata.json",
+      "checks": 41,
+      "failures": [],
+      "sources_unchanged_during_capture": true,
+      "source_count": 854,
+      "current_source_mismatches": [],
+      "current_photo_mismatches": []
+    }
+  ],
+  "videos": [
+    {
+      "file": "40_rest_and_loadout.mp4",
+      "sha256": "3c9e915b03f44519aac325d655953c6424dce8f7fa3bfd6440c00d45a964964d",
+      "bytes": 827124,
+      "probe": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "h264",
+            "codec_type": "video",
+            "width": 1280,
+            "height": 720,
+            "r_frame_rate": "60/1"
+          },
+          {
+            "codec_name": "aac",
+            "codec_type": "audio",
+            "sample_rate": "48000",
+            "channels": 2,
+            "r_frame_rate": "0/0"
+          }
+        ],
+        "format": {
+          "duration": "4.933333",
+          "size": "827124"
+        }
+      },
+      "decode_errors": "",
+      "native_start_trim_seconds": 0.8333333333333334,
+      "native_pcm": {
+        "sample_values": 473600,
+        "peak_linear": 0.280487060546875,
+        "rms_linear": 0.01743688754182132,
+        "sample_values_at_or_over_full_scale": 0
+      },
+      "aac_decoded_pcm": {
+        "sample_values": 475136,
+        "peak_linear": 0.28141626715660095,
+        "rms_linear": 0.017367928438611336,
+        "sample_values_at_or_over_full_scale": 0
+      },
+      "audio_replaced": false
+    },
+    {
+      "file": "41_enter_market.mp4",
+      "sha256": "c0e689a320ff1ace1a9ebb8cce9493cea93a9f94923fb254341f57a808e4889e",
+      "bytes": 2514521,
+      "probe": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "h264",
+            "codec_type": "video",
+            "width": 1280,
+            "height": 720,
+            "r_frame_rate": "60/1"
+          },
+          {
+            "codec_name": "aac",
+            "codec_type": "audio",
+            "sample_rate": "48000",
+            "channels": 2,
+            "r_frame_rate": "0/0"
+          }
+        ],
+        "format": {
+          "duration": "13.516667",
+          "size": "2514521"
+        }
+      },
+      "decode_errors": "",
+      "native_start_trim_seconds": 0,
+      "native_pcm": {
+        "sample_values": 1297600,
+        "peak_linear": 0.28753662109375,
+        "rms_linear": 0.01704746325222087,
+        "sample_values_at_or_over_full_scale": 0
+      },
+      "aac_decoded_pcm": {
+        "sample_values": 1298432,
+        "peak_linear": 0.2930886745452881,
+        "rms_linear": 0.017203094644031133,
+        "sample_values_at_or_over_full_scale": 0
+      },
+      "audio_replaced": false
+    },
+    {
+      "file": "42_enter_bindery.mp4",
+      "sha256": "f162b8e3cf91d7c3b6dce97d5ef21b0f2882c119bc97e541bca3f0fb9df8f744",
+      "bytes": 1717279,
+      "probe": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "h264",
+            "codec_type": "video",
+            "width": 1280,
+            "height": 720,
+            "r_frame_rate": "60/1"
+          },
+          {
+            "codec_name": "aac",
+            "codec_type": "audio",
+            "sample_rate": "48000",
+            "channels": 2,
+            "r_frame_rate": "0/0"
+          }
+        ],
+        "format": {
+          "duration": "7.066667",
+          "size": "1717279"
+        }
+      },
+      "decode_errors": "",
+      "native_start_trim_seconds": 0,
+      "native_pcm": {
+        "sample_values": 678400,
+        "peak_linear": 0.13385009765625,
+        "rms_linear": 0.014245271716220436,
+        "sample_values_at_or_over_full_scale": 0
+      },
+      "aac_decoded_pcm": {
+        "sample_values": 679936,
+        "peak_linear": 0.1338631510734558,
+        "rms_linear": 0.014208096388312816,
+        "sample_values_at_or_over_full_scale": 0
+      },
+      "audio_replaced": false
+    }
+  ],
+  "stills": [
+    {
+      "file": "01_before_bench_rest.jpg",
+      "bytes": 208107,
+      "sha256": "006d1d9ef23839aeecbd272bed197c0adb578a5397e71749bf79b5f4ac6e6a8d"
+    },
+    {
+      "file": "02_seated_bench.jpg",
+      "bytes": 189411,
+      "sha256": "f6e707a0c1b0e6dd078c6e3522c3e563c3304862f7abadf666a9f7c34ca477a0"
+    },
+    {
+      "file": "03_seated_fitils_menu.jpg",
+      "bytes": 164915,
+      "sha256": "41e2424dd09880ec9e77254592ab0a3c1c95278e40519767153afe1157b44a22"
+    },
+    {
+      "file": "04_seated_inventory_tab.jpg",
+      "bytes": 156289,
+      "sha256": "abaca62b11ada55708ebe60b31e11195b1d2e956aa85293ed4c58c0ee22114a1"
+    },
+    {
+      "file": "05_menu_closed_still_seated.jpg",
+      "bytes": 190051,
+      "sha256": "84714911033b57cdcf1d1169db8ca5e0cb84eee06760e47ca85e4c2fafd51217"
+    },
+    {
+      "file": "06_stood_and_resumed.jpg",
+      "bytes": 203209,
+      "sha256": "1b99d9051cf9788c74e5e162d52e85842fec9851b9ffc7f6b3b2046090838b20"
+    },
+    {
+      "file": "10_market_building_outside.jpg",
+      "bytes": 325078,
+      "sha256": "90e4c3d3aed9893008bd4a175cc8d9cb684fb526557a3a8d989f0f9a73703e90"
+    },
+    {
+      "file": "11_market_inside.jpg",
+      "bytes": 260164,
+      "sha256": "4f83ff7f986da081082333b6d9afa94c9bd54948e2cbd73b01ea8354d2bf5161"
+    },
+    {
+      "file": "12_market_inside_rest.jpg",
+      "bytes": 266271,
+      "sha256": "2e6fde9e030d73cf17365245b60a69435fad3b0995cd715382f51988e406a587"
+    },
+    {
+      "file": "13_market_inside_shop.jpg",
+      "bytes": 127660,
+      "sha256": "213d3b79e080e444ebbee71c6f1ad165e2b1919a7ccdf58b000fb235af2e6cd6"
+    },
+    {
+      "file": "14_bell_building_outside.jpg",
+      "bytes": 301513,
+      "sha256": "7f5af0ff539004e45e8cdcaf7bccf652140fe393390a980bed53599427112b30"
+    },
+    {
+      "file": "15_bell_chamber_inside.jpg",
+      "bytes": 187827,
+      "sha256": "ef9372d3c5bf6159dee84fa86b4bbeb03b471cf9280bcaf7150d3d0887cf9a8f"
+    },
+    {
+      "file": "16_bell_encounter_inside.jpg",
+      "bytes": 195120,
+      "sha256": "28f1628e8337b1d8e213099ff97b9ba2855262d14a91e93cbe7ff87592bf86ee"
+    },
+    {
+      "file": "30_actual_market_approach.jpg",
+      "bytes": 330120,
+      "sha256": "ed4bc4323f90b0f1cfa29fddb621b0043cbc04f71b022d8035a2b24298e5237a"
+    },
+    {
+      "file": "31_actual_inside_seated_inventory.jpg",
+      "bytes": 184095,
+      "sha256": "f2c65f04e7e91f79a58f94b92274945106dd220ab6429d5b1752dfdae5602056"
+    },
+    {
+      "file": "32_actual_menu_closed_rest.jpg",
+      "bytes": 265125,
+      "sha256": "ce3a7a7b078d7ff993a881188e9663f0e78703d30d57bca388a644da6fce0a59"
+    },
+    {
+      "file": "33_actual_market_return.jpg",
+      "bytes": 330567,
+      "sha256": "8c9da8667594259017e18bd40cc593389305c7790cddcdd5dda5bc840574dfb9"
+    },
+    {
+      "file": "34_actual_bindery_approach.jpg",
+      "bytes": 304364,
+      "sha256": "c9296b8a5749ba47a75e14509eb2fa15f7db146c7e2e3125636c4a699690bbf4"
+    },
+    {
+      "file": "35_actual_bindery_encounter.jpg",
+      "bytes": 193448,
+      "sha256": "85ca9e95d63873ae778e978eab889edaf0e998c1cb23676dc36f3150ea1c24e3"
+    }
+  ]
+}

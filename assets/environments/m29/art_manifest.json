@@ -1,0 +1,109 @@
+{
+  "facades": {
+    "passage": {
+      "path": "res://assets/environments/m29/narrow_gatehouse.png",
+      "source_door": [
+        516,
+        1390
+      ],
+      "scale": 0.4
+    },
+    "market": {
+      "path": "res://assets/environments/m29/whole_book_house.png",
+      "source_door": [
+        1148.0,
+        941.0
+      ],
+      "scale": 0.65
+    },
+    "archivist": {
+      "path": "res://assets/environments/m29/whole_book_house.png",
+      "source_door": [
+        1148.0,
+        941.0
+      ],
+      "scale": 0.65
+    },
+    "bell": {
+      "path": "res://assets/environments/m29/bell_bindery_house.png",
+      "source_door": [
+        792,
+        1025
+      ],
+      "scale": 0.58
+    }
+  },
+  "market_interior": {
+    "path": "res://assets/environments/m29/margin_exchange_interior.png",
+    "source_floor_y": 660.0,
+    "source_size": [
+      1672,
+      941
+    ],
+    "scale": 0.8421052631578948,
+    "floor_y": 620.0,
+    "background_zoom": 1.1,
+    "painted_floor_only": true
+  },
+  "provenance": [
+    {
+      "path": "assets/environments/m29/whole_book_house.png",
+      "source": "Original OpenAI image_gen for LAST LECTURE",
+      "source_path": "/workspace/generated_images/exec-835c142c-aa0c-4eaa-9ffc-96a7e84bf3cd.png",
+      "sha256": "4cb19549ddc8d183d799687b668db721d220fc15d4662220e01bd96ee579df68",
+      "size": [
+        1448,
+        1086
+      ],
+      "door_foot": [
+        1148,
+        941
+      ],
+      "purpose": "Complete asymmetrical street building, mirrored for left-side doors; original hero unchanged."
+    },
+    {
+      "path": "assets/environments/m29/margin_exchange_interior.png",
+      "source": "Original OpenAI image_gen, revised byimage_gen toremovebakedbench",
+      "source_path": "/workspace/generated_images/exec-1fec5241-95e2-4829-b9c7-02c377ac9034.png",
+      "sha256": "fd0d8abd7b9c698c9de941170bbf4318fe5e47d1ef4e25fa3f045447ee1cf31c",
+      "size": [
+        1672,
+        941
+      ],
+      "floor_y": 660,
+      "purpose": "Close quiet market interior. Real bench furniture and hero remain native."
+    },
+    {
+      "path": "assets/environments/m29/bell_bindery_house.png",
+      "source": "Original OpenAI image_gen for LAST LECTURE",
+      "source_path": "/workspace/generated_images/exec-6f6ee04c-6ef7-4a62-b645-0290d726cc12.png",
+      "sha256": "75a9a8e6a96e1c439c83850700421018c3379ecacaf0ae0ddfb1f9d5b84fdd3a",
+      "size": [
+        1450,
+        1085
+      ],
+      "door_foot": [
+        792,
+        1025
+      ],
+      "scale": 0.58,
+      "purpose": "Complete roofed doorway building with a dark open entrance; no collision or hero changes."
+    },
+    {
+      "path": "assets/environments/m29/narrow_gatehouse.png",
+      "source": "Original OpenAI image_gen for LAST LECTURE",
+      "source_path": "/workspace/generated_images/exec-77204e75-8bde-46f6-a9ca-f80a260d27f5.png",
+      "sha256": "c55d18c954b4d39b7964aab115b047904a6aae38c310b517579ad794f5f1afc3",
+      "size": [
+        1024,
+        1536
+      ],
+      "door_foot": [
+        516,
+        1390
+      ],
+      "scale": 0.4,
+      "purpose": "Complete roofed doorway building with a dark open entrance; no collision or hero changes."
+    }
+  ]
+}

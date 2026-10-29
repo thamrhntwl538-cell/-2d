@@ -1,0 +1,16 @@
+{
+  "checks": 26,
+  "engine": "4.7.2-stable (official)",
+  "failures": [],
+  "scope": "Actual door key/collision/held-input safety plus labelled temporary-wall and legacy-save fixtures.",
+  "renderer": "headless",
+  "source_sha256": {
+    "scripts/stage/m29_folding_library.gd": "195c4974dc4824f73e48a5498d484900fbe175cea5d152a32f6686e06620a72e",
+    "scripts/stage/m29_journey.gd": "590bfb0d5f8b475fd16ab9975062ae917ef7eb89c85f233198ffb78d5a5659a5",
+    "scripts/minibosses/m29_archivist_journey.gd": "6de337ae4bfa344c2e5e79cef53fbc26b07932401be0a5bf718120e525e86456",
+    "scripts/stage/m29_layouts.gd": "0b7c72f32e6c2d6f01080f1a4a46a6ba5ef05981d05e1b5c7027179d1a5030c2",
+    "scripts/combat/m29_player.gd": "839a04142a74375abfddc24e9eef4247e4c5aa30b48aa30aa4d08397ce9e4f70",
+    "scripts/stage/m29_bench_director.gd": "7216e977c128cb5fdea2d452927bd6af8204ed08f445124eed816ef8da1a9048",
+    "scripts/ui/m29_hud.gd": "af962f5d224c58418e174ca34659eda5f59fcb6ad8e00a088b96ef7ba485915c"
+  }
+}

@@ -1,0 +1,206 @@
+{
+	"checks": [
+		{
+			"detail": null,
+			"name": "Loadout does not auto-open on creation",
+			"passed": true
+		},
+		{
+			"detail": null,
+			"name": "Native seated sheet opens through the shared panel lifecycle",
+			"passed": true
+		},
+		{
+			"detail": null,
+			"name": "Genuine seated context enables equipment requests",
+			"passed": true
+		},
+		{
+			"detail": null,
+			"name": "Fitil view uses the three real catalog entries",
+			"passed": true
+		},
+		{
+			"detail": null,
+			"name": "Sheet chooses the side opposite the actual hero",
+			"passed": true
+		},
+		{
+			"detail": "[P: (28.0, 142.0), S: (572.0, 488.0)]",
+			"name": "Complete sheet fits the viewport including footer",
+			"passed": true
+		},
+		{
+			"detail": null,
+			"name": "Bench screen hides exploration clutter and build text",
+			"passed": true
+		},
+		{
+			"detail": null,
+			"name": "First real owned fitil receives keyboard/controller focus",
+			"passed": true
+		},
+		{
+			"detail": null,
+			"name": "Actual controller confirm equips the focused owned fitil",
+			"passed": true
+		},
+		{
+			"detail": null,
+			"name": "Socket display updates from the authoritative equipment state",
+			"passed": true
+		},
+		{
+			"detail": null,
+			"name": "Actual Enter removes a previously equipped fitil",
+			"passed": true
+		},
+		{
+			"detail": null,
+			"name": "Actual D-pad navigation follows the visible Arabic icon row",
+			"passed": true
+		},
+		{
+			"detail": null,
+			"name": "Distinct cost-two fitil is equipped through the same request path",
+			"passed": true
+		},
+		{
+			"detail": null,
+			"name": "Insufficient capacity explains refusal without emitting a mutation request",
+			"passed": true
+		},
+		{
+			"detail": null,
+			"name": "Capacity refusal is visible beside the selected description",
+			"passed": true
+		},
+		{
+			"detail": null,
+			"name": "A refusal keeps the selected cost and collection status visible",
+			"passed": true
+		},
+		{
+			"detail": null,
+			"name": "Refusal feedback does not push the footer out of the screen",
+			"passed": true
+		},
+		{
+			"detail": null,
+			"name": "Actual shoulder button changes to the inventory tab without leaving the seat",
+			"passed": true
+		},
+		{
+			"detail": [
+				"lantern",
+				"map",
+				"blade",
+				"dash",
+				"spell",
+				"atlas"
+			],
+			"name": "Inventory lists real abilities and the bought atlas, never an unowned needle",
+			"passed": true
+		},
+		{
+			"detail": null,
+			"name": "Language switch retains tab and selection with English descriptions",
+			"passed": true
+		},
+		{
+			"detail": null,
+			"name": "Actual D-pad reaches owned abilities below the first inventory row",
+			"passed": true
+		},
+		{
+			"detail": null,
+			"name": "Inventory scroll follows controller focus instead of hiding the selected item",
+			"passed": true
+		},
+		{
+			"detail": null,
+			"name": "Actual Tab returns to fitils without triggering journal or world actions",
+			"passed": true
+		},
+		{
+			"detail": null,
+			"name": "A stale panel cannot request equipping after seat permission is revoked",
+			"passed": true
+		},
+		{
+			"detail": null,
+			"name": "Actual cancel closes only the menu and retains the seated world state",
+			"passed": true
+		},
+		{
+			"detail": null,
+			"name": "Menu cancel does not emit a stand request",
+			"passed": true
+		},
+		{
+			"detail": null,
+			"name": "Seated rest hint follows the controller's actual open and rise controls",
+			"passed": true
+		},
+		{
+			"detail": null,
+			"name": "Seated rest hint switches back to the keyboard's actual controls",
+			"passed": true
+		},
+		{
+			"detail": null,
+			"name": "Explicit Stand Up emits a separate rise request",
+			"passed": true
+		},
+		{
+			"detail": null,
+			"name": "No implementation build label returns after closing the sheet",
+			"passed": true
+		},
+		{
+			"detail": null,
+			"name": "Exploration clutter remains hidden through the rise animation",
+			"passed": true
+		},
+		{
+			"detail": null,
+			"name": "Exploration controls return only once standing is complete",
+			"passed": true
+		},
+		{
+			"detail": null,
+			"name": "A building interior hides stale outside objectives and persistent exploration chrome",
+			"passed": true
+		},
+		{
+			"detail": null,
+			"name": "Interior quiet mode preserves vitals and the contextual interaction layer",
+			"passed": true
+		},
+		{
+			"detail": null,
+			"name": "Inherited HUD process cannot flash the outside objective back into an interior",
+			"passed": true
+		},
+		{
+			"detail": null,
+			"name": "Map remains available while interior top buttons are hidden",
+			"passed": true
+		},
+		{
+			"detail": null,
+			"name": "Leaving the building restores the outside exploration UI",
+			"passed": true
+		}
+	],
+	"engine": "4.7.2-stable (official)",
+	"existing_saves_touched": false,
+	"failed": 0,
+	"passed": 37,
+	"renderer": "gl_compatibility",
+	"scope": "Isolated real native HUD and CombatState. Actor position, owned items and seat state are explicit fixtures, not a full world sit animation or save integration test.",
+	"source_sha256": {
+		"scripts/ui/m29_hud.gd": "04fb5f915a0b59cc0c463b0117a06b06d766ca42bf908804bfc20d33e92ebbcf",
+		"tools/test_m29_bench_ui.gd": "902ae2a586a1bf1fe829863f3e9f58a292b309bb8c9744d10490233628618573"
+	}
+}

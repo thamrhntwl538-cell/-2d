@@ -1,0 +1,309 @@
+{
+	"checks": 73,
+	"display": "X11",
+	"engine": "4.7.2-stable (official)",
+	"evidence": [],
+	"failures": [],
+	"renderer": "gl_compatibility",
+	"results": [
+		{
+			"name": "Non-rest joint geometry identical: idle",
+			"passed": true
+		},
+		{
+			"name": "Non-rest joint geometry identical: run",
+			"passed": true
+		},
+		{
+			"name": "Non-rest joint geometry identical: air",
+			"passed": true
+		},
+		{
+			"name": "Non-rest joint geometry identical: land",
+			"passed": true
+		},
+		{
+			"name": "Non-rest joint geometry identical: heal",
+			"passed": true
+		},
+		{
+			"name": "Non-rest joint geometry identical: dash",
+			"passed": true
+		},
+		{
+			"name": "Rest cannot expose a sword/contact at blend 0.0",
+			"passed": true
+		},
+		{
+			"name": "Rigid arm lengths retained near 0.0",
+			"passed": true
+		},
+		{
+			"name": "Rigid leg lengths retained near 0.0",
+			"passed": true
+		},
+		{
+			"name": "Rigid arm lengths retained far 0.0",
+			"passed": true
+		},
+		{
+			"name": "Rigid leg lengths retained far 0.0",
+			"passed": true
+		},
+		{
+			"name": "Rest cannot expose a sword/contact at blend 0.2",
+			"passed": true
+		},
+		{
+			"name": "Rigid arm lengths retained near 0.2",
+			"passed": true
+		},
+		{
+			"name": "Rigid leg lengths retained near 0.2",
+			"passed": true
+		},
+		{
+			"name": "Rigid arm lengths retained far 0.2",
+			"passed": true
+		},
+		{
+			"name": "Rigid leg lengths retained far 0.2",
+			"passed": true
+		},
+		{
+			"name": "Rest cannot expose a sword/contact at blend 0.5",
+			"passed": true
+		},
+		{
+			"name": "Rigid arm lengths retained near 0.5",
+			"passed": true
+		},
+		{
+			"name": "Rigid leg lengths retained near 0.5",
+			"passed": true
+		},
+		{
+			"name": "Rigid arm lengths retained far 0.5",
+			"passed": true
+		},
+		{
+			"name": "Rigid leg lengths retained far 0.5",
+			"passed": true
+		},
+		{
+			"name": "Rest cannot expose a sword/contact at blend 0.8",
+			"passed": true
+		},
+		{
+			"name": "Rigid arm lengths retained near 0.8",
+			"passed": true
+		},
+		{
+			"name": "Rigid leg lengths retained near 0.8",
+			"passed": true
+		},
+		{
+			"name": "Rigid arm lengths retained far 0.8",
+			"passed": true
+		},
+		{
+			"name": "Rigid leg lengths retained far 0.8",
+			"passed": true
+		},
+		{
+			"name": "Rest cannot expose a sword/contact at blend 1.0",
+			"passed": true
+		},
+		{
+			"name": "Rigid arm lengths retained near 1.0",
+			"passed": true
+		},
+		{
+			"name": "Rigid leg lengths retained near 1.0",
+			"passed": true
+		},
+		{
+			"name": "Rigid arm lengths retained far 1.0",
+			"passed": true
+		},
+		{
+			"name": "Rigid leg lengths retained far 1.0",
+			"passed": true
+		},
+		{
+			"name": "Pelvis meets actual cushion top at28world pixels",
+			"passed": true
+		},
+		{
+			"name": "Both approved eyes retained while seated",
+			"passed": true
+		},
+		{
+			"name": "Relaxed palm remains on lap, not held forward: near",
+			"passed": true
+		},
+		{
+			"name": "Relaxed palm remains on lap, not held forward: far",
+			"passed": true
+		},
+		{
+			"name": "No head resize or alternate character texture",
+			"passed": true
+		},
+		{
+			"name": "Both bent legs visibly dangle from cushion, not a compressed sprite",
+			"passed": true
+		},
+		{
+			"name": "Actual hero starts on native floor",
+			"passed": true
+		},
+		{
+			"name": "Alignment uses visible supported body movement",
+			"passed": true
+		},
+		{
+			"name": "No heal/energy/save receipt before settled",
+			"passed": true
+		},
+		{
+			"name": "Sit settles after alignment and authored animation",
+			"passed": true
+		},
+		{
+			"name": "One seated signal commits rest once",
+			"passed": true
+		},
+		{
+			"name": "Physical feet anchor stays on bench floor, centered on seat",
+			"passed": true
+		},
+		{
+			"name": "Seated actor uses genuine rest pose",
+			"passed": true
+		},
+		{
+			"name": "Approved body draw scale retained",
+			"passed": true
+		},
+		{
+			"name": "Rest confirmation starts only when seat is occupied",
+			"passed": true
+		},
+		{
+			"name": "World remains genuinely paused during seated confirmation",
+			"passed": true
+		},
+		{
+			"name": "Pure visual halo expires while paused, retaining ordinary rest crest",
+			"passed": true
+		},
+		{
+			"name": "Halo expiry neither stands nor grants another rest receipt",
+			"passed": true
+		},
+		{
+			"name": "Open equipment overlay cannot move/jump/attack",
+			"passed": true
+		},
+		{
+			"name": "Held UI-accept/Jump cannot leak into standing after menu closes",
+			"passed": true
+		},
+		{
+			"name": "Closing menu alone leaves hero seated",
+			"passed": true
+		},
+		{
+			"name": "Fresh jump initiates rise only after menu release guard",
+			"passed": true
+		},
+		{
+			"name": "Rise reaches play state",
+			"passed": true
+		},
+		{
+			"name": "Jump intention executes once after grounded rise",
+			"passed": true
+		},
+		{
+			"name": "Deferred stand-jump emits one original jump effect",
+			"passed": true
+		},
+		{
+			"name": "Ordinary interaction completes the bench lifecycle",
+			"passed": true
+		},
+		{
+			"name": "Fresh move requests rise",
+			"passed": true
+		},
+		{
+			"name": "Held movement resumes through inherited motor after rise",
+			"passed": true
+		},
+		{
+			"name": "Ordinary sword combat resumes after leaving bench",
+			"passed": true
+		},
+		{
+			"name": "Direction held through initial sit can get up without a dead input",
+			"passed": true
+		},
+		{
+			"name": "Initial held direction still waits for actual seating before rising",
+			"passed": true
+		},
+		{
+			"name": "Initial held-direction rise completes",
+			"passed": true
+		},
+		{
+			"name": "Ordinary interaction completes the bench lifecycle",
+			"passed": true
+		},
+		{
+			"name": "Direction held from equipment focus cannot stand after the overlay",
+			"passed": true
+		},
+		{
+			"name": "A solid book blocks alignment instead of teleporting through it",
+			"passed": true
+		},
+		{
+			"name": "Blocked rest gives no checkpoint or free health",
+			"passed": true
+		},
+		{
+			"name": "Unsupported alignment gap never grants a rest",
+			"passed": true
+		},
+		{
+			"name": "A ledge gap has explicit safe cancellation",
+			"passed": true
+		},
+		{
+			"name": "Safe align reaches sit animation",
+			"passed": true
+		},
+		{
+			"name": "Cancelled sit before settle cannot heal or keep actor locked",
+			"passed": true
+		},
+		{
+			"name": "Active combat rejects a new bench lifecycle",
+			"passed": true
+		},
+		{
+			"name": "Airborne interaction cannot snap player onto seat",
+			"passed": true
+		}
+	],
+	"scope": "Real hero physics/input and bench component integration. Floor/obstacle/start-health fixtures are explicit; callback simulates world rest commit. Fullworld save/menu integration belongs to independent QA.",
+	"source_sha256": {
+		"scripts/combat/m29_player.gd": "839a04142a74375abfddc24e9eef4247e4c5aa30b48aa30aa4d08397ce9e4f70",
+		"scripts/stage/m29_bench_director.gd": "7216e977c128cb5fdea2d452927bd6af8204ed08f445124eed816ef8da1a9048",
+		"scripts/stage/m29_bench_furniture.gd": "bd1fa95d97f544a1d55aa1ddc9c182d61fb0599b1dcf1151dadb7a065776ce6b",
+		"scripts/warden_model_m29.gd": "6d634f3a7e8e2db295acdc6e70a4af835db1dcfdf66e3a31e383f56c5e2df484"
+	}
+}

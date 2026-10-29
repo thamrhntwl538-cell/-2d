@@ -1,0 +1,388 @@
+{
+	"checks": 175,
+	"doors_checked": 39,
+	"engine": "4.7.2-stable (official)",
+	"failures": [],
+	"major_buildings": 3,
+	"native_threshold_support": [
+		{
+			"id": "to_2",
+			"point": [
+				2690.0,
+				1020.0
+			],
+			"room": 1,
+			"supported": true
+		},
+		{
+			"id": "to_1",
+			"point": [
+				110.0,
+				1260.0
+			],
+			"room": 2,
+			"supported": true
+		},
+		{
+			"id": "to_3",
+			"point": [
+				3490.0,
+				900.0
+			],
+			"room": 2,
+			"supported": true
+		},
+		{
+			"id": "shortcut_2_6",
+			"point": [
+				2600.0,
+				900.0
+			],
+			"room": 2,
+			"supported": true
+		},
+		{
+			"id": "to_2",
+			"point": [
+				110.0,
+				1260.0
+			],
+			"room": 3,
+			"supported": true
+		},
+		{
+			"id": "to_4",
+			"point": [
+				3280.0,
+				780.0
+			],
+			"room": 3,
+			"supported": true
+		},
+		{
+			"id": "shortcut_3_9",
+			"point": [
+				2700.0,
+				780.0
+			],
+			"room": 3,
+			"supported": true
+		},
+		{
+			"id": "to_3",
+			"point": [
+				110.0,
+				1260.0
+			],
+			"room": 4,
+			"supported": true
+		},
+		{
+			"id": "to_5",
+			"point": [
+				2050.0,
+				1260.0
+			],
+			"room": 4,
+			"supported": true
+		},
+		{
+			"id": "to_6",
+			"point": [
+				2490.0,
+				1260.0
+			],
+			"room": 4,
+			"supported": true
+		},
+		{
+			"id": "m28_market",
+			"point": [
+				2050.0,
+				1260.0
+			],
+			"room": 4,
+			"supported": true
+		},
+		{
+			"id": "to_4",
+			"point": [
+				110.0,
+				1260.0
+			],
+			"room": 5,
+			"supported": true
+		},
+		{
+			"id": "to_6",
+			"point": [
+				2690.0,
+				780.0
+			],
+			"room": 5,
+			"supported": true
+		},
+		{
+			"id": "to_4",
+			"point": [
+				110.0,
+				2700.0
+			],
+			"room": 6,
+			"supported": true
+		},
+		{
+			"id": "to_5",
+			"point": [
+				700.0,
+				2700.0
+			],
+			"room": 6,
+			"supported": true
+		},
+		{
+			"id": "to_7",
+			"point": [
+				2820.0,
+				540.0
+			],
+			"room": 6,
+			"supported": true
+		},
+		{
+			"id": "shortcut_6_2",
+			"point": [
+				2310.0,
+				1980.0
+			],
+			"room": 6,
+			"supported": true
+		},
+		{
+			"id": "shortcut_6_12",
+			"point": [
+				2410.0,
+				540.0
+			],
+			"room": 6,
+			"supported": true
+		},
+		{
+			"id": "archivist_vault_portal",
+			"point": [
+				2710.0,
+				1980.0
+			],
+			"room": 6,
+			"supported": true
+		},
+		{
+			"id": "to_6",
+			"point": [
+				110.0,
+				1260.0
+			],
+			"room": 7,
+			"supported": true
+		},
+		{
+			"id": "to_8",
+			"point": [
+				2790.0,
+				900.0
+			],
+			"room": 7,
+			"supported": true
+		},
+		{
+			"id": "to_7",
+			"point": [
+				110.0,
+				1260.0
+			],
+			"room": 8,
+			"supported": true
+		},
+		{
+			"id": "to_9",
+			"point": [
+				3090.0,
+				1260.0
+			],
+			"room": 8,
+			"supported": true
+		},
+		{
+			"id": "to_8",
+			"point": [
+				110.0,
+				1260.0
+			],
+			"room": 9,
+			"supported": true
+		},
+		{
+			"id": "to_10",
+			"point": [
+				3090.0,
+				780.0
+			],
+			"room": 9,
+			"supported": true
+		},
+		{
+			"id": "shortcut_9_3",
+			"point": [
+				2440.0,
+				780.0
+			],
+			"room": 9,
+			"supported": true
+		},
+		{
+			"id": "to_9",
+			"point": [
+				110.0,
+				1260.0
+			],
+			"room": 10,
+			"supported": true
+		},
+		{
+			"id": "to_11",
+			"point": [
+				3290.0,
+				900.0
+			],
+			"room": 10,
+			"supported": true
+		},
+		{
+			"id": "shortcut_10_13",
+			"point": [
+				670.0,
+				1260.0
+			],
+			"room": 10,
+			"supported": true
+		},
+		{
+			"id": "to_10",
+			"point": [
+				110.0,
+				1260.0
+			],
+			"room": 11,
+			"supported": true
+		},
+		{
+			"id": "to_12",
+			"point": [
+				3690.0,
+				900.0
+			],
+			"room": 11,
+			"supported": true
+		},
+		{
+			"id": "to_11",
+			"point": [
+				110.0,
+				1260.0
+			],
+			"room": 12,
+			"supported": true
+		},
+		{
+			"id": "to_13",
+			"point": [
+				3890.0,
+				1260.0
+			],
+			"room": 12,
+			"supported": true
+		},
+		{
+			"id": "shortcut_12_6",
+			"point": [
+				3330.0,
+				1260.0
+			],
+			"room": 12,
+			"supported": true
+		},
+		{
+			"id": "m29_bell_building",
+			"point": [
+				1000.0,
+				1260.0
+			],
+			"room": 12,
+			"supported": true
+		},
+		{
+			"id": "to_12",
+			"point": [
+				110.0,
+				1260.0
+			],
+			"room": 13,
+			"supported": true
+		},
+		{
+			"id": "shortcut_13_10",
+			"point": [
+				730.0,
+				1260.0
+			],
+			"room": 13,
+			"supported": true
+		},
+		{
+			"id": "to_14",
+			"point": [
+				3490.0,
+				1260.0
+			],
+			"room": 13,
+			"supported": true
+		},
+		{
+			"id": "to_13",
+			"point": [
+				110.0,
+				1440.0
+			],
+			"room": 14,
+			"supported": true
+		},
+		{
+			"id": "to_15",
+			"point": [
+				4090.0,
+				1440.0
+			],
+			"room": 14,
+			"supported": true
+		},
+		{
+			"id": "to_14",
+			"point": [
+				110.0,
+				1260.0
+			],
+			"room": 15,
+			"supported": true
+		},
+		{
+			"id": "to_world2",
+			"point": [
+				2670.0,
+				1260.0
+			],
+			"room": 15,
+			"supported": true
+		}
+	],
+	"scope": "Geometry/door contracts, all fifteen configured room starts and real surface rays, and compact market/Bell interiors. Requirements opened for geometry inspection; not a full campaign traversal."
+}

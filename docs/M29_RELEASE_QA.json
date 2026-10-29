@@ -1,0 +1,98 @@
+{
+  "engine": "Godot 4.7.2 Standard",
+  "scope": "Clean candidate containing tracked project files plus new M29 source/assets, without unrelated untracked drafts or prior editor caches. Import and native configured-main startup/normal close, including close while actual seated equipment UI is open. Existing Archivist regression is a separate headless run; this is not a full human-played campaign win or hardware-performance claim.",
+  "source_runtime_files": 850,
+  "runtime_files_match_repository": true,
+  "runtime_mismatches": [],
+  "runtime_manifest_sha256": "2220920e163ddba001f19303bcbeddfa8c1bb76ef3d56728073f3c919551cf44",
+  "approved_art_files_checked": 866,
+  "approved_art_changes": [],
+  "imports": [
+    {
+      "log": "import.log",
+      "errors": [],
+      "sha256": "1b7c0fc1da654a445680adf8885bb68dbe4850036a6375e5e33f4115394f2795"
+    },
+    {
+      "log": "final_import.log",
+      "errors": [],
+      "sha256": "1f6afb48483d4997cd847c536fbb5ab3c08008392a93a71193c35c4da347bca3"
+    }
+  ],
+  "tests": [
+    {
+      "name": "main_startup",
+      "exit_code": 0,
+      "errors": [],
+      "log_sha256": "052211730d2e6bad1bb27d0ba1621ed54bb0ef792b898c4c8600ed8b3be20a67"
+    },
+    {
+      "name": "normal_close",
+      "exit_code": 0,
+      "errors": [],
+      "log_sha256": "fdb5b9c844d7c850f91d4ec2688a9b016c096b96b83a30facfd6f0593d1582ea"
+    },
+    {
+      "name": "bench_close",
+      "exit_code": 0,
+      "errors": [],
+      "log_sha256": "054286ba1a48167ff7e5211ad17c987008f1e86dfb108324fd3b530ec772c447"
+    },
+    {
+      "name": "archivist_regression",
+      "exit_code": 0,
+      "errors": [],
+      "log_sha256": "8a27b91d28feaaa14a5d64b6b5ec63e90bf84cafefdf5bf293e92ec5d7320afc",
+      "passed_224": true
+    }
+  ],
+  "normal_close_cases": [
+    {
+      "case": "normal_close",
+      "checks": [
+        {
+          "name": "Configured main is the M29 world",
+          "passed": true
+        },
+        {
+          "name": "Actual main starts alive on supported floor",
+          "passed": true
+        }
+      ],
+      "scope": "Actual configured main through normal root Window.close_requested, without manual audio stop or flush. Bench case uses normal Input actions at the initial bench; no hero state injection."
+    },
+    {
+      "case": "bench_close",
+      "checks": [
+        {
+          "name": "Configured main is the M29 world",
+          "passed": true
+        },
+        {
+          "name": "Actual main starts alive on supported floor",
+          "passed": true
+        },
+        {
+          "name": "Actual E-equivalent action reaches seated state",
+          "passed": true
+        },
+        {
+          "name": "Rest does not force open the loadout",
+          "passed": true
+        },
+        {
+          "name": "Actual inventory action opens seated equipment",
+          "passed": true
+        },
+        {
+          "name": "Equipment leaves the actor seated before native close",
+          "passed": true
+        }
+      ],
+      "scope": "Actual configured main through normal root Window.close_requested, without manual audio stop or flush. Bench case uses normal Input actions at the initial bench; no hero state injection."
+    }
+  ],
+  "test_failures": [],
+  "clean_candidate": "/workspace/work/m29_candidate",
+  "publication_archive_validation": "not performed in this report"
+}
